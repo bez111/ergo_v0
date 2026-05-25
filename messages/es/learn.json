@@ -539,7 +539,7 @@
           "description": "Domina Σ-protocols, mixers y flujos de divulgación selectiva para privacidad auditable.",
           "bullets": [
             "Sigma protocols explicados visualmente",
-            "ErgoMixer + kit de herramientas de cumplimiento",
+            "La privacidad en Ergo es opcional y puede apoyar flujos de divulgación selectiva. El cumplimiento legal real depende de la jurisdicción, la implementación y el proveedor de servicios que rodea al protocolo.",
             "Manual de divulgación selectiva"
           ],
           "cta": "Explorar stack de privacidad",
@@ -994,7 +994,7 @@
         },
         {
           "question": "¿Puedo construir protocolos DeFi con ErgoScript?",
-          "answer": "¡Sí! ErgoScript es perfecto para DeFi. Los ejemplos incluyen SigmaUSD (stablecoin algorítmica), DEXs como ErgoDEX y varias primitivas DeFi. Las características de seguridad del lenguaje lo hacen ideal para aplicaciones financieras."
+          "answer": "Yes. ErgoScript is well-suited to DeFi because it supports deterministic, predicate-based contracts on eUTXO. Examples include SigmaUSD, historical DEX designs like ErgoDEX/Spectrum, and current or future DeFi primitives. Treat each deployed protocol separately and verify its live status before using funds."
         }
       ],
       "viewExamples": "Ver Ejemplos",

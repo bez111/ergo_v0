@@ -148,7 +148,7 @@
             },
             {
               "question": "Ergo'da hangi DeFi projeleri var?",
-              "answer": "Önemli DeFi projeleri arasında SigmaUSD (algoritmik stablecoin), ErgoDEX (DEX), borç verme protokolleri ve oracle havuzları yer almaktadır."
+              "answer": "Key DeFi references include SigmaUSD, historical DEX designs such as ErgoDEX/Spectrum, lending protocols, and oracle pools. Always verify each project current operational status before using real funds."
             },
             {
               "question": "Hangi cüzdanlar Ergo'yu destekliyor?",

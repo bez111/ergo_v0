@@ -96,7 +96,14 @@ const FLOW_DATA = [
     tKey: "apiCall" as const,
     stepCount: 4,
     code: `// Fleet SDK: create a note for API payment
-import { TransactionBuilder, OutputBuilder, SAFE_MIN_BOX_VALUE } from "@fleet-sdk/core"
+import {
+  TransactionBuilder,
+  OutputBuilder,
+  SByte,
+  SColl,
+  SGroupElement,
+  SLong,
+} from "@fleet-sdk/core"
 
 const noteBox = new OutputBuilder(
   1_000_000n, // 0.001 ERG
@@ -120,6 +127,8 @@ const tx = new TransactionBuilder(currentHeight)
     tKey: "credit" as const,
     stepCount: 4,
     code: `// Deploy a reserve with 10 ERG, 100 ERG credit limit
+import { OutputBuilder, SByte, SColl, SGroupElement, SLong } from "@fleet-sdk/core"
+
 const reserveBox = new OutputBuilder(
   10_000_000_000n, // 10 ERG collateral
   RESERVE_CONTRACT_ADDRESS
@@ -145,6 +154,8 @@ const noteBox = new OutputBuilder(
     tKey: "community" as const,
     stepCount: 4,
     code: `// Community reserve: multiple funders
+import { OutputBuilder, SByte, SColl, SGroupElement, SInt } from "@fleet-sdk/core"
+
 const communityReserve = new OutputBuilder(
   TOTAL_POOLED_ERG,
   MULTISIG_RESERVE_CONTRACT

@@ -260,7 +260,7 @@
         },
         "3": {
           "question": "我能用 ERG 获得收益吗？",
-          "answer": "可以！你可以在 Spectrum DEX 上提供流动性，使用 ErgoPad 参与发射台，或参与各种 DeFi 协议。"
+          "answer": "Yes, but verify current protocol status first. Spectrum Finance is a historical Ergo DEX reference with a 2024 sunset notice, ErgoPad is not currently operating, and DeFi positions remain funds-at-risk software."
         },
         "4": {
           "question": "Ergo 属于证券还是商品？",
@@ -280,7 +280,7 @@
         },
         "8": {
           "question": "使用 Ergo 的隐私功能合法吗？",
-          "answer": "Ergo 的隐私功能是可选的，专为商业保密和个人财务隐私等合法用途而设计。请务必了解当地法规。该技术与其他隐私加密货币类似，机构也可使用合规工具。"
+          "answer": "Ergo 的隐私是可选的，并可支持选择性披露工作流。实际法律合规取决于司法辖区、具体实现，以及协议周边的服务提供者。"
         }
       }
     }

@@ -69,6 +69,11 @@ export default function AuctionContractPage() {
 
         <section>
           <h2 className="text-2xl font-bold text-white mb-4">The contract</h2>
+          <div className="mb-4 rounded-lg border border-yellow-400/30 bg-yellow-400/10 p-4 text-sm text-yellow-100">
+            This EIP snippet documents the proposed contract shape. It assumes the auction box, config box, token layout,
+            registers, and output indexes follow the standard exactly. Treat it as reference material; production code
+            should add explicit guards, test vectors, and independent review around every indexed token/register access.
+          </div>
           <CodeBlock language="typescript">
     {String.raw`{
   // R4: The seller's ergo tree
@@ -233,4 +238,4 @@ export default function AuctionContractPage() {
       </div>
     </>
   );
-} 
+}

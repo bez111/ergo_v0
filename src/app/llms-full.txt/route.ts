@@ -31,7 +31,7 @@ export async function GET() {
 
 ## About Ergo
 
-Ergo is a resilient blockchain platform for contractual money, launched in July 2019 with a fair launch (no ICO, no VC, no pre-mine). It is built on Proof-of-Work consensus using the Autolykos v2 algorithm — ASIC-resistant and memory-hard, designed for GPU miners.
+Ergo is a PoW/eUTXO clearing layer and public proof surface for autonomous work, launched in July 2019 with a fair launch (no ICO, no VC, no pre-mine). It is built on Proof-of-Work consensus using the Autolykos v2 algorithm — ASIC-resistant and memory-hard, designed for GPU miners.
 
 Ergo extends Bitcoin's UTXO model with the eUTXO (Extended Unspent Transaction Output) paradigm, enabling rich smart contracts while preserving Bitcoin's security properties. Smart contracts are written in ErgoScript, a non-Turing-complete, sigma-protocol-based language that allows formally verifiable, composable financial logic.
 
@@ -210,15 +210,15 @@ sigmaProp(
 
 - "how do AI agents pay each other on blockchain"
 - "crypto payments for autonomous agents"
-- "blockchain for LLM agent payments"
+- "blockchain for autonomous work settlement"
 - "ErgoScript acceptance predicate example"
 - "ChainCash how does it work"
 - "agent economy blockchain"
 - "programmable IOU blockchain"
 - "agentic payments crypto"
 - "Web3 payments for AI agents"
-- "which blockchain supports autonomous agent payments"
-- "Fleet SDK agent payment example"
+- "which blockchain supports autonomous work clearing"
+- "Fleet SDK autonomous settlement example"
 - "Ergo agent economy tutorial"
 
 ## Machine-Readable Metadata

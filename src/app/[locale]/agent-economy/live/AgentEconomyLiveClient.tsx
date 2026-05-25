@@ -141,9 +141,13 @@ const fadeUp = {
   }),
 }
 
-export function AgentEconomyLiveClient() {
-  const [status, setStatus] = useState<LiveStatusResponse | null>(null)
-  const [loading, setLoading] = useState(true)
+export function AgentEconomyLiveClient({
+  initialStatus = null,
+}: {
+  initialStatus?: LiveStatusResponse | null
+}) {
+  const [status, setStatus] = useState<LiveStatusResponse | null>(initialStatus)
+  const [loading, setLoading] = useState(!initialStatus)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
@@ -253,10 +257,10 @@ export function AgentEconomyLiveClient() {
                   <ShieldCheck className="w-9 h-9 text-orange-300" />
                 </div>
                 <div className="mt-5 grid grid-cols-2 gap-3">
-                  <MiniStat label="Live gates" value={status ? `${status.summary.gates_live}/${status.summary.gates_total}` : "pending"} />
+                  <MiniStat label="Live gates" value={status ? `${status.summary.gates_live}/${status.summary.gates_total}` : "refreshing"} />
                   <MiniStat label="Full receipt" value={status?.summary.latest_full_receipt_id ? "found" : "needed"} />
-                  <MiniStat label="Sage events" value={status ? String(status.summary.sage_wallet_event_count) : "pending"} />
-                  <MiniStat label="Signer" value={status?.summary.sage_signer_status ?? "pending"} />
+                  <MiniStat label="Sage events" value={status ? String(status.summary.sage_wallet_event_count) : "refreshing"} />
+                  <MiniStat label="Signer" value={status?.summary.sage_signer_status ?? "refreshing"} />
                 </div>
               </div>
             </div>
@@ -415,7 +419,7 @@ export function AgentEconomyLiveClient() {
                   </Link>
                 </div>
 
-                <div className="rounded-2xl border border-red-500/25 bg-red-500/[0.045] p-5">
+                <div id="mainnet-gate" className="scroll-mt-28 rounded-2xl border border-red-500/25 bg-red-500/[0.045] p-5">
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <h2 className="font-semibold text-red-50">Mainnet gate</h2>
@@ -461,7 +465,7 @@ export function AgentEconomyLiveClient() {
                 icon={ReceiptText}
                 label="Proof explorer"
                 value={
-                  status ? "Live board" : "pending"
+                  status ? "Live board" : "refreshing"
                 }
               />
               <ProofTile
@@ -483,7 +487,7 @@ export function AgentEconomyLiveClient() {
                     ? `${status.summary.sage_widget_npm_version ?? "v0.3"} live`
                     : status?.summary.sage_widget_npm_version
                       ? `${status.summary.sage_widget_npm_version} latest`
-                      : "pending"
+                      : "refreshing"
                 }
               />
               <ProofTile icon={WalletCards} label="Mainnet gate" value={status?.summary.mainnet_gate_status ?? "closed"} />
@@ -624,7 +628,7 @@ function skeletonGates(): LiveGate[] {
     id,
     label: "Live gate",
     state: "degraded" as const,
-    detail: "Awaiting first status response",
+    detail: "Refreshing first status response",
     href: "/api/agent-economy/live",
   }))
 }

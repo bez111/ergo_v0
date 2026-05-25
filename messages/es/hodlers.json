@@ -260,7 +260,7 @@
         },
         "3": {
           "question": "¿Puedo obtener rendimiento sobre mi ERG?",
-          "answer": "¡Sí! Puedes proporcionar liquidez en Spectrum DEX, usar el launchpad ErgoPad, o participar en varios protocolos DeFi."
+          "answer": "Yes, but verify current protocol status first. Spectrum Finance is a historical Ergo DEX reference with a 2024 sunset notice, ErgoPad is not currently operating, and DeFi positions remain funds-at-risk software."
         },
         "4": {
           "question": "¿Es Ergo un valor o una materia prima?",
@@ -280,7 +280,7 @@
         },
         "8": {
           "question": "¿Es legal usar la privacidad de Ergo?",
-          "answer": "Las características de privacidad de Ergo son opcionales y están diseñadas para casos de uso legítimos como la confidencialidad empresarial y la privacidad financiera personal. Siempre verifica tus regulaciones locales. La tecnología en sí es similar a otras criptomonedas que preservan la privacidad y hay herramientas de cumplimiento disponibles para instituciones."
+          "answer": "La privacidad en Ergo es opcional y puede apoyar flujos de divulgación selectiva. El cumplimiento legal real depende de la jurisdicción, la implementación y el proveedor de servicios que rodea al protocolo."
         }
       }
     }

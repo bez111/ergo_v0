@@ -149,7 +149,7 @@ export default function ErgoScriptPage() {
     },
     {
       question: "Can I build DeFi protocols with ErgoScript?",
-      answer: "Yes! ErgoScript is perfect for DeFi. Examples include SigmaUSD (algorithmic stablecoin), DEXs like ErgoDEX, and various DeFi primitives. The language's security features make it ideal for financial applications."
+      answer: "Yes. ErgoScript is well-suited to DeFi because it supports deterministic, predicate-based contracts on eUTXO. Examples include SigmaUSD, historical DEX designs like ErgoDEX/Spectrum, and current or future DeFi primitives. Treat each deployment separately and verify its live status before using funds."
     },
   ]
 
@@ -222,7 +222,7 @@ export default function ErgoScriptPage() {
                   <p className="text-lg md:text-xl text-neutral-300 mb-6 max-w-2xl">Smart Contract Language for the Future</p>
                   <p className="text-base text-neutral-400 mb-8 max-w-2xl leading-relaxed">
                     ErgoScript is a powerful, secure smart contract language built on Sigma protocols and the extended UTXO model. 
-                    Create complex financial contracts with built-in privacy, predictable fees, and mathematical guarantees.
+                    Create complex financial contracts with explicit validation rules, predictable fees, and privacy-preserving proof patterns.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                     <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl border border-orange-500/50 transition-all duration-300">

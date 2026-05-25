@@ -2,12 +2,14 @@
 
 import React from "react"
 import { Shield, Zap, Database, Lock, Users, Cpu } from "lucide-react"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 import { Evidence } from "@/components/seo/Evidence"
 
 export function WhyErgo() {
+  const locale = useLocale()
   const t = useTranslations('whyErgo')
   const tc = useTranslations('common')
+  const ru = locale === "ru"
   const evidenceLabel = tc('evidence')
   const caveatLabel = tc('caveat')
 
@@ -41,6 +43,27 @@ export function WhyErgo() {
             >
               {t("subtitle")}
             </p>
+          </div>
+
+          <div className="mb-8 w-full max-w-6xl border border-white/10 bg-black/70 p-4 shadow-[0_18px_80px_rgba(0,0,0,0.32)] backdrop-blur-sm sm:p-5 md:mb-10" style={{ borderRadius: 8 }}>
+            <div className="grid gap-4 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,0.75fr)] lg:items-center">
+              <p className="text-sm leading-relaxed text-neutral-300 sm:text-base">
+                {ru
+                  ? "Это не смена темы. Те же свойства, которые сделали Ergo PoW/eUTXO сетью для DeFi, приватности и sound money, становятся базой для автономной работы: предсказуемые расходы, условия в скрипте, нативные токены и нейтральный расчёт."
+                  : "This is the same thesis extended. The properties that make Ergo a PoW/eUTXO chain for DeFi, privacy, and sound money also make it a credible base for autonomous work: predictable costs, script-level conditions, native tokens, and neutral settlement."}
+              </p>
+              <div className="grid grid-cols-3 gap-px overflow-hidden border border-white/10 bg-white/10" style={{ borderRadius: 6 }}>
+                {[
+                  ru ? "DeFi" : "DeFi",
+                  ru ? "Privacy" : "Privacy",
+                  ru ? "Sound money" : "Sound money",
+                ].map((label) => (
+                  <div key={label} className="bg-neutral-950/95 px-3 py-3 text-center font-mono text-[10px] font-bold uppercase tracking-[0.14em] text-orange-300 sm:text-xs">
+                    {label}
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* All Features - Large Cards in 2x3 Grid - Mobile Optimized */}
@@ -122,7 +145,7 @@ export function WhyErgo() {
                 <Evidence
                   evidenceLabel={evidenceLabel}
                   caveatLabel={caveatLabel}
-                  claim="Babel Fees — pay tx fees in any token"
+                  claim="Babel Fees — supported token fee paths"
                   sources={[
                     { label: "Babel Fees doc", href: "/technology/babel-fees" },
                     { label: "Pattern reference", href: "/patterns/ergo-babel-fees-box-pattern" },

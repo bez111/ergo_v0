@@ -18,7 +18,7 @@
           "items": [
             {
               "question": "Ergo가 Ethereum보다 더 좋은가요?",
-              "answer": "Ergo와 Ethereum은 서로 다른 목적을 가집니다. Ergo는 MEV 저항적인 eUTXO 모델(프런트 런닝 없음), 예측 가능한 수수료(~$0.01)를 사용하며 DeFi에 더 안전합니다. Ethereum은 더 큰 생태계와 더 많은 개발자를 보유합니다. MEV 추출 없이 공정하고 예측 가능한 거래를 원하는 사용자에게는 Ergo가 더 좋습니다."
+              "answer": "Ergo의 eUTXO 모델은 계정 기반 체인에서 흔한 front-running 및 sandwich 패턴을 줄이고 실행을 더 예측 가능하게 만듭니다. 그러나 애플리케이션 설계, mempool 정책, 오프체인 주문 흐름은 여전히 중요합니다."
             },
             {
               "question": "Ergo가 Cardano와 어떻게 다른가요?",
@@ -285,7 +285,7 @@
           },
           {
             "title": "예측 가능한 수수료",
-            "description": "가스 가격 경매 또는 MEV 추출 없음 — 수수료는 안정적이고 예측 가능합니다"
+            "description": "Ergo의 eUTXO 모델은 계정 기반 체인에서 흔한 front-running 및 sandwich 패턴을 줄이고 실행을 더 예측 가능하게 만듭니다. 그러나 애플리케이션 설계, mempool 정책, 오프체인 주문 흐름은 여전히 중요합니다."
           },
           {
             "title": "진정한 탈중앙화",
@@ -306,7 +306,7 @@
         {
           "title": "수수료 경제학",
           "content": "Ethereum",
-          "ergoAdvantage": "거래 전에 수수료를 알 수 있습니다. 예상치 못한 가스 급등이나 MEV 세금 없음."
+          "ergoAdvantage": "Ergo의 eUTXO 모델은 계정 기반 체인에서 흔한 front-running 및 sandwich 패턴을 줄이고 실행을 더 예측 가능하게 만듭니다. 그러나 애플리케이션 설계, mempool 정책, 오프체인 주문 흐름은 여전히 중요합니다."
         },
         {
           "title": "합의 및 탈중앙화",
@@ -317,7 +317,7 @@
       "faq": [
         {
           "question": "Ergo가 Ethereum에 비해 어떤 장점이 있나요?",
-          "answer": "Ergo는 MEV 추출 없는 예측 가능한 수수료를 제공하고, 설계에 의해 재진입 공격을 제거하며, Sigma Protocols를 통한 원시 프라이버시를 제공하고, 작업 증명 탈중앙화를 유지하며, 래퍼 컨트랙트 없는 일급 원시 토큰을 보유합니다."
+          "answer": "Ergo의 eUTXO 모델은 계정 기반 체인에서 흔한 front-running 및 sandwich 패턴을 줄이고 실행을 더 예측 가능하게 만듭니다. 그러나 애플리케이션 설계, mempool 정책, 오프체인 주문 흐름은 여전히 중요합니다."
         },
         {
           "question": "Ergo가 Ethereum의 dApp을 실행할 수 있나요?",
@@ -387,7 +387,7 @@
         },
         {
           "question": "DeFi에는 Ergo와 Cardano 중 어느 것이 더 나은가요?",
-          "answer": "둘 다 eUTXO에서 DeFi를 지원합니다. Ergo는 ErgoDEX와 SigmaUSD 같은 선구적 구현을 갖추고 있습니다. Cardano는 더 큰 생태계로 인해 더 많은 프로젝트를 보유합니다. Ergo"
+          "answer": "Both support DeFi on eUTXO. Ergo has pioneering references such as ErgoDEX/Spectrum and SigmaUSD, while Cardano has a larger live DeFi ecosystem. The better choice depends on whether you value Ergo PoW/fair-launch design and smaller experimental surface or Cardano larger liquidity and app count."
         }
       ]
     },
@@ -891,7 +891,7 @@
           },
           {
             "title": "MEV 보호",
-            "description": "Ergo: 설계에 의한 프런트 런닝 없음. Avalanche: MEV 추출 가능"
+            "description": "Ergo의 eUTXO 모델은 계정 기반 체인에서 흔한 front-running 및 sandwich 패턴을 줄이고 실행을 더 예측 가능하게 만듭니다. 그러나 애플리케이션 설계, mempool 정책, 오프체인 주문 흐름은 여전히 중요합니다."
           }
         ]
       },
@@ -909,7 +909,7 @@
         {
           "title": "MEV 및 프런트 런닝",
           "content": "Avalanche",
-          "ergoAdvantage": "MEV 추출 없음은 사용자에게 더 공정한 거래를 의미합니다."
+          "ergoAdvantage": "Ergo의 eUTXO 모델은 계정 기반 체인에서 흔한 front-running 및 sandwich 패턴을 줄이고 실행을 더 예측 가능하게 만듭니다. 그러나 애플리케이션 설계, mempool 정책, 오프체인 주문 흐름은 여전히 중요합니다."
         },
         {
           "title": "스마트 컨트랙트 모델",

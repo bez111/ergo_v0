@@ -1,24 +1,24 @@
 {
   "seo": {
-    "defaultTitle": "Ergo — 智能代理区块链（Agentic Blockchain），合约货币的未来",
-    "defaultDescription": "Ergo 是智能代理区块链（agentic blockchain）——PoW + eUTXO + ErgoScript，专为自主 AI 代理支付、DeFi 和无交易对手风险的可编程货币而构建。",
-    "keywords": "agentic blockchain, 智能代理区块链, blockchain for AI agents, AI代理区块链, autonomous AI payments blockchain, 自主AI支付区块链, AI agent payments, AI代理支付, ergo blockchain, Ergo区块链, cryptocurrency, 加密货币, DeFi, 去中心化金融, smart contracts, 智能合约, Ergo, eUTXO, proof of work, 工作量证明",
+    "defaultTitle": "Ergo — 面向自主工作的 Public Proof Surface",
+    "defaultDescription": "Ergo 是面向自主工作的 PoW/eUTXO 清算层和 public proof surface：可编程验收、receipt bundles、wallet policy、DeFi 与 audit-gated settlement。",
+    "keywords": "自主工作清算, public proof surface, 可验证 receipt, wallet policy, agent economy, agentic blockchain, blockchain for AI agents, ergo blockchain, 加密货币, DeFi, 智能合约, Ergo, eUTXO, proof of work",
     "home": {
       "meta": {
-        "title": "Ergo — 智能代理区块链 | 抗MEV的PoW智能合约",
-        "description": "智能代理区块链：PoW + eUTXO，用于 DeFi、AI 代理支付、隐私和健全货币。可预测的低手续费，无预挖，无风投——由密码朋克为金融自由而构建。",
+        "title": "Ergo — 自主工作在这里被支付、证明并清算",
+        "description": "面向自主工作的 PoW/eUTXO 清算层和 public proof surface：报价、可编程验收、receipt bundles、wallet policy 与 audit-gated settlement。",
         "keywords": "agentic blockchain, 智能代理区块链, blockchain for AI agents, AI代理区块链, autonomous AI payments blockchain, 自主AI支付, AI agent payments, AI代理支付, ergo blockchain, Ergo区块链, decentralized finance, 去中心化金融, MEV resistant blockchain, 抗MEV区块链, eUTXO model, eUTXO模型, censorship resistant money, 抗审查货币, ASIC resistant mining, 抗ASIC挖矿, fair launch cryptocurrency, 公平发行加密货币, programmable money, 可编程货币, financial sovereignty, 金融主权, cypherpunk blockchain, 密码朋克区块链, DeFi, privacy, 隐私, sound money, 健全货币, ergo agent economy, Ergo代理经济",
         "og": {
-          "title": "Ergo — Peer-to-Peer Agent Economy",
-          "description": "智能代理区块链：PoW + eUTXO + ErgoScript，用于自主 AI 代理支付、可编程信用和无需信任的机器对机器商务。",
+          "title": "Ergo — 面向自主工作的 Public Proof Surface",
+          "description": "PoW + eUTXO + ErgoScript 支持可编程信用、可验证 receipt、wallet policy 和 audit-gated agent settlement。",
           "siteName": "Ergo Blockchain",
-          "imageAlt": "Ergo — Peer-to-Peer Agent Economy"
+          "imageAlt": "Ergo — 面向自主工作的 Public Proof Surface"
         },
         "twitter": {
-          "title": "Ergo — Peer-to-Peer Agent Economy",
-          "description": "智能代理区块链：PoW + eUTXO，用于自主 AI 代理支付、可编程信用和机器对机器商务。无 KYC，无 gas 引导。"
+          "title": "Ergo — 面向自主工作的 Public Proof Surface",
+          "description": "PoW + eUTXO 用于自主工作 settlement：可编程信用、receipt bundles、wallet policy 和 audit-gated mainnet claims。"
         },
-        "heroImageAlt": "Ergo Platform — The Agentic Blockchain for Peer-to-Peer Agent Economy"
+        "heroImageAlt": "Ergo Platform — 面向自主工作的 Public Proof Surface"
       },
       "faq": {
         "items": [
@@ -28,19 +28,19 @@
           },
           {
             "question": "如何购买 ERG？",
-            "answer": "您可以在 KuCoin、Gate.io、Bitpanda 等中心化交易所，或 Spectrum Finance 等去中心化交易所购买 ERG。首先获取钱包（Nautilus、SAFEW 或 Ergo 移动钱包），然后购买 ERG 并提现到您的钱包地址。"
+            "answer": "You can buy ERG on exchanges like KuCoin, Gate.io, or Bitpanda, and through verified non-custodial routes where active liquidity exists. Spectrum Finance is a historical Ergo DEX reference with a 2024 sunset notice, so verify current venues before trading. First get a wallet, then purchase ERG and withdraw to your wallet address."
           },
           {
             "question": "Ergo 是好的投资选择吗？",
             "answer": "Ergo 总供应量固定为 9770 万 ERG，无预挖，公平发行。它是一条拥有独特技术（eUTXO、Sigma Protocols）的工作量证明区块链。与所有加密货币一样，请自行研究，仅投入您能承受损失的资金。"
           },
           {
-            "question": "为什么 Ergo 是 AI 代理和机器对机器支付的理想选择？",
-            "answer": "Ergo 的 eUTXO 模型提供确定性成本——代理可以预先知道确切的手续费。Babel Fees 允许代理使用任意代币支付，无需预加载 ERG。ErgoScript 将接受条件直接嵌入支付中。无需 KYC，无需 gas 引导，无需持久身份。它是唯一在协议层具备全部四种代理支付原语的区块链。"
+            "question": "为什么 Ergo 适合自主工作 settlement？",
+            "answer": "Ergo 的 eUTXO 模型提供确定性成本，ErgoScript 可以编码验收规则，Babel Fees 降低预先准备原生代币的需求，而 receipt workflows 将支付、验证和 settlement 连接起来。当前 agent-economy stack 在 audit gates 打开前保持 testnet-first。"
           },
           {
             "question": "如何开始使用 Ergo？",
-            "answer": "1) 下载钱包（浏览器端用 Nautilus，手机端用 Ergo 移动钱包）。2) 安全备份您的助记词。3) 从交易所或 DEX 获取 ERG。4) 探索 DeFi 应用，如 Spectrum Finance、SigmaUSD 或 ErgoMixer。"
+            "answer": "1) Download a wallet. 2) Back up your seed phrase securely. 3) Get ERG from an exchange or verified non-custodial route. 4) Explore SigmaUSD, ErgoMixer, NFTs, mining, and current DeFi venues after checking each project status."
           },
           {
             "question": "哪些钱包支持 Ergo？",

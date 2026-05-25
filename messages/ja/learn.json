@@ -539,7 +539,7 @@
           "description": "監査可能なプライバシーのためのΣ-protocols、ミキサー、選択的開示フローをマスターする。",
           "bullets": [
             "視覚的に説明されるSigma protocols",
-            "ErgoMixer + コンプライアンスツールキット",
+            "Ergoのプライバシーはオプションであり、選択的開示のワークフローを支援できます。実際の法的適合性は、管轄、実装、プロトコル周辺のサービス提供者に依存します。",
             "選択的開示プレイブック"
           ],
           "cta": "プライバシースタックを探索する",
@@ -994,7 +994,7 @@
         },
         {
           "question": "ErgoScriptでDeFiプロトコルを構築できますか？",
-          "answer": "はい！ErgoScriptはDeFiに最適です。例にはSigmaUSD（アルゴリズムステーブルコイン）、ErgoDEXなどのDEX、様々なDeFiプリミティブが含まれます。言語のセキュリティ機能により金融アプリケーションに理想的です。"
+          "answer": "Yes. ErgoScript is well-suited to DeFi because it supports deterministic, predicate-based contracts on eUTXO. Examples include SigmaUSD, historical DEX designs like ErgoDEX/Spectrum, and current or future DeFi primitives. Treat each deployed protocol separately and verify its live status before using funds."
         }
       ],
       "viewExamples": "例を見る",

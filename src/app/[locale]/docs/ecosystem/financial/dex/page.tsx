@@ -16,10 +16,10 @@ const dexList = [
   },
   {
     name: "Spectrum Finance",
-    status: "Live",
+    status: "Sunset",
     description:
-      "Spectrum Finance is a pioneering open-source, cross-chain decentralized exchange (DEX) platform, currently offering liquidity provision (LP), yield farming, and babel fees on the Cardano (ADA) and Ergo (ERG) networks.",
-    link: "https://spectrum.fi/"
+      "Spectrum Finance was a pioneering open-source cross-chain DEX on the eUTXO model. It published a formal sunset notice and froze Ergo contracts in February 2024; use it as a historical reference, not as an active venue for new liquidity.",
+    link: "https://spectrum.fi/sunset-notice"
   },
   {
     name: "Trade House",

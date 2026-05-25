@@ -260,7 +260,7 @@
         },
         "3": {
           "question": "Puis-je générer du rendement avec mes ERG ?",
-          "answer": "Oui ! Vous pouvez fournir de la liquidité sur Spectrum DEX, utiliser la launchpad ErgoPad ou participer à divers protocoles DeFi."
+          "answer": "Yes, but verify current protocol status first. Spectrum Finance is a historical Ergo DEX reference with a 2024 sunset notice, ErgoPad is not currently operating, and DeFi positions remain funds-at-risk software."
         },
         "4": {
           "question": "Ergo est-il un titre ou une marchandise ?",

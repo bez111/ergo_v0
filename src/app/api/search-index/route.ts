@@ -179,7 +179,7 @@ export async function GET() {
       absoluteUrl: `${baseUrl}/agent-economy`,
       priority: 0.9,
       changeFrequency: 'weekly',
-      keywords: 'agent builders, agent economy, accord protocol, x402, mcp, agent payments, programmable credit',
+      keywords: 'agent builders, agent economy, accord protocol, x402, mcp, receipts, autonomous work clearing, programmable credit',
       schema: ['TechArticle', 'SoftwareApplication']
     },
     {

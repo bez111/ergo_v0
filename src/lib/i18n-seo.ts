@@ -190,8 +190,8 @@ export const seoMetadata: Record<Locale, {
   {
     siteName: locale === 'ru' ? 'Платформа Ergo' : 'Ergo Platform',
     siteDescription: locale === 'ru'
-      ? 'Ergo — устойчивая блокчейн-платформа для контрактных денег, DeFi, приватности и долгосрочной экономики.'
-      : 'Ergo is a resilient blockchain platform for contractual money, DeFi, privacy, and long-term economics.',
+      ? 'Ergo — PoW/eUTXO слой клиринга и публичная поверхность доказательств для автономной работы, DeFi, приватности и audit-gated расчётов.'
+      : 'Ergo is a PoW/eUTXO clearing layer and public proof surface for autonomous work, DeFi, privacy, and audit-gated settlement.',
     keywords: ['Ergo', 'blockchain', 'DeFi', 'smart contracts', 'ErgoScript', 'eUTXO', 'privacy', 'proof of work']
   }
 ])) as Record<Locale, {

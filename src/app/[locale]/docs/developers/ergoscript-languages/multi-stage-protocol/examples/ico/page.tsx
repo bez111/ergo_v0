@@ -57,6 +57,12 @@ export default function ICOPage() {
             <p>
               Unlike Ethereum, Ergo contracts cannot store arbitrarily large datasets directly. Instead, Ergo utilizes authenticated data structures like AVL trees. We store only a compact digest (e.g., ~33 bytes for an AvlTree) representing the root hash and state of a potentially vast (key, value) dictionary. To access or modify elements in the dictionary, a spending transaction must provide cryptographic proofs (lookup or modification proofs). This allows a contract to authenticate large datasets using very little on-chain storage.
             </p>
+            <div className="rounded-lg border border-yellow-400/30 bg-yellow-400/10 p-4 text-sm text-yellow-100">
+              These snippets are educational walkthrough code. Several fragments assume specific input/output indexes,
+              token collections, registers, and context variables already exist. Before adapting any ICO-style contract,
+              add explicit size/defined guards, pin compiler versions, generate test vectors, and keep real-fund
+              deployments behind independent review.
+            </div>
           </div>
         </section>
 
@@ -538,4 +544,4 @@ valuesCorrect && outTreeCorrect && selfOutputCorrect && tokenPreserved`, 'withdr
       </div>
     </div>
   );
-} 
+}

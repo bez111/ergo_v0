@@ -19,13 +19,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   
   return {
-    title: "Babel Fees | Pay Transaction Fees with Any Token - Ergo Technology",
-    description: "Learn how Babel Fees allow users to pay Ergo transaction fees with any token through automated intermediaries. Revolutionary UX improvement for blockchain transactions.",
+    title: "Babel Fees | Supported Token Fee Paths - Ergo Technology",
+    description: "Learn how Babel Fees let users cover Ergo transaction fees through supported token-to-ERG conversion paths while miners still receive ERG.",
     keywords: ["babel fees", "ergo transaction fees", "pay fees with tokens", "defi fees", "blockchain fees", "ergo babel", "token fees", "gas fees alternative", "ergo technology"],
     alternates: getAlternates('/technology/babel-fees', locale),
     openGraph: {
-      title: "Babel Fees - Pay Transaction Fees with Any Token | Ergo Technology",
-      description: "Revolutionary fee payment system allowing users to pay Ergo transaction fees with any token through automated intermediaries.",
+      title: "Babel Fees - Supported Token Fee Paths | Ergo Technology",
+      description: "Fee abstraction on Ergo: supported token-to-ERG paths let users cover fees while miners still receive ERG.",
       url: getCanonicalUrl('/technology/babel-fees', locale),
       siteName: "Ergo Platform",
       images: [{
@@ -39,8 +39,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: "Babel Fees - Pay Fees with Any Token | Ergo",
-      description: "Revolutionary fee payment system on Ergo blockchain - pay transaction fees with any token!",
+      title: "Babel Fees - Supported Token Fee Paths | Ergo",
+      description: "Learn how supported token-to-ERG fee paths improve Ergo UX.",
       images: ["https://www.ergoblockchain.org/og/babel-fees.jpg"],
       creator: "@ergoplatform",
       site: "@ergoplatform"
@@ -59,15 +59,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default function BabelFeesPage() {
   // Centralized SEO schemas
   const techArticleSchema = createTechArticleSchema("/technology/babel-fees", {
-    headline: "Babel Fees: Pay Transaction Fees with Any Token",
-    description: "Revolutionary fee payment system allowing users to pay Ergo transaction fees with any token through automated intermediaries",
+    headline: "Babel Fees: Supported Token Fee Paths",
+    description: "Fee abstraction that lets users cover Ergo transaction fees through supported token-to-ERG paths while miners still receive ERG",
     about: [{ name: "Babel Fees" }],
   })
 
   const faqSchema = createFAQSchema([
     {
       question: "What are Babel Fees?",
-      answer: "Babel Fees allow users to pay Ergo transaction fees with any token instead of ERG, through automated intermediaries who handle the conversion.",
+      answer: "Babel Fees allow users to cover Ergo transaction fees through supported token-to-ERG conversion paths instead of manually pre-funding ERG for every transaction.",
     },
     {
       question: "How do Babel Fees work?",
@@ -75,7 +75,7 @@ export default function BabelFeesPage() {
     },
     {
       question: "Which tokens can be used for fees?",
-      answer: "Any token can potentially be used, as long as there are intermediaries willing to accept it and convert it to ERG.",
+      answer: "A token can be used only where a Babel box or intermediary is willing to accept that token and provide the required ERG fee coverage.",
     },
     {
       question: "Are Babel Fees more expensive?",
@@ -85,7 +85,7 @@ export default function BabelFeesPage() {
 
   const howToSchema = createHowToSchema({
     name: "How to Use Babel Fees",
-    description: "Step-by-step guide to paying transaction fees with any token using Babel Fees",
+    description: "Step-by-step guide to paying transaction fees through supported token paths using Babel Fees",
     steps: [
       { name: "Choose a dApp", text: "Select a dApp that supports Babel Fees functionality" },
       { name: "Select your token", text: "Choose which token you want to use to pay the transaction fee" },

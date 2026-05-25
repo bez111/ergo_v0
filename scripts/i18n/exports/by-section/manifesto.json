@@ -1,38 +1,303 @@
 [
   {
-    "key": "manifesto.title",
-    "value": "MANIFESTO",
+    "key": "manifesto.manifesto.title",
+    "source": "MANIFESTO",
     "context": "Title",
-    "maxLength": 13.5
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "manifesto.content.paragraph1",
-    "value": "In a world of increasing surveillance and control, we stand for financial freedom and privacy.",
+    "key": "manifesto.manifesto.content.paragraph1",
+    "source": "In a world of increasing surveillance and control, we stand for financial freedom and privacy.",
     "context": "General content",
-    "maxLength": 141
+    "maxLength": 141,
+    "translation": ""
   },
   {
-    "key": "manifesto.content.paragraph2",
-    "value": "Ergo is built on the core principles that drove the original crypto revolution: open, permissionless, secure systems that empower regular people.",
+    "key": "manifesto.manifesto.content.paragraph2",
+    "source": "Ergo is built on the core principles that drove the original crypto revolution: open, permissionless, secure systems that empower regular people.",
     "context": "General content",
-    "maxLength": 217.5
+    "maxLength": 217.5,
+    "translation": ""
   },
   {
-    "key": "manifesto.content.paragraph3",
-    "value": "We reject the centralization of power. We reject the surveillance state. We reject the corporate capture of our financial systems.",
+    "key": "manifesto.manifesto.content.paragraph3",
+    "source": "We reject the centralization of power. We reject the surveillance state. We reject the corporate capture of our financial systems.",
     "context": "General content",
-    "maxLength": 195
+    "maxLength": 195,
+    "translation": ""
   },
   {
-    "key": "manifesto.content.paragraph4",
-    "value": "Ergo provides the tools for people to secure their financial interactions through contractual money - programmable, private, and unstoppable.",
+    "key": "manifesto.manifesto.content.paragraph4",
+    "source": "Ergo provides the tools for people to secure their financial interactions through contractual money - programmable, private, and unstoppable.",
     "context": "General content",
-    "maxLength": 211.5
+    "maxLength": 211.5,
+    "translation": ""
   },
   {
-    "key": "manifesto.content.conclusion",
-    "value": "This is not just technology. This is resistance.",
+    "key": "manifesto.manifesto.content.conclusion",
+    "source": "This is not just technology. This is resistance.",
     "context": "General content",
-    "maxLength": 72
+    "maxLength": 72,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.corePillars.title",
+    "source": "CORE PILLARS",
+    "context": "Title",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.corePillars.subtitle",
+    "source": "Ergo combines proven principles with cutting-edge cryptography",
+    "context": "General content",
+    "maxLength": 93,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.corePillars.pillars.security.title",
+    "source": "SECURITY (POW)",
+    "context": "Title",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.corePillars.pillars.security.description",
+    "source": "ASIC-resistant Autolykos v2 PoW ensures robust decentralization, fair mining, and long-term security for everyone.",
+    "context": "Description",
+    "maxLength": 171,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.corePillars.pillars.programmability.title",
+    "source": "PROGRAMMABILITY (eUTXO + ERGOSCRIPT)",
+    "context": "Title",
+    "maxLength": 54,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.corePillars.pillars.programmability.description",
+    "source": "Formally verifiable, expressive, and secure contracts—powered by ErgoScript and the advanced eUTXO model.",
+    "context": "Description",
+    "maxLength": 157.5,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.corePillars.pillars.sustainability.title",
+    "source": "SUSTAINABILITY (STORAGE RENT)",
+    "context": "Title",
+    "maxLength": 43.5,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.corePillars.pillars.sustainability.description",
+    "source": "Storage rent and predictable costs maintain long-term network health and prevent blockchain bloat.",
+    "context": "Description",
+    "maxLength": 147,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.corePillars.pillars.privacy.title",
+    "source": "PRIVACY",
+    "context": "Title",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.corePillars.pillars.privacy.description",
+    "source": "Protocol-level privacy using Sigma protocols—enabling confidential dApps and transactions.",
+    "context": "Description",
+    "maxLength": 135,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.corePillars.pillars.oraclePools.title",
+    "source": "ORACLE POOLS",
+    "context": "Title",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.corePillars.pillars.oraclePools.description",
+    "source": "The first truly decentralized oracle pools—reliable, permissionless off-chain data access with built-in incentives.",
+    "context": "Description",
+    "maxLength": 172.5,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.corePillars.pillars.devFriendly.title",
+    "source": "DEV FRIENDLY",
+    "context": "Title",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.corePillars.pillars.devFriendly.description",
+    "source": "World-class docs, open tools, and a vibrant, collaborative community make building on Ergo easy and innovative.",
+    "context": "Description",
+    "maxLength": 166.5,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.whyErgo.title",
+    "source": "WHY ERGO?",
+    "context": "Title",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.whyErgo.subtitle",
+    "source": "A chain designed for agents to transact without identity, pre-funding, or permission",
+    "context": "General content",
+    "maxLength": 126,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.whyErgo.mainFeatures.fairAndSecure.title",
+    "source": "DETERMINISTIC COSTS",
+    "context": "Title",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.whyErgo.mainFeatures.fairAndSecure.subtitle",
+    "source": "eUTXO Advantage",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.whyErgo.mainFeatures.fairAndSecure.description",
+    "source": "Agents know the exact fee before submitting. No gas estimation failures, no surprise costs. The transaction executes as constructed — or not at all.",
+    "context": "Description",
+    "maxLength": 222,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.whyErgo.mainFeatures.powerfulAndFlexible.title",
+    "source": "PAYMENT IS THE CONTRACT",
+    "context": "Title",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.whyErgo.mainFeatures.powerfulAndFlexible.subtitle",
+    "source": "ErgoScript Acceptance Predicates",
+    "context": "General content",
+    "maxLength": 48,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.whyErgo.mainFeatures.powerfulAndFlexible.description",
+    "source": "Conditions are embedded in the payment itself. No escrow, no oracle, no trusted server. The payment encodes what must be true for redemption.",
+    "context": "Description",
+    "maxLength": 211.5,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.whyErgo.mainFeatures.sustainable.title",
+    "source": "ZERO GAS BOOTSTRAPPING",
+    "context": "Title",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.whyErgo.mainFeatures.sustainable.subtitle",
+    "source": "Babel Fees",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.whyErgo.mainFeatures.sustainable.description",
+    "source": "Agents can use supported token-to-ERG fee paths instead of always pre-funding ERG. Spin up, hand it a Note, and reduce the native-gas bootstrapping step.",
+    "context": "Description",
+    "maxLength": 229.5,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.whyErgo.additionalFeatures.privacy.title",
+    "source": "PROGRAMMABLE CREDIT",
+    "context": "Title",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.whyErgo.additionalFeatures.privacy.subtitle",
+    "source": "Notes, Reserves, Trackers",
+    "context": "General content",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.whyErgo.additionalFeatures.privacy.description",
+    "source": "Agents issue bearer IOUs backed by on-chain reserves. Anti-double-spend trackers ensure integrity. Local credit, global settlement.",
+    "context": "Description",
+    "maxLength": 196.5,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.whyErgo.additionalFeatures.community.title",
+    "source": "NO KILL SWITCH",
+    "context": "Title",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.whyErgo.additionalFeatures.community.subtitle",
+    "source": "Proof-of-Work Guarantee",
+    "context": "General content",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.whyErgo.additionalFeatures.community.description",
+    "source": "No foundation multisig, no validator cartel, no emergency pause. No committee can freeze agent funds or halt the network.",
+    "context": "Description",
+    "maxLength": 181.5,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.whyErgo.additionalFeatures.developer.title",
+    "source": "AGENT-READY SDK",
+    "context": "Title",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.whyErgo.additionalFeatures.developer.subtitle",
+    "source": "Fleet SDK, MCP, LangChain",
+    "context": "General content",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.whyErgo.additionalFeatures.developer.description",
+    "source": "TypeScript and Python SDKs with LangChain tools, MCP server for Claude, and 10 working examples — from basic payments to multi-agent orchestration.",
+    "context": "Description",
+    "maxLength": 220.5,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.whyErgo.titleStart",
+    "source": "Why",
+    "context": "Title",
+    "maxLength": 4.5,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.whyErgo.titleHighlight",
+    "source": "Ergo",
+    "context": "Title",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "manifesto.whyErgo.titleEnd",
+    "source": "?",
+    "context": "Title",
+    "maxLength": 1.5,
+    "translation": ""
   }
 ]

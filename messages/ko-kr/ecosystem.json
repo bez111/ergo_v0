@@ -148,7 +148,7 @@
             },
             {
               "question": "Ergo에는 어떤 DeFi 프로젝트가 있나요?",
-              "answer": "주요 DeFi 프로젝트에는 SigmaUSD (알고리즘 스테이블코인), ErgoDEX (DEX), 대출 프로토콜, 오라클 풀이 포함됩니다."
+              "answer": "Key DeFi references include SigmaUSD, historical DEX designs such as ErgoDEX/Spectrum, lending protocols, and oracle pools. Always verify each project current operational status before using real funds."
             },
             {
               "question": "어떤 지갑이 Ergo를 지원하나요?",

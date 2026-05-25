@@ -84,16 +84,16 @@
     },
     "babelFees": {
       "title": "Babel Fees",
-      "subtitle": "Pay transaction fees with any token, not just ERG. Revolutionary flexibility for Ergo users.",
+      "subtitle": "Cover transaction fees through supported token-to-ERG paths, not only direct ERG fee payment.",
       "description": "Babel Fees (EIP-0019) enable seamless fee payments using native tokens, enhancing UX and token utility across the ecosystem.",
       "seo": {
-        "title": "Babel Fees on Ergo | Pay Transaction Fees with Any Token",
-        "description": "Learn about Babel Fees on Ergo - pay transaction fees with any token. Understand how this innovative feature enhances UX and token utility.",
+        "title": "Babel Fees on Ergo | Supported Token Fee Paths",
+        "description": "Learn about Babel Fees on Ergo - cover transaction fees through supported token-to-ERG paths. Understand how this feature enhances UX and token utility.",
         "keywords": "babel fees, ergo transaction fees, pay fees with tokens, defi fees, blockchain fees, ergo babel, token fees, gas fees alternative",
         "ogTitle": "Babel Fees on Ergo",
-        "ogDescription": "Pay transaction fees with any token on Ergo. Enhanced UX and token utility.",
+        "ogDescription": "Cover transaction fees through supported token-to-ERG paths on Ergo.",
         "twitterTitle": "Babel Fees on Ergo",
-        "twitterDescription": "Pay transaction fees with any token on Ergo"
+        "twitterDescription": "Supported token fee paths on Ergo"
       },
       "buttons": {
         "howItWorks": "How It Works",
@@ -107,7 +107,7 @@
             "description": "Traditional blockchain fees"
           },
           "anyToken": {
-            "name": "Any Token",
+            "name": "Supported Token Path",
             "description": "Pay with project tokens"
           },
           "autoExchange": {
@@ -301,7 +301,7 @@
       },
       "cta": {
         "title": "Ready to Use Babel Fees?",
-        "subtitle": "Experience the flexibility of paying transaction fees with any token",
+        "subtitle": "Experience the flexibility of supported token-to-ERG fee paths",
         "buttons": {
           "exploreWallets": "Explore Supported Wallets",
           "learnMore": "Learn More About EIP-0019"
@@ -309,7 +309,7 @@
       },
       "schema": {
         "techArticle": {
-          "headline": "Babel Fees: Pay Transaction Fees with Any Token",
+          "headline": "Babel Fees: Supported Token Fee Paths",
           "description": "Technical guide to Ergo's Babel Fees system for flexible transaction fee payments",
           "about": {
             "name": "Blockchain Transaction Fees",
@@ -319,7 +319,7 @@
         "faq": {
           "whatAre": {
             "question": "What are Babel Fees?",
-            "answer": "Babel Fees allow users to pay transaction fees on Ergo using any token instead of ERG, making DeFi more accessible by removing the need to hold ERG for fees."
+            "answer": "Babel Fees allow users to cover transaction fees on Ergo through supported token-to-ERG paths, reducing the need to hold ERG for every fee payment."
           },
           "howWork": {
             "question": "How do Babel Fees work?",
@@ -446,7 +446,7 @@
         {
           "id": "privacy-features",
           "question": "Are Ergo's privacy features legal to use?",
-          "answer": "Ergo provides optional privacy features through Sigma protocols. Users should check their local regulations. Privacy is implemented at the protocol level for legitimate uses like business confidentiality, personal financial privacy, and compliance with data protection laws."
+          "answer": "Ergo privacy is optional and can support selective-disclosure workflows. Actual legal compliance depends on jurisdiction, implementation, and the surrounding service provider."
         },
         {
           "id": "mining-profitable",
@@ -638,7 +638,7 @@
         "faq": {
           "whereToBuy": {
             "question": "Where can I buy ERG?",
-            "answer": "ERG is available on major exchanges like KuCoin, Gate.io, CoinEx, and Huobi, as well as DEXs like Spectrum Finance. Choose based on your region and preferred payment method."
+            "answer": "ERG is available on major exchanges like KuCoin, Gate.io, CoinEx, and Huobi, plus verified non-custodial routes where active liquidity exists. Spectrum Finance is historical/frozen since February 2024, so verify any live venue before trading. Choose based on your region and preferred payment method."
           },
           "bestExchange": {
             "question": "What is the best exchange to buy ERG?",
@@ -1090,7 +1090,7 @@
         },
         "isPrivacyOptional": {
           "question": "Is Ergo privacy optional or mandatory?",
-          "answer": "Ergo provides optional privacy features. Users can choose when to use privacy tools like ErgoMixer or stealth addresses based on their needs, maintaining flexibility while ensuring regulatory compliance when needed."
+          "answer": "Ergo privacy is optional and can support selective-disclosure workflows. Actual legal compliance depends on jurisdiction, implementation, and the surrounding service provider."
         },
         "whatMakesErgoDifferent": {
           "question": "What makes Ergo's privacy different from other chains?",
@@ -2643,7 +2643,7 @@
   },
   "useBabelFees": {
     "title": "Babel Fees",
-    "description": "Pay transaction fees in any token on Ergo",
+    "description": "Supported token fee paths on Ergo",
     "subtitle": "Flexible fee payment system"
   },
   "useBridges": {
@@ -2782,7 +2782,7 @@
       },
       "privacy-features": {
         "question": "Are Ergo's privacy features legal to use?",
-        "answer": "Ergo provides optional privacy features through Sigma protocols. Users should check their local regulations. Privacy is implemented at the protocol level for legitimate uses like business confidentiality, personal financial privacy, and compliance with data protection laws."
+        "answer": "Ergo privacy is optional and can support selective-disclosure workflows. Actual legal compliance depends on jurisdiction, implementation, and the surrounding service provider."
       },
       "mining-profitable": {
         "question": "Is mining ERG still profitable?",
@@ -2906,7 +2906,7 @@
       "dex": {
         "spectrum": {
           "name": "Spectrum Finance",
-          "description": "Native Ergo DEX with deep liquidity"
+          "description": "Historical Ergo DEX reference; verify active venues before trading"
         },
         "uniswap": {
           "name": "Uniswap",
@@ -2973,7 +2973,7 @@
       "title": "Frequently Asked Questions",
       "whereToBy": {
         "question": "Where can I buy ERG?",
-        "answer": "You can buy ERG on centralized exchanges like KuCoin and Gate.io, decentralized exchanges like Spectrum Finance, or P2P platforms."
+        "answer": "You can buy ERG on centralized exchanges like KuCoin and Gate.io, verified non-custodial routes where active liquidity exists, or P2P platforms."
       },
       "minAmount": {
         "question": "What's the minimum amount to buy?",

@@ -948,7 +948,7 @@ export const infographics: InfographicMeta[] = [
     aboutContent: [
       "This infographic compares the privacy philosophies of Ergo and Monero: Monero offers default, always-on payment privacy for every transaction, while Ergo focuses on optional, programmable privacy that can be tuned per use case.",
       "On Ergo, privacy is integrated with smart contracts, DeFi, stablecoins and dApps, enabling complex flows where users and builders choose what to hide and when.",
-      "On Monero, the chain is heavily payment-focused with no general smart-contract platform, making it harder to design selectively transparent flows or compliance-friendly patterns.",
+      "On Monero, the chain is heavily payment-focused with no general smart-contract platform, making it harder to design selectively transparent audit or disclosure workflows.",
     ],
     keyPoints: [
       "Monero provides default full payment privacy on every transaction by design.",
@@ -2848,9 +2848,9 @@ export const infographics: InfographicMeta[] = [
   },
   {
     slug: "ergo-babel-fees-pay-with-any-token",
-    title: "Babel Fees: Pay Transaction Fees with Any Token",
+    title: "Babel Fees: Supported Token Fee Paths",
     shortDescription:
-      "How Ergo's Babel Fees let users pay transaction costs in any token while miners still receive ERG through an on-chain market mechanism.",
+      "How Ergo's Babel Fees let users cover transaction costs through supported token-to-ERG paths while miners still receive ERG through an on-chain market mechanism.",
     subtitle: "Gas abstraction through eUTXO: pay fees in the token you hold, not the one the protocol demands.",
     category: "eutxo-smart-contracts",
     level: "intermediate",
@@ -2870,21 +2870,21 @@ export const infographics: InfographicMeta[] = [
     fullImageUrl:
       "/infographics/ergo-babel-fees-pay-with-any-token.avif",
     imageAlt:
-      "Infographic explaining Ergo Babel Fees: how users can pay transaction fees in any token while miners receive ERG through automated on-chain exchange.",
+      "Infographic explaining Ergo Babel Fees: how users can cover transaction fees through supported token-to-ERG paths while miners receive ERG through automated on-chain exchange.",
     publishDate: "2025-12-08T00:00:00.000Z",
     readingTimeMinutes: 5,
     seoTitle:
-      "Babel Fees on Ergo: Pay Transaction Fees with Any Token (Gas Abstraction)",
+      "Babel Fees on Ergo: Supported Token Fee Paths (Gas Abstraction)",
     seoDescription:
-      "Learn how Ergo's Babel Fees enable gas abstraction: pay transaction fees in SigUSD, tokens, or NFTs while miners still receive ERG through an automated on-chain market.",
+      "Learn how Ergo's Babel Fees enable gas abstraction through supported token-to-ERG fee paths while miners still receive ERG through an automated on-chain market.",
     
     aboutContent: [
-      "Babel Fees solve a common blockchain UX problem: users shouldn't need to hold the native token just to move their assets. On Ergo, Babel Fees let you pay transaction costs in whatever token you already have.",
+      "Babel Fees solve a common blockchain UX problem: users should not always need to hold the native token just to move their assets. On Ergo, Babel Fees let users cover transaction costs through supported token-to-ERG paths.",
       "The mechanism works through on-chain intermediaries who accept your tokens and cover the ERG fee on your behalf. This creates a free market for fee payment: intermediaries compete on exchange rates, and users get better UX without sacrificing decentralization.",
       "Unlike account-based 'gas sponsorship' that requires trusted relayers, Babel Fees leverage eUTXO's atomic transaction model. The swap happens in the same transaction as your payment, with no counterparty risk.",
     ],
     keyPoints: [
-      "Pay fees in any token — No need to hold ERG just to transact.",
+      "Supported token fee paths — Less need to hold ERG just to transact.",
       "On-chain market — Intermediaries compete to offer the best exchange rates.",
       "Atomic swaps — Token-to-ERG exchange happens in the same transaction.",
       "No trusted relayers — Unlike account-model gas sponsorship, no counterparty risk.",

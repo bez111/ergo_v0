@@ -77,7 +77,7 @@ export async function generateMetadata({ params }: LocaleLayoutProps): Promise<M
           secureUrl: `${siteConfig.siteUrl}/og-image.png`,
           width: 1200,
           height: 630,
-          alt: 'Ergo — The Agentic Blockchain',
+          alt: t('home.meta.heroImageAlt'),
           type: 'image/png',
         },
       ],

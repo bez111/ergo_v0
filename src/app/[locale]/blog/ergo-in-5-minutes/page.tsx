@@ -21,14 +21,14 @@ const SEO = {
 
 // FAQ Content
 const FAQ_ITEMS = [
-  { question: "What is the Ergo blockchain?", answer: "Ergo is a Proof-of-Work blockchain that blends Bitcoin-level security with the eUTXO smart-contract model and Sigma-protocol privacy to power secure, auditable DeFi." },
+  { question: "What is the Ergo blockchain?", answer: "Ergo is a Proof-of-Work blockchain that blends a Bitcoin-style UTXO security model with eUTXO smart contracts and Sigma-protocol privacy patterns." },
   { question: "How is Ergo different from Ethereum and Bitcoin (eUTXO vs account)?", answer: "Ergo uses eUTXO, attaching conditions to outputs for deterministic, easily parallelized execution—avoiding many global-state side effects seen in account-based chains, while extending Bitcoin's UTXO with rich programmability." },
-  { question: "What are Sigma protocols on Ergo?", answer: "Sigma protocols are native zero-knowledge proofs (AND/OR, threshold, ring) that enable auditable privacy—you keep details confidential yet can prove compliance or selectively disclose when required." },
+  { question: "What are Sigma protocols on Ergo?", answer: "Sigma protocols are native zero-knowledge proofs (AND/OR, threshold, ring) that enable auditable privacy patterns: you can keep details confidential while selectively disclosing or proving specific properties when required." },
   { question: "What is storage rent on Ergo?", answer: "Storage rent is a small fee on long-inactive boxes (UTXOs) that recycles lost ERG to fund network security; active users avoid it simply by moving coins periodically." },
   { question: "Was there an ICO or pre-mine (fair launch)?", answer: "No—ERG had a fair launch with Proof-of-Work only, no ICO and no pre-mine, aligning incentives and decentralization from day one." },
   { question: "What is Autolykos and can I mine Ergo with GPUs?", answer: "Autolykos is Ergo's memory-hard PoW algorithm, designed to be GPU-friendly and more resistant to ASIC centralization; yes, you can mine ERG with consumer-grade GPUs." },
   { question: "What can I build or use on Ergo (DeFi & apps)?", answer: "Ergo supports DEX trading (e.g., Spectrum), algorithmic stablecoins (SigmaUSD), DAO tooling (Paideia), NFTs, and privacy-preserving apps—using ErgoScript and the eUTXO model." },
-  { question: "Is Ergo a 'privacy coin'? (compliance & audits)", answer: "Privacy on Ergo is optional and policy-driven: Sigma proofs enable selective disclosure and auditability, making privacy features compatible with compliance workflows." }
+  { question: "Is Ergo a 'privacy coin'? (compliance & audits)", answer: "Privacy on Ergo is optional and policy-driven: Sigma proofs enable selective disclosure and auditability. Actual legal compliance depends on jurisdiction, implementation, and the surrounding service provider." }
 ]
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {

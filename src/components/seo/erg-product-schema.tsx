@@ -27,7 +27,7 @@ export function ERGProductSchema({
     name: 'Ergo (ERG)',
     alternateName: ['ERG', 'Ergo Token', 'Ergo Coin'],
     description:
-      'Native cryptocurrency of the Ergo blockchain — a Layer-1 PoW network with eUTXO smart contracts, ErgoScript, Sigma Protocols, Babel Fees and storage rent.',
+      'Native cryptocurrency of the Ergo PoW/eUTXO network, used for settlement, fees, smart contracts, receipt-bearing workflows, Babel Fees and storage rent.',
     category: 'Cryptocurrency',
     image: `${siteConfig.siteUrl}/og-image.png`,
     url: siteConfig.siteUrl,

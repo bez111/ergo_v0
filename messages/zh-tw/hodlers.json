@@ -260,7 +260,7 @@
         },
         "3": {
           "question": "我可以用我的 ERG 賺取收益嗎？",
-          "answer": "可以！您可以在 Spectrum DEX 上提供流動性，使用 ErgoPad 發射台，或參與各種 DeFi 協議。"
+          "answer": "Yes, but verify current protocol status first. Spectrum Finance is a historical Ergo DEX reference with a 2024 sunset notice, ErgoPad is not currently operating, and DeFi positions remain funds-at-risk software."
         },
         "4": {
           "question": "Ergo 是證券還是商品？",

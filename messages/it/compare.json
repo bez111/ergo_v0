@@ -18,7 +18,7 @@
           "items": [
             {
               "question": "Ergo è migliore di Ethereum?",
-              "answer": "Ergo ed Ethereum hanno scopi diversi. Ergo utilizza il modello eUTXO che è resistente al MEV (nessun front-running), ha commissioni prevedibili (~$0,01) ed è più sicuro per il DeFi. Ethereum ha un ecosistema più grande e più sviluppatori. Ergo è migliore per gli utenti che vogliono transazioni eque e prevedibili senza estrazione MEV."
+              "answer": "Il modello eUTXO di Ergo riduce i comuni schemi di front-running e sandwich dei modelli account-based e rende l'esecuzione più prevedibile. Progettazione dell'applicazione, policy mempool e flussi off-chain restano importanti."
             },
             {
               "question": "In cosa si differenzia Ergo da Cardano?",
@@ -387,7 +387,7 @@
         },
         {
           "question": "Quale è migliore per il DeFi, Ergo o Cardano?",
-          "answer": "Entrambi supportano il DeFi su eUTXO. Ergo ha implementazioni pionieristiche come ErgoDEX e SigmaUSD. Cardano ha più progetti grazie a un ecosistema più grande. Ergo"
+          "answer": "Both support DeFi on eUTXO. Ergo has pioneering references such as ErgoDEX/Spectrum and SigmaUSD, while Cardano has a larger live DeFi ecosystem. The better choice depends on whether you value Ergo PoW/fair-launch design and smaller experimental surface or Cardano larger liquidity and app count."
         }
       ]
     },
@@ -891,7 +891,7 @@
           },
           {
             "title": "Protezione MEV",
-            "description": "Ergo: nessun front-running per progettazione. Avalanche: l'estrazione MEV è possibile"
+            "description": "Il modello eUTXO di Ergo riduce i comuni schemi di front-running e sandwich dei modelli account-based e rende l'esecuzione più prevedibile. Progettazione dell'applicazione, policy mempool e flussi off-chain restano importanti."
           }
         ]
       },
@@ -909,7 +909,7 @@
         {
           "title": "MEV e Front-Running",
           "content": "Avalanche",
-          "ergoAdvantage": "Nessuna estrazione MEV significa un trading più equo per gli utenti."
+          "ergoAdvantage": "Il modello eUTXO di Ergo riduce i comuni schemi di front-running e sandwich dei modelli account-based e rende l'esecuzione più prevedibile. Progettazione dell'applicazione, policy mempool e flussi off-chain restano importanti."
         },
         {
           "title": "Modello degli Smart Contract",
@@ -958,7 +958,7 @@
           },
           {
             "title": "Filosofia",
-            "description": "Ergo: cypherpunk, focalizzato sulla privacy. Algorand: enterprise, conforme alle normative"
+            "description": "Ergo: cypherpunk, privacy, resistenza alla censura e sovranità finanziaria. Algorand: adozione enterprise e un ecosistema guidato dalla fondazione."
           }
         ]
       },
@@ -999,7 +999,7 @@
         },
         {
           "question": "Quale è migliore per la privacy?",
-          "answer": "Ergo. I Protocolli Sigma abilitano prove a conoscenza zero a L1. Algorand non ha funzionalità di privacy native ed è progettato per essere conforme alle normative."
+          "answer": "La privacy in Ergo è opzionale e può supportare workflow di divulgazione selettiva. La conformità legale effettiva dipende dalla giurisdizione, dall'implementazione e dal provider di servizi intorno al protocollo."
         },
         {
           "question": "Perché scegliere Ergo rispetto ad Algorand?",

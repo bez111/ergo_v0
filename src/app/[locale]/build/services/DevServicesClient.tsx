@@ -106,8 +106,12 @@ const toolExamples: Record<ToolAction, { label: string; icon: typeof Hash; place
   },
 }
 
-export function DevServicesClient() {
-  const [index, setIndex] = useState<ServiceIndex | null>(null)
+export function DevServicesClient({
+  initialIndex = null,
+}: {
+  initialIndex?: ServiceIndex | null
+}) {
+  const [index, setIndex] = useState<ServiceIndex | null>(initialIndex)
   const [indexError, setIndexError] = useState<string | null>(null)
   const [selectedCategory, setSelectedCategory] = useState<DevServiceCategory>("inspect")
   const [toolAction, setToolAction] = useState<ToolAction>("hash")

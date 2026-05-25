@@ -1,0 +1,1199 @@
+[
+  {
+    "key": "hodlers.holdersPage.hero.title",
+    "source": "Store wealth. Keep privacy. Stay sovereign.",
+    "context": "Title",
+    "maxLength": 64.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.hero.subtitle",
+    "source": "Bitcoin's proven security + Smart contracts + Optional privacy. Fixed supply, fair launch, no corporate control.",
+    "context": "General content",
+    "maxLength": 168,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.hero.cta",
+    "source": "Get an Ergo Wallet",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.hero.whyDifferent",
+    "source": "Why Ergo is Different",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.breadcrumbs.home",
+    "source": "Home",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.breadcrumbs.hodlers",
+    "source": "For Hodlers",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.seo.title",
+    "source": "Hold ERG — Sound Money with No Pre-mine | Ergo",
+    "context": "SEO metadata",
+    "maxLength": 69,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.seo.description",
+    "source": "Why hold ERG? Fixed supply (97.7M), fair launch, no VC control. Bitcoin security + smart contracts + optional privacy. Wallets, tokenomics & more.",
+    "context": "SEO metadata",
+    "maxLength": 219,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.seo.keywords.0",
+    "source": "hold ERG",
+    "context": "SEO metadata",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.seo.keywords.1",
+    "source": "Ergo investment",
+    "context": "SEO metadata",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.seo.keywords.2",
+    "source": "sound money",
+    "context": "SEO metadata",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.seo.keywords.3",
+    "source": "cryptocurrency holders",
+    "context": "SEO metadata",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.seo.keywords.4",
+    "source": "Bitcoin alternative",
+    "context": "SEO metadata",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.seo.keywords.5",
+    "source": "fair launch",
+    "context": "SEO metadata",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.seo.keywords.6",
+    "source": "no pre-mine",
+    "context": "SEO metadata",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.seo.keywords.7",
+    "source": "store of value",
+    "context": "SEO metadata",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.seo.keywords.8",
+    "source": "financial sovereignty",
+    "context": "SEO metadata",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.seo.keywords.9",
+    "source": "ERG tokenomics",
+    "context": "SEO metadata",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.metrics.networkHashrate.label",
+    "source": "Network Hashrate",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.metrics.activeAddresses.label",
+    "source": "Active Addresses",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.metrics.defiTvl.label",
+    "source": "DeFi TVL",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.metrics.ergSupply.label",
+    "source": "ERG Supply",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.metrics.ergSupply.trend",
+    "source": "{remaining}M left",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.metrics.avgBlockTime.label",
+    "source": "Avg Block Time",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.metrics.activeNodes.label",
+    "source": "Active Nodes",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.heroComparisons.0.title",
+    "source": "Mining Access",
+    "context": "Title",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.heroComparisons.0.ergo",
+    "source": "GPU-friendly. ASIC-resistant. Anyone can secure the network.",
+    "context": "General content",
+    "maxLength": 90,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.heroComparisons.0.others",
+    "source": "BTC: ASICs only / ETH: Proof-of-Stake",
+    "context": "General content",
+    "maxLength": 55.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.heroComparisons.1.title",
+    "source": "Fair Launch",
+    "context": "Title",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.heroComparisons.1.ergo",
+    "source": "0% pre-mine. 0% VC allocation. 100% fair distribution.",
+    "context": "General content",
+    "maxLength": 81,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.heroComparisons.1.others",
+    "source": "BTC: Fair / ETH: 70M premined",
+    "context": "General content",
+    "maxLength": 43.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.heroComparisons.2.title",
+    "source": "Long-term Security",
+    "context": "Title",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.heroComparisons.2.ergo",
+    "source": "Storage rent ensures miners get paid forever. Built for decades.",
+    "context": "General content",
+    "maxLength": 96,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.heroComparisons.2.others",
+    "source": "BTC: Fees only / ETH: Token burn",
+    "context": "General content",
+    "maxLength": 48,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.coreValues.soundMoney.title",
+    "source": "Sound Money",
+    "context": "Title",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.coreValues.soundMoney.description",
+    "source": "97.7M max supply. No inflation. No VCs dumping on you. Proof-of-Work security proven since 2019.",
+    "context": "Description",
+    "maxLength": 144,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.coreValues.soundMoney.highlight",
+    "source": "Protect your wealth",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.coreValues.smartContracts.title",
+    "source": "Smart Contracts",
+    "context": "Title",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.coreValues.smartContracts.description",
+    "source": "DeFi, DEXs, stablecoins that actually work. Programmable money with Bitcoin-level security.",
+    "context": "Description",
+    "maxLength": 136.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.coreValues.smartContracts.highlight",
+    "source": "Utility without risk",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.coreValues.programmablePrivacy.title",
+    "source": "Programmable Privacy",
+    "context": "Title",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.coreValues.programmablePrivacy.description",
+    "source": "Hide what you want. Show what you need. Optional privacy without trusted setup or backdoors.",
+    "context": "Description",
+    "maxLength": 138,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.coreValues.programmablePrivacy.highlight",
+    "source": "Your data, your choice",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.coreValues.fairAccessible.title",
+    "source": "Fair & Accessible",
+    "context": "Title",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.coreValues.fairAccessible.description",
+    "source": "Zero pre-mine. Zero VC allocation. Zero corporate control. 100% community-driven since day one.",
+    "context": "Description",
+    "maxLength": 142.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.coreValues.fairAccessible.highlight",
+    "source": "True decentralization",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.title",
+    "source": "How ERG Compares",
+    "context": "Title",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.headers.criterion",
+    "source": "Criterion",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.headers.bitcoin",
+    "source": "Bitcoin",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.headers.ethereum",
+    "source": "Ethereum",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.headers.monero",
+    "source": "Monero",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.headers.ergo",
+    "source": "Ergo",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.deepDive",
+    "source": "Deep dive: Detailed comparison",
+    "context": "General content",
+    "maxLength": 45,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.0.criterion",
+    "source": "Monetary Policy",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.0.bitcoin.status",
+    "source": "good",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.0.bitcoin.text",
+    "source": "Fixed 21M supply",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.0.ethereum.status",
+    "source": "warning",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.0.ethereum.text",
+    "source": "Changing tokenomics",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.0.monero.status",
+    "source": "warning",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.0.monero.text",
+    "source": "Tail emission",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.0.ergo.status",
+    "source": "good",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.0.ergo.text",
+    "source": "Fixed 97M supply",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.1.criterion",
+    "source": "Security Model",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.1.bitcoin.status",
+    "source": "good",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.1.bitcoin.text",
+    "source": "Proof-of-Work",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.1.ethereum.status",
+    "source": "warning",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.1.ethereum.text",
+    "source": "Proof-of-Stake",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.1.monero.status",
+    "source": "good",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.1.monero.text",
+    "source": "Proof-of-Work",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.1.ergo.status",
+    "source": "good",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.1.ergo.text",
+    "source": "Proof-of-Work",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.2.criterion",
+    "source": "Privacy Features",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.2.bitcoin.status",
+    "source": "bad",
+    "context": "General content",
+    "maxLength": 4.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.2.bitcoin.text",
+    "source": "Transparent",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.2.ethereum.status",
+    "source": "bad",
+    "context": "General content",
+    "maxLength": 4.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.2.ethereum.text",
+    "source": "Transparent",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.2.monero.status",
+    "source": "good",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.2.monero.text",
+    "source": "Always private",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.2.ergo.status",
+    "source": "good",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.2.ergo.text",
+    "source": "Optional privacy",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.3.criterion",
+    "source": "Smart Contracts",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.3.bitcoin.status",
+    "source": "bad",
+    "context": "General content",
+    "maxLength": 4.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.3.bitcoin.text",
+    "source": "Very limited",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.3.ethereum.status",
+    "source": "good",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.3.ethereum.text",
+    "source": "Full featured",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.3.monero.status",
+    "source": "bad",
+    "context": "General content",
+    "maxLength": 4.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.3.monero.text",
+    "source": "None",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.3.ergo.status",
+    "source": "good",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.3.ergo.text",
+    "source": "eUTXO model",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.4.criterion",
+    "source": "Fair Launch",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.4.bitcoin.status",
+    "source": "good",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.4.bitcoin.text",
+    "source": "No premine",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.4.ethereum.status",
+    "source": "warning",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.4.ethereum.text",
+    "source": "70M premine",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.4.monero.status",
+    "source": "good",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.4.monero.text",
+    "source": "No premine",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.4.ergo.status",
+    "source": "good",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.comparison.rows.4.ergo.text",
+    "source": "No premine",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.liveMetrics.title",
+    "source": "Live Network Health",
+    "context": "Title",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.liveMetrics.subtitle",
+    "source": "Live on-chain data (updated in real time)",
+    "context": "General content",
+    "maxLength": 61.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.useCasesSection.title",
+    "source": "What can I actually DO with Ergo?",
+    "context": "Title",
+    "maxLength": 49.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.useCasesSection.items.0.title",
+    "source": "Store Value Long-term",
+    "context": "Title",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.useCasesSection.items.0.description",
+    "source": "Cold storage wallets with hardware support",
+    "context": "Description",
+    "maxLength": 63,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.useCasesSection.items.1.title",
+    "source": "Use DeFi Protocols",
+    "context": "Title",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.useCasesSection.items.1.description",
+    "source": "Cross-chain bridge for Ergo, Cardano, and other blockchains",
+    "context": "Description",
+    "maxLength": 88.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.useCasesSection.items.2.title",
+    "source": "Send Private Transactions",
+    "context": "Title",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.useCasesSection.items.2.description",
+    "source": "Optional privacy for sensitive transfers",
+    "context": "Description",
+    "maxLength": 60,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.useCasesSection.items.3.title",
+    "source": "Support the Network",
+    "context": "Title",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.useCasesSection.items.3.description",
+    "source": "Mining, running nodes, community participation",
+    "context": "Description",
+    "maxLength": 69,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.chooseYourPath.title",
+    "source": "Choose Your",
+    "context": "Title",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.chooseYourPath.titleHighlight",
+    "source": "Path",
+    "context": "Title",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.chooseYourPath.buyHold.title",
+    "source": "Buy & Hold",
+    "context": "Title",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.chooseYourPath.buyHold.description",
+    "source": "Get ERG and store securely",
+    "context": "Description",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.chooseYourPath.exploreDeFi.title",
+    "source": "Explore DeFi",
+    "context": "Title",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.chooseYourPath.exploreDeFi.description",
+    "source": "Put your ERG to work",
+    "context": "Description",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.chooseYourPath.startMining.title",
+    "source": "Start Mining",
+    "context": "Title",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.chooseYourPath.startMining.description",
+    "source": "Secure the network, earn rewards",
+    "context": "Description",
+    "maxLength": 48,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.chooseYourPath.buildDapps.title",
+    "source": "Build dApps",
+    "context": "Title",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.chooseYourPath.buildDapps.description",
+    "source": "Create the future",
+    "context": "Description",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.chooseYourPath.interestedInMining.title",
+    "source": "Interested in mining?",
+    "context": "Title",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.chooseYourPath.interestedInMining.description",
+    "source": "Earn ERG by securing the network with your GPU",
+    "context": "Description",
+    "maxLength": 69,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.faq.title",
+    "source": "Holders FAQ",
+    "context": "Title",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.faq.questions.0.question",
+    "source": "What makes ERG different from Bitcoin?",
+    "context": "FAQ content",
+    "maxLength": 57,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.faq.questions.0.answer",
+    "source": "ERG extends Bitcoin's security model with smart contracts, optional privacy, and storage rent for long-term sustainability. Same PoW security, more functionality.",
+    "context": "FAQ content",
+    "maxLength": 243,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.faq.questions.1.question",
+    "source": "Is ERG a good long-term investment?",
+    "context": "FAQ content",
+    "maxLength": 52.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.faq.questions.1.answer",
+    "source": "ERG has strong fundamentals: fixed supply, fair launch, real utility through DeFi. Always DYOR and never invest more than you can afford to lose.",
+    "context": "FAQ content",
+    "maxLength": 217.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.faq.questions.2.question",
+    "source": "How do I store ERG safely?",
+    "context": "FAQ content",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.faq.questions.2.answer",
+    "source": "Use Nautilus wallet for convenience or Ledger hardware wallet for maximum security. Never share your seed phrase.",
+    "context": "FAQ content",
+    "maxLength": 169.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.faq.questions.3.question",
+    "source": "Can I earn yield on my ERG?",
+    "context": "FAQ content",
+    "maxLength": 40.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.faq.questions.3.answer",
+    "source": "Yes, but verify current protocol status first. Spectrum Finance is a historical Ergo DEX reference with a 2024 sunset notice, ErgoPad is not currently operating, and DeFi positions remain funds-at-risk software.",
+    "context": "FAQ content",
+    "maxLength": 316.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.faq.questions.4.question",
+    "source": "Is Ergo a security or commodity?",
+    "context": "FAQ content",
+    "maxLength": 48,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.faq.questions.4.answer",
+    "source": "Ergo launched fairly in 2019 with no premine, no ICO, and no VC funding. Like Bitcoin, it's a decentralized, community-driven project. The fair launch and Proof-of-Work consensus make it similar to Bitcoin from a regulatory perspective.",
+    "context": "FAQ content",
+    "maxLength": 354,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.faq.questions.5.question",
+    "source": "Who controls the Ergo project?",
+    "context": "FAQ content",
+    "maxLength": 45,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.faq.questions.5.answer",
+    "source": "No single entity controls Ergo. It's maintained by the Ergo Foundation, core developers, and community contributors. All development is open-source on GitHub. The community votes on major protocol changes.",
+    "context": "FAQ content",
+    "maxLength": 307.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.faq.questions.6.question",
+    "source": "What happens when mining rewards end?",
+    "context": "FAQ content",
+    "maxLength": 55.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.faq.questions.6.answer",
+    "source": "Ergo has an 8-year emission schedule ending around 2027. After that, miners are incentivized by transaction fees and a storage rent mechanism that recycles lost coins. This creates sustainable long-term security without inflation.",
+    "context": "FAQ content",
+    "maxLength": 345,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.faq.questions.7.question",
+    "source": "Where can I buy and store ERG?",
+    "context": "FAQ content",
+    "maxLength": 45,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.faq.questions.7.answer",
+    "source": "ERG is available on major exchanges like KuCoin, Gate.io, and CoinEx. For storage, use Nautilus Wallet or hardware wallets. See our complete buying guide at /use/get-erg.",
+    "context": "FAQ content",
+    "maxLength": 255,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.faq.questions.8.question",
+    "source": "Is Ergo's privacy legal to use?",
+    "context": "FAQ content",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersPage.faq.questions.8.answer",
+    "source": "Ergo privacy is optional and can support selective-disclosure workflows. Actual legal compliance depends on jurisdiction, implementation, and the surrounding service provider.",
+    "context": "FAQ content",
+    "maxLength": 262.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.mining-access.title",
+    "source": "Mining Access",
+    "context": "Title",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.fair-launch.title",
+    "source": "Fair Launch",
+    "context": "Title",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.long-term-security.title",
+    "source": "Long-term Security",
+    "context": "Title",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.sound-money.title",
+    "source": "Sound Money",
+    "context": "Title",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.sound-money.description",
+    "source": "97.7M max supply. No inflation. No VCs dumping on you. Proof-of-Work security proven since 2019.",
+    "context": "Description",
+    "maxLength": 144,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.smart-contracts.title",
+    "source": "Smart Contracts",
+    "context": "Title",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.smart-contracts.description",
+    "source": "DeFi, DEXs, stablecoins that actually work. Programmable money with Bitcoin-level security.",
+    "context": "Description",
+    "maxLength": 136.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.programmable-privacy.title",
+    "source": "Programmable Privacy",
+    "context": "Title",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.programmable-privacy.description",
+    "source": "Hide what you want. Show what you need. Optional privacy without trusted setup or backdoors.",
+    "context": "Description",
+    "maxLength": 138,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.fair-accessible.title",
+    "source": "Fair & Accessible",
+    "context": "Title",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.fair-accessible.description",
+    "source": "Zero pre-mine. Zero VC allocation. Zero corporate control. 100% community-driven since day one.",
+    "context": "Description",
+    "maxLength": 142.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.store-value.title",
+    "source": "Store Value Long-term",
+    "context": "Title",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.store-value.description",
+    "source": "Cold storage wallets with hardware support",
+    "context": "Description",
+    "maxLength": 63,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.use-defi.title",
+    "source": "Use DeFi Protocols",
+    "context": "Title",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.use-defi.description",
+    "source": "Cross-chain bridge for Ergo, Cardano, and other blockchains",
+    "context": "Description",
+    "maxLength": 88.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.private-transactions.title",
+    "source": "Send Private Transactions",
+    "context": "Title",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.private-transactions.description",
+    "source": "Optional privacy for sensitive transfers",
+    "context": "Description",
+    "maxLength": 60,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.support-network.title",
+    "source": "Support the Network",
+    "context": "Title",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.support-network.description",
+    "source": "Mining, running nodes, community participation",
+    "context": "Description",
+    "maxLength": 69,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.security-commodity.question",
+    "source": "Is Ergo a security or commodity?",
+    "context": "General content",
+    "maxLength": 48,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.security-commodity.answer",
+    "source": "Ergo launched fairly in 2019 with no premine, no ICO, and no VC funding. Like Bitcoin, it",
+    "context": "General content",
+    "maxLength": 133.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.different-from-bitcoin.question",
+    "source": "How is Ergo different from Bitcoin?",
+    "context": "General content",
+    "maxLength": 52.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.different-from-bitcoin.answer",
+    "source": "Ergo shares Bitcoin",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.who-controls.question",
+    "source": "Who controls the Ergo project?",
+    "context": "General content",
+    "maxLength": 45,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.who-controls.answer",
+    "source": "No single entity controls Ergo. It",
+    "context": "General content",
+    "maxLength": 51,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.mining-rewards-end.question",
+    "source": "What happens when mining rewards end?",
+    "context": "General content",
+    "maxLength": 55.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.mining-rewards-end.answer",
+    "source": "Ergo has an 8-year emission schedule ending around 2027. After that, miners are incentivized by transaction fees and a <a href=\\",
+    "context": "General content",
+    "maxLength": 192,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.buy-store.question",
+    "source": "Where can I buy and store ERG?",
+    "context": "General content",
+    "maxLength": 45,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.buy-store.answer",
+    "source": "ERG is available on major exchanges like <a href=\\",
+    "context": "General content",
+    "maxLength": 75,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.privacy-legal.question",
+    "source": "Is Ergo",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "hodlers.holdersData.privacy-legal.answer",
+    "source": "Ergo",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  }
+]

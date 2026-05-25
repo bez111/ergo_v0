@@ -67,8 +67,8 @@ const whyBuildIcons = [Shield, Lock, Zap, Users]
 const quickStartIcons = [Terminal, Network, Code]
 const quickStartCodes = [
   "npm install @fleet-sdk/core",
-  `import { ErgoAddress, Network } from "@fleet-sdk/core";\nconst network = Network.Testnet;`,
-  `const tx = new TransactionBuilder(height)\n  .from(inputs)\n  .to(new OutputBuilder(amount, address))\n  .sendChangeTo(changeAddress)\n  .build();`,
+  `import { Network } from "@fleet-sdk/core";\nconst network = Network.Testnet;`,
+  `import { TransactionBuilder, OutputBuilder } from "@fleet-sdk/core";\n\nconst tx = new TransactionBuilder(height)\n  .from(inputs)\n  .to(new OutputBuilder(amount, address))\n  .sendChangeTo(changeAddress)\n  .payMinFee()\n  .build();`,
 ]
 
 // SDK urls (ordered to match JSON indices 0–3)

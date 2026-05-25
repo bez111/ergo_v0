@@ -56,7 +56,7 @@
       "sustainable": {
         "title": "ZERO GAS BOOTSTRAPPING",
         "subtitle": "Babel Fees",
-        "description": "Agents pay fees in any token — not just ERG. Spin up, hand it a Note, it transacts immediately. No pre-funded wallet needed."
+        "description": "Agents can use supported token-to-ERG fee paths instead of always pre-funding ERG. Spin up, hand it a Note, and reduce the native-gas bootstrapping step."
       }
     },
     "additionalFeatures": {

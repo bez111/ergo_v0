@@ -502,7 +502,7 @@ export default function ErgoScriptArticleClient() {
                       </div>
                       <div>
                         <h3 className="text-white font-semibold text-lg mb-2">
-                          Babel Fees: Pay Fees in Any Token
+                          Babel Fees: Supported Token Fee Paths
                         </h3>
                         <p className="text-gray-400 text-sm mb-2">
                           See how ErgoScript and eUTXO enable gas abstraction and flexible fee payment on Ergo.
@@ -531,5 +531,4 @@ export default function ErgoScriptArticleClient() {
     </BackgroundWrapper>
   )
 }
-
 

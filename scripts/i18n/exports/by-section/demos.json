@@ -1,0 +1,758 @@
+[
+  {
+    "key": "demos.demosPage.hero.badge",
+    "source": "Working Demos",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.hero.title",
+    "source": "Working flows,",
+    "context": "Title",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.hero.titleHighlight",
+    "source": "not mockups.",
+    "context": "Title",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.hero.description",
+    "source": "Agent payments are the first step. The deeper demo path is programmable credit: bounded Notes, policy limits, work verification and settlement receipts on Ergo testnet.",
+    "context": "Description",
+    "maxLength": 252,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.hero.ctaTestnet",
+    "source": "Get testnet ERG",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.hero.ctaArchitecture",
+    "source": "Architecture",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demos.stepByStep",
+    "source": "Step-by-step",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demos.whyMatters",
+    "source": "Why this matters",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demos.codeLabel",
+    "source": "Fleet SDK (TypeScript)",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demos.collapse",
+    "source": "collapse",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demos.expand",
+    "source": "expand",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demos.testedOn",
+    "source": "Tested on Ergo testnet. Get test ERG at",
+    "context": "General content",
+    "maxLength": 58.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.apiCall.statusLabel",
+    "source": "Testnet reference flow",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.apiCall.title",
+    "source": "Agent buys API call",
+    "context": "Title",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.apiCall.tagline",
+    "source": "One call. One proof. No persistent account.",
+    "context": "General content",
+    "maxLength": 64.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.apiCall.description",
+    "source": "An autonomous agent creates a note, sends it to an API provider. The provider validates the acceptance predicate on-chain and delivers the response. No API keys, no billing accounts, no Stripe.",
+    "context": "Description",
+    "maxLength": 289.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.apiCall.flow.0",
+    "source": "Agent creates a note (0.001 ERG face value)",
+    "context": "General content",
+    "maxLength": 64.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.apiCall.flow.1",
+    "source": "Note contains: provider address + task hash + deadline",
+    "context": "General content",
+    "maxLength": 81,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.apiCall.flow.2",
+    "source": "Provider checks predicate — verified on Ergo testnet",
+    "context": "General content",
+    "maxLength": 78,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.apiCall.flow.3",
+    "source": "Provider delivers API response",
+    "context": "General content",
+    "maxLength": 45,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.apiCall.flow.4",
+    "source": "Note burned, ERG released to provider",
+    "context": "General content",
+    "maxLength": 55.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.apiCall.why",
+    "source": "This is the atomic unit of agent commerce: one task, one payment, one proof. No identity required.",
+    "context": "General content",
+    "maxLength": 147,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.apiCall.links.chaincashRef",
+    "source": "ChainCash reference",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.apiCall.links.fleetDocs",
+    "source": "Fleet SDK docs",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.apiCall.links.architecture",
+    "source": "Architecture",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.credit.statusLabel",
+    "source": "Testnet reference flow",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.credit.title",
+    "source": "Agent issues credit to sub-agent",
+    "context": "Title",
+    "maxLength": 48,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.credit.tagline",
+    "source": "Reserve deployed. Bounded Notes issued. Tracker monitors.",
+    "context": "General content",
+    "maxLength": 85.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.credit.description",
+    "source": "A parent agent creates a policy-constrained budget without handing over a private key. Notes are issued against a reserve, spent by a sub-agent, verified by task rules, and redeemed only under explicit settlement constraints.",
+    "context": "Description",
+    "maxLength": 337.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.credit.flow.0",
+    "source": "Reserve contract deployed with 10 ERG + 100 ERG credit limit",
+    "context": "General content",
+    "maxLength": 90,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.credit.flow.1",
+    "source": "Bounded Notes issued against reserve (up to limit)",
+    "context": "General content",
+    "maxLength": 75,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.credit.flow.2",
+    "source": "Sub-agent transfers Notes to providers as task-conditioned credit",
+    "context": "General content",
+    "maxLength": 97.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.credit.flow.3",
+    "source": "Tracker updates cumulative balance on-chain",
+    "context": "General content",
+    "maxLength": 64.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.credit.flow.4",
+    "source": "Redemption happens only after verification rules are satisfied",
+    "context": "General content",
+    "maxLength": 93,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.credit.why",
+    "source": "Verifiable workflows make payment trustworthy. Programmable credit lets agents coordinate future work before final settlement.",
+    "context": "General content",
+    "maxLength": 189,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.credit.links.chaincashPaper",
+    "source": "ChainCash paper",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.credit.links.architecture",
+    "source": "Architecture",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.credit.links.reserveContract",
+    "source": "Reserve contract",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.community.statusLabel",
+    "source": "Planned reference flow",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.community.title",
+    "source": "Community reserve + tracker",
+    "context": "Title",
+    "maxLength": 40.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.community.tagline",
+    "source": "A local marketplace. A compute co-op. An agent network.",
+    "context": "General content",
+    "maxLength": 82.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.community.description",
+    "source": "A group of participants pool ERG into a shared reserve. Community notes are issued proportionally. Acceptance predicates define membership rules. Members can redeem notes for ERG at any time from the reserve.",
+    "context": "Description",
+    "maxLength": 312,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.community.flow.0",
+    "source": "Community members pool ERG into multi-sig reserve",
+    "context": "General content",
+    "maxLength": 73.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.community.flow.1",
+    "source": "Members receive community notes proportional to contribution",
+    "context": "General content",
+    "maxLength": 90,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.community.flow.2",
+    "source": "Notes accepted within community per acceptance rules",
+    "context": "General content",
+    "maxLength": 78,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.community.flow.3",
+    "source": "Any member can redeem notes for ERG anytime",
+    "context": "General content",
+    "maxLength": 64.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.community.flow.4",
+    "source": "Tracker provides public auditability of flows",
+    "context": "General content",
+    "maxLength": 67.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.community.why",
+    "source": "This is the most general form: a programmable local economy. Could be a marketplace, a DAO treasury, or an agent cooperative.",
+    "context": "General content",
+    "maxLength": 187.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.community.links.architecture",
+    "source": "Architecture",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.community.links.nativeTokens",
+    "source": "Native Tokens",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.demoItems.community.links.ergoScript",
+    "source": "ErgoScript",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.openProblems.badge",
+    "source": "Open Problems",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.openProblems.title",
+    "source": "What's still unsolved",
+    "context": "Title",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.openProblems.description",
+    "source": "These are the most interesting open problems in agent money. If any of these resonate — we want to hear from you.",
+    "context": "Description",
+    "maxLength": 169.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.openProblems.openIssue",
+    "source": "Open an issue",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.openProblems.talkToUs",
+    "source": "Talk to us about your use case",
+    "context": "General content",
+    "maxLength": 45,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.openProblems.items.0.title",
+    "source": "Agent identity without persistent accounts",
+    "context": "Title",
+    "maxLength": 63,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.openProblems.items.0.desc",
+    "source": "How do agents build reputation across sessions without deanonymisation?",
+    "context": "General content",
+    "maxLength": 106.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.openProblems.items.1.title",
+    "source": "Note acceptance UX for non-technical agents",
+    "context": "Title",
+    "maxLength": 64.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.openProblems.items.1.desc",
+    "source": "SDK-level abstraction so LLM agents can issue and accept notes with minimal setup.",
+    "context": "General content",
+    "maxLength": 123,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.openProblems.items.2.title",
+    "source": "Tracker federation across reserves",
+    "context": "Title",
+    "maxLength": 51,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.openProblems.items.2.desc",
+    "source": "Cross-reserve accounting and liquidity — can notes be accepted across different community reserves?",
+    "context": "General content",
+    "maxLength": 148.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.openProblems.items.3.title",
+    "source": "Agent reputation without centralized oracle",
+    "context": "Title",
+    "maxLength": 64.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.openProblems.items.3.desc",
+    "source": "Verifiable reputation score derived from on-chain history, no trusted third party.",
+    "context": "General content",
+    "maxLength": 123,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.openProblems.items.4.title",
+    "source": "Local community wallet — one-click deploy",
+    "context": "Title",
+    "maxLength": 61.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.openProblems.items.4.desc",
+    "source": "Spin up a community reserve, issue tokens, and configure acceptance rules in under 5 minutes.",
+    "context": "General content",
+    "maxLength": 139.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.quickLinks.architecture.title",
+    "source": "Full architecture",
+    "context": "Title",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.quickLinks.architecture.desc",
+    "source": "Reserve · Note · Tracker · Predicate",
+    "context": "General content",
+    "maxLength": 54,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.quickLinks.agentEconomy.title",
+    "source": "Agent Economy",
+    "context": "Title",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.quickLinks.agentEconomy.desc",
+    "source": "Why Ergo is the right base layer",
+    "context": "General content",
+    "maxLength": 48,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.quickLinks.accord.title",
+    "source": "Accord Protocol",
+    "context": "Title",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.quickLinks.accord.desc",
+    "source": "Repository, SDKs, demos, and issues",
+    "context": "General content",
+    "maxLength": 52.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.playground.badge",
+    "source": "Testnet playground",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.playground.title",
+    "source": "Generate your first agent payment",
+    "context": "Title",
+    "maxLength": 49.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.playground.description",
+    "source": "Paste your Ergo testnet address. We fetch your live UTxOs and generate a ready-to-run Fleet SDK script — pre-filled with your actual data.",
+    "context": "Description",
+    "maxLength": 207,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.playground.placeholder",
+    "source": "9fRusAarL1KkrWQVsxSRVYnvWxaAT2A96cKtNn9tvPh5... (testnet address)",
+    "context": "Input placeholder",
+    "maxLength": 97.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.playground.generate",
+    "source": "Generate",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.playground.fetching",
+    "source": "Fetching…",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.playground.needTestnetErg",
+    "source": "Need testnet ERG?",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.playground.freeTestnetErg",
+    "source": "— free testnet ERG in seconds.",
+    "context": "General content",
+    "maxLength": 45,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.playground.tabCode",
+    "source": "Ready-to-run code",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.playground.tabUtxos",
+    "source": "Your UTxOs",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.playground.copied",
+    "source": "Copied!",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.playground.copy",
+    "source": "Copy",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.playground.runIt",
+    "source": "Run it",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.playground.runStep1",
+    "source": "npm install @fleet-sdk/core",
+    "context": "General content",
+    "maxLength": 40.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.playground.runStep2",
+    "source": "node agent-payment.js",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.playground.runStep3",
+    "source": "Copy the unsigned TX JSON output",
+    "context": "General content",
+    "maxLength": 48,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.playground.runStep4",
+    "source": "Open Nautilus (testnet mode) → sign → submit",
+    "context": "General content",
+    "maxLength": 66,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.playground.boxLabel",
+    "source": "Box",
+    "context": "General content",
+    "maxLength": 4.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.playground.height",
+    "source": "height",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.playground.tokens",
+    "source": "token(s)",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.playground.errorNotFound",
+    "source": "Address not found on testnet. Make sure it's a valid Ergo testnet address.",
+    "context": "Error message",
+    "maxLength": 111,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.playground.errorNoUtxos",
+    "source": "No UTxOs found. Get free testnet ERG at testnet.ergofaucet.org — takes 30 seconds.",
+    "context": "Error message",
+    "maxLength": 123,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.playground.errorNetwork",
+    "source": "Could not reach testnet API. Check your network connection.",
+    "context": "Error message",
+    "maxLength": 88.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.lookup.badge",
+    "source": "Mainnet data",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.lookup.title",
+    "source": "Address balance lookup",
+    "context": "Title",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.lookup.description",
+    "source": "Query any Ergo address balance live from the blockchain. Real data, real network.",
+    "context": "Description",
+    "maxLength": 121.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.lookup.placeholder",
+    "source": "9hHDQb26AjnJ...  (paste any Ergo address)",
+    "context": "Input placeholder",
+    "maxLength": 61.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.lookup.lookup",
+    "source": "Lookup",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.lookup.lookingUp",
+    "source": "Looking up…",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.lookup.confirmed",
+    "source": "Confirmed",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.lookup.noTokens",
+    "source": "No tokens in this address",
+    "context": "General content",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.lookup.dataFetchedFrom",
+    "source": "Data fetched live from",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.lookup.errorNotFound",
+    "source": "Address not found or invalid. Check that it's a valid Ergo address.",
+    "context": "Error message",
+    "maxLength": 100.5,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.lookup.errorNetwork",
+    "source": "Could not reach Ergo API. Check your network connection.",
+    "context": "Error message",
+    "maxLength": 84,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.cta.title",
+    "source": "Your use case doesn't fit?",
+    "context": "Title",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "demos.demosPage.cta.description",
+    "source": "Tell us what you're building. We'll find the right flow or help design a new one.",
+    "context": "Description",
+    "maxLength": 121.5,
+    "translation": ""
+  }
+]

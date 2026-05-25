@@ -40,7 +40,7 @@
       },
       "mev": {
         "value": "Résistant au MEV",
-        "label": "Pas de front-running",
+        "label": "DeFi permissionless avec une posture MEV-aware",
         "hint": "Ordonnancement local, pas d'enchères de priorité globales"
       },
       "fee": {

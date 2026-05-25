@@ -387,7 +387,7 @@
         },
         {
           "question": "DeFi 哪個更好，Ergo 還是 Cardano？",
-          "answer": "兩者都支持 eUTXO 上的 DeFi。Ergo 有 ErgoDEX 和 SigmaUSD 等先驅實現。Cardano 因生態系更大而擁有更多項目。Ergo"
+          "answer": "Both support DeFi on eUTXO. Ergo has pioneering references such as ErgoDEX/Spectrum and SigmaUSD, while Cardano has a larger live DeFi ecosystem. The better choice depends on whether you value Ergo PoW/fair-launch design and smaller experimental surface or Cardano larger liquidity and app count."
         }
       ]
     },

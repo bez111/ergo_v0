@@ -120,16 +120,33 @@ function generateStats(entries: TranslationEntry[]): void {
   console.log(`Estimated cost (@ $0.05/word): $${(totalWords * 0.05).toFixed(2)}`);
 }
 
+function loadEnglishMessages(): any {
+  const legacyPath = path.join(process.cwd(), 'messages/en.json');
+  if (fs.existsSync(legacyPath)) {
+    return JSON.parse(fs.readFileSync(legacyPath, 'utf-8'));
+  }
+
+  const messagesDir = path.join(process.cwd(), 'messages/en');
+  return Object.fromEntries(
+    fs.readdirSync(messagesDir)
+      .filter((file) => file.endsWith('.json'))
+      .sort()
+      .map((file) => [
+        path.basename(file, '.json'),
+        JSON.parse(fs.readFileSync(path.join(messagesDir, file), 'utf-8')),
+      ])
+  );
+}
+
 // Main execution
-const messagesPath = path.join(process.cwd(), 'messages/en.json');
 const outputDir = path.join(process.cwd(), 'scripts/i18n/exports');
 
 if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir, { recursive: true });
 }
 
-console.log('Loading en.json...');
-const enJson = JSON.parse(fs.readFileSync(messagesPath, 'utf-8'));
+console.log('Loading English message files...');
+const enJson = loadEnglishMessages();
 
 console.log('Flattening keys...');
 const entries = flattenObject(enJson);
@@ -142,4 +159,3 @@ exportToJSON(entries, path.join(outputDir, 'all-keys.json'));
 exportBySection(entries, path.join(outputDir, 'by-section'));
 
 console.log('\nDone! Use these files for translation services or AI translation.');
-

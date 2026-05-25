@@ -18,6 +18,8 @@ const SEO = {
   ogImage: "/og/technology/eutxo-vs-accounts.jpg",
   keywords: [
     "eUTXO", "Extended UTXO", "UTXO model", "parallel execution",
+    "autonomous work settlement", "eUTXO autonomous agents", "autonomous work clearing",
+    "blockchain for autonomous work", "agent settlement receipts eUTXO",
     "agentic blockchain", "eUTXO AI agents", "agentic blockchain eUTXO",
     "blockchain for AI agents", "autonomous agent payments eUTXO",
     "smart contracts", "MEV resistance", "composability",

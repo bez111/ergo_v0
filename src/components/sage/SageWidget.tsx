@@ -254,7 +254,7 @@ export function SageWidget() {
                       }
                     }}
                     rows={1}
-                    placeholder="Ask about Ergo, agent payments, Notes…"
+                    placeholder="Ask about Ergo, receipts, Notes…"
                     disabled={isStreaming}
                     aria-label="Message Sage"
                     className="

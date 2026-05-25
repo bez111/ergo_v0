@@ -28,7 +28,7 @@ export default function SpectrumFinancePage() {
           Spectrum Finance
         </h1>
         <p className="text-xl text-gray-400 mb-6">
-          Spectrum is a pioneering open-source, cross-chain decentralized exchange (DEX) platform, currently offering liquidity provision (LP), yield farming, and babel fees on the Cardano (ADA) and Ergo (ERG) networks.
+          Spectrum is a pioneering open-source, cross-chain DEX reference on the eUTXO model. The team published a formal sunset notice and froze Ergo contracts in February 2024, so this page treats Spectrum as historical infrastructure rather than an active venue for new swaps or liquidity.
         </p>
         <div className="flex flex-wrap gap-4 mb-6">
           <Link href="/docs/ecosystem/financial/dex" className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105">
@@ -43,13 +43,13 @@ export default function SpectrumFinancePage() {
       {/* Overview Card */}
       <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <Zap className="w-6 h-6 text-orange-400" /> Current Features
+          <Zap className="w-6 h-6 text-orange-400" /> Historical Features
         </h2>
         <ul className="list-disc pl-6 text-gray-300 space-y-2">
-          <li><b>Liquidity Provision & Yield Farming:</b> Users can engage in liquidity provision and yield farming.</li>
-          <li><b>Babel Fees:</b> Babel fees allow transaction fees to be paid with various tokens.</li>
-          <li><b>Cross-Chain Support:</b> Currently supporting Cardano (ADA) and Ergo (ERG) networks.</li>
-          <li><b>Open-Source:</b> Pioneering open-source DEX platform with transparent development.</li>
+          <li><b>Liquidity Provision & Yield Farming:</b> Historical AMM and LP design reference; not recommended for new deposits.</li>
+          <li><b>Babel Fees:</b> Demonstrated token-paid fee flows where liquidity and miner inclusion existed.</li>
+          <li><b>Cross-Chain Support:</b> Historical Cardano (ADA) and Ergo (ERG) eUTXO DEX work.</li>
+          <li><b>Open-Source:</b> Pioneering codebase that remains useful as an eUTXO DeFi study reference.</li>
         </ul>
       </div>
 
@@ -149,7 +149,7 @@ export default function SpectrumFinancePage() {
       {/* In a Nutshell */}
       <div className="bg-gradient-to-r from-orange-400/10 to-cyan-400/10 border border-orange-400/20 rounded-xl p-6 mb-8">
         <h3 className="text-xl font-bold mb-4 text-white">In a Nutshell</h3>
-        <p className="text-gray-300 mb-4">Spectrum Finance represents the cutting edge of decentralized exchange technology, combining current DEX functionality with the innovative Spectrum Bloom framework. By leveraging eUTxO models and focusing on transparency and composability, Spectrum is building the future of cross-chain DeFi infrastructure.</p>
+        <p className="text-gray-300 mb-4">Spectrum Finance remains important as a historical eUTXO DEX reference. For live trading or liquidity, verify current venues, contract status, liquidity depth, and official links before using funds.</p>
       </div>
     </>
   );

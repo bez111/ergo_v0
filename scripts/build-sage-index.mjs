@@ -119,7 +119,7 @@ const CURATED = [
     title: "Why Ergo fits autonomous agents",
     tags: "Ergo, eUTXO, ErgoScript, Babel Fees, PoW",
     content:
-      "Ergo is unusually well-suited to programmable agent payments for five reasons. First, eUTXO makes state explicit: every box has value, registers and a spending rule, so agents can reason about state transitions before submitting. Second, ErgoScript puts logic in the payment itself — the spending condition encodes the acceptance rule, enforced by miners, not by a server. Third, Babel Fees let agents pay transaction fees in any token, removing the gas-bootstrapping problem (no need for a pre-funded native wallet). Fourth, native tokens and Notes compose in a single transaction without bridging or wrapping. Fifth, Ergo is PoW with no foundation kill-switch — there is no committee that can pause agent infrastructure.",
+      "Ergo is unusually well-suited to programmable agent payments for five reasons. First, eUTXO makes state explicit: every box has value, registers and a spending rule, so agents can reason about state transitions before submitting. Second, ErgoScript puts logic in the payment itself — the spending condition encodes the acceptance rule, enforced by miners, not by a server. Third, Babel Fees can reduce native ERG bootstrapping when a supported token-to-ERG path or Babel box exists. Fourth, native tokens and Notes compose in a single transaction without bridging or wrapping. Fifth, Ergo is PoW with no foundation kill-switch — there is no committee that can pause agent infrastructure.",
   },
   {
     id: "page:babel-fees",
@@ -128,7 +128,7 @@ const CURATED = [
     title: "Babel Fees explained",
     tags: "Babel Fees, gas, fee abstraction",
     content:
-      "Babel Fees are Ergo's native solution to the gas-bootstrapping problem. Normally a new wallet must hold the chain's native token (ERG) to pay miner fees. With Babel Fees, an agent can pay fees in any token by spending a 'Babel box' that converts the agent's token into ERG at a market rate set by the box owner. The agent never has to pre-fund an ERG balance. This matters for autonomous agents because fresh agents otherwise need an out-of-band funding step before they can transact at all.",
+      "Babel Fees are Ergo's native solution to part of the gas-bootstrapping problem. Normally a new wallet must hold the chain's native token (ERG) to pay miner fees. With Babel Fees, an agent can cover fees through a supported token-to-ERG path by spending a Babel box that accepts the agent's token and provides ERG fee coverage at terms set by the box owner. This is not an any-token guarantee: it depends on available Babel boxes, liquidity and accepted tokens. This matters for autonomous agents because fresh agents otherwise need an out-of-band ERG funding step before they can transact at all.",
   },
   {
     id: "page:eutxo-vs-account",

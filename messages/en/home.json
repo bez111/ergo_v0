@@ -1,15 +1,15 @@
 {
   "hero": {
     "title": "Ergo",
-    "subtitle": "The programmable, censorship-resistant blockchain built for autonomous agents and machine-to-machine commerce.",
-    "description": "The globally-neutral settlement layer for programmable money.",
-    "message1": "Peer-to-Peer Agent Economy",
-    "message2": "Where Agents Transact Freely",
-    "message3": "Agent-Native Settlement Layer",
-    "message4": "Infrastructure for Autonomous Agents",
-    "exploreErgo": "Explore Ergo",
+    "subtitle": "Autonomous agents need more than payments. They need programmable credit, task-conditioned acceptance, verifiable receipts, wallet policy, and neutral settlement. Ergo provides the PoW/eUTXO clearing layer and public proof surface for that economy.",
+    "description": "Where autonomous work gets paid, proven, and settled.",
+    "message1": "Autonomous Work Clearing",
+    "message2": "Intent to Receipt to Settlement",
+    "message3": "Public Receipt Surface",
+    "message4": "Audit-Gated Agent Clearing",
+    "exploreErgo": "Read mainnet gate",
     "chooseYourPath": "Choose Your Path",
-    "startHere": "Start Here",
+    "startHere": "Inspect live proof",
     "aria": {
       "keyFeatures": "Key features of Ergo blockchain"
     },
@@ -142,8 +142,8 @@
         "a": "Typical fees are ≈ $0.01 and go to miners for processing blocks; the exact fee is shown before you confirm. Fees vary with network load."
       },
       "3": {
-        "q": "Why is Ergo ideal for AI agents and machine-to-machine payments?",
-        "a": "Ergo's eUTXO model provides deterministic costs so agents know exact fees upfront. Babel Fees let agents pay in any token without pre-loading ERG. ErgoScript embeds acceptance conditions directly in payments — the payment IS the contract. No KYC, no gas bootstrapping, no persistent identity required."
+        "q": "Why is Ergo a strong fit for autonomous work settlement?",
+        "a": "Ergo's eUTXO model gives deterministic costs, ErgoScript can encode task acceptance rules, Babel Fees reduce native-token bootstrapping, and receipt workflows can connect payment, verification and settlement. Current agent-economy demos stay testnet-first until audit gates open."
       },
       "4": {
         "q": "How is Ergo secured?",
@@ -158,12 +158,12 @@
   "valueProposition": {
     "title": "Why Agents Choose",
     "titleHighlight": "Ergo?",
-    "subtitle": "The only blockchain with all four agent payment primitives at the protocol level. No workarounds. No application-layer hacks.",
+    "subtitle": "A PoW/eUTXO stack where programmable credit, acceptance predicates, wallet policy, receipts, and settlement can be modeled as inspectable economic obligations.",
     "items": [
       {
         "icon": "Zap",
         "title": "Deterministic by Design",
-        "description": "eUTXO model means agents know the exact cost before submitting. Deterministic gas costs, MEV-resistant, no reentrancy by design. The transaction either executes exactly as constructed — or doesn't.",
+        "description": "The eUTXO model helps agents reason about cost and state before submitting. Transactions execute against explicit boxes and predicates, with no hidden global state.",
         "benefit": "Agents never overpay or fail unexpectedly",
         "stat": "Zero failed-gas transactions"
       },
@@ -177,9 +177,9 @@
       {
         "icon": "Coins",
         "title": "Zero Gas Bootstrapping",
-        "description": "Babel Fees let agents pay transaction fees in any token — not just ERG. Spin up a new agent, hand it a Note, it transacts immediately. No pre-funded wallet required.",
+        "description": "Babel Fees let agents cover transaction fees through supported token-to-ERG paths. Spin up a new agent, hand it a Note, and reduce the native-gas bootstrapping step.",
         "benefit": "Ephemeral agents work out of the box",
-        "stat": "Pay fees in any token"
+        "stat": "Supported token fee paths"
       },
       {
         "icon": "Eye",
@@ -335,7 +335,7 @@
     "projects": [
       {
         "name": "Spectrum Finance",
-        "description": "Decentralized exchange and liquidity protocol",
+        "description": "Historical Ergo DEX reference; sunset notice published in 2024",
         "category": "DeFi",
         "url": "/ecosystem/spectrum"
       },
@@ -528,7 +528,7 @@
       "ergoMixer": {
         "title": "ErgoMixer",
         "subtitle": "Non-Custodial Privacy Protocol",
-        "description": "ErgoMixer provides cutting-edge privacy solutions using Sigma protocols and ring signatures. Enjoy complete financial privacy while maintaining regulatory compliance through optional transparency features.",
+        "description": "Ergo privacy is optional and can support selective-disclosure workflows. Actual legal compliance depends on jurisdiction, implementation, and the surrounding service provider.",
         "cta": "LEARN ABOUT PRIVACY ON ERGO",
         "stats": {
           "mixedVolume": {
@@ -664,7 +664,7 @@
       },
       "agentStack": {
         "title": "AGENT STACK",
-        "description": "Build autonomous agent payments"
+        "description": "Build autonomous work receipts"
       },
       "joinCommunity": {
         "title": "JOIN COMMUNITY",

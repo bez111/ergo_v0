@@ -40,9 +40,9 @@ export default function BabelFeesArticleClient() {
     },
     {
       icon: Wallet,
-      title: "Pay Fees In Any Token",
+      title: "Supported Token Fee Paths",
       description:
-        "On Ergo, users can pay transaction fees in any token they already hold – SigmaUSD, governance tokens, even NFTs – without owning ERG.",
+        "On Ergo, users can cover transaction fees through supported token-to-ERG paths without always holding ERG directly.",
     },
     {
       icon: Database,
@@ -115,7 +115,7 @@ export default function BabelFeesArticleClient() {
             items={[
               { name: "Blog", href: "/blog" },
               {
-                name: "Babel Fees: Pay Ergo Transaction Fees in Any Token",
+                name: "Babel Fees: Supported Token Fee Paths on Ergo",
                 href: "/blog/babel-fees",
               },
             ]}
@@ -130,18 +130,18 @@ export default function BabelFeesArticleClient() {
             className="mb-10"
           >
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">
-              Ergo’s Babel Fees Explained: Pay Crypto Transaction Fees In Any Token
+              Ergo’s Babel Fees Explained: Supported Token Fee Paths
             </h1>
 
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl leading-relaxed mb-6">
               Most blockchains force users to keep the native coin just to pay gas. Ergo’s Babel Fees turn
-              transaction fees into an on-chain market, so users can pay with almost any token while miners
+              transaction fees into an on-chain market, so users can pay through supported token paths while miners
               still receive ERG.
             </p>
 
             <div className="flex items-center justify-between flex-wrap gap-4">
               <ShareInline
-                title="Ergo's Babel Fees Explained: Pay Crypto Transaction Fees In Any Token"
+                title="Ergo's Babel Fees Explained: Supported Token Fee Paths"
                 url="https://www.ergoblockchain.org/blog/babel-fees"
                 utm="?utm_source=share_hero"
               />
@@ -245,7 +245,7 @@ export default function BabelFeesArticleClient() {
                 <Link href="/technology/eutxo-model" className="text-orange-400 hover:text-orange-300 underline underline-offset-2">
                   eUTXO transaction model
                 </Link>
-                , they enable users to pay network fees in almost any token they hold – while miners still receive
+                , they enable users to cover network fees through supported token-to-ERG paths – while miners still receive
                 ERG, the native coin, as usual.
               </p>
             </section>
@@ -303,7 +303,7 @@ export default function BabelFeesArticleClient() {
               <div className="bg-black border border-white/20 rounded-3xl p-8 space-y-6">
                 <p className="text-gray-300 leading-relaxed">
                   Babel Fees are a simple idea with big implications for user experience and adoption. Letting
-                  users pay fees with any token:
+                  users pay fees through supported token paths:
                 </p>
 
                 <ul className="text-gray-300 leading-relaxed list-disc pl-6 space-y-2">
@@ -512,9 +512,9 @@ export default function BabelFeesArticleClient() {
 
           {/* Share CTA */}
           <ShareCTA
-            title="Ergo’s Babel Fees Explained: Pay Crypto Transaction Fees In Any Token"
+            title="Ergo’s Babel Fees Explained: Supported Token Fee Paths"
             url="https://www.ergoblockchain.org/blog/babel-fees"
-            description="Learn how Ergo’s Babel Fees turn gas payments into an on-chain market, letting users pay in any token while miners still receive ERG."
+            description="Learn how Ergo’s Babel Fees turn gas payments into an on-chain market, letting users pay through supported token paths while miners still receive ERG."
             subtitle="If this was useful, share it with other builders exploring better UX for DeFi and PoW smart contracts."
           />
 
@@ -592,6 +592,5 @@ export default function BabelFeesArticleClient() {
     </BackgroundWrapper>
   )
 }
-
 
 

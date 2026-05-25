@@ -34,7 +34,7 @@
             },
             {
               "question": "¿Es Ergo más privado que Monero?",
-              "answer": "Ergo ofrece privacidad opcional a través de Sigma Protocols y ErgoMixer, mientras que Monero tiene privacidad obligatoria. El enfoque de Ergo permite el cumplimiento normativo cuando es necesario, manteniendo aún una privacidad sólida. Monero es mejor para el máximo anonimato; Ergo es mejor para privacidad flexible con capacidades de contratos inteligentes."
+              "answer": "La privacidad en Ergo es opcional y puede apoyar flujos de divulgación selectiva. El cumplimiento legal real depende de la jurisdicción, la implementación y el proveedor de servicios que rodea al protocolo."
             }
           ]
         }
@@ -387,7 +387,7 @@
         },
         {
           "question": "¿Cuál es mejor para DeFi, Ergo o Cardano?",
-          "answer": "Ambos soportan DeFi en eUTXO. Ergo tiene implementaciones pioneras como ErgoDEX y SigmaUSD. Cardano tiene más proyectos debido a un ecosistema más grande. Ergo"
+          "answer": "Both support DeFi on eUTXO. Ergo has pioneering references such as ErgoDEX/Spectrum and SigmaUSD, while Cardano has a larger live DeFi ecosystem. The better choice depends on whether you value Ergo PoW/fair-launch design and smaller experimental surface or Cardano larger liquidity and app count."
         }
       ]
     },

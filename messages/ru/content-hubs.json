@@ -728,7 +728,7 @@
     "agentBanner": {
       "badge": "New",
       "title": "Building for autonomous agents?",
-      "description": "The \"Build Agent Economy Apps\" playbook covers Notes, Reserves, Acceptance Predicates, and Fleet SDK integration — from testnet to mainnet.",
+      "description": "The \"Build Agent Economy Apps\" playbook covers Notes, Reserves, Acceptance Predicates, and Fleet SDK integration — from testnet proof to audit-gated release planning.",
       "cta": "Start Playbook"
     },
     "cta": {

@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server'
 export const revalidate = 86400 // 24h
 
 const BASE_URL = 'https://www.ergoblockchain.org'
-const LAST_UPDATED = '2026-05-23'
+const LAST_UPDATED = '2026-05-24'
 
 export async function GET() {
   const content = `# Ergo Platform
@@ -12,7 +12,7 @@ export async function GET() {
 > Canonical URL: ${BASE_URL}/llms.txt
 > Full version with glossary excerpts: ${BASE_URL}/llms-full.txt
 
-Ergo is a resilient Proof-of-Work blockchain for contractual money. It combines Bitcoin-style UTXO accounting with expressive smart contracts through ErgoScript, Sigma Protocols, native tokens, Storage Rent and NiPoPoWs.
+Ergo is a PoW/eUTXO clearing layer and public proof surface for autonomous work. It combines Bitcoin-style UTXO accounting with expressive smart contracts through ErgoScript, Sigma Protocols, native tokens, Storage Rent and NiPoPoWs, and the site now exposes machine-readable proof surfaces for receipts, wallet policy, MCP, and audit-gated settlement.
 
 ## Key Facts
 

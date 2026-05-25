@@ -303,13 +303,13 @@ export const technologyTopics: TechnologyTopic[] = [
   {
     slug: "babel-fees",
     title: "Babel Fees",
-    description: "Pay transaction fees with any token instead of ERG through automated intermediaries",
-    shortDescription: "Pay fees with any token",
+    description: "Pay transaction fees through supported token-to-ERG conversion paths while miners still receive ERG",
+    shortDescription: "Supported token fee paths",
     category: "core",
     status: "live",
     icon: ArrowRightLeft,
     details: [
-      { icon: Coins, title: "Token Flexibility", description: "Use any token to pay transaction fees" },
+      { icon: Coins, title: "Token Flexibility", description: "Use supported token paths to cover transaction fees" },
       { icon: Users, title: "Automated Exchange", description: "Intermediaries handle ERG conversion automatically" },
       { icon: Zap, title: "Seamless UX", description: "No need to hold ERG for transactions" },
     ],
@@ -363,4 +363,3 @@ export const categoryColors: Record<TechnologyCategory, string> = {
   economics: "bg-green-500/20 text-green-400 border-green-500/30",
   interop: "bg-cyan-500/20 text-cyan-400 border-cyan-500/30",
 }
-

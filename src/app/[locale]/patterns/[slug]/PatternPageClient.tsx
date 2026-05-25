@@ -232,6 +232,11 @@ export function PatternPageClient({ pattern, relatedPatterns, categoryLabel }: P
                 transition={{ delay: 0.3 }}
               >
                 <h2 className="text-xl font-semibold text-white mb-4">{t('sections.codeExamples')}</h2>
+                <p className="mb-4 text-sm text-neutral-400">
+                  These snippets are educational references. Before using them with real funds, pin the exact SDK/compiler versions,
+                  validate register encodings, add collection-size guards before indexing arrays, publish test vectors, and keep
+                  production deployment behind an explicit review/audit gate.
+                </p>
                 <div className="space-y-4">
                   {pattern.codeExamples.map((example, index) => (
                     <Card key={index} className="bg-black border border-white/10 rounded-2xl overflow-hidden">

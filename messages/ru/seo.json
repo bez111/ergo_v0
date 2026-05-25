@@ -1,24 +1,24 @@
 {
   "seo": {
-    "defaultTitle": "Ergo — агентский блокчейн для контрактных денег",
-    "defaultDescription": "Ergo — агентский блокчейн: PoW + eUTXO + ErgoScript, созданный для автономных платежей AI-агентов, DeFi и программируемых денег с меньшей зависимостью от кастодианов.",
-    "keywords": "агентский блокчейн, блокчейн для AI-агентов, блокчейн для автономных AI-платежей, платежи AI-агентов, ergo blockchain, криптовалюта, DeFi, смарт-контракты, Ergo, eUTXO, доказательство работы",
+    "defaultTitle": "Ergo — PoW/eUTXO блокчейн для DeFi, приватности и автономной работы",
+    "defaultDescription": "Ergo — PoW/eUTXO блокчейн для DeFi, приватности и sound money, который становится публичным proof-and-clearing слоем для автономной работы.",
+    "keywords": "агентский блокчейн, блокчейн для AI-агентов, блокчейн для автономных AI-платежей, платежи AI-агентов, ergo blockchain, криптовалюта, DeFi, приватность, надёжные деньги, sound money, смарт-контракты, Ergo, ERG, кошелёк ERG, eUTXO, доказательство работы, Proof of Work, ErgoScript, Sigma Protocols, Autolykos, GPU майнинг, Babel Fees, Storage Rent, NiPoPoWs, Oracle Pools, Rosen Bridge, SigmaUSD, цензуроустойчивые деньги, fair launch, no premine, финансовый суверенитет",
     "home": {
       "meta": {
-        "title": "Ergo — агентский блокчейн | MEV-устойчивые смарт-контракты PoW",
-        "description": "Агентский блокчейн: PoW + eUTXO для DeFi, платежей AI-агентов, приватности и надёжных денег. Предсказуемо низкие комиссии, без премайна и VC — создан киберпанками ради финансовой свободы.",
-        "keywords": "агентский блокчейн, блокчейн для AI-агентов, блокчейн для автономных AI-платежей, платежи AI-агентов, ergo blockchain, децентрализованные финансы, блокчейн без MEV, модель eUTXO, цензуроустойчивые деньги, ASIC-устойчивый майнинг, справедливый запуск криптовалюты, программируемые деньги, финансовый суверенитет, блокчейн киберпанков, DeFi, приватность, надёжные деньги, ergo agent economy",
+        "title": "Ergo — PoW/eUTXO блокчейн для DeFi и автономной работы",
+        "description": "PoW/eUTXO блокчейн для DeFi, приватности и sound money, теперь ещё и публичный proof-and-clearing слой для автономной работы: receipts, wallet policy и settlement.",
+        "keywords": "агентский блокчейн, блокчейн для AI-агентов, блокчейн для автономных AI-платежей, платежи AI-агентов, ergo blockchain, децентрализованные финансы, блокчейн без MEV, модель eUTXO, цензуроустойчивые деньги, ASIC-устойчивый майнинг, справедливый запуск криптовалюты, программируемые деньги, финансовый суверенитет, блокчейн киберпанков, DeFi, приватность, надёжные деньги, sound money, ERG, кошелёк ERG, купить ERG, ErgoScript, Sigma Protocols, Autolykos, GPU майнинг, Babel Fees, Storage Rent, NiPoPoWs, Oracle Pools, Rosen Bridge, SigmaUSD, MEV resistance, ergo agent economy",
         "og": {
-          "title": "Ergo — Peer-to-Peer Agent Economy",
-          "description": "Агентский блокчейн: PoW + eUTXO + ErgoScript для автономных платежей AI-агентов, программируемого кредита и trustless межмашинной коммерции.",
+          "title": "Ergo — DeFi, приватность и клиринг автономной работы",
+          "description": "PoW/eUTXO блокчейн для DeFi, приватности и sound money, с публичной proof surface для receipts автономной работы и audit-gated settlement.",
           "siteName": "Ergo Blockchain",
-          "imageAlt": "Ergo — Peer-to-Peer Agent Economy"
+          "imageAlt": "Ergo — публичная proof surface для автономной работы"
         },
         "twitter": {
-          "title": "Ergo — Peer-to-Peer Agent Economy",
-          "description": "Агентский блокчейн: PoW + eUTXO для автономных платежей AI-агентов, программируемого кредита и межмашинной коммерции. Без KYC, без предзагрузки газа."
+          "title": "Ergo — DeFi, приватность и клиринг автономной работы",
+          "description": "PoW/eUTXO для DeFi, приватности, sound money и расчётов автономной работы: receipts, wallet policy и audit-gated mainnet claims."
         },
-        "heroImageAlt": "Ergo Platform — агентский блокчейн для Peer-to-Peer Agent Economy"
+        "heroImageAlt": "Ergo Platform — публичная proof surface для автономной работы"
       },
       "faq": {
         "items": [
@@ -28,19 +28,19 @@
           },
           {
             "question": "Где купить ERG?",
-            "answer": "ERG можно купить на биржах KuCoin, Gate.io, Bitpanda или на децентрализованных биржах, таких как Spectrum Finance. Сначала установите кошелёк (Nautilus, SAFEW или Ergo Mobile Wallet), затем купите ERG и выведите на адрес кошелька."
+            "answer": "ERG можно купить на биржах вроде KuCoin, Gate.io или Bitpanda, а также через проверенные non-custodial маршруты с актуальной ликвидностью. Spectrum Finance — исторический Ergo DEX с sunset notice в 2024 году, поэтому перед торговлей проверяйте актуальные площадки."
           },
           {
             "question": "Ergo — хорошая инвестиция?",
             "answer": "У Ergo фиксированное предложение 97,7M ERG, без премайна и с честным запуском. Это PoW-блокчейн с уникальными технологиями (eUTXO, Sigma-протоколы). Как и с любой криптовалютой, проводите собственное исследование и инвестируйте только то, что готовы потерять."
           },
           {
-            "question": "Почему Ergo идеален для AI-агентов и межмашинных платежей?",
-            "answer": "Модель eUTXO обеспечивает детерминированные расходы — агенты знают точную комиссию заранее. Babel Fees позволяют платить в любом токене без предзагрузки ERG. ErgoScript встраивает условия принятия прямо в платёж. Без KYC, без предзагрузки газа, без постоянной идентификации. Одна из немногих цепочек, где все четыре платёжных примитива для агентов реализованы на уровне протокола."
+            "question": "Почему Ergo хорошо подходит для расчётов автономной работы?",
+            "answer": "Модель eUTXO даёт детерминированные расходы, ErgoScript может задавать правила принятия, Babel Fees уменьшают необходимость заранее заводить нативный токен, а receipt-процессы связывают оплату, проверку задачи и расчёт. Текущий agent-economy стек подаётся как testnet-first proof до открытия audit gates."
           },
           {
             "question": "Как начать пользоваться Ergo?",
-            "answer": "1) Установите кошелёк (Nautilus для браузера или Ergo Mobile Wallet для телефона). 2) Надёжно сохраните seed-фразу. 3) Купите ERG на бирже или DEX. 4) Попробуйте DeFi-приложения: Spectrum Finance, SigmaUSD или ErgoMixer."
+            "answer": "1) Установите кошелёк. 2) Надёжно сохраните seed-фразу. 3) Получите ERG через биржу или проверенный non-custodial маршрут. 4) Изучайте SigmaUSD, ErgoMixer, NFT, майнинг и актуальные DeFi-площадки только после проверки статуса каждого проекта."
           },
           {
             "question": "Какие кошельки поддерживают Ergo?",

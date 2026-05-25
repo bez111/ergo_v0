@@ -1,68 +1,79 @@
 [
   {
-    "key": "events.title",
-    "value": "Community Events",
+    "key": "events.events.title",
+    "source": "Community Events",
     "context": "Title",
-    "maxLength": 24
+    "maxLength": 24,
+    "translation": ""
   },
   {
-    "key": "events.subtitle",
-    "value": "Join Ergo community events",
+    "key": "events.events.subtitle",
+    "source": "Join Ergo community events",
     "context": "General content",
-    "maxLength": 39
+    "maxLength": 39,
+    "translation": ""
   },
   {
-    "key": "events.description",
-    "value": "Discover hackathons, meetups, and conferences in the Ergo ecosystem",
+    "key": "events.events.description",
+    "source": "Discover hackathons, meetups, and conferences in the Ergo ecosystem",
     "context": "Description",
-    "maxLength": 100.5
+    "maxLength": 100.5,
+    "translation": ""
   },
   {
-    "key": "events.upcoming",
-    "value": "Upcoming Events",
+    "key": "events.events.upcoming",
+    "source": "Upcoming Events",
     "context": "General content",
-    "maxLength": 22.5
+    "maxLength": 22.5,
+    "translation": ""
   },
   {
-    "key": "events.past",
-    "value": "Past Events",
+    "key": "events.events.past",
+    "source": "Past Events",
     "context": "General content",
-    "maxLength": 16.5
+    "maxLength": 16.5,
+    "translation": ""
   },
   {
-    "key": "events.register",
-    "value": "Register",
+    "key": "events.events.register",
+    "source": "Register",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "events.learnMore",
-    "value": "Learn More",
+    "key": "events.events.learnMore",
+    "source": "Learn More",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "events.noEvents",
-    "value": "No events scheduled at the moment. Check back soon!",
+    "key": "events.events.noEvents",
+    "source": "No events scheduled at the moment. Check back soon!",
     "context": "General content",
-    "maxLength": 76.5
+    "maxLength": 76.5,
+    "translation": ""
   },
   {
-    "key": "events.hackathons",
-    "value": "Hackathons",
+    "key": "events.events.hackathons",
+    "source": "Hackathons",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "events.meetups",
-    "value": "Meetups",
+    "key": "events.events.meetups",
+    "source": "Meetups",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "events.conferences",
-    "value": "Conferences",
+    "key": "events.events.conferences",
+    "source": "Conferences",
     "context": "General content",
-    "maxLength": 16.5
+    "maxLength": 16.5,
+    "translation": ""
   }
 ]

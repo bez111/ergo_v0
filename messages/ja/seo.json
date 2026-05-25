@@ -1,24 +1,24 @@
 {
   "seo": {
-    "defaultTitle": "Ergo — エージェンティック・ブロックチェーン（Agentic Blockchain）、契約通貨の未来",
-    "defaultDescription": "Ergoはエージェンティック・ブロックチェーン（agentic blockchain）——PoW + eUTXO + ErgoScriptで構築された、自律型AIエージェント決済・DeFi・カウンターパーティリスクのないプログラマブルマネーのためのブロックチェーンです。",
-    "keywords": "agentic blockchain, エージェンティックブロックチェーン, blockchain for AI agents, AIエージェントブロックチェーン, autonomous AI payments blockchain, 自律型AI決済ブロックチェーン, AI agent payments, AIエージェント決済, ergo blockchain, Ergoブロックチェーン, cryptocurrency, 暗号通貨, DeFi, 分散型金融, smart contracts, スマートコントラクト, Ergo, eUTXO, proof of work, プルーフ・オブ・ワーク",
+    "defaultTitle": "Ergo — 自律的な仕事のための Public Proof Surface",
+    "defaultDescription": "Ergoは、自律的な仕事のためのPoW/eUTXO清算レイヤー兼public proof surfaceです。プログラム可能な受諾ルール、receipt bundle、wallet policy、DeFi、監査ゲート付き settlement を扱います。",
+    "keywords": "自律的な仕事の清算, public proof surface, 検証可能なreceipt, wallet policy, agent economy, agentic blockchain, blockchain for AI agents, ergo blockchain, 暗号通貨, DeFi, スマートコントラクト, Ergo, eUTXO, proof of work",
     "home": {
       "meta": {
-        "title": "Ergo — エージェンティック・ブロックチェーン | MEV耐性のPoWスマートコントラクト",
-        "description": "エージェンティック・ブロックチェーン：DeFi・AIエージェント決済・プライバシー・健全な通貨のためのPoW + eUTXO。予測可能な低手数料、プレマインなし、VCなし——サイファーパンクが金融の自由のために構築。",
+        "title": "Ergo — 自律的な仕事が支払われ、証明され、清算される場所",
+        "description": "自律的な仕事のためのPoW/eUTXO清算レイヤー兼public proof surface。見積もり、プログラム可能な受諾、receipt bundle、wallet policy、監査ゲート付き settlement を提供します。",
         "keywords": "agentic blockchain, エージェンティックブロックチェーン, blockchain for AI agents, AIエージェントブロックチェーン, autonomous AI payments blockchain, 自律型AI決済, AI agent payments, AIエージェント決済, ergo blockchain, Ergoブロックチェーン, decentralized finance, 分散型金融, MEV resistant blockchain, MEV耐性ブロックチェーン, eUTXO model, eUTXOモデル, censorship resistant money, 検閲耐性通貨, ASIC resistant mining, ASIC耐性マイニング, fair launch cryptocurrency, フェアローンチ暗号通貨, programmable money, プログラマブルマネー, financial sovereignty, 金融主権, cypherpunk blockchain, サイファーパンクブロックチェーン, DeFi, privacy, プライバシー, sound money, 健全な通貨, ergo agent economy, Ergoエージェントエコノミー",
         "og": {
-          "title": "Ergo — Peer-to-Peer Agent Economy",
-          "description": "エージェンティック・ブロックチェーン：PoW + eUTXO + ErgoScriptによる自律型AIエージェント決済、プログラマブルクレジット、トラストレスなマシン間取引。",
+          "title": "Ergo — 自律的な仕事のための Public Proof Surface",
+          "description": "PoW + eUTXO + ErgoScriptにより、プログラム可能なクレジット、検証可能なreceipt、wallet policy、監査ゲート付きagent settlementを実現します。",
           "siteName": "Ergo Blockchain",
-          "imageAlt": "Ergo — Peer-to-Peer Agent Economy"
+          "imageAlt": "Ergo — 自律的な仕事のための Public Proof Surface"
         },
         "twitter": {
-          "title": "Ergo — Peer-to-Peer Agent Economy",
-          "description": "エージェンティック・ブロックチェーン：PoW + eUTXOによる自律型AIエージェント決済、プログラマブルクレジット、マシン間取引。KYC不要、ガスのブートストラップ不要。"
+          "title": "Ergo — 自律的な仕事のための Public Proof Surface",
+          "description": "自律的な仕事のsettlementのためのPoW + eUTXO。プログラム可能なクレジット、receipt bundle、wallet policy、監査ゲート付きmainnet claim。"
         },
-        "heroImageAlt": "Ergo Platform — The Agentic Blockchain for Peer-to-Peer Agent Economy"
+        "heroImageAlt": "Ergo Platform — 自律的な仕事のための Public Proof Surface"
       },
       "faq": {
         "items": [
@@ -28,19 +28,19 @@
           },
           {
             "question": "ERGの購入方法は？",
-            "answer": "ERGはKuCoin、Gate.io、BitpandaなどのCEX、またはSpectrum FinanceなどのDEXで購入できます。まずウォレット（Nautilus、SAFEW、またはErgo Mobileウォレット）を用意し、ERGを購入してご自身のウォレットアドレスに出金してください。"
+            "answer": "1) Download a wallet. 2) Back up your seed phrase securely. 3) Get ERG from an exchange or verified non-custodial route. 4) Explore SigmaUSD, ErgoMixer, NFTs, mining, and current DeFi venues after checking each project status."
           },
           {
             "question": "Ergoは良い投資対象ですか？",
             "answer": "Ergoの総供給量は9,770万ERGで固定されており、プレマインなし、フェアローンチです。独自技術（eUTXO、Sigma Protocols）を持つPoWブロックチェーンです。他の暗号通貨と同様に、自己調査を行い、損失を許容できる範囲でのみ投資してください。"
           },
           {
-            "question": "なぜErgoはAIエージェントとマシン間決済に最適なのですか？",
-            "answer": "ErgoのeUTXOモデルは決定論的なコストを提供し、エージェントは正確な手数料を事前に把握できます。Babel Feesにより、エージェントはERGを事前にロードすることなく任意のトークンで支払えます。ErgoScriptは受諾条件を支払いに直接埋め込みます。KYC不要、ガスのブートストラップ不要、永続的なアイデンティティ不要。プロトコルレベルで4つのエージェント決済プリミティブすべてを備えた唯一のブロックチェーンです。"
+            "question": "なぜErgoは自律的な仕事のsettlementに適しているのですか？",
+            "answer": "ErgoのeUTXOモデルは決定論的なコストを提供し、ErgoScriptは受諾ルールをコード化でき、Babel Feesはネイティブトークンの事前準備を減らします。receipt workflowは支払い、検証、settlementを結びます。現在のagent-economy stackは、audit gateが開くまでtestnet-firstです。"
           },
           {
             "question": "Ergoを始めるには？",
-            "answer": "1) ウォレットをダウンロード（ブラウザ用はNautilus、スマートフォン用はErgo Mobileウォレット）。2) シードフレーズを安全にバックアップ。3) 取引所またはDEXでERGを入手。4) Spectrum Finance、SigmaUSD、ErgoMixerなどのDeFiアプリを探索。"
+            "answer": "1) Download a wallet. 2) Back up your seed phrase securely. 3) Get ERG from an exchange or verified non-custodial route. 4) Explore SigmaUSD, ErgoMixer, NFTs, mining, and current DeFi venues after checking each project status."
           },
           {
             "question": "Ergoに対応しているウォレットは？",

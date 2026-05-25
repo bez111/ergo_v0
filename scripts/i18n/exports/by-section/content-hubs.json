@@ -1,0 +1,4867 @@
+[
+  {
+    "key": "content-hubs.topicsData.ergo-defi.title",
+    "source": "DeFi on Ergo",
+    "context": "Title",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.subtitle",
+    "source": "Decentralized Finance With Strong MEV-Resistance and Open Access",
+    "context": "General content",
+    "maxLength": 96,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.heroStatement",
+    "source": "DeFi that actually works for users, not extractors.",
+    "context": "General content",
+    "maxLength": 76.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.introduction",
+    "source": "Ergo's approach to DeFi is fundamentally different from account-based chains like Ethereum. Built on the eUTXO model, Ergo reduces several common DeFi failure modes: boxes make state explicit, transaction effects are easier to reason about before signing, and common account-model MEV patterns such as sandwiching are harder to execute. Transaction fees are typically predictable before submission, but dApp design, oracle design and mempool behavior still matter. This is not a magic shield; it is a structural advantage for building fairer DeFi.",
+    "context": "General content",
+    "maxLength": 820.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.whatMakesUnique",
+    "source": "While account-model DeFi often exposes users to global-state ordering games, Ergo's eUTXO model creates a more analyzable environment. Transactions reference specific boxes (UTXOs), which reduces the surface for common reordering attacks. Oracle Pools provide decentralized price feeds without a single publisher. And because Ergo is PoW with fair launch, there is no VC allocation or validator-governance layer controlling the base protocol.",
+    "context": "General content",
+    "maxLength": 663,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.keyDifferentiators.0",
+    "source": "MEV-aware by design: eUTXO reduces common front-running and sandwich patterns, but dApp and mempool design still matter",
+    "context": "General content",
+    "maxLength": 178.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.keyDifferentiators.1",
+    "source": "Predictable fees: users can see the fee before signing; typical simple transactions remain low-cost",
+    "context": "General content",
+    "maxLength": 148.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.keyDifferentiators.2",
+    "source": "Deterministic execution: transactions either fully succeed or fully fail",
+    "context": "General content",
+    "maxLength": 108,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.keyDifferentiators.3",
+    "source": "Decentralized oracles: Oracle Pools reduce reliance on a single data publisher",
+    "context": "General content",
+    "maxLength": 117,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.keyDifferentiators.4",
+    "source": "Fair launch: no VC allocation, no insider advantages",
+    "context": "General content",
+    "maxLength": 78,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.sections.0.id",
+    "source": "overview",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.sections.0.title",
+    "source": "Understanding Ergo DeFi",
+    "context": "Title",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.sections.0.description",
+    "source": "Core concepts and how it differs from EVM DeFi",
+    "context": "Description",
+    "maxLength": 69,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.sections.1.id",
+    "source": "ecosystem",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.sections.1.title",
+    "source": "DeFi Ecosystem",
+    "context": "Title",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.sections.1.description",
+    "source": "DEXs, stablecoins, lending, and more",
+    "context": "Description",
+    "maxLength": 54,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.sections.2.id",
+    "source": "build",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.sections.2.title",
+    "source": "Build DeFi Apps",
+    "context": "Title",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.sections.2.description",
+    "source": "Developer resources and patterns",
+    "context": "Description",
+    "maxLength": 48,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.sections.3.id",
+    "source": "philosophy",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.sections.3.title",
+    "source": "DeFi Philosophy",
+    "context": "Title",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.sections.3.description",
+    "source": "Why fair DeFi matters",
+    "context": "Description",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.keyTerms.0.term",
+    "source": "eUTXO",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.keyTerms.0.slug",
+    "source": "eutxo",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.keyTerms.0.shortDefinition",
+    "source": "Extended UTXO model that enables smart contracts while maintaining Bitcoin-like security",
+    "context": "General content",
+    "maxLength": 132,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.keyTerms.1.term",
+    "source": "MEV Resistance",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.keyTerms.1.slug",
+    "source": "mev-resistance",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.keyTerms.1.shortDefinition",
+    "source": "Structural reduction of common front-running and sandwich patterns",
+    "context": "General content",
+    "maxLength": 99,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.keyTerms.2.term",
+    "source": "Oracle Pools",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.keyTerms.2.slug",
+    "source": "oracle-pools",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.keyTerms.2.shortDefinition",
+    "source": "Decentralized system for bringing off-chain data to smart contracts",
+    "context": "General content",
+    "maxLength": 100.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.keyTerms.3.term",
+    "source": "SigmaUSD",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.keyTerms.3.slug",
+    "source": "sigmausd",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.keyTerms.3.shortDefinition",
+    "source": "Algorithmic stablecoin backed by ERG reserves",
+    "context": "General content",
+    "maxLength": 67.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.keyTerms.4.term",
+    "source": "Babel Fees",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.keyTerms.4.slug",
+    "source": "babel-fees",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.keyTerms.4.shortDefinition",
+    "source": "Pay transaction fees through supported token-to-ERG fee-conversion paths",
+    "context": "General content",
+    "maxLength": 108,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.keyTerms.5.term",
+    "source": "Boxes",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.keyTerms.5.slug",
+    "source": "boxes",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-defi.keyTerms.5.shortDefinition",
+    "source": "eUTXO containers holding value, tokens, and smart contract data",
+    "context": "General content",
+    "maxLength": 94.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.title",
+    "source": "Privacy on Ergo",
+    "context": "Title",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.subtitle",
+    "source": "Programmable Privacy with Sigma Protocols",
+    "context": "General content",
+    "maxLength": 61.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.heroStatement",
+    "source": "Privacy is not about hiding. It",
+    "context": "General content",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.introduction",
+    "source": "Ergo takes a unique approach to blockchain privacy: optional, programmable, and provable. Unlike always-on privacy coins that hide everything, Ergo's Sigma Protocols let you prove things about your data without revealing the data itself. You can prove you're over 18 without showing your birthdate. Prove you have sufficient funds without revealing your balance. Prove membership in a group without identifying yourself. This is privacy that works in the real world - where sometimes you need to prove compliance while protecting your details.",
+    "context": "General content",
+    "maxLength": 814.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.whatMakesUnique",
+    "source": "Most privacy solutions force a binary choice: full transparency or full opacity. Ergo's Sigma Protocols enable selective disclosure - reveal exactly what's needed, nothing more. This isn't just academic cryptography; it's built into ErgoScript as a first-class primitive. Every smart contract can incorporate zero-knowledge proofs. ErgoMixer provides non-interactive, non-custodial mixing. And because privacy is optional, Ergo remains accessible to regulated entities while empowering individuals.",
+    "context": "General content",
+    "maxLength": 747,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.keyDifferentiators.0",
+    "source": "Sigma Protocols: native zero-knowledge proofs in every smart contract",
+    "context": "General content",
+    "maxLength": 103.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.keyDifferentiators.1",
+    "source": "Selective disclosure: prove statements without revealing underlying data",
+    "context": "General content",
+    "maxLength": 108,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.keyDifferentiators.2",
+    "source": "ErgoMixer: non-custodial, non-interactive token mixing",
+    "context": "General content",
+    "maxLength": 81,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.keyDifferentiators.3",
+    "source": "Programmable privacy: build custom privacy logic into dApps",
+    "context": "General content",
+    "maxLength": 88.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.keyDifferentiators.4",
+    "source": "Optional by design: transparent when needed, private when required",
+    "context": "General content",
+    "maxLength": 99,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.sections.0.id",
+    "source": "overview",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.sections.0.title",
+    "source": "Understanding Ergo Privacy",
+    "context": "Title",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.sections.0.description",
+    "source": "How privacy works on Ergo",
+    "context": "Description",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.sections.1.id",
+    "source": "sigma",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.sections.1.title",
+    "source": "Sigma Protocols",
+    "context": "Title",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.sections.1.description",
+    "source": "Zero-knowledge proofs explained",
+    "context": "Description",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.sections.2.id",
+    "source": "tools",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.sections.2.title",
+    "source": "Privacy Tools",
+    "context": "Title",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.sections.2.description",
+    "source": "ErgoMixer and other privacy applications",
+    "context": "Description",
+    "maxLength": 60,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.sections.3.id",
+    "source": "philosophy",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.sections.3.title",
+    "source": "Privacy Philosophy",
+    "context": "Title",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.sections.3.description",
+    "source": "Why privacy matters for freedom",
+    "context": "Description",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.keyTerms.0.term",
+    "source": "Sigma Protocols",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.keyTerms.0.slug",
+    "source": "sigma-protocols",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.keyTerms.0.shortDefinition",
+    "source": "Zero-knowledge proof systems for proving statements without revealing data",
+    "context": "General content",
+    "maxLength": 111,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.keyTerms.1.term",
+    "source": "ErgoMixer",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.keyTerms.1.slug",
+    "source": "ergomixer",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.keyTerms.1.shortDefinition",
+    "source": "Non-interactive, non-custodial token mixing service",
+    "context": "General content",
+    "maxLength": 76.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.keyTerms.2.term",
+    "source": "Zero-Knowledge Proofs",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.keyTerms.2.slug",
+    "source": "zero-knowledge-proofs",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.keyTerms.2.shortDefinition",
+    "source": "Cryptographic proofs that reveal nothing except the truth of a statement",
+    "context": "General content",
+    "maxLength": 108,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.keyTerms.3.term",
+    "source": "Selective Disclosure",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.keyTerms.3.slug",
+    "source": "selective-disclosure",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.keyTerms.3.shortDefinition",
+    "source": "Revealing only specific data while keeping the rest private",
+    "context": "General content",
+    "maxLength": 88.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.keyTerms.4.term",
+    "source": "Ring Signatures",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.keyTerms.4.slug",
+    "source": "ring-signatures",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-privacy.keyTerms.4.shortDefinition",
+    "source": "Signatures that prove group membership without identifying the signer",
+    "context": "General content",
+    "maxLength": 103.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.title",
+    "source": "Mining Ergo",
+    "context": "Title",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.subtitle",
+    "source": "Fair, Accessible, ASIC-Resistant Proof-of-Work",
+    "context": "General content",
+    "maxLength": 69,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.heroStatement",
+    "source": "Mining without masters. Proof-of-Work for everyone.",
+    "context": "General content",
+    "maxLength": 76.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.introduction",
+    "source": "Ergo's Autolykos algorithm represents a return to Bitcoin's original vision: mining accessible to regular people with consumer hardware. Unlike Bitcoin's ASIC-dominated mining or Ethereum's move to PoS, Ergo maintains GPU-friendly, memory-hard Proof-of-Work. This isn't nostalgia - it's a deliberate design choice for decentralization. When anyone can mine with their gaming PC, no single entity can dominate hashrate. When mining is distributed, censorship resistance is real.",
+    "context": "General content",
+    "maxLength": 715.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.whatMakesUnique",
+    "source": "Autolykos v2 is memory-hard, requiring significant RAM that makes ASIC development uneconomical. The algorithm was designed by cryptographers, not as an afterthought. Storage rent provides sustainable miner revenue after emission ends - solving Bitcoin's long-term security budget problem. And Ergo's fair launch means miners aren't competing against VC-subsidized insiders; everyone started from zero.",
+    "context": "General content",
+    "maxLength": 603,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.keyDifferentiators.0",
+    "source": "ASIC-resistant: Autolykos keeps mining accessible to GPU miners",
+    "context": "General content",
+    "maxLength": 94.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.keyDifferentiators.1",
+    "source": "Memory-hard: requires RAM, not just raw compute power",
+    "context": "General content",
+    "maxLength": 79.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.keyDifferentiators.2",
+    "source": "Storage rent: sustainable miner income after block rewards end",
+    "context": "General content",
+    "maxLength": 93,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.keyDifferentiators.3",
+    "source": "Fair launch: no pre-mine advantage for anyone",
+    "context": "General content",
+    "maxLength": 67.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.keyDifferentiators.4",
+    "source": "Pool mining: Autolykos v2 enables pool participation",
+    "context": "General content",
+    "maxLength": 78,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.sections.0.id",
+    "source": "overview",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.sections.0.title",
+    "source": "Understanding Ergo Mining",
+    "context": "Title",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.sections.0.description",
+    "source": "How Autolykos works and why it matters",
+    "context": "Description",
+    "maxLength": 57,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.sections.1.id",
+    "source": "setup",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.sections.1.title",
+    "source": "Mining Setup",
+    "context": "Title",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.sections.1.description",
+    "source": "Hardware, software, and pool selection",
+    "context": "Description",
+    "maxLength": 57,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.sections.2.id",
+    "source": "economics",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.sections.2.title",
+    "source": "Mining Economics",
+    "context": "Title",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.sections.2.description",
+    "source": "Profitability, rewards, and sustainability",
+    "context": "Description",
+    "maxLength": 63,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.sections.3.id",
+    "source": "philosophy",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.sections.3.title",
+    "source": "PoW Philosophy",
+    "context": "Title",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.sections.3.description",
+    "source": "Why Proof-of-Work matters",
+    "context": "Description",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.keyTerms.0.term",
+    "source": "Storage Rent",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.keyTerms.0.slug",
+    "source": "storage-rent",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.keyTerms.0.shortDefinition",
+    "source": "Fee mechanism providing sustainable miner revenue",
+    "context": "General content",
+    "maxLength": 73.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.keyTerms.1.term",
+    "source": "Proof-of-Work",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.keyTerms.1.slug",
+    "source": "proof-of-work",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.keyTerms.1.shortDefinition",
+    "source": "Consensus mechanism where miners expend energy to secure the network",
+    "context": "General content",
+    "maxLength": 102,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.keyTerms.2.term",
+    "source": "Emission Schedule",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.keyTerms.2.slug",
+    "source": "emission-schedule",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.keyTerms.2.shortDefinition",
+    "source": "The predetermined release of new ERG through mining",
+    "context": "General content",
+    "maxLength": 76.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.keyTerms.3.term",
+    "source": "Memory-Hard",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.keyTerms.3.slug",
+    "source": "memory-hard",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-mining.keyTerms.3.shortDefinition",
+    "source": "Algorithm requiring significant RAM, resisting ASIC optimization",
+    "context": "General content",
+    "maxLength": 96,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.title",
+    "source": "Ergo Technology",
+    "context": "Title",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.subtitle",
+    "source": "Research-Driven Innovation for Real-World Use",
+    "context": "General content",
+    "maxLength": 67.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.heroStatement",
+    "source": "Technology that solves real problems, not hype cycles.",
+    "context": "General content",
+    "maxLength": 81,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.introduction",
+    "source": "Ergo's technology stack represents years of academic research translated into practical blockchain innovation. Every major component - eUTXO, ErgoScript, NiPoPoWs, Sigma Protocols - comes from peer-reviewed cryptographic research. This isn't technology for technology's sake; each innovation solves specific problems. eUTXO reduces common MEV patterns and enables parallel processing. NiPoPoWs compress blockchain proofs from gigabytes to kilobytes. Sigma Protocols bring zero-knowledge proofs to smart contracts. The result is a blockchain designed for security, scalability and optional privacy.",
+    "context": "General content",
+    "maxLength": 895.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.whatMakesUnique",
+    "source": "Most blockchains copy Ethereum's account model or Bitcoin's simple scripts. Ergo charts a different path: extending Bitcoin's UTXO model with rich smart contract capabilities while maintaining its security properties. ErgoScript is a functional language, not imperative like Solidity - this makes contracts easier to verify and harder to exploit. NiPoPoWs enable truly trustless light clients and efficient cross-chain bridges. These aren't incremental improvements; they're architectural advantages.",
+    "context": "General content",
+    "maxLength": 750,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.keyDifferentiators.0",
+    "source": "eUTXO: smart contracts with Bitcoin-level security guarantees",
+    "context": "General content",
+    "maxLength": 91.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.keyDifferentiators.1",
+    "source": "ErgoScript: functional, verifiable smart contract language",
+    "context": "General content",
+    "maxLength": 87,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.keyDifferentiators.2",
+    "source": "NiPoPoWs: logarithmic proof compression for light clients",
+    "context": "General content",
+    "maxLength": 85.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.keyDifferentiators.3",
+    "source": "Sigma Protocols: native zero-knowledge proofs",
+    "context": "General content",
+    "maxLength": 67.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.keyDifferentiators.4",
+    "source": "Research-driven: peer-reviewed cryptography, not marketing",
+    "context": "General content",
+    "maxLength": 87,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.sections.0.id",
+    "source": "overview",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.sections.0.title",
+    "source": "Technology Overview",
+    "context": "Title",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.sections.0.description",
+    "source": "The Ergo technology stack",
+    "context": "Description",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.sections.1.id",
+    "source": "eutxo",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.sections.1.title",
+    "source": "eUTXO Model",
+    "context": "Title",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.sections.1.description",
+    "source": "Extended UTXO explained",
+    "context": "Description",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.sections.2.id",
+    "source": "scripting",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.sections.2.title",
+    "source": "Smart Contracts",
+    "context": "Title",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.sections.2.description",
+    "source": "ErgoScript and contract development",
+    "context": "Description",
+    "maxLength": 52.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.sections.3.id",
+    "source": "scaling",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.sections.3.title",
+    "source": "Scaling & Light Clients",
+    "context": "Title",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.sections.3.description",
+    "source": "NiPoPoWs and future scaling",
+    "context": "Description",
+    "maxLength": 40.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.keyTerms.0.term",
+    "source": "eUTXO",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.keyTerms.0.slug",
+    "source": "eutxo",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.keyTerms.0.shortDefinition",
+    "source": "Extended UTXO model combining Bitcoin security with smart contract flexibility",
+    "context": "General content",
+    "maxLength": 117,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.keyTerms.1.term",
+    "source": "ErgoScript",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.keyTerms.1.slug",
+    "source": "ergoscript",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.keyTerms.1.shortDefinition",
+    "source": "Functional smart contract language with native Sigma Protocol support",
+    "context": "General content",
+    "maxLength": 103.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.keyTerms.2.term",
+    "source": "NiPoPoWs",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.keyTerms.2.slug",
+    "source": "nipopows",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.keyTerms.2.shortDefinition",
+    "source": "Proofs that compress blockchain history to kilobytes",
+    "context": "General content",
+    "maxLength": 78,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.keyTerms.3.term",
+    "source": "Boxes",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.keyTerms.3.slug",
+    "source": "boxes",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.keyTerms.3.shortDefinition",
+    "source": "eUTXO containers holding value, tokens, and contract data",
+    "context": "General content",
+    "maxLength": 85.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.keyTerms.4.term",
+    "source": "Subblocks",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.keyTerms.4.slug",
+    "source": "subblocks",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.keyTerms.4.shortDefinition",
+    "source": "Technology for faster transaction confirmations",
+    "context": "General content",
+    "maxLength": 70.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.keyTerms.5.term",
+    "source": "Velvet Forks",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.keyTerms.5.slug",
+    "source": "velvet-forks",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-technology.keyTerms.5.shortDefinition",
+    "source": "Soft protocol upgrades without hard forks",
+    "context": "General content",
+    "maxLength": 61.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.title",
+    "source": "Ergo Philosophy",
+    "context": "Title",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.subtitle",
+    "source": "Cypherpunk Values for Financial Freedom",
+    "context": "General content",
+    "maxLength": 58.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.heroStatement",
+    "source": "Money without masters. Finance without permission.",
+    "context": "General content",
+    "maxLength": 75,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.introduction",
+    "source": "Ergo isn't just a blockchain - it's a statement about what cryptocurrency should be. In a world where most 'crypto' projects are VC-backed, pre-mined, and designed for extraction, Ergo represents a return to first principles. No pre-mine. No ICO. No VC allocation. 100% of ERG comes from mining, just like Bitcoin. This isn't idealism; it's the foundation for genuine decentralization. When no insider group controls a majority of tokens, governance is actually decentralized. When there's no VC exit to fund, development serves users, not investors.",
+    "context": "General content",
+    "maxLength": 825,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.whatMakesUnique",
+    "source": "Ergo was built by people who remember why Bitcoin was created: to provide an alternative to a financial system that serves the powerful at the expense of everyone else. The Ergo Manifesto articulates a vision of financial tools for ordinary people, not just sophisticated traders or wealthy investors. Privacy is a right, not a feature to be regulated away. Self-custody is the default, not an option. And the technology is designed to remain accessible - ASIC-resistant mining, light clients, low fees - so that participation isn't limited to those with resources.",
+    "context": "General content",
+    "maxLength": 847.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.keyDifferentiators.0",
+    "source": "Fair launch: no pre-mine, no ICO, no VC allocation",
+    "context": "General content",
+    "maxLength": 75,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.keyDifferentiators.1",
+    "source": "Cypherpunk values: privacy, self-custody, censorship resistance",
+    "context": "General content",
+    "maxLength": 94.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.keyDifferentiators.2",
+    "source": "Community-owned: no controlling foundation or company",
+    "context": "General content",
+    "maxLength": 79.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.keyDifferentiators.3",
+    "source": "Accessible: designed for ordinary people, not just institutions",
+    "context": "General content",
+    "maxLength": 94.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.keyDifferentiators.4",
+    "source": "Long-term thinking: sustainability over short-term gains",
+    "context": "General content",
+    "maxLength": 84,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.sections.0.id",
+    "source": "manifesto",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.sections.0.title",
+    "source": "The Ergo Manifesto",
+    "context": "Title",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.sections.0.description",
+    "source": "Core principles and vision",
+    "context": "Description",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.sections.1.id",
+    "source": "fair-launch",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.sections.1.title",
+    "source": "Fair Launch",
+    "context": "Title",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.sections.1.description",
+    "source": "Why distribution matters",
+    "context": "Description",
+    "maxLength": 36,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.sections.2.id",
+    "source": "freedom",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.sections.2.title",
+    "source": "Financial Freedom",
+    "context": "Title",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.sections.2.description",
+    "source": "Tools for sovereignty",
+    "context": "Description",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.keyTerms.0.term",
+    "source": "Fair Launch",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.keyTerms.0.slug",
+    "source": "fair-launch",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.keyTerms.0.shortDefinition",
+    "source": "No pre-mine, no ICO, no insider allocation - 100% mined",
+    "context": "General content",
+    "maxLength": 82.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.keyTerms.1.term",
+    "source": "Cypherpunk",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.keyTerms.1.slug",
+    "source": "cypherpunk",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.keyTerms.1.shortDefinition",
+    "source": "Movement advocating privacy and cryptography for social change",
+    "context": "General content",
+    "maxLength": 93,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.keyTerms.2.term",
+    "source": "Self-Custody",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.keyTerms.2.slug",
+    "source": "self-custody",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.keyTerms.2.shortDefinition",
+    "source": "Holding your own keys, controlling your own assets",
+    "context": "General content",
+    "maxLength": 75,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.keyTerms.3.term",
+    "source": "Censorship Resistance",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.keyTerms.3.slug",
+    "source": "censorship-resistance",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.keyTerms.3.shortDefinition",
+    "source": "Ability to transact without permission from any authority",
+    "context": "General content",
+    "maxLength": 85.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.keyTerms.4.term",
+    "source": "Financial Sovereignty",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.keyTerms.4.slug",
+    "source": "financial-sovereignty",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-philosophy.keyTerms.4.shortDefinition",
+    "source": "Complete control over your financial life",
+    "context": "General content",
+    "maxLength": 61.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.title",
+    "source": "Ergo Sustainability",
+    "context": "Title",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.subtitle",
+    "source": "Built to Last: Long-Term Economics and Security",
+    "context": "General content",
+    "maxLength": 70.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.heroStatement",
+    "source": "A blockchain designed for centuries, not quarters.",
+    "context": "General content",
+    "maxLength": 75,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.introduction",
+    "source": "Most blockchains face a fundamental problem: what happens when block rewards run out? Bitcoin's security budget relies on fees that may not materialize. PoS chains depend on perpetual inflation. Ergo solves this with storage rent - a small fee on dormant UTXOs that provides sustainable miner revenue forever. Combined with a carefully designed emission schedule and state management, Ergo is built for genuine long-term sustainability, not just the next market cycle.",
+    "context": "General content",
+    "maxLength": 702,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.whatMakesUnique",
+    "source": "Storage rent isn't just about miner revenue - it's about blockchain health. By incentivizing the cleanup of unused state, Ergo prevents the bloat that makes full nodes increasingly expensive to run. Lost coins gradually return to circulation instead of being locked forever. And because rent is only charged on boxes untouched for 4+ years, active users are unaffected. This is sustainability through design, not hope.",
+    "context": "General content",
+    "maxLength": 627,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.keyDifferentiators.0",
+    "source": "Storage rent: sustainable miner revenue after emission ends",
+    "context": "General content",
+    "maxLength": 88.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.keyDifferentiators.1",
+    "source": "State cleanup: incentivizes removing unused data",
+    "context": "General content",
+    "maxLength": 72,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.keyDifferentiators.2",
+    "source": "Lost coin recovery: dormant coins return to circulation",
+    "context": "General content",
+    "maxLength": 82.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.keyDifferentiators.3",
+    "source": "Predictable emission: known supply schedule",
+    "context": "General content",
+    "maxLength": 64.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.keyDifferentiators.4",
+    "source": "Full node affordability: manageable state size forever",
+    "context": "General content",
+    "maxLength": 81,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.sections.0.id",
+    "source": "overview",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.sections.0.title",
+    "source": "Sustainability Overview",
+    "context": "Title",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.sections.0.description",
+    "source": "How Ergo ensures long-term viability",
+    "context": "Description",
+    "maxLength": 54,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.sections.1.id",
+    "source": "storage-rent",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.sections.1.title",
+    "source": "Storage Rent",
+    "context": "Title",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.sections.1.description",
+    "source": "The key sustainability mechanism",
+    "context": "Description",
+    "maxLength": 48,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.sections.2.id",
+    "source": "economics",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.sections.2.title",
+    "source": "Economic Model",
+    "context": "Title",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.sections.2.description",
+    "source": "Emission, fees, and incentives",
+    "context": "Description",
+    "maxLength": 45,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.sections.3.id",
+    "source": "future",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.sections.3.title",
+    "source": "Long-Term Vision",
+    "context": "Title",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.sections.3.description",
+    "source": "Ergo in 50+ years",
+    "context": "Description",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.keyTerms.0.term",
+    "source": "Storage Rent",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.keyTerms.0.slug",
+    "source": "storage-rent",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.keyTerms.0.shortDefinition",
+    "source": "Fee on dormant boxes providing sustainable miner revenue",
+    "context": "General content",
+    "maxLength": 84,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.keyTerms.1.term",
+    "source": "Emission Schedule",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.keyTerms.1.slug",
+    "source": "emission-schedule",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.keyTerms.1.shortDefinition",
+    "source": "Predetermined release of new ERG through mining",
+    "context": "General content",
+    "maxLength": 70.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.keyTerms.2.term",
+    "source": "State Bloat",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.keyTerms.2.slug",
+    "source": "state-bloat",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.keyTerms.2.shortDefinition",
+    "source": "Growth of blockchain state making nodes expensive",
+    "context": "General content",
+    "maxLength": 73.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.keyTerms.3.term",
+    "source": "Adaptive Emission",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.keyTerms.3.slug",
+    "source": "adaptive-emission",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsData.ergo-sustainability.keyTerms.3.shortDefinition",
+    "source": "Dynamic adjustment of block rewards based on conditions",
+    "context": "General content",
+    "maxLength": 82.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.hero.title",
+    "source": "Your Questions,",
+    "context": "Title",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.hero.titleHighlight",
+    "source": "Answered",
+    "context": "Title",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.hero.subtitle",
+    "source": "Find expert answers to common questions about Ergo blockchain. Each answer links to deep-dive resources for further learning.",
+    "context": "General content",
+    "maxLength": 187.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.hero.searchPlaceholder",
+    "source": "Search questions...",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.filters.categories.0.id",
+    "source": "all",
+    "context": "General content",
+    "maxLength": 4.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.filters.categories.0.label",
+    "source": "All Questions",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.filters.categories.1.id",
+    "source": "DeFi",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.filters.categories.1.label",
+    "source": "DeFi & Trading",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.filters.categories.2.id",
+    "source": "Privacy",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.filters.categories.2.label",
+    "source": "Privacy",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.filters.categories.3.id",
+    "source": "Mining",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.filters.categories.3.label",
+    "source": "Mining",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.filters.categories.4.id",
+    "source": "Technology",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.filters.categories.4.label",
+    "source": "Technology",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.filters.categories.5.id",
+    "source": "Philosophy",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.filters.categories.5.label",
+    "source": "Philosophy & Freedom",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.filters.categories.6.id",
+    "source": "Getting Started",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.filters.categories.6.label",
+    "source": "Getting Started",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.filters.personas.0.id",
+    "source": "all",
+    "context": "General content",
+    "maxLength": 4.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.filters.personas.0.label",
+    "source": "Everyone",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.filters.personas.1.id",
+    "source": "builder",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.filters.personas.1.label",
+    "source": "Builders",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.filters.personas.2.id",
+    "source": "miner",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.filters.personas.2.label",
+    "source": "Miners",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.filters.personas.3.id",
+    "source": "investor",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.filters.personas.3.label",
+    "source": "Investors",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.filters.personas.4.id",
+    "source": "freedom_seeker",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.filters.personas.4.label",
+    "source": "Freedom Seekers",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.filters.personas.5.id",
+    "source": "cypherpunk",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.filters.personas.5.label",
+    "source": "Cypherpunks",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.filters.personas.6.id",
+    "source": "general",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.filters.personas.6.label",
+    "source": "General",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.aria.filtersGroup",
+    "source": "Filter questions",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.aria.categoryFilter",
+    "source": "Category filter",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.aria.filterByCategory",
+    "source": "Filter by {category}",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.aria.mostPopularList",
+    "source": "Most popular questions",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.aria.filteredList",
+    "source": "Filtered questions",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.featured.title",
+    "source": "Most Popular Questions",
+    "context": "Title",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.results.questionsFound",
+    "source": "Question",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.results.questionsFoundPlural",
+    "source": "Questions",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.results.found",
+    "source": "Found",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.noResults.message",
+    "source": "No questions match your search.",
+    "context": "General content",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.noResults.clearFilters",
+    "source": "Clear filters",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.category.questions",
+    "source": "questions",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.category.showLess",
+    "source": "Show less",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.category.showAll",
+    "source": "Show all",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.intent.how_to",
+    "source": "How-to",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.intent.what_is",
+    "source": "Explainer",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.intent.compare",
+    "source": "Comparison",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.intent.problem",
+    "source": "Solution",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.intent.philosophy",
+    "source": "Philosophy",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.cta.title",
+    "source": "Can't find your question?",
+    "context": "Title",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.cta.description",
+    "source": "Join our community on Discord or Telegram and ask directly. Our community is always happy to help.",
+    "context": "Description",
+    "maxLength": 147,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.cta.joinCommunity",
+    "source": "Join Community",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsHub.cta.browseGlossary",
+    "source": "Browse Glossary",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsPage.seo.title",
+    "source": "Ergo Q&A Hub: Answers to Your Blockchain Questions",
+    "context": "SEO metadata",
+    "maxLength": 75,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsPage.seo.description",
+    "source": "Find answers to common questions about Ergo blockchain: DeFi, privacy, mining, technology, and getting started. Expert answers with deep-dive resources.",
+    "context": "SEO metadata",
+    "maxLength": 228,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsPage.seo.keywords",
+    "source": "Ergo FAQ, Ergo questions, eUTXO explained, Ergo DeFi, Ergo mining, Ergo privacy, blockchain questions",
+    "context": "SEO metadata",
+    "maxLength": 151.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsPage.schema.itemList.name",
+    "source": "Ergo Q&A Directory",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsPage.schema.itemList.description",
+    "source": "Comprehensive answers to common Ergo blockchain questions",
+    "context": "Description",
+    "maxLength": 85.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsPage.schema.collection.name",
+    "source": "Ergo Q&A Hub",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsPage.schema.collection.description",
+    "source": "Expert answers to questions about Ergo blockchain",
+    "context": "Description",
+    "maxLength": 73.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionsPage.schema.breadcrumbs.questions",
+    "source": "Q&A Hub",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsPage.seo.title",
+    "source": "Ergo Topics — DeFi, Privacy, Mining & More | Ergo",
+    "context": "SEO metadata",
+    "maxLength": 73.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsPage.seo.description",
+    "source": "Explore Ergo by topic. Deep dives into DeFi, privacy, mining, eUTXO, smart contracts. Curated resources, guides & infographics.",
+    "context": "SEO metadata",
+    "maxLength": 190.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsPage.seo.keywords",
+    "source": "Ergo topics, Ergo DeFi, Ergo privacy, Ergo mining, eUTXO guide, blockchain topics, cryptocurrency knowledge hub",
+    "context": "SEO metadata",
+    "maxLength": 166.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsPage.schema.itemList.name",
+    "source": "Ergo Topic Clusters",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsPage.schema.itemList.description",
+    "source": "Comprehensive topic guides for Ergo blockchain",
+    "context": "Description",
+    "maxLength": 69,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsPage.schema.collection.name",
+    "source": "Ergo Topics Hub",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsPage.schema.collection.description",
+    "source": "Explore Ergo blockchain by topic - DeFi, Privacy, Mining, Smart Contracts and more",
+    "context": "Description",
+    "maxLength": 123,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsPage.schema.breadcrumbs.topics",
+    "source": "Topics",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsPage.schema.faq.items.0.question",
+    "source": "What topics can I learn about Ergo?",
+    "context": "FAQ content",
+    "maxLength": 52.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsPage.schema.faq.items.0.answer",
+    "source": "Ergo topics include DeFi, Privacy & Sigma Protocols, Mining & Autolykos, Smart Contracts & ErgoScript, Governance & DAOs, and Cross-Chain Bridges.",
+    "context": "FAQ content",
+    "maxLength": 219,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsPage.schema.faq.items.1.question",
+    "source": "Where should I start learning about Ergo?",
+    "context": "FAQ content",
+    "maxLength": 61.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsPage.schema.faq.items.1.answer",
+    "source": "Start with the eUTXO Model topic to understand Ergo's foundation, then explore DeFi or Privacy depending on your interests.",
+    "context": "FAQ content",
+    "maxLength": 184.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsPage.schema.faq.items.2.question",
+    "source": "How is Ergo different from Ethereum?",
+    "context": "FAQ content",
+    "maxLength": 54,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsPage.schema.faq.items.2.answer",
+    "source": "Ergo uses eUTXO (not accounts), Proof-of-Work (not PoS), native tokens (not ERC-20), and Sigma Protocols for privacy. Explore the Technology topics for deep dives.",
+    "context": "FAQ content",
+    "maxLength": 244.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.hero.title",
+    "source": "Explore Ergo by",
+    "context": "Title",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.hero.titleHighlight",
+    "source": "Topic",
+    "context": "Title",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.hero.subtitle",
+    "source": "Deep dives into every major part of Ergo. Each topic hub brings together guides, docs, infographics, glossary terms, and practical playbooks.",
+    "context": "General content",
+    "maxLength": 211.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.hero.topicHubs",
+    "source": "Topic Hubs",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.hero.comprehensiveCoverage",
+    "source": "Comprehensive Coverage",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.search.placeholder",
+    "source": "Search topics by name, keyword, or concept...",
+    "context": "Input placeholder",
+    "maxLength": 67.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.search.ariaLabel",
+    "source": "Search topics",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.search.clearLabel",
+    "source": "Clear search",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.search.showing",
+    "source": "Showing {filtered} of {total} topics",
+    "context": "General content",
+    "maxLength": 54,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.search.showingFor",
+    "source": "Showing {filtered} of {total} topics for \"{query}\"",
+    "context": "General content",
+    "maxLength": 75,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.filters.all",
+    "source": "All",
+    "context": "General content",
+    "maxLength": 4.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.filters.defi",
+    "source": "DeFi",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.filters.privacy",
+    "source": "Privacy",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.filters.mining",
+    "source": "Mining",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.filters.technology",
+    "source": "Technology",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.filters.philosophy",
+    "source": "Philosophy",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.filters.sustainability",
+    "source": "Sustainability",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.card.keyTerms",
+    "source": "key terms",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.card.guidesAndDocs",
+    "source": "guides & docs",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.card.articles",
+    "source": "articles",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.card.infographics",
+    "source": "infographics",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.card.openHub",
+    "source": "Open hub",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.empty.title",
+    "source": "No topics found",
+    "context": "Title",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.empty.description",
+    "source": "Try adjusting your search or filter criteria",
+    "context": "Description",
+    "maxLength": 66,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.empty.clearFilters",
+    "source": "Clear filters",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.cta.title",
+    "source": "Looking for something specific?",
+    "context": "Title",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.cta.description",
+    "source": "Try our Q&A hub for quick answers or browse the glossary for term definitions.",
+    "context": "Description",
+    "maxLength": 117,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.cta.browseQA",
+    "source": "Browse Q&A",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicsHub.cta.viewGlossary",
+    "source": "View Glossary",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.hero.title",
+    "source": "ErgoScript",
+    "context": "Title",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.hero.titleHighlight",
+    "source": "Patterns",
+    "context": "Title",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.hero.subtitle",
+    "source": "Reference smart contract patterns for Ergo. Study, adapt, test, and review. From token mechanics to DeFi primitives.",
+    "context": "General content",
+    "maxLength": 174,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.hero.searchPlaceholder",
+    "source": "Search patterns (e.g., 'swap', 'multisig', 'oracle')...",
+    "context": "General content",
+    "maxLength": 82.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.aria.filtersGroup",
+    "source": "Filter patterns",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.aria.categoryFilter",
+    "source": "Category filter",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.aria.patternsList",
+    "source": "Developer patterns",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.filters.allCategories",
+    "source": "All Categories",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.categoryLabels.token-mechanics",
+    "source": "Token Mechanics",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.categoryLabels.time-locks-access",
+    "source": "Time Locks & Access Control",
+    "context": "General content",
+    "maxLength": 40.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.categoryLabels.multisig-governance",
+    "source": "Multisig & Governance",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.categoryLabels.defi-primitives",
+    "source": "DeFi Primitives",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.categoryLabels.oracle-integration",
+    "source": "Oracle Integration",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.categoryLabels.ergo-native",
+    "source": "Ergo-Native Features",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.categoryLabels.privacy-sigma",
+    "source": "Privacy & Sigma Protocols",
+    "context": "General content",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.categoryDescriptions.token-mechanics",
+    "source": "Create, manage, and control token supply on Ergo",
+    "context": "General content",
+    "maxLength": 72,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.categoryDescriptions.time-locks-access",
+    "source": "Time-based locks and conditional spending patterns",
+    "context": "General content",
+    "maxLength": 75,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.categoryDescriptions.multisig-governance",
+    "source": "Multi-party authorization and DAO structures",
+    "context": "General content",
+    "maxLength": 66,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.categoryDescriptions.defi-primitives",
+    "source": "Building blocks for decentralized finance",
+    "context": "General content",
+    "maxLength": 61.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.categoryDescriptions.oracle-integration",
+    "source": "Connect smart contracts to real-world data",
+    "context": "General content",
+    "maxLength": 63,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.categoryDescriptions.ergo-native",
+    "source": "Patterns unique to Ergo: Babel fees, storage rent, eUTXO state machines",
+    "context": "General content",
+    "maxLength": 106.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.categoryDescriptions.privacy-sigma",
+    "source": "Sigma Protocol patterns for optional privacy",
+    "context": "General content",
+    "maxLength": 66,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.difficulty.beginner",
+    "source": "Beginner",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.difficulty.intermediate",
+    "source": "Intermediate",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.difficulty.advanced",
+    "source": "Advanced",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.grid.noResults",
+    "source": "No patterns found",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.grid.noResultsDescription",
+    "source": "Try adjusting your filters or search terms.",
+    "context": "General content",
+    "maxLength": 64.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.grid.viewPattern",
+    "source": "View pattern",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.cta.title",
+    "source": "Ready to Build?",
+    "context": "Title",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.cta.description",
+    "source": "Start with the patterns, dive into documentation, or join the developer community for support.",
+    "context": "Description",
+    "maxLength": 141,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.cta.developerDocs",
+    "source": "Developer Docs",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsHub.cta.buildDefiPlaybook",
+    "source": "Build DeFi Playbook",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksHub.hero.title",
+    "source": "Ergo Playbooks",
+    "context": "Title",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksHub.hero.subtitle",
+    "source": "Curated guides for every use case. Each playbook combines infographics, articles, and actionable steps.",
+    "context": "General content",
+    "maxLength": 154.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksHub.hero.description",
+    "source": "Start from your first Ergo transaction and move step-by-step towards mining, DeFi, and building your own applications.",
+    "context": "Description",
+    "maxLength": 177,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksHub.hero.startButton",
+    "source": "Start with first transaction",
+    "context": "General content",
+    "maxLength": 42,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksHub.hero.browseQA",
+    "source": "Browse Q&A",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksHub.aria.filterByCategoryGroup",
+    "source": "Filter playbooks by category",
+    "context": "General content",
+    "maxLength": 42,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksHub.aria.showAllPlaybooks",
+    "source": "Show all playbooks",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksHub.aria.filterByCluster",
+    "source": "Filter by {cluster}",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksHub.aria.playbooksList",
+    "source": "Available playbooks",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksHub.clusters.defi",
+    "source": "DeFi",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksHub.clusters.privacy",
+    "source": "Privacy",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksHub.clusters.mining",
+    "source": "Mining",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksHub.clusters.sustainability",
+    "source": "Sustainability",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksHub.clusters.vc-alternative",
+    "source": "VC Alternative",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksHub.clusters.global-settlement",
+    "source": "Global Settlement",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksHub.clusters.developer",
+    "source": "Developer",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksHub.clusters.investor",
+    "source": "Investor",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksHub.featured.title",
+    "source": "Featured playbooks",
+    "context": "Title",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksHub.filters.all",
+    "source": "All",
+    "context": "General content",
+    "maxLength": 4.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksHub.card.steps",
+    "source": "steps",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksHub.noResults",
+    "source": "No playbooks in this category yet.",
+    "context": "General content",
+    "maxLength": 51,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksHub.cta.title",
+    "source": "Can't find what you're looking for?",
+    "context": "Title",
+    "maxLength": 52.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksHub.cta.description",
+    "source": "Explore our documentation, join the community, or suggest a new playbook.",
+    "context": "Description",
+    "maxLength": 109.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksHub.cta.browseDocs",
+    "source": "Browse Docs",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksHub.cta.joinCommunity",
+    "source": "Join Community",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.seo.title",
+    "source": "Ergo Playbooks — Step-by-Step Guides for DeFi, Privacy & Mining | Ergo",
+    "context": "SEO metadata",
+    "maxLength": 105,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.seo.description",
+    "source": "Step-by-step guides for building on Ergo. DeFi, privacy, mining, NFTs — choose your path and start shipping. Curated resources & tutorials.",
+    "context": "SEO metadata",
+    "maxLength": 208.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.seo.keywords",
+    "source": "Ergo playbooks, Ergo guides, Ergo tutorials, DeFi guide, crypto privacy guide, GPU mining guide, Ergo development, blockchain tutorials",
+    "context": "SEO metadata",
+    "maxLength": 202.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.schema.itemList.name",
+    "source": "Ergo Development Playbooks",
+    "context": "General content",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.schema.itemList.description",
+    "source": "Step-by-step guides for building on Ergo blockchain. DeFi, privacy, mining, NFTs and more.",
+    "context": "Description",
+    "maxLength": 135,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.schema.collection.name",
+    "source": "Ergo Playbooks",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.schema.collection.description",
+    "source": "Step-by-step guides for building on Ergo. DeFi, privacy, mining, NFTs — choose your path and start shipping. Curated resources & tutorials.",
+    "context": "Description",
+    "maxLength": 208.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.schema.breadcrumbs.playbooks",
+    "source": "Playbooks",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.hero.title",
+    "source": "Ergo Playbooks",
+    "context": "Title",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.hero.subtitle",
+    "source": "Curated guides for every use case. Each playbook combines infographics, articles, and actionable steps.",
+    "context": "General content",
+    "maxLength": 154.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.hero.description",
+    "source": "Start from your first Ergo transaction and move step-by-step towards mining, DeFi, and building your own applications.",
+    "context": "Description",
+    "maxLength": 177,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.hero.startButton",
+    "source": "Start with first transaction",
+    "context": "General content",
+    "maxLength": 42,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.hero.browseQA",
+    "source": "Browse Q&A",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.hero.featuredTitle",
+    "source": "Featured playbooks",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.filters.all",
+    "source": "All",
+    "context": "General content",
+    "maxLength": 4.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.filters.ariaLabel",
+    "source": "Filter playbooks by category",
+    "context": "General content",
+    "maxLength": 42,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.filters.showAll",
+    "source": "Show all playbooks",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.card.steps",
+    "source": "steps",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.clusters.defi",
+    "source": "DeFi",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.clusters.privacy",
+    "source": "Privacy",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.clusters.mining",
+    "source": "Mining",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.clusters.sustainability",
+    "source": "Sustainability",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.clusters.vc-alternative",
+    "source": "VC Alternative",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.clusters.global-settlement",
+    "source": "Global Settlement",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.clusters.developer",
+    "source": "Developer",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.clusters.investor",
+    "source": "Investor",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.difficulty.beginner",
+    "source": "beginner",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.difficulty.intermediate",
+    "source": "intermediate",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.difficulty.advanced",
+    "source": "advanced",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.empty",
+    "source": "No playbooks in this category yet.",
+    "context": "General content",
+    "maxLength": 51,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.agentBanner.badge",
+    "source": "New",
+    "context": "General content",
+    "maxLength": 4.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.agentBanner.title",
+    "source": "Building for autonomous agents?",
+    "context": "Title",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.agentBanner.description",
+    "source": "The \"Build Agent Economy Apps\" playbook covers Notes, Reserves, Acceptance Predicates, and Fleet SDK integration — from testnet proof to audit-gated release planning.",
+    "context": "Description",
+    "maxLength": 249,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.agentBanner.cta",
+    "source": "Start Playbook",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.cta.title",
+    "source": "Can't find what you're looking for?",
+    "context": "Title",
+    "maxLength": 52.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.cta.description",
+    "source": "Explore our documentation, join the community, or suggest a new playbook.",
+    "context": "Description",
+    "maxLength": 109.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.cta.browseDocs",
+    "source": "Browse Docs",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbooksPage.cta.joinCommunity",
+    "source": "Join Community",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsPage.seo.title",
+    "source": "ErgoScript Patterns — 18 Copy-Paste Smart Contracts | Ergo",
+    "context": "SEO metadata",
+    "maxLength": 87,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsPage.seo.description",
+    "source": "18 educational ErgoScript patterns. Time-locks, multi-sig, AMM, oracles & more. Study, adapt, test, and review before using real funds.",
+    "context": "SEO metadata",
+    "maxLength": 202.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsPage.seo.keywords",
+    "source": "ErgoScript patterns, Ergo smart contracts, ErgoScript examples, eUTXO patterns, Ergo developer, blockchain patterns, DeFi patterns, copy paste smart contracts",
+    "context": "SEO metadata",
+    "maxLength": 237,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsPage.schema.itemList.name",
+    "source": "ErgoScript Smart Contract Patterns",
+    "context": "General content",
+    "maxLength": 51,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsPage.schema.itemList.description",
+    "source": "Collection of educational ErgoScript patterns for building and reviewing smart contracts on Ergo blockchain.",
+    "context": "Description",
+    "maxLength": 162,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsPage.schema.collection.name",
+    "source": "ErgoScript Developer Patterns",
+    "context": "General content",
+    "maxLength": 43.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsPage.schema.collection.description",
+    "source": "18 educational ErgoScript patterns for time-locks, multi-sig, AMM, oracles and more. Study, adapt, test, and review.",
+    "context": "Description",
+    "maxLength": 174,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternsPage.schema.breadcrumbs.patterns",
+    "source": "Dev Patterns",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.breadcrumbs.topics",
+    "source": "Topics",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.schema.breadcrumbs.topics",
+    "source": "Topics",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.schema.definedTermSet.name",
+    "source": "{topic} Key Terms",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.schema.definedTermSet.description",
+    "source": "Essential terminology for understanding {topic}",
+    "context": "Description",
+    "maxLength": 70.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.schema.resources.name",
+    "source": "{topic} Resources",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.schema.resources.description",
+    "source": "Comprehensive resources for {topic}",
+    "context": "Description",
+    "maxLength": 52.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.schema.resourceSections.startHere",
+    "source": "Start Here",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.schema.resourceSections.buildWithIt",
+    "source": "Build With It",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.schema.resourceSections.philosophy",
+    "source": "Philosophy",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.schema.resourceSections.visuals",
+    "source": "Visuals",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.cta.title",
+    "source": "Ready to dive deeper?",
+    "context": "Title",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.cta.description",
+    "source": "Join our community to ask questions, share ideas, and connect with other Ergo enthusiasts.",
+    "context": "Description",
+    "maxLength": 135,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.cta.joinCommunity",
+    "source": "Join Community",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.cta.exploreAllTopics",
+    "source": "Explore All Topics",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.relatedContent.title",
+    "source": "Related Resources",
+    "context": "Title",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.relatedContent.subtitle",
+    "source": "Explore more content in this topic cluster",
+    "context": "General content",
+    "maxLength": 63,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.emailCapture.title",
+    "source": "Master {topic}",
+    "context": "Title",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.emailCapture.description",
+    "source": "Get weekly insights on Ergo technology, tutorials, and ecosystem updates.",
+    "context": "Description",
+    "maxLength": 109.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.share",
+    "source": "Share",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.copyLink",
+    "source": "Copy link",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.copied",
+    "source": "Copied!",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.keyDifferentiators",
+    "source": "Key Differentiators",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.startHere.title",
+    "source": "Start Here",
+    "context": "Title",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.startHere.description",
+    "source": "Essential resources to understand the fundamentals.",
+    "context": "Description",
+    "maxLength": 76.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.buildWithIt.title",
+    "source": "Build With It",
+    "context": "Title",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.buildWithIt.description",
+    "source": "Developer documentation, patterns, and guides.",
+    "context": "Description",
+    "maxLength": 69,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.philosophy.title",
+    "source": "Philosophy & Narrative",
+    "context": "Title",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.philosophy.description",
+    "source": "The vision and principles behind the technology.",
+    "context": "Description",
+    "maxLength": 72,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.visualGuides.title",
+    "source": "Visual Guides",
+    "context": "Title",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.visualGuides.description",
+    "source": "Infographics and visual explanations to share.",
+    "context": "Description",
+    "maxLength": 69,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.visualGuides.viewAll",
+    "source": "View all infographics",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.keyTerms",
+    "source": "Key Terms",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.frequentlyAsked",
+    "source": "Frequently Asked",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.relatedTopics",
+    "source": "Related Topics",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.latestArticles.title",
+    "source": "Latest Articles",
+    "context": "Title",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.latestArticles.description",
+    "source": "Recent blog posts related to this topic.",
+    "context": "Description",
+    "maxLength": 60,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.latestArticles.viewAll",
+    "source": "View all articles",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.whatsNext.title",
+    "source": "What's",
+    "context": "Title",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.topicPage.whatsNext.titleHighlight",
+    "source": "Next",
+    "context": "Title",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.breadcrumbs.questions",
+    "source": "Questions",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.share",
+    "source": "Share",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.answer",
+    "source": "Answer",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.quickFacts",
+    "source": "Quick Facts",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.resources",
+    "source": "Resources",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.relatedQuestions",
+    "source": "Related Questions",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.exploreMore",
+    "source": "Explore More",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.exploreTopic",
+    "source": "Explore This Topic",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.exploreTopicDescription",
+    "source": "Deep dive into all {category} resources",
+    "context": "General content",
+    "maxLength": 58.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.joinCommunity",
+    "source": "Join Community",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.browseAllQuestions",
+    "source": "Browse All Questions",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.shareTitle",
+    "source": "Share this question",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.copyLink",
+    "source": "Copy link",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.copied",
+    "source": "Copied!",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.readTime",
+    "source": "min read",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.lastUpdated",
+    "source": "Last updated",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.resourceTypes.doc",
+    "source": "Documentation",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.resourceTypes.blog",
+    "source": "Blog Article",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.resourceTypes.playbook",
+    "source": "Playbook",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.resourceTypes.infographic",
+    "source": "Infographic",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.resourceTypes.glossary",
+    "source": "Glossary",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.resourceTypes.compare",
+    "source": "Comparison",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.resourceTypes.technology",
+    "source": "Technology",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.intentLabels.how_to",
+    "source": "How-to Guide",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.intentLabels.what_is",
+    "source": "Explainer",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.intentLabels.compare",
+    "source": "Comparison",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.intentLabels.problem",
+    "source": "Solution",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.intentLabels.philosophy",
+    "source": "Philosophy",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.whatsNext.title",
+    "source": "What's",
+    "context": "Title",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.whatsNext.titleHighlight",
+    "source": "Next",
+    "context": "Title",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.emailCapture.title",
+    "source": "Have More Questions?",
+    "context": "Title",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.questionPage.emailCapture.description",
+    "source": "Get answers, guides, and updates delivered to your inbox.",
+    "context": "Description",
+    "maxLength": 85.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.breadcrumbs.devPatterns",
+    "source": "Dev Patterns",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.viewCode",
+    "source": "View Code",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.problem",
+    "source": "Problem",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.solution",
+    "source": "Solution",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.howItWorks",
+    "source": "How It Works",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.codeExamples",
+    "source": "Code Examples",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.useCases",
+    "source": "Use Cases",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.securityConsiderations",
+    "source": "Security Considerations",
+    "context": "General content",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.realWorldImplementations",
+    "source": "Real-World Implementations",
+    "context": "General content",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.resources",
+    "source": "Resources",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.feeConsiderations",
+    "source": "Fee Considerations",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.relatedPatterns",
+    "source": "Related Patterns",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.difficulty.beginner",
+    "source": "Beginner",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.difficulty.intermediate",
+    "source": "Intermediate",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.difficulty.advanced",
+    "source": "Advanced",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.difficulty.expert",
+    "source": "Expert",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.languages.ergoscript",
+    "source": "ErgoScript",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.languages.scala",
+    "source": "Scala",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.languages.typescript",
+    "source": "TypeScript",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.languages.rust",
+    "source": "Rust",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.whatsNext.title",
+    "source": "What's",
+    "context": "Title",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.whatsNext.titleHighlight",
+    "source": "Next",
+    "context": "Title",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.whatsNext.browsePatterns.title",
+    "source": "Browse All Patterns",
+    "context": "Title",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.whatsNext.browsePatterns.subtitle",
+    "source": "patterns available",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.whatsNext.explorePlaybooks.title",
+    "source": "Explore Playbooks",
+    "context": "Title",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.whatsNext.explorePlaybooks.subtitle",
+    "source": "Step-by-step guides",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.whatsNext.builderResources.title",
+    "source": "Builder Resources",
+    "context": "Title",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.whatsNext.builderResources.subtitle",
+    "source": "Full dev toolkit",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.emailCapture.title",
+    "source": "Master Ergo Development",
+    "context": "Title",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.patternPage.emailCapture.description",
+    "source": "Get pattern updates, new tutorials, and advanced ErgoScript techniques delivered to your inbox.",
+    "context": "Description",
+    "maxLength": 142.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.breadcrumbs.playbooks",
+    "source": "Playbooks",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.allPlaybooks",
+    "source": "All Playbooks",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.browseAllPlaybooks",
+    "source": "Browse All Playbooks",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.overview",
+    "source": "Overview",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.steps",
+    "source": "Steps",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.relatedResources",
+    "source": "Related Resources",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.relatedPlaybooks",
+    "source": "Related Playbooks",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.relatedInfographics",
+    "source": "Related Infographics",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.relatedArticles",
+    "source": "Related Articles",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.stepOf",
+    "source": "Step {current} of {total}",
+    "context": "General content",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.markComplete",
+    "source": "Mark as Complete",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.completed",
+    "source": "Completed",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.nextStep",
+    "source": "Next Step",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.previousStep",
+    "source": "Previous Step",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.problem",
+    "source": "Problem",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.solution",
+    "source": "Solution",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.stepsTitle",
+    "source": "Steps to Complete",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.stepByStepGuide",
+    "source": "Step-by-Step Guide",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.viewStep",
+    "source": "View step",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.hideStep",
+    "source": "Hide step",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.resources",
+    "source": "Resources",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.keyTerms",
+    "source": "Key Terms",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.difficulty.beginner",
+    "source": "Beginner",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.difficulty.intermediate",
+    "source": "Intermediate",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.difficulty.advanced",
+    "source": "Advanced",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.progress.title",
+    "source": "Your Progress",
+    "context": "Title",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.progress.stepsCompleted",
+    "source": "of",
+    "context": "General content",
+    "maxLength": 3,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.progress.stepsWord",
+    "source": "steps completed",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.progress.allComplete",
+    "source": "All steps completed!",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.whatsNext.title",
+    "source": "What's",
+    "context": "Title",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.whatsNext.titleHighlight",
+    "source": "Next",
+    "context": "Title",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.whatsNext.morePlaybooks.title",
+    "source": "More Playbooks",
+    "context": "Title",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.whatsNext.morePlaybooks.subtitle",
+    "source": "Continue learning",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.whatsNext.devPatterns.title",
+    "source": "Dev Patterns",
+    "context": "Title",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.whatsNext.devPatterns.subtitle",
+    "source": "Code examples",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.whatsNext.buildOnErgo.title",
+    "source": "Build on Ergo",
+    "context": "Title",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.whatsNext.buildOnErgo.subtitle",
+    "source": "Developer hub",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.emailCapture.title",
+    "source": "Complete Your Learning",
+    "context": "Title",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.emailCapture.description",
+    "source": "Get playbook updates, new guides, and step-by-step tutorials delivered to your inbox.",
+    "context": "Description",
+    "maxLength": 127.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.finalCta.completedTitle",
+    "source": "Congratulations!",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.finalCta.completedDescription",
+    "source": "You've completed this playbook. Ready for the next challenge?",
+    "context": "General content",
+    "maxLength": 91.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.finalCta.readyTitle",
+    "source": "Ready to Get Started?",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.playbookPage.finalCta.readyDescription",
+    "source": "Complete this playbook and join the Ergo community.",
+    "context": "General content",
+    "maxLength": 76.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.what-we-are-fighting-against-financial-repression-stack.title",
+    "source": "What We",
+    "context": "Title",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.what-we-are-fighting-against-financial-repression-stack.shortDescription",
+    "source": "Layered view of the financial repression stack and how Ergo answers with censorship-resistant settlement, open programmability and privacy on demand.",
+    "context": "General content",
+    "maxLength": 223.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.what-we-are-fighting-against-financial-repression-stack.subtitle",
+    "source": "The Financial Repression Stack — and what Ergo offers instead.",
+    "context": "General content",
+    "maxLength": 93,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.powered-by-builders-designed-for-freedom.title",
+    "source": "Powered by Builders. Designed for Freedom.",
+    "context": "Title",
+    "maxLength": 63,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.powered-by-builders-designed-for-freedom.shortDescription",
+    "source": "Three-layer Ergo pyramid showing miners securing the base layer, builders shipping tools and dApps, and freedom seekers owning their finance.",
+    "context": "General content",
+    "maxLength": 211.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.powered-by-builders-designed-for-freedom.subtitle",
+    "source": "A three-layer Ergo pyramid of miners, builders and freedom seekers aligned around money without masters.",
+    "context": "General content",
+    "maxLength": 156,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.mev-resistance-vs-dark-forest.title",
+    "source": "MEV-Resistance vs the ",
+    "context": "Title",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.mev-resistance-vs-dark-forest.shortDescription",
+    "source": "How global DeFi ",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.mev-resistance-vs-dark-forest.subtitle",
+    "source": "Contrasting global DeFi ",
+    "context": "General content",
+    "maxLength": 36,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.smart-contract-l1-tree.title",
+    "source": "Smart-Contract L1 Tree",
+    "context": "Title",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.smart-contract-l1-tree.shortDescription",
+    "source": "How Bitcoin, Ethereum, Cardano and Ergo differ in smart-contract state models, determinism, audit complexity, expressiveness and hidden global state risk.",
+    "context": "General content",
+    "maxLength": 231,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.smart-contract-l1-tree.subtitle",
+    "source": "Tracing smart-contract L1 evolution from Bitcoin",
+    "context": "General content",
+    "maxLength": 72,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-privacy-coins.title",
+    "source": "Ergo vs Privacy Coins",
+    "context": "Title",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-privacy-coins.shortDescription",
+    "source": "How Ergo, Monero, Zcash and L2 mixers differ in privacy models, programmability, selective disclosure, auditability and fair-launch tokenomics.",
+    "context": "General content",
+    "maxLength": 214.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-privacy-coins.subtitle",
+    "source": "Comparing Ergo, Monero, Zcash and L2 mixers on privacy models, programmability, auditability and tokenomics.",
+    "context": "General content",
+    "maxLength": 162,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.pow-vs-pos-censorship-and-attack-surface.title",
+    "source": "PoW vs PoS: Censorship & Attack Surface",
+    "context": "Title",
+    "maxLength": 58.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.pow-vs-pos-censorship-and-attack-surface.shortDescription",
+    "source": "How PoW, classic PoS and validator committees differ in censorship power, cartel risk, regulatory pressure and user resistance tools.",
+    "context": "General content",
+    "maxLength": 199.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.pow-vs-pos-censorship-and-attack-surface.subtitle",
+    "source": "Comparing miners, stakers and validator committees on who can censor, how cartels form and how systems react under pressure.",
+    "context": "General content",
+    "maxLength": 186,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.eutxo-vs-accounts-vs-classic-utxo.title",
+    "source": "eUTXO vs Accounts vs Classic UTXO",
+    "context": "Title",
+    "maxLength": 49.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.eutxo-vs-accounts-vs-classic-utxo.shortDescription",
+    "source": "How classic UTXO, global accounts and Ergo",
+    "context": "General content",
+    "maxLength": 63,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.eutxo-vs-accounts-vs-classic-utxo.subtitle",
+    "source": "Comparing Bitcoin-style UTXO, global accounts and Ergo",
+    "context": "General content",
+    "maxLength": 81,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.privacy-but-auditable-sigma-protocols-vs-mixers-and-privacy-coins.title",
+    "source": "Privacy, But Auditable",
+    "context": "Title",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.privacy-but-auditable-sigma-protocols-vs-mixers-and-privacy-coins.shortDescription",
+    "source": "How mixers, classic privacy coins and Ergo",
+    "context": "General content",
+    "maxLength": 63,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.privacy-but-auditable-sigma-protocols-vs-mixers-and-privacy-coins.subtitle",
+    "source": "Three ways to do on-chain privacy — and why Ergo chooses Sigma Protocols.",
+    "context": "General content",
+    "maxLength": 109.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.where-ergo-fits-among-major-chains.title",
+    "source": "Where Ergo Fits Among Major Chains",
+    "context": "Title",
+    "maxLength": 51,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.where-ergo-fits-among-major-chains.shortDescription",
+    "source": "Scatterplot comparing Ergo, Bitcoin, Ethereum, Monero, Cardano, Solana, CBDCs and typical VC chains across launch model, programmability, DeFi and privacy.",
+    "context": "General content",
+    "maxLength": 232.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.where-ergo-fits-among-major-chains.subtitle",
+    "source": "Sound money, smart contracts, and privacy in one PoW L1.",
+    "context": "General content",
+    "maxLength": 84,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-zcash-zk-without-ceremony.title",
+    "source": "Ergo vs Zcash: ZK Without Ceremony",
+    "context": "Title",
+    "maxLength": 51,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-zcash-zk-without-ceremony.shortDescription",
+    "source": "Side-by-side infographic comparing Ergo’s Sigma-based, trustless privacy and smart contracts with Zcash’s trusted-setup-based ZK model.",
+    "context": "General content",
+    "maxLength": 202.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-zcash-zk-without-ceremony.subtitle",
+    "source": "Sigma-based privacy and smart contracts without trusted setup.",
+    "context": "General content",
+    "maxLength": 93,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-solana-tps-vs-sovereignty.title",
+    "source": "Ergo vs Solana: TPS vs Sovereignty",
+    "context": "Title",
+    "maxLength": 51,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-solana-tps-vs-sovereignty.shortDescription",
+    "source": "Infographic comparing Ergo’s high decentralization and sovereignty with Solana’s maximum throughput focus, including hardware, funding and design trade-offs.",
+    "context": "General content",
+    "maxLength": 235.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-solana-tps-vs-sovereignty.subtitle",
+    "source": "High throughput or high decentralization — pick your side.",
+    "context": "General content",
+    "maxLength": 87,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-cardano-two-eutxo-paths.title",
+    "source": "Ergo vs Cardano: Two eUTXO Paths",
+    "context": "Title",
+    "maxLength": 48,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-cardano-two-eutxo-paths.shortDescription",
+    "source": "Infographic comparing Ergo and Cardano as two eUTXO chains with the same research roots but different choices on consensus, launch, privacy and sustainability.",
+    "context": "General content",
+    "maxLength": 238.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-cardano-two-eutxo-paths.subtitle",
+    "source": "Same research roots, different choices on consensus, launch, and sustainability.",
+    "context": "General content",
+    "maxLength": 120,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-litecoin-digital-silver-vs-programmable-money.title",
+    "source": "Ergo vs Litecoin: Digital Silver vs Programmable Money",
+    "context": "Title",
+    "maxLength": 81,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-litecoin-digital-silver-vs-programmable-money.shortDescription",
+    "source": "Infographic comparing Ergo as programmable PoW money for DeFi and alternative economic systems with Litecoin as digital silver / faster Bitcoin focused on payments.",
+    "context": "General content",
+    "maxLength": 246,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-litecoin-digital-silver-vs-programmable-money.subtitle",
+    "source": "From “fast Bitcoin” payments to PoW smart-contract DeFi.",
+    "context": "General content",
+    "maxLength": 84,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-monero-privacy-modes.title",
+    "source": "Ergo vs Monero: Privacy Modes",
+    "context": "Title",
+    "maxLength": 43.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-monero-privacy-modes.shortDescription",
+    "source": "Infographic comparing Monero’s always-on payment privacy with Ergo’s optional, programmable privacy for DeFi, smart contracts and selective disclosure.",
+    "context": "General content",
+    "maxLength": 226.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-monero-privacy-modes.subtitle",
+    "source": "Always-on payment privacy vs programmable privacy for DeFi.",
+    "context": "General content",
+    "maxLength": 88.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-ethereum-same-power-less-pain.title",
+    "source": "Ergo vs Ethereum: Same Power, Less Pain",
+    "context": "Title",
+    "maxLength": 58.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-ethereum-same-power-less-pain.shortDescription",
+    "source": "Infographic comparing Ergo and Ethereum on state model, MEV and fees, consensus power structure and privacy, showing how eUTXO aims for similar programmability with fewer account-model headaches.",
+    "context": "General content",
+    "maxLength": 292.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-ethereum-same-power-less-pain.subtitle",
+    "source": "Smart contracts and DeFi without account-model headaches and MEV wars.",
+    "context": "General content",
+    "maxLength": 105,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-major-l1s-feature-checklist.title",
+    "source": "Ergo vs Major L1s – Feature Checklist",
+    "context": "Title",
+    "maxLength": 55.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-major-l1s-feature-checklist.shortDescription",
+    "source": "Side-by-side matrix for Bitcoin, Ethereum, Cardano, Monero, Zcash, Solana, a typical VC chain, CBDCs and Ergo across consensus, launch, privacy, storage rent, MEV and more.",
+    "context": "General content",
+    "maxLength": 258,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-major-l1s-feature-checklist.subtitle",
+    "source": "Consensus, launch, privacy, storage rent, MEV — all in one table.",
+    "context": "General content",
+    "maxLength": 97.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-avalanche-funding-story-and-power-structure.title",
+    "source": "Ergo vs Avalanche: Funding Story and Power Structure",
+    "context": "Title",
+    "maxLength": 78,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-avalanche-funding-story-and-power-structure.shortDescription",
+    "source": "Infographic comparing Ergo’s $0 VC, 100% mined distribution with Avalanche’s hundreds of millions in venture funding, and how that shapes consensus, control and incentives.",
+    "context": "General content",
+    "maxLength": 258,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-avalanche-funding-story-and-power-structure.subtitle",
+    "source": "$0 VC and 100% mined vs hundreds of millions in venture funding.",
+    "context": "General content",
+    "maxLength": 96,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-bitcoin-bitcoin-with-the-missing-pieces.title",
+    "source": "Ergo vs Bitcoin: Bitcoin With the Missing Pieces",
+    "context": "Title",
+    "maxLength": 72,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-bitcoin-bitcoin-with-the-missing-pieces.shortDescription",
+    "source": "Infographic comparing simple UTXO Bitcoin money with Ergo’s eUTXO, smart contracts, privacy and storage rent — like adding missing layers on top of the Bitcoin brick.",
+    "context": "General content",
+    "maxLength": 249,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-bitcoin-bitcoin-with-the-missing-pieces.subtitle",
+    "source": "From simple UTXO money to programmable, sustainable PoW DeFi.",
+    "context": "General content",
+    "maxLength": 91.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-cbdcs-control-vs-sovereignty.title",
+    "source": "Ergo vs CBDCs: Control vs Sovereignty",
+    "context": "Title",
+    "maxLength": 55.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-cbdcs-control-vs-sovereignty.shortDescription",
+    "source": "Infographic contrasting self-custodied programmable money on Ergo with centrally controlled CBDCs across ownership, privacy, censorship and monetary policy.",
+    "context": "General content",
+    "maxLength": 234,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-cbdcs-control-vs-sovereignty.subtitle",
+    "source": "Central bank scripts vs self-custodied programmable money.",
+    "context": "General content",
+    "maxLength": 87,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-ravencoin-tokens-on-pow-basic-vs-full-defi.title",
+    "source": "Ergo vs Ravencoin: Tokens on PoW – Basic vs Full DeFi",
+    "context": "Title",
+    "maxLength": 79.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-ravencoin-tokens-on-pow-basic-vs-full-defi.shortDescription",
+    "source": "Infographic comparing Ergo and Ravencoin as PoW token platforms, from simple asset issuance to a full programmable DeFi stack with privacy and advanced features.",
+    "context": "General content",
+    "maxLength": 241.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-ravencoin-tokens-on-pow-basic-vs-full-defi.subtitle",
+    "source": "From simple asset issuance to a full PoW DeFi platform.",
+    "context": "General content",
+    "maxLength": 82.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-kaspa-programmable-pow-vs-high-throughput-pow.title",
+    "source": "Ergo vs Kaspa: Programmable PoW vs High-Throughput PoW",
+    "context": "Title",
+    "maxLength": 81,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-kaspa-programmable-pow-vs-high-throughput-pow.shortDescription",
+    "source": "Infographic comparing Ergo’s programmable eUTXO DeFi stack with Kaspa’s high-throughput PoW payments layer built on a BlockDAG.",
+    "context": "General content",
+    "maxLength": 190.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-vs-kaspa-programmable-pow-vs-high-throughput-pow.subtitle",
+    "source": "From pure PoW payments to a full programmable DeFi platform.",
+    "context": "General content",
+    "maxLength": 90,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.autolykos-mining-without-masters.title",
+    "source": "Autolykos: Mining Without Masters",
+    "context": "Title",
+    "maxLength": 49.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.autolykos-mining-without-masters.shortDescription",
+    "source": "How Ergo",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.autolykos-mining-without-masters.subtitle",
+    "source": "Ergo",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.who-starts-with-the-coins-vc-allocation-vs-ergo-supply.title",
+    "source": "Who Starts With the Coins?",
+    "context": "Title",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.who-starts-with-the-coins-vc-allocation-vs-ergo-supply.shortDescription",
+    "source": "How typical VC chains reserve large token chunks for insiders while Ergo",
+    "context": "General content",
+    "maxLength": 108,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.who-starts-with-the-coins-vc-allocation-vs-ergo-supply.subtitle",
+    "source": "Comparing VC chain token allocation with Ergo",
+    "context": "General content",
+    "maxLength": 67.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.how-is-security-maintained-pos-vs-ergo-autolykos.title",
+    "source": "How Is Security Maintained?",
+    "context": "Title",
+    "maxLength": 40.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.how-is-security-maintained-pos-vs-ergo-autolykos.shortDescription",
+    "source": "How network security and rewards differ between typical Proof-of-Stake staking and Ergo",
+    "context": "General content",
+    "maxLength": 130.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.how-is-security-maintained-pos-vs-ergo-autolykos.subtitle",
+    "source": "Comparing PoS staking wealth concentration with Ergo",
+    "context": "General content",
+    "maxLength": 78,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.how-it-starts-vc-chain-vs-ergo.title",
+    "source": "How It Starts: VC Chain vs Ergo",
+    "context": "Title",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.how-it-starts-vc-chain-vs-ergo.shortDescription",
+    "source": "How a typical VC-backed blockchain launch contrasts with Ergo",
+    "context": "General content",
+    "maxLength": 91.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.how-it-starts-vc-chain-vs-ergo.subtitle",
+    "source": "Who really gets in early? Comparing VC chain funnels with Ergo",
+    "context": "General content",
+    "maxLength": 93,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.engineered-for-global-settlement-ergo.title",
+    "source": "Engineered for Global Settlement",
+    "context": "Title",
+    "maxLength": 48,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.engineered-for-global-settlement-ergo.shortDescription",
+    "source": "How Ergo",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.engineered-for-global-settlement-ergo.subtitle",
+    "source": "Fast, low-cost, MEV-resistant settlement built on Ergo.",
+    "context": "General content",
+    "maxLength": 82.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-blockchain-research-driven-cypherpunk-aligned.title",
+    "source": "Ergo Blockchain: Research-Driven & Cypherpunk-Aligned",
+    "context": "Title",
+    "maxLength": 79.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-blockchain-research-driven-cypherpunk-aligned.shortDescription",
+    "source": "Fair-launched Proof-of-Work blockchain with eUTXO smart contracts, Sigma Protocols privacy and a sustainability stack built for cypherpunks.",
+    "context": "General content",
+    "maxLength": 210,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-blockchain-research-driven-cypherpunk-aligned.subtitle",
+    "source": "Built for Sustainability, Privacy, and Verifiable Rules. A Fair-Launched Proof-of-Work Platform.",
+    "context": "General content",
+    "maxLength": 144,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.blockchain-matrix-where-ergo-actually-fits.title",
+    "source": "Blockchain Matrix: Where Ergo Actually Fits",
+    "context": "Title",
+    "maxLength": 64.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.blockchain-matrix-where-ergo-actually-fits.shortDescription",
+    "source": "Matrix comparing Bitcoin, Ethereum, Monero, Zcash, Cardano, Solana, a typical VC chain and Ergo across consensus, launch, privacy, MEV resistance, storage rent and fees.",
+    "context": "General content",
+    "maxLength": 253.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.blockchain-matrix-where-ergo-actually-fits.subtitle",
+    "source": "Comparing consensus, launches, privacy and incentives across major chains.",
+    "context": "General content",
+    "maxLength": 111,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.money-without-masters-ergo-vs-banks-and-vc-crypto.title",
+    "source": "Money Without Masters",
+    "context": "Title",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.money-without-masters-ergo-vs-banks-and-vc-crypto.shortDescription",
+    "source": "How Ergo",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.money-without-masters-ergo-vs-banks-and-vc-crypto.subtitle",
+    "source": "Open, programmable, censorship-resistant finance. Built on Ergo.",
+    "context": "General content",
+    "maxLength": 96,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-subblock-technology-boosting-throughput-with-parallelism.title",
+    "source": "Ergo",
+    "context": "Title",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-subblock-technology-boosting-throughput-with-parallelism.shortDescription",
+    "source": "How key blocks and subblocks let Ergo increase transaction capacity and confirmation speed without sacrificing security.",
+    "context": "General content",
+    "maxLength": 180,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-subblock-technology-boosting-throughput-with-parallelism.subtitle",
+    "source": "How key blocks and subblocks increase transaction capacity and confirmation speed.",
+    "context": "General content",
+    "maxLength": 123,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-oracle-pools-decentralized-reliable-real-world-data.title",
+    "source": "Ergo",
+    "context": "Title",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-oracle-pools-decentralized-reliable-real-world-data.shortDescription",
+    "source": "How decentralized oracle pools aggregate multiple sources into on-chain data boxes for robust, trustless feeds.",
+    "context": "General content",
+    "maxLength": 166.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-oracle-pools-decentralized-reliable-real-world-data.subtitle",
+    "source": "Decentralized oracle pools for robust, trustless real-world data feeds.",
+    "context": "General content",
+    "maxLength": 106.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-nipopows-scalable-trustless-light-clients.title",
+    "source": "Ergo NiPoPoWs: The Key to Scalable, Trustless Light Clients",
+    "context": "Title",
+    "maxLength": 88.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-nipopows-scalable-trustless-light-clients.shortDescription",
+    "source": "How NiPoPoWs let light clients verify PoW security with tiny superblock proofs for mobile, sidechains and bridges.",
+    "context": "General content",
+    "maxLength": 171,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-nipopows-scalable-trustless-light-clients.subtitle",
+    "source": "Verify PoW security with tiny superblock proofs for mobile, sidechains and bridges.",
+    "context": "General content",
+    "maxLength": 124.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-privacy-non-interactive-efficient.title",
+    "source": "Ergo Privacy: Non-Interactive & Efficient",
+    "context": "Title",
+    "maxLength": 61.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-privacy-non-interactive-efficient.shortDescription",
+    "source": "How Sigma Protocols, eUTXO, ErgoMixer and NiPoPoWs provide built-in privacy on Ergo without trusted third parties.",
+    "context": "General content",
+    "maxLength": 171,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-privacy-non-interactive-efficient.subtitle",
+    "source": "Built-in privacy using Sigma Protocols, eUTXO, ErgoMixer and NiPoPoWs.",
+    "context": "General content",
+    "maxLength": 105,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-storage-rent-preventing-blockchain-bloat-rewarding-miners.title",
+    "source": "Ergo Storage Rent: Preventing Blockchain Bloat & Rewarding Miners",
+    "context": "Title",
+    "maxLength": 97.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-storage-rent-preventing-blockchain-bloat-rewarding-miners.shortDescription",
+    "source": "How storage rent cleans up state bloat, keeps Ergo nodes lean and rewards miners beyond block rewards.",
+    "context": "General content",
+    "maxLength": 153,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-storage-rent-preventing-blockchain-bloat-rewarding-miners.subtitle",
+    "source": "How storage rent keeps the state lean and rewards miners long-term.",
+    "context": "General content",
+    "maxLength": 100.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-eutxo-model-bitcoin-security-smart-contract-flexibility.title",
+    "source": "Ergo",
+    "context": "Title",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-eutxo-model-bitcoin-security-smart-contract-flexibility.shortDescription",
+    "source": "How Ergo",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-eutxo-model-bitcoin-security-smart-contract-flexibility.subtitle",
+    "source": "Bitcoin",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergoscript-cypherpunk-code-of-freedom.title",
+    "source": "ErgoScript: The Cypherpunk Code of Freedom",
+    "context": "Title",
+    "maxLength": 63,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergoscript-cypherpunk-code-of-freedom.shortDescription",
+    "source": "How eUTXO, strict design principles and Sigma Protocols turn ErgoScript into a weapon of decentralization.",
+    "context": "General content",
+    "maxLength": 159,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergoscript-cypherpunk-code-of-freedom.subtitle",
+    "source": "How eUTXO, strict design principles and Sigma Protocols turn ErgoScript into a weapon of decentralization.",
+    "context": "General content",
+    "maxLength": 159,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-blockchain-introduction-fundamentals.title",
+    "source": "Ergo Blockchain: Introduction & Fundamentals",
+    "context": "Title",
+    "maxLength": 66,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-blockchain-introduction-fundamentals.shortDescription",
+    "source": "High-level introduction to the Ergo blockchain: PoW smart contracts, eUTXO, Autolykos and Sigma Protocols.",
+    "context": "General content",
+    "maxLength": 159,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-blockchain-introduction-fundamentals.subtitle",
+    "source": "A quick overview of Ergo",
+    "context": "General content",
+    "maxLength": 36,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.three-pillars-ergos-sustainability.title",
+    "source": "The Three Pillars of Ergo",
+    "context": "Title",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.three-pillars-ergos-sustainability.shortDescription",
+    "source": "How Autolykos mining, NiPoPoWs light clients and storage rent form Ergo",
+    "context": "General content",
+    "maxLength": 106.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.three-pillars-ergos-sustainability.subtitle",
+    "source": "Protocol-level mechanisms that keep Ergo viable and accessible for the long run.",
+    "context": "General content",
+    "maxLength": 120,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.who-actually-needs-ergo.title",
+    "source": "Who Actually Needs Ergo?",
+    "context": "Title",
+    "maxLength": 36,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.who-actually-needs-ergo.shortDescription",
+    "source": "Who actually needs Ergo today: builders, miners, privacy-focused users and cypherpunk OGs.",
+    "context": "General content",
+    "maxLength": 135,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.who-actually-needs-ergo.subtitle",
+    "source": "Real people behind the tech: builders, miners, privacy users and cypherpunks.",
+    "context": "General content",
+    "maxLength": 115.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.vc-chain-vs-ergo-fair-launch.title",
+    "source": "Fair & Secure: VC Chain vs Ergo at a Glance",
+    "context": "Title",
+    "maxLength": 64.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.vc-chain-vs-ergo-fair-launch.shortDescription",
+    "source": "How Ergo",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.vc-chain-vs-ergo-fair-launch.subtitle",
+    "source": "How Ergo",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-babel-fees-pay-with-any-token.title",
+    "source": "Babel Fees: Supported Token Fee Paths",
+    "context": "Title",
+    "maxLength": 55.5,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-babel-fees-pay-with-any-token.shortDescription",
+    "source": "How Ergo",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "content-hubs.infographicItems.ergo-babel-fees-pay-with-any-token.subtitle",
+    "source": "Gas abstraction through eUTXO: pay fees in the token you hold, not the one the protocol demands.",
+    "context": "General content",
+    "maxLength": 144,
+    "translation": ""
+  }
+]

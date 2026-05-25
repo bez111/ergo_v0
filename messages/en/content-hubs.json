@@ -3,15 +3,15 @@
   "topicsData": {
     "ergo-defi": {
       "title": "DeFi on Ergo",
-      "subtitle": "Decentralized Finance Without MEV, Without Permission",
+      "subtitle": "Decentralized Finance With Strong MEV-Resistance and Open Access",
       "heroStatement": "DeFi that actually works for users, not extractors.",
-      "introduction": "Ergo's approach to DeFi is fundamentally different from account-based chains like Ethereum. Built on the eUTXO model, Ergo eliminates entire categories of exploits that plague traditional DeFi: no front-running, no sandwich attacks, MEV resistance by design. Every transaction's cost is known before you send it. Every trade executes exactly as expected. This isn't a minor improvement - it's a structural advantage that makes DeFi actually usable for regular people, not just sophisticated traders with MEV bots.",
-      "whatMakesUnique": "While Ethereum DeFi has become a 'dark forest' where users are hunted by MEV extractors, Ergo's eUTXO model creates a fundamentally fairer environment. Transactions reference specific boxes (UTXOs), making reordering attacks impractical. Oracle Pools provide decentralized price feeds without single points of failure. And because Ergo is PoW with fair launch, there's no VC cartel controlling governance or extracting value from the protocol.",
+      "introduction": "Ergo's approach to DeFi is fundamentally different from account-based chains like Ethereum. Built on the eUTXO model, Ergo reduces several common DeFi failure modes: boxes make state explicit, transaction effects are easier to reason about before signing, and common account-model MEV patterns such as sandwiching are harder to execute. Transaction fees are typically predictable before submission, but dApp design, oracle design and mempool behavior still matter. This is not a magic shield; it is a structural advantage for building fairer DeFi.",
+      "whatMakesUnique": "While account-model DeFi often exposes users to global-state ordering games, Ergo's eUTXO model creates a more analyzable environment. Transactions reference specific boxes (UTXOs), which reduces the surface for common reordering attacks. Oracle Pools provide decentralized price feeds without a single publisher. And because Ergo is PoW with fair launch, there is no VC allocation or validator-governance layer controlling the base protocol.",
       "keyDifferentiators": [
-        "MEV-resistant by design extraction: transactions can't be front-run or sandwiched by design",
-        "Predictable fees: know exactly what you'll pay before sending (~$0.01)",
+        "MEV-aware by design: eUTXO reduces common front-running and sandwich patterns, but dApp and mempool design still matter",
+        "Predictable fees: users can see the fee before signing; typical simple transactions remain low-cost",
         "Deterministic execution: transactions either fully succeed or fully fail",
-        "Decentralized oracles: Oracle Pools provide trustless price feeds",
+        "Decentralized oracles: Oracle Pools reduce reliance on a single data publisher",
         "Fair launch: no VC allocation, no insider advantages"
       ],
       "sections": [
@@ -45,7 +45,7 @@
         {
           "term": "MEV Resistance",
           "slug": "mev-resistance",
-          "shortDefinition": "Structural protection against front-running and sandwich attacks"
+          "shortDefinition": "Structural reduction of common front-running and sandwich patterns"
         },
         {
           "term": "Oracle Pools",
@@ -60,7 +60,7 @@
         {
           "term": "Babel Fees",
           "slug": "babel-fees",
-          "shortDefinition": "Pay transaction fees in any token, not just ERG"
+          "shortDefinition": "Pay transaction fees through supported token-to-ERG fee-conversion paths"
         },
         {
           "term": "Boxes",
@@ -194,7 +194,7 @@
       "title": "Ergo Technology",
       "subtitle": "Research-Driven Innovation for Real-World Use",
       "heroStatement": "Technology that solves real problems, not hype cycles.",
-      "introduction": "Ergo's technology stack represents years of academic research translated into practical blockchain innovation. Every major component - eUTXO, ErgoScript, NiPoPoWs, Sigma Protocols - comes from peer-reviewed cryptographic research. This isn't technology for technology's sake; each innovation solves specific problems. eUTXO eliminates MEV and enables parallel processing. NiPoPoWs compress blockchain proofs from gigabytes to kilobytes. Sigma Protocols bring zero-knowledge proofs to every smart contract. The result is a blockchain that's simultaneously more secure, more scalable, and more private than its competitors.",
+      "introduction": "Ergo's technology stack represents years of academic research translated into practical blockchain innovation. Every major component - eUTXO, ErgoScript, NiPoPoWs, Sigma Protocols - comes from peer-reviewed cryptographic research. This isn't technology for technology's sake; each innovation solves specific problems. eUTXO reduces common MEV patterns and enables parallel processing. NiPoPoWs compress blockchain proofs from gigabytes to kilobytes. Sigma Protocols bring zero-knowledge proofs to smart contracts. The result is a blockchain designed for security, scalability and optional privacy.",
       "whatMakesUnique": "Most blockchains copy Ethereum's account model or Bitcoin's simple scripts. Ergo charts a different path: extending Bitcoin's UTXO model with rich smart contract capabilities while maintaining its security properties. ErgoScript is a functional language, not imperative like Solidity - this makes contracts easier to verify and harder to exploit. NiPoPoWs enable truly trustless light clients and efficient cross-chain bridges. These aren't incremental improvements; they're architectural advantages.",
       "keyDifferentiators": [
         "eUTXO: smart contracts with Bitcoin-level security guarantees",
@@ -728,7 +728,7 @@
     "agentBanner": {
       "badge": "New",
       "title": "Building for autonomous agents?",
-      "description": "The \"Build Agent Economy Apps\" playbook covers Notes, Reserves, Acceptance Predicates, and Fleet SDK integration — from testnet to mainnet.",
+      "description": "The \"Build Agent Economy Apps\" playbook covers Notes, Reserves, Acceptance Predicates, and Fleet SDK integration — from testnet proof to audit-gated release planning.",
       "cta": "Start Playbook"
     },
     "cta": {
@@ -1186,7 +1186,7 @@
       "subtitle": "How Ergo"
     },
     "ergo-babel-fees-pay-with-any-token": {
-      "title": "Babel Fees: Pay Transaction Fees with Any Token",
+      "title": "Babel Fees: Supported Token Fee Paths",
       "shortDescription": "How Ergo",
       "subtitle": "Gas abstraction through eUTXO: pay fees in the token you hold, not the one the protocol demands."
     }

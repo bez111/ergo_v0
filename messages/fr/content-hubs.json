@@ -5,10 +5,10 @@
       "title": "DeFi sur Ergo",
       "subtitle": "Finance décentralisée sans MEV, sans permission",
       "heroStatement": "Une DeFi qui fonctionne vraiment pour les utilisateurs, pas pour les extracteurs.",
-      "introduction": "L'approche d'Ergo en matière de DeFi est fondamentalement différente des chaînes basées sur les comptes comme Ethereum. Construit sur le modèle eUTXO, Ergo élimine des catégories entières d'exploits qui frappent la DeFi traditionnelle : pas de front-running, pas d'attaques sandwich, pas d'extraction MEV. Le coût de chaque transaction est connu avant de l'envoyer. Chaque échange s'exécute exactement comme prévu. Ce n'est pas une amélioration mineure — c'est un avantage structurel qui rend la DeFi réellement utilisable par les gens ordinaires, pas seulement par les traders sophistiqués disposant de bots MEV.",
+      "introduction": "Le modèle eUTXO d'Ergo réduit les schémas courants de front-running et de sandwich propres aux modèles account-based, et rend l'exécution plus prévisible. La conception de l'application, la politique mempool et les flux off-chain restent importants.",
       "whatMakesUnique": "Alors que la DeFi sur Ethereum est devenue une «forêt sombre» où les utilisateurs sont chassés par des extracteurs MEV, le modèle eUTXO d'Ergo crée un environnement fondamentalement plus équitable. Les transactions font référence à des boîtes spécifiques (UTXOs), rendant les attaques de réordonnancement peu pratiques. Les Oracle Pools fournissent des flux de prix décentralisés sans points de défaillance uniques. Et parce qu'Ergo est PoW avec un lancement équitable, il n'y a pas de cartel de capital-risque contrôlant la gouvernance ou extrayant de la valeur du protocole.",
       "keyDifferentiators": [
-        "Pas d'extraction MEV : les transactions ne peuvent pas être victimes de front-running ou de sandwich par conception",
+        "Le modèle eUTXO d'Ergo réduit les schémas courants de front-running et de sandwich propres aux modèles account-based, et rend l'exécution plus prévisible. La conception de l'application, la politique mempool et les flux off-chain restent importants.",
         "Frais prévisibles : sachez exactement ce que vous paierez avant d'envoyer (~0,01 $)",
         "Exécution déterministe : les transactions réussissent entièrement ou échouent entièrement",
         "Oracles décentralisés : les Oracle Pools fournissent des flux de prix sans confiance",

@@ -547,7 +547,7 @@
             "core": "Σ-protocolli · Prove ZK · Mixer",
             "tooling": "ErgoMixer · Pool stealth",
             "mentors": "Ricercatori di privacy",
-            "deliverable": "dApp privacy conforme"
+            "deliverable": "dApp privacy con divulgazione selettiva"
           }
         },
         "research": {
@@ -994,7 +994,7 @@
         },
         {
           "question": "Posso costruire protocolli DeFi con ErgoScript?",
-          "answer": "Sì! ErgoScript è perfetto per il DeFi. Esempi includono SigmaUSD (stablecoin algoritmica), DEX come ErgoDEX e varie primitive DeFi. Le funzionalità di sicurezza del linguaggio lo rendono ideale per le applicazioni finanziarie."
+          "answer": "Yes. ErgoScript is well-suited to DeFi because it supports deterministic, predicate-based contracts on eUTXO. Examples include SigmaUSD, historical DEX designs like ErgoDEX/Spectrum, and current or future DeFi primitives. Treat each deployed protocol separately and verify its live status before using funds."
         }
       ],
       "viewExamples": "Visualizza esempi",

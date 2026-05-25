@@ -22,7 +22,7 @@
           },
           {
             "question": "Где купить ERG?",
-            "answer": "ERG доступен на биржах вроде KuCoin и Gate.io. Для большей приватности можно использовать децентрализованные биржи (например, ErgoDEX)."
+            "answer": "ERG доступен на централизованных биржах вроде KuCoin и Gate.io, а также через проверенные non-custodial маршруты там, где есть активная ликвидность. Исторические DEX-референсы вроде ErgoDEX/Spectrum полезны для изучения, но перед торговлей всегда проверяйте текущий статус площадки."
           },
           {
             "question": "Подойдёт ли Ergo новичкам?",
@@ -116,7 +116,7 @@
               "name": "ErgoDEX",
               "type": "Без KYC - ~0.3% сборов",
               "description": "Ergo DEX с полной децентрализацией и конфиденциальностью",
-              "buttonText": "Открыть ErgoDEX"
+              "buttonText": "Проверить актуальные DeFi-площадки"
             }
           ],
           "disclaimer": "Ссылки являются информативными. Выполняйте свои собственные исследования. Торговля сопряжена с риском."
@@ -1884,10 +1884,10 @@
       "github_organization_link_https_github": "GitHub Организация\", ссылка: \"https://github.com/ergoplatform",
       "network_and_defi_analytics_link_https_ergo_watch": "Сетевой и DeFi аналитик\", ссылка: \"https://ergo.watch",
       "learn_about_sigmausd_stablecoin_link": "Узнайте о СигмаУР Стаблекоин\", ссылка: \"/ecosystem/sigmausd",
-      "try_trading_on_spectrum_finance": "Попробуйте торговать на Spectrum Finance\", ссылка: \"https://spectrum.fi",
+      "try_trading_on_spectrum_finance": "Review Current DeFi Venues\", link: \"/use/defi",
       "join_defi_discussions_on_discord": "Присоединяйтесь к обсуждениям DeFi в Discord\", ссылка: \"https://discord.gg/ergo-platform",
       "defi_discord_channels_link_https": "DeFi Discord каналы\", ссылка: \"https://discord.gg/ergo-platform",
-      "spectrum_finance_community_link_https_spectrum_fi": "Spectrum Finance Community\", ссылка: \"https://spectrum.fi",
+      "spectrum_finance_community_link_https_spectrum_fi": "Spectrum Finance Historical Notice\", link: \"https://spectrum.fi/sunset-notice",
       "sigmausd_community_link_ecosystem_projects": "Сообщество SigmaUS\", ссылка: \"/ecosystems/projects/sigmausd",
       "read_the_ergo_whitepaper_link": "Читать белую бумагу \"Эрго\", ссылка: \"/docs/introduction/research-whitepapers",
       "explore_the_ecosystem_link_ecosystem": "Исследование экосистемы\", ссылка: \"/ecosystem",
@@ -3031,7 +3031,7 @@
         "next_steps": {
           "wallet": "Установить кошелек Nautilus",
           "sigmausd": "Узнайте о Стаблекоине SigmaUSD",
-          "spectrum": "Попробовать торговать на Spectrum Finance",
+          "spectrum": "Проверить актуальные DeFi-площадки",
           "discord": "Присоединиться к обсуждениям на DeFi в Discord"
         },
         "community": {

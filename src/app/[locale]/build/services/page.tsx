@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { devServicesSnapshot } from "@/lib/agent-economy/static-proof-snapshots"
 import { getAlternates, getCanonicalUrl } from "@/lib/seo"
 import { DevServicesClient } from "./DevServicesClient"
 
@@ -44,5 +45,5 @@ export async function generateMetadata({
 }
 
 export default function DevServicesPage() {
-  return <DevServicesClient />
+  return <DevServicesClient initialIndex={devServicesSnapshot} />
 }

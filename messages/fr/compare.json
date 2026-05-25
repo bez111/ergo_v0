@@ -18,7 +18,7 @@
           "items": [
             {
               "question": "Ergo est-il meilleur qu'Ethereum ?",
-              "answer": "Ergo et Ethereum servent des objectifs différents. Ergo utilise le modèle eUTXO qui est résistant au MEV (pas de front-running), a des frais prévisibles (~0,01 $), et est plus sécurisé pour la DeFi. Ethereum a un écosystème plus grand et plus de développeurs. Ergo est meilleur pour les utilisateurs qui veulent des transactions équitables et prévisibles sans extraction MEV."
+              "answer": "Le modèle eUTXO d'Ergo réduit les schémas courants de front-running et de sandwich propres aux modèles account-based, et rend l'exécution plus prévisible. La conception de l'application, la politique mempool et les flux off-chain restent importants."
             },
             {
               "question": "En quoi Ergo est-il différent de Cardano ?",
@@ -387,7 +387,7 @@
         },
         {
           "question": "Lequel est meilleur pour la DeFi, Ergo ou Cardano ?",
-          "answer": "Les deux prennent en charge la DeFi sur eUTXO. Ergo a des implémentations pionnières comme ErgoDEX et SigmaUSD. Cardano a plus de projets grâce à un écosystème plus grand. Ergo"
+          "answer": "Both support DeFi on eUTXO. Ergo has pioneering references such as ErgoDEX/Spectrum and SigmaUSD, while Cardano has a larger live DeFi ecosystem. The better choice depends on whether you value Ergo PoW/fair-launch design and smaller experimental surface or Cardano larger liquidity and app count."
         }
       ]
     },
@@ -891,7 +891,7 @@
           },
           {
             "title": "Protection contre le MEV",
-            "description": "Ergo : pas de front-running par conception. Avalanche : l'extraction MEV est possible"
+            "description": "Le modèle eUTXO d'Ergo réduit les schémas courants de front-running et de sandwich propres aux modèles account-based, et rend l'exécution plus prévisible. La conception de l'application, la politique mempool et les flux off-chain restent importants."
           }
         ]
       },
@@ -909,7 +909,7 @@
         {
           "title": "MEV et front-running",
           "content": "Avalanche",
-          "ergoAdvantage": "Pas d'extraction MEV signifie un trading plus équitable pour les utilisateurs."
+          "ergoAdvantage": "Le modèle eUTXO d'Ergo réduit les schémas courants de front-running et de sandwich propres aux modèles account-based, et rend l'exécution plus prévisible. La conception de l'application, la politique mempool et les flux off-chain restent importants."
         },
         {
           "title": "Modèle de contrats intelligents",

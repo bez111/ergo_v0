@@ -547,7 +547,7 @@
             "core": "Σ 協議 · ZK 證明 · 混合器",
             "tooling": "ErgoMixer · 隱身池",
             "mentors": "隱私研究人員",
-            "deliverable": "合規隱私 dApp"
+            "deliverable": "選擇性揭露隱私 dApp"
           }
         },
         "research": {
@@ -994,7 +994,7 @@
         },
         {
           "question": "我可以用 ErgoScript 構建 DeFi 協議嗎？",
-          "answer": "是的！ErgoScript 非常適合 DeFi。示例包括 SigmaUSD（算法穩定幣）、ErgoDEX 等 DEX 以及各種 DeFi 原語。該語言的安全特性使其成為金融應用的理想選擇。"
+          "answer": "Yes. ErgoScript is well-suited to DeFi because it supports deterministic, predicate-based contracts on eUTXO. Examples include SigmaUSD, historical DEX designs like ErgoDEX/Spectrum, and current or future DeFi primitives. Treat each deployed protocol separately and verify its live status before using funds."
         }
       ],
       "viewExamples": "查看示例",

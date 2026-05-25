@@ -5,10 +5,10 @@
       "title": "DeFi su Ergo",
       "subtitle": "Finanza Decentralizzata Senza MEV, Senza Permessi",
       "heroStatement": "DeFi che funziona davvero per gli utenti, non per gli estrattori.",
-      "introduction": "L'approccio di Ergo alla DeFi è fondamentalmente diverso dalle chain basate su account come Ethereum. Costruita sul modello eUTXO, Ergo elimina intere categorie di exploit che affliggono la DeFi tradizionale: nessun front-running, nessun attacco sandwich, nessuna estrazione MEV. Il costo di ogni transazione è noto prima di inviarla. Ogni scambio si esegue esattamente come previsto. Non è un miglioramento minore — è un vantaggio strutturale che rende la DeFi davvero utilizzabile per le persone comuni, non solo per trader sofisticati con bot MEV.",
+      "introduction": "Il modello eUTXO di Ergo riduce i comuni schemi di front-running e sandwich dei modelli account-based e rende l'esecuzione più prevedibile. Progettazione dell'applicazione, policy mempool e flussi off-chain restano importanti.",
       "whatMakesUnique": "Mentre la DeFi di Ethereum è diventata una 'foresta oscura' dove gli utenti vengono cacciati da estrattori MEV, il modello eUTXO di Ergo crea un ambiente fondamentalmente più equo. Le transazioni fanno riferimento a box (UTXO) specifici, rendendo impraticabili gli attacchi di riordinamento. Le Oracle Pool forniscono feed di prezzi decentralizzati senza singoli punti di guasto. E poiché Ergo è PoW con lancio equo, non c'è nessun cartello VC che controlla la governance o estrae valore dal protocollo.",
       "keyDifferentiators": [
-        "Nessuna estrazione MEV: le transazioni non possono essere front-run o sandwicheate by design",
+        "Il modello eUTXO di Ergo riduce i comuni schemi di front-running e sandwich dei modelli account-based e rende l'esecuzione più prevedibile. Progettazione dell'applicazione, policy mempool e flussi off-chain restano importanti.",
         "Fee prevedibili: conosci esattamente quanto pagherai prima di inviare (~$0.01)",
         "Esecuzione deterministica: le transazioni o riescono completamente o falliscono completamente",
         "Oracle decentralizzati: le Oracle Pool forniscono feed di prezzi trustless",

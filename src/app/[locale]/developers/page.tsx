@@ -35,7 +35,7 @@ const TECHNOLOGY_INDEX = [
   { name: "NIPoPoWs", url: "/technology/nipopows", description: "Light clients and trustless bridges" },
   { name: "Oracle Pools", url: "/technology/oracle-pools", description: "Decentralized on-chain data feeds" },
   { name: "Native Tokens", url: "/technology/native-tokens", description: "Protocol-level token and NFT support" },
-  { name: "Babel Fees", url: "/technology/babel-fees", description: "Pay fees with any token" },
+  { name: "Babel Fees", url: "/technology/babel-fees", description: "Supported token fee paths" },
   { name: "Subblocks", url: "/technology/subblocks", description: "Sub-second confirmations (research)" },
   { name: "Velvet Forks", url: "/technology/velvet-forks", description: "Seamless protocol upgrades" },
   { name: "Adaptive Emission", url: "/technology/adaptive-emission", description: "Community-governed monetary policy" },
@@ -161,4 +161,3 @@ export default async function DevelopersPage() {
     </>
   )
 }
-

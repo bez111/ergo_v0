@@ -1,24 +1,24 @@
 {
   "seo": {
-    "defaultTitle": "Ergo — The Agentic Blockchain for Contractual Money",
-    "defaultDescription": "Ergo is the agentic blockchain — PoW + eUTXO + ErgoScript built for autonomous AI agent payments, DeFi, and programmable money with fewer custody assumptions.",
-    "keywords": "agentic blockchain, blockchain for AI agents, autonomous AI payments blockchain, AI agent payments, ergo blockchain, cryptocurrency, DeFi, smart contracts, Ergo, eUTXO, proof of work",
+    "defaultTitle": "Ergo — PoW/eUTXO Blockchain for DeFi, Privacy & Autonomous Work",
+    "defaultDescription": "Ergo is a PoW/eUTXO blockchain for DeFi, privacy and sound money, now becoming a public proof and clearing layer for autonomous work.",
+    "keywords": "autonomous work clearing, autonomous work settlement, public proof surface, verifiable receipts, agent settlement, AI agent payments, agentic blockchain, blockchain for AI agents, autonomous AI payments blockchain, machine-to-machine payments, ergo blockchain, Ergo, ERG, ERG coin, ERG wallet, buy ERG, PoW blockchain, proof of work, eUTXO, UTXO DeFi, eUTXO smart contracts, ErgoScript, Sigma Protocols, Autolykos, GPU mining, ASIC resistant mining, Babel Fees, Storage Rent, NiPoPoWs, Oracle Pools, native tokens, DeFi, privacy, ErgoMixer, SigmaUSD, Rosen Bridge, programmable money, censorship resistant money, sound money, fair launch cryptocurrency, no premine, cypherpunk blockchain, MEV resistance",
     "home": {
       "meta": {
-        "title": "Ergo — The Agentic Blockchain | MEV-Resistant PoW Smart Contracts",
-        "description": "The agentic blockchain: PoW + eUTXO for DeFi, AI agent payments, privacy and sound money. Predictable low fees, no pre-mine, no VC – built by cypherpunks for financial freedom.",
-        "keywords": "agentic blockchain, blockchain for AI agents, autonomous AI payments blockchain, AI agent payments, ergo blockchain, decentralized finance, MEV resistant blockchain, eUTXO model, censorship resistant money, ASIC resistant mining, fair launch cryptocurrency, programmable money, financial sovereignty, cypherpunk blockchain, DeFi, privacy, sound money, ergo agent economy",
+        "title": "Ergo — PoW/eUTXO Blockchain for DeFi & Autonomous Work",
+        "description": "PoW/eUTXO blockchain for DeFi, privacy and sound money, now a public proof and clearing layer for autonomous work: receipts, wallet policy and settlement.",
+        "keywords": "autonomous work clearing, autonomous work settlement, public proof surface, verifiable receipt bundles, programmable credit, task-conditioned settlement, wallet policy, AI agent payments, agentic blockchain, blockchain for AI agents, autonomous AI payments blockchain, machine-to-machine commerce, Ergo blockchain, Ergo, ERG, ERG coin, ERG wallet, buy ERG, PoW blockchain, proof of work, eUTXO model, UTXO DeFi, eUTXO smart contracts, ErgoScript, Sigma Protocols, Autolykos, GPU mining, ASIC resistant mining, Babel Fees, Storage Rent, NiPoPoWs, Oracle Pools, native tokens, DeFi, decentralized finance, privacy, ErgoMixer, SigmaUSD, Rosen Bridge, Spectrum Finance, smart contracts, programmable money, censorship resistant money, sound money, fair launch cryptocurrency, no premine, self custody, financial sovereignty, cypherpunk blockchain, MEV resistance, ergo agent economy",
         "og": {
-          "title": "Ergo — Peer-to-Peer Agent Economy",
-          "description": "The agentic blockchain: PoW + eUTXO + ErgoScript for autonomous AI agent payments, programmable credit, and trustless machine-to-machine commerce.",
+          "title": "Ergo — DeFi, Privacy & Autonomous Work Clearing",
+          "description": "PoW/eUTXO blockchain for DeFi, privacy and sound money, with a public proof surface for autonomous work receipts and audit-gated settlement.",
           "siteName": "Ergo Blockchain",
-          "imageAlt": "Ergo — Peer-to-Peer Agent Economy"
+          "imageAlt": "Ergo — Public Proof Surface for Autonomous Work"
         },
         "twitter": {
-          "title": "Ergo — Peer-to-Peer Agent Economy",
-          "description": "The agentic blockchain: PoW + eUTXO for autonomous AI agent payments, programmable credit, and machine-to-machine commerce. No KYC, no gas bootstrapping."
+          "title": "Ergo — DeFi, Privacy & Autonomous Work Clearing",
+          "description": "PoW/eUTXO for DeFi, privacy, sound money and autonomous work settlement: receipts, wallet policy, and audit-gated mainnet claims."
         },
-        "heroImageAlt": "Ergo Platform — The Agentic Blockchain for Peer-to-Peer Agent Economy"
+        "heroImageAlt": "Ergo Platform — Public Proof Surface for Autonomous Work"
       },
       "faq": {
         "items": [
@@ -28,19 +28,19 @@
           },
           {
             "question": "How to buy ERG?",
-            "answer": "You can buy ERG on exchanges like KuCoin, Gate.io, Bitpanda, or decentralized exchanges like Spectrum Finance. First get a wallet (Nautilus, SAFEW, or Ergo Mobile Wallet), then purchase ERG and withdraw to your wallet address."
+            "answer": "You can buy ERG on exchanges like KuCoin, Gate.io, or Bitpanda, and through verified non-custodial routes where active liquidity exists. Spectrum Finance is a historical Ergo DEX reference with a 2024 sunset notice, so verify current venues before trading. First get a wallet (Nautilus, SAFEW, or Ergo Mobile Wallet), then purchase ERG and withdraw to your wallet address."
           },
           {
             "question": "Is Ergo a good investment?",
             "answer": "Ergo has a fixed supply of 97.7M ERG with no pre-mine and fair launch. It's a Proof-of-Work blockchain with unique technology (eUTXO, Sigma Protocols). As with any cryptocurrency, do your own research and only invest what you can afford to lose."
           },
           {
-            "question": "Why is Ergo ideal for AI agents and machine-to-machine payments?",
-            "answer": "Ergo's eUTXO model provides deterministic costs — agents know exact fees upfront. Babel Fees let agents pay in any token without pre-loading ERG. ErgoScript embeds acceptance conditions directly in payments. No KYC, no gas bootstrapping, no persistent identity required. It's one of the few chains where all four agent payment primitives sit at the protocol level."
+            "question": "Why is Ergo a strong fit for autonomous work settlement?",
+            "answer": "Ergo's eUTXO model gives deterministic transaction costs, ErgoScript can encode acceptance rules, Babel Fees reduce native-token bootstrapping, and receipt-bearing workflows can connect payment, task verification and settlement. The current agent-economy stack is presented as testnet-first proof until audit gates open."
           },
           {
             "question": "How to get started with Ergo?",
-            "answer": "1) Download a wallet (Nautilus for browser, Ergo Mobile Wallet for phone). 2) Back up your seed phrase securely. 3) Get ERG from an exchange or DEX. 4) Explore DeFi apps like Spectrum Finance, SigmaUSD, or ErgoMixer."
+            "answer": "1) Download a wallet (Nautilus for browser, Ergo Mobile Wallet for phone). 2) Back up your seed phrase securely. 3) Get ERG from an exchange or verified non-custodial route. 4) Explore SigmaUSD, ErgoMixer, NFTs, mining, and current DeFi venues after checking each project's status."
           },
           {
             "question": "What wallets support Ergo?",

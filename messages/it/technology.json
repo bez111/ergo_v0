@@ -763,7 +763,7 @@
             "icon": "DollarSign"
           },
           {
-            "title": "Spectrum DEX",
+            "title": "Historical DEX designs",
             "description": "Exchange decentralizzato che utilizza feed di prezzi per ordini limite e liquidazioni",
             "icon": "BarChart3"
           },
@@ -1952,7 +1952,7 @@
         },
         {
           "title": "Ordinamento delle Transazioni",
-          "content": "Le transazioni nei sottoblocchi sono ordinate in modo deterministico utilizzando una combinazione di timestamp e ID transazione, prevenendo il front-running e garantendo l'equità."
+          "content": "Il modello eUTXO di Ergo riduce i comuni schemi di front-running e sandwich dei modelli account-based e rende l'esecuzione più prevedibile. Progettazione dell'applicazione, policy mempool e flussi off-chain restano importanti."
         },
         {
           "title": "Gestione dello Stato",
@@ -2211,7 +2211,7 @@
           "description": "Stablecoin algoritmico che usa feed di prezzi ERG/USD"
         },
         {
-          "title": "Spectrum DEX",
+          "title": "Historical DEX designs",
           "description": "Exchange decentralizzato con dati di prezzo in tempo reale"
         },
         {
@@ -2429,7 +2429,7 @@
       "confidential_collectibles": "Collezionabili confidenziali",
       "answer_text_ergo_offers_multiple": "Answer\",\n                text:\n                  \"Ergo offre molteplici funzionalità privacy inclusi protocolli Sigma, firme ad anello, prove zero-knowledge e transazioni confidenziali. Queste tecnologie consentono transazioni che preservano la privacy mantenendo sicurezza e conformità.",
       "answer_text_sigma_protocols_are": "Answer\",\n                text:\n                  \"I protocolli Sigma sono sistemi di prove zero-knowledge che consentono di dimostrare affermazioni su valori segreti senza rivelare i valori stessi. Abilitano l'autenticazione che preserva la privacy e la validazione delle transazioni.",
-      "answer_text_yes_ergo_s": "Answer\",\n                text:\n                  \"Sì, le funzionalità privacy di Ergo sono progettate per essere conformi alle normative. Forniscono capacità di divulgazione selettiva, consentendo agli utenti di rivelare i dettagli delle transazioni quando richiesto mantenendo la privacy per default.",
+      "answer_text_yes_ergo_s": "La privacy in Ergo è opzionale e può supportare workflow di divulgazione selettiva. La conformità legale effettiva dipende dalla giurisdizione, dall'implementazione e dal provider di servizi intorno al protocollo.",
       "ergo_bakes_privacy_into_the": "Ergo integra la privacy nel protocollo: protocolli Sigma, firme ad anello/threshold, ErgoMixer, asset confidenziali e divulgazione selettiva.",
       "ergo_privacy_sigma_protocols_ring": "Privacy Ergo,protocolli Sigma,firme ad anello,prove zero-knowledge,ErgoMixer,transazioni confidenziali",
       "prepare_funds_text_split_funds": "Prepara i fondi\", text: \"Dividi i fondi ed evita il riutilizzo degli indirizzi.",
@@ -3328,7 +3328,7 @@
           },
           "regulatoryCompliant": {
             "question": "Le funzionalità di privacy di Ergo sono conformi alle normative?",
-            "answer": "Sì, le funzionalità di privacy di Ergo sono progettate per essere conformi alle normative. Forniscono capacità di divulgazione selettiva, permettendo agli utenti di rivelare i dettagli delle transazioni quando richiesto mantenendo la privacy per impostazione predefinita."
+            "answer": "La privacy in Ergo è opzionale e può supportare workflow di divulgazione selettiva. La conformità legale effettiva dipende dalla giurisdizione, dall'implementazione e dal provider di servizi intorno al protocollo."
           }
         }
       },
@@ -4059,7 +4059,7 @@
         "0": {
           "title": "Order Book DEX",
           "description": "Ogni ordine è un box separato, abilitando il matching parallelo e gli atomic swap",
-          "example": "Spectrum Finance"
+          "example": "Historical ErgoDEX/Spectrum"
         },
         "1": {
           "title": "Protocolli di Prestito",

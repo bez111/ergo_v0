@@ -233,7 +233,7 @@ export function AgentEconomyClient() {
         <PersonaPathPanel
           eyebrow="Agent builder path"
           title="Go from thesis to runnable proof."
-          description="A practical route for builders who want agent payments, work verification, settlement receipts, and programmable credit without pretending the stack is production-certified."
+          description="A practical route for builders who want autonomous work clearing: work verification, settlement receipts, wallet policy, and programmable credit without pretending the stack is production-certified."
           steps={[
             {
               label: "Start here",

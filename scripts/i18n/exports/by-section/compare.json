@@ -1,224 +1,3635 @@
 [
   {
-    "key": "compare.hub.title",
-    "value": "Ergo vs The World",
+    "key": "compare.compare.page.seo.title",
+    "source": "Ergo vs Bitcoin, Ethereum, Cardano — Full Comparison | Ergo",
+    "context": "SEO metadata",
+    "maxLength": 88.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.page.seo.description",
+    "source": "Compare Ergo to Bitcoin, Ethereum, Cardano, Monero & more. Side-by-side analysis of consensus, smart contracts, privacy & tokenomics.",
+    "context": "SEO metadata",
+    "maxLength": 199.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.page.seo.keywords",
+    "source": "ergo comparison, ergo vs bitcoin, ergo vs ethereum, blockchain comparison, ergo vs cardano, ergo vs monero, cryptocurrency comparison, best blockchain 2025",
+    "context": "SEO metadata",
+    "maxLength": 232.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.page.schema.breadcrumbs.compare",
+    "source": "Compare",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.page.schema.collection.name",
+    "source": "Ergo Blockchain Comparisons",
+    "context": "General content",
+    "maxLength": 40.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.page.schema.collection.description",
+    "source": "Comprehensive comparisons of Ergo with other major blockchain platforms including Bitcoin, Ethereum, Cardano, Monero, and more.",
+    "context": "Description",
+    "maxLength": 190.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.page.schema.faq.items.0.question",
+    "source": "Is Ergo better than Ethereum?",
+    "context": "FAQ content",
+    "maxLength": 43.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.page.schema.faq.items.0.answer",
+    "source": "Ergo and Ethereum serve different purposes. Ergo uses the eUTXO model, which gives strong MEV-resistance and predictable fees, while Ethereum has a larger ecosystem and more developers. Ergo is attractive for users who want fairer, more predictable DeFi execution with less exposure to common front-running patterns.",
+    "context": "FAQ content",
+    "maxLength": 474,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.page.schema.faq.items.1.question",
+    "source": "How is Ergo different from Cardano?",
+    "context": "FAQ content",
+    "maxLength": 52.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.page.schema.faq.items.1.answer",
+    "source": "Both use eUTXO model, but Ergo is Proof-of-Work (like Bitcoin) while Cardano is Proof-of-Stake. Ergo had fair launch (no ICO, no pre-mine) vs Cardano's ICO. Ergo has Sigma Protocols for privacy, Storage Rent for sustainability, and is more focused on financial applications and cypherpunk values.",
+    "context": "FAQ content",
+    "maxLength": 444,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.page.schema.faq.items.2.question",
+    "source": "Is Ergo better than Bitcoin?",
+    "context": "FAQ content",
+    "maxLength": 42,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.page.schema.faq.items.2.answer",
+    "source": "Ergo extends Bitcoin's proven PoW security with smart contracts via ErgoScript. Both have fair launch and fixed supply. Ergo adds: programmable money (smart contracts), optional privacy (Sigma Protocols), Storage Rent (sustainability), and NiPoPoWs (light clients). Bitcoin has larger network effect and liquidity.",
+    "context": "FAQ content",
+    "maxLength": 471,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.page.schema.faq.items.3.question",
+    "source": "What makes Ergo unique compared to other blockchains?",
+    "context": "FAQ content",
+    "maxLength": 79.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.page.schema.faq.items.3.answer",
+    "source": "Ergo combines a PoW/eUTXO model, Sigma Protocols for optional privacy, Storage Rent for long-term sustainability, Autolykos mining, fair-launch tokenomics, and strong resistance to common account-model MEV patterns. That combination makes Ergo unusually well-suited to financial contracts, while every comparison still depends on the exact use case.",
+    "context": "FAQ content",
+    "maxLength": 523.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.page.schema.faq.items.4.question",
+    "source": "Is Ergo more private than Monero?",
+    "context": "FAQ content",
+    "maxLength": 49.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.page.schema.faq.items.4.answer",
+    "source": "Ergo offers optional privacy through Sigma Protocols and ErgoMixer, while Monero has mandatory privacy. Ergo can support selective-disclosure workflows, but legal compliance depends on jurisdiction, implementation, and surrounding service providers. Monero is better for maximum anonymity; Ergo is better for programmable privacy with smart contract capabilities.",
+    "context": "FAQ content",
+    "maxLength": 544.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.hub.title",
+    "source": "Ergo vs The World",
     "context": "Title",
-    "maxLength": 25.5
+    "maxLength": 25.5,
+    "translation": ""
   },
   {
-    "key": "compare.hub.subtitle",
-    "value": "Understand how Ergo compares to other blockchain platforms. Honest, technical comparisons with no marketing fluff.",
+    "key": "compare.compare.hub.subtitle",
+    "source": "Understand how Ergo compares to other blockchain platforms. Honest, technical comparisons with no marketing fluff.",
     "context": "General content",
-    "maxLength": 171
+    "maxLength": 171,
+    "translation": ""
   },
   {
-    "key": "compare.hub.chooseComparison",
-    "value": "Choose a Comparison",
+    "key": "compare.compare.hub.chooseComparison",
+    "source": "Choose a Comparison",
     "context": "General content",
-    "maxLength": 28.5
+    "maxLength": 28.5,
+    "translation": ""
   },
   {
-    "key": "compare.hub.whyMatters",
-    "value": "Why These Comparisons Matter",
+    "key": "compare.compare.hub.seeFullComparisonTable",
+    "source": "See full comparison table",
     "context": "General content",
-    "maxLength": 42
+    "maxLength": 37.5,
+    "translation": ""
   },
   {
-    "key": "compare.hub.whyMattersSubtitle",
-    "value": "Every blockchain makes tradeoffs. Understanding these tradeoffs helps you choose the right tool for your needs.",
+    "key": "compare.compare.hub.min",
+    "source": "min",
     "context": "General content",
-    "maxLength": 166.5
+    "maxLength": 4.5,
+    "translation": ""
   },
   {
-    "key": "compare.hub.securityFirst",
-    "value": "Security First",
-    "context": "General content",
-    "maxLength": 21
+    "key": "compare.compare.hub.card.title",
+    "source": "Ergo vs {name}",
+    "context": "Title",
+    "maxLength": 21,
+    "translation": ""
   },
   {
-    "key": "compare.hub.securityFirstDesc",
-    "value": "Ergo's eUTXO model eliminates entire classes of vulnerabilities that affect account-based chains.",
-    "context": "General content",
-    "maxLength": 145.5
+    "key": "compare.compare.hub.visualSection.title",
+    "source": "Visual comparisons & matrices",
+    "context": "Title",
+    "maxLength": 43.5,
+    "translation": ""
   },
   {
-    "key": "compare.hub.fairLaunch",
-    "value": "Fair Launch",
+    "key": "compare.compare.hub.visualSection.subtitle",
+    "source": "Side-by-side Ergo vs other L1 diagrams that are easy to save and share.",
     "context": "General content",
-    "maxLength": 16.5
+    "maxLength": 106.5,
+    "translation": ""
   },
   {
-    "key": "compare.hub.fairLaunchDesc",
-    "value": "No ICO, no premine, no VC allocation. All ERG is earned through mining, like Bitcoin.",
+    "key": "compare.compare.hub.visualSection.viewAll",
+    "source": "View all comparison infographics",
     "context": "General content",
-    "maxLength": 127.5
+    "maxLength": 48,
+    "translation": ""
   },
   {
-    "key": "compare.hub.programmablePrivacy",
-    "value": "Programmable Privacy",
+    "key": "compare.compare.hub.visualSection.badge",
+    "source": "Visual guide",
     "context": "General content",
-    "maxLength": 30
+    "maxLength": 18,
+    "translation": ""
   },
   {
-    "key": "compare.hub.programmablePrivacyDesc",
-    "value": "Sigma Protocols enable zero-knowledge proofs without trusted setup, built into the core protocol.",
+    "key": "compare.compare.hub.quickStats.consensus",
+    "source": "Consensus",
     "context": "General content",
-    "maxLength": 145.5
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "compare.hub.readyToBuild",
-    "value": "Ready to Build on Ergo?",
+    "key": "compare.compare.hub.quickStats.stateModel",
+    "source": "State model",
     "context": "General content",
-    "maxLength": 34.5
+    "maxLength": 16.5,
+    "translation": ""
   },
   {
-    "key": "compare.hub.readyToBuildDesc",
-    "value": "Join a community of builders creating the future of decentralized finance.",
+    "key": "compare.compare.hub.quickStats.launch",
+    "source": "Launch",
     "context": "General content",
-    "maxLength": 111
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "compare.hub.startBuilding",
-    "value": "Start Building",
+    "key": "compare.compare.hub.quickStats.privacy",
+    "source": "Privacy",
     "context": "General content",
-    "maxLength": 21
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "compare.hub.exploreEcosystem",
-    "value": "Explore Ecosystem",
+    "key": "compare.compare.hub.aria.comparisonsList",
+    "source": "Blockchain comparisons",
     "context": "General content",
-    "maxLength": 25.5
+    "maxLength": 33,
+    "translation": ""
   },
   {
-    "key": "compare.detail.allComparisons",
-    "value": "All Comparisons",
+    "key": "compare.compare.hub.aria.visualComparisonsList",
+    "source": "Visual comparison infographics",
     "context": "General content",
-    "maxLength": 22.5
+    "maxLength": 45,
+    "translation": ""
   },
   {
-    "key": "compare.detail.featureComparison",
-    "value": "Feature Comparison",
+    "key": "compare.compare.hub.whyMatters",
+    "source": "Why These Comparisons Matter",
     "context": "General content",
-    "maxLength": 27
+    "maxLength": 42,
+    "translation": ""
   },
   {
-    "key": "compare.detail.deepDive",
-    "value": "Deep Dive",
+    "key": "compare.compare.hub.whyMattersSubtitle",
+    "source": "Every blockchain makes tradeoffs. Understanding these tradeoffs helps you choose the right tool for your needs.",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 166.5,
+    "translation": ""
   },
   {
-    "key": "compare.detail.ergoAdvantage",
-    "value": "Ergo Advantage",
+    "key": "compare.compare.hub.securityFirst",
+    "source": "Security First",
     "context": "General content",
-    "maxLength": 21
+    "maxLength": 21,
+    "translation": ""
   },
   {
-    "key": "compare.detail.relatedInfographics",
-    "value": "Related Infographics",
+    "key": "compare.compare.hub.securityFirstDesc",
+    "source": "Ergo's eUTXO model eliminates entire classes of vulnerabilities that affect account-based chains.",
     "context": "General content",
-    "maxLength": 30
+    "maxLength": 145.5,
+    "translation": ""
   },
   {
-    "key": "compare.detail.faq",
-    "value": "Frequently Asked Questions",
+    "key": "compare.compare.hub.fairLaunch",
+    "source": "Fair Launch",
     "context": "General content",
-    "maxLength": 39
+    "maxLength": 16.5,
+    "translation": ""
   },
   {
-    "key": "compare.detail.moreComparisons",
-    "value": "More Comparisons",
+    "key": "compare.compare.hub.fairLaunchDesc",
+    "source": "No ICO, no premine, no VC allocation. All ERG is earned through mining, like Bitcoin.",
     "context": "General content",
-    "maxLength": 24
+    "maxLength": 127.5,
+    "translation": ""
   },
   {
-    "key": "compare.detail.readyToExperience",
-    "value": "Ready to Experience Ergo?",
+    "key": "compare.compare.hub.programmablePrivacy",
+    "source": "Programmable Privacy",
     "context": "General content",
-    "maxLength": 37.5
+    "maxLength": 30,
+    "translation": ""
   },
   {
-    "key": "compare.detail.readyToExperienceDesc",
-    "value": "Join thousands of users who chose decentralization, security, and financial freedom.",
+    "key": "compare.compare.hub.programmablePrivacyDesc",
+    "source": "Sigma Protocols enable zero-knowledge proofs without trusted setup, built into the core protocol.",
     "context": "General content",
-    "maxLength": 126
+    "maxLength": 145.5,
+    "translation": ""
   },
   {
-    "key": "compare.detail.getWallet",
-    "value": "Get a Wallet",
+    "key": "compare.compare.hub.readyToBuild",
+    "source": "Ready to Build on Ergo?",
     "context": "General content",
-    "maxLength": 18
+    "maxLength": 34.5,
+    "translation": ""
   },
   {
-    "key": "compare.detail.startBuilding",
-    "value": "Start Building",
+    "key": "compare.compare.hub.readyToBuildDesc",
+    "source": "Join a community of builders creating the future of decentralized finance.",
     "context": "General content",
-    "maxLength": 21
+    "maxLength": 111,
+    "translation": ""
   },
   {
-    "key": "compare.detail.lastUpdated",
-    "value": "Last updated",
+    "key": "compare.compare.hub.startBuilding",
+    "source": "Start Building",
     "context": "General content",
-    "maxLength": 18
+    "maxLength": 21,
+    "translation": ""
   },
   {
-    "key": "compare.features.consensus",
-    "value": "Consensus",
+    "key": "compare.compare.hub.exploreEcosystem",
+    "source": "Explore Ecosystem",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 25.5,
+    "translation": ""
   },
   {
-    "key": "compare.features.stateModel",
-    "value": "State Model",
-    "context": "General content",
-    "maxLength": 16.5
+    "key": "compare.compare.detail.seo.notFound.title",
+    "source": "Comparison Not Found",
+    "context": "SEO metadata",
+    "maxLength": 30,
+    "translation": ""
   },
   {
-    "key": "compare.features.smartContracts",
-    "value": "Smart Contracts",
-    "context": "General content",
-    "maxLength": 22.5
+    "key": "compare.compare.detail.seo.notFound.description",
+    "source": "The requested comparison could not be found.",
+    "context": "SEO metadata",
+    "maxLength": 66,
+    "translation": ""
   },
   {
-    "key": "compare.features.privacy",
-    "value": "Privacy",
-    "context": "General content",
-    "maxLength": 10.5
+    "key": "compare.compare.detail.seo.imageAltTemplate",
+    "source": "Ergo vs {name} Comparison",
+    "context": "SEO metadata",
+    "maxLength": 37.5,
+    "translation": ""
   },
   {
-    "key": "compare.features.sustainability",
-    "value": "Sustainability",
+    "key": "compare.compare.detail.allComparisons",
+    "source": "All Comparisons",
     "context": "General content",
-    "maxLength": 21
+    "maxLength": 22.5,
+    "translation": ""
   },
   {
-    "key": "compare.features.lightClients",
-    "value": "Light Clients",
+    "key": "compare.compare.detail.featureComparison",
+    "source": "Feature Comparison",
     "context": "General content",
-    "maxLength": 19.5
+    "maxLength": 27,
+    "translation": ""
   },
   {
-    "key": "compare.features.miningAlgorithm",
-    "value": "Mining Algorithm",
+    "key": "compare.compare.detail.deepDive",
+    "source": "Deep Dive",
     "context": "General content",
-    "maxLength": 24
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "compare.features.blockTime",
-    "value": "Block Time",
+    "key": "compare.compare.detail.ergoAdvantage",
+    "source": "Ergo Advantage",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 21,
+    "translation": ""
   },
   {
-    "key": "compare.features.launchModel",
-    "value": "Launch Model",
+    "key": "compare.compare.detail.relatedInfographics",
+    "source": "Related Infographics",
     "context": "General content",
-    "maxLength": 18
+    "maxLength": 30,
+    "translation": ""
   },
   {
-    "key": "compare.features.networkEffect",
-    "value": "Network Effect",
+    "key": "compare.compare.detail.faq",
+    "source": "Frequently Asked Questions",
     "context": "General content",
-    "maxLength": 21
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.detail.moreComparisons",
+    "source": "More Comparisons",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.detail.readyToExperience",
+    "source": "Ready to Experience Ergo?",
+    "context": "General content",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.detail.readyToExperienceDesc",
+    "source": "Join thousands of users who chose decentralization, security, and financial freedom.",
+    "context": "General content",
+    "maxLength": 126,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.detail.getWallet",
+    "source": "Get a Wallet",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.detail.startBuilding",
+    "source": "Start Building",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.detail.lastUpdated",
+    "source": "Last updated",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.features.consensus",
+    "source": "Consensus",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.features.stateModel",
+    "source": "State Model",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.features.smartContracts",
+    "source": "Smart Contracts",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.features.privacy",
+    "source": "Privacy",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.features.sustainability",
+    "source": "Sustainability",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.features.lightClients",
+    "source": "Light Clients",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.features.miningAlgorithm",
+    "source": "Mining Algorithm",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.features.blockTime",
+    "source": "Block Time",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.features.launchModel",
+    "source": "Launch Model",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "compare.compare.features.networkEffect",
+    "source": "Network Effect",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparePageClient.breadcrumbTitle",
+    "source": "Ergo vs {name}",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparePageClient.heroVs",
+    "source": "vs",
+    "context": "General content",
+    "maxLength": 3,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparePageClient.heroTitle",
+    "source": "Ergo vs",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparePageClient.sections.featureComparison",
+    "source": "Feature",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparePageClient.sections.featureComparisonHighlight",
+    "source": "Comparison",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparePageClient.sections.feature",
+    "source": "Feature",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparePageClient.sections.advantageNote",
+    "source": "indicates advantage in that category. Last updated:",
+    "context": "General content",
+    "maxLength": 76.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparePageClient.sections.deepDive",
+    "source": "Deep",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparePageClient.sections.deepDiveHighlight",
+    "source": "Dive",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparePageClient.sections.ergoAdvantage",
+    "source": "Ergo Advantage",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparePageClient.sections.relatedArticles",
+    "source": "Related",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparePageClient.sections.relatedArticlesHighlight",
+    "source": "Articles",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparePageClient.sections.minRead",
+    "source": "min read",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparePageClient.sections.relatedInfographics",
+    "source": "Related",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparePageClient.sections.relatedInfographicsHighlight",
+    "source": "Infographics",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparePageClient.sections.faq",
+    "source": "Frequently Asked",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparePageClient.sections.faqHighlight",
+    "source": "Questions",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparePageClient.sections.moreComparisons",
+    "source": "More",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparePageClient.sections.moreComparisonsHighlight",
+    "source": "Comparisons",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparePageClient.cta.title",
+    "source": "Ready to Experience Ergo?",
+    "context": "Title",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparePageClient.cta.description",
+    "source": "Join thousands of users who chose decentralization, security, and financial freedom.",
+    "context": "Description",
+    "maxLength": 126,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparePageClient.cta.getWallet",
+    "source": "Get a Wallet",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparePageClient.cta.startBuilding",
+    "source": "Start Building",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.bitcoin.name",
+    "source": "Bitcoin",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.bitcoin.seoTitle",
+    "source": "Ergo vs Bitcoin 2025: Smart Contracts, Privacy & Sustainability Compared",
+    "context": "General content",
+    "maxLength": 108,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.bitcoin.seoDescription",
+    "source": "Complete comparison of Ergo and Bitcoin: eUTXO smart contracts vs simple UTXO, Sigma Protocols privacy, storage rent sustainability, and NiPoPoWs light clients.",
+    "context": "General content",
+    "maxLength": 240,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.ethereum.name",
+    "source": "Ethereum",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.ethereum.seoTitle",
+    "source": "Ergo vs Ethereum 2025: eUTXO vs Account Model, PoW vs PoS Compared",
+    "context": "General content",
+    "maxLength": 99,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.ethereum.seoDescription",
+    "source": "Complete comparison of Ergo and Ethereum: eUTXO vs account model, predictable fees, no protocol-level reentrancy by construction, PoW security, and native privacy with Sigma Protocols.",
+    "context": "General content",
+    "maxLength": 276,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.cardano.name",
+    "source": "Cardano",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.cardano.seoTitle",
+    "source": "Ergo vs Cardano 2025: eUTXO Cousins with Different Philosophies",
+    "context": "General content",
+    "maxLength": 94.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.cardano.seoDescription",
+    "source": "Compare Ergo and Cardano: both use eUTXO, but Ergo has PoW consensus, storage rent, fair launch, and native Sigma Protocols privacy.",
+    "context": "General content",
+    "maxLength": 198,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.monero.name",
+    "source": "Monero",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.monero.seoTitle",
+    "source": "Ergo vs Monero 2025: Privacy Approaches Compared",
+    "context": "General content",
+    "maxLength": 72,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.monero.seoDescription",
+    "source": "Compare Ergo and Monero privacy: Sigma Protocols vs Ring Signatures, optional vs mandatory privacy, smart contracts, and regulatory considerations.",
+    "context": "General content",
+    "maxLength": 220.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.zcash.name",
+    "source": "Zcash",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.zcash.seoTitle",
+    "source": "Ergo vs Zcash 2025: Sigma Protocols vs zk-SNARKs Privacy",
+    "context": "General content",
+    "maxLength": 84,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.zcash.seoDescription",
+    "source": "Compare Ergo and Zcash: Sigma Protocols vs zk-SNARKs, no trusted setup, smart contracts, fair launch vs founders reward.",
+    "context": "General content",
+    "maxLength": 180,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.solana.name",
+    "source": "Solana",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.solana.seoTitle",
+    "source": "Ergo vs Solana 2025: Decentralization vs Speed Tradeoffs",
+    "context": "General content",
+    "maxLength": 84,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.solana.seoDescription",
+    "source": "Compare Ergo and Solana: PoW vs PoS, decentralization vs TPS, fair launch vs VC funding, and sustainability approaches.",
+    "context": "General content",
+    "maxLength": 178.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.cbdc.name",
+    "source": "CBDCs",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.cbdc.seoTitle",
+    "source": "Ergo vs CBDCs 2025: Decentralized Money vs Central Bank Digital Currencies",
+    "context": "General content",
+    "maxLength": 111,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.cbdc.seoDescription",
+    "source": "Compare Ergo blockchain with Central Bank Digital Currencies: privacy, censorship resistance, programmable money, and financial freedom.",
+    "context": "General content",
+    "maxLength": 204,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.vc-chains.name",
+    "source": "VC-Funded Chains",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.vc-chains.seoTitle",
+    "source": "Ergo vs VC-Funded Blockchains 2025: Fair Launch vs Insider Allocation",
+    "context": "General content",
+    "maxLength": 103.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.vc-chains.seoDescription",
+    "source": "Compare Ergo's fair launch with VC-funded blockchains: token distribution, governance, incentive alignment, and long-term sustainability.",
+    "context": "General content",
+    "maxLength": 205.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.kaspa.name",
+    "source": "Kaspa",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.kaspa.seoTitle",
+    "source": "Ergo vs Kaspa 2025: Smart Contracts, Sustainability & PoW Compared",
+    "context": "General content",
+    "maxLength": 99,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.kaspa.seoDescription",
+    "source": "Ergo vs Kaspa comparison: eUTXO smart contracts vs pure payments, storage rent vs no rent, privacy features, and long-term sustainability.",
+    "context": "General content",
+    "maxLength": 207,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.ravencoin.name",
+    "source": "Ravencoin",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.ravencoin.seoTitle",
+    "source": "Ergo vs Ravencoin 2025: Smart Contracts, Privacy & Token Features Compared",
+    "context": "General content",
+    "maxLength": 111,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.ravencoin.seoDescription",
+    "source": "Ergo vs Ravencoin comparison: eUTXO smart contracts vs asset-focused scripting, privacy features, DeFi capabilities, and sustainability.",
+    "context": "General content",
+    "maxLength": 204,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.litecoin.name",
+    "source": "Litecoin",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.litecoin.seoTitle",
+    "source": "Ergo vs Litecoin 2025: Smart Contracts, Privacy & Features Compared",
+    "context": "General content",
+    "maxLength": 100.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.litecoin.seoDescription",
+    "source": "Ergo vs Litecoin comparison: eUTXO smart contracts vs simple payments, Sigma Protocols vs MWEB privacy, and DeFi capabilities.",
+    "context": "General content",
+    "maxLength": 189,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.avalanche.name",
+    "source": "Avalanche",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.avalanche.seoTitle",
+    "source": "Ergo vs Avalanche 2025: Fair Launch PoW vs VC-Funded PoS Compared",
+    "context": "General content",
+    "maxLength": 97.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.avalanche.seoDescription",
+    "source": "Ergo vs Avalanche comparison: fair launch vs VC funding, ASIC-resistant PoW vs PoS, eUTXO vs account model, and true decentralization.",
+    "context": "General content",
+    "maxLength": 201,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.algorand.name",
+    "source": "Algorand",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.algorand.seoTitle",
+    "source": "Ergo vs Algorand 2025: Decentralized PoW vs Corporate PoS Compared",
+    "context": "General content",
+    "maxLength": 99,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonsData.algorand.seoDescription",
+    "source": "Ergo vs Algorand comparison: grassroots PoW vs MIT-backed PoS, fair launch vs foundation control, and true decentralization vs corporate blockchain.",
+    "context": "General content",
+    "maxLength": 222,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.name",
+    "source": "Bitcoin",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.seoTitle",
+    "source": "Ergo vs Bitcoin 2025: Smart Contracts, Privacy & Sustainability Compared",
+    "context": "General content",
+    "maxLength": 108,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.seoDescription",
+    "source": "Complete comparison of Ergo and Bitcoin: eUTXO smart contracts vs simple UTXO, Sigma Protocols privacy, storage rent sustainability, and NiPoPoWs light clients.",
+    "context": "General content",
+    "maxLength": 240,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.summary.headline",
+    "source": "Bitcoin",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.summary.subheadline",
+    "source": "Ergo extends Bitcoin",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.summary.points.0.title",
+    "source": "Programmable eUTXO",
+    "context": "Title",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.summary.points.0.description",
+    "source": "Same UTXO security model as Bitcoin, but with full smart contract capabilities via ErgoScript",
+    "context": "Description",
+    "maxLength": 139.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.summary.points.1.title",
+    "source": "Native Privacy",
+    "context": "Title",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.summary.points.1.description",
+    "source": "Sigma Protocols enable zero-knowledge proofs at L1, while Bitcoin has no native privacy",
+    "context": "Description",
+    "maxLength": 130.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.summary.points.2.title",
+    "source": "Long-term Sustainability",
+    "context": "Title",
+    "maxLength": 36,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.summary.points.2.description",
+    "source": "Storage rent ensures miner revenue beyond block rewards, solving Bitcoin",
+    "context": "Description",
+    "maxLength": 108,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.summary.points.3.title",
+    "source": "Trustless Light Clients",
+    "context": "Title",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.summary.points.3.description",
+    "source": "NiPoPoWs enable mobile wallets to verify blockchain without trusting third parties",
+    "context": "Description",
+    "maxLength": 123,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.sections.0.title",
+    "source": "Smart Contract Capabilities",
+    "context": "Title",
+    "maxLength": 40.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.sections.0.content",
+    "source": "Bitcoin",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.sections.0.ergoAdvantage",
+    "source": "Full DeFi capabilities: DEXs, lending protocols, stablecoins, DAOs, and more - all on a UTXO-based L1.",
+    "context": "General content",
+    "maxLength": 153,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.sections.1.title",
+    "source": "Privacy Architecture",
+    "context": "Title",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.sections.1.content",
+    "source": "Bitcoin transactions are pseudonymous but fully transparent on-chain. Privacy requires external tools like CoinJoin or L2 solutions. Ergo has Sigma Protocols built into the core protocol, enabling zero-knowledge proofs natively without trusted setup.",
+    "context": "General content",
+    "maxLength": 375,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.sections.1.ergoAdvantage",
+    "source": "Optional privacy with selective disclosure - prove what you need without revealing everything.",
+    "context": "General content",
+    "maxLength": 141,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.sections.2.title",
+    "source": "Long-term Security Budget",
+    "context": "Title",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.sections.2.content",
+    "source": "Bitcoin",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.sections.2.ergoAdvantage",
+    "source": "Protocol-level solution to the security budget problem that Bitcoin hasn",
+    "context": "General content",
+    "maxLength": 108,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.faq.0.question",
+    "source": "How is Ergo different from Bitcoin?",
+    "context": "FAQ content",
+    "maxLength": 52.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.faq.0.answer",
+    "source": "While sharing Bitcoin",
+    "context": "FAQ content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.faq.1.question",
+    "source": "Is Ergo more private than Bitcoin?",
+    "context": "FAQ content",
+    "maxLength": 51,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.faq.1.answer",
+    "source": "Yes. Ergo has native Sigma Protocols enabling zero-knowledge proofs at L1, while Bitcoin requires external tools or L2 solutions for privacy. Ergo",
+    "context": "FAQ content",
+    "maxLength": 219,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.faq.2.question",
+    "source": "Can Ergo do everything Bitcoin does?",
+    "context": "FAQ content",
+    "maxLength": 54,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.faq.2.answer",
+    "source": "Yes, and more. Ergo supports all Bitcoin use cases (store of value, payments) plus full smart contract capabilities, native tokens, and advanced cryptographic features.",
+    "context": "FAQ content",
+    "maxLength": 252,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.faq.3.question",
+    "source": "Is Ergo a Bitcoin fork?",
+    "context": "FAQ content",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.bitcoin.faq.3.answer",
+    "source": "No. Ergo is built from scratch with its own codebase, but it shares philosophical alignment with Bitcoin: fair launch, PoW consensus, UTXO model, and cypherpunk values.",
+    "context": "FAQ content",
+    "maxLength": 252,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.name",
+    "source": "Ethereum",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.seoTitle",
+    "source": "Ergo vs Ethereum 2025: eUTXO vs Account Model, PoW vs PoS Compared",
+    "context": "General content",
+    "maxLength": 99,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.seoDescription",
+    "source": "Complete comparison of Ergo and Ethereum: eUTXO vs account model, predictable fees, no protocol-level reentrancy by construction, PoW security, and native privacy with Sigma Protocols.",
+    "context": "General content",
+    "maxLength": 276,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.summary.headline",
+    "source": "Predictable, Secure, and Truly Decentralized",
+    "context": "General content",
+    "maxLength": 66,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.summary.subheadline",
+    "source": "Ergo offers Ethereum-level programmability without the security pitfalls, unpredictable fees, or centralization risks.",
+    "context": "General content",
+    "maxLength": 177,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.summary.points.0.title",
+    "source": "No Reentrancy Attacks",
+    "context": "Title",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.summary.points.0.description",
+    "source": "eUTXO model eliminates entire classes of smart contract vulnerabilities that plague Ethereum",
+    "context": "Description",
+    "maxLength": 138,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.summary.points.1.title",
+    "source": "Predictable Fees",
+    "context": "Title",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.summary.points.1.description",
+    "source": "No EVM-style gas price auctions; fees are stable and predictable, with reduced MEV surface",
+    "context": "Description",
+    "maxLength": 135,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.summary.points.2.title",
+    "source": "True Decentralization",
+    "context": "Title",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.summary.points.2.description",
+    "source": "PoW consensus with GPU mining keeps the network accessible and censorship-resistant",
+    "context": "Description",
+    "maxLength": 124.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.summary.points.3.title",
+    "source": "Parallel Execution",
+    "context": "Title",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.summary.points.3.description",
+    "source": "UTXO-based transactions can be validated in parallel, improving throughput",
+    "context": "Description",
+    "maxLength": 111,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.sections.0.title",
+    "source": "Security Model",
+    "context": "Title",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.sections.0.content",
+    "source": "Ethereum",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.sections.0.ergoAdvantage",
+    "source": "No DAO hack, no reentrancy exploits possible. Security by design, not by careful coding.",
+    "context": "General content",
+    "maxLength": 132,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.sections.1.title",
+    "source": "Fee Economics",
+    "context": "Title",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.sections.1.content",
+    "source": "Ethereum",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.sections.1.ergoAdvantage",
+    "source": "Know your fees before you transact. No surprise gas spikes or MEV taxes.",
+    "context": "General content",
+    "maxLength": 108,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.sections.2.title",
+    "source": "Consensus & Decentralization",
+    "context": "Title",
+    "maxLength": 42,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.sections.2.content",
+    "source": "Ethereum",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.sections.2.ergoAdvantage",
+    "source": "True permissionless participation in consensus. No minimum stake, no validator cartels.",
+    "context": "General content",
+    "maxLength": 130.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.faq.0.question",
+    "source": "What advantages does Ergo have over Ethereum?",
+    "context": "FAQ content",
+    "maxLength": 67.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.faq.0.answer",
+    "source": "Ergo offers predictable fees, strong MEV-resistance, no protocol-level reentrancy class, native privacy via Sigma Protocols, PoW decentralization, and first-class native tokens without wrapper contracts.",
+    "context": "FAQ content",
+    "maxLength": 304.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.faq.1.question",
+    "source": "Can Ergo run Ethereum dApps?",
+    "context": "FAQ content",
+    "maxLength": 42,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.faq.1.answer",
+    "source": "Not directly - Ergo uses ErgoScript, not Solidity. However, most DeFi concepts (DEXs, lending, stablecoins) have been implemented on Ergo with often better security properties due to the eUTXO model.",
+    "context": "FAQ content",
+    "maxLength": 298.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.faq.2.question",
+    "source": "Why does Ergo use PoW instead of PoS like Ethereum?",
+    "context": "FAQ content",
+    "maxLength": 76.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.faq.2.answer",
+    "source": "PoW provides stronger censorship resistance, fairer distribution (anyone can mine), and proven security. PoS tends toward plutocracy and has shown censorship compliance issues.",
+    "context": "FAQ content",
+    "maxLength": 264,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.faq.3.question",
+    "source": "Is Ergo faster than Ethereum?",
+    "context": "FAQ content",
+    "maxLength": 43.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ethereum.faq.3.answer",
+    "source": "Ergo has ~2 minute blocks vs Ethereum",
+    "context": "FAQ content",
+    "maxLength": 55.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cardano.name",
+    "source": "Cardano",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cardano.seoTitle",
+    "source": "Ergo vs Cardano 2025: eUTXO Cousins with Different Philosophies",
+    "context": "General content",
+    "maxLength": 94.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cardano.seoDescription",
+    "source": "Compare Ergo and Cardano: both use eUTXO, but Ergo has PoW consensus, storage rent, fair launch, and native Sigma Protocols privacy.",
+    "context": "General content",
+    "maxLength": 198,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cardano.summary.headline",
+    "source": "eUTXO Siblings with Different DNA",
+    "context": "General content",
+    "maxLength": 49.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cardano.summary.subheadline",
+    "source": "Both use extended UTXO, but Ergo chose PoW, fair launch, and protocol-level sustainability.",
+    "context": "General content",
+    "maxLength": 136.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cardano.summary.points.0.title",
+    "source": "Proof-of-Work Security",
+    "context": "Title",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cardano.summary.points.0.description",
+    "source": "Ergo uses battle-tested PoW while Cardano relies on PoS with different security assumptions",
+    "context": "Description",
+    "maxLength": 136.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cardano.summary.points.1.title",
+    "source": "Fair Launch",
+    "context": "Title",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cardano.summary.points.1.description",
+    "source": "No ICO, no premine, no VC allocation - Ergo",
+    "context": "Description",
+    "maxLength": 64.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cardano.summary.points.2.title",
+    "source": "Storage Rent",
+    "context": "Title",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cardano.summary.points.2.description",
+    "source": "Protocol-level sustainability mechanism that Cardano lacks",
+    "context": "Description",
+    "maxLength": 87,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cardano.summary.points.3.title",
+    "source": "Native Privacy",
+    "context": "Title",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cardano.summary.points.3.description",
+    "source": "Sigma Protocols built-in vs Cardano",
+    "context": "Description",
+    "maxLength": 52.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cardano.sections.0.title",
+    "source": "Consensus Philosophy",
+    "context": "Title",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cardano.sections.0.content",
+    "source": "Cardano chose Proof-of-Stake for energy efficiency and scalability. Ergo chose Proof-of-Work for censorship resistance, fair distribution, and proven security. Both are valid choices with different tradeoffs.",
+    "context": "General content",
+    "maxLength": 312,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cardano.sections.0.ergoAdvantage",
+    "source": "PoW means anyone can participate in consensus without minimum stake requirements or delegation.",
+    "context": "General content",
+    "maxLength": 142.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cardano.sections.1.title",
+    "source": "Token Distribution",
+    "context": "Title",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cardano.sections.1.content",
+    "source": "Cardano had an ICO and foundation allocation. Ergo had no ICO, no premine, and no VC investors. All ERG is earned through mining, similar to Bitcoin",
+    "context": "General content",
+    "maxLength": 222,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cardano.sections.1.ergoAdvantage",
+    "source": "No insider advantage. Everyone competes on equal terms from day one.",
+    "context": "General content",
+    "maxLength": 102,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cardano.sections.2.title",
+    "source": "Privacy Approach",
+    "context": "Title",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cardano.sections.2.content",
+    "source": "Cardano is developing Midnight as a separate privacy sidechain. Ergo has Sigma Protocols built into the base layer, enabling privacy features on the main chain without additional infrastructure.",
+    "context": "General content",
+    "maxLength": 291,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cardano.sections.2.ergoAdvantage",
+    "source": "Privacy is a first-class feature, not an afterthought on a separate chain.",
+    "context": "General content",
+    "maxLength": 111,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cardano.faq.0.question",
+    "source": "How does Ergo compare to Cardano?",
+    "context": "FAQ content",
+    "maxLength": 49.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cardano.faq.0.answer",
+    "source": "Both use eUTXO, but Ergo has PoW consensus, fair launch tokenomics, native privacy via Sigma Protocols, and storage rent for sustainability. Cardano has a larger ecosystem but different philosophical choices.",
+    "context": "FAQ content",
+    "maxLength": 312,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cardano.faq.1.question",
+    "source": "Is Ergo related to Cardano?",
+    "context": "FAQ content",
+    "maxLength": 40.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cardano.faq.1.answer",
+    "source": "Yes, historically. Ergo and Cardano both use UTXO-family design ideas and have overlapping research lineage, but they are independent networks with different consensus, governance, and ecosystem choices.",
+    "context": "FAQ content",
+    "maxLength": 304.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cardano.faq.2.question",
+    "source": "Which is better for DeFi, Ergo or Cardano?",
+    "context": "FAQ content",
+    "maxLength": 63,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cardano.faq.2.answer",
+    "source": "Both support DeFi on eUTXO. Ergo has pioneering references such as ErgoDEX/Spectrum and SigmaUSD, while Cardano has a larger live DeFi ecosystem. The better choice depends on whether you value Ergo's PoW/fair-launch design and smaller experimental surface or Cardano's larger liquidity and app count.",
+    "context": "FAQ content",
+    "maxLength": 450,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.monero.name",
+    "source": "Monero",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.monero.seoTitle",
+    "source": "Ergo vs Monero 2025: Privacy Approaches Compared",
+    "context": "General content",
+    "maxLength": 72,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.monero.seoDescription",
+    "source": "Compare Ergo and Monero privacy: Sigma Protocols vs Ring Signatures, optional vs mandatory privacy, smart contracts, and regulatory considerations.",
+    "context": "General content",
+    "maxLength": 220.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.monero.summary.headline",
+    "source": "Privacy: Mandatory vs Programmable",
+    "context": "General content",
+    "maxLength": 51,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.monero.summary.subheadline",
+    "source": "Monero enforces privacy by default. Ergo offers programmable privacy with selective disclosure.",
+    "context": "General content",
+    "maxLength": 142.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.monero.summary.points.0.title",
+    "source": "Programmable Privacy",
+    "context": "Title",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.monero.summary.points.0.description",
+    "source": "Ergo",
+    "context": "Description",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.monero.summary.points.1.title",
+    "source": "Smart Contracts",
+    "context": "Title",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.monero.summary.points.1.description",
+    "source": "Full DeFi capabilities that Monero",
+    "context": "Description",
+    "maxLength": 51,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.monero.summary.points.2.title",
+    "source": "Regulatory Flexibility",
+    "context": "Title",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.monero.summary.points.2.description",
+    "source": "Optional privacy with audit capabilities vs mandatory opacity",
+    "context": "Description",
+    "maxLength": 91.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.monero.summary.points.3.title",
+    "source": "Fair Launch",
+    "context": "Title",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.monero.summary.points.3.description",
+    "source": "Both had fair launches with no premine - aligned cypherpunk values",
+    "context": "Description",
+    "maxLength": 99,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.monero.sections.0.title",
+    "source": "Privacy Philosophy",
+    "context": "Title",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.monero.sections.0.content",
+    "source": "Monero believes privacy should be mandatory and universal - every transaction is private. Ergo believes privacy should be programmable - users choose their privacy level and can prove specific properties without revealing everything.",
+    "context": "General content",
+    "maxLength": 349.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.monero.sections.0.ergoAdvantage",
+    "source": "Selective disclosure enables use cases like tax compliance proofs, age verification, or credit checks without full transparency.",
+    "context": "General content",
+    "maxLength": 192,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.monero.sections.1.title",
+    "source": "Smart Contract Capabilities",
+    "context": "Title",
+    "maxLength": 40.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.monero.sections.1.content",
+    "source": "Monero",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.monero.sections.1.ergoAdvantage",
+    "source": "Private DEXs, lending protocols, and stablecoins are possible on Ergo but not on Monero.",
+    "context": "General content",
+    "maxLength": 132,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.monero.sections.2.title",
+    "source": "Regulatory Landscape",
+    "context": "Title",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.monero.sections.2.content",
+    "source": "Monero has been delisted from many exchanges due to regulatory pressure on mandatory privacy coins. Ergo",
+    "context": "General content",
+    "maxLength": 156,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.monero.sections.2.ergoAdvantage",
+    "source": "Better exchange accessibility while maintaining privacy capabilities for those who need them.",
+    "context": "General content",
+    "maxLength": 139.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.monero.faq.0.question",
+    "source": "Is Ergo a privacy coin like Monero?",
+    "context": "FAQ content",
+    "maxLength": 52.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.monero.faq.0.answer",
+    "source": "Ergo has strong privacy capabilities via Sigma Protocols, but privacy is optional rather than mandatory. This gives users choice and enables smart contracts that Monero can",
+    "context": "FAQ content",
+    "maxLength": 258,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.monero.faq.1.question",
+    "source": "Which is more private, Ergo or Monero?",
+    "context": "FAQ content",
+    "maxLength": 57,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.monero.faq.1.answer",
+    "source": "Monero provides stronger default privacy since all transactions are private. Ergo provides programmable privacy - potentially very strong when used, but optional. Different tools for different needs.",
+    "context": "FAQ content",
+    "maxLength": 298.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.monero.faq.2.question",
+    "source": "Can Ergo be used for private transactions?",
+    "context": "FAQ content",
+    "maxLength": 63,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.monero.faq.2.answer",
+    "source": "Yes. ErgoMixer and Sigma Protocols enable private transactions. The difference is that Ergo users choose when to use privacy features rather than having them enforced.",
+    "context": "FAQ content",
+    "maxLength": 250.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.zcash.name",
+    "source": "Zcash",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.zcash.seoTitle",
+    "source": "Ergo vs Zcash 2025: Sigma Protocols vs zk-SNARKs Privacy",
+    "context": "General content",
+    "maxLength": 84,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.zcash.seoDescription",
+    "source": "Compare Ergo and Zcash: Sigma Protocols vs zk-SNARKs, no trusted setup, smart contracts, fair launch vs founders reward.",
+    "context": "General content",
+    "maxLength": 180,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.zcash.summary.headline",
+    "source": "Zero-Knowledge Without Trusted Setup",
+    "context": "General content",
+    "maxLength": 54,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.zcash.summary.subheadline",
+    "source": "Both enable ZK proofs, but Ergo",
+    "context": "General content",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.zcash.summary.points.0.title",
+    "source": "No Trusted Setup",
+    "context": "Title",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.zcash.summary.points.0.description",
+    "source": "Sigma Protocols don",
+    "context": "Description",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.zcash.summary.points.1.title",
+    "source": "Smart Contracts",
+    "context": "Title",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.zcash.summary.points.1.description",
+    "source": "Full DeFi capabilities vs Zcash",
+    "context": "Description",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.zcash.summary.points.2.title",
+    "source": "Fair Launch",
+    "context": "Title",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.zcash.summary.points.2.description",
+    "source": "No founders reward or dev tax - all coins earned through mining",
+    "context": "Description",
+    "maxLength": 94.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.zcash.summary.points.3.title",
+    "source": "Composable Privacy",
+    "context": "Title",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.zcash.summary.points.3.description",
+    "source": "Privacy features work with smart contracts, not just transfers",
+    "context": "Description",
+    "maxLength": 93,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.zcash.sections.0.title",
+    "source": "Trusted Setup Concern",
+    "context": "Title",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.zcash.sections.0.content",
+    "source": "Zcash",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.zcash.sections.0.ergoAdvantage",
+    "source": "Mathematical security without ceremony trust assumptions.",
+    "context": "General content",
+    "maxLength": 85.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.zcash.sections.1.title",
+    "source": "Tokenomics",
+    "context": "Title",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.zcash.sections.1.content",
+    "source": "Zcash had a 20% ",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.zcash.sections.1.ergoAdvantage",
+    "source": "Aligned incentives with no insider advantages.",
+    "context": "General content",
+    "maxLength": 69,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.zcash.faq.0.question",
+    "source": "How is Ergo",
+    "context": "FAQ content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.zcash.faq.0.answer",
+    "source": "Ergo uses Sigma Protocols (no trusted setup needed), while Zcash uses zk-SNARKs (required trusted setup). Ergo also has full smart contracts while Zcash is limited to transfers.",
+    "context": "FAQ content",
+    "maxLength": 265.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.zcash.faq.1.question",
+    "source": "Which has better privacy technology?",
+    "context": "FAQ content",
+    "maxLength": 54,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.zcash.faq.1.answer",
+    "source": "Both are cryptographically sound. zk-SNARKs produce smaller proofs but require trusted setup. Sigma Protocols have no setup risk but larger proofs. Ergo",
+    "context": "FAQ content",
+    "maxLength": 228,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.solana.name",
+    "source": "Solana",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.solana.seoTitle",
+    "source": "Ergo vs Solana 2025: Decentralization vs Speed Tradeoffs",
+    "context": "General content",
+    "maxLength": 84,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.solana.seoDescription",
+    "source": "Compare Ergo and Solana: PoW vs PoS, decentralization vs TPS, fair launch vs VC funding, and sustainability approaches.",
+    "context": "General content",
+    "maxLength": 178.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.solana.summary.headline",
+    "source": "Decentralization Over Speed Theater",
+    "context": "General content",
+    "maxLength": 52.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.solana.summary.subheadline",
+    "source": "Solana optimizes for TPS. Ergo optimizes for decentralization, security, and sustainability.",
+    "context": "General content",
+    "maxLength": 138,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.solana.summary.points.0.title",
+    "source": "True Decentralization",
+    "context": "Title",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.solana.summary.points.0.description",
+    "source": "GPU mining vs validator hardware requirements that cost $50K+",
+    "context": "Description",
+    "maxLength": 91.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.solana.summary.points.1.title",
+    "source": "No VC Control",
+    "context": "Title",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.solana.summary.points.1.description",
+    "source": "Fair launch vs massive VC/insider allocation",
+    "context": "Description",
+    "maxLength": 66,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.solana.summary.points.2.title",
+    "source": "Network Stability",
+    "context": "Title",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.solana.summary.points.2.description",
+    "source": "No outages vs Solana",
+    "context": "Description",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.solana.summary.points.3.title",
+    "source": "Sustainable Security",
+    "context": "Title",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.solana.summary.points.3.description",
+    "source": "Storage rent vs inflationary staking rewards",
+    "context": "Description",
+    "maxLength": 66,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.solana.sections.0.title",
+    "source": "Decentralization Reality",
+    "context": "Title",
+    "maxLength": 36,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.solana.sections.0.content",
+    "source": "Solana",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.solana.sections.0.ergoAdvantage",
+    "source": "Real decentralization means anyone can run a node and mine, not just well-funded validators.",
+    "context": "General content",
+    "maxLength": 138,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.solana.sections.1.title",
+    "source": "Token Distribution",
+    "context": "Title",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.solana.sections.1.content",
+    "source": "Solana had significant VC funding and insider allocation. Nearly 50% of tokens went to insiders before public availability. Ergo had no ICO, no premine, no VC - all tokens are mined.",
+    "context": "General content",
+    "maxLength": 273,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.solana.sections.1.ergoAdvantage",
+    "source": "No insider advantage. Fair competition from day one.",
+    "context": "General content",
+    "maxLength": 78,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.solana.sections.2.title",
+    "source": "Network Reliability",
+    "context": "Title",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.solana.sections.2.content",
+    "source": "Solana has experienced multiple extended outages, sometimes lasting 24+ hours. Ergo has maintained consistent uptime since launch, demonstrating the reliability of PoW consensus.",
+    "context": "General content",
+    "maxLength": 267,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.solana.sections.2.ergoAdvantage",
+    "source": "Battle-tested reliability vs experimental high-speed architecture.",
+    "context": "General content",
+    "maxLength": 99,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.solana.faq.0.question",
+    "source": "Why is Ergo slower than Solana?",
+    "context": "FAQ content",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.solana.faq.0.answer",
+    "source": "Ergo prioritizes security and decentralization over raw speed. Solana",
+    "context": "FAQ content",
+    "maxLength": 103.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.solana.faq.1.question",
+    "source": "Is Solana more decentralized than Ergo?",
+    "context": "FAQ content",
+    "maxLength": 58.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.solana.faq.1.answer",
+    "source": "No. Solana",
+    "context": "FAQ content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cbdc.name",
+    "source": "CBDCs",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cbdc.seoTitle",
+    "source": "Ergo vs CBDCs 2025: Decentralized Money vs Central Bank Digital Currencies",
+    "context": "General content",
+    "maxLength": 111,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cbdc.seoDescription",
+    "source": "Compare Ergo blockchain with Central Bank Digital Currencies: privacy, censorship resistance, programmable money, and financial freedom.",
+    "context": "General content",
+    "maxLength": 204,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cbdc.summary.headline",
+    "source": "Money Without Masters vs Programmable Control",
+    "context": "General content",
+    "maxLength": 67.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cbdc.summary.subheadline",
+    "source": "CBDCs give central banks unprecedented control. Ergo gives individuals financial sovereignty.",
+    "context": "General content",
+    "maxLength": 139.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cbdc.summary.points.0.title",
+    "source": "Privacy by Design",
+    "context": "Title",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cbdc.summary.points.0.description",
+    "source": "Sigma Protocols for privacy vs total surveillance capability",
+    "context": "Description",
+    "maxLength": 90,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cbdc.summary.points.1.title",
+    "source": "Censorship Resistance",
+    "context": "Title",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cbdc.summary.points.1.description",
+    "source": "Permissionless transactions vs freezable, controllable money",
+    "context": "Description",
+    "maxLength": 90,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cbdc.summary.points.2.title",
+    "source": "No Expiration",
+    "context": "Title",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cbdc.summary.points.2.description",
+    "source": "Your money doesn",
+    "context": "Description",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cbdc.summary.points.3.title",
+    "source": "Self-Custody",
+    "context": "Title",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cbdc.summary.points.3.description",
+    "source": "You hold your keys vs bank-controlled accounts",
+    "context": "Description",
+    "maxLength": 69,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cbdc.sections.0.title",
+    "source": "Surveillance vs Privacy",
+    "context": "Title",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cbdc.sections.0.content",
+    "source": "CBDCs give central banks complete visibility into every transaction. They can track, analyze, and profile all spending. Ergo",
+    "context": "General content",
+    "maxLength": 186,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cbdc.sections.0.ergoAdvantage",
+    "source": "Financial privacy is a human right. Ergo protects it; CBDCs eliminate it.",
+    "context": "General content",
+    "maxLength": 109.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cbdc.sections.1.title",
+    "source": "Programmable Control",
+    "context": "Title",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cbdc.sections.1.content",
+    "source": "CBDCs can be programmed with spending restrictions, expiration dates, geographic limits, and approved merchant lists. Your money becomes a tool of control. Ergo",
+    "context": "General content",
+    "maxLength": 240,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cbdc.sections.1.ergoAdvantage",
+    "source": "Smart contracts that empower users, not restrict them.",
+    "context": "General content",
+    "maxLength": 81,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cbdc.sections.2.title",
+    "source": "Financial Sovereignty",
+    "context": "Title",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cbdc.sections.2.content",
+    "source": "With CBDCs, your money exists at the pleasure of the central bank. It can be frozen, seized, or devalued at will. Ergo enables true self-custody where only you control your funds.",
+    "context": "General content",
+    "maxLength": 268.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cbdc.sections.2.ergoAdvantage",
+    "source": "Not your keys, not your coins. Ergo ensures your keys, your coins.",
+    "context": "General content",
+    "maxLength": 99,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cbdc.faq.0.question",
+    "source": "Why should I care about CBDCs?",
+    "context": "FAQ content",
+    "maxLength": 45,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cbdc.faq.0.answer",
+    "source": "CBDCs give governments unprecedented control over money: surveillance of all transactions, ability to freeze accounts, programmable restrictions, and potential negative interest rates. They",
+    "context": "FAQ content",
+    "maxLength": 283.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cbdc.faq.1.question",
+    "source": "How does Ergo protect against CBDC-style control?",
+    "context": "FAQ content",
+    "maxLength": 73.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cbdc.faq.1.answer",
+    "source": "Ergo is decentralized (no central authority), private (Sigma Protocols), censorship-resistant (PoW mining), and self-custodial (you hold your keys). No one can freeze, expire, or restrict your ERG.",
+    "context": "FAQ content",
+    "maxLength": 295.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cbdc.faq.2.question",
+    "source": "Can Ergo and CBDCs coexist?",
+    "context": "FAQ content",
+    "maxLength": 40.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.cbdc.faq.2.answer",
+    "source": "Yes, but they serve opposite purposes. CBDCs are tools of control; Ergo is a tool of freedom. As CBDCs roll out, alternatives like Ergo become more important for preserving financial autonomy.",
+    "context": "FAQ content",
+    "maxLength": 288,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.vc-chains.name",
+    "source": "VC-Funded Chains",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.vc-chains.seoTitle",
+    "source": "Ergo vs VC-Funded Blockchains 2025: Fair Launch vs Insider Allocation",
+    "context": "General content",
+    "maxLength": 103.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.vc-chains.seoDescription",
+    "source": "Compare Ergo",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.vc-chains.summary.headline",
+    "source": "Built for Users, Not Investors",
+    "context": "General content",
+    "maxLength": 45,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.vc-chains.summary.subheadline",
+    "source": "VC chains optimize for investor returns. Ergo optimizes for user empowerment.",
+    "context": "General content",
+    "maxLength": 115.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.vc-chains.summary.points.0.title",
+    "source": "Fair Distribution",
+    "context": "Title",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.vc-chains.summary.points.0.description",
+    "source": "All ERG is mined - no insider allocation, no ICO, no premine",
+    "context": "Description",
+    "maxLength": 90,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.vc-chains.summary.points.1.title",
+    "source": "Aligned Incentives",
+    "context": "Title",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.vc-chains.summary.points.1.description",
+    "source": "No VCs demanding returns, pivots, or token unlocks",
+    "context": "Description",
+    "maxLength": 75,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.vc-chains.summary.points.2.title",
+    "source": "Community Governance",
+    "context": "Title",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.vc-chains.summary.points.2.description",
+    "source": "Decisions made by users and miners, not boardrooms",
+    "context": "Description",
+    "maxLength": 75,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.vc-chains.summary.points.3.title",
+    "source": "Long-term Focus",
+    "context": "Title",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.vc-chains.summary.points.3.description",
+    "source": "Building sustainable technology, not pumping for exits",
+    "context": "Description",
+    "maxLength": 81,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.vc-chains.sections.0.title",
+    "source": "Token Distribution",
+    "context": "Title",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.vc-chains.sections.0.content",
+    "source": "Typical VC chains allocate 40-60% of tokens to insiders: founders, team, advisors, and VCs. These tokens unlock over time, creating constant sell pressure. Ergo has zero insider allocation - all ERG is mined through PoW.",
+    "context": "General content",
+    "maxLength": 330,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.vc-chains.sections.0.ergoAdvantage",
+    "source": "No token unlocks, no insider dumps. Supply is predictable and fair.",
+    "context": "General content",
+    "maxLength": 100.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.vc-chains.sections.1.title",
+    "source": "Incentive Alignment",
+    "context": "Title",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.vc-chains.sections.1.content",
+    "source": "VC-funded projects must deliver returns to investors. This often means prioritizing token price over technology, rushing to market, or pivoting away from original vision. Ergo",
+    "context": "General content",
+    "maxLength": 262.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.vc-chains.sections.1.ergoAdvantage",
+    "source": "Development focused on technology and users, not investor returns.",
+    "context": "General content",
+    "maxLength": 99,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.vc-chains.sections.2.title",
+    "source": "Governance Reality",
+    "context": "Title",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.vc-chains.sections.2.content",
+    "source": "Despite ",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.vc-chains.sections.2.ergoAdvantage",
+    "source": "Real decentralization in decision-making, not theater.",
+    "context": "General content",
+    "maxLength": 81,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.vc-chains.faq.0.question",
+    "source": "What",
+    "context": "FAQ content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.vc-chains.faq.0.answer",
+    "source": "VC funding creates misaligned incentives: projects must deliver investor returns, leading to token dumps, rushed development, and governance controlled by large stakeholders rather than users.",
+    "context": "FAQ content",
+    "maxLength": 288,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.vc-chains.faq.1.question",
+    "source": "How is Ergo funded without VCs?",
+    "context": "FAQ content",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.vc-chains.faq.1.answer",
+    "source": "Ergo has a treasury funded by a portion of block rewards (similar to Zcash",
+    "context": "FAQ content",
+    "maxLength": 111,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.vc-chains.faq.2.question",
+    "source": "Why does fair launch matter?",
+    "context": "FAQ content",
+    "maxLength": 42,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.vc-chains.faq.2.answer",
+    "source": "Fair launch means everyone competes on equal terms from day one. No insiders got tokens cheaper than you. This creates genuine decentralization and aligned community incentives.",
+    "context": "FAQ content",
+    "maxLength": 265.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.name",
+    "source": "Kaspa",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.seoTitle",
+    "source": "Ergo vs Kaspa 2025: Smart Contracts, Sustainability & PoW Compared",
+    "context": "General content",
+    "maxLength": 99,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.seoDescription",
+    "source": "Ergo vs Kaspa comparison: eUTXO smart contracts vs pure payments, storage rent vs no rent, privacy features, and long-term sustainability.",
+    "context": "General content",
+    "maxLength": 207,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.summary.headline",
+    "source": "Smart Contract PoW vs Speed-Focused PoW",
+    "context": "General content",
+    "maxLength": 58.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.summary.subheadline",
+    "source": "Both are fair-launched PoW chains, but Ergo adds smart contracts, privacy, and sustainability features Kaspa lacks.",
+    "context": "General content",
+    "maxLength": 172.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.summary.points.0.title",
+    "source": "Smart Contracts",
+    "context": "Title",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.summary.points.0.description",
+    "source": "Ergo has full smart contract support via ErgoScript; Kaspa is payments-only (smart contracts planned)",
+    "context": "Description",
+    "maxLength": 151.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.summary.points.1.title",
+    "source": "Privacy Features",
+    "context": "Title",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.summary.points.1.description",
+    "source": "Ergo offers Sigma Protocols and ErgoMixer; Kaspa has no native privacy",
+    "context": "Description",
+    "maxLength": 105,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.summary.points.2.title",
+    "source": "Long-term Sustainability",
+    "context": "Title",
+    "maxLength": 36,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.summary.points.2.description",
+    "source": "Ergo has storage rent for post-emission security; Kaspa relies on fees only",
+    "context": "Description",
+    "maxLength": 112.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.summary.points.3.title",
+    "source": "Light Clients",
+    "context": "Title",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.summary.points.3.description",
+    "source": "Ergo has NiPoPoWs for trustless light clients; Kaspa uses SPV",
+    "context": "Description",
+    "maxLength": 91.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.sections.0.title",
+    "source": "Smart Contract Capabilities",
+    "context": "Title",
+    "maxLength": 40.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.sections.0.content",
+    "source": "Ergo launched with full smart contract support via ErgoScript, enabling DEXs, stablecoins, lending, and complex DeFi. Kaspa launched as a pure payment chain with smart contracts on the roadmap but not yet implemented.",
+    "context": "General content",
+    "maxLength": 325.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.sections.0.ergoAdvantage",
+    "source": "Working DeFi ecosystem today vs promised future features.",
+    "context": "General content",
+    "maxLength": 85.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.sections.1.title",
+    "source": "Mining Accessibility",
+    "context": "Title",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.sections.1.content",
+    "source": "Ergo",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.sections.1.ergoAdvantage",
+    "source": "GPU mining remains viable, promoting decentralization.",
+    "context": "General content",
+    "maxLength": 81,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.sections.2.title",
+    "source": "Long-term Sustainability",
+    "context": "Title",
+    "maxLength": 36,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.sections.2.content",
+    "source": "Both chains will eventually run out of block rewards. Ergo",
+    "context": "General content",
+    "maxLength": 87,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.sections.2.ergoAdvantage",
+    "source": "Storage rent ensures sustainable security budget.",
+    "context": "General content",
+    "maxLength": 73.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.sections.3.title",
+    "source": "Speed vs Security Trade-off",
+    "context": "Title",
+    "maxLength": 40.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.sections.3.content",
+    "source": "Kaspa",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.sections.3.ergoAdvantage",
+    "source": "Simpler, battle-tested design with light client support.",
+    "context": "General content",
+    "maxLength": 84,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.faq.0.question",
+    "source": "Is Kaspa faster than Ergo?",
+    "context": "FAQ content",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.faq.0.answer",
+    "source": "Kaspa has faster block times (~1 sec vs ~2 min), but Ergo",
+    "context": "FAQ content",
+    "maxLength": 85.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.faq.1.question",
+    "source": "Does Kaspa have smart contracts?",
+    "context": "FAQ content",
+    "maxLength": 48,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.faq.1.answer",
+    "source": "Not yet. Kaspa launched as a pure payment chain. Smart contracts are on the roadmap but not implemented. Ergo has had full smart contracts since launch.",
+    "context": "FAQ content",
+    "maxLength": 228,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.faq.2.question",
+    "source": "Which is better for mining?",
+    "context": "FAQ content",
+    "maxLength": 40.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.faq.2.answer",
+    "source": "Ergo remains GPU-friendly due to ASIC-resistant Autolykos. Kaspa has seen ASIC development which may centralize mining over time.",
+    "context": "FAQ content",
+    "maxLength": 193.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.faq.3.question",
+    "source": "Which has better long-term economics?",
+    "context": "FAQ content",
+    "maxLength": 55.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.kaspa.faq.3.answer",
+    "source": "Ergo",
+    "context": "FAQ content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.name",
+    "source": "Ravencoin",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.seoTitle",
+    "source": "Ergo vs Ravencoin 2025: Smart Contracts, Privacy & Token Features Compared",
+    "context": "General content",
+    "maxLength": 111,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.seoDescription",
+    "source": "Ergo vs Ravencoin comparison: eUTXO smart contracts vs asset-focused scripting, privacy features, DeFi capabilities, and sustainability.",
+    "context": "General content",
+    "maxLength": 204,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.summary.headline",
+    "source": "Full DeFi Platform vs Asset-Focused Chain",
+    "context": "General content",
+    "maxLength": 61.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.summary.subheadline",
+    "source": "Both enable native tokens on PoW, but Ergo adds smart contracts, privacy, and DeFi that Ravencoin can",
+    "context": "General content",
+    "maxLength": 151.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.summary.points.0.title",
+    "source": "Smart Contracts",
+    "context": "Title",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.summary.points.0.description",
+    "source": "Ergo has Turing-incomplete but powerful ErgoScript; Ravencoin has limited asset scripts",
+    "context": "Description",
+    "maxLength": 130.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.summary.points.1.title",
+    "source": "DeFi Capabilities",
+    "context": "Title",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.summary.points.1.description",
+    "source": "Ergo supports DEXs, lending, stablecoins; Ravencoin is asset issuance only",
+    "context": "Description",
+    "maxLength": 111,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.summary.points.2.title",
+    "source": "Privacy",
+    "context": "Title",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.summary.points.2.description",
+    "source": "Ergo has Sigma Protocols; Ravencoin has no privacy features",
+    "context": "Description",
+    "maxLength": 88.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.summary.points.3.title",
+    "source": "Sustainability",
+    "context": "Title",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.summary.points.3.description",
+    "source": "Ergo has storage rent; Ravencoin has no long-term security mechanism",
+    "context": "Description",
+    "maxLength": 102,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.sections.0.title",
+    "source": "Smart Contract Power",
+    "context": "Title",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.sections.0.content",
+    "source": "Ravencoin was designed specifically for asset issuance with limited scripting. Ergo",
+    "context": "General content",
+    "maxLength": 124.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.sections.0.ergoAdvantage",
+    "source": "Full DeFi capabilities vs simple asset transfers.",
+    "context": "General content",
+    "maxLength": 73.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.sections.1.title",
+    "source": "Token Capabilities",
+    "context": "Title",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.sections.1.content",
+    "source": "Both support native tokens without smart contracts. Ravencoin has unique features like messaging and restricted assets. Ergo tokens can participate in complex DeFi protocols and smart contracts.",
+    "context": "General content",
+    "maxLength": 291,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.sections.1.ergoAdvantage",
+    "source": "Tokens can be used in DeFi, not just transferred.",
+    "context": "General content",
+    "maxLength": 73.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.sections.2.title",
+    "source": "Privacy Features",
+    "context": "Title",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.sections.2.content",
+    "source": "Ravencoin has no privacy features. Ergo provides Sigma Protocols for zero-knowledge proofs and ErgoMixer for transaction mixing, enabling private transfers when needed.",
+    "context": "General content",
+    "maxLength": 252,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.sections.2.ergoAdvantage",
+    "source": "Optional privacy for sensitive transactions.",
+    "context": "General content",
+    "maxLength": 66,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.sections.3.title",
+    "source": "Long-term Viability",
+    "context": "Title",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.sections.3.content",
+    "source": "Both face the post-emission challenge. Ergo",
+    "context": "General content",
+    "maxLength": 64.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.sections.3.ergoAdvantage",
+    "source": "Storage rent ensures long-term security budget.",
+    "context": "General content",
+    "maxLength": 70.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.faq.0.question",
+    "source": "Is Ravencoin better for tokens than Ergo?",
+    "context": "FAQ content",
+    "maxLength": 61.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.faq.0.answer",
+    "source": "Ravencoin has specialized token features like messaging and restricted assets. But Ergo tokens can participate in DeFi (DEXs, lending, etc.), making them more useful overall.",
+    "context": "FAQ content",
+    "maxLength": 261,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.faq.1.question",
+    "source": "Which is better for mining?",
+    "context": "FAQ content",
+    "maxLength": 40.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.faq.1.answer",
+    "source": "Both are GPU-mineable. Ravencoin uses KAWPOW, Ergo uses Autolykos. Both resist ASICs, though market conditions affect profitability.",
+    "context": "FAQ content",
+    "maxLength": 198,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.faq.2.question",
+    "source": "Can Ravencoin do DeFi?",
+    "context": "FAQ content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.faq.2.answer",
+    "source": "No. Ravencoin",
+    "context": "FAQ content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.faq.3.question",
+    "source": "Which has a larger community?",
+    "context": "FAQ content",
+    "maxLength": 43.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.ravencoin.faq.3.answer",
+    "source": "Ravencoin has been around longer and has a larger market cap. Ergo has a more technically active community building DeFi and tools.",
+    "context": "FAQ content",
+    "maxLength": 196.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.name",
+    "source": "Litecoin",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.seoTitle",
+    "source": "Ergo vs Litecoin 2025: Smart Contracts, Privacy & Features Compared",
+    "context": "General content",
+    "maxLength": 100.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.seoDescription",
+    "source": "Ergo vs Litecoin comparison: eUTXO smart contracts vs simple payments, Sigma Protocols vs MWEB privacy, and DeFi capabilities.",
+    "context": "General content",
+    "maxLength": 189,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.summary.headline",
+    "source": "Modern Smart Contract PoW vs Classic Payment Coin",
+    "context": "General content",
+    "maxLength": 73.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.summary.subheadline",
+    "source": "Litecoin is digital silver to Bitcoin",
+    "context": "General content",
+    "maxLength": 55.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.summary.points.0.title",
+    "source": "Smart Contracts",
+    "context": "Title",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.summary.points.0.description",
+    "source": "Ergo has full ErgoScript contracts; Litecoin has Bitcoin-like limited scripting",
+    "context": "Description",
+    "maxLength": 118.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.summary.points.1.title",
+    "source": "Privacy Approach",
+    "context": "Title",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.summary.points.1.description",
+    "source": "Ergo uses Sigma Protocols (ZK proofs); Litecoin added MWEB (MimbleWimble)",
+    "context": "Description",
+    "maxLength": 109.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.summary.points.2.title",
+    "source": "DeFi",
+    "context": "Title",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.summary.points.2.description",
+    "source": "Ergo has active DEXs and stablecoins; Litecoin has no DeFi",
+    "context": "Description",
+    "maxLength": 87,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.summary.points.3.title",
+    "source": "Innovation",
+    "context": "Title",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.summary.points.3.description",
+    "source": "Ergo: research-driven with novel features; Litecoin: conservative Bitcoin fork",
+    "context": "Description",
+    "maxLength": 117,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.sections.0.title",
+    "source": "Purpose & Vision",
+    "context": "Title",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.sections.0.content",
+    "source": "Litecoin was created as ",
+    "context": "General content",
+    "maxLength": 36,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.sections.0.ergoAdvantage",
+    "source": "Built for DeFi and programmable money from day one.",
+    "context": "General content",
+    "maxLength": 76.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.sections.1.title",
+    "source": "Smart Contract Capabilities",
+    "context": "Title",
+    "maxLength": 40.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.sections.1.content",
+    "source": "Litecoin has Bitcoin-like scripting - useful for basic multi-sig but not DeFi. Ergo",
+    "context": "General content",
+    "maxLength": 124.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.sections.1.ergoAdvantage",
+    "source": "Full DeFi capabilities vs payment-only functionality.",
+    "context": "General content",
+    "maxLength": 79.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.sections.2.title",
+    "source": "Privacy Features",
+    "context": "Title",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.sections.2.content",
+    "source": "Litecoin added MWEB (MimbleWimble Extension Blocks) for optional privacy. Ergo uses Sigma Protocols enabling zero-knowledge proofs. Both offer opt-in privacy with different technical approaches.",
+    "context": "General content",
+    "maxLength": 291,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.sections.2.ergoAdvantage",
+    "source": "Sigma Protocols are more flexible for smart contract privacy.",
+    "context": "General content",
+    "maxLength": 91.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.sections.3.title",
+    "source": "Mining Decentralization",
+    "context": "Title",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.sections.3.content",
+    "source": "Litecoin mining is dominated by ASICs, concentrating hash power. Ergo",
+    "context": "General content",
+    "maxLength": 103.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.sections.3.ergoAdvantage",
+    "source": "More decentralized mining participation.",
+    "context": "General content",
+    "maxLength": 60,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.faq.0.question",
+    "source": "Is Litecoin faster than Ergo?",
+    "context": "FAQ content",
+    "maxLength": 43.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.faq.0.answer",
+    "source": "Slightly - 2.5 min vs 2 min blocks. But for DeFi, Ergo",
+    "context": "FAQ content",
+    "maxLength": 81,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.faq.1.question",
+    "source": "Which has better privacy?",
+    "context": "FAQ content",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.faq.1.answer",
+    "source": "Different approaches. Litecoin uses MWEB (MimbleWimble), Ergo uses Sigma Protocols. Ergo",
+    "context": "FAQ content",
+    "maxLength": 132,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.faq.2.question",
+    "source": "Can I do DeFi on Litecoin?",
+    "context": "FAQ content",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.faq.2.answer",
+    "source": "No. Litecoin",
+    "context": "FAQ content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.faq.3.question",
+    "source": "Which is more decentralized?",
+    "context": "FAQ content",
+    "maxLength": 42,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.litecoin.faq.3.answer",
+    "source": "Ergo, due to ASIC-resistant mining. Litecoin mining is dominated by ASIC farms, while Ergo remains GPU-mineable.",
+    "context": "FAQ content",
+    "maxLength": 168,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.name",
+    "source": "Avalanche",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.seoTitle",
+    "source": "Ergo vs Avalanche 2025: Fair Launch PoW vs VC-Funded PoS Compared",
+    "context": "General content",
+    "maxLength": 97.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.seoDescription",
+    "source": "Ergo vs Avalanche comparison: fair launch vs VC funding, ASIC-resistant PoW vs PoS, eUTXO vs account model, and true decentralization.",
+    "context": "General content",
+    "maxLength": 201,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.summary.headline",
+    "source": "Grassroots PoW vs VC-Backed PoS",
+    "context": "General content",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.summary.subheadline",
+    "source": "Avalanche raised $290M+ from VCs with insider allocations. Ergo had zero pre-mine, zero VC money - just fair mining from block 1.",
+    "context": "General content",
+    "maxLength": 193.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.summary.points.0.title",
+    "source": "Token Distribution",
+    "context": "Title",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.summary.points.0.description",
+    "source": "Ergo: 100% mined, no pre-mine. Avalanche: 50% to insiders/team/foundation",
+    "context": "Description",
+    "maxLength": 109.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.summary.points.1.title",
+    "source": "Consensus",
+    "context": "Title",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.summary.points.1.description",
+    "source": "Ergo: GPU-mineable PoW. Avalanche: PoS requiring 2000 AVAX ($50K+) to validate",
+    "context": "Description",
+    "maxLength": 117,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.summary.points.2.title",
+    "source": "Censorship Resistance",
+    "context": "Title",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.summary.points.2.description",
+    "source": "Ergo: permissionless mining. Avalanche: validators can be identified and pressured",
+    "context": "Description",
+    "maxLength": 123,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.summary.points.3.title",
+    "source": "MEV Protection",
+    "context": "Title",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.summary.points.3.description",
+    "source": "Ergo: reduced front-running surface by design. Avalanche: MEV extraction is possible",
+    "context": "Description",
+    "maxLength": 126,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.sections.0.title",
+    "source": "Token Distribution & Fairness",
+    "context": "Title",
+    "maxLength": 43.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.sections.0.content",
+    "source": "Avalanche conducted multiple funding rounds, raising over $290M from VCs including Andreessen Horowitz, Polychain, and Three Arrows Capital. Approximately 50% of tokens went to team, foundation, and investors. Ergo had zero pre-mine, zero ICO - every ERG was mined through PoW, ensuring no insider advantage.",
+    "context": "General content",
+    "maxLength": 462,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.sections.0.ergoAdvantage",
+    "source": "True fair launch with no insider allocation or VC influence.",
+    "context": "General content",
+    "maxLength": 90,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.sections.1.title",
+    "source": "Consensus & Censorship Resistance",
+    "context": "Title",
+    "maxLength": 49.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.sections.1.content",
+    "source": "Avalanche uses Proof-of-Stake where validators must stake 2000 AVAX (worth $50,000+). This creates barriers to entry and validators are identifiable, making them targets for regulatory pressure. Ergo",
+    "context": "General content",
+    "maxLength": 298.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.sections.1.ergoAdvantage",
+    "source": "Permissionless, anonymous participation in consensus.",
+    "context": "General content",
+    "maxLength": 79.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.sections.2.title",
+    "source": "MEV & Front-Running",
+    "context": "Title",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.sections.2.content",
+    "source": "Avalanche",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.sections.2.ergoAdvantage",
+    "source": "MEV-resistant by design extraction means fairer trading for users.",
+    "context": "General content",
+    "maxLength": 99,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.sections.3.title",
+    "source": "Smart Contract Model",
+    "context": "Title",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.sections.3.content",
+    "source": "Avalanche uses the EVM with Solidity - familiar to developers but with known issues (reentrancy, MEV). Ergo",
+    "context": "General content",
+    "maxLength": 160.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.sections.3.ergoAdvantage",
+    "source": "Safer smart contract execution model.",
+    "context": "General content",
+    "maxLength": 55.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.faq.0.question",
+    "source": "Is Avalanche faster than Ergo?",
+    "context": "FAQ content",
+    "maxLength": 45,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.faq.0.answer",
+    "source": "Yes, Avalanche has ~1 second finality vs Ergo",
+    "context": "FAQ content",
+    "maxLength": 67.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.faq.1.question",
+    "source": "Why does VC funding matter?",
+    "context": "FAQ content",
+    "maxLength": 40.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.faq.1.answer",
+    "source": "VC-backed chains have insiders who received tokens cheaply and may have influence over development. This creates misaligned incentives. Ergo",
+    "context": "FAQ content",
+    "maxLength": 210,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.faq.2.question",
+    "source": "Can I build the same apps on both?",
+    "context": "FAQ content",
+    "maxLength": 51,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.faq.2.answer",
+    "source": "Similar apps, different approaches. Avalanche uses Solidity/EVM, Ergo uses ErgoScript/eUTXO. Ergo",
+    "context": "FAQ content",
+    "maxLength": 145.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.faq.3.question",
+    "source": "Which is more decentralized?",
+    "context": "FAQ content",
+    "maxLength": 42,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.avalanche.faq.3.answer",
+    "source": "Ergo. Anyone can mine with a GPU anonymously. Avalanche requires staking $50K+ and validators are identifiable, making them targets for regulation.",
+    "context": "FAQ content",
+    "maxLength": 220.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.name",
+    "source": "Algorand",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.seoTitle",
+    "source": "Ergo vs Algorand 2025: Decentralized PoW vs Corporate PoS Compared",
+    "context": "General content",
+    "maxLength": 99,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.seoDescription",
+    "source": "Ergo vs Algorand comparison: grassroots PoW vs MIT-backed PoS, fair launch vs foundation control, and true decentralization vs corporate blockchain.",
+    "context": "General content",
+    "maxLength": 222,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.summary.headline",
+    "source": "Cypherpunk PoW vs Corporate PoS",
+    "context": "General content",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.summary.subheadline",
+    "source": "Algorand is MIT-backed with foundation-controlled tokenomics. Ergo is community-built with fair distribution and no central authority.",
+    "context": "General content",
+    "maxLength": 201,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.summary.points.0.title",
+    "source": "Governance",
+    "context": "Title",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.summary.points.0.description",
+    "source": "Ergo: community-driven. Algorand: foundation-controlled with relay node requirements",
+    "context": "Description",
+    "maxLength": 126,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.summary.points.1.title",
+    "source": "Token Distribution",
+    "context": "Title",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.summary.points.1.description",
+    "source": "Ergo: 100% mined. Algorand: foundation controls billions of ALGO",
+    "context": "Description",
+    "maxLength": 96,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.summary.points.2.title",
+    "source": "Consensus",
+    "context": "Title",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.summary.points.2.description",
+    "source": "Ergo: permissionless PoW. Algorand: Pure PoS with participation requirements",
+    "context": "Description",
+    "maxLength": 114,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.summary.points.3.title",
+    "source": "Philosophy",
+    "context": "Title",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.summary.points.3.description",
+    "source": "Ergo: cypherpunk, privacy-focused. Algorand: enterprise, compliance-friendly",
+    "context": "Description",
+    "maxLength": 114,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.sections.0.title",
+    "source": "Centralization Concerns",
+    "context": "Title",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.sections.0.content",
+    "source": "Algorand",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.sections.0.ergoAdvantage",
+    "source": "Fully decentralized with no foundation-controlled infrastructure.",
+    "context": "General content",
+    "maxLength": 97.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.sections.1.title",
+    "source": "Token Distribution",
+    "context": "Title",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.sections.1.content",
+    "source": "Algorand",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.sections.1.ergoAdvantage",
+    "source": "Fair distribution with no central entity controlling supply.",
+    "context": "General content",
+    "maxLength": 90,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.sections.2.title",
+    "source": "Philosophical Approach",
+    "context": "Title",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.sections.2.content",
+    "source": "Algorand positions itself for enterprise adoption with compliance-friendly features and academic backing from MIT. Ergo embraces cypherpunk values: privacy, censorship resistance, and financial sovereignty. Different target audiences, different design decisions.",
+    "context": "General content",
+    "maxLength": 393,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.sections.2.ergoAdvantage",
+    "source": "Built for individual freedom, not corporate compliance.",
+    "context": "General content",
+    "maxLength": 82.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.sections.3.title",
+    "source": "Smart Contract Capabilities",
+    "context": "Title",
+    "maxLength": 40.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.sections.3.content",
+    "source": "Algorand uses TEAL (Transaction Execution Approval Language) and PyTeal. Ergo uses ErgoScript. Both are capable but different. Ergo",
+    "context": "General content",
+    "maxLength": 196.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.sections.3.ergoAdvantage",
+    "source": "eUTXO model is safer for financial applications.",
+    "context": "General content",
+    "maxLength": 72,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.faq.0.question",
+    "source": "Is Algorand decentralized?",
+    "context": "FAQ content",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.faq.0.answer",
+    "source": "Partially. While anyone can run participation nodes, relay nodes are foundation-controlled. The foundation also controls significant token supply. Ergo is fully permissionless with no central infrastructure.",
+    "context": "FAQ content",
+    "maxLength": 310.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.faq.1.question",
+    "source": "Which is faster?",
+    "context": "FAQ content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.faq.1.answer",
+    "source": "Algorand has ~4 second finality vs Ergo",
+    "context": "FAQ content",
+    "maxLength": 58.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.faq.2.question",
+    "source": "Can both do DeFi?",
+    "context": "FAQ content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.faq.2.answer",
+    "source": "Yes, both support DeFi. Algorand has growing DeFi with TEAL contracts. Ergo has active DeFi with unique MEV resistance due to eUTXO model.",
+    "context": "FAQ content",
+    "maxLength": 207,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.faq.3.question",
+    "source": "Which is better for privacy?",
+    "context": "FAQ content",
+    "maxLength": 42,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.faq.3.answer",
+    "source": "Ergo. Sigma Protocols enable zero-knowledge proofs at L1. Algorand has no native privacy features and is designed to be compliance-friendly.",
+    "context": "FAQ content",
+    "maxLength": 210,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.faq.4.question",
+    "source": "Why choose Ergo over Algorand?",
+    "context": "FAQ content",
+    "maxLength": 45,
+    "translation": ""
+  },
+  {
+    "key": "compare.comparisonItems.algorand.faq.4.answer",
+    "source": "If you value true decentralization, privacy, fair distribution, and cypherpunk principles over speed and enterprise adoption, Ergo aligns better with those values.",
+    "context": "FAQ content",
+    "maxLength": 244.5,
+    "translation": ""
   }
 ]

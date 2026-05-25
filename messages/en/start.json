@@ -22,7 +22,7 @@
           },
           {
             "question": "Where can I buy ERG?",
-            "answer": "ERG is available on exchanges like KuCoin and Gate.io, or you can use decentralized exchanges like ErgoDEX for more privacy."
+            "answer": "ERG is available on exchanges like KuCoin and Gate.io, plus verified non-custodial routes where active liquidity exists. Historical DEX references like ErgoDEX/Spectrum are useful to study, but always verify current venue status before trading."
           },
           {
             "question": "Is Ergo suitable for beginners?",
@@ -113,10 +113,10 @@
               "buttonText": "Trade ERG on Gate.io"
             },
             {
-              "name": "ErgoDEX",
-              "type": "No KYC - ~0.3% fees",
-              "description": "Native Ergo DEX with full decentralization and privacy. Note: Ergo's on-chain liquidity is early-stage — check current depth and 24h volume before trading.",
-              "buttonText": "Open ErgoDEX"
+              "name": "ErgoDEX / Spectrum (historical)",
+              "type": "Historical reference",
+              "description": "Spectrum Finance issued a sunset notice and froze contracts in Feb 2024. Verify current active venues and liquidity before trading.",
+              "buttonText": "Review DeFi venues"
             }
           ],
           "disclaimer": "Links are informational. Do your own research. Trading involves risk."
@@ -510,7 +510,7 @@
               "items": [
                 {
                   "name": "Spectrum Finance",
-                  "description": "Decentralized exchange (DEX)",
+                  "description": "Historical DEX reference; verify current venues before trading",
                   "link": "https://spectrum.fi"
                 },
                 {
@@ -547,8 +547,8 @@
               "link": "/wallet"
             },
             {
-              "text": "Explore Spectrum Finance",
-              "link": "https://spectrum.fi"
+              "text": "Review current DeFi venues",
+              "link": "/use/defi"
             },
             {
               "text": "Learn About SigmaUSD",
@@ -597,7 +597,7 @@
                 },
                 {
                   "name": "Spectrum DEX",
-                  "description": "Decentralized trading",
+                  "description": "Historical DEX reference; verify current venues before trading",
                   "link": "https://spectrum.fi"
                 }
               ]
@@ -1884,10 +1884,10 @@
       "github_organization_link_https_github": "GitHub Organization\", link: \"https://github.com/ergoplatform",
       "network_and_defi_analytics_link_https_ergo_watch": "Network and DeFi analytics\", link: \"https://ergo.watch",
       "learn_about_sigmausd_stablecoin_link": "Learn about SigmaUSD Stablecoin\", link: \"/ecosystem/sigmausd",
-      "try_trading_on_spectrum_finance": "Try Trading on Spectrum Finance\", link: \"https://spectrum.fi",
+      "try_trading_on_spectrum_finance": "Review Current DeFi Venues\", link: \"/use/defi",
       "join_defi_discussions_on_discord": "Join DeFi Discussions on Discord\", link: \"https://discord.gg/ergo-platform",
       "defi_discord_channels_link_https": "DeFi Discord Channels\", link: \"https://discord.gg/ergo-platform",
-      "spectrum_finance_community_link_https_spectrum_fi": "Spectrum Finance Community\", link: \"https://spectrum.fi",
+      "spectrum_finance_community_link_https_spectrum_fi": "Spectrum Finance Historical Notice\", link: \"https://spectrum.fi/sunset-notice",
       "sigmausd_community_link_ecosystem_projects": "SigmaUSD Community\", link: \"/ecosystem/sigmausd",
       "read_the_ergo_whitepaper_link": "Read the Ergo Whitepaper\", link: \"/docs/introduction/research-whitepapers",
       "explore_the_ecosystem_link_ecosystem": "Explore the Ecosystem\", link: \"/ecosystem",
@@ -3002,7 +3002,7 @@
             "items": {
               "spectrum": {
                 "name": "Spectrum Finance",
-                "description": "Decentralized exchange (DEX)"
+                "description": "Historical DEX reference; verify current venues before trading"
               },
               "sigmausd": {
                 "name": "SigmaUSD",
@@ -3031,7 +3031,7 @@
         "next_steps": {
           "wallet": "Install Nautilus Wallet",
           "sigmausd": "Learn about SigmaUSD Stablecoin",
-          "spectrum": "Try Trading on Spectrum Finance",
+          "spectrum": "Review current DeFi venues",
           "discord": "Join DeFi Discussions on Discord"
         },
         "community": {

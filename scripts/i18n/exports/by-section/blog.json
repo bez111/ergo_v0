@@ -1,140 +1,163 @@
 [
   {
-    "key": "blog.title",
-    "value": "Blog",
+    "key": "blog.blog.title",
+    "source": "Blog",
     "context": "Title",
-    "maxLength": 6
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "blog.subtitle",
-    "value": "Latest news and updates",
+    "key": "blog.blog.subtitle",
+    "source": "Latest news and updates",
     "context": "General content",
-    "maxLength": 34.5
+    "maxLength": 34.5,
+    "translation": ""
   },
   {
-    "key": "blog.description",
-    "value": "Latest news and updates from Ergo",
+    "key": "blog.blog.description",
+    "source": "Latest news and updates from Ergo",
     "context": "Description",
-    "maxLength": 49.5
+    "maxLength": 49.5,
+    "translation": ""
   },
   {
-    "key": "blog.readMore",
-    "value": "Read More",
+    "key": "blog.blog.readMore",
+    "source": "Read More",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "blog.categories.technology",
-    "value": "Technology",
+    "key": "blog.blog.categories.technology",
+    "source": "Technology",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "blog.categories.ecosystem",
-    "value": "Ecosystem",
+    "key": "blog.blog.categories.ecosystem",
+    "source": "Ecosystem",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "blog.categories.community",
-    "value": "Community",
+    "key": "blog.blog.categories.community",
+    "source": "Community",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "blog.categories.announcements",
-    "value": "Announcements",
+    "key": "blog.blog.categories.announcements",
+    "source": "Announcements",
     "context": "General content",
-    "maxLength": 19.5
+    "maxLength": 19.5,
+    "translation": ""
   },
   {
-    "key": "blog.categories.all",
-    "value": "All Posts",
+    "key": "blog.blog.categories.all",
+    "source": "All Posts",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "blog.categories.development",
-    "value": "Development",
+    "key": "blog.blog.categories.development",
+    "source": "Development",
     "context": "General content",
-    "maxLength": 16.5
+    "maxLength": 16.5,
+    "translation": ""
   },
   {
-    "key": "blog.categories.technical",
-    "value": "Technical",
+    "key": "blog.blog.categories.technical",
+    "source": "Technical",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "blog.categories.education",
-    "value": "Education",
+    "key": "blog.blog.categories.education",
+    "source": "Education",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "blog.seo.title",
-    "value": "Blog - Ergo News & Updates | Ergo Platform",
-    "context": "SEO metadata - keep concise",
-    "maxLength": 63
+    "key": "blog.blog.seo.title",
+    "source": "Blog - Ergo News & Updates | Ergo Platform",
+    "context": "SEO metadata",
+    "maxLength": 63,
+    "translation": ""
   },
   {
-    "key": "blog.seo.description",
-    "value": "Read the latest news, updates, and insights from the Ergo blockchain team.",
-    "context": "SEO metadata - keep concise",
-    "maxLength": 111
+    "key": "blog.blog.seo.description",
+    "source": "Read the latest news, updates, and insights from the Ergo blockchain team.",
+    "context": "SEO metadata",
+    "maxLength": 111,
+    "translation": ""
   },
   {
-    "key": "blog.seo.keywords",
-    "value": "Ergo blog, blockchain news, updates, articles",
-    "context": "SEO metadata - keep concise",
-    "maxLength": 67.5
+    "key": "blog.blog.seo.keywords",
+    "source": "Ergo blog, blockchain news, updates, articles",
+    "context": "SEO metadata",
+    "maxLength": 67.5,
+    "translation": ""
   },
   {
-    "key": "blog.featured.title",
-    "value": "Featured Posts",
+    "key": "blog.blog.featured.title",
+    "source": "Featured Posts",
     "context": "Title",
-    "maxLength": 21
+    "maxLength": 21,
+    "translation": ""
   },
   {
-    "key": "blog.featured.readMore",
-    "value": "Read More",
+    "key": "blog.blog.featured.readMore",
+    "source": "Read More",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "blog.recent.title",
-    "value": "Recent Posts",
+    "key": "blog.blog.recent.title",
+    "source": "Recent Posts",
     "context": "Title",
-    "maxLength": 18
+    "maxLength": 18,
+    "translation": ""
   },
   {
-    "key": "blog.recent.viewAll",
-    "value": "View All Posts",
+    "key": "blog.blog.recent.viewAll",
+    "source": "View All Posts",
     "context": "General content",
-    "maxLength": 21
+    "maxLength": 21,
+    "translation": ""
   },
   {
-    "key": "blog.newsletter.title",
-    "value": "Subscribe to Newsletter",
+    "key": "blog.blog.newsletter.title",
+    "source": "Subscribe to Newsletter",
     "context": "Title",
-    "maxLength": 34.5
+    "maxLength": 34.5,
+    "translation": ""
   },
   {
-    "key": "blog.newsletter.description",
-    "value": "Get the latest updates delivered to your inbox",
+    "key": "blog.blog.newsletter.description",
+    "source": "Get the latest updates delivered to your inbox",
     "context": "Description",
-    "maxLength": 69
+    "maxLength": 69,
+    "translation": ""
   },
   {
-    "key": "blog.newsletter.placeholder",
-    "value": "Enter your email",
+    "key": "blog.blog.newsletter.placeholder",
+    "source": "Enter your email",
     "context": "Input placeholder",
-    "maxLength": 24
+    "maxLength": 24,
+    "translation": ""
   },
   {
-    "key": "blog.newsletter.subscribe",
-    "value": "Subscribe",
+    "key": "blog.blog.newsletter.subscribe",
+    "source": "Subscribe",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 13.5,
+    "translation": ""
   }
 ]

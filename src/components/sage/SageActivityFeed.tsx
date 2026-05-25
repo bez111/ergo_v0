@@ -17,6 +17,7 @@
 import { useEffect, useState } from "react"
 import Link from "next/link"
 import { ArrowUpRight, Sparkles } from "lucide-react"
+import { sageActivitySnapshot } from "@/lib/agent-economy/static-proof-snapshots"
 
 interface SageActivityEvent {
   txId: string
@@ -76,9 +77,13 @@ const TYPE_CHIP: Record<SageActivityEvent["type"], string> = {
   transfer: "border-white/10 bg-white/[0.02] text-gray-400",
 }
 
-export function SageActivityFeed() {
-  const [data, setData] = useState<SageActivityResponse | null>(null)
-  const [loading, setLoading] = useState(true)
+export function SageActivityFeed({
+  initialData = sageActivitySnapshot,
+}: {
+  initialData?: SageActivityResponse | null
+}) {
+  const [data, setData] = useState<SageActivityResponse | null>(initialData)
+  const [loading, setLoading] = useState(!initialData)
   const [now, setNow] = useState(() => Date.now())
 
   useEffect(() => {
@@ -126,10 +131,9 @@ export function SageActivityFeed() {
           Sage, on chain, right now
         </h2>
         <p className="text-base text-gray-400 max-w-2xl mb-10 leading-relaxed">
-          Sage is the concierge agent of this site — the same primitives the
-          page argues for, running in production. Every paid query settles
-          publicly. Below is the seller wallet&apos;s recent activity, fetched
-          live from the Ergo {network} explorer.
+          Sage is live on the production site as a testnet proof. Premium-shaped
+          turns can produce public Ergo {network} receipts, while mainnet and
+          payment-production claims remain closed until the audit gates open.
         </p>
 
         <div className="grid sm:grid-cols-3 gap-3 mb-8">

@@ -1,24 +1,24 @@
 {
   "seo": {
-    "defaultTitle": "Ergo — A Agentic Blockchain para Dinheiro Contratual",
-    "defaultDescription": "Ergo é a agentic blockchain — PoW + eUTXO + ErgoScript construída para pagamentos autônomos de agentes de IA, DeFi e dinheiro programável sem risco de contraparte.",
-    "keywords": "agentic blockchain, blockchain para agentes de IA, blockchain pagamentos IA autônomos, pagamentos agentes IA, ergo blockchain, criptomoeda, DeFi, contratos inteligentes, Ergo, eUTXO, prova de trabalho",
+    "defaultTitle": "Ergo — Public Proof Surface para trabalho autônomo",
+    "defaultDescription": "Ergo é uma camada de clearing PoW/eUTXO e uma superfície pública de prova para trabalho autônomo: aceitação programável, receipt bundles, wallet policy, DeFi e liquidação audit-gated.",
+    "keywords": "liquidação de trabalho autônomo, public proof surface, recibos verificáveis, wallet policy, agent economy, agentic blockchain, blockchain para agentes de IA, ergo blockchain, criptomoeda, DeFi, contratos inteligentes, Ergo, eUTXO, prova de trabalho",
     "home": {
       "meta": {
-        "title": "Ergo — A Agentic Blockchain | Smart Contracts PoW Resistentes a MEV",
-        "description": "A agentic blockchain para agentes de IA autônomos: PoW + eUTXO para DeFi, pagamentos de agentes de IA, privacidade e dinheiro sólido. Taxas baixas e previsíveis, sem pré-mineração, sem VC – construída por cypherpunks para a liberdade financeira.",
+        "title": "Ergo — Onde trabalho autônomo é pago, provado e liquidado",
+        "description": "Uma camada de clearing PoW/eUTXO e uma superfície pública de prova para trabalho autônomo: cotações, aceitação programável, receipt bundles, wallet policy e liquidação audit-gated.",
         "keywords": "agentic blockchain, blockchain para agentes de IA, blockchain pagamentos IA autônomos, pagamentos agentes IA, ergo blockchain, finanças descentralizadas, blockchain resistente a MEV, modelo eUTXO, dinheiro resistente à censura, mineração resistente a ASIC, criptomoeda com lançamento justo, dinheiro programável, soberania financeira, blockchain cypherpunk, DeFi, privacidade, dinheiro sólido, ergo agent economy",
         "og": {
-          "title": "Ergo — Peer-to-Peer Agent Economy",
-          "description": "A blockchain agêntica: PoW + eUTXO + ErgoScript para pagamentos autônomos de agentes de IA, crédito programável e comércio máquina-a-máquina sem confiança.",
+          "title": "Ergo — Public Proof Surface para trabalho autônomo",
+          "description": "PoW + eUTXO + ErgoScript para crédito programável, recibos verificáveis, wallet policy e liquidação de agentes audit-gated.",
           "siteName": "Ergo Blockchain",
-          "imageAlt": "Ergo — Peer-to-Peer Agent Economy"
+          "imageAlt": "Ergo — Public Proof Surface para trabalho autônomo"
         },
         "twitter": {
-          "title": "Ergo — Peer-to-Peer Agent Economy",
-          "description": "A blockchain agêntica: PoW + eUTXO para pagamentos autônomos de agentes de IA, crédito programável e comércio máquina-a-máquina. Sem KYC, sem bootstrapping de gas."
+          "title": "Ergo — Public Proof Surface para trabalho autônomo",
+          "description": "PoW + eUTXO para liquidação de trabalho autônomo: crédito programável, receipt bundles, wallet policy e claims de mainnet audit-gated."
         },
-        "heroImageAlt": "Ergo Platform — The Agentic Blockchain for Peer-to-Peer Agent Economy"
+        "heroImageAlt": "Ergo Platform — Public Proof Surface para trabalho autônomo"
       },
       "faq": {
         "items": [
@@ -28,19 +28,19 @@
           },
           {
             "question": "Como comprar ERG?",
-            "answer": "Você pode comprar ERG em exchanges como KuCoin, Gate.io, Bitpanda ou exchanges descentralizadas como Spectrum Finance. Primeiro crie uma carteira (Nautilus, SAFEW ou Ergo Mobile Wallet), compre ERG e transfira para o endereço da sua carteira."
+            "answer": "You can buy ERG on exchanges like KuCoin, Gate.io, or Bitpanda, and through verified non-custodial routes where active liquidity exists. Spectrum Finance is a historical Ergo DEX reference with a 2024 sunset notice, so verify current venues before trading. First get a wallet, then purchase ERG and withdraw to your wallet address."
           },
           {
             "question": "Ergo é um bom investimento?",
             "answer": "Ergo tem um fornecimento fixo de 97,7 M de ERG sem pré-mineração e com lançamento justo. É uma blockchain Proof-of-Work com tecnologia única (eUTXO, Sigma Protocols). Como em qualquer criptomoeda, faça sua própria pesquisa e invista apenas o que você pode se dar ao luxo de perder."
           },
           {
-            "question": "Por que Ergo é ideal para agentes de IA e pagamentos máquina-a-máquina?",
-            "answer": "O modelo eUTXO do Ergo fornece custos determinísticos — os agentes conhecem as taxas exatas antecipadamente. Babel Fees permite que os agentes paguem em qualquer token sem pré-carregar ERG. ErgoScript incorpora condições de aceitação diretamente nos pagamentos. Sem KYC, sem bootstrapping de gas, sem identidade persistente necessária. É a única blockchain com todas as quatro primitivas de pagamento para agentes no nível do protocolo."
+            "question": "Por que Ergo combina com liquidação de trabalho autônomo?",
+            "answer": "O modelo eUTXO do Ergo oferece custos determinísticos, ErgoScript pode codificar regras de aceitação, Babel Fees reduz a necessidade de pré-carregar o token nativo e workflows com recibos conectam pagamento, verificação e liquidação. O stack atual de agent economy permanece testnet-first até a abertura das audit gates."
           },
           {
             "question": "Como começar com Ergo?",
-            "answer": "1) Baixe uma carteira (Nautilus para navegador, Ergo Mobile Wallet para celular). 2) Guarde sua frase seed com segurança. 3) Adquira ERG em uma exchange ou DEX. 4) Explore apps DeFi como Spectrum Finance, SigmaUSD ou ErgoMixer."
+            "answer": "1) Download a wallet. 2) Back up your seed phrase securely. 3) Get ERG from an exchange or verified non-custodial route. 4) Explore SigmaUSD, ErgoMixer, NFTs, mining, and current DeFi venues after checking each project status."
           },
           {
             "question": "Quais carteiras suportam Ergo?",

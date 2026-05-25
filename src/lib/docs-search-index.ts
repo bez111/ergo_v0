@@ -352,7 +352,7 @@ export function buildDocsSearchIndex(): DocsSearchIndexItem[] {
     { title: "For Developers", href: "/developers", section: "Personas", excerpt: "Developer resources, SDKs, and smart contract guides", tags: ["Development", "ErgoScript", "SDK", "Smart Contracts"] },
     { title: "Freedom Seekers", href: "/hodlers", section: "Personas", excerpt: "Self-custody, privacy, wallets, ERG access and financial sovereignty", tags: ["Freedom", "Privacy", "Wallets", "Self-Custody"] },
     { title: "Cypherpunks", href: "/developers", section: "Personas", excerpt: "ErgoScript, Sigma protocols, smart-contract patterns and privacy-preserving dApps", tags: ["Cypherpunk", "ErgoScript", "Privacy", "Developers"] },
-    { title: "Agent Builders", href: "/agent-economy", section: "Personas", excerpt: "Accord, agent payments, programmable credit, demos and agent-economy metrics", tags: ["Agent Economy", "Accord", "x402", "MCP"] },
+    { title: "Agent Builders", href: "/agent-economy", section: "Personas", excerpt: "Accord, receipts, programmable credit, demos and agent-economy metrics", tags: ["Agent Economy", "Accord", "x402", "MCP"] },
     { title: "Community", href: "/start/community", section: "Personas", excerpt: "Join Ergo community channels, explore projects and read the manifesto", tags: ["Community", "No Premine", "Fair Launch", "Contributors"] },
     { title: "Use Cases", href: "/use", section: "Platform", excerpt: "Practical guides for wallets, DeFi, mining, bridges, and more", tags: ["DeFi", "Wallets", "Bridges", "Stablecoins"] },
     { title: "Technology", href: "/technology", section: "Platform", excerpt: "Ergo's technical foundations: eUTXO, ErgoScript, NIPoPoWs", tags: ["eUTXO", "ErgoScript", "NIPoPoWs", "Technology"] },

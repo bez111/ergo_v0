@@ -528,7 +528,7 @@
       "ergoMixer": {
         "title": "ErgoMixer",
         "subtitle": "Protocolo de Privacidad Sin Custodia",
-        "description": "ErgoMixer proporciona soluciones de privacidad de vanguardia usando protocolos Sigma y firmas de anillo. Disfruta de privacidad financiera completa manteniendo el cumplimiento regulatorio mediante características opcionales de transparencia.",
+        "description": "La privacidad en Ergo es opcional y puede apoyar flujos de divulgación selectiva. El cumplimiento legal real depende de la jurisdicción, la implementación y el proveedor de servicios que rodea al protocolo.",
         "cta": "APRENDER SOBRE PRIVACIDAD EN ERGO",
         "stats": {
           "mixedVolume": {

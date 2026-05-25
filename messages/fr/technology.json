@@ -763,7 +763,7 @@
             "icon": "DollarSign"
           },
           {
-            "title": "Spectrum DEX",
+            "title": "Historical DEX designs",
             "description": "Échange décentralisé utilisant des flux de prix pour les ordres à cours limité et les liquidations",
             "icon": "BarChart3"
           },
@@ -2211,7 +2211,7 @@
           "description": "Stablecoin algorithmique utilisant des flux de prix ERG/USD"
         },
         {
-          "title": "Spectrum DEX",
+          "title": "Historical DEX designs",
           "description": "Échange décentralisé avec des données de prix en temps réel"
         },
         {
@@ -2429,7 +2429,7 @@
       "confidential_collectibles": "Objets de collection confidentiels",
       "answer_text_ergo_offers_multiple": "Answer\",\n                text:\n                  \"Ergo offre de multiples fonctionnalités de confidentialité incluant les protocoles Sigma, les signatures en anneau, les preuves zéro-connaissance et les transactions confidentielles. Ces technologies permettent des transactions préservant la confidentialité tout en maintenant la sécurité et la conformité.",
       "answer_text_sigma_protocols_are": "Answer\",\n                text:\n                  \"Les protocoles Sigma sont des systèmes de preuve zéro-connaissance qui permettent de prouver des déclarations sur des valeurs secrètes sans révéler les valeurs elles-mêmes. Ils permettent l'authentification préservant la confidentialité et la validation des transactions.",
-      "answer_text_yes_ergo_s": "Answer\",\n                text:\n                  \"Oui, les fonctionnalités de confidentialité d'Ergo sont conçues pour être conformes à la réglementation. Elles offrent des capacités de divulgation sélective, permettant aux utilisateurs de révéler les détails des transactions lorsque requis tout en maintenant la confidentialité par défaut.",
+      "answer_text_yes_ergo_s": "La confidentialité d'Ergo est optionnelle et peut soutenir des workflows de divulgation sélective. La conformité juridique réelle dépend de la juridiction, de l'implémentation et du fournisseur de service autour du protocole.",
       "ergo_bakes_privacy_into_the": "Ergo intègre la confidentialité dans le protocole : protocoles Sigma, signatures en anneau/à seuil, ErgoMixer, actifs confidentiels et divulgation sélective.",
       "ergo_privacy_sigma_protocols_ring": "Confidentialité Ergo,Protocoles Sigma,signatures en anneau,preuves zéro-connaissance,ErgoMixer,transactions confidentielles",
       "prepare_funds_text_split_funds": "Préparer les fonds\", text: \"Divisez les fonds et évitez la réutilisation d'adresses.",
@@ -3327,8 +3327,8 @@
             "answer": "Les protocoles Sigma sont des systèmes de preuve à divulgation nulle de connaissance qui permettent de prouver des affirmations sur des valeurs secrètes sans révéler les valeurs elles-mêmes. Ils permettent une authentification préservant la confidentialité et une validation des transactions."
           },
           "regulatoryCompliant": {
-            "question": "Les fonctionnalités de confidentialité d'Ergo sont-elles conformes aux réglementations ?",
-            "answer": "Oui, les fonctionnalités de confidentialité d'Ergo sont conçues pour être conformes aux réglementations. Elles offrent des capacités de divulgation sélective, permettant aux utilisateurs de révéler les détails des transactions lorsque requis tout en maintenant la confidentialité par défaut."
+            "question": "Les fonctionnalités de confidentialité d'Ergo peuvent-elles soutenir des workflows réglementaires ?",
+            "answer": "La confidentialité dans Ergo est optionnelle et peut soutenir des workflows de divulgation sélective. La conformité juridique réelle dépend de la juridiction, de l'implémentation et du fournisseur de service autour du protocole."
           }
         }
       },
@@ -4059,7 +4059,7 @@
         "0": {
           "title": "Carnets d'ordres DEX",
           "description": "Chaque ordre est une boîte séparée, permettant la correspondance parallèle et les swaps atomiques",
-          "example": "Spectrum Finance"
+          "example": "Historical ErgoDEX/Spectrum"
         },
         "1": {
           "title": "Protocoles de prêt",

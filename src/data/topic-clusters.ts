@@ -25,7 +25,7 @@ export const topicClusters: TopicCluster[] = [
   {
     id: 'defi',
     name: 'DeFi on Ergo',
-    description: 'Decentralized Finance without MEV, without permission',
+    description: 'Decentralized Finance with strong MEV-resistance and open access',
     pillar: {
       url: '/topics/ergo-defi',
       title: 'DeFi on Ergo',
@@ -384,4 +384,3 @@ export function getPillarForUrl(url: string): ClusterLink | undefined {
   const cluster = getClustersForUrl(url)[0];
   return cluster?.pillar;
 }
-

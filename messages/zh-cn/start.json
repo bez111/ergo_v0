@@ -22,7 +22,7 @@
           },
           {
             "question": "Where can I buy ERG?",
-            "answer": "ERG is available on exchanges like KuCoin and Gate.io, or you can use decentralized exchanges like ErgoDEX for more privacy."
+            "answer": "ERG is available on centralized exchanges such as KuCoin and Gate.io, plus verified non-custodial routes where active liquidity exists. Historical DEX references like ErgoDEX/Spectrum are useful to study, but always verify current venue status before trading."
           },
           {
             "question": "Is Ergo suitable for beginners?",
@@ -116,7 +116,7 @@
               "name": "ErgoDEX",
               "type": "No KYC - ~0.3% fees",
               "description": "Native Ergo DEX with full decentralization and privacy. Note: Ergo's on-chain liquidity is early-stage — check current depth and 24h volume before trading.",
-              "buttonText": "Open ErgoDEX"
+              "buttonText": "Review current DeFi venues"
             }
           ],
           "disclaimer": "Links are informational. Do your own research. Trading involves risk."
@@ -547,7 +547,7 @@
               "link": "/wallet"
             },
             {
-              "text": "Explore Spectrum Finance",
+              "text": "Review current DeFi venues",
               "link": "https://spectrum.fi"
             },
             {
@@ -3031,12 +3031,12 @@
         "next_steps": {
           "wallet": "安装 Nautilus 钱包",
           "sigmausd": "了解 SigmaUSD 稳定币",
-          "spectrum": "尝试 Spectrum Finance 交易",
+          "spectrum": "Review current DeFi venues",
           "discord": "在 Discord 上加入 DeFi 讨论"
         },
         "community": {
           "discord": "DeFi Discord 频道",
-          "spectrum": "Spectrum 金融社区",
+          "spectrum": "Review current DeFi venues",
           "sigmausd": "SigmaUSD 社区"
         }
       },

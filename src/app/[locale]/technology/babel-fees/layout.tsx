@@ -58,7 +58,7 @@ const FAQ_ITEMS = [
   },
   {
     question: "Which tokens support Babel Fees?",
-    answer: "Any token on Ergo can potentially be used for Babel Fees. The availability depends on liquidity providers willing to accept those tokens in exchange for ERG."
+    answer: "Any Ergo token can potentially be used, but only where a Babel box or liquidity provider is willing to accept that token in exchange for ERG fee coverage."
   },
   {
     question: "How is the exchange rate determined?",
@@ -69,8 +69,8 @@ const FAQ_ITEMS = [
 export default function BabelFeesLayout({ children }: { children: React.ReactNode }) {
   const schemas = [
     createTechArticleSchema(`/technology/${SEO.slug}`, {
-      headline: "Babel Fees: Pay Transaction Fees in Any Token",
-      description: "How Ergo's Babel Fees enable gasless UX by allowing fee payment in any token",
+      headline: "Babel Fees: Supported Token Fee Paths",
+      description: "How Ergo's Babel Fees enable fee abstraction through supported token-to-ERG paths",
       image: SEO.ogImage,
       datePublished: "2025-08-15",
       dateModified: "2026-04-27",

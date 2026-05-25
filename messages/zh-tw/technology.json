@@ -763,7 +763,7 @@
             "icon": "DollarSign"
           },
           {
-            "title": "Spectrum DEX",
+            "title": "Historical DEX designs",
             "description": "使用價格饋送進行限價單和清算的去中心化交易所",
             "icon": "BarChart3"
           },
@@ -2211,7 +2211,7 @@
           "description": "使用 ERG/USD 價格饋送的算法穩定幣"
         },
         {
-          "title": "Spectrum 去中心化交易所",
+          "title": "Historical DEX designs",
           "description": "具有即時價格數據的去中心化交易所"
         },
         {
@@ -4059,7 +4059,7 @@
         "0": {
           "title": "去中心化交易所訂單簿",
           "description": "每個訂單都是一個獨立的 Box，支持並行匹配和原子互換",
-          "example": "Spectrum Finance"
+          "example": "Historical ErgoDEX/Spectrum"
         },
         "1": {
           "title": "借貸協議",

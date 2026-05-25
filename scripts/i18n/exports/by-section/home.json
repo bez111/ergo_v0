@@ -1,0 +1,2774 @@
+[
+  {
+    "key": "home.hero.title",
+    "source": "Ergo",
+    "context": "Title",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "home.hero.subtitle",
+    "source": "Autonomous agents need more than payments. They need programmable credit, task-conditioned acceptance, verifiable receipts, wallet policy, and neutral settlement. Ergo provides the PoW/eUTXO clearing layer and public proof surface for that economy.",
+    "context": "General content",
+    "maxLength": 372,
+    "translation": ""
+  },
+  {
+    "key": "home.hero.description",
+    "source": "Where autonomous work gets paid, proven, and settled.",
+    "context": "Description",
+    "maxLength": 79.5,
+    "translation": ""
+  },
+  {
+    "key": "home.hero.message1",
+    "source": "Autonomous Work Clearing",
+    "context": "General content",
+    "maxLength": 36,
+    "translation": ""
+  },
+  {
+    "key": "home.hero.message2",
+    "source": "Intent to Receipt to Settlement",
+    "context": "General content",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "home.hero.message3",
+    "source": "Public Receipt Surface",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "home.hero.message4",
+    "source": "Audit-Gated Agent Clearing",
+    "context": "General content",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "home.hero.exploreErgo",
+    "source": "Read mainnet gate",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "home.hero.chooseYourPath",
+    "source": "Choose Your Path",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "home.hero.startHere",
+    "source": "Inspect live proof",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "home.hero.aria.keyFeatures",
+    "source": "Key features of Ergo blockchain",
+    "context": "General content",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "home.hero.features.securePow",
+    "source": "Secure PoW",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "home.hero.features.smartContracts",
+    "source": "Smart Contracts",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "home.hero.features.privacy",
+    "source": "Privacy",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "home.hero.features.eutxoModel",
+    "source": "eUTXO Model",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "home.buildForScale.titlePrefix",
+    "source": "Engineered for",
+    "context": "Title",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "home.buildForScale.titleHighlight",
+    "source": "global",
+    "context": "Title",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "home.buildForScale.titleSuffix",
+    "source": "censorship-resistant settlement",
+    "context": "Title",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "home.buildForScale.subtitle",
+    "source": "Sound Money principles, Open Money access.",
+    "context": "General content",
+    "maxLength": 63,
+    "translation": ""
+  },
+  {
+    "key": "home.buildForScale.bullets.0",
+    "source": "eUTXO = parallel, conflict-free flows",
+    "context": "General content",
+    "maxLength": 55.5,
+    "translation": ""
+  },
+  {
+    "key": "home.buildForScale.bullets.1",
+    "source": "Predictable fees & clear spend conditions",
+    "context": "General content",
+    "maxLength": 61.5,
+    "translation": ""
+  },
+  {
+    "key": "home.buildForScale.bullets.2",
+    "source": "MEV-resistant design (local ordering)",
+    "context": "General content",
+    "maxLength": 55.5,
+    "translation": ""
+  },
+  {
+    "key": "home.buildForScale.resultLabel",
+    "source": "The result:",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "home.buildForScale.resultText",
+    "source": "Financial infrastructure that actually works.",
+    "context": "General content",
+    "maxLength": 67.5,
+    "translation": ""
+  },
+  {
+    "key": "home.buildForScale.stats.blockTime.value",
+    "source": "~2 min",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "home.buildForScale.stats.blockTime.label",
+    "source": "Block time",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "home.buildForScale.stats.blockTime.hint",
+    "source": "Fast, predictable finality",
+    "context": "General content",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "home.buildForScale.stats.mev.value",
+    "source": "MEV-resistant",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "home.buildForScale.stats.mev.label",
+    "source": "Front-running",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "home.buildForScale.stats.mev.hint",
+    "source": "Local ordering, no global priority auctions",
+    "context": "General content",
+    "maxLength": 64.5,
+    "translation": ""
+  },
+  {
+    "key": "home.buildForScale.stats.fee.value",
+    "source": "≈ $0.01",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "home.buildForScale.stats.fee.label",
+    "source": "Typical fee",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "home.buildForScale.stats.fee.hint",
+    "source": "Pennies, not dollars",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "home.buildForScale.stats.ergoscript.value",
+    "source": "ErgoScript",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "home.buildForScale.stats.ergoscript.label",
+    "source": "Smart contracts",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "home.buildForScale.stats.ergoscript.hint",
+    "source": "Short, auditable logic",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "home.madeForMassAdoption.titlePrefix",
+    "source": "Choose your",
+    "context": "Title",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "home.madeForMassAdoption.titleMiddle",
+    "source": "path. Build your",
+    "context": "Title",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "home.madeForMassAdoption.titleSuffix",
+    "source": "future",
+    "context": "Title",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "home.madeForMassAdoption.subtitle",
+    "source": "Find your role in the decentralized economy",
+    "context": "General content",
+    "maxLength": 64.5,
+    "translation": ""
+  },
+  {
+    "key": "home.madeForMassAdoption.startHereCta",
+    "source": "Start here",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "home.madeForMassAdoption.paths.freedomSeekers.title",
+    "source": "Freedom seekers",
+    "context": "Title",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "home.madeForMassAdoption.paths.freedomSeekers.description",
+    "source": "Control your money. Private transactions when needed. No banks, no permissions, just freedom.",
+    "context": "Description",
+    "maxLength": 139.5,
+    "translation": ""
+  },
+  {
+    "key": "home.madeForMassAdoption.paths.freedomSeekers.cta",
+    "source": "Get started",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "home.madeForMassAdoption.paths.cypherpunks.title",
+    "source": "Cypherpunks",
+    "context": "Title",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "home.madeForMassAdoption.paths.cypherpunks.description",
+    "source": "Build unstoppable smart contracts with ErgoScript. Create privacy-preserving dApps that actually work.",
+    "context": "Description",
+    "maxLength": 153,
+    "translation": ""
+  },
+  {
+    "key": "home.madeForMassAdoption.paths.cypherpunks.cta",
+    "source": "Start building",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "home.madeForMassAdoption.paths.miners.title",
+    "source": "Miners",
+    "context": "Title",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "home.madeForMassAdoption.paths.miners.description",
+    "source": "GPU-friendly mining that stays decentralized. Secure the network, earn rewards, resist ASICs.",
+    "context": "Description",
+    "maxLength": 139.5,
+    "translation": ""
+  },
+  {
+    "key": "home.madeForMassAdoption.paths.miners.cta",
+    "source": "Start mining",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "home.madeForMassAdoption.paths.agentBuilders.title",
+    "source": "Agent Builders",
+    "context": "Title",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "home.madeForMassAdoption.paths.agentBuilders.description",
+    "source": "Build autonomous agents that pay, trade, and settle on-chain. No KYC, no gas bootstrapping, deterministic costs.",
+    "context": "Description",
+    "maxLength": 168,
+    "translation": ""
+  },
+  {
+    "key": "home.madeForMassAdoption.paths.agentBuilders.cta",
+    "source": "Explore the stack",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "home.madeForMassAdoption.paths.community.title",
+    "source": "Community",
+    "context": "Title",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "home.madeForMassAdoption.paths.community.description",
+    "source": "No VCs, no pre-mine, no corporate control. Built by the community, for the community since 2019.",
+    "context": "Description",
+    "maxLength": 144,
+    "translation": ""
+  },
+  {
+    "key": "home.madeForMassAdoption.paths.community.cta",
+    "source": "Join us",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "home.poweredByErgoHome.titlePrefix",
+    "source": "Powered by",
+    "context": "Title",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "home.poweredByErgoHome.titleHighlight1",
+    "source": "builders",
+    "context": "Title",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "home.poweredByErgoHome.titleMiddle",
+    "source": "Designed for",
+    "context": "Title",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "home.poweredByErgoHome.titleHighlight2",
+    "source": "freedom & privacy",
+    "context": "Title",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "home.poweredByErgoHome.subtitle",
+    "source": "Open-source, decentralized, permissionless",
+    "context": "General content",
+    "maxLength": 63,
+    "translation": ""
+  },
+  {
+    "key": "home.poweredByErgoHome.visitProject",
+    "source": "Visit Project",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "home.poweredByErgoHome.viewAllCta",
+    "source": "Explore all projects",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "home.joinCommunityHome.titlePrefix",
+    "source": "Where",
+    "context": "Title",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "home.joinCommunityHome.titleHighlight",
+    "source": "builders & agents",
+    "context": "Title",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "home.joinCommunityHome.titleSuffix",
+    "source": "converge",
+    "context": "Title",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "home.joinCommunityHome.subtitle",
+    "source": "Developers, AI researchers, and autonomous agents building the decentralized economy together.",
+    "context": "General content",
+    "maxLength": 141,
+    "translation": ""
+  },
+  {
+    "key": "home.joinCommunityHome.cta",
+    "source": "Join community",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "home.joinCommunityHome.channels.discord.desc",
+    "source": "Join our community",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "home.joinCommunityHome.channels.discord.members",
+    "source": "Active daily",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "home.joinCommunityHome.channels.github.desc",
+    "source": "Contribute to the code",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "home.joinCommunityHome.channels.github.members",
+    "source": "Open source",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "home.joinCommunityHome.channels.telegram.desc",
+    "source": "Chat with the community",
+    "context": "General content",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "home.joinCommunityHome.channels.telegram.members",
+    "source": "Global reach",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "home.joinCommunityHome.channels.twitter.desc",
+    "source": "Follow latest updates",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "home.joinCommunityHome.channels.twitter.members",
+    "source": "Daily updates",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "home.faqSimpleHome.titleHighlight",
+    "source": "Common",
+    "context": "Title",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "home.faqSimpleHome.titleSuffix",
+    "source": "questions",
+    "context": "Title",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "home.faqSimpleHome.subtitle",
+    "source": "Everything you need to know to get started",
+    "context": "General content",
+    "maxLength": 63,
+    "translation": ""
+  },
+  {
+    "key": "home.faqSimpleHome.learnMore",
+    "source": "Learn more",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "home.faqSimpleHome.items.0.q",
+    "source": "What is Ergo in one sentence?",
+    "context": "General content",
+    "maxLength": 43.5,
+    "translation": ""
+  },
+  {
+    "key": "home.faqSimpleHome.items.0.a",
+    "source": "Ergo is a secure, open-source PoW blockchain for programmable, censorship-resistant money using the eUTXO model.",
+    "context": "General content",
+    "maxLength": 168,
+    "translation": ""
+  },
+  {
+    "key": "home.faqSimpleHome.items.1.q",
+    "source": "How do I get started (wallet + first transaction)?",
+    "context": "General content",
+    "maxLength": 75,
+    "translation": ""
+  },
+  {
+    "key": "home.faqSimpleHome.items.1.a",
+    "source": "Install a supported wallet, back up your seed offline, get ERG (DEX/exchange/faucet), then send your first test transaction.",
+    "context": "General content",
+    "maxLength": 186,
+    "translation": ""
+  },
+  {
+    "key": "home.faqSimpleHome.items.2.q",
+    "source": "How much are network fees and who gets them?",
+    "context": "General content",
+    "maxLength": 66,
+    "translation": ""
+  },
+  {
+    "key": "home.faqSimpleHome.items.2.a",
+    "source": "Typical fees are ≈ $0.01 and go to miners for processing blocks; the exact fee is shown before you confirm. Fees vary with network load.",
+    "context": "General content",
+    "maxLength": 204,
+    "translation": ""
+  },
+  {
+    "key": "home.faqSimpleHome.items.3.q",
+    "source": "Why is Ergo a strong fit for autonomous work settlement?",
+    "context": "General content",
+    "maxLength": 84,
+    "translation": ""
+  },
+  {
+    "key": "home.faqSimpleHome.items.3.a",
+    "source": "Ergo's eUTXO model gives deterministic costs, ErgoScript can encode task acceptance rules, Babel Fees reduce native-token bootstrapping, and receipt workflows can connect payment, verification and settlement. Current agent-economy demos stay testnet-first until audit gates open.",
+    "context": "General content",
+    "maxLength": 418.5,
+    "translation": ""
+  },
+  {
+    "key": "home.faqSimpleHome.items.4.q",
+    "source": "How is Ergo secured?",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "home.faqSimpleHome.items.4.a",
+    "source": "Ergo is secured by the Autolykos Proof-of-Work algorithm, open code, and community audits. Users should keep seed phrases offline, verify downloads/URLs, and prefer hardware wallets.",
+    "context": "General content",
+    "maxLength": 273,
+    "translation": ""
+  },
+  {
+    "key": "home.faqSimpleHome.items.5.q",
+    "source": "What risks should I know before using Ergo?",
+    "context": "General content",
+    "maxLength": 64.5,
+    "translation": ""
+  },
+  {
+    "key": "home.faqSimpleHome.items.5.a",
+    "source": "Self-custody means irreversible transactions; markets are volatile; third-party dApps carry smart-contract and operational risk; watch for phishing.",
+    "context": "General content",
+    "maxLength": 222,
+    "translation": ""
+  },
+  {
+    "key": "home.valueProposition.title",
+    "source": "Why Agents Choose",
+    "context": "Title",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "home.valueProposition.titleHighlight",
+    "source": "Ergo?",
+    "context": "Title",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "home.valueProposition.subtitle",
+    "source": "A PoW/eUTXO stack where programmable credit, acceptance predicates, wallet policy, receipts, and settlement can be modeled as inspectable economic obligations.",
+    "context": "General content",
+    "maxLength": 238.5,
+    "translation": ""
+  },
+  {
+    "key": "home.valueProposition.items.0.icon",
+    "source": "Zap",
+    "context": "General content",
+    "maxLength": 4.5,
+    "translation": ""
+  },
+  {
+    "key": "home.valueProposition.items.0.title",
+    "source": "Deterministic by Design",
+    "context": "Title",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "home.valueProposition.items.0.description",
+    "source": "The eUTXO model helps agents reason about cost and state before submitting. Transactions execute against explicit boxes and predicates, with no hidden global state.",
+    "context": "Description",
+    "maxLength": 246,
+    "translation": ""
+  },
+  {
+    "key": "home.valueProposition.items.0.benefit",
+    "source": "Agents never overpay or fail unexpectedly",
+    "context": "General content",
+    "maxLength": 61.5,
+    "translation": ""
+  },
+  {
+    "key": "home.valueProposition.items.0.stat",
+    "source": "Zero failed-gas transactions",
+    "context": "General content",
+    "maxLength": 42,
+    "translation": ""
+  },
+  {
+    "key": "home.valueProposition.items.1.icon",
+    "source": "Shield",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "home.valueProposition.items.1.title",
+    "source": "Payment IS the Contract",
+    "context": "Title",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "home.valueProposition.items.1.description",
+    "source": "ErgoScript embeds acceptance conditions directly in payments. No escrow service, no oracle, no trusted server. The payment itself encodes what must be true for redemption.",
+    "context": "Description",
+    "maxLength": 256.5,
+    "translation": ""
+  },
+  {
+    "key": "home.valueProposition.items.1.benefit",
+    "source": "Trustless task verification on-chain",
+    "context": "General content",
+    "maxLength": 54,
+    "translation": ""
+  },
+  {
+    "key": "home.valueProposition.items.1.stat",
+    "source": "Acceptance predicates built-in",
+    "context": "General content",
+    "maxLength": 45,
+    "translation": ""
+  },
+  {
+    "key": "home.valueProposition.items.2.icon",
+    "source": "Coins",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "home.valueProposition.items.2.title",
+    "source": "Zero Gas Bootstrapping",
+    "context": "Title",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "home.valueProposition.items.2.description",
+    "source": "Babel Fees let agents cover transaction fees through supported token-to-ERG paths. Spin up a new agent, hand it a Note, and reduce the native-gas bootstrapping step.",
+    "context": "Description",
+    "maxLength": 247.5,
+    "translation": ""
+  },
+  {
+    "key": "home.valueProposition.items.2.benefit",
+    "source": "Ephemeral agents work out of the box",
+    "context": "General content",
+    "maxLength": 54,
+    "translation": ""
+  },
+  {
+    "key": "home.valueProposition.items.2.stat",
+    "source": "Supported token fee paths",
+    "context": "General content",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "home.valueProposition.items.3.icon",
+    "source": "Eye",
+    "context": "General content",
+    "maxLength": 4.5,
+    "translation": ""
+  },
+  {
+    "key": "home.valueProposition.items.3.title",
+    "source": "No Kill Switch",
+    "context": "Title",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "home.valueProposition.items.3.description",
+    "source": "Proof-of-Work consensus with no foundation multisig, no validator cartel, no emergency pause. No committee can freeze agent funds or halt the network. Unstoppable by design.",
+    "context": "Description",
+    "maxLength": 259.5,
+    "translation": ""
+  },
+  {
+    "key": "home.valueProposition.items.3.benefit",
+    "source": "Agents operate without permission",
+    "context": "General content",
+    "maxLength": 49.5,
+    "translation": ""
+  },
+  {
+    "key": "home.valueProposition.items.3.stat",
+    "source": "No governance kill switch",
+    "context": "General content",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.title",
+    "source": "What the Community Says",
+    "context": "Title",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.subtitle",
+    "source": "Hear from developers, miners, and users building on Ergo",
+    "context": "General content",
+    "maxLength": 84,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.0.quote",
+    "source": "Ergo represents the future of decentralized finance - combining Bitcoin's security with Ethereum's programmability, plus unique innovations like storage rent and built-in privacy.",
+    "context": "General content",
+    "maxLength": 268.5,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.0.author",
+    "source": "Alex Chepurnoy",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.0.role",
+    "source": "Core Developer & Co-founder",
+    "context": "General content",
+    "maxLength": 40.5,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.0.avatar",
+    "source": "AC",
+    "context": "General content",
+    "maxLength": 3,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.0.social.icon",
+    "source": "Github",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.0.social.handle",
+    "source": "@kushti",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.1.quote",
+    "source": "The eUTXO model is a breakthrough that solves many of the scalability and security issues we see in other blockchains. Ergo's approach to smart contracts is elegant and powerful.",
+    "context": "General content",
+    "maxLength": 267,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.1.author",
+    "source": "Kushti Research",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.1.role",
+    "source": "Blockchain Researcher",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.1.avatar",
+    "source": "KR",
+    "context": "General content",
+    "maxLength": 3,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.1.social.icon",
+    "source": "Twitter",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.1.social.handle",
+    "source": "@kushti_ru",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.2.quote",
+    "source": "As a miner, I love that Ergo remains committed to fair, ASIC-resistant mining. The Autolykos algorithm ensures true decentralization without the energy waste of other PoW chains.",
+    "context": "General content",
+    "maxLength": 267,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.2.author",
+    "source": "Mining Pool Operator",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.2.role",
+    "source": "Community Validator",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.2.avatar",
+    "source": "MP",
+    "context": "General content",
+    "maxLength": 3,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.2.social.icon",
+    "source": "Twitter",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.2.social.handle",
+    "source": "@ergo_mining",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.3.quote",
+    "source": "Ergo's oracle pools are the missing piece of the DeFi puzzle. Finally, we have truly decentralized, reliable data feeds that don't depend on centralized providers.",
+    "context": "General content",
+    "maxLength": 244.5,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.3.author",
+    "source": "DeFi Builder",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.3.role",
+    "source": "dApp Developer",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.3.avatar",
+    "source": "DB",
+    "context": "General content",
+    "maxLength": 3,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.3.social.icon",
+    "source": "Github",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.3.social.handle",
+    "source": "@defi_builder",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.4.quote",
+    "source": "The privacy features in Ergo are game-changing. Sigma protocols provide mathematical guarantees for confidentiality while maintaining the transparency needed for verification.",
+    "context": "General content",
+    "maxLength": 262.5,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.4.author",
+    "source": "Privacy Advocate",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.4.role",
+    "source": "Security Researcher",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.4.avatar",
+    "source": "PA",
+    "context": "General content",
+    "maxLength": 3,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.4.social.icon",
+    "source": "Linkedin",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.4.social.handle",
+    "source": "@privacy_advocate",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.5.quote",
+    "source": "Ergo's commitment to academic rigor and peer-reviewed research sets it apart. Every feature is built on solid theoretical foundations, not just hype.",
+    "context": "General content",
+    "maxLength": 223.5,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.5.author",
+    "source": "Academic Researcher",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.5.role",
+    "source": "Computer Science Professor",
+    "context": "General content",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.5.avatar",
+    "source": "AR",
+    "context": "General content",
+    "maxLength": 3,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.5.social.icon",
+    "source": "Linkedin",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "home.testimonials.items.5.social.handle",
+    "source": "@academic_research",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "home.socialProof.title",
+    "source": "Trusted by the Community",
+    "context": "Title",
+    "maxLength": 36,
+    "translation": ""
+  },
+  {
+    "key": "home.socialProof.stats.0.icon",
+    "source": "Users",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "home.socialProof.stats.0.value",
+    "source": "Active",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "home.socialProof.stats.0.label",
+    "source": "Community",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "home.socialProof.stats.0.description",
+    "source": "Developers, miners, and users worldwide",
+    "context": "Description",
+    "maxLength": 58.5,
+    "translation": ""
+  },
+  {
+    "key": "home.socialProof.stats.1.icon",
+    "source": "TrendingUp",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "home.socialProof.stats.1.value",
+    "source": "Growing",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "home.socialProof.stats.1.label",
+    "source": "Ecosystem",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "home.socialProof.stats.1.description",
+    "source": "Expanding ecosystem value",
+    "context": "Description",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "home.socialProof.stats.2.icon",
+    "source": "Activity",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "home.socialProof.stats.2.value",
+    "source": "99.9%",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "home.socialProof.stats.2.label",
+    "source": "Uptime",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "home.socialProof.stats.2.description",
+    "source": "Network reliability since launch",
+    "context": "Description",
+    "maxLength": 48,
+    "translation": ""
+  },
+  {
+    "key": "home.socialProof.stats.3.icon",
+    "source": "DollarSign",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "home.socialProof.stats.3.value",
+    "source": "Secure",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "home.socialProof.stats.3.label",
+    "source": "DeFi",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "home.socialProof.stats.3.description",
+    "source": "Proven smart contract security",
+    "context": "Description",
+    "maxLength": 45,
+    "translation": ""
+  },
+  {
+    "key": "home.socialProof.trustedBy.0",
+    "source": "Coinbase",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "home.socialProof.trustedBy.1",
+    "source": "KuCoin",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "home.socialProof.trustedBy.2",
+    "source": "Gate.io",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "home.socialProof.trustedBy.3",
+    "source": "MEXC",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "home.socialProof.trustedBy.4",
+    "source": "Changelly",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "home.socialProof.trustedBy.5",
+    "source": "ChangeNOW",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "home.featureComparison.title",
+    "source": "How Ergo Compares",
+    "context": "Title",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "home.featureComparison.subtitle",
+    "source": "See how Ergo stacks up against other blockchains",
+    "context": "General content",
+    "maxLength": 72,
+    "translation": ""
+  },
+  {
+    "key": "home.featureComparison.features.0.name",
+    "source": "Consensus",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "home.featureComparison.features.0.ergo",
+    "source": "Proof-of-Work (ASIC-resistant)",
+    "context": "General content",
+    "maxLength": 45,
+    "translation": ""
+  },
+  {
+    "key": "home.featureComparison.features.0.bitcoin",
+    "source": "Proof-of-Work (ASIC-dominated)",
+    "context": "General content",
+    "maxLength": 45,
+    "translation": ""
+  },
+  {
+    "key": "home.featureComparison.features.0.ethereum",
+    "source": "Proof-of-Stake",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "home.featureComparison.features.1.name",
+    "source": "Smart Contracts",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "home.featureComparison.features.1.ergo",
+    "source": "eUTXO with ErgoScript",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "home.featureComparison.features.1.bitcoin",
+    "source": "Very Limited",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "home.featureComparison.features.1.ethereum",
+    "source": "Account-based with Solidity",
+    "context": "General content",
+    "maxLength": 40.5,
+    "translation": ""
+  },
+  {
+    "key": "home.featureComparison.features.2.name",
+    "source": "Privacy",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "home.featureComparison.features.2.ergo",
+    "source": "Built-in Sigma Protocols",
+    "context": "General content",
+    "maxLength": 36,
+    "translation": ""
+  },
+  {
+    "key": "home.featureComparison.features.2.bitcoin",
+    "source": "Transparent (needs mixers)",
+    "context": "General content",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "home.featureComparison.features.2.ethereum",
+    "source": "Transparent",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "home.featureComparison.features.3.name",
+    "source": "Sustainability",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "home.featureComparison.features.3.ergo",
+    "source": "Storage Rent mechanism",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "home.featureComparison.features.3.bitcoin",
+    "source": "Fees only (long-term)",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "home.featureComparison.features.3.ethereum",
+    "source": "Token burning",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "home.featureComparison.features.4.name",
+    "source": "Light Clients",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "home.featureComparison.features.4.ergo",
+    "source": "NIPoPoWs (cryptographic proofs)",
+    "context": "General content",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "home.featureComparison.features.4.bitcoin",
+    "source": "SPV (less secure)",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "home.featureComparison.features.4.ethereum",
+    "source": "Requires trusted nodes",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemSection.title",
+    "source": "Ecosystem",
+    "context": "Title",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemSection.subtitle",
+    "source": "Discover the growing ecosystem of projects and applications built on Ergo.",
+    "context": "General content",
+    "maxLength": 111,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemSection.projects.0.name",
+    "source": "Spectrum Finance",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemSection.projects.0.description",
+    "source": "Historical Ergo DEX reference; sunset notice published in 2024",
+    "context": "Description",
+    "maxLength": 93,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemSection.projects.0.category",
+    "source": "DeFi",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemSection.projects.0.url",
+    "source": "/ecosystem/spectrum",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemSection.projects.1.name",
+    "source": "SigmaUSD",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemSection.projects.1.description",
+    "source": "Algorithmic stablecoin protocol",
+    "context": "Description",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemSection.projects.1.category",
+    "source": "Stablecoin",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemSection.projects.1.url",
+    "source": "/ecosystem/sigmausd",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemSection.projects.2.name",
+    "source": "Rosen Bridge",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemSection.projects.2.description",
+    "source": "Cross-chain bridge for Ergo and other networks",
+    "context": "Description",
+    "maxLength": 69,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemSection.projects.2.category",
+    "source": "Infrastructure",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemSection.projects.2.url",
+    "source": "/ecosystem/rosen-bridge",
+    "context": "General content",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemSection.projects.3.name",
+    "source": "ErgoMixer",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemSection.projects.3.description",
+    "source": "Non-custodial mixing service for privacy",
+    "context": "Description",
+    "maxLength": 60,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemSection.projects.3.category",
+    "source": "Privacy",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemSection.projects.3.url",
+    "source": "/ecosystem/ergomixer",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemSection.viewAll",
+    "source": "View All Projects",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "home.communitySection.title",
+    "source": "Community",
+    "context": "Title",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "home.communitySection.subtitle",
+    "source": "Join the Ergo community and be part of building the future of blockchain.",
+    "context": "General content",
+    "maxLength": 109.5,
+    "translation": ""
+  },
+  {
+    "key": "home.communitySection.links.0.name",
+    "source": "Discord",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "home.communitySection.links.0.description",
+    "source": "Join our community chat",
+    "context": "Description",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "home.communitySection.links.0.icon",
+    "source": "Discord",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "home.communitySection.links.0.url",
+    "source": "https://discord.gg/ergo",
+    "context": "General content",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "home.communitySection.links.1.name",
+    "source": "Twitter",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "home.communitySection.links.1.description",
+    "source": "Follow for updates",
+    "context": "Description",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "home.communitySection.links.1.icon",
+    "source": "Twitter",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "home.communitySection.links.1.url",
+    "source": "https://x.com/BuildOnErgo",
+    "context": "General content",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "home.communitySection.links.2.name",
+    "source": "Forum",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "home.communitySection.links.2.description",
+    "source": "Discuss and propose ideas",
+    "context": "Description",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "home.communitySection.links.2.icon",
+    "source": "MessageSquare",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "home.communitySection.links.2.url",
+    "source": "https://ergoforum.org",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "home.communitySection.links.3.name",
+    "source": "GitHub",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "home.communitySection.links.3.description",
+    "source": "Contribute to the code",
+    "context": "Description",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "home.communitySection.links.3.icon",
+    "source": "Github",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "home.communitySection.links.3.url",
+    "source": "https://github.com/ergoplatform",
+    "context": "General content",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "home.communitySection.joinCommunity",
+    "source": "Join the Community",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "home.communitySection.readyToContribute",
+    "source": "Ready to contribute?",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "home.communitySection.readyToContributeDesc",
+    "source": "Ergo is an open platform where anyone can contribute. Join us in building the future of blockchain.",
+    "context": "General content",
+    "maxLength": 148.5,
+    "translation": ""
+  },
+  {
+    "key": "home.communitySection.getInvolved",
+    "source": "Get Involved",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "home.finalCta.title",
+    "source": "Join the Ergo Builders List",
+    "context": "Title",
+    "maxLength": 40.5,
+    "translation": ""
+  },
+  {
+    "key": "home.finalCta.description",
+    "source": "Weekly builder updates: guides, patterns, tools. No spam.",
+    "context": "Description",
+    "maxLength": 85.5,
+    "translation": ""
+  },
+  {
+    "key": "home.finalCta.social.followTitle",
+    "source": "Follow for daily updates",
+    "context": "General content",
+    "maxLength": 36,
+    "translation": ""
+  },
+  {
+    "key": "home.finalCta.social.twitterAria",
+    "source": "Follow us on Twitter",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "home.finalCta.social.telegramAria",
+    "source": "Join our Telegram",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "home.finalCta.social.discordAria",
+    "source": "Join our Discord",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "home.finalCta.alreadyOnList.title",
+    "source": "You're on the list ✓",
+    "context": "Title",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "home.finalCta.alreadyOnList.subtitle",
+    "source": "Thanks for being part of the Ergo builders community!",
+    "context": "General content",
+    "maxLength": 79.5,
+    "translation": ""
+  },
+  {
+    "key": "home.finalCta.errors.invalidEmail",
+    "source": "Please enter a valid email address",
+    "context": "Error message",
+    "maxLength": 51,
+    "translation": ""
+  },
+  {
+    "key": "home.finalCta.errors.subscriptionFailed",
+    "source": "Subscription failed. Please try again.",
+    "context": "Error message",
+    "maxLength": 57,
+    "translation": ""
+  },
+  {
+    "key": "home.finalCta.errors.network",
+    "source": "Network error. Please try again.",
+    "context": "Error message",
+    "maxLength": 48,
+    "translation": ""
+  },
+  {
+    "key": "home.finalCta.form.placeholder",
+    "source": "your@email.com",
+    "context": "Input placeholder",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "home.finalCta.form.emailLabel",
+    "source": "Email address",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "home.finalCta.form.ariaLabel",
+    "source": "Newsletter subscription form",
+    "context": "General content",
+    "maxLength": 42,
+    "translation": ""
+  },
+  {
+    "key": "home.finalCta.form.submitLabel",
+    "source": "Subscribe",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "home.finalCta.form.subscribingLabel",
+    "source": "Subscribing...",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "home.finalCta.subscribed.label",
+    "source": "✓ Subscribed",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "home.finalCta.subscribed.description",
+    "source": "Welcome to the Ergo builders community!",
+    "context": "Description",
+    "maxLength": 58.5,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.title",
+    "source": "GET STARTED WITH ERGO",
+    "context": "Title",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.subtitle",
+    "source": "Choose your path and start your journey in the Ergo ecosystem",
+    "context": "General content",
+    "maxLength": 91.5,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.developers.title",
+    "source": "For Developers",
+    "context": "Title",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.developers.description",
+    "source": "Build advanced DeFi applications and dApps with ErgoScript",
+    "context": "Description",
+    "maxLength": 87,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.developers.cta",
+    "source": "Start Developing",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.developers.links.documentation",
+    "source": "Documentation",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.developers.links.technology",
+    "source": "Technology",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.developers.links.useCases",
+    "source": "Use Cases",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.miners.title",
+    "source": "For Miners",
+    "context": "Title",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.miners.description",
+    "source": "Join the ASIC-resistant Autolykos mining network",
+    "context": "Description",
+    "maxLength": 72,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.miners.cta",
+    "source": "Start Mining",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.miners.links.miningDocs",
+    "source": "Mining Docs",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.miners.links.miningPools",
+    "source": "Mining Pools",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.miners.links.calculator",
+    "source": "Profitability Calculator",
+    "context": "General content",
+    "maxLength": 36,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.users.title",
+    "source": "For Users",
+    "context": "Title",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.users.description",
+    "source": "Explore the ecosystem and start using Ergo",
+    "context": "Description",
+    "maxLength": 63,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.users.cta",
+    "source": "Get Wallet",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.users.links.wallets",
+    "source": "Wallets",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.users.links.ecosystem",
+    "source": "Ecosystem",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.users.links.buyErg",
+    "source": "Buy ERG",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.investors.title",
+    "source": "For Investors",
+    "context": "Title",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.investors.description",
+    "source": "Learn about investment opportunities in the Ergo ecosystem",
+    "context": "Description",
+    "maxLength": 87,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.investors.cta",
+    "source": "Learn About Investing",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.investors.links.whatIsErgo",
+    "source": "What is Ergo",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.investors.links.projects",
+    "source": "Projects",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.investors.links.community",
+    "source": "Community",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.agents.title",
+    "source": "For Agent Builders",
+    "context": "Title",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.agents.description",
+    "source": "Build autonomous agents with on-chain payments, programmable credit, and trustless settlement",
+    "context": "Description",
+    "maxLength": 139.5,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.agents.cta",
+    "source": "Explore Agent Stack",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.agents.links.agentEconomy",
+    "source": "Agent Economy",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.agents.links.paymentStack",
+    "source": "Payment Stack",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "home.audiencePaths.audiences.agents.links.sdkDocs",
+    "source": "SDK & Docs",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "home.blogSection.title",
+    "source": "LATEST FROM THE ERGO BLOG",
+    "context": "Title",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "home.blogSection.subtitle",
+    "source": "Stay updated with the latest news, technical insights, and community updates from the Ergo ecosystem",
+    "context": "General content",
+    "maxLength": 150,
+    "translation": ""
+  },
+  {
+    "key": "home.blogSection.viewAllPosts",
+    "source": "View All Posts",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "home.subscribeSection.title",
+    "source": "STAY IN THE LOOP",
+    "context": "Title",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "home.subscribeSection.subtitle",
+    "source": "Get Ergo releases, grants, dev calls, and top articles delivered weekly",
+    "context": "General content",
+    "maxLength": 106.5,
+    "translation": ""
+  },
+  {
+    "key": "home.subscribeSection.socialLinks.discord",
+    "source": "Discord",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "home.subscribeSection.socialLinks.twitter",
+    "source": "Twitter",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "home.subscribeSection.socialLinks.telegram",
+    "source": "Telegram",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "home.subscribeSection.privacyNotice",
+    "source": "We respect your privacy. Your email is only used for Ergo updates and will never be shared with third parties. You can unsubscribe at any time with one click.",
+    "context": "General content",
+    "maxLength": 237,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.title",
+    "source": "Decentralize Everything",
+    "context": "Title",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.exploreEcosystem",
+    "source": "EXPLORE ECOSYSTEM",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.categories.defi",
+    "source": "DEFI",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.categories.privacy",
+    "source": "PRIVACY",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.categories.stable",
+    "source": "STABLE ASSETS",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.categories.gaming",
+    "source": "GAMING",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.rosenBridge.title",
+    "source": "Rosen Bridge",
+    "context": "Title",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.rosenBridge.subtitle",
+    "source": "Connecting Ergo's Ecosystem",
+    "context": "General content",
+    "maxLength": 40.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.rosenBridge.description",
+    "source": "Seamlessly transfer assets between Ergo and other leading blockchains like Bitcoin, Ethereum, Cardano, and BSC with Rosen Bridge. Our secure Watcher & Guard system unlocks cross-chain liquidity and new DeFi possibilities.",
+    "context": "Description",
+    "maxLength": 331.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.rosenBridge.cta",
+    "source": "VISIT ROSEN BRIDGE",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.rosenBridge.stats.crossChain.label",
+    "source": "Cross-Chain",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.rosenBridge.stats.crossChain.value",
+    "source": "BTC, ETH, ADA, BSC & more",
+    "context": "General content",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.rosenBridge.stats.secureBridge.label",
+    "source": "Secure Bridge",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.rosenBridge.stats.secureBridge.value",
+    "source": "Watcher & Guard Model",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.rosenBridge.stats.unlockLiquidity.label",
+    "source": "Unlock Liquidity",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.rosenBridge.stats.unlockLiquidity.value",
+    "source": "Access New Markets",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.ergoMixer.title",
+    "source": "ErgoMixer",
+    "context": "Title",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.ergoMixer.subtitle",
+    "source": "Non-Custodial Privacy Protocol",
+    "context": "General content",
+    "maxLength": 45,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.ergoMixer.description",
+    "source": "Ergo privacy is optional and can support selective-disclosure workflows. Actual legal compliance depends on jurisdiction, implementation, and the surrounding service provider.",
+    "context": "Description",
+    "maxLength": 262.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.ergoMixer.cta",
+    "source": "LEARN ABOUT PRIVACY ON ERGO",
+    "context": "General content",
+    "maxLength": 40.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.ergoMixer.stats.mixedVolume.label",
+    "source": "Mixed Volume",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.ergoMixer.stats.mixedVolume.value",
+    "source": "$3.7M",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.ergoMixer.stats.privacyScore.label",
+    "source": "Privacy Score",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.ergoMixer.stats.privacyScore.value",
+    "source": "99.9%",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.ergoMixer.stats.transactions.label",
+    "source": "Transactions",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.ergoMixer.stats.transactions.value",
+    "source": "25K+",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.sigmaUSD.title",
+    "source": "SigmaUSD",
+    "context": "Title",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.sigmaUSD.subtitle",
+    "source": "Algorithmic Stablecoin Protocol",
+    "context": "General content",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.sigmaUSD.description",
+    "source": "SigmaUSD is a crypto-backed algorithmic stablecoin protocol built on Ergo. It provides a decentralized way to create stable value without relying on traditional banking systems or centralized reserves.",
+    "context": "Description",
+    "maxLength": 301.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.sigmaUSD.cta",
+    "source": "EXPLORE SIGMAUSD",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.sigmaUSD.stats.stabilityScore.label",
+    "source": "Stability Score",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.sigmaUSD.stats.stabilityScore.value",
+    "source": "99.2%",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.sigmaUSD.stats.totalSupply.label",
+    "source": "Total Supply",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.sigmaUSD.stats.totalSupply.value",
+    "source": "$2.1M",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.sigmaUSD.stats.collateralRatio.label",
+    "source": "Collateral Ratio",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.sigmaUSD.stats.collateralRatio.value",
+    "source": "400%",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.gaming.title",
+    "source": "Ergo Gaming Ecosystem",
+    "context": "Title",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.gaming.subtitle",
+    "source": "Blockchain Gaming Platform",
+    "context": "General content",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.gaming.description",
+    "source": "Experience the future of gaming with true asset ownership, play-to-earn mechanics, and decentralized tournaments. Powered by Ergo's efficient and secure blockchain infrastructure.",
+    "context": "Description",
+    "maxLength": 268.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.gaming.cta",
+    "source": "START GAMING ON ERGO",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.gaming.stats.activeGames.label",
+    "source": "Active Games",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.gaming.stats.activeGames.value",
+    "source": "12",
+    "context": "General content",
+    "maxLength": 3,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.gaming.stats.players.label",
+    "source": "Players",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.gaming.stats.players.value",
+    "source": "5K+",
+    "context": "General content",
+    "maxLength": 4.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.gaming.stats.gameAssets.label",
+    "source": "Game Assets",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.gaming.stats.gameAssets.value",
+    "source": "10K+",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.gaming.stats.rewardsPaid.label",
+    "source": "Rewards Paid",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "home.ecosystemShowcase.projects.gaming.stats.rewardsPaid.value",
+    "source": "$250K",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ctaSection.title",
+    "source": "Ready to Build the Future?",
+    "context": "Title",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "home.ctaSection.subtitle",
+    "source": "Join the Ergo ecosystem and be part of the decentralized revolution",
+    "context": "General content",
+    "maxLength": 100.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ctaSection.actions.getStarted.title",
+    "source": "Get Started",
+    "context": "Title",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ctaSection.actions.getStarted.description",
+    "source": "Set up wallet & buy ERG",
+    "context": "Description",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ctaSection.actions.getStarted.label",
+    "source": "START NOW",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ctaSection.actions.developers.title",
+    "source": "For Developers",
+    "context": "Title",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "home.ctaSection.actions.developers.description",
+    "source": "Build on Ergo",
+    "context": "Description",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "home.ctaSection.actions.developers.label",
+    "source": "START BUILDING",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "home.ctaSection.actions.miners.title",
+    "source": "For Miners",
+    "context": "Title",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "home.ctaSection.actions.miners.description",
+    "source": "Secure the network",
+    "context": "Description",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "home.ctaSection.actions.miners.label",
+    "source": "START MINING",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "home.whatMakesDifferent.title",
+    "source": "WHAT MAKES ERGO DIFFERENT",
+    "context": "Title",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "home.whatMakesDifferent.subtitle",
+    "source": "Ergo combines proven cryptographic techniques with innovative blockchain design to create a sustainable, secure, and truly decentralized platform",
+    "context": "General content",
+    "maxLength": 217.5,
+    "translation": ""
+  },
+  {
+    "key": "home.whatMakesDifferent.features.fairLaunch.title",
+    "source": "FAIR LAUNCH & PROOF-OF-WORK",
+    "context": "Title",
+    "maxLength": 40.5,
+    "translation": ""
+  },
+  {
+    "key": "home.whatMakesDifferent.features.fairLaunch.description",
+    "source": "Launched with no ICO or premine, secured by Autolykos v2 - an ASIC-resistant and energy-efficient Proof-of-Work algorithm ensuring fair distribution and robust security from day one.",
+    "context": "Description",
+    "maxLength": 273,
+    "translation": ""
+  },
+  {
+    "key": "home.whatMakesDifferent.features.eutxoErgoscript.title",
+    "source": "eUTXO & ERGOSCRIPT FOR ADVANCED DEFI",
+    "context": "Title",
+    "maxLength": 54,
+    "translation": ""
+  },
+  {
+    "key": "home.whatMakesDifferent.features.eutxoErgoscript.description",
+    "source": "The extended UTXO model combined with our powerful language, ErgoScript, enables highly secure, predictable, and expressive financial applications, pushing the boundaries of DeFi.",
+    "context": "Description",
+    "maxLength": 268.5,
+    "translation": ""
+  },
+  {
+    "key": "home.whatMakesDifferent.features.storageRent.title",
+    "source": "STORAGE RENT FOR LONG-TERM SUSTAINABILITY",
+    "context": "Title",
+    "maxLength": 61.5,
+    "translation": ""
+  },
+  {
+    "key": "home.whatMakesDifferent.features.storageRent.description",
+    "source": "A novel mechanism ensuring network health and predictable operational costs by recycling fees from unused data (\"dust\") back to miners, preventing bloat and keeping the chain efficient.",
+    "context": "Description",
+    "maxLength": 277.5,
+    "translation": ""
+  },
+  {
+    "key": "home.whatMakesDifferent.features.researchDriven.title",
+    "source": "RESEARCH-DRIVEN INNOVATION",
+    "context": "Title",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "home.whatMakesDifferent.features.researchDriven.description",
+    "source": "Built on peer-reviewed academic research and first principles, Ergo fosters robust, groundbreaking solutions designed for real-world longevity.",
+    "context": "Description",
+    "maxLength": 214.5,
+    "translation": ""
+  },
+  {
+    "key": "home.whatMakesDifferent.features.privacy.title",
+    "source": "ROBUST OPTIONAL PRIVACY (Σ-PROTOCOLS)",
+    "context": "Title",
+    "maxLength": 55.5,
+    "translation": ""
+  },
+  {
+    "key": "home.whatMakesDifferent.features.privacy.description",
+    "source": "Ergo offers flexible privacy features powered by Sigma protocols, enabling secure multi-signatures, ring signatures, and zero-knowledge proofs for tailored confidentiality options in transactions.",
+    "context": "Description",
+    "maxLength": 294,
+    "translation": ""
+  },
+  {
+    "key": "home.whatMakesDifferent.features.communityLed.title",
+    "source": "COMMUNITY-LED DEVELOPMENT",
+    "context": "Title",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "home.whatMakesDifferent.features.communityLed.description",
+    "source": "A truly decentralized, open-source project where development is led by passionate community members and developers worldwide, ensuring the protocol remains free from centralized control.",
+    "context": "Description",
+    "maxLength": 279,
+    "translation": ""
+  },
+  {
+    "key": "home.quickActions.title",
+    "source": "GET STARTED WITH ERGO",
+    "context": "Title",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "home.quickActions.subtitle",
+    "source": "Choose your path to explore the Ergo ecosystem",
+    "context": "General content",
+    "maxLength": 69,
+    "translation": ""
+  },
+  {
+    "key": "home.quickActions.actions.getWallet.title",
+    "source": "GET WALLET",
+    "context": "Title",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "home.quickActions.actions.getWallet.description",
+    "source": "Set up your Ergo wallet",
+    "context": "Description",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "home.quickActions.actions.buyErg.title",
+    "source": "BUY ERG",
+    "context": "Title",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "home.quickActions.actions.buyErg.description",
+    "source": "Purchase Ergo tokens",
+    "context": "Description",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "home.quickActions.actions.tryDapp.title",
+    "source": "TRY A DAPP",
+    "context": "Title",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "home.quickActions.actions.tryDapp.description",
+    "source": "Explore decentralized apps",
+    "context": "Description",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "home.quickActions.actions.mineErg.title",
+    "source": "MINE ERG",
+    "context": "Title",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "home.quickActions.actions.mineErg.description",
+    "source": "Secure the network",
+    "context": "Description",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "home.quickActions.actions.agentStack.title",
+    "source": "AGENT STACK",
+    "context": "Title",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "home.quickActions.actions.agentStack.description",
+    "source": "Build autonomous work receipts",
+    "context": "Description",
+    "maxLength": 45,
+    "translation": ""
+  },
+  {
+    "key": "home.quickActions.actions.joinCommunity.title",
+    "source": "JOIN COMMUNITY",
+    "context": "Title",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "home.quickActions.actions.joinCommunity.description",
+    "source": "Connect with Ergo users",
+    "context": "Description",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "home.blogSectionHome.titleStart",
+    "source": "Latest",
+    "context": "Title",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "home.blogSectionHome.titleMiddle",
+    "source": "from the",
+    "context": "Title",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "home.blogSectionHome.titleEnd",
+    "source": "blog",
+    "context": "Title",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "home.blogSectionHome.subtitle",
+    "source": "Insights, tutorials, and updates from the Ergo team",
+    "context": "General content",
+    "maxLength": 76.5,
+    "translation": ""
+  },
+  {
+    "key": "home.blogSectionHome.viewAll",
+    "source": "View all articles",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "home.agentEconomyHome.seeStack",
+    "source": "See the stack",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "home.agentEconomyHome.seeFullStack",
+    "source": "See the full stack",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "home.agentEconomyHome.badge",
+    "source": "Agent Economy",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "home.agentEconomyHome.heading",
+    "source": "Built for the",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "home.agentEconomyHome.headingHighlight",
+    "source": "agent economy",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "home.agentEconomyHome.body",
+    "source": "Autonomous agents need more than payments. Ergo combines programmable credit, acceptance predicates, and verifiable reserves at the protocol level.",
+    "context": "General content",
+    "maxLength": 220.5,
+    "translation": ""
+  }
+]

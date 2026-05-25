@@ -12,7 +12,7 @@ const learnUrl = `${siteConfig.siteUrl}/learn`
 // SEO Configuration
 const SEO = {
   title: "Learn Ergo Development — ErgoScript Tutorials & Smart Contracts",
-  description: "Master ErgoScript programming, eUTXO smart contracts, and Sigma protocols. Hands-on tutorials, structured learning paths, and expert mentorship for Ergo blockchain development.",
+  description: "Master ErgoScript programming, eUTXO smart contracts, and Sigma protocols. Hands-on tutorials, structured learning paths, and community support for Ergo blockchain development.",
 }
 
 // FAQ Content

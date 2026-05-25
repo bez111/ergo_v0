@@ -22,7 +22,7 @@
           },
           {
             "question": "Onde posso comprar ERG?",
-            "answer": "O ERG está disponível em exchanges como KuCoin e Gate.io, ou você pode usar exchanges descentralizadas como a ErgoDEX para mais privacidade."
+            "answer": "ERG is available on centralized exchanges such as KuCoin and Gate.io, plus verified non-custodial routes where active liquidity exists. Historical DEX references like ErgoDEX/Spectrum are useful to study, but always verify current venue status before trading."
           },
           {
             "question": "O Ergo é adequado para iniciantes?",
@@ -116,7 +116,7 @@
               "name": "ErgoDEX",
               "type": "Sem KYC — ~0,3% de taxas",
               "description": "DEX nativa do Ergo com total descentralização e privacidade",
-              "buttonText": "Abrir ErgoDEX"
+              "buttonText": "Review current DeFi venues"
             }
           ],
           "disclaimer": "Os links são informativos. Faça sua própria pesquisa. Negociações envolvem risco."
@@ -547,7 +547,7 @@
               "link": "/wallet"
             },
             {
-              "text": "Explorar a Spectrum Finance",
+              "text": "Review current DeFi venues",
               "link": "https://spectrum.fi"
             },
             {
@@ -1884,10 +1884,10 @@
       "github_organization_link_https_github": "Organização no GitHub\", link: \"https://github.com/ergoplatform",
       "network_and_defi_analytics_link_https_ergo_watch": "Análises de rede e DeFi\", link: \"https://ergo.watch",
       "learn_about_sigmausd_stablecoin_link": "Aprender sobre a Stablecoin SigmaUSD\", link: \"/ecosystem/sigmausd",
-      "try_trading_on_spectrum_finance": "Experimentar Negociações na Spectrum Finance\", link: \"https://spectrum.fi",
+      "try_trading_on_spectrum_finance": "Review Current DeFi Venues\", link: \"/use/defi",
       "join_defi_discussions_on_discord": "Participar das Discussões DeFi no Discord\", link: \"https://discord.gg/ergo-platform",
       "defi_discord_channels_link_https": "Canais DeFi no Discord\", link: \"https://discord.gg/ergo-platform",
-      "spectrum_finance_community_link_https_spectrum_fi": "Comunidade Spectrum Finance\", link: \"https://spectrum.fi",
+      "spectrum_finance_community_link_https_spectrum_fi": "Spectrum Finance Historical Notice\", link: \"https://spectrum.fi/sunset-notice",
       "sigmausd_community_link_ecosystem_projects": "Comunidade SigmaUSD\", link: \"/ecosystem/sigmausd",
       "read_the_ergo_whitepaper_link": "Ler o Whitepaper do Ergo\", link: \"/docs/introduction/research-whitepapers",
       "explore_the_ecosystem_link_ecosystem": "Explorar o Ecossistema\", link: \"/ecosystem",
@@ -3031,12 +3031,12 @@
         "next_steps": {
           "wallet": "Instalar a Carteira Nautilus",
           "sigmausd": "Aprender sobre a Stablecoin SigmaUSD",
-          "spectrum": "Experimentar Negociações na Spectrum Finance",
+          "spectrum": "Review current DeFi venues",
           "discord": "Participar de Discussões sobre DeFi no Discord"
         },
         "community": {
           "discord": "Canais Discord de DeFi",
-          "spectrum": "Comunidade Spectrum Finance",
+          "spectrum": "Review current DeFi venues",
           "sigmausd": "Comunidade SigmaUSD"
         }
       },

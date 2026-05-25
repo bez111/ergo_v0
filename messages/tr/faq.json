@@ -58,7 +58,7 @@
       "ecosystem": {
         "dApps": {
           "q": "Ergo'da hangi dApp'ler mevcut?",
-          "a": "Ergo'da SigmaUSD gibi DeFi protokolleri, Spectrum gibi DEX'ler, NFT platformları ve çeşitli araçlar bulunur. Daha fazlası için ekosistem sayfasını keşfedin."
+          "a": "Key DeFi references include SigmaUSD, historical DEX designs such as ErgoDEX/Spectrum, lending protocols, and oracle pools. Always verify each project current operational status before using real funds."
         },
         "defi": {
           "q": "Hangi DeFi seçenekleri mevcut?",
@@ -318,7 +318,7 @@
     },
     "tech-spectrum-dex": {
       "question": "Spectrum DEX nedir?",
-      "answer": "Spectrum (eski adıyla ErgoDEX), AMM (Otomatik Piyasa Yapıcı) havuzlarını kullanan Ergo üzerindeki merkeziyetsiz bir borsadır. Token takaslarını, likidite sağlamayı ve getiri çiftçiliğini destekler. eUTXO modeli, hesap tabanlı DEX'lere kıyasla kısmi emir doldurma ve daha iyi MEV direnci gibi özellikleri mümkün kılar."
+      "answer": "Spectrum (formerly ErgoDEX) is a historical decentralized exchange reference on Ergo using AMM pools. The team published a sunset notice and froze contracts in February 2024, so treat it as a design/reference example rather than an active venue for new swaps or liquidity. Ergo eUTXO still provides useful DEX design properties such as atomic settlement and reduced common MEV patterns."
     },
     "tech-rosen-bridge": {
       "question": "Rosen Bridge nedir?",

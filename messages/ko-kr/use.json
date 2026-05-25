@@ -445,8 +445,8 @@
         },
         {
           "id": "privacy-features",
-          "question": "Ergo의 프라이버시 기능은 합법적으로 사용할 수 있나요?",
-          "answer": "Ergo는 Sigma 프로토콜을 통해 선택적 프라이버시 기능을 제공합니다. 사용자는 현지 규정을 확인해야 합니다. 프라이버시는 비즈니스 기밀, 개인 금융 프라이버시 및 데이터 보호법 준수와 같은 합법적인 용도를 위해 프로토콜 수준에서 구현됩니다."
+          "question": "Ergo의 프라이버시 기능은 규제 워크플로를 지원할 수 있나요?",
+          "answer": "Ergo의 프라이버시는 선택 사항이며 선택적 공개 워크플로를 지원할 수 있습니다. 실제 법적 준수 여부는 관할권, 구현 방식, 프로토콜 주변의 서비스 제공자에 따라 달라집니다."
         },
         {
           "id": "mining-profitable",
@@ -638,7 +638,7 @@
         "faq": {
           "whereToBuy": {
             "question": "ERG를 어디서 구매할 수 있나요?",
-            "answer": "ERG는 KuCoin, Gate.io, CoinEx, Huobi 등의 주요 거래소와 Spectrum Finance 같은 DEX에서 구매할 수 있습니다. 지역과 선호하는 결제 방법에 따라 선택하세요."
+            "answer": "ERG is available on major exchanges like KuCoin, Gate.io, CoinEx, and Huobi, plus verified non-custodial routes where active liquidity exists. Spectrum Finance is historical/frozen since February 2024, so verify any live venue before trading. Choose based on your region and preferred payment method."
           },
           "bestExchange": {
             "question": "ERG를 구매하기에 가장 좋은 거래소는 어디인가요?",
@@ -1090,7 +1090,7 @@
         },
         "isPrivacyOptional": {
           "question": "Ergo 프라이버시는 선택적입니까, 필수적입니까?",
-          "answer": "Ergo는 선택적 프라이버시 기능을 제공합니다. 사용자는 필요에 따라 ErgoMixer나 스텔스 주소와 같은 프라이버시 도구를 언제 사용할지 선택할 수 있으며, 필요할 때 규제 준수를 보장하면서 유연성을 유지합니다."
+          "answer": "Ergo의 프라이버시는 선택 사항이며 선택적 공개 워크플로를 지원할 수 있습니다. 실제 법적 준수 여부는 관할권, 구현 방식, 프로토콜 주변의 서비스 제공자에 따라 달라집니다."
         },
         "whatMakesErgoDifferent": {
           "question": "Ergo의 프라이버시가 다른 체인과 다른 점은 무엇입니까?",
@@ -1744,7 +1744,7 @@
         },
         "howTreasuriesSecured": {
           "question": "DAO 재무부는 어떻게 보호됩니까?",
-          "answer": "DAO 재무부는 다중 서명 계약, 타임락 및 지출 한도를 사용합니다. ErgoScript는 합법적인 거버넌스 행동을 허용하면서 자금을 보호하는 복잡한 보안 정책을 가능하게 합니다."
+          "answer": "DAO 재무부는 다중서명, 지출 조건, 시간 잠금, 투표 규칙, 감사 가능한 온체인 기록으로 보호할 수 있습니다. 실제 안전성은 컨트랙트 설계, 키 관리, 거버넌스 절차, 외부 리뷰에 달려 있습니다."
         }
       },
       "cta": {
@@ -2781,8 +2781,8 @@
         "answer": "Ergo는 eUTXO 모델(Ethereum의 계정 모델과 달리)을 사용하여 더 나은 보안성, 병렬 처리 및 예측 가능한 비용을 제공합니다. ErgoScript는 형식 검증 기능으로 설계상 더욱 안전합니다. 네이티브 토큰은 스마트 컨트랙트가 필요 없어 더 저렴하고 안전합니다."
       },
       "privacy-features": {
-        "question": "Ergo의 프라이버시 기능은 합법적으로 사용할 수 있나요?",
-        "answer": "Ergo는 Sigma 프로토콜을 통해 선택적 프라이버시 기능을 제공합니다. 사용자는 현지 규정을 확인해야 합니다. 프라이버시는 비즈니스 기밀, 개인 금융 프라이버시, 데이터 보호법 준수 등 합법적 용도를 위해 프로토콜 수준에서 구현됩니다."
+        "question": "Ergo의 프라이버시 기능은 규제 워크플로를 지원할 수 있나요?",
+        "answer": "Ergo의 프라이버시는 선택 사항이며 선택적 공개 워크플로를 지원할 수 있습니다. 실제 법적 준수 여부는 관할권, 구현 방식, 프로토콜 주변의 서비스 제공자에 따라 달라집니다."
       },
       "mining-profitable": {
         "question": "ERG 채굴은 아직 수익성이 있나요?",
@@ -2973,7 +2973,7 @@
       "title": "자주 묻는 질문",
       "whereToBy": {
         "question": "ERG를 어디서 구매할 수 있나요?",
-        "answer": "KuCoin, Gate.io 같은 중앙화 거래소, Spectrum Finance 같은 탈중앙화 거래소, 또는 P2P 플랫폼에서 ERG를 구매할 수 있습니다."
+        "answer": "You can buy ERG on centralized exchanges like KuCoin and Gate.io, verified non-custodial routes where active liquidity exists, or P2P platforms."
       },
       "minAmount": {
         "question": "최소 구매 금액은 얼마인가요?",

@@ -5,8 +5,8 @@
       "developers": "Developers"
     },
     "seo": {
-      "title": "Build for Agents — ErgoScript, Agent Payment SDK, eUTXO Patterns | Ergo Developers",
-      "description": "Build autonomous agent payments on Ergo. Agent-native SDKs (Fleet, ergo-agent-pay), acceptance predicates, programmable credit, Babel Fees. The stack for machine-to-machine commerce.",
+      "title": "Build Autonomous Work Clearing — ErgoScript, Receipts & eUTXO Patterns | Ergo Developers",
+      "description": "Build autonomous work settlement on Ergo. Fleet SDK, ErgoScript predicates, programmable credit, receipt bundles, wallet policy, and audit-gated testnet proof flows.",
       "keywords": [
         "Ergo developers",
         "ErgoScript",
@@ -16,20 +16,24 @@
         "Ergo SDK",
         "Fleet SDK",
         "ergo-agent-pay",
+        "autonomous work settlement",
+        "agent settlement receipts",
         "agent payments",
         "AI agent blockchain",
+        "agentic blockchain",
+        "machine-to-machine payments",
         "autonomous agent SDK",
         "acceptance predicates",
         "Babel Fees",
         "programmable credit",
-        "machine-to-machine payments",
+        "machine-to-machine settlement",
         "sigma-rust",
         "AppKit",
         "blockchain development",
         "Sigma protocols",
         "Ergo API",
         "dApp development",
-        "agentic blockchain",
+        "autonomous work clearing",
         "Ergo grants",
         "ErgoScript tutorial"
       ]
@@ -107,7 +111,7 @@
     "hero": {
       "badge": "Developer Hub",
       "title": "Build for agents. Build for freedom.",
-      "subtitle": "Agent-native payments, deterministic smart contracts, zero gas bootstrapping. The stack for autonomous machine-to-machine commerce.",
+      "subtitle": "Receipts, deterministic smart contracts, wallet policy, and zero gas bootstrapping. The stack for autonomous work settlement.",
       "buttons": {
         "startLearning": "Start Learning",
         "browsePatterns": "Browse Patterns",
@@ -208,7 +212,7 @@
         {
           "slug": "babel-fees",
           "title": "Babel Fees",
-          "description": "Pay fees with any token"
+          "description": "Supported token fee paths"
         },
         {
           "slug": "subblocks",

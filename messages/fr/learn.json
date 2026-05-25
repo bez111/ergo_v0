@@ -994,7 +994,7 @@
         },
         {
           "question": "Puis-je construire des protocoles DeFi avec ErgoScript ?",
-          "answer": "Oui ! ErgoScript est parfait pour DeFi. Des exemples incluent SigmaUSD (stablecoin algorithmique), des DEXs comme ErgoDEX et diverses primitives DeFi. Les fonctionnalités de sécurité du langage le rendent idéal pour les applications financières."
+          "answer": "Yes. ErgoScript is well-suited to DeFi because it supports deterministic, predicate-based contracts on eUTXO. Examples include SigmaUSD, historical DEX designs like ErgoDEX/Spectrum, and current or future DeFi primitives. Treat each deployed protocol separately and verify its live status before using funds."
         }
       ],
       "viewExamples": "Voir les Exemples",

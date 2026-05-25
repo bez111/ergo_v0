@@ -763,7 +763,7 @@
             "icon": "DollarSign"
           },
           {
-            "title": "Spectrum DEX",
+            "title": "Historical DEX designs",
             "description": "Exchange descentralizada usando feeds de preços para ordens limitadas e liquidações",
             "icon": "BarChart3"
           },
@@ -2211,7 +2211,7 @@
           "description": "Stablecoin algorítmica usando feeds de preço ERG/USD"
         },
         {
-          "title": "DEX Spectrum",
+          "title": "Historical DEX designs",
           "description": "Exchange descentralizada com dados de preços em tempo real"
         },
         {
@@ -4059,7 +4059,7 @@
         "0": {
           "title": "Livros de Ordens DEX",
           "description": "Cada ordem é uma caixa separada, permitindo correspondência paralela e trocas atômicas",
-          "example": "Spectrum Finance"
+          "example": "Historical ErgoDEX/Spectrum"
         },
         "1": {
           "title": "Protocolos de Empréstimo",

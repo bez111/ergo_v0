@@ -696,7 +696,7 @@ export default function TechnologyPage() {
               </div>
               <div>
                 <p className="font-semibold text-white text-sm mb-0.5">These primitives power the Agent Economy</p>
-                <p className="text-neutral-400 text-sm">eUTXO, ErgoScript, and Babel Fees are the foundation for autonomous agent payments, notes, and acceptance predicates on Ergo.</p>
+                <p className="text-neutral-400 text-sm">eUTXO, ErgoScript, and Babel Fees are the foundation for autonomous work settlement, Notes, receipts, and acceptance predicates on Ergo.</p>
               </div>
             </div>
             <Link

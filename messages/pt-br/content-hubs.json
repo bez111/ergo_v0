@@ -5,7 +5,7 @@
       "title": "DeFi na Ergo",
       "subtitle": "Finanças Descentralizadas Sem MEV, Sem Permissão",
       "heroStatement": "DeFi que realmente funciona para usuários, não para extratores.",
-      "introduction": "A abordagem da Ergo ao DeFi é fundamentalmente diferente das cadeias baseadas em contas como o Ethereum. Construída sobre o modelo eUTXO, a Ergo elimina categorias inteiras de exploits que assolam o DeFi tradicional: sem front-running, sem sandwich attacks, sem extração de MEV. O custo de cada transação é conhecido antes de enviá-la. Cada negociação executa exatamente como esperado. Isso não é uma melhoria menor — é uma vantagem estrutural que torna o DeFi realmente utilizável para pessoas comuns, não apenas para traders sofisticados com bots de MEV.",
+      "introduction": "O modelo eUTXO da Ergo reduz padrões comuns de front-running e sandwich de modelos baseados em contas e torna a execução mais previsível. Design da aplicação, política de mempool e fluxo de ordens off-chain ainda importam.",
       "whatMakesUnique": "Enquanto o DeFi do Ethereum se tornou uma «floresta sombria» onde usuários são caçados por extratores de MEV, o modelo eUTXO da Ergo cria um ambiente fundamentalmente mais justo. As transações referenciam caixas específicas (UTXOs), tornando os ataques de reordenação impraticáveis. Os Oracle Pools fornecem feeds de preços descentralizados sem pontos únicos de falha. E porque a Ergo é PoW com lançamento justo, não há cartel de VC controlando a governança ou extraindo valor do protocolo.",
       "keyDifferentiators": [
         "Sem extração de MEV: transações não podem ser alvo de front-running ou sandwich attacks por design",

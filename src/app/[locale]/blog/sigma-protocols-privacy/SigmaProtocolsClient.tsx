@@ -51,7 +51,7 @@ export function SigmaProtocolsClient() {
       icon: Eye,
       title: "Programmable Privacy",
       description:
-        "Optional, not always-on privacy. Users can selectively reveal information for compliance while maintaining confidentiality when needed.",
+        "Optional, not always-on privacy. Users can design selective-disclosure flows while keeping unrelated context confidential.",
     },
     {
       icon: Code,
@@ -61,9 +61,9 @@ export function SigmaProtocolsClient() {
     },
     {
       icon: Globe,
-      title: "Compliant Confidentiality",
+      title: "Selective-Disclosure Confidentiality",
       description:
-        "Auditable privacy model allows institutions to meet compliance obligations while protecting sensitive financial information.",
+        "Auditable privacy patterns can support review workflows while protecting sensitive financial information.",
     },
   ]
 
@@ -81,7 +81,7 @@ export function SigmaProtocolsClient() {
     {
       question: "Is privacy always-on like Monero?",
       answer:
-        "No, Ergo's privacy is optional and programmable. Users can choose when to use privacy features, enabling compliance and auditability when needed while maintaining confidentiality when desired."
+        "No, Ergo's privacy is optional and programmable. Users can choose when to use privacy features and design selective disclosure where auditability is required."
     },
     {
       question: "Can Sigma Protocols be used for DeFi applications?",
@@ -89,9 +89,9 @@ export function SigmaProtocolsClient() {
         "Yes, Sigma Protocols can be applied to any transaction type, making them ideal for confidential DeFi, private voting, and other complex dApps beyond simple transfers."
     },
     {
-      question: "What makes Ergo's privacy model compliant?",
+      question: "How can Ergo's privacy model support regulatory workflows?",
       answer:
-        "Ergo's optional privacy allows users to selectively reveal information for compliance purposes. Users can prove ownership and transaction history when required while maintaining privacy in other contexts."
+        "Ergo's optional privacy can support selective disclosure: users may prove ownership or transaction history in specific contexts while keeping unrelated activity private. Actual compliance depends on jurisdiction, implementation, and the surrounding service provider."
     },
     {
       question: "How do Sigma Protocols compare to ring signatures?",
@@ -178,7 +178,7 @@ export function SigmaProtocolsClient() {
             </h1>
 
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl leading-relaxed mb-6">
-              As first-gen privacy coins see a resurgence of activity, Ergo's composable <Link href="/technology/privacy-features" className="text-orange-400 hover:underline">zero-knowledge signatures</Link> offer new options for compliant confidentiality.
+              As first-gen privacy coins see a resurgence of activity, Ergo's composable <Link href="/technology/privacy-features" className="text-orange-400 hover:underline">zero-knowledge signatures</Link> offer new options for selective-disclosure confidentiality.
             </p>
 
             <div className="flex items-center justify-between flex-wrap gap-4">
@@ -463,7 +463,7 @@ export function SigmaProtocolsClient() {
                 </p>
 
                 <p className="text-gray-300 leading-relaxed">
-                  This mixture of mathematical rigor and practical usability makes Ergo's privacy model both highly adaptable and future-proof in a world where compliance and confidentiality are both important.
+                  This mixture of mathematical rigor and practical usability makes Ergo's privacy model highly adaptable in a world where confidentiality, auditability, and jurisdiction-specific requirements must be handled carefully.
                 </p>
               </div>
             </section>
@@ -530,7 +530,7 @@ export function SigmaProtocolsClient() {
                 </p>
 
                 <p className="text-gray-300 leading-relaxed">
-                  In keeping with Ergo's ethos, privacy is considered a right, but it is an optional feature – not a default setting that breaks auditability and compliance. Use of Sigma Protocols supports this aim, offering programmable privacy.
+                  In keeping with Ergo's ethos, privacy is considered a right, but it is an optional feature – not a default setting that removes every audit path. Use of Sigma Protocols supports this aim, offering programmable privacy and selective disclosure.
                 </p>
 
                 <p className="text-gray-300 leading-relaxed">
@@ -557,11 +557,11 @@ export function SigmaProtocolsClient() {
                 </p>
 
                 <p className="text-gray-300 leading-relaxed">
-                  At the same time, institutions are taking unprecedented interest in blockchain, but they require robust privacy before they will invest and move funds on-chain. They also have compliance obligations, just as regular users do if they want to avoid being shut off from the mainstream financial system.
+                  At the same time, institutions are taking unprecedented interest in blockchain, but they require robust privacy before they will invest and move funds on-chain. They also need audit and reporting workflows, just as regular users may need jurisdiction-specific records.
                 </p>
 
                 <p className="text-gray-300 leading-relaxed">
-                  Ergo represents the next stage in privacy coins. It pioneers a blockchain where confidentiality is composable and compliant. In a world where digital surveillance is the norm, Ergo's Sigma Protocols offer a viable foundation for building true freedom money.
+                  Ergo represents the next stage in privacy coins. It pioneers a blockchain where confidentiality is composable and selective disclosure can be designed into applications. In a world where digital surveillance is the norm, Ergo's Sigma Protocols offer a viable foundation for building true freedom money.
                 </p>
 
                 <div className="bg-orange-500/10 border border-orange-500/20 rounded-2xl p-6 text-center">
@@ -615,7 +615,7 @@ export function SigmaProtocolsClient() {
           <ShareCTA
             title="Ergo And Sigma Protocols: The Next Step In Blockchain Privacy"
             url="https://www.ergoblockchain.org/blog/sigma-protocols-privacy"
-            description="Discover how Ergo's composable zero-knowledge proofs offer compliant confidentiality for the next generation of privacy-preserving applications."
+            description="Discover how Ergo's composable zero-knowledge proofs offer selective-disclosure confidentiality for the next generation of privacy-preserving applications."
             subtitle="If this was useful, share it with privacy advocates and developers building confidential applications."
           />
 

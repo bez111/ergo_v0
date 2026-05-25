@@ -10,12 +10,12 @@ const PATH = "/blog/sigma-protocols-privacy"
 // SEO Configuration
 const SEO = {
   title: "Ergo And Sigma Protocols: The Next Step In Blockchain Privacy",
-  description: "As first-gen privacy coins see a resurgence of activity, Ergo's composable zero-knowledge signatures offer new options for compliant confidentiality.",
+  description: "As first-gen privacy coins see a resurgence of activity, Ergo's composable zero-knowledge signatures offer new options for selective-disclosure confidentiality.",
   image: "/og/sigma-protocols-privacy.jpg",
   keywords: [
     "sigma protocols", "blockchain privacy", "zero knowledge proofs",
     "ergo privacy", "privacy coins", "confidential transactions",
-    "zkp", "monero zcash comparison", "compliant privacy"
+    "zkp", "monero zcash comparison", "selective disclosure privacy"
   ],
 }
 
@@ -23,9 +23,9 @@ const SEO = {
 const FAQ_ITEMS = [
   { question: "What are Sigma Protocols?", answer: "Sigma Protocols are a class of composable zero-knowledge proofs that allow users to prove mathematical statements without revealing underlying information. They enable flexible, programmable privacy on Ergo." },
   { question: "How do Sigma Protocols differ from ZCash's zkSNARKs?", answer: "Unlike zkSNARKs, Sigma Protocols don't require trusted setup, are more computationally efficient, and offer greater composability for complex privacy applications and DeFi use cases." },
-  { question: "Is privacy always-on like Monero?", answer: "No, Ergo's privacy is optional and programmable. Users can choose when to use privacy features, enabling compliance and auditability when needed while maintaining confidentiality when desired." },
+  { question: "Is privacy always-on like Monero?", answer: "No, Ergo's privacy is optional and programmable. Users can choose when to use privacy features and design selective disclosure where auditability is required." },
   { question: "Can Sigma Protocols be used for DeFi applications?", answer: "Yes, Sigma Protocols can be applied to any transaction type, making them ideal for confidential DeFi, private voting, and other complex dApps beyond simple transfers." },
-  { question: "What makes Ergo's privacy model compliant?", answer: "Ergo's optional privacy allows users to selectively reveal information for compliance purposes. Users can prove ownership and transaction history when required while maintaining privacy in other contexts." },
+  { question: "How can Ergo's privacy model support compliance workflows?", answer: "Ergo's optional privacy allows users to selectively reveal information when required while maintaining privacy in other contexts. Actual compliance depends on jurisdiction, implementation, and the surrounding service provider." },
   { question: "How do Sigma Protocols compare to ring signatures?", answer: "Sigma Protocols can implement ring signatures and much more. They're more flexible and composable, allowing for complex privacy conditions like threshold signatures and programmable disclosure rules." }
 ]
 

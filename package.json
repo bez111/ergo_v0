@@ -56,6 +56,7 @@
     "smoke:routes": "node scripts/route-smoke.mjs",
     "smoke:routes:prod": "BASE_URL=https://www.ergoblockchain.org node scripts/route-smoke.mjs",
     "smoke:staging": "node scripts/staging-smoke.mjs",
+    "check:clickthrough": "node scripts/check-clickthrough.mjs",
     "qa:mobile-crawl": "node scripts/mobile-crawl.mjs",
     "qa:sitemap-crawl": "node scripts/mobile-crawl.mjs --status-only",
     "audit:blog": "node scripts/blog-content-audit.mjs",

@@ -1,0 +1,310 @@
+[
+  {
+    "key": "patterns.patternsPage.seo.title",
+    "source": "ErgoScript Patterns — Smart Contract Templates for Ergo",
+    "context": "SEO metadata",
+    "maxLength": 82.5,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternsPage.seo.description",
+    "source": "18 ErgoScript smart contract patterns with maturity badges. Token mechanics, time-locks, multisig, DeFi primitives, oracle integration. Copy, adapt, and check the status before shipping to mainnet.",
+    "context": "SEO metadata",
+    "maxLength": 295.5,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternsPage.hero.titlePart1",
+    "source": "ErgoScript",
+    "context": "Title",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternsPage.hero.titlePart2",
+    "source": "Patterns",
+    "context": "Title",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternsPage.hero.subtitle",
+    "source": "Smart contract patterns for Ergo, with maturity badges. Copy, adapt, and check each pattern's status before relying on it for production.",
+    "context": "General content",
+    "maxLength": 205.5,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternsPage.search.placeholder",
+    "source": "Search patterns (e.g., 'swap', 'multisig', 'oracle')...",
+    "context": "Input placeholder",
+    "maxLength": 82.5,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternsPage.search.ariaLabel",
+    "source": "Search patterns",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternsPage.filters.ariaLabel",
+    "source": "Filter patterns",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternsPage.filters.categoryAriaLabel",
+    "source": "Category filter",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternsPage.filters.allCategories",
+    "source": "All Categories",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternsPage.difficulty.beginner",
+    "source": "Beginner",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternsPage.difficulty.intermediate",
+    "source": "Intermediate",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternsPage.difficulty.advanced",
+    "source": "Advanced",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternsPage.card.viewPattern",
+    "source": "View pattern",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternsPage.empty.heading",
+    "source": "No patterns found",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternsPage.empty.body",
+    "source": "Try adjusting your filters or search terms.",
+    "context": "General content",
+    "maxLength": 64.5,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternsPage.cta.heading",
+    "source": "Ready to Build?",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternsPage.cta.body",
+    "source": "Start with the patterns, dive into documentation, or join the developer community for support.",
+    "context": "General content",
+    "maxLength": 141,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternsPage.cta.developerDocs",
+    "source": "Developer Docs",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternsPage.cta.buildDeFiPlaybook",
+    "source": "Build DeFi Playbook",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternsPage.cta.agentPayments",
+    "source": "Agent Payments",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternPage.breadcrumbs.devPatterns",
+    "source": "Dev Patterns",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternPage.hero.viewCode",
+    "source": "View Code",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternPage.sections.problem",
+    "source": "Problem",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternPage.sections.solution",
+    "source": "Solution",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternPage.sections.howItWorks",
+    "source": "How It Works",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternPage.sections.codeExamples",
+    "source": "Code Examples",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternPage.sections.useCases",
+    "source": "Use Cases",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternPage.sections.securityConsiderations",
+    "source": "Security Considerations",
+    "context": "General content",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternPage.sections.realWorldImplementations",
+    "source": "Real-World Implementations",
+    "context": "General content",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternPage.sections.resources",
+    "source": "Resources",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternPage.sections.feeConsiderations",
+    "source": "Fee Considerations",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternPage.sections.relatedPatterns",
+    "source": "Related Patterns",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternPage.copyCode",
+    "source": "Copy code",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternPage.whatsNext.heading",
+    "source": "What's",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternPage.whatsNext.headingAccent",
+    "source": "Next?",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternPage.whatsNext.browseAllPatterns",
+    "source": "Browse All Patterns",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternPage.whatsNext.browsePatternsSubtitle",
+    "source": "18 patterns available",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternPage.whatsNext.explorePlaybooks",
+    "source": "Explore Playbooks",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternPage.whatsNext.explorePlaybooksSubtitle",
+    "source": "Step-by-step guides",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternPage.whatsNext.builderResources",
+    "source": "Builder Resources",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternPage.whatsNext.builderResourcesSubtitle",
+    "source": "Full dev toolkit",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternPage.emailCapture.title",
+    "source": "Level Up Your ErgoScript Skills",
+    "context": "Title",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "patterns.patternPage.emailCapture.description",
+    "source": "Get notified about new patterns, tutorials, and developer resources.",
+    "context": "Description",
+    "maxLength": 102,
+    "translation": ""
+  }
+]

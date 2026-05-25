@@ -93,7 +93,7 @@ export const playbooks: Playbook[] = [
   {
     slug: "build-defi-on-ergo",
     title: "Build a DeFi App on Ergo",
-    subtitle: "From concept to mainnet in weeks, not months",
+    subtitle: "From concept to testnet prototype, then audit-gated mainnet planning",
     
     seoTitle: "Build DeFi on Ergo 2025: eUTXO Smart Contracts Tutorial",
     seoDescription: "Complete guide to building decentralized finance applications on Ergo. Learn eUTXO patterns, ErgoScript, and deploy your first DeFi protocol.",
@@ -103,10 +103,10 @@ export const playbooks: Playbook[] = [
     difficulty: "intermediate",
     timeToComplete: "2-4 weeks",
     
-    heroDescription: "Ergo's eUTXO model removes several common DeFi vulnerability classes — including the protocol-level reentrancy class. Application-level bugs are still possible, predictable fees, and parallel execution. Build secure DeFi that actually works.",
+    heroDescription: "Ergo's eUTXO model removes several common DeFi vulnerability classes — including the protocol-level reentrancy class — while keeping transaction state explicit. Application-level bugs are still possible, so production deployments still need review, limits, and monitoring.",
     
     problemStatement: "Traditional DeFi on account-based chains is plagued by exploits, unpredictable gas costs, and MEV extraction. Developers spend more time on security audits than building features.",
-    solution: "Ergo's eUTXO model provides deterministic execution, no reentrancy by design, and MEV resistance. ErgoScript is expressive yet auditable. Build once, deploy with confidence.",
+    solution: "Ergo's eUTXO model provides deterministic execution, removes the protocol-level reentrancy class, and reduces common MEV patterns. ErgoScript is expressive yet auditable, but production deployments still require careful review.",
     
     steps: [
       {
@@ -175,8 +175,8 @@ export const playbooks: Playbook[] = [
       },
       {
         title: "SigmaUSD",
-        description: "Algorithmic stablecoin using the AgeUSD protocol, fully collateralized by ERG. Verify current liquidity and venue status before use.",
-        outcome: "First algorithmic stablecoin on eUTXO, maintaining peg through market volatility.",
+        description: "Algorithmic stablecoin using the AgeUSD protocol with ERG-backed reserves. Verify current liquidity, reserve conditions, and venue status before use.",
+        outcome: "Early eUTXO stablecoin design; peg behaviour depends on reserve conditions, market depth, and user activity.",
         link: "https://sigmausd.io",
       },
     ],
@@ -206,7 +206,7 @@ export const playbooks: Playbook[] = [
     subtitle: "Sovereign money for the digital age",
     
     seoTitle: "Financial Freedom with Ergo: Privacy, Self-Custody, Censorship Resistance",
-    seoDescription: "Learn how Ergo enables financial sovereignty through Sigma Protocols, self-custody, and censorship-resistant transactions. Escape capital controls.",
+    seoDescription: "Learn how Ergo supports financial sovereignty through Sigma Protocols, self-custody, and censorship-resistant transaction design.",
     keywords: ["financial freedom", "capital controls", "ergo privacy", "sigma protocols", "self custody", "censorship resistance", "cbdc alternative"],
     
     cluster: "privacy",
@@ -239,7 +239,7 @@ export const playbooks: Playbook[] = [
       },
       {
         title: "Use ErgoMixer for Privacy",
-        description: "Mix your ERG to break transaction linkability. Understand the privacy guarantees.",
+        description: "Use privacy tools to reduce transaction linkability. Understand the limits, threat model, and legal context before relying on them.",
         duration: "1-2 hours",
         resources: [
           { type: 'tool', title: "ErgoMixer", href: "https://ergomixer.com" },
@@ -247,8 +247,8 @@ export const playbooks: Playbook[] = [
         ]
       },
       {
-        title: "Acquire ERG Without KYC",
-        description: "Learn about peer-to-peer exchanges and privacy-preserving acquisition methods.",
+        title: "Acquire ERG With Privacy Considerations",
+        description: "Learn about exchange, DEX, and peer-to-peer options, including the trade-offs around KYC, liquidity, jurisdiction, and counterparty risk.",
         duration: "Varies",
         resources: [
           { type: 'link', title: "P2P Exchanges", href: "/use/get-erg" },
@@ -409,10 +409,10 @@ export const playbooks: Playbook[] = [
     difficulty: "beginner",
     timeToComplete: "1-2 hours",
     
-    heroDescription: "Ergo had no ICO, no premine, no VC allocation. 100% of ERG was distributed through mining. This isn't just idealism - it's the foundation for true decentralization.",
+    heroDescription: "Ergo had no ICO, no premine, no VC allocation. 100% of ERG enters circulation through mining. This removes a major insider-allocation overhang and supports a more neutral base layer.",
     
     problemStatement: "Most modern blockchains launch with massive insider allocations. VCs dump on retail. Founders control governance. 'Decentralization' becomes marketing theater.",
-    solution: "Ergo's fair launch means no insiders to dump, no VCs to appease, no foundation controlling the majority of tokens. The community owns the network from day one.",
+    solution: "Ergo's fair launch means no premine, no VC allocation, and no token-controlled foundation majority at launch. Long-term governance still depends on open participation by miners, users, builders, and the wider community.",
     
     steps: [
       {
@@ -1144,7 +1144,7 @@ export const playbooks: Playbook[] = [
     
     heroDescription: "SigmaUSD is a crypto-native dollar hedge backed by ERG reserves. No bank accounts, no centralized custodians - just math and smart contracts keeping your value stable.",
     
-    problemStatement: "Centralized stablecoins like USDT and USDC can freeze your funds, require KYC, and depend on traditional banking. You need a truly decentralized alternative.",
+    problemStatement: "Centralized stablecoins like USDT and USDC can freeze funds, require KYC, and depend on traditional banking. Builders often need more transparent, reserve-aware alternatives with clearer on-chain mechanics.",
     
     solution: "SigmaUSD uses an overcollateralized reserve pool of ERG to maintain its peg. Mint SigUSD when you want stability, redeem for ERG when you're ready to exit. No permissions needed.",
     
@@ -1231,7 +1231,7 @@ export const playbooks: Playbook[] = [
   {
     slug: "bridge-assets-with-rosen",
     title: "Bridge Assets with Rosen Bridge (ERG <-> BTC & More)",
-    subtitle: "Move assets between Ergo and other blockchains trustlessly",
+    subtitle: "Move assets between Ergo and other blockchains without a central custodian",
     
     seoTitle: "Rosen Bridge Guide 2025: Bridge ERG, BTC, and More Between Chains",
     seoDescription: "Complete guide to using Rosen Bridge for cross-chain transfers. Bridge ERG to Bitcoin, Cardano, and other networks securely.",
@@ -1335,7 +1335,7 @@ export const playbooks: Playbook[] = [
     
     heroDescription: "Ergo's assurance contracts enable trustless crowdfunding. Contributors know they'll get refunds if the goal isn't met - no trust in the project creator required.",
     
-    problemStatement: "Traditional crowdfunding platforms take fees, can censor projects, and require trusting the platform to handle refunds. Crypto crowdfunding often lacks refund guarantees.",
+    problemStatement: "Traditional crowdfunding platforms take fees, can censor projects, and require trusting the platform to handle refunds. Crypto crowdfunding often lacks clear, programmable refund conditions.",
     
     solution: "Use Ergo's assurance contract pattern: contributions are locked in a smart contract that automatically refunds if the goal isn't reached by the deadline. Success means funds go to the project.",
     
@@ -1526,10 +1526,10 @@ export const playbooks: Playbook[] = [
   {
     slug: "build-agent-economy-apps",
     title: "Build Agent Economy Apps on Ergo",
-    subtitle: "Notes, reserves, and acceptance predicates — everything autonomous agents need",
+    subtitle: "Notes, reserves, and acceptance predicates — core primitives for autonomous work settlement",
 
     seoTitle: "Build Agent Economy Apps on Ergo — Notes, Credit & Programmable Trust",
-    seoDescription: "Step-by-step guide to building autonomous agent payment infrastructure on Ergo: deploy a reserve, issue notes, write acceptance predicates, integrate Fleet SDK.",
+    seoDescription: "Step-by-step guide to building testnet-first autonomous work settlement on Ergo: deploy a reserve, issue notes, write acceptance predicates, integrate Fleet SDK, and keep mainnet gates explicit.",
     keywords: [
       "agent economy Ergo", "autonomous agent payments", "ChainCash notes", "Fleet SDK agent",
       "ErgoScript acceptance predicate", "programmable credit blockchain", "agent payments tutorial",
@@ -1540,16 +1540,16 @@ export const playbooks: Playbook[] = [
     difficulty: "advanced",
     timeToComplete: "3-6 hours",
 
-    heroDescription: "Ergo is a strong reference settlement layer for programmable credit, acceptance predicates, and verifiable reserve-style flows. This playbook walks through the agent payment stack in testnet-first mode.",
+    heroDescription: "Ergo is a strong reference settlement layer for programmable credit, acceptance predicates, and verifiable reserve-style flows. This playbook walks through the receipt-oriented agent stack in testnet-first mode.",
 
-    problemStatement: "Autonomous agents can't use Stripe or PayPal — they have no identity, no credit history, no bank account. Ethereum-style account model introduces reentrancy risks. Agents need programmable IOUs, not just coin transfers.",
+    problemStatement: "Autonomous work flows need more than merchant checkout. Agents may be temporary processes with bounded authority, no persistent payment identity, and strict spending limits. They need programmable IOUs, receipts, and explicit settlement rules, not only coin transfers.",
 
-    solution: "Ergo's eUTXO model with ErgoScript acceptance predicates lets you issue bearer notes (IOUs), set conditions for acceptance (task hash + deadline), deploy verifiable reserves, and compose them into full credit flows — all deterministic, no reentrancy.",
+    solution: "Ergo's eUTXO model with ErgoScript acceptance predicates lets you issue bearer notes (IOUs), set conditions for acceptance (task hash + deadline), deploy verifiable reserves, and compose them into testnet-first credit flows with explicit audit boundaries.",
 
     steps: [
       {
-        title: "Understand the Agent Payment Stack",
-        description: "Learn the 4 primitives: Reserve (backing), Note (bearer IOU), Tracker (anti-double-spend), Predicate (acceptance rule). These compose into full credit flows.",
+        title: "Understand the Autonomous Work Clearing Stack",
+        description: "Learn the 4 primitives: Reserve (backing), Note (bearer IOU), Tracker (anti-double-spend), Predicate (acceptance rule). These compose into receipt-bearing credit flows.",
         duration: "30 min",
         resources: [
           { type: 'doc', title: "Agent Economy Overview", href: "/agent-economy" },
@@ -1598,11 +1598,11 @@ export const playbooks: Playbook[] = [
       },
       {
         title: "Compose Into a Full Flow",
-        description: "Combine reserve + note + tracker + predicate into a complete agent payment flow: agent buys API call, pays with note, provider redeems against reserve.",
+        description: "Combine reserve + note + tracker + predicate into a receipt-bearing flow: an agent requests work, pays with a Note, a provider verifies terms, and settlement is recorded.",
         duration: "60 min",
         resources: [
           { type: 'doc', title: "All 3 Demo Flows", href: "/demos" },
-          { type: 'technology', title: "Babel Fees (pay with any token)", href: "/technology/babel-fees" },
+          { type: 'technology', title: "Babel Fees (supported token fee paths)", href: "/technology/babel-fees" },
         ],
       },
       {

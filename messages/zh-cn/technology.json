@@ -763,7 +763,7 @@
             "icon": "DollarSign"
           },
           {
-            "title": "Spectrum DEX",
+            "title": "Historical DEX designs",
             "description": "Decentralized exchange using price feeds for limit orders and liquidations",
             "icon": "BarChart3"
           },
@@ -1952,7 +1952,7 @@
         },
         {
           "title": "Transaction Ordering",
-          "content": "Transactions in subblocks are ordered deterministically using a combination of timestamp and transaction ID, preventing front-running and ensuring fairness."
+          "content": "Transactions in subblocks are ordered deterministically using a combination of timestamp and transaction ID, reducing discretionary ordering and common front-running surfaces. Fairness still depends on the final implementation, mempool policy, and dApp design."
         },
         {
           "title": "State Management",
@@ -2211,7 +2211,7 @@
           "description": "Algorithmic stablecoin using ERG/USD price feeds"
         },
         {
-          "title": "Spectrum DEX",
+          "title": "Historical DEX designs",
           "description": "Decentralized exchange with real-time price data"
         },
         {
@@ -2427,7 +2427,7 @@
       "hidden_token_amounts_private_smart": "隐藏代币金额\",\n      \"私密智能合约\",\n      \"保密交易\",\n      \"选择性披露",
       "flexible_privacy_features_usable_in": "可在 dApp、DeFi 和 NFT 中使用的灵活隐私功能\",\n  \"开源、经同行评审的密码学\",\n  \"可与其他 Ergo 功能组合\",\n  \"内置于协议中，而非事后添加\",\n  \"经过数学证明的安全保证",
       "confidential_collectibles": "保密的收藏品",
-      "answer_text_ergo_offers_multiple": "回答\",\n                text:\n                  \"Ergo 提供多种隐私功能，包括 Sigma 协议、环签名、零知识证明和保密交易。这些技术在保障安全性和合规性的同时，支持保护隐私的交易。",
+      "answer_text_ergo_offers_multiple": "Ergo 的隐私是可选的，并可支持选择性披露工作流。实际法律合规取决于司法辖区、具体实现，以及协议周边的服务提供者。",
       "answer_text_sigma_protocols_are": "回答\",\n                text:\n                  \"Sigma 协议是零知识证明系统，允许在不泄露秘密值的情况下证明关于该值的陈述。它们支持保护隐私的身份验证和交易验证。",
       "answer_text_yes_ergo_s": "回答\",\n                text:\n                  \"是的，Ergo 的隐私功能旨在符合监管要求。它们提供选择性披露能力，允许用户在需要时披露交易细节，同时默认保持隐私。",
       "ergo_bakes_privacy_into_the": "Ergo 将隐私写入协议：Sigma协议、环/阈值签名、ErgoMixer、保密资产和选择性披露。",
@@ -3320,7 +3320,7 @@
         "faq": {
           "whatFeatures": {
             "question": "Ergo 提供什么隐私功能？",
-            "answer": "Ergo提供多种隐私功能，包括Sigma协议、环形签名、零知识证明和保密交易，这些技术使得隐私保护交易能够保持安全和合规。"
+            "answer": "Ergo 的隐私是可选的，并可支持选择性披露工作流。实际法律合规取决于司法辖区、具体实现，以及协议周边的服务提供者。"
           },
           "howSigmaWorks": {
             "question": "Sigma 协议如何工作？",
@@ -4658,7 +4658,7 @@
         },
         "1": {
           "question": "Ergo 是隐私硬币吗？",
-          "answer": "Ergo 提供了可选的隐私。用户可以选择透明或保密的交易。隐私是一个功能，不是强制性的，保持管理合规。"
+          "answer": "Ergo 的隐私是可选的，并可支持选择性披露工作流。实际法律合规取决于司法辖区、具体实现，以及协议周边的服务提供者。"
         },
         "2": {
           "question": "ErgoMixer是什么？",

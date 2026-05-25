@@ -763,7 +763,7 @@
             "icon": "DollarSign"
           },
           {
-            "title": "Spectrum DEX",
+            "title": "Historical DEX designs",
             "description": "지정가 주문 및 청산을 위해 가격 피드를 사용하는 분산형 거래소",
             "icon": "BarChart3"
           },
@@ -2211,7 +2211,7 @@
           "description": "ERG/USD 가격 피드를 사용하는 알고리즘 스테이블코인"
         },
         {
-          "title": "Spectrum DEX",
+          "title": "Historical DEX designs",
           "description": "실시간 가격 데이터가 있는 탈중앙화 거래소"
         },
         {
@@ -2427,9 +2427,9 @@
       "hidden_token_amounts_private_smart": "숨겨진 토큰 양\",\n      \"프라이빗 스마트 컨트랙트\",\n      \"기밀 트랜잭션\",\n      \"선택적 공개",
       "flexible_privacy_features_usable_in": "dApp, DeFi, NFT에서 사용 가능한 유연한 프라이버시 기능\",\n  \"오픈 소스, 동료 검토 암호학\",\n  \"다른 Ergo 기능과 구성 가능\",\n  \"사후에 추가된 것이 아닌 프로토콜에 내장됨\",\n  \"수학적으로 증명된 보안 보장",
       "confidential_collectibles": "기밀 수집품",
-      "answer_text_ergo_offers_multiple": "Answer\",\n                text:\n                  \"Ergo는 Sigma 프로토콜, 링 서명, 영지식 증명, 기밀 트랜잭션을 포함한 다양한 프라이버시 기능을 제공합니다. 이러한 기술은 보안과 규제 준수를 유지하면서 프라이버시 보호 트랜잭션을 가능하게 합니다.",
+      "answer_text_ergo_offers_multiple": "Ergo의 프라이버시는 선택 사항이며 선택적 공개 워크플로를 지원할 수 있습니다. 실제 법적 준수 여부는 관할권, 구현 방식, 프로토콜 주변의 서비스 제공자에 따라 달라집니다.",
       "answer_text_sigma_protocols_are": "Answer\",\n                text:\n                  \"Sigma 프로토콜은 비밀 값 자체를 공개하지 않고 비밀 값에 대한 진술을 증명할 수 있는 영지식 증명 시스템입니다. 프라이버시 보호 인증 및 트랜잭션 검증을 가능하게 합니다.",
-      "answer_text_yes_ergo_s": "Answer\",\n                text:\n                  \"네, Ergo의 프라이버시 기능은 규제를 준수하도록 설계되었습니다. 기본적으로 프라이버시를 유지하면서 필요할 때 사용자가 트랜잭션 세부 정보를 공개할 수 있는 선택적 공개 기능을 제공합니다.",
+      "answer_text_yes_ergo_s": "Ergo의 프라이버시는 선택 사항이며 선택적 공개 워크플로를 지원할 수 있습니다. 실제 법적 준수 여부는 관할권, 구현 방식, 프로토콜 주변의 서비스 제공자에 따라 달라집니다.",
       "ergo_bakes_privacy_into_the": "Ergo는 프라이버시를 프로토콜에 내장합니다: Sigma 프로토콜, 링/임계 서명, ErgoMixer, 기밀 자산 및 선택적 공개.",
       "ergo_privacy_sigma_protocols_ring": "Ergo 프라이버시,Sigma 프로토콜,링 서명,영지식 증명,ErgoMixer,기밀 트랜잭션",
       "prepare_funds_text_split_funds": "자금 준비\", text: \"자금을 분할하고 주소 재사용을 피하세요.",
@@ -3966,7 +3966,7 @@
       "description": "확장 UTXO는 Bitcoin의 검증된 보안 모델을 ErgoScript를 통한 강력한 스마트 컨트랙트 기능과 결합하여 병렬 실행을 가능하게 하고 전체 취약성 클래스를 제거합니다.",
       "seo": {
         "title": "eUTXO 모델: 병렬 스마트 컨트랙트 | Ergo",
-        "description": "Ergo의 확장 UTXO 모델이 어떻게 병렬 실행, MEV 저항, 조합 가능한 DeFi를 가능하게 하는지 알아보세요. 설계에 의한 재진입 공격 없음.",
+        "description": "Ergo의 eUTXO 모델은 계정 기반 체인에서 흔한 front-running 및 sandwich 패턴을 줄이고 실행을 더 예측 가능하게 만듭니다. 그러나 애플리케이션 설계, mempool 정책, 오프체인 주문 흐름은 여전히 중요합니다.",
         "keywords": "eUTXO, 확장 UTXO, UTXO 모델, 병렬 실행, 스마트 컨트랙트, MEV 저항, 조합 가능성, Ergo 블록체인, DeFi 보안, 박스 모델"
       },
       "buttons": {
@@ -4059,7 +4059,7 @@
         "0": {
           "title": "DEX 주문서",
           "description": "각 주문은 별도 박스로 병렬 매칭과 원자 스왑 가능",
-          "example": "Spectrum Finance"
+          "example": "Historical ErgoDEX/Spectrum"
         },
         "1": {
           "title": "대출 프로토콜",
@@ -4658,7 +4658,7 @@
         },
         "1": {
           "question": "Ergo는 프라이버시 코인인가요?",
-          "answer": "Ergo는 선택적 프라이버시를 제공합니다. 사용자는 투명하거나 기밀 거래를 선택할 수 있습니다. 프라이버시는 기능이지 의무가 아니며 규제 준수를 유지합니다."
+          "answer": "Ergo의 프라이버시는 선택 사항이며 선택적 공개 워크플로를 지원할 수 있습니다. 실제 법적 준수 여부는 관할권, 구현 방식, 프로토콜 주변의 서비스 제공자에 따라 달라집니다."
         },
         "2": {
           "question": "ErgoMixer란 무엇인가요?",

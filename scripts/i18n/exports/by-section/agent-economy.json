@@ -1,0 +1,744 @@
+[
+  {
+    "key": "agent-economy.agentEconomy.breadcrumb",
+    "source": "Agent Economy",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.hero.tag",
+    "source": "Agent Economy",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.hero.titleStart",
+    "source": "The base layer for",
+    "context": "Title",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.hero.titleHighlight",
+    "source": "autonomous",
+    "context": "Title",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.hero.titleEnd",
+    "source": "economic agents.",
+    "context": "Title",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.hero.description",
+    "source": "Autonomous agents need more than payments. They need credit, programmable acceptance rules, and verifiable settlement — all without a central counterparty. Ergo is one of the few settlement layers with the protocol-level primitives needed for this.",
+    "context": "Description",
+    "maxLength": 372,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.hero.ctaArchitecture",
+    "source": "See the architecture",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.hero.ctaDemos",
+    "source": "View demos",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.problem.sectionLabel",
+    "source": "The Problem",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.problem.heading",
+    "source": "Merchant checkout rails solve commerce.",
+    "context": "General content",
+    "maxLength": 58.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.problem.headingMuted",
+    "source": "Autonomous work settlement needs another layer.",
+    "context": "General content",
+    "maxLength": 70.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stripeProblemItems.0.title",
+    "source": "No persistent identity",
+    "context": "Title",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stripeProblemItems.0.body",
+    "source": "Commerce rails are built around persistent buyers, merchants, accounts, disputes and compliance. Autonomous work flows can be temporary processes acting under bounded authority.",
+    "context": "General content",
+    "maxLength": 265.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stripeProblemItems.1.title",
+    "source": "One-time payments only",
+    "context": "Title",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stripeProblemItems.1.body",
+    "source": "Autonomous services often need bounded credit: issue now, redeem later, expire by policy. That is a settlement primitive, not only a checkout event.",
+    "context": "General content",
+    "maxLength": 222,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stripeProblemItems.2.title",
+    "source": "No programmable acceptance",
+    "context": "Title",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stripeProblemItems.2.body",
+    "source": "A work rail needs terms inside the claim: accept only if the task hash, verifier receipt, deadline and policy match. Otherwise payment and verification split apart.",
+    "context": "General content",
+    "maxLength": 246,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stripeProblemItems.3.title",
+    "source": "Millisecond economics break",
+    "context": "Title",
+    "maxLength": 40.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stripeProblemItems.3.body",
+    "source": "Small machine calls need deterministic costs and receipt retention. Human checkout systems can coexist with this, but they do not replace the programmable settlement layer.",
+    "context": "General content",
+    "maxLength": 258,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.creditUnlock.sectionLabel",
+    "source": "The Unlock",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.creditUnlock.heading",
+    "source": "Verifiable workflows are table stakes. Programmable credit is the unlock.",
+    "context": "General content",
+    "maxLength": 109.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.creditUnlock.description",
+    "source": "A verifiable workflow proves that work happened. Programmable credit lets agents coordinate future work before final settlement: sub-agent budgets, task-conditioned Notes, reserve-backed claims, expiry rules and policy-constrained spending.",
+    "context": "Description",
+    "maxLength": 360,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.creditUnlock.formula",
+    "source": "Payments move value. Verification proves work. Credit creates economic agency.",
+    "context": "General content",
+    "maxLength": 117,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.creditUnlock.items.0.title",
+    "source": "Payments",
+    "context": "Title",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.creditUnlock.items.0.body",
+    "source": "Agents pay for API calls, compute, data and tools without forcing every decision back through a human checkout.",
+    "context": "General content",
+    "maxLength": 166.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.creditUnlock.items.1.title",
+    "source": "Verification",
+    "context": "Title",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.creditUnlock.items.1.body",
+    "source": "Receipts, task hashes and acceptance predicates define whether the agreed work actually happened.",
+    "context": "General content",
+    "maxLength": 145.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.creditUnlock.items.2.title",
+    "source": "Credit",
+    "context": "Title",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.creditUnlock.items.2.body",
+    "source": "Bounded, redeemable Notes let agents coordinate work now and settle later under explicit rules.",
+    "context": "General content",
+    "maxLength": 142.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.solution.sectionLabel",
+    "source": "The Solution",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.solution.heading",
+    "source": "Why Ergo is the right",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.solution.headingHighlight",
+    "source": "base layer",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.solution.learnMore",
+    "source": "Learn more",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.whyErgoItems.0.title",
+    "source": "eUTXO: verifiable atomicity",
+    "context": "Title",
+    "maxLength": 40.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.whyErgoItems.0.body",
+    "source": "Transactions are deterministic against explicit inputs and outputs. Agents can reason about outcomes before submitting, with no protocol-level reentrancy and less exposure to common account-model MEV patterns.",
+    "context": "General content",
+    "maxLength": 313.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.whyErgoItems.0.href",
+    "source": "/technology/eutxo-model",
+    "context": "General content",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.whyErgoItems.1.title",
+    "source": "ErgoScript: programmable trust",
+    "context": "Title",
+    "maxLength": 45,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.whyErgoItems.1.body",
+    "source": "Acceptance predicates are first-class primitives. 'Accept this note only if task hash matches and deadline hasn't passed' — one script, on-chain, trustless.",
+    "context": "General content",
+    "maxLength": 234,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.whyErgoItems.1.href",
+    "source": "/technology/ergoscript",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.whyErgoItems.2.title",
+    "source": "Babel Fees: agents don't need ERG",
+    "context": "Title",
+    "maxLength": 49.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.whyErgoItems.2.body",
+    "source": "Agents can cover transaction fees through supported token-to-ERG paths. That reduces the need to pre-fund every new agent instance with ERG — critical for ephemeral compute.",
+    "context": "General content",
+    "maxLength": 259.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.whyErgoItems.2.href",
+    "source": "/technology/babel-fees",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.whyErgoItems.3.title",
+    "source": "Sigma Protocols: private credit",
+    "context": "Title",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.whyErgoItems.3.body",
+    "source": "Zero-knowledge proofs are native. Agents can prove they hold a credential or completed a task without revealing which agent they are.",
+    "context": "General content",
+    "maxLength": 199.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.whyErgoItems.3.href",
+    "source": "/technology/privacy-features",
+    "context": "General content",
+    "maxLength": 42,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.whyErgoItems.4.title",
+    "source": "Proof-of-Work: no chain halts",
+    "context": "Title",
+    "maxLength": 43.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.whyErgoItems.4.body",
+    "source": "PoW has no governance emergency stops. Agent infrastructure built on Ergo won't be frozen by a validator cartel or foundation decision.",
+    "context": "General content",
+    "maxLength": 202.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.whyErgoItems.4.href",
+    "source": "/technology",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.whyErgoItems.5.title",
+    "source": "Native tokens: community money",
+    "context": "Title",
+    "maxLength": 45,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.whyErgoItems.5.body",
+    "source": "Issue native tokens and design Note/Reserve-style payment patterns without ERC-20-style deployment ceremony. Specific agent-payment contracts remain prototype/testnet-first unless audited.",
+    "context": "General content",
+    "maxLength": 282,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.whyErgoItems.5.href",
+    "source": "/technology/native-tokens",
+    "context": "General content",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stack.sectionLabel",
+    "source": "The Stack",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stack.heading",
+    "source": "The agent economy stack",
+    "context": "General content",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stack.description",
+    "source": "Ergo mainnet provides the base settlement layer and Babel-fee-style fee abstraction. Accord, ChainCash/Basis and Note/Reserve/Tracker reference implementations are testnet-first prototypes unless a specific deployment is audited and explicitly marked production-ready.",
+    "context": "Description",
+    "maxLength": 402,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stack.legendLive",
+    "source": "Base Ergo capability",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stack.legendOpen",
+    "source": "Open research problem",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stack.linkArchitecture",
+    "source": "Technical architecture →",
+    "context": "General content",
+    "maxLength": 36,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stack.linkGithub",
+    "source": "GitHub repos",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stack.badgeOpen",
+    "source": "open",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stackLayerItems.0.label",
+    "source": "Settlement",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stackLayerItems.0.sublabel",
+    "source": "Ergo base layer",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stackLayerItems.0.status",
+    "source": "live",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stackLayerItems.0.description",
+    "source": "Proof-of-Work finality, eUTXO atomicity, ~$0.01 fees",
+    "context": "Description",
+    "maxLength": 78,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stackLayerItems.1.label",
+    "source": "Reserves",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stackLayerItems.1.sublabel",
+    "source": "reserve contracts",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stackLayerItems.1.status",
+    "source": "live",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stackLayerItems.1.description",
+    "source": "On-chain capital backing — holds ERG or tokens as collateral for issued notes",
+    "context": "Description",
+    "maxLength": 115.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stackLayerItems.2.label",
+    "source": "Trackers",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stackLayerItems.2.sublabel",
+    "source": "on-chain trackers",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stackLayerItems.2.status",
+    "source": "live",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stackLayerItems.2.description",
+    "source": "Verifiable accounting — track balances, credit limits, redemption history",
+    "context": "Description",
+    "maxLength": 109.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stackLayerItems.3.label",
+    "source": "Notes",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stackLayerItems.3.sublabel",
+    "source": "ChainCash / custom contracts",
+    "context": "General content",
+    "maxLength": 42,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stackLayerItems.3.status",
+    "source": "live",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stackLayerItems.3.description",
+    "source": "Programmable IOUs — issue, transfer, and redeem off-chain money",
+    "context": "Description",
+    "maxLength": 94.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stackLayerItems.4.label",
+    "source": "Trust Rules",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stackLayerItems.4.sublabel",
+    "source": "ErgoScript predicates",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stackLayerItems.4.status",
+    "source": "live",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stackLayerItems.4.description",
+    "source": "Acceptance logic — 'accept this note only under these rules' — fully on-chain",
+    "context": "Description",
+    "maxLength": 115.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stackLayerItems.5.label",
+    "source": "Reputation",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stackLayerItems.5.sublabel",
+    "source": "open problem",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stackLayerItems.5.status",
+    "source": "open",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stackLayerItems.5.description",
+    "source": "Agent reputation without a central oracle — active research area",
+    "context": "Description",
+    "maxLength": 96,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stackLayerItems.6.label",
+    "source": "Identity",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stackLayerItems.6.sublabel",
+    "source": "open problem",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stackLayerItems.6.status",
+    "source": "open",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.stackLayerItems.6.description",
+    "source": "Persistent agent identity across sessions without deanonymisation",
+    "context": "Description",
+    "maxLength": 97.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.useCases.sectionLabel",
+    "source": "What you can build",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.useCases.heading",
+    "source": "Three composable flows. Two testnet reference flows, one upcoming.",
+    "context": "General content",
+    "maxLength": 99,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.useCases.linkDemos",
+    "source": "See all demos with code",
+    "context": "General content",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.useCaseItems.0.title",
+    "source": "LLM buys inference",
+    "context": "Title",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.useCaseItems.0.flow",
+    "source": "Agent → issues note → API provider accepts predicate → delivers tokens",
+    "context": "General content",
+    "maxLength": 105,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.useCaseItems.0.detail",
+    "source": "One call, one proof, no persistent account. Provider sets their own acceptance rules — minimum task hash, maximum credit, deadline.",
+    "context": "General content",
+    "maxLength": 196.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.useCaseItems.1.title",
+    "source": "Agent pays on credit",
+    "context": "Title",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.useCaseItems.1.flow",
+    "source": "Reserve deployed → notes issued against it → tracker monitors usage → auto-settle",
+    "context": "General content",
+    "maxLength": 121.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.useCaseItems.1.detail",
+    "source": "Credit limit enforced on-chain. No counterparty risk — the reserve contract is the bank.",
+    "context": "General content",
+    "maxLength": 132,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.useCaseItems.2.title",
+    "source": "Community currency",
+    "context": "Title",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.useCaseItems.2.flow",
+    "source": "Reserve holds ERG → community issues local notes → acceptance predicates define rules",
+    "context": "General content",
+    "maxLength": 127.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.useCaseItems.2.detail",
+    "source": "A local marketplace, a compute cooperative, or an agent network — each with their own money and trust rules.",
+    "context": "General content",
+    "maxLength": 162,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.bml.tag",
+    "source": "BetterMoneyLabs",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.bml.heading",
+    "source": "We're building the reference stack.",
+    "context": "General content",
+    "maxLength": 52.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.bml.description",
+    "source": "Notes, credit, trackers, reserves, acceptance predicates — and the showcase for agent-to-agent settlement receipts. If you're building in this space, we want to talk to you.",
+    "context": "Description",
+    "maxLength": 259.5,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.bml.ctaArchitecture",
+    "source": "Technical architecture",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.bml.ctaTalk",
+    "source": "Talk to us",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.finalCta.title",
+    "source": "Building agents? Talk to us.",
+    "context": "Title",
+    "maxLength": 42,
+    "translation": ""
+  },
+  {
+    "key": "agent-economy.agentEconomy.finalCta.description",
+    "source": "Tell us what you're building. We'll get back with a concrete next step — demo, design session, or code review.",
+    "context": "Description",
+    "maxLength": 165,
+    "translation": ""
+  }
+]

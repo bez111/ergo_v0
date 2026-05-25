@@ -730,27 +730,31 @@ export default function DataModelApisPage() {
               <h3 className="text-xl font-semibold mb-3 text-orange-400">Example ErgoScript</h3>
               <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
                 <CodeBlock language="scala">{`{ // Example ErgoScript using box properties
-  // Retrieve the value and token multipliers from the registers of the current box (SELF)
-  val valueMultiplier = SELF.R4[Int].get
-  val tokenMultiplier = INPUTS(1).R4[Int].get // Accessing register of another input box
+  val hasExpectedContext =
+    INPUTS.size > 1 &&
+    OUTPUTS.size > 0 &&
+    SELF.R4[Int].isDefined &&
+    INPUTS(1).R4[Int].isDefined
 
-  // Check if the current box being spent (SELF) is the same as the first input box
-  if(SELF.id == INPUTS(0).id){
-    // If it is, check if the first output box has the correct value and token amounts
-    val outputValue = OUTPUTS(0).value == SELF.value * valueMultiplier
-    val outputTokens = OUTPUTS(0).tokens(0)._2 == SELF.value * tokenMultiplier
-    // Return a Sigma proposition that is true only if both outputValue and outputTokens are true
-    sigmaProp(outputValue && outputTokens)
-  }else{
-    // If the current box is not the same as the first input box, check if the output goes to a specified address
-    val outputGoesToCheese = {
-      // Create a public key that corresponds to a specific address
-      PK("9etXmP7D3ZkWssDopWcWkCPpjn22RVuEyXoFSbVPWAvvzDbcDXE").propBytes
-        == OUTPUTS(0).propositionBytes // propositionBytes holds the script (ErgoTree)
+  if (hasExpectedContext) {
+    // Retrieve the value and token multipliers from registers.
+    val valueMultiplier = SELF.R4[Int].get
+    val tokenMultiplier = INPUTS(1).R4[Int].get
+
+    // Check if the current box being spent (SELF) is the same as the first input box.
+    if (SELF.id == INPUTS(0).id) {
+      val outputValue = OUTPUTS(0).value == SELF.value * valueMultiplier
+      val outputTokens =
+        OUTPUTS(0).tokens.size > 0 &&
+        OUTPUTS(0).tokens(0)._2 == SELF.value * tokenMultiplier
+      sigmaProp(outputValue && outputTokens)
+    } else {
+      val outputGoesToCheese =
+        PK("9etXmP7D3ZkWssDopWcWkCPpjn22RVuEyXoFSbVPWAvvzDbcDXE").propBytes ==
+        OUTPUTS(0).propositionBytes
+      sigmaProp(outputGoesToCheese)
     }
-    // Return a Sigma proposition that is true only if outputGoesToCheese is true
-    sigmaProp(outputGoesToCheese)
-  }
+  } else sigmaProp(false)
 }
 // Context Variables used: SELF, INPUTS, OUTPUTS (See ../scs/blockchain-context.md)
 // Functions used: sigmaProp, PK (See ../scs/sigma.md)`}</CodeBlock>

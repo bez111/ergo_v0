@@ -10,7 +10,11 @@ const ErgoScriptPlaygroundClient = dynamic(
     loading: () => (
       <div className="min-h-screen bg-black px-4 py-24 text-white">
         <div className="mx-auto max-w-6xl rounded-lg border border-white/10 bg-white/[0.03] p-6 font-mono text-sm text-neutral-400">
-          Loading ErgoScript Playground...
+          <div className="mb-3 text-xs uppercase tracking-[0.22em] text-orange-200">ErgoScript Playground</div>
+          <div className="text-lg font-semibold text-white">Browser workbench for ErgoScript contracts</div>
+          <div className="mt-2 max-w-2xl leading-relaxed">
+            Monaco editor, Fleet compiler paths, and sigma-rust WASM checks initialize at route level so the core site stays fast.
+          </div>
         </div>
       </div>
     ),

@@ -317,15 +317,15 @@ export default function LearnClient() {
               <Bot className="w-5 h-5 text-orange-400" />
             </div>
             <div>
-              <p className="font-semibold text-white text-sm mb-0.5">Ready to build autonomous agents?</p>
-              <p className="text-neutral-400 text-sm">Learn ErgoScript acceptance predicates, notes, and reserves — the full agent payment stack with working demos on testnet.</p>
+              <p className="font-semibold text-white text-sm mb-0.5">Ready to build verifiable agent receipts?</p>
+              <p className="text-neutral-400 text-sm">Learn ErgoScript acceptance predicates, Notes, reserves, and receipt flows — a testnet-first stack with working demos.</p>
             </div>
           </div>
           <Link
             href="/build/agent-payments"
             className="flex-shrink-0 inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-black font-semibold px-5 py-2.5 rounded-xl transition-colors text-sm whitespace-nowrap"
           >
-            Agent Payments <ArrowRight className="w-4 h-4" />
+            Receipt Stack <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </div>

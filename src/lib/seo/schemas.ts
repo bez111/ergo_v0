@@ -220,7 +220,8 @@ export function createWebSiteSchema() {
     "@id": `${BASE_URL}#website`,
     name: "Ergo Platform",
     url: BASE_URL,
-    description: "Next-generation Proof-of-Work blockchain for DeFi, privacy, and financial sovereignty",
+    description: "PoW/eUTXO clearing layer and public proof surface for autonomous work, verifiable receipts, wallet policy, DeFi, privacy, ErgoScript smart contracts, ERG, GPU mining, and audit-gated settlement",
+    keywords: "Ergo blockchain, ERG, proof of work, eUTXO, ErgoScript, Sigma Protocols, Autolykos, GPU mining, Babel Fees, Storage Rent, NiPoPoWs, Oracle Pools, DeFi, UTXO DeFi, privacy, sound money, no premine, cypherpunk blockchain, MEV resistance, autonomous work clearing, AI agent payments, verifiable receipts",
     publisher,
     potentialAction: {
       "@type": "SearchAction",
@@ -412,4 +413,3 @@ const schemaHelpers = {
 }
 
 export default schemaHelpers
-

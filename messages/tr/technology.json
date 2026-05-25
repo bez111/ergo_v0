@@ -763,7 +763,7 @@
             "icon": "DollarSign"
           },
           {
-            "title": "Spectrum DEX",
+            "title": "Historical DEX designs",
             "description": "Limit emirleri ve tasfiyeler için fiyat akışları kullanan merkezi olmayan borsa",
             "icon": "BarChart3"
           },
@@ -2211,7 +2211,7 @@
           "description": "ERG/USD fiyat akışlarını kullanan algoritmik stablecoin"
         },
         {
-          "title": "Spectrum DEX",
+          "title": "Historical DEX designs",
           "description": "Gerçek zamanlı fiyat verileriyle merkeziyetsiz borsa"
         },
         {
@@ -4059,7 +4059,7 @@
         "0": {
           "title": "DEX Emir Defterleri",
           "description": "Her emir ayrı bir kutudur; paralel eşleştirme ve atomik takasları mümkün kılar",
-          "example": "Spectrum Finance"
+          "example": "Historical ErgoDEX/Spectrum"
         },
         "1": {
           "title": "Borç Verme Protokolleri",

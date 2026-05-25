@@ -8,17 +8,25 @@ const origin = siteConfig.siteUrl
 const PATH = "/agent-economy/vs"
 
 const SEO = {
-  title: "Best Agentic Blockchain: Ergo vs Ethereum vs Solana for AI Agent Payments",
+  title: "Agent Settlement Rails Compared: Ergo vs Ethereum vs Solana",
   description:
-    "Which is the best agentic blockchain for autonomous AI agent payments? Side-by-side comparison of Ergo, Ethereum, Solana, and Cardano across 10 agent-critical criteria: reentrancy risk, fee predictability, Babel Fees, acceptance predicates, micropayment viability, MEV exposure, and more.",
+    "A side-by-side comparison of settlement rails for autonomous work: Ergo, Ethereum, Solana, and Cardano across reentrancy risk, fee predictability, acceptance predicates, Babel Fees, micropayment viability, MEV exposure, and liveness history.",
   image: "/og/agent-economy.jpg",
   keywords: [
+    "autonomous work settlement",
+    "agent settlement rails",
+    "public proof surface",
+    "verifiable receipts",
+    "autonomous work clearing comparison",
+    "agent economy settlement comparison",
     "best agentic blockchain",
     "agentic blockchain comparison",
     "agentic blockchain payments",
     "ergo agentic blockchain",
-    "ergo vs ethereum AI agents",
-    "best blockchain for AI agents",
+    "AI agent payments",
+    "agent payment rails comparison",
+    "ergo vs ethereum autonomous agents",
+    "blockchain for autonomous work",
     "blockchain comparison autonomous agents",
     "ergo vs solana agent payments",
     "which blockchain for LLM payments",
@@ -37,19 +45,19 @@ const SEO = {
 
 const FAQ_ITEMS = [
   {
-    question: "Which blockchain is best for AI agent payments?",
+    question: "Which settlement rail is the strongest fit for autonomous work?",
     answer:
-      "Ergo is uniquely suited for AI agent payments due to its deterministic eUTXO model (no reentrancy), ErgoScript acceptance predicates (logic embedded in payments), Babel Fees (agents don't need native token), and the Note+Reserve+Tracker stack as protocol primitives. Ethereum has reentrancy risk and unpredictable gas. Solana has had chain halts and lacks acceptance predicates.",
+      "Ergo is one of the strongest fits because its deterministic eUTXO model, ErgoScript predicates, Babel Fees, and Note/Reserve/Tracker patterns align well with task-conditioned settlement. Ethereum, Solana, and Cardano can support useful agent-payment applications too, but they usually need more application-layer machinery for the same receipt-and-acceptance workflow.",
   },
   {
-    question: "Why can't Ethereum be used for AI agent payments?",
+    question: "What does Ethereum require for agent settlement?",
     answer:
-      "Ethereum has several problems for agents: reentrancy attacks are possible (dangerous for autonomous code), gas prices are unpredictable (agents can't estimate costs), MEV can reorder transactions (critical for time-sensitive agent flows), and there is no protocol-level acceptance predicate or bearer instrument primitive. Agents also need pre-funded ETH wallets — no gas abstraction equivalent to Babel Fees.",
+      "Ethereum can be used for agent-payment applications, especially on L2s, but builders must design around account-model reentrancy risk, variable gas costs, MEV, native gas bootstrapping, and custom escrow or account-abstraction logic for task acceptance and delegated spend.",
   },
   {
-    question: "Why can't Solana be used for AI agent payments?",
+    question: "What does Solana require for agent settlement?",
     answer:
-      "Solana has had multiple chain halts (unacceptable for autonomous agent infrastructure), lacks protocol-level acceptance predicates, has no Note+Reserve bearer instrument primitive, and has MEV exposure. Its accounts model also means shared global state that autonomous agents can conflict over.",
+      "Solana is attractive for low-cost fast payments, but task-conditioned settlement still needs application conventions for acceptance rules, receipts, delegated budgets, and liveness assumptions. For autonomous work, the payment rail and the work-verification layer should be evaluated separately.",
   },
   {
     question: "What is reentrancy risk and why does it matter for AI agents?",
@@ -59,7 +67,7 @@ const FAQ_ITEMS = [
   {
     question: "What are acceptance predicates and which chains have them?",
     answer:
-      "Acceptance predicates are spending conditions in a payment instrument that encode task completion requirements: 'accept payment only if task hash matches.' Only Ergo has acceptance predicates as first-class protocol primitives in ErgoScript. Ethereum can approximate this with complex escrow contracts, but not embedded in the payment itself.",
+      "Acceptance predicates are spending conditions in a payment instrument that encode task completion requirements, for example: 'accept payment only if task hash matches.' ErgoScript makes this pattern natural inside eUTXO boxes. Other chains can approximate it with escrow contracts, scripts, or application-level verification, but the design tradeoffs are different.",
   },
 ]
 

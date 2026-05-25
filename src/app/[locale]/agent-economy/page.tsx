@@ -12,23 +12,31 @@ export async function generateMetadata({
   const { locale } = await params
 
   return {
-    title: "Ergo Agent Economy | Accord, Receipts & Programmable Settlement",
+    title: "Ergo Agent Economy | Receipts, Policy & Programmable Settlement",
     description:
-      "Ergo is the first reference programmable-settlement rail for Accord: agreements, verification receipts, settlement receipts, wallet policy and testnet-first agent-payment demos.",
+      "Ergo is becoming a public proof and clearing surface for autonomous work: agreements, verification receipts, settlement receipts, wallet policy and testnet-first agent-payment demos.",
     keywords: [
-      // Agentic blockchain — PRIMARY cluster
+      // New positioning cluster
+      "autonomous work settlement",
+      "public proof surface",
+      "verifiable receipt bundles",
+      "wallet policy API",
+      "audit-gated settlement",
+      // Search-discovery bridge terms
       "agentic blockchain",
       "agentic blockchain payments",
       "ergo agentic blockchain",
       "blockchain for AI agents",
       "autonomous AI payments blockchain",
-      "agentic economy blockchain",
-      // Core agent economy
-      "agent economy blockchain",
-      "autonomous agent payments",
       "AI agent payments",
-      "crypto agent payments",
-      "agent-to-agent payments",
+      "agent payments",
+      // Core agent economy
+      "autonomous work clearing",
+      "agent economy blockchain",
+      "autonomous agent settlement",
+      "AI agent settlement",
+      "crypto agent settlement",
+      "agent-to-agent settlement",
       "agentic economy",
       "agent-native blockchain",
       // AI/LLM specific
@@ -40,7 +48,7 @@ export async function generateMetadata({
       "autonomous economic agent",
       "AI agent wallet",
       "AI agent spending limits",
-      "multi-agent payments",
+      "multi-agent settlement",
       "agent treasury blockchain",
       "AI agent API payments",
       "autonomous AI commerce",
@@ -91,10 +99,10 @@ export async function generateMetadata({
     },
     other: {
       // LLM / AI crawler hints
-      "ai-content-type": "agentic-blockchain-agent-economy",
-      "ai-topic": "agentic-blockchain, autonomous-agent-payments, programmable-credit, blockchain-settlement",
-      "ai-use-case": "agentic blockchain infrastructure, AI agents paying each other, autonomous commerce, programmable money",
-      "ai-category": "agentic-blockchain",
+      "ai-content-type": "autonomous-work-settlement-proof-surface",
+      "ai-topic": "autonomous-work-settlement, receipt-bundles, wallet-policy, programmable-credit, blockchain-settlement",
+      "ai-use-case": "agreements, verification receipts, settlement receipts, policy checks, testnet-first agent commerce",
+      "ai-category": "public-proof-surface",
     },
   }
 }
@@ -109,8 +117,8 @@ const agentEconomySchema = {
       "name": "Ergo Agent Economy",
       "description": "Testnet-first agent-economy architecture for Accord on Ergo. It covers work agreements, verification receipts, settlement receipts, wallet policy and prototype Note/Reserve/Tracker patterns.",
       "applicationCategory": "BlockchainApplication",
-      "applicationSubCategory": "Agentic Blockchain Infrastructure",
-      "keywords": "agentic blockchain, blockchain for AI agents, autonomous agent payments, ergo agentic blockchain, eUTXO AI agents",
+      "applicationSubCategory": "Autonomous Work Settlement Infrastructure",
+      "keywords": "autonomous work settlement, autonomous work clearing, public proof surface, verifiable receipts, wallet policy, programmable credit, AI agent payments, agentic blockchain, blockchain for AI agents, autonomous agent payments, eUTXO autonomous agents",
       "url": `${BASE_URL}/agent-economy`,
       "offers": {
         "@type": "Offer",
@@ -124,7 +132,7 @@ const agentEconomySchema = {
         "Settlement Receipts",
         "Agent Wallet Policy",
         "Prototype Note/Reserve/Tracker patterns",
-        "Babel Fees (pay with any token)",
+        "Babel Fees (supported token fee paths)",
         "Composable multi-agent flows"
       ],
       "programmingLanguage": ["ErgoScript", "TypeScript", "Scala"],
@@ -140,7 +148,7 @@ const agentEconomySchema = {
           "name": "What is the agent economy on Ergo?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The agent economy on Ergo refers to a testnet-first architecture for autonomous software that needs agreements, payment authorization, work verification, settlement records and spending policy. Ergo is the first reference programmable-settlement rail for Accord because eUTXO and ErgoScript fit deterministic settlement flows."
+            "text": "The agent economy on Ergo refers to a testnet-first architecture for autonomous software that needs agreements, payment authorization, work verification, settlement records and spending policy. Ergo is a natural programmable-settlement rail for Accord-style flows because eUTXO and ErgoScript fit deterministic settlement."
           }
         },
         {
@@ -153,10 +161,10 @@ const agentEconomySchema = {
         },
         {
           "@type": "Question",
-          "name": "Why can't AI agents use Stripe or PayPal?",
+          "name": "Where do checkout rails end and autonomous work settlement begin?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Stripe and PayPal are designed for human or business accounts, not ephemeral software agents. Accord explores how agents can combine agreement records, payment proofs, verification receipts and settlement receipts without presenting the current demos as production mainnet payment infrastructure."
+            "text": "Checkout rails are strong for buyer-authorized commerce. Autonomous work settlement is a different layer: agents need machine-readable agreements, task-conditioned acceptance, verification receipts, settlement receipts and bounded wallet policy. The current Ergo/Accord surfaces are testnet proof, not production mainnet payment infrastructure."
           }
         },
         {
@@ -181,7 +189,7 @@ const agentEconomySchema = {
       "@type": "TechArticle",
       "@id": `${BASE_URL}/agent-economy#article`,
       "headline": "Agent Economy on Ergo — Accord and Programmable Settlement",
-      "description": "How Accord uses agreements, verification receipts, settlement receipts and wallet policy with Ergo as the first reference programmable-settlement rail.",
+      "description": "How Accord-style agreements, verification receipts, settlement receipts and wallet policy can use Ergo as a testnet-first programmable-settlement rail.",
       "about": [
         { "@type": "Thing", "name": "Autonomous Agent Payments" },
         { "@type": "Thing", "name": "AI Agent Economy" },

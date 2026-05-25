@@ -1,24 +1,24 @@
 {
   "seo": {
-    "defaultTitle": "Ergo — 계약적 화폐를 위한 에이전틱 블록체인",
-    "defaultDescription": "Ergo는 에이전틱 블록체인(agentic blockchain)입니다 — 자율 AI 에이전트 결제, DeFi, 상대방 위험 없는 프로그래밍 가능한 화폐를 위해 설계된 PoW + eUTXO + ErgoScript.",
-    "keywords": "에이전틱 블록체인, agentic blockchain, AI 에이전트 블록체인, blockchain for AI agents, 자율 AI 결제 블록체인, autonomous AI payments blockchain, AI 에이전트 결제, AI agent payments, 어고 블록체인, ergo blockchain, 암호화폐, cryptocurrency, DeFi, 탈중앙화 금융, 스마트 컨트랙트, smart contracts, Ergo, eUTXO, 작업증명, proof of work",
+    "defaultTitle": "Ergo — 자율 작업을 위한 Public Proof Surface",
+    "defaultDescription": "Ergo는 자율 작업을 위한 PoW/eUTXO clearing layer이자 public proof surface입니다: programmable acceptance, receipt bundle, wallet policy, DeFi, audit-gated settlement.",
+    "keywords": "자율 작업 settlement, public proof surface, 검증 가능한 receipt, wallet policy, agent economy, agentic blockchain, blockchain for AI agents, ergo blockchain, 암호화폐, DeFi, 스마트 컨트랙트, Ergo, eUTXO, proof of work",
     "home": {
       "meta": {
-        "title": "Ergo — 에이전틱 블록체인 | MEV 저항성 PoW 스마트 컨트랙트",
-        "description": "에이전틱 블록체인(agentic blockchain): DeFi, AI 에이전트 결제, 프라이버시, 건전한 화폐를 위한 PoW + eUTXO. 예측 가능한 낮은 수수료, 사전 채굴 없음, VC 없음 — 금융 자유를 위해 사이퍼펑크들이 만든 블록체인.",
+        "title": "Ergo — 자율 작업이 결제되고, 증명되고, 정산되는 곳",
+        "description": "자율 작업을 위한 PoW/eUTXO clearing layer와 public proof surface: quote, programmable acceptance, receipt bundle, wallet policy, audit-gated settlement.",
         "keywords": "에이전틱 블록체인, agentic blockchain, AI 에이전트 블록체인, blockchain for AI agents, 자율 AI 결제 블록체인, autonomous AI payments blockchain, AI 에이전트 결제, AI agent payments, 어고 블록체인, ergo blockchain, 탈중앙화 금융, decentralized finance, MEV 저항 블록체인, MEV resistant blockchain, eUTXO 모델, eUTXO model, 검열 저항 화폐, censorship resistant money, ASIC 저항 채굴, ASIC resistant mining, 공정 출시 암호화폐, fair launch cryptocurrency, 프로그래밍 가능한 화폐, programmable money, 금융 주권, financial sovereignty, 사이퍼펑크 블록체인, cypherpunk blockchain, DeFi, 프라이버시, privacy, 건전한 화폐, sound money, ergo agent economy",
         "og": {
-          "title": "Ergo — Peer-to-Peer Agent Economy",
-          "description": "에이전틱 블록체인: PoW + eUTXO + ErgoScript로 구현하는 자율 AI 에이전트 결제, 프로그래밍 가능한 크레딧, 무신뢰 기계 간 거래.",
+          "title": "Ergo — 자율 작업을 위한 Public Proof Surface",
+          "description": "PoW + eUTXO + ErgoScript로 programmable credit, 검증 가능한 receipt, wallet policy, audit-gated agent settlement를 제공합니다.",
           "siteName": "Ergo Blockchain",
-          "imageAlt": "Ergo — Peer-to-Peer Agent Economy"
+          "imageAlt": "Ergo — 자율 작업을 위한 Public Proof Surface"
         },
         "twitter": {
-          "title": "Ergo — Peer-to-Peer Agent Economy",
-          "description": "에이전틱 블록체인: PoW + eUTXO로 구현하는 자율 AI 에이전트 결제, 프로그래밍 가능한 크레딧, 기계 간 거래. KYC 없음, 가스 부트스트래핑 없음."
+          "title": "Ergo — 자율 작업을 위한 Public Proof Surface",
+          "description": "자율 작업 settlement를 위한 PoW + eUTXO: programmable credit, receipt bundle, wallet policy, audit-gated mainnet claim."
         },
-        "heroImageAlt": "Ergo Platform — The Agentic Blockchain for Peer-to-Peer Agent Economy"
+        "heroImageAlt": "Ergo Platform — 자율 작업을 위한 Public Proof Surface"
       },
       "faq": {
         "items": [
@@ -28,19 +28,19 @@
           },
           {
             "question": "ERG를 어디서 구매하나요?",
-            "answer": "KuCoin, Gate.io, Bitpanda 같은 거래소나 Spectrum Finance 같은 탈중앙화 거래소에서 ERG를 구매할 수 있습니다. 먼저 지갑(Nautilus, SAFEW, 또는 Ergo 모바일 월렛)을 준비한 후 ERG를 구매하고 지갑 주소로 출금하세요."
+            "answer": "You can buy ERG on exchanges like KuCoin, Gate.io, or Bitpanda, and through verified non-custodial routes where active liquidity exists. Spectrum Finance is a historical Ergo DEX reference with a 2024 sunset notice, so verify current venues before trading. First get a wallet, then purchase ERG and withdraw to your wallet address."
           },
           {
             "question": "Ergo는 좋은 투자처인가요?",
             "answer": "Ergo는 사전 채굴 없이 공정하게 출시된 총 공급량 9,770만 ERG의 고정 공급량을 가집니다. 독자적인 기술(eUTXO, Sigma Protocols)을 갖춘 작업증명 블록체인입니다. 모든 암호화폐와 마찬가지로 직접 조사하고 잃어도 되는 금액만 투자하세요."
           },
           {
-            "question": "Ergo가 AI 에이전트와 기계 간 결제에 이상적인 이유는 무엇인가요?",
-            "answer": "Ergo의 eUTXO 모델은 결정론적 비용을 제공하여 에이전트가 정확한 수수료를 사전에 파악할 수 있습니다. Babel Fees를 통해 에이전트는 ERG를 사전 충전하지 않고도 모든 토큰으로 결제할 수 있습니다. ErgoScript는 수락 조건을 결제에 직접 내장합니다. KYC 없음, 가스 부트스트래핑 없음, 영구적 신원 불필요. 프로토콜 수준에서 네 가지 에이전트 결제 프리미티브를 모두 갖춘 유일한 블록체인입니다."
+            "question": "Ergo가 자율 작업 settlement에 잘 맞는 이유는 무엇인가요?",
+            "answer": "Ergo의 eUTXO 모델은 결정론적 비용을 제공하고, ErgoScript는 수락 규칙을 코드화할 수 있으며, Babel Fees는 native token 사전 준비 부담을 줄입니다. receipt workflow는 결제, 검증, settlement를 연결합니다. 현재 agent-economy stack은 audit gate가 열릴 때까지 testnet-first입니다."
           },
           {
             "question": "Ergo를 어떻게 시작하나요?",
-            "answer": "1) 지갑 다운로드 (브라우저용 Nautilus, 스마트폰용 Ergo 모바일 월렛). 2) 시드 구문을 안전하게 백업. 3) 거래소나 DEX에서 ERG 구매. 4) Spectrum Finance, SigmaUSD, ErgoMixer 같은 DeFi 앱 탐색."
+            "answer": "1) Download a wallet. 2) Back up your seed phrase securely. 3) Get ERG from an exchange or verified non-custodial route. 4) Explore SigmaUSD, ErgoMixer, NFTs, mining, and current DeFi venues after checking each project status."
           },
           {
             "question": "Ergo를 지원하는 지갑은 어떤 것이 있나요?",

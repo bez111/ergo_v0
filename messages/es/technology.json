@@ -763,7 +763,7 @@
             "icon": "DollarSign"
           },
           {
-            "title": "Spectrum DEX",
+            "title": "Historical DEX designs",
             "description": "Intercambio descentralizado que utiliza feeds de precios para órdenes limitadas y liquidaciones",
             "icon": "BarChart3"
           },
@@ -2211,7 +2211,7 @@
           "description": "Stablecoin algorítmica que usa feeds de precios ERG/USD"
         },
         {
-          "title": "Spectrum DEX",
+          "title": "Historical DEX designs",
           "description": "Exchange descentralizado con datos de precios en tiempo real"
         },
         {
@@ -2427,9 +2427,9 @@
       "hidden_token_amounts_private_smart": "Cantidades de tokens ocultas\",\n      \"Contratos inteligentes privados\",\n      \"Transacciones confidenciales\",\n      \"Divulgación selectiva",
       "flexible_privacy_features_usable_in": "Características de privacidad flexibles utilizables en dApps, DeFi y NFTs\",\n  \"Criptografía de código abierto y revisada por pares\",\n  \"Composable con otras características de Ergo\",\n  \"Integrado en el protocolo, no añadido como idea de último momento\",\n  \"Garantías de seguridad demostradas matemáticamente",
       "confidential_collectibles": "Coleccionables confidenciales",
-      "answer_text_ergo_offers_multiple": "Respuesta\",\n                text:\n                  \"Ergo ofrece múltiples características de privacidad que incluyen protocolos Sigma, firmas de anillo, pruebas de conocimiento cero y transacciones confidenciales. Estas tecnologías permiten transacciones que preservan la privacidad manteniendo la seguridad y el cumplimiento.",
+      "answer_text_ergo_offers_multiple": "La privacidad en Ergo es opcional y puede apoyar flujos de divulgación selectiva. El cumplimiento legal real depende de la jurisdicción, la implementación y el proveedor de servicios que rodea al protocolo.",
       "answer_text_sigma_protocols_are": "Respuesta\",\n                text:\n                  \"Los protocolos Sigma son sistemas de prueba de conocimiento cero que permiten probar afirmaciones sobre valores secretos sin revelar los valores en sí. Permiten la autenticación y validación de transacciones que preservan la privacidad.",
-      "answer_text_yes_ergo_s": "Respuesta\",\n                text:\n                  \"Sí, las características de privacidad de Ergo están diseñadas para cumplir con las regulaciones. Proporcionan capacidades de divulgación selectiva, permitiendo a los usuarios revelar detalles de transacciones cuando sea necesario mientras mantienen la privacidad por defecto.",
+      "answer_text_yes_ergo_s": "La privacidad en Ergo es opcional y puede apoyar flujos de divulgación selectiva. El cumplimiento legal real depende de la jurisdicción, la implementación y el proveedor de servicios que rodea al protocolo.",
       "ergo_bakes_privacy_into_the": "Ergo integra la privacidad en el protocolo: protocolos Sigma, firmas de anillo/umbral, ErgoMixer, activos confidenciales y divulgación selectiva.",
       "ergo_privacy_sigma_protocols_ring": "Privacidad Ergo,protocolos Sigma,firmas de anillo,pruebas de conocimiento cero,ErgoMixer,transacciones confidenciales",
       "prepare_funds_text_split_funds": "Preparar fondos\", text: \"Divide los fondos y evita la reutilización de direcciones.",
@@ -3320,15 +3320,15 @@
         "faq": {
           "whatFeatures": {
             "question": "¿Qué funciones de privacidad ofrece Ergo?",
-            "answer": "Ergo ofrece múltiples funciones de privacidad, incluyendo protocolos Sigma, firmas de anillo, pruebas de conocimiento cero y transacciones confidenciales. Estas tecnologías permiten transacciones que preservan la privacidad manteniendo la seguridad y el cumplimiento normativo."
+            "answer": "La privacidad en Ergo es opcional y puede apoyar flujos de divulgación selectiva. El cumplimiento legal real depende de la jurisdicción, la implementación y el proveedor de servicios que rodea al protocolo."
           },
           "howSigmaWorks": {
             "question": "¿Cómo funcionan los protocolos Sigma?",
             "answer": "Los protocolos Sigma son sistemas de prueba de conocimiento cero que permiten demostrar afirmaciones sobre valores secretos sin revelar los valores en sí. Habilitan la autenticación y validación de transacciones que preservan la privacidad."
           },
           "regulatoryCompliant": {
-            "question": "¿Las funciones de privacidad de Ergo cumplen con las normativas?",
-            "answer": "Sí, las funciones de privacidad de Ergo están diseñadas para cumplir con las normativas. Ofrecen capacidades de divulgación selectiva, permitiendo a los usuarios revelar detalles de transacciones cuando sea necesario, manteniendo la privacidad por defecto."
+            "question": "¿Pueden las funciones de privacidad de Ergo apoyar flujos regulatorios?",
+            "answer": "La privacidad en Ergo es opcional y puede apoyar flujos de divulgación selectiva. El cumplimiento legal real depende de la jurisdicción, la implementación y el proveedor de servicios que rodea al protocolo."
           }
         }
       },
@@ -4059,7 +4059,7 @@
         "0": {
           "title": "Libros de Órdenes en DEX",
           "description": "Cada orden es una caja separada, permitiendo el emparejamiento paralelo e intercambios atómicos",
-          "example": "Spectrum Finance"
+          "example": "Historical ErgoDEX/Spectrum"
         },
         "1": {
           "title": "Protocolos de Préstamo",
@@ -4658,7 +4658,7 @@
         },
         "1": {
           "question": "¿Es Ergo una moneda de privacidad?",
-          "answer": "Ergo ofrece privacidad opcional. Los usuarios pueden elegir entre transacciones transparentes o confidenciales. La privacidad es una característica, no obligatoria, manteniendo el cumplimiento normativo."
+          "answer": "La privacidad en Ergo es opcional y puede apoyar flujos de divulgación selectiva. El cumplimiento legal real depende de la jurisdicción, la implementación y el proveedor de servicios que rodea al protocolo."
         },
         "2": {
           "question": "¿Qué es ErgoMixer?",

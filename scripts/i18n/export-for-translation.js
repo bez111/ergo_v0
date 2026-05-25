@@ -40,9 +40,25 @@ if (!outputPath) {
     : './translation-export.json';
 }
 
-// Load en.json
-const enPath = path.join(__dirname, '../../messages/en.json');
-const en = JSON.parse(fs.readFileSync(enPath, 'utf-8'));
+function loadEnglishMessages() {
+  const legacyPath = path.join(__dirname, '../../messages/en.json');
+  if (fs.existsSync(legacyPath)) {
+    return JSON.parse(fs.readFileSync(legacyPath, 'utf-8'));
+  }
+
+  const dirPath = path.join(__dirname, '../../messages/en');
+  return Object.fromEntries(
+    fs.readdirSync(dirPath)
+      .filter((file) => file.endsWith('.json'))
+      .sort()
+      .map((file) => [
+        path.basename(file, '.json'),
+        JSON.parse(fs.readFileSync(path.join(dirPath, file), 'utf-8')),
+      ])
+  );
+}
+
+const en = loadEnglishMessages();
 
 // Flatten nested object to key paths
 function flattenObject(obj, prefix = '') {
@@ -155,7 +171,7 @@ function exportJSON(items) {
 }
 
 // Main execution
-console.log('Exporting translations from en.json...\n');
+console.log('Exporting translations from English message files...\n');
 
 const flattened = flattenObject(en);
 const filtered = filterBySection(flattened);
@@ -189,4 +205,3 @@ Object.entries(stats)
   });
 
 console.log('\nDone!');
-

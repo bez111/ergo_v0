@@ -20,7 +20,7 @@ export const entities = {
     "@id": "https://www.ergoblockchain.org/#ergo",
     "name": "Ergo Platform",
     "alternateName": ["Ergo", "ERG", "Ergo Blockchain", "ErgoBlockchain"],
-    "description": "A resilient blockchain platform for contractual money",
+    "description": "A PoW/eUTXO blockchain and public proof surface for autonomous work, ERG, ErgoScript smart contracts, DeFi, privacy, GPU mining, and audit-gated settlement",
     "sameAs": [
       "https://www.wikidata.org/wiki/Q106629398", // Wikidata ID
       "https://en.wikipedia.org/wiki/Ergo_(blockchain)",
@@ -32,7 +32,19 @@ export const entities = {
       "Blockchain Technology",
       "Cryptocurrency",
       "Smart Contracts",
-      "Decentralized Finance"
+      "Decentralized Finance",
+      "Proof of Work",
+      "eUTXO",
+      "ErgoScript",
+      "Sigma Protocols",
+      "Autolykos GPU Mining",
+      "Babel Fees",
+      "Storage Rent",
+      "NiPoPoWs",
+      "Oracle Pools",
+      "ERG",
+      "Autonomous Work Settlement",
+      "Verifiable Receipts"
     ],
     "subjectOf": {
       "@type": "Book",
@@ -409,4 +421,4 @@ export default {
   extractTopics,
   generateAboutPageSchema,
   enhanceEATSignals
-} 
+}

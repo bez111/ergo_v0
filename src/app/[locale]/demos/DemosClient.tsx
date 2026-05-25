@@ -224,8 +224,15 @@ export function DemosClient() {
 // Pseudo-code — illustrates the shape of a Note creation. Production
 // usage pins the exact Ergo-compatible hash function and the canonical
 // audited script address; do not deploy this snippet as-is.
-import { TransactionBuilder, OutputBuilder } from "@fleet-sdk/core"
-import { blake2b256 } from "@fleet-sdk/crypto"
+import {
+  TransactionBuilder,
+  OutputBuilder,
+  SByte,
+  SColl,
+  SGroupElement,
+  SLong,
+} from "@fleet-sdk/core"
+import { blake2b256, utf8 } from "@fleet-sdk/crypto"
 
 // Create a payment note for one API call
 const noteBox = new OutputBuilder(
@@ -234,7 +241,7 @@ const noteBox = new OutputBuilder(
 ).setAdditionalRegisters({
   R4: SGroupElement(providerPublicKey), // who receives
   R5: SLong(BigInt(currentHeight + 100)), // deadline
-  R6: SColl(SByte, blake2b256(taskDescription)), // task proof — Ergo-native hash
+  R6: SColl(SByte, blake2b256(utf8.decode(taskDescription))), // task proof
 })
 
 const tx = new TransactionBuilder(currentHeight)
@@ -266,6 +273,8 @@ const tx = new TransactionBuilder(currentHeight)
       ],
       why: t('demoItems.credit.why'),
       code: `// Deploy a reserve with credit limit
+import { OutputBuilder, SGroupElement, SLong } from "@fleet-sdk/core"
+
 const reserveBox = new OutputBuilder(
   10_000_000_000n,      // 10 ERG collateral
   RESERVE_CONTRACT_ADDRESS
@@ -301,6 +310,8 @@ const reserveBox = new OutputBuilder(
       ],
       why: t('demoItems.community.why'),
       code: `// Multi-sig community reserve
+import { OutputBuilder, SByte, SColl, SGroupElement, SInt } from "@fleet-sdk/core"
+
 const communityReserve = new OutputBuilder(
   TOTAL_POOLED_ERG,
   MULTISIG_RESERVE_ADDRESS

@@ -148,7 +148,7 @@
             },
             {
               "question": "Ergo 上有哪些 DeFi 项目？",
-              "answer": "主要 DeFi 项目包括 SigmaUSD（算法稳定币）、ErgoDEX（DEX）、借贷协议和预言机池。"
+              "answer": "Key DeFi references include SigmaUSD, historical DEX designs such as ErgoDEX/Spectrum, lending protocols, and oracle pools. Always verify each project current operational status before using real funds."
             },
             {
               "question": "哪些钱包支持 Ergo？",
@@ -504,7 +504,7 @@
     "ergomixer": {
       "name": "ErgoMixer",
       "description": "加密行业首个非交互式、非托管混币器。它允许用户使用 Sigma 协议私密发送代币以增强隐私。",
-      "longDescription": "ErgoMixer 是一个开创性的隐私工具，推出了世界上首个非交互式、非托管代币混币器。与需要协调参与或受信任运营商的传统混币器不同，ErgoMixer 利用 Sigma 协议实现完全无需信任的交易混淆。\n\n该混币器通过汇集用户交易的方式工作，打破发送方和接收方地址之间的链上联系。用户将代币存入混币合约，经过可配置的混币轮数后，提取到新地址。整个过程由基于 Sigma 协议构建的零知识证明保护，这意味着混币器运营者和区块链观察者都无法追踪存款和提款之间的联系。\n\nErgoMixer 不仅支持 ERG，还支持在 Ergo 区块链上发行的原生代币，为整个生态系统提供全面的隐私解决方案。非交互式设计意味着用户无需与其他参与者同时在线。这代表了对以往混币实现的重大改进，展示了 Ergo 密码学原语在构建实用隐私应用方面的能力，在尊重用户主权的同时保持透明区块链架构的合规性。",
+      "longDescription": "ErgoMixer 是基于 Sigma Protocols 的非托管隐私工具。Ergo 的隐私是可选的，并可支持选择性披露工作流。实际法律合规取决于司法辖区、具体实现，以及协议周边的服务提供者。",
       "features": [
         "非托管混币",
         "代币隐私",
@@ -820,7 +820,7 @@
     "crux-finance": {
       "name": "Crux Finance",
       "description": "一个用于管理 Ergo 生态系统内加密投资组合的工具，允许追踪盈亏、投资并生成税务报告。",
-      "longDescription": "Crux Finance 是专为 Ergo 生态系统设计的投资组合管理和分析平台。该平台帮助用户追踪跨钱包的持仓、计算盈亏、监控投资绩效并生成税务合规报告。\n\n通过连接钱包地址，用户可以查看汇总的投资组合价值、历史绩效图表以及按代币的详细细分。该平台自动追踪交易，计算成本基础和已实现收益以用于税务报告。与手动追踪相比，这种自动化节省了大量时间，尤其对于活跃交易者和 DeFi 参与者。\n\nCrux Finance 与 Ergo DeFi 协议集成，提供用户头寸的全面视图，包括 LP 代币、质押奖励和借贷头寸。该平台对 Ergo 特定协议的理解意味着它可以准确评估复杂的 DeFi 头寸。对于需要报告加密货币收益的用户，Crux Finance 提供与常见税务软件格式兼容的可导出报告。",
+      "longDescription": "Crux Finance 是面向 Ergo 生态的投资组合管理和分析工具，可帮助用户跟踪钱包资产、盈亏、历史表现，并整理税务报告所需的数据。具体税务和法律处理取决于司法辖区和个人情况，必要时应咨询专业人士。",
       "features": [
         "投资组合追踪",
         "盈亏分析",

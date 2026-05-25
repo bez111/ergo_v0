@@ -18,7 +18,7 @@
           "items": [
             {
               "question": "ErgoはEthereumより優れていますか？",
-              "answer": "ErgoとEthereumは異なる目的に対応しています。ErgoはMEV耐性のあるeUTXOモデルを使用し（フロントランニングなし）、予測可能な手数料（約$0.01）を持ち、DeFiにより安全です。Ethereumはより大きなエコシステムとより多くの開発者を持ちます。ErgoはMEV抽出なしに公平で予測可能なトランザクションを望むユーザーに優れています。"
+              "answer": "ErgoのeUTXOモデルは、アカウントベースのチェーンで一般的なフロントランニングやサンドイッチ型パターンを減らし、実行をより予測しやすくします。ただし、アプリケーション設計、mempoolポリシー、オフチェーンの注文フローは引き続き重要です。"
             },
             {
               "question": "ErgoはCardanoとどう違いますか？",
@@ -34,7 +34,7 @@
             },
             {
               "question": "ErgoはMoneroよりプライベートですか？",
-              "answer": "ErgoはSigma ProtocolsとErgoMixerを通じてオプションのプライバシーを提供し、Moneroは必須のプライバシーを持ちます。Ergoのアプローチは必要な時にコンプライアンスを維持しながら強力なプライバシーを実現します。Moneroは最大の匿名性に優れており、Ergoはスマートコントラクト機能を持つ柔軟なプライバシーに優れています。"
+              "answer": "Ergoのプライバシーはオプションであり、選択的開示のワークフローを支援できます。実際の法的適合性は、管轄、実装、プロトコル周辺のサービス提供者に依存します。"
             }
           ]
         }
@@ -160,7 +160,7 @@
     "monero": {
       "name": "Monero",
       "seoTitle": "Ergo vs Monero 2025: プライバシーアプローチの比較",
-      "seoDescription": "ErgoとMoneroのプライバシー比較：Sigma Protocols vs リング署名、オプション vs 必須プライバシー、スマートコントラクト、規制上の考慮事項。"
+      "seoDescription": "Ergoのプライバシーはオプションであり、選択的開示のワークフローを支援できます。実際の法的適合性は、管轄、実装、プロトコル周辺のサービス提供者に依存します。"
     },
     "zcash": {
       "name": "Zcash",
@@ -285,7 +285,7 @@
           },
           {
             "title": "予測可能な手数料",
-            "description": "ガス価格オークションやMEV抽出なし — 手数料は安定して予測可能"
+            "description": "ErgoのeUTXOモデルは、アカウントベースのチェーンで一般的なフロントランニングやサンドイッチ型パターンを減らし、実行をより予測しやすくします。ただし、アプリケーション設計、mempoolポリシー、オフチェーンの注文フローは引き続き重要です。"
           },
           {
             "title": "真の分散化",
@@ -317,7 +317,7 @@
       "faq": [
         {
           "question": "ErgoがEthereumより優れている点は何ですか？",
-          "answer": "ErgoはMEV抽出なしで予測可能な手数料を提供し、設計上再入攻撃を排除し、Sigma Protocolsによるネイティブプライバシーを提供し、PoW分散化を維持し、ラッパーコントラクトなしのファーストクラスのネイティブトークンを持ちます。"
+          "answer": "ErgoのeUTXOモデルは、アカウントベースのチェーンで一般的なフロントランニングやサンドイッチ型パターンを減らし、実行をより予測しやすくします。ただし、アプリケーション設計、mempoolポリシー、オフチェーンの注文フローは引き続き重要です。"
         },
         {
           "question": "ErgoでEthereumのdAppを実行できますか？",
@@ -387,14 +387,14 @@
         },
         {
           "question": "DeFiにはErgoとCardanoのどちらが良いですか？",
-          "answer": "Both support DeFi on eUTXO. Ergo has pioneering implementations like ErgoDEX and SigmaUSD. Cardano has more projects due to larger ecosystem. Ergo"
+          "answer": "Both support DeFi on eUTXO. Ergo has pioneering references such as ErgoDEX/Spectrum and SigmaUSD, while Cardano has a larger live DeFi ecosystem. The better choice depends on whether you value Ergo PoW/fair-launch design and smaller experimental surface or Cardano larger liquidity and app count."
         }
       ]
     },
     "monero": {
       "name": "Monero",
       "seoTitle": "Ergo vs Monero 2025: プライバシーアプローチの比較",
-      "seoDescription": "ErgoとMoneroのプライバシー比較：Sigma Protocols vs リング署名、オプション vs 必須プライバシー、スマートコントラクト、規制上の考慮事項。",
+      "seoDescription": "Ergoのプライバシーはオプションであり、選択的開示のワークフローを支援できます。実際の法的適合性は、管轄、実装、プロトコル周辺のサービス提供者に依存します。",
       "summary": {
         "headline": "プライバシー：必須 vs プログラマブル",
         "subheadline": "Moneroはデフォルトでプライバシーを強制する。Ergoは選択的開示によるプログラマブルプライバシーを提供する。",
@@ -891,7 +891,7 @@
           },
           {
             "title": "MEV保護",
-            "description": "Ergo: 設計上フロントランニングなし。Avalanche: MEV抽出が可能"
+            "description": "ErgoのeUTXOモデルは、アカウントベースのチェーンで一般的なフロントランニングやサンドイッチ型パターンを減らし、実行をより予測しやすくします。ただし、アプリケーション設計、mempoolポリシー、オフチェーンの注文フローは引き続き重要です。"
           }
         ]
       },
@@ -909,7 +909,7 @@
         {
           "title": "MEVとフロントランニング",
           "content": "Avalanche",
-          "ergoAdvantage": "MEV抽出なしはユーザーにとってより公平な取引を意味する。"
+          "ergoAdvantage": "ErgoのeUTXOモデルは、アカウントベースのチェーンで一般的なフロントランニングやサンドイッチ型パターンを減らし、実行をより予測しやすくします。ただし、アプリケーション設計、mempoolポリシー、オフチェーンの注文フローは引き続き重要です。"
         },
         {
           "title": "スマートコントラクトモデル",
@@ -932,7 +932,7 @@
         },
         {
           "question": "どちらがより分散化されていますか？",
-          "answer": "Ergoです。誰でもGPUで匿名にマイニングできます。Avalancheは5万ドル以上のステーキングが必要で、バリデーターは特定可能であり、規制の標的になります。"
+          "answer": "Ergoです。ErgoはPoWとフェアローンチに基づき、誰でもGPUで参加でき、プレマインやICO、バリデータのステーキング要件がありません。Avalancheは高速ですが、PoSバリデータ要件と識別可能なバリデータ構造があります。"
         }
       ]
     },
@@ -958,7 +958,7 @@
           },
           {
             "title": "哲学",
-            "description": "Ergo: サイファーパンク、プライバシー重視。Algorand: エンタープライズ、コンプライアンスフレンドリー"
+            "description": "Ergo: サイファーパンク、プライバシー、検閲耐性、金融主権を重視。Algorand: エンタープライズ採用と財団主導のエコシステムを重視。"
           }
         ]
       },
@@ -999,7 +999,7 @@
         },
         {
           "question": "プライバシーにはどちらが優れていますか？",
-          "answer": "Ergoです。Sigma ProtocolsはL1でのゼロ知識証明を可能にします。AlgorandにはネイティブプライバシーFeaturesがなく、コンプライアンスフレンドリーに設計されています。"
+          "answer": "Ergoのプライバシーはオプションであり、選択的開示のワークフローを支援できます。実際の法的適合性は、管轄、実装、プロトコル周辺のサービス提供者に依存します。"
         },
         {
           "question": "AlgorandよりErgoを選ぶ理由は何ですか？",

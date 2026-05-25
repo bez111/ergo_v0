@@ -22,7 +22,7 @@
           },
           {
             "question": "我在哪裡可以購買 ERG？",
-            "answer": "ERG 可在 KuCoin 和 Gate.io 等交易所獲得，或者您可以使用 ErgoDEX 等去中心化交易所以獲得更多隱私保護。"
+            "answer": "ERG is available on centralized exchanges such as KuCoin and Gate.io, plus verified non-custodial routes where active liquidity exists. Historical DEX references like ErgoDEX/Spectrum are useful to study, but always verify current venue status before trading."
           },
           {
             "question": "Ergo 適合初學者嗎？",
@@ -116,7 +116,7 @@
               "name": "ErgoDEX",
               "type": "無 KYC——手續費約 0.3%",
               "description": "原生 Ergo 去中心化交易所，完全去中心化且保護隱私",
-              "buttonText": "開啟 ErgoDEX"
+              "buttonText": "Review current DeFi venues"
             }
           ],
           "disclaimer": "連結僅供參考。請自行研究。交易涉及風險。"
@@ -547,7 +547,7 @@
               "link": "/wallet"
             },
             {
-              "text": "探索 Spectrum Finance",
+              "text": "Review current DeFi venues",
               "link": "https://spectrum.fi"
             },
             {
@@ -1884,10 +1884,10 @@
       "github_organization_link_https_github": "GitHub 組織\", link: \"https://github.com/ergoplatform",
       "network_and_defi_analytics_link_https_ergo_watch": "網絡與 DeFi 分析\", link: \"https://ergo.watch",
       "learn_about_sigmausd_stablecoin_link": "了解 SigmaUSD 穩定幣\", link: \"/ecosystem/sigmausd",
-      "try_trading_on_spectrum_finance": "在 Spectrum Finance 上試用交易\", link: \"https://spectrum.fi",
+      "try_trading_on_spectrum_finance": "Review Current DeFi Venues\", link: \"/use/defi",
       "join_defi_discussions_on_discord": "加入 Discord 上的 DeFi 討論\", link: \"https://discord.gg/ergo-platform",
       "defi_discord_channels_link_https": "DeFi Discord 頻道\", link: \"https://discord.gg/ergo-platform",
-      "spectrum_finance_community_link_https_spectrum_fi": "Spectrum Finance 社群\", link: \"https://spectrum.fi",
+      "spectrum_finance_community_link_https_spectrum_fi": "Spectrum Finance Historical Notice\", link: \"https://spectrum.fi/sunset-notice",
       "sigmausd_community_link_ecosystem_projects": "SigmaUSD 社群\", link: \"/ecosystem/sigmausd",
       "read_the_ergo_whitepaper_link": "閱讀 Ergo 白皮書\", link: \"/docs/introduction/research-whitepapers",
       "explore_the_ecosystem_link_ecosystem": "探索生態系統\", link: \"/ecosystem",
@@ -3031,12 +3031,12 @@
         "next_steps": {
           "wallet": "安裝 Nautilus 錢包",
           "sigmausd": "了解 SigmaUSD 穩定幣",
-          "spectrum": "在 Spectrum Finance 嘗試交易",
+          "spectrum": "Review current DeFi venues",
           "discord": "加入 Discord 上的 DeFi 討論"
         },
         "community": {
           "discord": "DeFi Discord 頻道",
-          "spectrum": "Spectrum Finance 社群",
+          "spectrum": "Review current DeFi venues",
           "sigmausd": "SigmaUSD 社群"
         }
       },

@@ -58,7 +58,7 @@
       "ecosystem": {
         "dApps": {
           "q": "Ergo上で利用できるdAppsは何がありますか？",
-          "a": "ErgoにはSigmaUSDのようなDeFiプロトコル、SpectrumのようなDEX、NFTプラットフォーム、さまざまなツールがあります。エコシステムページで詳しく探索してください。"
+          "a": "Key DeFi references include SigmaUSD, historical DEX designs such as ErgoDEX/Spectrum, lending protocols, and oracle pools. Always verify each project current operational status before using real funds."
         },
         "defi": {
           "q": "利用できるDeFiオプションは何がありますか？",
@@ -234,7 +234,7 @@
     },
     "tech-ergo-manifesto": {
       "question": "Ergoマニフェストとそのプライバシーに関する主要なアイデアは何ですか？",
-      "answer": "共同創設者Alex Chepurnoyが著したErgoマニフェストは、金融プライバシーが基本的人権であると明示しています。主要なアイデアには：権威主義的コントロールに対する生存と保護のためのツールとしてのプライバシー、金融資産没収に対する防御、規制の安定性の限界の認識が含まれます。"
+      "answer": "Ergoマニフェストは、自己管理、フェアローンチ、検閲耐性、オープンソース開発、長期的な金融主権を重視します。プライバシーは強制ではなくオプションで、選択的開示ワークフローを支援できます。"
     },
     "tech-why-named-ergo": {
       "question": "なぜ「Ergo」という名前なのですか？",
@@ -290,7 +290,7 @@
     },
     "tech-privacy-optional": {
       "question": "Ergoのプライバシーはオプションですか、それとも必須ですか？",
-      "answer": "Ergoのプライバシーはオプションであり、必須ではありません。これにより多様なユースケースに柔軟性を持たせます——一部のアプリケーション（チャリティなど）は透明性が必要で、他のものはプライバシーが必要です。オプションのプライバシーは豊かなスマートコントラクト機能、より広い採用、規制への対応、ユーザーの自律性を可能にします。ユーザーは必要な時にErgoMixerのようなプライバシーツールを選ぶことができます。"
+      "answer": "Ergoのプライバシーはオプションであり、選択的開示のワークフローを支援できます。実際の法的適合性は、管轄、実装、プロトコル周辺のサービス提供者に依存します。"
     },
     "tech-storage-rent": {
       "question": "「ストレージレント」とは何ですか？",
@@ -318,7 +318,7 @@
     },
     "tech-spectrum-dex": {
       "question": "Spectrum DEXとは何ですか？",
-      "answer": "Spectrum（旧ErgoDEX）はAMM（自動マーケットメーカー）プールを使ったErgo上の分散型取引所です。トークンスワップ、流動性提供、イールドファーミングをサポートします。eUTXOモデルにより、アカウントベースのDEXと比べて部分注文充填やMEV耐性のような機能が実現できます。"
+      "answer": "Spectrum (formerly ErgoDEX) is a historical decentralized exchange reference on Ergo using AMM pools. The team published a sunset notice and froze contracts in February 2024, so treat it as a design/reference example rather than an active venue for new swaps or liquidity. Ergo eUTXO still provides useful DEX design properties such as atomic settlement and reduced common MEV patterns."
     },
     "tech-rosen-bridge": {
       "question": "Rosen Bridgeとは何ですか？",

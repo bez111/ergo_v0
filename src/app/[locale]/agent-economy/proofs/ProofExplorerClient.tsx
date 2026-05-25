@@ -158,8 +158,12 @@ const FALLBACK_VERIFY_STEPS: VerifyStepRecord[] = [
   },
 ]
 
-export function ProofExplorerClient() {
-  const [data, setData] = useState<ProofExplorerResponse | null>(null)
+export function ProofExplorerClient({
+  initialData = null,
+}: {
+  initialData?: ProofExplorerResponse | null
+}) {
+  const [data, setData] = useState<ProofExplorerResponse | null>(initialData)
   const [filter, setFilter] = useState<"all" | ProofRecord["kind"]>("all")
   const [error, setError] = useState<string | null>(null)
 
@@ -172,7 +176,7 @@ export function ProofExplorerClient() {
         const body = await res.json() as ProofExplorerResponse
         if (!res.ok || body.ok !== true) throw new Error(`proof explorer ${res.status}`)
         if (!cancelled) {
-          setData(body)
+          setData((current) => shouldUseProofUpdate(current, body) ? body : current)
           setError(null)
         }
       } catch (err) {
@@ -276,14 +280,14 @@ export function ProofExplorerClient() {
                 </div>
               </div>
 
-              <div className="rounded-lg border border-white/10 bg-black/75 p-5">
+              <div className="rounded-lg border border-white/12 bg-neutral-950/90 p-5 shadow-[0_22px_70px_rgba(0,0,0,0.52)] backdrop-blur-md">
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <div className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">
                       Proof posture
                     </div>
                     <div className="mt-1 text-2xl font-bold text-white">
-                      {data?.posture.label.replace(/_/g, " ") ?? "loading"}
+                      {data?.posture.label.replace(/_/g, " ") ?? "testnet live proof"}
                     </div>
                   </div>
                   <ShieldCheck className="h-9 w-9 text-orange-300" />
@@ -372,7 +376,7 @@ export function ProofExplorerClient() {
                     className={`shrink-0 rounded-md border px-3 py-2 font-mono text-[11px] uppercase tracking-widest transition-colors ${
                       filter === item.value
                         ? "border-orange-500 bg-orange-500 text-black"
-                        : "border-white/10 bg-white/[0.03] text-neutral-300 hover:border-orange-500/40 hover:text-orange-200"
+                        : "border-white/10 bg-black/60 text-neutral-300 hover:border-orange-500/40 hover:bg-black/75 hover:text-orange-200"
                     }`}
                   >
                     {item.label}
@@ -422,6 +426,27 @@ export function ProofExplorerClient() {
   )
 }
 
+function shouldUseProofUpdate(
+  current: ProofExplorerResponse | null,
+  incoming: ProofExplorerResponse,
+) {
+  if (!current) return true
+
+  const currentFullReceipts = current.summary.full_receipt_count ?? 0
+  const incomingFullReceipts = incoming.summary.full_receipt_count ?? 0
+  if (currentFullReceipts > 0 && incomingFullReceipts === 0) return false
+
+  const currentLatestReceipt = current.summary.latest_full_receipt_id
+  const incomingLatestReceipt = incoming.summary.latest_full_receipt_id
+  if (currentLatestReceipt && !incomingLatestReceipt) return false
+
+  const currentLive = current.summary.live_count ?? 0
+  const incomingLive = incoming.summary.live_count ?? 0
+  if (currentLive >= 8 && incomingLive < currentLive - 2) return false
+
+  return true
+}
+
 function VerifyStep({
   index,
   label,
@@ -434,7 +459,7 @@ function VerifyStep({
   expect: string
 }) {
   return (
-    <div className="min-w-0 rounded-lg border border-white/10 bg-black/72 p-4">
+    <div className="min-w-0 rounded-lg border border-white/12 bg-neutral-950/90 p-4 shadow-[0_18px_54px_rgba(0,0,0,0.45)] backdrop-blur-md">
       <div className="flex items-start gap-3">
         <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md border border-orange-500/25 bg-orange-500/10 font-mono text-xs font-semibold text-orange-200">
           {index}
@@ -443,7 +468,7 @@ function VerifyStep({
           <div className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">
             {label}
           </div>
-          <pre className="mt-2 max-w-full overflow-x-auto rounded-md border border-white/10 bg-white/[0.025] p-3 text-xs leading-relaxed text-orange-100">
+          <pre className="mt-2 max-w-full overflow-x-auto rounded-md border border-white/10 bg-black/65 p-3 text-xs leading-relaxed text-orange-100">
             <code>{command}</code>
           </pre>
           <p className="mt-3 text-sm leading-relaxed text-neutral-400">
@@ -458,7 +483,7 @@ function VerifyStep({
 function ProofCard({ proof, loading }: { proof: ProofRecord; loading: boolean }) {
   const Icon = KIND_ICON[proof.kind]
   return (
-    <article className={`rounded-lg border border-white/10 bg-black/72 p-5 ${loading ? "animate-pulse" : ""}`}>
+    <article className={`rounded-lg border border-white/12 bg-neutral-950/90 p-5 shadow-[0_22px_70px_rgba(0,0,0,0.52)] backdrop-blur-md ${loading ? "animate-pulse" : ""}`}>
       <div className="flex items-start justify-between gap-4">
         <div className="flex items-center gap-3">
           <div className="flex h-11 w-11 items-center justify-center rounded-md border border-orange-500/25 bg-orange-500/10">
@@ -483,7 +508,7 @@ function ProofCard({ proof, loading }: { proof: ProofRecord; loading: boolean })
 
       <div className="mt-5 grid gap-2 sm:grid-cols-2">
         {proof.checks.slice(0, 4).map((check) => (
-          <div key={`${proof.id}-${check.label}`} className="rounded-md border border-white/10 bg-white/[0.025] p-3">
+          <div key={`${proof.id}-${check.label}`} className="rounded-md border border-white/10 bg-black/65 p-3">
             <div className="flex items-center justify-between gap-2">
               <span className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">
                 {check.label}
@@ -509,7 +534,7 @@ function ProofCard({ proof, loading }: { proof: ProofRecord; loading: boolean })
 function CompactReceipt({ proof }: { proof: ProofRecord }) {
   const receiptId = proof.identifiers.receipt_id ?? proof.id
   return (
-    <div className="rounded-lg border border-white/10 bg-black/72 p-4">
+    <div className="rounded-lg border border-white/12 bg-neutral-950/90 p-4 shadow-[0_18px_54px_rgba(0,0,0,0.45)] backdrop-blur-md">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <div className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">
@@ -544,7 +569,7 @@ function SurfaceCard({
       href={href}
       target={href.startsWith("http") || href.startsWith("/api") || href.includes(".json") ? "_blank" : undefined}
       rel="noopener noreferrer"
-      className="group rounded-lg border border-white/10 bg-black/70 p-5 transition hover:border-orange-500/35 hover:bg-orange-500/[0.035]"
+      className="group rounded-lg border border-white/12 bg-neutral-950/90 p-5 shadow-[0_18px_54px_rgba(0,0,0,0.45)] backdrop-blur-md transition hover:border-orange-500/35 hover:bg-neutral-950"
     >
       <div className="flex items-start justify-between gap-4">
         <div className="flex h-11 w-11 items-center justify-center rounded-md border border-orange-500/25 bg-orange-500/10">
@@ -579,7 +604,7 @@ function ProofLink({ href, label }: { href: string; label: string }) {
 
 function Metric({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-md border border-white/10 bg-white/[0.025] px-3 py-3">
+    <div className="rounded-md border border-white/10 bg-black/65 px-3 py-3">
       <div className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">{label}</div>
       <div className="mt-1 truncate font-mono text-lg font-semibold text-orange-100">{value}</div>
     </div>
@@ -623,8 +648,8 @@ function skeletonProofs(): ProofRecord[] {
     kind: index === 0 ? "receipt_bundle" : index === 1 ? "conformance_evidence" : index === 2 ? "mcp_endpoint" : "widget_package",
     title,
     state: "degraded",
-    status: "loading",
-    description: "Collecting proof record from public endpoints.",
+    status: "refreshing",
+    description: "Refreshing proof record from public endpoints.",
     updated_at: null,
     primary_url: "/api/agent-economy/proofs",
     identifiers: {},
@@ -632,7 +657,7 @@ function skeletonProofs(): ProofRecord[] {
       {
         label: "Probe",
         state: "degraded",
-        value: "loading",
+        value: "refreshing",
       },
     ],
   }))

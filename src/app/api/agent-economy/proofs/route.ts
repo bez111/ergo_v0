@@ -174,9 +174,11 @@ export async function GET(req: Request) {
       ),
     ),
   )
-  const receipts = receiptProbes
-    .map((probe) => probe.data)
-    .filter(isReceiptBundle)
+  const receipts = uniqueReceipts(
+    receiptProbes
+      .map((probe) => probe.data)
+      .filter(isReceiptBundle),
+  )
   const latestFullReceipt = receipts.find((receipt) => receipt.completeness === "full_receipt_bundle") ?? null
   const conformanceReceiptId = conformance.data?.receipt_id ?? null
   const conformanceReceipt = conformanceReceiptId
@@ -306,6 +308,16 @@ function collectReceiptIds(
     addId(ids, event.noteBoxId)
   }
   return Array.from(ids).filter(isReceiptLookupId).slice(0, 10)
+}
+
+function uniqueReceipts(receipts: SageReceiptBundleResponse[]) {
+  const seen = new Set<string>()
+  return receipts.filter((receipt) => {
+    if (!receipt.id) return true
+    if (seen.has(receipt.id)) return false
+    seen.add(receipt.id)
+    return true
+  })
 }
 
 function receiptToProof(receipt: SageReceiptBundleResponse): ProofRecord {

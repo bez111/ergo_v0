@@ -95,10 +95,10 @@ const CRITERIA: CriterionRow[] = [
     cardanoNote: "Can be built in Plutus but not a native pattern.",
   },
   {
-    criterion: "Babel Fees (any-token fees)",
-    description: "Agents can pay transaction fees with any token — no native token wallet required.",
+    criterion: "Babel Fees (supported token fee paths)",
+    description: "Agents can cover transaction fees through supported token-to-ERG paths, reducing native-token bootstrapping.",
     ergo: "yes",
-    ergoNote: "Babel Fees are live on Ergo mainnet. Agents don't need pre-funded ERG wallets.",
+    ergoNote: "Babel Fees are live on Ergo mainnet. Agents can avoid pre-funded ERG wallets where a supported Babel-fee path exists.",
     ethereum: "partial",
     ethereumNote: "ERC-4337 account abstraction allows gas sponsorship, but complex and costly.",
     solana: "no",
@@ -110,7 +110,7 @@ const CRITERIA: CriterionRow[] = [
     criterion: "MEV exposure",
     description: "Transactions can be front-run or reordered by miners/validators.",
     ergo: "yes",
-    ergoNote: "eUTXO eliminates most MEV vectors. No mempool frontrunning on deterministic outputs.",
+    ergoNote: "eUTXO reduces common MEV vectors by making state and outputs explicit; dApp and mempool design still matter.",
     ethereum: "no",
     ethereumNote: "Significant MEV. Front-running and sandwich attacks common on agent transactions.",
     solana: "no",
@@ -220,7 +220,7 @@ const HIGHLIGHTS = [
   {
     icon: Coins,
     title: "Combines Babel Fees with the Note stack",
-    body: "Agents don't need pre-funded native token wallets. Babel Fees handle gas in any token. The Note+Reserve+Tracker stack is protocol-level, not application-layer.",
+    body: "Agents can reduce native-token bootstrapping where supported Babel-fee paths exist. The Note+Reserve+Tracker stack is protocol-level, not application-layer.",
   },
   {
     icon: Zap,
@@ -264,18 +264,17 @@ export function AgentVsClient() {
             variants={fadeUp}
             className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
           >
-            Which blockchain for
+            Which settlement rail for
             <br />
-            <span className="text-orange-400">AI agent payments?</span>
+            <span className="text-orange-400">autonomous work?</span>
           </motion.h1>
 
           <motion.p
             variants={fadeUp}
             className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed mb-4"
           >
-            10 agent-critical criteria. Ergo, Ethereum, Solana, Cardano — evaluated honestly across
-            reentrancy risk, fee predictability, acceptance predicates, Babel Fees, MEV exposure,
-            and chain halt history.
+            Ergo, Ethereum, Solana, and Cardano compared across the traits that matter when
+            autonomous work needs payment, acceptance rules, receipts, policy checks, and settlement.
           </motion.p>
         </motion.div>
       </section>
@@ -382,7 +381,7 @@ export function AgentVsClient() {
         </motion.div>
       </section>
 
-      {/* ── Why Ergo wins ── */}
+      {/* ── Why Ergo fits ── */}
       <section className="container mx-auto px-4 py-16 max-w-5xl">
         <motion.div
           variants={stagger}
@@ -392,11 +391,11 @@ export function AgentVsClient() {
         >
           <motion.div variants={fadeUp} className="text-center mb-10">
             <h2 className="text-3xl font-bold text-white mb-3">
-              What makes Ergo uniquely suited
+              What makes Ergo a strong fit
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              These aren't marketing claims. They're structural properties of Ergo's protocol that
-              no other chain replicates for autonomous agent use cases.
+              These are structural properties of Ergo's protocol that line up well with
+              task-conditioned payments, receipt bundles, wallet policy and audit-gated settlement.
             </p>
           </motion.div>
 

@@ -84,10 +84,11 @@ const STEP_1_CODE = `npm install @fleet-sdk/core`
 
 const STEP_2_CODE = `mkdir my-agent && cd my-agent
 npm init -y
-npm install @fleet-sdk/core node-fetch`
+npm pkg set type=module
+npm install @fleet-sdk/core`
 
 const STEP_3_CODE = `// agent-pay.js
-import { TransactionBuilder, OutputBuilder, SAFE_MIN_BOX_VALUE } from "@fleet-sdk/core";
+import { TransactionBuilder, OutputBuilder } from "@fleet-sdk/core";
 
 // ── Config ───────────────────────────────────────────────────────────────────
 const TESTNET_API = "https://api-testnet.ergoplatform.com";
@@ -123,14 +124,14 @@ async function getCurrentHeight() {
 const STEP_4_CODE = `node agent-pay.js`
 
 const STEP_5_CODE = `// Note payment — agent pays for an API call
-import { TransactionBuilder, OutputBuilder, SByte, SColl } from "@fleet-sdk/core";
+import { TransactionBuilder, OutputBuilder, SByte, SColl, SInt } from "@fleet-sdk/core";
 
 const TASK_HASH = "a1b2c3d4..."; // blake2b256 of task output
 
 const noteOutput = new OutputBuilder("5000000", RECEIVER_ADDRESS)  // 0.005 ERG
   .setAdditionalRegisters({
     R4: SColl(SByte, Buffer.from(TASK_HASH, "hex")),   // task hash
-    R5: SByte(await getCurrentHeight() + 100),          // expiry: +100 blocks
+    R5: SInt(await getCurrentHeight() + 100),           // expiry: +100 blocks
   });
 
 const tx = new TransactionBuilder(await getCurrentHeight())

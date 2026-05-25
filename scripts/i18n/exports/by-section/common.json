@@ -1,2090 +1,3838 @@
 [
   {
-    "key": "common.loading",
-    "value": "Loading...",
+    "key": "common.common.loading",
+    "source": "Loading...",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "common.error",
-    "value": "Error",
+    "key": "common.common.error",
+    "source": "Error",
     "context": "Error message",
-    "maxLength": 7.5
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.retry",
-    "value": "Retry",
+    "key": "common.common.retry",
+    "source": "Retry",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.close",
-    "value": "Close",
+    "key": "common.common.close",
+    "source": "Close",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.open",
-    "value": "Open",
+    "key": "common.common.open",
+    "source": "Open",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.menu",
-    "value": "Menu",
+    "key": "common.common.menu",
+    "source": "Menu",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.search",
-    "value": "Search",
+    "key": "common.common.skip_to_main_content",
+    "source": "Skip to main content",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 30,
+    "translation": ""
   },
   {
-    "key": "common.searchPlaceholder",
-    "value": "Search...",
+    "key": "common.common.search",
+    "source": "Search",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.readMore",
-    "value": "Read More",
+    "key": "common.common.searchPlaceholder",
+    "source": "Search...",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.learnMore",
-    "value": "Learn More",
+    "key": "common.common.readMore",
+    "source": "Read More",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.getStarted",
-    "value": "Get Started",
+    "key": "common.common.learnMore",
+    "source": "Learn More",
     "context": "General content",
-    "maxLength": 16.5
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "common.viewAll",
-    "value": "View All",
+    "key": "common.common.getStarted",
+    "source": "Get Started",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 16.5,
+    "translation": ""
   },
   {
-    "key": "common.backToTop",
-    "value": "Back to Top",
+    "key": "common.common.viewAll",
+    "source": "View All",
     "context": "General content",
-    "maxLength": 16.5
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.previous",
-    "value": "Previous",
+    "key": "common.common.backToTop",
+    "source": "Back to Top",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 16.5,
+    "translation": ""
   },
   {
-    "key": "common.next",
-    "value": "Next",
+    "key": "common.common.previous",
+    "source": "Previous",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.home",
-    "value": "Home",
+    "key": "common.common.next",
+    "source": "Next",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.exploreEcosystem",
-    "value": "Explore Ecosystem",
+    "key": "common.common.home",
+    "source": "Home",
     "context": "General content",
-    "maxLength": 25.5
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.startBuilding",
-    "value": "Start Building",
+    "key": "common.common.exploreEcosystem",
+    "source": "Explore Ecosystem",
     "context": "General content",
-    "maxLength": 21
+    "maxLength": 25.5,
+    "translation": ""
   },
   {
-    "key": "common.exploreCase",
-    "value": "Explore Use Case",
+    "key": "common.common.startBuilding",
+    "source": "Start Building",
     "context": "General content",
-    "maxLength": 24
+    "maxLength": 21,
+    "translation": ""
   },
   {
-    "key": "common.supportedProjects",
-    "value": "Supported Projects",
+    "key": "common.common.exploreCase",
+    "source": "Explore Use Case",
     "context": "General content",
-    "maxLength": 27
+    "maxLength": 24,
+    "translation": ""
   },
   {
-    "key": "common.featuredUseCases",
-    "value": "Featured Use Cases",
+    "key": "common.common.supportedProjects",
+    "source": "Supported Projects",
     "context": "General content",
-    "maxLength": 27
+    "maxLength": 27,
+    "translation": ""
   },
   {
-    "key": "common.allUseCases",
-    "value": "All Use Cases",
+    "key": "common.common.featuredUseCases",
+    "source": "Featured Use Cases",
     "context": "General content",
-    "maxLength": 19.5
+    "maxLength": 27,
+    "translation": ""
   },
   {
-    "key": "common.explore",
-    "value": "Explore",
+    "key": "common.common.allUseCases",
+    "source": "All Use Cases",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 19.5,
+    "translation": ""
   },
   {
-    "key": "common.startLearning",
-    "value": "Start Learning",
+    "key": "common.common.explore",
+    "source": "Explore",
     "context": "General content",
-    "maxLength": 21
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.viewMore",
-    "value": "View More",
+    "key": "common.common.startLearning",
+    "source": "Start Learning",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 21,
+    "translation": ""
   },
   {
-    "key": "common.documentation",
-    "value": "Documentation",
+    "key": "common.common.viewMore",
+    "source": "View More",
     "context": "General content",
-    "maxLength": 19.5
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.blog",
-    "value": "Blog",
+    "key": "common.common.documentation",
+    "source": "Documentation",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 19.5,
+    "translation": ""
   },
   {
-    "key": "common.community",
-    "value": "Community",
+    "key": "common.common.blog",
+    "source": "Blog",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.developers",
-    "value": "Developers",
+    "key": "common.common.community",
+    "source": "Community",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.resources",
-    "value": "Resources",
+    "key": "common.common.developers",
+    "source": "Developers",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "common.about",
-    "value": "About",
+    "key": "common.common.resources",
+    "source": "Resources",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.contact",
-    "value": "Contact",
+    "key": "common.common.about",
+    "source": "About",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.back",
-    "value": "Back",
+    "key": "common.common.contact",
+    "source": "Contact",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.success",
-    "value": "Success",
+    "key": "common.common.back",
+    "source": "Back",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.warning",
-    "value": "Warning",
+    "key": "common.common.success",
+    "source": "Success",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.info",
-    "value": "Info",
+    "key": "common.common.warning",
+    "source": "Warning",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.yes",
-    "value": "Yes",
+    "key": "common.common.info",
+    "source": "Info",
     "context": "General content",
-    "maxLength": 4.5
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.no",
-    "value": "No",
+    "key": "common.common.yes",
+    "source": "Yes",
     "context": "General content",
-    "maxLength": 3
+    "maxLength": 4.5,
+    "translation": ""
   },
   {
-    "key": "common.cancel",
-    "value": "Cancel",
+    "key": "common.common.no",
+    "source": "No",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 3,
+    "translation": ""
   },
   {
-    "key": "common.confirm",
-    "value": "Confirm",
+    "key": "common.common.cancel",
+    "source": "Cancel",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.save",
-    "value": "Save",
+    "key": "common.common.confirm",
+    "source": "Confirm",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.delete",
-    "value": "Delete",
+    "key": "common.common.save",
+    "source": "Save",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.edit",
-    "value": "Edit",
+    "key": "common.common.delete",
+    "source": "Delete",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.update",
-    "value": "Update",
+    "key": "common.common.edit",
+    "source": "Edit",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.create",
-    "value": "Create",
+    "key": "common.common.update",
+    "source": "Update",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.submit",
-    "value": "Submit",
+    "key": "common.common.create",
+    "source": "Create",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.reset",
-    "value": "Reset",
+    "key": "common.common.submit",
+    "source": "Submit",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.filter",
-    "value": "Filter",
+    "key": "common.common.reset",
+    "source": "Reset",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.sort",
-    "value": "Sort",
+    "key": "common.common.filter",
+    "source": "Filter",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.share",
-    "value": "Share",
+    "key": "common.common.sort",
+    "source": "Sort",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.download",
-    "value": "Download",
+    "key": "common.common.share",
+    "source": "Share",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.upload",
-    "value": "Upload",
+    "key": "common.common.download",
+    "source": "Download",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.copy",
-    "value": "Copy",
+    "key": "common.common.upload",
+    "source": "Upload",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.paste",
-    "value": "Paste",
+    "key": "common.common.copy",
+    "source": "Copy",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.cut",
-    "value": "Cut",
+    "key": "common.common.paste",
+    "source": "Paste",
     "context": "General content",
-    "maxLength": 4.5
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.undo",
-    "value": "Undo",
+    "key": "common.common.cut",
+    "source": "Cut",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 4.5,
+    "translation": ""
   },
   {
-    "key": "common.redo",
-    "value": "Redo",
+    "key": "common.common.undo",
+    "source": "Undo",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.dashboard",
-    "value": "Dashboard",
+    "key": "common.common.redo",
+    "source": "Redo",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.settings",
-    "value": "Settings",
+    "key": "common.common.dashboard",
+    "source": "Dashboard",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.profile",
-    "value": "Profile",
+    "key": "common.common.settings",
+    "source": "Settings",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.logout",
-    "value": "Logout",
+    "key": "common.common.profile",
+    "source": "Profile",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.login",
-    "value": "Login",
+    "key": "common.common.logout",
+    "source": "Logout",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.register",
-    "value": "Register",
+    "key": "common.common.login",
+    "source": "Login",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.forgotPassword",
-    "value": "Forgot Password?",
+    "key": "common.common.register",
+    "source": "Register",
     "context": "General content",
-    "maxLength": 24
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.resetPassword",
-    "value": "Reset Password",
+    "key": "common.common.forgotPassword",
+    "source": "Forgot Password?",
     "context": "General content",
-    "maxLength": 21
+    "maxLength": 24,
+    "translation": ""
   },
   {
-    "key": "common.changePassword",
-    "value": "Change Password",
+    "key": "common.common.resetPassword",
+    "source": "Reset Password",
     "context": "General content",
-    "maxLength": 22.5
+    "maxLength": 21,
+    "translation": ""
   },
   {
-    "key": "common.email",
-    "value": "Email",
+    "key": "common.common.changePassword",
+    "source": "Change Password",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 22.5,
+    "translation": ""
   },
   {
-    "key": "common.password",
-    "value": "Password",
+    "key": "common.common.email",
+    "source": "Email",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.username",
-    "value": "Username",
+    "key": "common.common.password",
+    "source": "Password",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.name",
-    "value": "Name",
+    "key": "common.common.username",
+    "source": "Username",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.firstName",
-    "value": "First Name",
+    "key": "common.common.name",
+    "source": "Name",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.lastName",
-    "value": "Last Name",
+    "key": "common.common.firstName",
+    "source": "First Name",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "common.phone",
-    "value": "Phone",
+    "key": "common.common.lastName",
+    "source": "Last Name",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.address",
-    "value": "Address",
+    "key": "common.common.phone",
+    "source": "Phone",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.city",
-    "value": "City",
+    "key": "common.common.address",
+    "source": "Address",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.country",
-    "value": "Country",
+    "key": "common.common.city",
+    "source": "City",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.zipCode",
-    "value": "Zip Code",
+    "key": "common.common.country",
+    "source": "Country",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.language",
-    "value": "Language",
+    "key": "common.common.zipCode",
+    "source": "Zip Code",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.theme",
-    "value": "Theme",
+    "key": "common.common.language",
+    "source": "Language",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.light",
-    "value": "Light",
+    "key": "common.common.theme",
+    "source": "Theme",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.dark",
-    "value": "Dark",
+    "key": "common.common.light",
+    "source": "Light",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.auto",
-    "value": "Auto",
+    "key": "common.common.dark",
+    "source": "Dark",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.notifications",
-    "value": "Notifications",
+    "key": "common.common.auto",
+    "source": "Auto",
     "context": "General content",
-    "maxLength": 19.5
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.privacy",
-    "value": "Privacy",
+    "key": "common.common.notifications",
+    "source": "Notifications",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 19.5,
+    "translation": ""
   },
   {
-    "key": "common.terms",
-    "value": "Terms",
+    "key": "common.common.privacy",
+    "source": "Privacy",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.help",
-    "value": "Help",
+    "key": "common.common.terms",
+    "source": "Terms",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.faq",
-    "value": "FAQ",
+    "key": "common.common.help",
+    "source": "Help",
     "context": "General content",
-    "maxLength": 4.5
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.support",
-    "value": "Support",
+    "key": "common.common.faq",
+    "source": "FAQ",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 4.5,
+    "translation": ""
   },
   {
-    "key": "common.feedback",
-    "value": "Feedback",
+    "key": "common.common.support",
+    "source": "Support",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.reportBug",
-    "value": "Report Bug",
+    "key": "common.common.feedback",
+    "source": "Feedback",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.requestFeature",
-    "value": "Request Feature",
+    "key": "common.common.reportBug",
+    "source": "Report Bug",
     "context": "General content",
-    "maxLength": 22.5
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "common.version",
-    "value": "Version",
+    "key": "common.common.requestFeature",
+    "source": "Request Feature",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 22.5,
+    "translation": ""
   },
   {
-    "key": "common.copyright",
-    "value": "Copyright",
+    "key": "common.common.version",
+    "source": "Version",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.allRightsReserved",
-    "value": "All rights reserved",
+    "key": "common.common.copyright",
+    "source": "Copyright",
     "context": "General content",
-    "maxLength": 28.5
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.poweredBy",
-    "value": "Powered by",
+    "key": "common.common.allRightsReserved",
+    "source": "All rights reserved",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 28.5,
+    "translation": ""
   },
   {
-    "key": "common.madeWith",
-    "value": "Made with",
+    "key": "common.common.poweredBy",
+    "source": "Powered by",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "common.love",
-    "value": "love",
+    "key": "common.common.madeWith",
+    "source": "Made with",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.by",
-    "value": "by",
+    "key": "common.common.love",
+    "source": "love",
     "context": "General content",
-    "maxLength": 3
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.and",
-    "value": "and",
+    "key": "common.common.by",
+    "source": "by",
     "context": "General content",
-    "maxLength": 4.5
+    "maxLength": 3,
+    "translation": ""
   },
   {
-    "key": "common.or",
-    "value": "or",
+    "key": "common.common.and",
+    "source": "and",
     "context": "General content",
-    "maxLength": 3
+    "maxLength": 4.5,
+    "translation": ""
   },
   {
-    "key": "common.not",
-    "value": "not",
+    "key": "common.common.or",
+    "source": "or",
     "context": "General content",
-    "maxLength": 4.5
+    "maxLength": 3,
+    "translation": ""
   },
   {
-    "key": "common.all",
-    "value": "All",
+    "key": "common.common.not",
+    "source": "not",
     "context": "General content",
-    "maxLength": 4.5
+    "maxLength": 4.5,
+    "translation": ""
   },
   {
-    "key": "common.none",
-    "value": "None",
+    "key": "common.common.all",
+    "source": "All",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 4.5,
+    "translation": ""
   },
   {
-    "key": "common.select",
-    "value": "Select",
+    "key": "common.common.none",
+    "source": "None",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.selectAll",
-    "value": "Select All",
+    "key": "common.common.select",
+    "source": "Select",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.deselectAll",
-    "value": "Deselect All",
+    "key": "common.common.selectAll",
+    "source": "Select All",
     "context": "General content",
-    "maxLength": 18
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "common.toggle",
-    "value": "Toggle",
+    "key": "common.common.deselectAll",
+    "source": "Deselect All",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 18,
+    "translation": ""
   },
   {
-    "key": "common.expand",
-    "value": "Expand",
+    "key": "common.common.toggle",
+    "source": "Toggle",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.collapse",
-    "value": "Collapse",
+    "key": "common.common.expand",
+    "source": "Expand",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.show",
-    "value": "Show",
+    "key": "common.common.collapse",
+    "source": "Collapse",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.hide",
-    "value": "Hide",
+    "key": "common.common.show",
+    "source": "Show",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.enable",
-    "value": "Enable",
+    "key": "common.common.hide",
+    "source": "Hide",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.disable",
-    "value": "Disable",
+    "key": "common.common.enable",
+    "source": "Enable",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.on",
-    "value": "On",
+    "key": "common.common.disable",
+    "source": "Disable",
     "context": "General content",
-    "maxLength": 3
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.off",
-    "value": "Off",
+    "key": "common.common.on",
+    "source": "On",
     "context": "General content",
-    "maxLength": 4.5
+    "maxLength": 3,
+    "translation": ""
   },
   {
-    "key": "common.active",
-    "value": "Active",
+    "key": "common.common.off",
+    "source": "Off",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 4.5,
+    "translation": ""
   },
   {
-    "key": "common.inactive",
-    "value": "Inactive",
+    "key": "common.common.active",
+    "source": "Active",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.pending",
-    "value": "Pending",
+    "key": "common.common.inactive",
+    "source": "Inactive",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.approved",
-    "value": "Approved",
+    "key": "common.common.pending",
+    "source": "Pending",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.rejected",
-    "value": "Rejected",
+    "key": "common.common.approved",
+    "source": "Approved",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.completed",
-    "value": "Completed",
+    "key": "common.common.rejected",
+    "source": "Rejected",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.failed",
-    "value": "Failed",
+    "key": "common.common.completed",
+    "source": "Completed",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.inProgress",
-    "value": "In Progress",
+    "key": "common.common.failed",
+    "source": "Failed",
     "context": "General content",
-    "maxLength": 16.5
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.scheduled",
-    "value": "Scheduled",
+    "key": "common.common.inProgress",
+    "source": "In Progress",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 16.5,
+    "translation": ""
   },
   {
-    "key": "common.draft",
-    "value": "Draft",
+    "key": "common.common.scheduled",
+    "source": "Scheduled",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.published",
-    "value": "Published",
+    "key": "common.common.draft",
+    "source": "Draft",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.archived",
-    "value": "Archived",
+    "key": "common.common.published",
+    "source": "Published",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.deleted",
-    "value": "Deleted",
+    "key": "common.common.archived",
+    "source": "Archived",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.restored",
-    "value": "Restored",
+    "key": "common.common.deleted",
+    "source": "Deleted",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.updated",
-    "value": "Updated",
+    "key": "common.common.restored",
+    "source": "Restored",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.created",
-    "value": "Created",
+    "key": "common.common.updated",
+    "source": "Updated",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.modified",
-    "value": "Modified",
+    "key": "common.common.created",
+    "source": "Created",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.accessed",
-    "value": "Accessed",
+    "key": "common.common.modified",
+    "source": "Modified",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.viewed",
-    "value": "Viewed",
+    "key": "common.common.accessed",
+    "source": "Accessed",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.downloaded",
-    "value": "Downloaded",
+    "key": "common.common.viewed",
+    "source": "Viewed",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.uploaded",
-    "value": "Uploaded",
+    "key": "common.common.downloaded",
+    "source": "Downloaded",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "common.shared",
-    "value": "Shared",
+    "key": "common.common.uploaded",
+    "source": "Uploaded",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.liked",
-    "value": "Liked",
+    "key": "common.common.shared",
+    "source": "Shared",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.commented",
-    "value": "Commented",
+    "key": "common.common.liked",
+    "source": "Liked",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.replied",
-    "value": "Replied",
+    "key": "common.common.commented",
+    "source": "Commented",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.mentioned",
-    "value": "Mentioned",
+    "key": "common.common.replied",
+    "source": "Replied",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.tagged",
-    "value": "Tagged",
+    "key": "common.common.mentioned",
+    "source": "Mentioned",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.followed",
-    "value": "Followed",
+    "key": "common.common.tagged",
+    "source": "Tagged",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.unfollowed",
-    "value": "Unfollowed",
+    "key": "common.common.followed",
+    "source": "Followed",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.blocked",
-    "value": "Blocked",
+    "key": "common.common.unfollowed",
+    "source": "Unfollowed",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "common.unblocked",
-    "value": "Unblocked",
+    "key": "common.common.blocked",
+    "source": "Blocked",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.muted",
-    "value": "Muted",
+    "key": "common.common.unblocked",
+    "source": "Unblocked",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.unmuted",
-    "value": "Unmuted",
+    "key": "common.common.muted",
+    "source": "Muted",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.pinned",
-    "value": "Pinned",
+    "key": "common.common.unmuted",
+    "source": "Unmuted",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.unpinned",
-    "value": "Unpinned",
+    "key": "common.common.pinned",
+    "source": "Pinned",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.starred",
-    "value": "Starred",
+    "key": "common.common.unpinned",
+    "source": "Unpinned",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.unstarred",
-    "value": "Unstarred",
+    "key": "common.common.starred",
+    "source": "Starred",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.bookmarked",
-    "value": "Bookmarked",
+    "key": "common.common.unstarred",
+    "source": "Unstarred",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.unbookmarked",
-    "value": "Unbookmarked",
+    "key": "common.common.bookmarked",
+    "source": "Bookmarked",
     "context": "General content",
-    "maxLength": 18
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "common.subscribed",
-    "value": "Subscribed",
+    "key": "common.common.unbookmarked",
+    "source": "Unbookmarked",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 18,
+    "translation": ""
   },
   {
-    "key": "common.unsubscribed",
-    "value": "Unsubscribed",
+    "key": "common.common.subscribed",
+    "source": "Subscribed",
     "context": "General content",
-    "maxLength": 18
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "common.joined",
-    "value": "Joined",
+    "key": "common.common.unsubscribed",
+    "source": "Unsubscribed",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 18,
+    "translation": ""
   },
   {
-    "key": "common.left",
-    "value": "Left",
+    "key": "common.common.joined",
+    "source": "Joined",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.invited",
-    "value": "Invited",
+    "key": "common.common.left",
+    "source": "Left",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.accepted",
-    "value": "Accepted",
+    "key": "common.common.invited",
+    "source": "Invited",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.declined",
-    "value": "Declined",
+    "key": "common.common.accepted",
+    "source": "Accepted",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.removed",
-    "value": "Removed",
+    "key": "common.common.declined",
+    "source": "Declined",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.added",
-    "value": "Added",
+    "key": "common.common.removed",
+    "source": "Removed",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.changed",
-    "value": "Changed",
+    "key": "common.common.added",
+    "source": "Added",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.moved",
-    "value": "Moved",
+    "key": "common.common.changed",
+    "source": "Changed",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.copied",
-    "value": "Copied",
+    "key": "common.common.moved",
+    "source": "Moved",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.duplicated",
-    "value": "Duplicated",
+    "key": "common.common.copied",
+    "source": "Copied",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.merged",
-    "value": "Merged",
+    "key": "common.common.duplicated",
+    "source": "Duplicated",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "common.split",
-    "value": "Split",
+    "key": "common.common.merged",
+    "source": "Merged",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.imported",
-    "value": "Imported",
+    "key": "common.common.split",
+    "source": "Split",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.exported",
-    "value": "Exported",
+    "key": "common.common.imported",
+    "source": "Imported",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.synced",
-    "value": "Synced",
+    "key": "common.common.exported",
+    "source": "Exported",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.refreshed",
-    "value": "Refreshed",
+    "key": "common.common.synced",
+    "source": "Synced",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.reloaded",
-    "value": "Reloaded",
+    "key": "common.common.refreshed",
+    "source": "Refreshed",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.retried",
-    "value": "Retried",
+    "key": "common.common.reloaded",
+    "source": "Reloaded",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.reverted",
-    "value": "Reverted",
+    "key": "common.common.retried",
+    "source": "Retried",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.recovered",
-    "value": "Recovered",
+    "key": "common.common.reverted",
+    "source": "Reverted",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.repaired",
-    "value": "Repaired",
+    "key": "common.common.recovered",
+    "source": "Recovered",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.fixed",
-    "value": "Fixed",
+    "key": "common.common.repaired",
+    "source": "Repaired",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.resolved",
-    "value": "Resolved",
+    "key": "common.common.fixed",
+    "source": "Fixed",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.closed",
-    "value": "Closed",
+    "key": "common.common.resolved",
+    "source": "Resolved",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.reopened",
-    "value": "Reopened",
+    "key": "common.common.closed",
+    "source": "Closed",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.locked",
-    "value": "Locked",
+    "key": "common.common.reopened",
+    "source": "Reopened",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.unlocked",
-    "value": "Unlocked",
+    "key": "common.common.locked",
+    "source": "Locked",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.encrypted",
-    "value": "Encrypted",
+    "key": "common.common.unlocked",
+    "source": "Unlocked",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.decrypted",
-    "value": "Decrypted",
+    "key": "common.common.encrypted",
+    "source": "Encrypted",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.compressed",
-    "value": "Compressed",
+    "key": "common.common.decrypted",
+    "source": "Decrypted",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.decompressed",
-    "value": "Decompressed",
+    "key": "common.common.compressed",
+    "source": "Compressed",
     "context": "General content",
-    "maxLength": 18
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "common.optimized",
-    "value": "Optimized",
+    "key": "common.common.decompressed",
+    "source": "Decompressed",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 18,
+    "translation": ""
   },
   {
-    "key": "common.minimized",
-    "value": "Minimized",
+    "key": "common.common.optimized",
+    "source": "Optimized",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.maximized",
-    "value": "Maximized",
+    "key": "common.common.minimized",
+    "source": "Minimized",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.normalized",
-    "value": "Normalized",
+    "key": "common.common.maximized",
+    "source": "Maximized",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.validated",
-    "value": "Validated",
+    "key": "common.common.normalized",
+    "source": "Normalized",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "common.verified",
-    "value": "Verified",
+    "key": "common.common.validated",
+    "source": "Validated",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.authenticated",
-    "value": "Authenticated",
+    "key": "common.common.verified",
+    "source": "Verified",
     "context": "General content",
-    "maxLength": 19.5
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.authorized",
-    "value": "Authorized",
+    "key": "common.common.authenticated",
+    "source": "Authenticated",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 19.5,
+    "translation": ""
   },
   {
-    "key": "common.granted",
-    "value": "Granted",
+    "key": "common.common.authorized",
+    "source": "Authorized",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "common.denied",
-    "value": "Denied",
+    "key": "common.common.granted",
+    "source": "Granted",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.allowed",
-    "value": "Allowed",
+    "key": "common.common.denied",
+    "source": "Denied",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.forbidden",
-    "value": "Forbidden",
+    "key": "common.common.allowed",
+    "source": "Allowed",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.restricted",
-    "value": "Restricted",
+    "key": "common.common.forbidden",
+    "source": "Forbidden",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.limited",
-    "value": "Limited",
+    "key": "common.common.restricted",
+    "source": "Restricted",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "common.unlimited",
-    "value": "Unlimited",
+    "key": "common.common.limited",
+    "source": "Limited",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.free",
-    "value": "Free",
+    "key": "common.common.unlimited",
+    "source": "Unlimited",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.paid",
-    "value": "Paid",
+    "key": "common.common.free",
+    "source": "Free",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.trial",
-    "value": "Trial",
+    "key": "common.common.paid",
+    "source": "Paid",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.premium",
-    "value": "Premium",
+    "key": "common.common.trial",
+    "source": "Trial",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.basic",
-    "value": "Basic",
+    "key": "common.common.premium",
+    "source": "Premium",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.advanced",
-    "value": "Advanced",
+    "key": "common.common.basic",
+    "source": "Basic",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.pro",
-    "value": "Pro",
+    "key": "common.common.advanced",
+    "source": "Advanced",
     "context": "General content",
-    "maxLength": 4.5
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.enterprise",
-    "value": "Enterprise",
+    "key": "common.common.pro",
+    "source": "Pro",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 4.5,
+    "translation": ""
   },
   {
-    "key": "common.custom",
-    "value": "Custom",
+    "key": "common.common.enterprise",
+    "source": "Enterprise",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "common.default",
-    "value": "Default",
+    "key": "common.common.custom",
+    "source": "Custom",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.primary",
-    "value": "Primary",
+    "key": "common.common.default",
+    "source": "Default",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.secondary",
-    "value": "Secondary",
+    "key": "common.common.primary",
+    "source": "Primary",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.tertiary",
-    "value": "Tertiary",
+    "key": "common.common.secondary",
+    "source": "Secondary",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.danger",
-    "value": "Danger",
+    "key": "common.common.tertiary",
+    "source": "Tertiary",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.transparent",
-    "value": "Transparent",
+    "key": "common.common.danger",
+    "source": "Danger",
     "context": "General content",
-    "maxLength": 16.5
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.solid",
-    "value": "Solid",
+    "key": "common.common.transparent",
+    "source": "Transparent",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 16.5,
+    "translation": ""
   },
   {
-    "key": "common.gradient",
-    "value": "Gradient",
+    "key": "common.common.solid",
+    "source": "Solid",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.pattern",
-    "value": "Pattern",
+    "key": "common.common.gradient",
+    "source": "Gradient",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.image",
-    "value": "Image",
+    "key": "common.common.pattern",
+    "source": "Pattern",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.video",
-    "value": "Video",
+    "key": "common.common.image",
+    "source": "Image",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.audio",
-    "value": "Audio",
+    "key": "common.common.video",
+    "source": "Video",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.document",
-    "value": "Document",
+    "key": "common.common.audio",
+    "source": "Audio",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.spreadsheet",
-    "value": "Spreadsheet",
+    "key": "common.common.document",
+    "source": "Document",
     "context": "General content",
-    "maxLength": 16.5
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.presentation",
-    "value": "Presentation",
+    "key": "common.common.spreadsheet",
+    "source": "Spreadsheet",
     "context": "General content",
-    "maxLength": 18
+    "maxLength": 16.5,
+    "translation": ""
   },
   {
-    "key": "common.code",
-    "value": "Code",
+    "key": "common.common.presentation",
+    "source": "Presentation",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 18,
+    "translation": ""
   },
   {
-    "key": "common.text",
-    "value": "Text",
+    "key": "common.common.code",
+    "source": "Code",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.binary",
-    "value": "Binary",
+    "key": "common.common.text",
+    "source": "Text",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.archive",
-    "value": "Archive",
+    "key": "common.common.binary",
+    "source": "Binary",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.folder",
-    "value": "Folder",
+    "key": "common.common.archive",
+    "source": "Archive",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.file",
-    "value": "File",
+    "key": "common.common.folder",
+    "source": "Folder",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.link",
-    "value": "Link",
+    "key": "common.common.file",
+    "source": "File",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.shortcut",
-    "value": "Shortcut",
+    "key": "common.common.link",
+    "source": "Link",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.alias",
-    "value": "Alias",
+    "key": "common.common.shortcut",
+    "source": "Shortcut",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.bookmark",
-    "value": "Bookmark",
+    "key": "common.common.alias",
+    "source": "Alias",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.favorite",
-    "value": "Favorite",
+    "key": "common.common.bookmark",
+    "source": "Bookmark",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.recent",
-    "value": "Recent",
+    "key": "common.common.favorite",
+    "source": "Favorite",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.popular",
-    "value": "Popular",
+    "key": "common.common.recent",
+    "source": "Recent",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.trending",
-    "value": "Trending",
+    "key": "common.common.popular",
+    "source": "Popular",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.featured",
-    "value": "Featured",
+    "key": "common.common.trending",
+    "source": "Trending",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.recommended",
-    "value": "Recommended",
+    "key": "common.common.featured",
+    "source": "Featured",
     "context": "General content",
-    "maxLength": 16.5
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.sponsored",
-    "value": "Sponsored",
+    "key": "common.common.recommended",
+    "source": "Recommended",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 16.5,
+    "translation": ""
   },
   {
-    "key": "common.promoted",
-    "value": "Promoted",
+    "key": "common.common.sponsored",
+    "source": "Sponsored",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.sticky",
-    "value": "Sticky",
+    "key": "common.common.promoted",
+    "source": "Promoted",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.announcement",
-    "value": "Announcement",
+    "key": "common.common.sticky",
+    "source": "Sticky",
     "context": "General content",
-    "maxLength": 18
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.notification",
-    "value": "Notification",
+    "key": "common.common.announcement",
+    "source": "Announcement",
     "context": "General content",
-    "maxLength": 18
+    "maxLength": 18,
+    "translation": ""
   },
   {
-    "key": "common.alert",
-    "value": "Alert",
+    "key": "common.common.notification",
+    "source": "Notification",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 18,
+    "translation": ""
   },
   {
-    "key": "common.message",
-    "value": "Message",
+    "key": "common.common.alert",
+    "source": "Alert",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.comment",
-    "value": "Comment",
+    "key": "common.common.message",
+    "source": "Message",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.reply",
-    "value": "Reply",
+    "key": "common.common.comment",
+    "source": "Comment",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.reaction",
-    "value": "Reaction",
+    "key": "common.common.reply",
+    "source": "Reply",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.mention",
-    "value": "Mention",
+    "key": "common.common.reaction",
+    "source": "Reaction",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.tag",
-    "value": "Tag",
+    "key": "common.common.mention",
+    "source": "Mention",
     "context": "General content",
-    "maxLength": 4.5
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.hashtag",
-    "value": "Hashtag",
+    "key": "common.common.tag",
+    "source": "Tag",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 4.5,
+    "translation": ""
   },
   {
-    "key": "common.keyword",
-    "value": "Keyword",
+    "key": "common.common.hashtag",
+    "source": "Hashtag",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.category",
-    "value": "Category",
+    "key": "common.common.keyword",
+    "source": "Keyword",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.subcategory",
-    "value": "Subcategory",
+    "key": "common.common.category",
+    "source": "Category",
     "context": "General content",
-    "maxLength": 16.5
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.group",
-    "value": "Group",
+    "key": "common.common.subcategory",
+    "source": "Subcategory",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 16.5,
+    "translation": ""
   },
   {
-    "key": "common.subgroup",
-    "value": "Subgroup",
+    "key": "common.common.group",
+    "source": "Group",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.section",
-    "value": "Section",
+    "key": "common.common.subgroup",
+    "source": "Subgroup",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.subsection",
-    "value": "Subsection",
+    "key": "common.common.section",
+    "source": "Section",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.chapter",
-    "value": "Chapter",
+    "key": "common.common.subsection",
+    "source": "Subsection",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "common.paragraph",
-    "value": "Paragraph",
+    "key": "common.common.chapter",
+    "source": "Chapter",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.sentence",
-    "value": "Sentence",
+    "key": "common.common.paragraph",
+    "source": "Paragraph",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.word",
-    "value": "Word",
+    "key": "common.common.sentence",
+    "source": "Sentence",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.character",
-    "value": "Character",
+    "key": "common.common.word",
+    "source": "Word",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.symbol",
-    "value": "Symbol",
+    "key": "common.common.character",
+    "source": "Character",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.icon",
-    "value": "Icon",
+    "key": "common.common.symbol",
+    "source": "Symbol",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.emoji",
-    "value": "Emoji",
+    "key": "common.common.icon",
+    "source": "Icon",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.sticker",
-    "value": "Sticker",
+    "key": "common.common.emoji",
+    "source": "Emoji",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.gif",
-    "value": "GIF",
+    "key": "common.common.sticker",
+    "source": "Sticker",
     "context": "General content",
-    "maxLength": 4.5
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.meme",
-    "value": "Meme",
+    "key": "common.common.gif",
+    "source": "GIF",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 4.5,
+    "translation": ""
   },
   {
-    "key": "common.quote",
-    "value": "Quote",
+    "key": "common.common.meme",
+    "source": "Meme",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.citation",
-    "value": "Citation",
+    "key": "common.common.quote",
+    "source": "Quote",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.reference",
-    "value": "Reference",
+    "key": "common.common.citation",
+    "source": "Citation",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.source",
-    "value": "Source",
+    "key": "common.common.reference",
+    "source": "Reference",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.author",
-    "value": "Author",
+    "key": "common.common.source",
+    "source": "Source",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.editor",
-    "value": "Editor",
+    "key": "common.common.author",
+    "source": "Author",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.contributor",
-    "value": "Contributor",
+    "key": "common.common.editor",
+    "source": "Editor",
     "context": "General content",
-    "maxLength": 16.5
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.reviewer",
-    "value": "Reviewer",
+    "key": "common.common.contributor",
+    "source": "Contributor",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 16.5,
+    "translation": ""
   },
   {
-    "key": "common.moderator",
-    "value": "Moderator",
+    "key": "common.common.reviewer",
+    "source": "Reviewer",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.administrator",
-    "value": "Administrator",
+    "key": "common.common.moderator",
+    "source": "Moderator",
     "context": "General content",
-    "maxLength": 19.5
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.owner",
-    "value": "Owner",
+    "key": "common.common.administrator",
+    "source": "Administrator",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 19.5,
+    "translation": ""
   },
   {
-    "key": "common.member",
-    "value": "Member",
+    "key": "common.common.owner",
+    "source": "Owner",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.guest",
-    "value": "Guest",
+    "key": "common.common.member",
+    "source": "Member",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.visitor",
-    "value": "Visitor",
+    "key": "common.common.guest",
+    "source": "Guest",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.user",
-    "value": "User",
+    "key": "common.common.visitor",
+    "source": "Visitor",
     "context": "General content",
-    "maxLength": 6
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.customer",
-    "value": "Customer",
+    "key": "common.common.user",
+    "source": "User",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 6,
+    "translation": ""
   },
   {
-    "key": "common.client",
-    "value": "Client",
+    "key": "common.common.customer",
+    "source": "Customer",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.partner",
-    "value": "Partner",
+    "key": "common.common.client",
+    "source": "Client",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.vendor",
-    "value": "Vendor",
+    "key": "common.common.partner",
+    "source": "Partner",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.supplier",
-    "value": "Supplier",
+    "key": "common.common.vendor",
+    "source": "Vendor",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.manufacturer",
-    "value": "Manufacturer",
+    "key": "common.common.supplier",
+    "source": "Supplier",
     "context": "General content",
-    "maxLength": 18
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.distributor",
-    "value": "Distributor",
+    "key": "common.common.manufacturer",
+    "source": "Manufacturer",
     "context": "General content",
-    "maxLength": 16.5
+    "maxLength": 18,
+    "translation": ""
   },
   {
-    "key": "common.retailer",
-    "value": "Retailer",
+    "key": "common.common.distributor",
+    "source": "Distributor",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 16.5,
+    "translation": ""
   },
   {
-    "key": "common.wholesaler",
-    "value": "Wholesaler",
+    "key": "common.common.retailer",
+    "source": "Retailer",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.broker",
-    "value": "Broker",
+    "key": "common.common.wholesaler",
+    "source": "Wholesaler",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "common.agent",
-    "value": "Agent",
+    "key": "common.common.broker",
+    "source": "Broker",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.representative",
-    "value": "Representative",
+    "key": "common.common.agent",
+    "source": "Agent",
     "context": "General content",
-    "maxLength": 21
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.consultant",
-    "value": "Consultant",
+    "key": "common.common.representative",
+    "source": "Representative",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 21,
+    "translation": ""
   },
   {
-    "key": "common.advisor",
-    "value": "Advisor",
+    "key": "common.common.consultant",
+    "source": "Consultant",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "common.expert",
-    "value": "Expert",
+    "key": "common.common.advisor",
+    "source": "Advisor",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.specialist",
-    "value": "Specialist",
+    "key": "common.common.expert",
+    "source": "Expert",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.professional",
-    "value": "Professional",
+    "key": "common.common.specialist",
+    "source": "Specialist",
     "context": "General content",
-    "maxLength": 18
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "common.technician",
-    "value": "Technician",
+    "key": "common.common.professional",
+    "source": "Professional",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 18,
+    "translation": ""
   },
   {
-    "key": "common.engineer",
-    "value": "Engineer",
+    "key": "common.common.technician",
+    "source": "Technician",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "common.developer",
-    "value": "Developer",
+    "key": "common.common.engineer",
+    "source": "Engineer",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.designer",
-    "value": "Designer",
+    "key": "common.common.developer",
+    "source": "Developer",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.architect",
-    "value": "Architect",
+    "key": "common.common.designer",
+    "source": "Designer",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.analyst",
-    "value": "Analyst",
+    "key": "common.common.architect",
+    "source": "Architect",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.researcher",
-    "value": "Researcher",
+    "key": "common.common.analyst",
+    "source": "Analyst",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.scientist",
-    "value": "Scientist",
+    "key": "common.common.researcher",
+    "source": "Researcher",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "common.teacher",
-    "value": "Teacher",
+    "key": "common.common.scientist",
+    "source": "Scientist",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.instructor",
-    "value": "Instructor",
+    "key": "common.common.teacher",
+    "source": "Teacher",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.trainer",
-    "value": "Trainer",
+    "key": "common.common.instructor",
+    "source": "Instructor",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "common.coach",
-    "value": "Coach",
+    "key": "common.common.trainer",
+    "source": "Trainer",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.mentor",
-    "value": "Mentor",
+    "key": "common.common.coach",
+    "source": "Coach",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.tutor",
-    "value": "Tutor",
+    "key": "common.common.mentor",
+    "source": "Mentor",
     "context": "General content",
-    "maxLength": 7.5
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.student",
-    "value": "Student",
+    "key": "common.common.tutor",
+    "source": "Tutor",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 7.5,
+    "translation": ""
   },
   {
-    "key": "common.learner",
-    "value": "Learner",
+    "key": "common.common.student",
+    "source": "Student",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.trainee",
-    "value": "Trainee",
+    "key": "common.common.learner",
+    "source": "Learner",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.apprentice",
-    "value": "Apprentice",
+    "key": "common.common.trainee",
+    "source": "Trainee",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.intern",
-    "value": "Intern",
+    "key": "common.common.apprentice",
+    "source": "Apprentice",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "common.volunteer",
-    "value": "Volunteer",
+    "key": "common.common.intern",
+    "source": "Intern",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "common.employee",
-    "value": "Employee",
+    "key": "common.common.volunteer",
+    "source": "Volunteer",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.employer",
-    "value": "Employer",
+    "key": "common.common.employee",
+    "source": "Employee",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.contractor",
-    "value": "Contractor",
+    "key": "common.common.employer",
+    "source": "Employer",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.freelancer",
-    "value": "Freelancer",
+    "key": "common.common.contractor",
+    "source": "Contractor",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "common.entrepreneur",
-    "value": "Entrepreneur",
+    "key": "common.common.freelancer",
+    "source": "Freelancer",
     "context": "General content",
-    "maxLength": 18
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "common.founder",
-    "value": "Founder",
+    "key": "common.common.entrepreneur",
+    "source": "Entrepreneur",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 18,
+    "translation": ""
   },
   {
-    "key": "common.cofounder",
-    "value": "Co-founder",
+    "key": "common.common.founder",
+    "source": "Founder",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.ceo",
-    "value": "CEO",
+    "key": "common.common.cofounder",
+    "source": "Co-founder",
     "context": "General content",
-    "maxLength": 4.5
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "common.cto",
-    "value": "CTO",
+    "key": "common.common.ceo",
+    "source": "CEO",
     "context": "General content",
-    "maxLength": 4.5
+    "maxLength": 4.5,
+    "translation": ""
   },
   {
-    "key": "common.cfo",
-    "value": "CFO",
+    "key": "common.common.cto",
+    "source": "CTO",
     "context": "General content",
-    "maxLength": 4.5
+    "maxLength": 4.5,
+    "translation": ""
   },
   {
-    "key": "common.coo",
-    "value": "COO",
+    "key": "common.common.cfo",
+    "source": "CFO",
     "context": "General content",
-    "maxLength": 4.5
+    "maxLength": 4.5,
+    "translation": ""
   },
   {
-    "key": "common.cmo",
-    "value": "CMO",
+    "key": "common.common.coo",
+    "source": "COO",
     "context": "General content",
-    "maxLength": 4.5
+    "maxLength": 4.5,
+    "translation": ""
   },
   {
-    "key": "common.manager",
-    "value": "Manager",
+    "key": "common.common.cmo",
+    "source": "CMO",
     "context": "General content",
-    "maxLength": 10.5
+    "maxLength": 4.5,
+    "translation": ""
   },
   {
-    "key": "common.director",
-    "value": "Director",
+    "key": "common.common.manager",
+    "source": "Manager",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 10.5,
+    "translation": ""
   },
   {
-    "key": "common.executive",
-    "value": "Executive",
+    "key": "common.common.director",
+    "source": "Director",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.president",
-    "value": "President",
+    "key": "common.common.executive",
+    "source": "Executive",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.vicePresident",
-    "value": "Vice President",
+    "key": "common.common.president",
+    "source": "President",
     "context": "General content",
-    "maxLength": 21
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "common.chairman",
-    "value": "Chairman",
+    "key": "common.common.vicePresident",
+    "source": "Vice President",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 21,
+    "translation": ""
   },
   {
-    "key": "common.boardMember",
-    "value": "Board Member",
+    "key": "common.common.chairman",
+    "source": "Chairman",
     "context": "General content",
-    "maxLength": 18
+    "maxLength": 12,
+    "translation": ""
   },
   {
-    "key": "common.shareholder",
-    "value": "Shareholder",
+    "key": "common.common.boardMember",
+    "source": "Board Member",
     "context": "General content",
-    "maxLength": 16.5
+    "maxLength": 18,
+    "translation": ""
   },
   {
-    "key": "common.investor",
-    "value": "Investor",
+    "key": "common.common.shareholder",
+    "source": "Shareholder",
     "context": "General content",
-    "maxLength": 12
+    "maxLength": 16.5,
+    "translation": ""
   },
   {
-    "key": "common.stakeholder",
-    "value": "Stakeholder",
+    "key": "common.common.investor",
+    "source": "Investor",
     "context": "General content",
-    "maxLength": 16.5
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "common.common.stakeholder",
+    "source": "Stakeholder",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "common.common.aria.siteFooter",
+    "source": "Site footer",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "common.common.aria.headerLogo",
+    "source": "Ergo Blockchain logo - hexagon with Sigma symbol",
+    "context": "General content",
+    "maxLength": 72,
+    "translation": ""
+  },
+  {
+    "key": "common.common.aria.mobileNavMenu",
+    "source": "Mobile navigation menu",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "common.common.aria.goToHomepage",
+    "source": "Go to homepage",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "common.common.aria.mainNavigation",
+    "source": "Main navigation",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "common.common.aria.breadcrumb",
+    "source": "Breadcrumb",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "common.common.aria.featuredEcosystemProjects",
+    "source": "Featured Ergo ecosystem projects",
+    "context": "General content",
+    "maxLength": 48,
+    "translation": ""
+  },
+  {
+    "key": "common.common.evidence",
+    "source": "Evidence",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "common.common.caveat",
+    "source": "Caveat",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.home",
+    "source": "Home",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.build",
+    "source": "Build",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.playground",
+    "source": "Playground",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.playground_description",
+    "source": "Compile ErgoScript in the browser with Monaco, Fleet compiler, and sigma-rust WASM.",
+    "context": "General content",
+    "maxLength": 124.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.agent economy",
+    "source": "Agent Economy",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.agent payments",
+    "source": "Agent Payments",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.demos",
+    "source": "Demos",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.developers",
+    "source": "Developers",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.start",
+    "source": "Start",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.use",
+    "source": "Use",
+    "context": "General content",
+    "maxLength": 4.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.ecosystem",
+    "source": "Ecosystem",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.technology",
+    "source": "Technology",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.learn",
+    "source": "Learn",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.compare",
+    "source": "Compare",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.infographics",
+    "source": "Infographics",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.faq",
+    "source": "FAQ",
+    "context": "General content",
+    "maxLength": 4.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.glossary",
+    "source": "Glossary",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.knowledge base",
+    "source": "Knowledge Base",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.topics",
+    "source": "Topics",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.q&a hub",
+    "source": "Q&A Hub",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.playbooks",
+    "source": "Playbooks",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.dev patterns",
+    "source": "Dev Patterns",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.docs",
+    "source": "Docs",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.blog",
+    "source": "Blog",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.community",
+    "source": "Community",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.communityNav",
+    "source": "COMMUNITY",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.getWallet",
+    "source": "Get Wallet",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.searchAriaLabel",
+    "source": "Search",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.quick introduction",
+    "source": "Quick Introduction",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.platform comparison",
+    "source": "Platform Comparison",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.onboarding quiz",
+    "source": "Onboarding Quiz",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.join the community",
+    "source": "Join the Community",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.faq for beginners",
+    "source": "FAQ for Beginners",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.use cases",
+    "source": "Use Cases",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.get erg",
+    "source": "Get ERG",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.how-to guides",
+    "source": "How-to Guides",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.mine erg",
+    "source": "Mine ERG",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.earn with defi",
+    "source": "Earn with DeFi",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.transaction fees (babel fees)",
+    "source": "Transaction Fees (Babel Fees)",
+    "context": "General content",
+    "maxLength": 43.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.explore dapps & services",
+    "source": "Explore dApps & Services",
+    "context": "General content",
+    "maxLength": 36,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.ecosystem map",
+    "source": "Ecosystem Map",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.ergo watch",
+    "source": "Ergo Watch",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.mining pools & resources",
+    "source": "Mining Pools & Resources",
+    "context": "General content",
+    "maxLength": 36,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.ecosystem grants & funding",
+    "source": "Ecosystem Grants & Funding",
+    "context": "General content",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.overview",
+    "source": "Overview",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.eutxo model",
+    "source": "eUTXO Model",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.ergoscript",
+    "source": "ErgoScript",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.secure pow (autolykos v2)",
+    "source": "Secure PoW (Autolykos v2)",
+    "context": "General content",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.storage rent",
+    "source": "Storage Rent",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.nipopows",
+    "source": "NIPOPOWs",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.privacy features (σ-protocols)",
+    "source": "Privacy Features (Σ-protocols)",
+    "context": "General content",
+    "maxLength": 45,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.learning hub",
+    "source": "Learning Hub",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.learn ergoscript",
+    "source": "Learn ErgoScript",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.research & papers",
+    "source": "Research & Papers",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.user & developer guides",
+    "source": "User & Developer Guides",
+    "context": "General content",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.a_brief_overview_of_ergo_and_its_core_purpose_description",
+    "source": "A brief overview of Ergo's purpose, design principles, and core advantages over other blockchains.",
+    "context": "General content",
+    "maxLength": 147,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.start_here_description",
+    "source": "Get started with Ergo blockchain in 3 simple steps: download a wallet, get ERG tokens, and make your first transaction.",
+    "context": "General content",
+    "maxLength": 178.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.quick_introduction_description",
+    "source": "A brief overview of Ergo's purpose, design principles, and core advantages over other blockchains.",
+    "context": "General content",
+    "maxLength": 147,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.platform_comparison_description",
+    "source": "Compare Ergo to Bitcoin, Ethereum, Solana and other blockchains across key technical features.",
+    "context": "General content",
+    "maxLength": 141,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.onboarding_quiz_description",
+    "source": "Find your personalized path on Ergo: investor, developer, miner, NFT creator, or everyday user.",
+    "context": "General content",
+    "maxLength": 142.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.join_the_community_description",
+    "source": "Connect with the Ergo community on Discord, Telegram, Reddit, X, and the official forum.",
+    "context": "General content",
+    "maxLength": 132,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.faq_for_beginners_description",
+    "source": "Answers to common questions about Ergo for beginners and advanced users.",
+    "context": "General content",
+    "maxLength": 108,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.use_cases_description",
+    "source": "Practical use cases and patterns for payments, DeFi, NFTs, escrow, and micropayments.",
+    "context": "General content",
+    "maxLength": 127.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.get_erg_description",
+    "source": "Buy or swap ERG tokens via exchanges, DEX platforms, and peer-to-peer options in your region.",
+    "context": "General content",
+    "maxLength": 139.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.how_to_guides_description",
+    "source": "Step-by-step tutorials for wallets, using dApps, transfers, 2FA setup, and more.",
+    "context": "General content",
+    "maxLength": 120,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.mine_erg_description",
+    "source": "Start mining ERG: hardware requirements, mining pools, presets, profitability, and setup guides.",
+    "context": "General content",
+    "maxLength": 144,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.earn_with_defi_description",
+    "source": "Where to earn yield on Ergo: staking, farming, lending, and liquidity provider fees.",
+    "context": "General content",
+    "maxLength": 126,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.transaction_fees_babel_fees_description",
+    "source": "All about network fees and paying them with different tokens.",
+    "context": "General content",
+    "maxLength": 91.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.platformComparisonDescription",
+    "source": "How Ergo compares to Bitcoin, Ethereum, Solana and other blockchains.",
+    "context": "General content",
+    "maxLength": 103.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.onboardingQuizDescription",
+    "source": "Find your personalized path—investor, developer, miner, NFT enthusiast, and more.",
+    "context": "General content",
+    "maxLength": 121.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.joinTheCommunityDescription",
+    "source": "Connect via Discord, Telegram, Reddit, and the official forum.",
+    "context": "General content",
+    "maxLength": 93,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.faqForBeginnersDescription",
+    "source": "Answers to the most common questions for newcomers.",
+    "context": "General content",
+    "maxLength": 76.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.useCasesDescription",
+    "source": "Explore different ways to leverage Ergo's capabilities across various domains.",
+    "context": "General content",
+    "maxLength": 117,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.getErgDescription",
+    "source": "Learn how to buy, exchange, or earn ERG (markets, P2P, exchanges, guides).",
+    "context": "General content",
+    "maxLength": 111,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.explore_dapps_services_description",
+    "source": "One comprehensive directory of wallets, bridges, tools, and community projects.",
+    "context": "General content",
+    "maxLength": 118.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.ecosystem_map_description",
+    "source": "Interactive visual map of projects, teams, and infrastructure building on Ergo.",
+    "context": "General content",
+    "maxLength": 118.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.ergo_watch_description",
+    "source": "Runtime-safe Ergo network metrics, mining distribution, emission progress, and agent-economy analytics.",
+    "context": "General content",
+    "maxLength": 154.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.mining_pools_resources_description",
+    "source": "List of mining pools and useful tools for miners.",
+    "context": "General content",
+    "maxLength": 73.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.ecosystem_grants_funding_description",
+    "source": "Grants, bounties, and funding opportunities for ecosystem builders.",
+    "context": "General content",
+    "maxLength": 100.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.technology_overview_description",
+    "source": "The Ergo technology stack at a glance: architecture, security, and longevity.",
+    "context": "General content",
+    "maxLength": 115.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.eutxo_model_description",
+    "source": "Extended UTXO model enabling deterministic, composable smart contracts without global state.",
+    "context": "General content",
+    "maxLength": 138,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.ergoscript_description",
+    "source": "Expressive smart contract language with auditable spending conditions (AND/OR, ring, threshold).",
+    "context": "General content",
+    "maxLength": 144,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.secure_pow_autolykos_v2_description",
+    "source": "ASIC-resistant, GPU-friendly Proof-of-Work algorithm ensuring fair distribution.",
+    "context": "General content",
+    "maxLength": 120,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.storage_rent_description",
+    "source": "Recycles forgotten blockchain state and funds miners with predictable long-term costs.",
+    "context": "General content",
+    "maxLength": 129,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.nipopows_description",
+    "source": "Efficient light-client proofs enabling ultra-secure mobile wallet verification.",
+    "context": "General content",
+    "maxLength": 118.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.privacy_features_sigma_protocols_description",
+    "source": "Sigma protocols enabling selective disclosure with auditable, optional privacy features.",
+    "context": "General content",
+    "maxLength": 132,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.learn_ergoscript_description",
+    "source": "Comprehensive ErgoScript tutorial series from beginner to expert level",
+    "context": "General content",
+    "maxLength": 105,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.research_papers_description",
+    "source": "Academic research, whitepapers, and foundational studies.",
+    "context": "General content",
+    "maxLength": 85.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.user_developer_guides_description",
+    "source": "All guides and how-tos for users and developers in one place.",
+    "context": "General content",
+    "maxLength": 91.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.faq_description",
+    "source": "Answers to frequently asked questions and common issues.",
+    "context": "General content",
+    "maxLength": 84,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.how_ergo_compares_to_bitcoin_ethereum_solana_and_other_blockchains_description",
+    "source": "How Ergo compares to Bitcoin, Ethereum, Solana and other blockchains.",
+    "context": "General content",
+    "maxLength": 103.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.learning_hub_description",
+    "source": "Your starting point for mastering Ergo: guides, glossary, Q&A, playbooks, and more.",
+    "context": "General content",
+    "maxLength": 124.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.glossary_description",
+    "source": "Definitions of key Ergo and blockchain terminology in one searchable reference.",
+    "context": "General content",
+    "maxLength": 118.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.topics_description",
+    "source": "Curated topic hubs grouping guides, FAQs, and resources by theme.",
+    "context": "General content",
+    "maxLength": 97.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.qa_hub_description",
+    "source": "Community-driven questions and answers about Ergo blockchain.",
+    "context": "General content",
+    "maxLength": 91.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.playbooks_description",
+    "source": "Step-by-step paths for DeFi, privacy, mining, and more.",
+    "context": "General content",
+    "maxLength": 82.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.dev_patterns_description",
+    "source": "Smart-contract patterns and reusable blueprints for developers.",
+    "context": "General content",
+    "maxLength": 94.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.build_description",
+    "source": "Build on the agent economy stack",
+    "context": "General content",
+    "maxLength": 48,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.agent_economy_description",
+    "source": "Why Ergo is the base layer for autonomous economic agents: credit, notes, programmable trust.",
+    "context": "General content",
+    "maxLength": 139.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.agent_payments_description",
+    "source": "Technical architecture: Reserve · Note · Tracker · Predicate. With Fleet SDK code examples.",
+    "context": "General content",
+    "maxLength": 136.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.demos_description",
+    "source": "Three working flows on Ergo testnet: API call payment, credit system, community reserve.",
+    "context": "General content",
+    "maxLength": 132,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.build_developers_description",
+    "source": "ErgoScript, SDKs (Fleet, AppKit, sigma-rust), patterns, playbooks, and grants.",
+    "context": "General content",
+    "maxLength": 117,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.start_description",
+    "source": "Begin your journey with Ergo",
+    "context": "General content",
+    "maxLength": 42,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.use_description",
+    "source": "Practical guides and user how-tos",
+    "context": "General content",
+    "maxLength": 49.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.ecosystem_description",
+    "source": "Projects, dashboards, and partners",
+    "context": "General content",
+    "maxLength": 51,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.technology_description",
+    "source": "Core technical concepts and innovations of Ergo",
+    "context": "General content",
+    "maxLength": 70.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.learn_description",
+    "source": "Educational resources and learning materials",
+    "context": "General content",
+    "maxLength": 66,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.developer services",
+    "source": "Developer Services",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.developer_services_description",
+    "source": "Faucet surface, address inspector, tx/box lookup, receipt verifier, hasher, and service status.",
+    "context": "General content",
+    "maxLength": 142.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.sage widget",
+    "source": "Sage Widget",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "common.navigation.sage_widget_description",
+    "source": "Embed paid Sage flows: chat, quote, Note verification, receipt links, and tenant config.",
+    "context": "General content",
+    "maxLength": 132,
+    "translation": ""
+  },
+  {
+    "key": "common.errors.network.offline",
+    "source": "You appear to be offline. Please check your connection.",
+    "context": "Error message",
+    "maxLength": 82.5,
+    "translation": ""
+  },
+  {
+    "key": "common.errors.network.timeout",
+    "source": "Request timed out. Please try again.",
+    "context": "Error message",
+    "maxLength": 54,
+    "translation": ""
+  },
+  {
+    "key": "common.errors.network.serverError",
+    "source": "Server error occurred. Please try again later.",
+    "context": "Error message",
+    "maxLength": 69,
+    "translation": ""
+  },
+  {
+    "key": "common.errors.form.submissionFailed",
+    "source": "Failed to submit form. Please try again.",
+    "context": "Error message",
+    "maxLength": 60,
+    "translation": ""
+  },
+  {
+    "key": "common.errors.form.invalidData",
+    "source": "Please check your input and try again.",
+    "context": "Error message",
+    "maxLength": 57,
+    "translation": ""
+  },
+  {
+    "key": "common.errors.general.unexpected",
+    "source": "An unexpected error occurred",
+    "context": "Error message",
+    "maxLength": 42,
+    "translation": ""
+  },
+  {
+    "key": "common.errors.general.tryAgain",
+    "source": "Please try again",
+    "context": "Error message",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "common.language.switchLanguage",
+    "source": "Switch Language",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "common.language.currentLanguage",
+    "source": "English",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "common.icu.items",
+    "source": "{count, plural, =0 {no items} one {# item} other {# items}}",
+    "context": "General content",
+    "maxLength": 88.5,
+    "translation": ""
+  },
+  {
+    "key": "common.icu.minutes",
+    "source": "{count, plural, =0 {no minutes} one {# minute} other {# minutes}}",
+    "context": "General content",
+    "maxLength": 97.5,
+    "translation": ""
+  },
+  {
+    "key": "common.validation.required",
+    "source": "Field {field} is required",
+    "context": "General content",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "common.validation.email.invalid",
+    "source": "Please enter a valid email address",
+    "context": "General content",
+    "maxLength": 51,
+    "translation": ""
+  },
+  {
+    "key": "common.validation.email.required",
+    "source": "Email address is required",
+    "context": "General content",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "common.validation.minLength",
+    "source": "{field} must contain at least {min} characters (current: {current})",
+    "context": "General content",
+    "maxLength": 100.5,
+    "translation": ""
+  },
+  {
+    "key": "common.validation.maxLength",
+    "source": "{field} must contain at most {max} characters (current: {current})",
+    "context": "General content",
+    "maxLength": 99,
+    "translation": ""
+  },
+  {
+    "key": "common.validation.pattern",
+    "source": "Invalid format for field {field}",
+    "context": "General content",
+    "maxLength": 48,
+    "translation": ""
+  },
+  {
+    "key": "common.validation.custom",
+    "source": "Field {field} is invalid",
+    "context": "General content",
+    "maxLength": 36,
+    "translation": ""
+  },
+  {
+    "key": "common.success.newsletter.subscribed",
+    "source": "Successfully subscribed! Check your email for confirmation.",
+    "context": "General content",
+    "maxLength": 88.5,
+    "translation": ""
+  },
+  {
+    "key": "common.success.newsletter.alreadySubscribed",
+    "source": "You are already subscribed to our newsletter.",
+    "context": "General content",
+    "maxLength": 67.5,
+    "translation": ""
+  },
+  {
+    "key": "common.success.newsletter.confirmationSent",
+    "source": "Confirmation email sent to {email}",
+    "context": "General content",
+    "maxLength": 51,
+    "translation": ""
+  },
+  {
+    "key": "common.success.contact.sent",
+    "source": "Message sent successfully!",
+    "context": "General content",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "common.success.contact.received",
+    "source": "We received your message and will respond soon.",
+    "context": "General content",
+    "maxLength": 70.5,
+    "translation": ""
+  },
+  {
+    "key": "common.success.general.saved",
+    "source": "Changes saved successfully",
+    "context": "General content",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "common.success.general.updated",
+    "source": "Successfully updated",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "common.success.general.deleted",
+    "source": "Successfully deleted",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "common.search.placeholder",
+    "source": "Search documentation...",
+    "context": "Input placeholder",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "common.search.noResults",
+    "source": "No results found",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "common.search.results",
+    "source": "results",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "common.search.searchIn",
+    "source": "Search in",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "common.notFound.title",
+    "source": "Page Not Found",
+    "context": "Title",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "common.notFound.description",
+    "source": "The page you're looking for doesn't exist",
+    "context": "Description",
+    "maxLength": 61.5,
+    "translation": ""
+  },
+  {
+    "key": "common.notFound.backHome",
+    "source": "Back to Home",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "common.notFound.subtitle",
+    "source": "The page you're looking for doesn't exist",
+    "context": "General content",
+    "maxLength": 61.5,
+    "translation": ""
+  },
+  {
+    "key": "common.notFound.searchPlaceholder",
+    "source": "Search for content...",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "common.notFound.suggestedPages",
+    "source": "Suggested Pages",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "common.notFound.popularPages",
+    "source": "Popular Pages",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "common.notFound.getStarted",
+    "source": "Get Started",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "common.notFound.blog",
+    "source": "Blog",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "common.notFound.goHome",
+    "source": "Go to Homepage",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "common.notFound.seo.title",
+    "source": "404 - Page Not Found | Ergo Platform",
+    "context": "SEO metadata",
+    "maxLength": 54,
+    "translation": ""
+  },
+  {
+    "key": "common.notFound.seo.description",
+    "source": "The requested page could not be found.",
+    "context": "SEO metadata",
+    "maxLength": 57,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.title",
+    "source": "UI Kit",
+    "context": "Title",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.subtitle",
+    "source": "Design system and components",
+    "context": "General content",
+    "maxLength": 42,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.description",
+    "source": "Complete component library for modern dApps",
+    "context": "Description",
+    "maxLength": 64.5,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.lastUpdated",
+    "source": "Last updated: March 2024",
+    "context": "General content",
+    "maxLength": 36,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.overview",
+    "source": "Overview",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.components",
+    "source": "Components",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.patterns",
+    "source": "Patterns",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.colors",
+    "source": "Colors",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.typography",
+    "source": "Typography",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.philosophy",
+    "source": "Philosophy",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.playground",
+    "source": "Playground",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.documentation",
+    "source": "Documentation",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.getStarted",
+    "source": "Get Started",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.featureGrid",
+    "source": "Feature Grid",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.statsGrid",
+    "source": "Statistics Grid",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.heroPattern",
+    "source": "Hero Pattern",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.codeSnippet",
+    "source": "Code Snippet",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.copyCode",
+    "source": "Copy Code",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.viewCode",
+    "source": "View Code",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.themeToggle",
+    "source": "Theme Toggle",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.glitchEffect",
+    "source": "Glitch Effect",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.signatureEffects",
+    "source": "Signature Effects",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.undergroundManifesto",
+    "source": "Underground Manifesto",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.designPrinciples",
+    "source": "Design Principles",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.accessibility",
+    "source": "Accessibility",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.responsive",
+    "source": "Responsive Design",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.performance",
+    "source": "Performance Optimized",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.buttons.getStarted",
+    "source": "Get Started",
+    "context": "Button label",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.buttons.openInFigma",
+    "source": "Open in Figma",
+    "context": "Button label",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.features.title",
+    "source": "Features",
+    "context": "Title",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.features.subtitle",
+    "source": "Powerful components for modern dApps",
+    "context": "General content",
+    "maxLength": 54,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.features.components.title",
+    "source": "Components",
+    "context": "Title",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.features.components.description",
+    "source": "Reusable UI components built with React and Tailwind CSS",
+    "context": "Description",
+    "maxLength": 84,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.cta.title",
+    "source": "Ready to build?",
+    "context": "Title",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.cta.subtitle",
+    "source": "Start using Ergo UI Kit in your project today",
+    "context": "General content",
+    "maxLength": 67.5,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.cta.buttons.getStarted",
+    "source": "Get Started",
+    "context": "Button label",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "common.ui-kit.cta.buttons.openInFigma",
+    "source": "Open in Figma",
+    "context": "Button label",
+    "maxLength": 19.5,
+    "translation": ""
   }
 ]

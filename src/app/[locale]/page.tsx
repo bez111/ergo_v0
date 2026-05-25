@@ -9,6 +9,7 @@ import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { HeroFinal } from "@/components/home/hero-final"
 import { WhyErgo } from "@/components/home/why-ergo-new"
 import { LiveNetworkStats } from "@/components/home/live-network-stats"
+import { AutonomousClearingSection } from "@/components/home/autonomous-clearing-section"
 import { FAQSchema } from "@/components/seo/faq-schema"
 import { ERGProductSchema } from "@/components/seo/erg-product-schema"
 import { PerformanceOptimizations } from "@/components/seo/performance-optimizations"
@@ -136,40 +137,13 @@ export default async function HomePage({ params }: HomePageProps) {
 
       <ScopedMessagesProvider locale={locale as Locale} files={['home', 'manifesto']}>
       <main className="min-h-screen bg-black text-white relative overflow-hidden">
-        {/* 
-          SOLANA-INSPIRED STRUCTURE + ERGO CYPHERPUNK STYLE
-          
-          Inspired by: solana.com homepage structure
-          Adapted for: Ergo Blockchain values & cypherpunk aesthetic
-          
-          Key differences from Solana:
-          - No VC/funding emphasis → Fair launch, no pre-mine
-          - No speed focus → Security, MEV-resistance focus
-          - No ecosystem size → Quality over quantity
-          
-          Structure (8 sections):
-          1. HERO — "Build unstoppable decentralized applications"
-          2. BUILD FOR SCALE — Grid features with metrics
-          3. MASS ADOPTION — 4 audience paths
-          4. POWERED BY — Ecosystem applications
-          5. BLOG — Latest 3 articles from blog
-          6. COMMUNITY — Join channels
-          7. FAQ — Common questions
-          8. FINAL CTA — Simple, focused
-          
-          Visual:
-          - Rounded-full buttons (Solana style)
-          - Gradient orbs, cards
-          - Large typography (text-8xl)
-          - Orange/black palette (vs Solana's purple/black)
-        */}
-        
         <BackgroundWrapper>
           <HeroFinal />
-          <LiveNetworkStats />
-          <WhyErgo />
-          <BuildForScale />
+          <AutonomousClearingSection locale={locale} />
           <AgentEconomySection />
+          <WhyErgo />
+          <LiveNetworkStats />
+          <BuildForScale />
           <MadeForMassAdoption />
           <PoweredByErgo />
           <BlogSectionHome posts={homeBlogPosts} />

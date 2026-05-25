@@ -638,7 +638,7 @@
         "faq": {
           "whereToBuy": {
             "question": "我可以从哪里购买ERG？",
-            "answer": "ERG可以在 KuCoin, Gate.io, CoinEx, Huobi 等大型交易所以及Spectrum Finance等DEXs上使用。 基于您的区域和首选付款方式进行选择。"
+            "answer": "ERG is available on major exchanges like KuCoin, Gate.io, CoinEx, and Huobi, plus verified non-custodial routes where active liquidity exists. Spectrum Finance is historical/frozen since February 2024, so verify any live venue before trading. Choose based on your region and preferred payment method."
           },
           "bestExchange": {
             "question": "什么是购买ERG的最佳交易所？",
@@ -2973,7 +2973,7 @@
       "title": "常见问题",
       "whereToBy": {
         "question": "我可以从哪里购买ERG？",
-        "answer": "您可以在 KuCoin 和 Gate.io等集中交易所购买ERG ，分散交易，例如Spectrum Finance, 或 P2P 平台等。"
+        "answer": "You can buy ERG on centralized exchanges like KuCoin and Gate.io, verified non-custodial routes where active liquidity exists, or P2P platforms."
       },
       "minAmount": {
         "question": "购买的最低金额是多少？",

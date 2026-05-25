@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { getAlternates, getCanonicalUrl, getOgLocale } from "@/lib/seo"
+import { agentEconomyLiveSnapshot } from "@/lib/agent-economy/static-proof-snapshots"
 import { AgentEconomyLiveClient } from "./AgentEconomyLiveClient"
 
 const BASE_URL = "https://www.ergoblockchain.org"
@@ -49,5 +50,5 @@ export async function generateMetadata({
 }
 
 export default function AgentEconomyLivePage() {
-  return <AgentEconomyLiveClient />
+  return <AgentEconomyLiveClient initialStatus={agentEconomyLiveSnapshot} />
 }

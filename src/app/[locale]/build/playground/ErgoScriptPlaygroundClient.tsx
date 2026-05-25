@@ -609,12 +609,12 @@ export function ErgoScriptPlaygroundClient() {
                   </div>
                   <div className="flex items-center justify-between gap-3">
                     <span className="text-neutral-500">Compiler</span>
-                    <span className="text-right font-mono text-xs text-neutral-300">{result?.compiler ?? "pending"}</span>
+                    <span className="text-right font-mono text-xs text-neutral-300">{result?.compiler ?? "ready after compile"}</span>
                   </div>
                   <div className="flex items-center justify-between gap-3">
                     <span className="text-neutral-500">sigma-rust</span>
                     <span className={cn("text-right font-mono text-xs", hasCleanSigmaPass ? "text-emerald-300" : "text-amber-200")}>
-                      {result?.sigmaError ? "WASM parse warning" : result ? "WASM verified" : "pending"}
+                      {result?.sigmaError ? "WASM parse warning" : result ? "WASM verified" : "ready after compile"}
                     </span>
                   </div>
                 </div>
@@ -657,15 +657,15 @@ export function ErgoScriptPlaygroundClient() {
                 <div className="grid min-h-[159px] content-center gap-2 py-3 text-sm text-neutral-500">
                   <div className="flex items-center justify-between gap-3">
                     <span className="text-xs uppercase tracking-[0.18em]">P2S</span>
-                    <span className="font-mono text-xs">pending compile</span>
+                    <span className="font-mono text-xs">run compile</span>
                   </div>
                   <div className="flex items-center justify-between gap-3">
                     <span className="text-xs uppercase tracking-[0.18em]">ErgoTree</span>
-                    <span className="font-mono text-xs">pending compile</span>
+                    <span className="font-mono text-xs">run compile</span>
                   </div>
                   <div className="flex items-center justify-between gap-3">
                     <span className="text-xs uppercase tracking-[0.18em]">Compiled</span>
-                    <span className="font-mono text-xs">pending compile</span>
+                    <span className="font-mono text-xs">run compile</span>
                   </div>
                 </div>
               )}

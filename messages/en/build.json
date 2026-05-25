@@ -35,7 +35,7 @@
           "Bearer instrument — no identity required",
           "Transferable peer-to-peer",
           "Redeemable against reserve contract",
-          "Denomination in any token"
+          "Denomination in supported assets"
         ]
       },
       "tracker": {
@@ -138,7 +138,7 @@
       "recommended": "recommended",
       "docs": "Docs",
       "fleetSdk": {
-        "desc": "Build transactions in your browser or Node.js. Best starting point for agent payments."
+        "desc": "Build transactions in your browser or Node.js. Best starting point for autonomous work settlement."
       },
       "sigmaRust": {
         "desc": "High-performance signing and serialization for advanced integrations. Use audited custody and policy controls before handling real funds."
@@ -180,7 +180,7 @@
       },
       "babelFees": {
         "title": "Babel Fees",
-        "desc": "Pay fees in any token where a Babel box / fee-conversion path exists — key UX for agents"
+        "desc": "Pay fees through supported token paths where a Babel box / fee-conversion path exists — key UX for agents"
       }
     },
     "cta": {

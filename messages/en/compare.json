@@ -18,7 +18,7 @@
           "items": [
             {
               "question": "Is Ergo better than Ethereum?",
-              "answer": "Ergo and Ethereum serve different purposes. Ergo uses eUTXO model which is MEV-resistant (no front-running), has predictable fees (~$0.01), and is more secure for DeFi. Ethereum has larger ecosystem and more developers. Ergo is better for users who want fair, predictable transactions without MEV extraction."
+              "answer": "Ergo and Ethereum serve different purposes. Ergo uses the eUTXO model, which gives strong MEV-resistance and predictable fees, while Ethereum has a larger ecosystem and more developers. Ergo is attractive for users who want fairer, more predictable DeFi execution with less exposure to common front-running patterns."
             },
             {
               "question": "How is Ergo different from Cardano?",
@@ -30,11 +30,11 @@
             },
             {
               "question": "What makes Ergo unique compared to other blockchains?",
-              "answer": "Ergo uniquely combines: eUTXO model (Bitcoin security + smart contracts), Sigma Protocols (optional privacy), Storage Rent (long-term sustainability), Autolykos (ASIC-resistant mining), fair launch (no pre-mine, no VC), and MEV-resistance. No other chain has this exact combination."
+              "answer": "Ergo combines a PoW/eUTXO model, Sigma Protocols for optional privacy, Storage Rent for long-term sustainability, Autolykos mining, fair-launch tokenomics, and strong resistance to common account-model MEV patterns. That combination makes Ergo unusually well-suited to financial contracts, while every comparison still depends on the exact use case."
             },
             {
               "question": "Is Ergo more private than Monero?",
-              "answer": "Ergo offers optional privacy through Sigma Protocols and ErgoMixer, while Monero has mandatory privacy. Ergo's approach allows compliance when needed while still enabling strong privacy. Monero is better for maximum anonymity, Ergo is better for flexible privacy with smart contract capabilities."
+              "answer": "Ergo offers optional privacy through Sigma Protocols and ErgoMixer, while Monero has mandatory privacy. Ergo can support selective-disclosure workflows, but legal compliance depends on jurisdiction, implementation, and surrounding service providers. Monero is better for maximum anonymity; Ergo is better for programmable privacy with smart contract capabilities."
             }
           ]
         }
@@ -285,7 +285,7 @@
           },
           {
             "title": "Predictable Fees",
-            "description": "No gas price auctions or MEV extraction - fees are stable and predictable"
+            "description": "No EVM-style gas price auctions; fees are stable and predictable, with reduced MEV surface"
           },
           {
             "title": "True Decentralization",
@@ -317,7 +317,7 @@
       "faq": [
         {
           "question": "What advantages does Ergo have over Ethereum?",
-          "answer": "Ergo offers predictable fees without MEV extraction, eliminates reentrancy attacks by design, provides native privacy via Sigma Protocols, maintains PoW decentralization, and has first-class native tokens without wrapper contracts."
+          "answer": "Ergo offers predictable fees, strong MEV-resistance, no protocol-level reentrancy class, native privacy via Sigma Protocols, PoW decentralization, and first-class native tokens without wrapper contracts."
         },
         {
           "question": "Can Ergo run Ethereum dApps?",
@@ -383,11 +383,11 @@
         },
         {
           "question": "Is Ergo related to Cardano?",
-          "answer": "Yes, historically. Alex Chepurnoy (Ergo"
+          "answer": "Yes, historically. Ergo and Cardano both use UTXO-family design ideas and have overlapping research lineage, but they are independent networks with different consensus, governance, and ecosystem choices."
         },
         {
           "question": "Which is better for DeFi, Ergo or Cardano?",
-          "answer": "Both support DeFi on eUTXO. Ergo has pioneering implementations like ErgoDEX and SigmaUSD. Cardano has more projects due to larger ecosystem. Ergo"
+          "answer": "Both support DeFi on eUTXO. Ergo has pioneering references such as ErgoDEX/Spectrum and SigmaUSD, while Cardano has a larger live DeFi ecosystem. The better choice depends on whether you value Ergo's PoW/fair-launch design and smaller experimental surface or Cardano's larger liquidity and app count."
         }
       ]
     },
@@ -891,7 +891,7 @@
           },
           {
             "title": "MEV Protection",
-            "description": "Ergo: no front-running by design. Avalanche: MEV extraction is possible"
+            "description": "Ergo: reduced front-running surface by design. Avalanche: MEV extraction is possible"
           }
         ]
       },

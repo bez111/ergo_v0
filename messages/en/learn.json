@@ -420,7 +420,7 @@
     "hub": {
       "badge": "Ergo Learning Hub",
       "title": "Master Ergo Development",
-      "subtitle": "Learn ErgoScript, eUTXO smart contracts, and Sigma protocols through hands-on tutorials and expert mentorship.",
+      "subtitle": "Learn ErgoScript, eUTXO smart contracts, and Sigma protocols through hands-on tutorials and community support.",
       "description": "From beginner wallet setup to advanced privacy dApps — structured paths with real projects and community support.",
       "seo": {
         "title": "Learn Ergo Development — ErgoScript Tutorials & Smart Contracts",
@@ -512,8 +512,8 @@
           "stack": {
             "core": "eUTXO · ErgoScript · Sigma",
             "tooling": "Playground · AppKit · Explorer",
-            "mentors": "Discord office hours",
-            "deliverable": "Ship a compliant dApp"
+            "mentors": "Developer community",
+            "deliverable": "Review-ready dApp prototype"
           }
         },
         "topics": {
@@ -545,9 +545,9 @@
           "cta": "Explore privacy stack",
           "stack": {
             "core": "Σ-protocols · ZK proofs · Mixers",
-            "tooling": "ErgoMixer · Stealth pools",
+            "tooling": "ErgoMixer · Sigma examples",
             "mentors": "Privacy researchers",
-            "deliverable": "Compliant privacy dApp"
+            "deliverable": "Privacy-aware dApp prototype"
           }
         },
         "research": {
@@ -585,7 +585,7 @@
           },
           {
             "question": "Where can I ask questions live?",
-            "answer": "Join the weekly mentor hours on Discord or pop into the #dev or #academy channels any time. Core contributors hang out there and review repos frequently."
+            "answer": "Join the Discord and pop into the #dev or #academy channels. Community contributors can help point you toward docs, examples, and review paths."
           }
         ]
       },
@@ -994,7 +994,7 @@
         },
         {
           "question": "Can I build DeFi protocols with ErgoScript?",
-          "answer": "Yes! ErgoScript is perfect for DeFi. Examples include SigmaUSD (algorithmic stablecoin), DEXs like ErgoDEX, and various DeFi primitives. The language's security features make it ideal for financial applications."
+          "answer": "Yes. ErgoScript is well-suited to DeFi because it supports deterministic, predicate-based contracts on eUTXO. Examples include SigmaUSD, historical DEX designs like ErgoDEX/Spectrum, and current or future DeFi primitives. Treat each deployed protocol separately and verify its live status before using funds."
         }
       ],
       "viewExamples": "View Examples",

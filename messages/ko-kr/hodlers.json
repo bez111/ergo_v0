@@ -260,7 +260,7 @@
         },
         "3": {
           "question": "ERG로 수익을 낼 수 있나요?",
-          "answer": "네! Spectrum DEX에서 유동성을 제공하거나, ErgoPad 런치패드를 사용하거나, 다양한 DeFi 프로토콜에 참여할 수 있습니다."
+          "answer": "Yes, but verify current protocol status first. Spectrum Finance is a historical Ergo DEX reference with a 2024 sunset notice, ErgoPad is not currently operating, and DeFi positions remain funds-at-risk software."
         },
         "4": {
           "question": "Ergo는 증권인가요, 상품인가요?",
@@ -279,8 +279,8 @@
           "answer": "ERG는 KuCoin, Gate.io, CoinEx 같은 주요 거래소에서 구매할 수 있습니다. 저장을 위해 Nautilus 지갑이나 하드웨어 지갑을 사용하세요. /use/get-erg에서 완전한 구매 가이드를 확인하세요."
         },
         "8": {
-          "question": "Ergo의 프라이버시는 합법적으로 사용할 수 있나요?",
-          "answer": "Ergo의 프라이버시 기능은 선택적이며 비즈니스 기밀 유지 및 개인 금융 프라이버시와 같은 합법적인 사용 사례를 위해 설계되었습니다. 항상 현지 규정을 확인하세요. 기술 자체는 다른 프라이버시 보호 암호화폐와 유사하며 기관을 위한 규정 준수 도구가 제공됩니다."
+          "question": "Ergo의 프라이버시 기능은 규제 워크플로를 지원할 수 있나요?",
+          "answer": "Ergo의 프라이버시는 선택 사항이며 선택적 공개 워크플로를 지원할 수 있습니다. 실제 법적 준수 여부는 관할권, 구현 방식, 프로토콜 주변의 서비스 제공자에 따라 달라집니다."
         }
       }
     }
@@ -348,8 +348,8 @@
       "answer": "ERG는 주요 거래소에서 구매할 수 있습니다."
     },
     "privacy-legal": {
-      "question": "Ergo의 프라이버시는 합법적으로 사용할 수 있나요?",
-      "answer": "Ergo의 프라이버시 기능은 선택적이며 합법적인 사용 사례를 위해 설계되었습니다."
+      "question": "Ergo의 프라이버시 기능은 규제 워크플로를 지원할 수 있나요?",
+      "answer": "Ergo의 프라이버시는 선택 사항이며 선택적 공개 워크플로를 지원할 수 있습니다. 실제 법적 준수 여부는 관할권, 구현 방식, 프로토콜 주변의 서비스 제공자에 따라 달라집니다."
     }
   }
 }

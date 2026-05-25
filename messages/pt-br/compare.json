@@ -18,7 +18,7 @@
           "items": [
             {
               "question": "Ergo é melhor que Ethereum?",
-              "answer": "Ergo e Ethereum servem a propósitos diferentes. Ergo usa o modelo eUTXO que é resistente a MEV (sem front-running), tem taxas previsíveis (~$0,01) e é mais seguro para DeFi. Ethereum tem ecossistema maior e mais desenvolvedores. Ergo é melhor para usuários que querem transações justas e previsíveis sem extração de MEV."
+              "answer": "O modelo eUTXO da Ergo reduz padrões comuns de front-running e sandwich de modelos baseados em contas e torna a execução mais previsível. Design da aplicação, política de mempool e fluxo de ordens off-chain ainda importam."
             },
             {
               "question": "Como a Ergo é diferente de Cardano?",
@@ -387,7 +387,7 @@
         },
         {
           "question": "Qual é melhor para DeFi, Ergo ou Cardano?",
-          "answer": "Ambas suportam DeFi em eUTXO. Ergo tem implementações pioneiras como ErgoDEX e SigmaUSD. Cardano tem mais projetos devido ao ecossistema maior. Ergo"
+          "answer": "Both support DeFi on eUTXO. Ergo has pioneering references such as ErgoDEX/Spectrum and SigmaUSD, while Cardano has a larger live DeFi ecosystem. The better choice depends on whether you value Ergo PoW/fair-launch design and smaller experimental surface or Cardano larger liquidity and app count."
         }
       ]
     },
@@ -891,7 +891,7 @@
           },
           {
             "title": "Proteção MEV",
-            "description": "Ergo: sem front-running por design. Avalanche: extração de MEV é possível"
+            "description": "O modelo eUTXO da Ergo reduz padrões comuns de front-running e sandwich de modelos baseados em contas e torna a execução mais previsível. Design da aplicação, política de mempool e fluxo de ordens off-chain ainda importam."
           }
         ]
       },

@@ -1,0 +1,1010 @@
+[
+  {
+    "key": "build.buildPage.hero.tag",
+    "source": "Technical Architecture",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.hero.titleStart",
+    "source": "Agent Payment Stack: ",
+    "context": "Title",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.hero.titleHighlight",
+    "source": "Reference Architecture",
+    "context": "Title",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.hero.description",
+    "source": "Reference architecture for testnet builders: Accord agreements, verification receipts, settlement receipts, wallet policy and Note/Reserve-style programmable credit patterns. Use this as a design map, not a production mainnet blueprint.",
+    "context": "Description",
+    "maxLength": 354,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.hero.ctaChainCash",
+    "source": "ChainCash repo",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.hero.ctaCodeExamples",
+    "source": "Code examples",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.hero.ctaLiveDemos",
+    "source": "Testnet demos",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.breadcrumbs.agentEconomy",
+    "source": "Agent Economy",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.breadcrumbs.agentPayments",
+    "source": "Agent Payments",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.sectionLabel",
+    "source": "The Four Primitives",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.heading",
+    "source": "Reserve · Note · Tracker · Predicate",
+    "context": "General content",
+    "maxLength": 54,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.reserve.title",
+    "source": "Reserve",
+    "context": "Title",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.reserve.subtitle",
+    "source": "Capital backing",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.reserve.description",
+    "source": "An on-chain contract that holds ERG or tokens as collateral. Anyone can verify the reserve ratio at any time. The reserve is the bank — no middleman.",
+    "context": "Description",
+    "maxLength": 223.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.reserve.properties.0",
+    "source": "Holds ERG / native tokens",
+    "context": "General content",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.reserve.properties.1",
+    "source": "Auditable at any time",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.reserve.properties.2",
+    "source": "Backs note issuance 1:1 or fractionally",
+    "context": "General content",
+    "maxLength": 58.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.reserve.properties.3",
+    "source": "Redemption enforced by contract",
+    "context": "General content",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.note.title",
+    "source": "Note",
+    "context": "Title",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.note.subtitle",
+    "source": "Programmable IOU",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.note.description",
+    "source": "A bearer token representing a claim against a reserve. Notes can be transferred, split, and redeemed. The acceptance predicate defines who can receive or redeem the note.",
+    "context": "Description",
+    "maxLength": 255,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.note.properties.0",
+    "source": "Bearer instrument — no identity required",
+    "context": "General content",
+    "maxLength": 60,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.note.properties.1",
+    "source": "Transferable peer-to-peer",
+    "context": "General content",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.note.properties.2",
+    "source": "Redeemable against reserve contract",
+    "context": "General content",
+    "maxLength": 52.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.note.properties.3",
+    "source": "Denomination in supported assets",
+    "context": "General content",
+    "maxLength": 48,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.tracker.title",
+    "source": "Tracker",
+    "context": "Title",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.tracker.subtitle",
+    "source": "On-chain accounting",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.tracker.description",
+    "source": "Tracks cumulative balances, credit usage, and redemption history across all notes issued from a reserve. Think of it as a public ledger that anyone can verify.",
+    "context": "Description",
+    "maxLength": 238.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.tracker.properties.0",
+    "source": "Tracks total issued vs redeemed",
+    "context": "General content",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.tracker.properties.1",
+    "source": "Enforces credit limits",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.tracker.properties.2",
+    "source": "Publicly auditable",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.tracker.properties.3",
+    "source": "Composable with other contracts",
+    "context": "General content",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.predicate.title",
+    "source": "Acceptance Predicate",
+    "context": "Title",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.predicate.subtitle",
+    "source": "Programmable trust rule",
+    "context": "General content",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.predicate.description",
+    "source": "The condition under which an agent will accept a note as payment. Conditions can include task hash verification, deadline checks, credential proofs, or any on-chain data.",
+    "context": "Description",
+    "maxLength": 255,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.predicate.properties.0",
+    "source": "Arbitrary acceptance conditions",
+    "context": "General content",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.predicate.properties.1",
+    "source": "Task hash verification",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.predicate.properties.2",
+    "source": "Deadline enforcement",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.primitives.predicate.properties.3",
+    "source": "Composable with Sigma proofs",
+    "context": "General content",
+    "maxLength": 42,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.sectionLabel",
+    "source": "Sample Flows",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.heading",
+    "source": "Three composable flows",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.seeLiveDemo",
+    "source": "See testnet demo",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.apiCall.title",
+    "source": "Flow A: Agent buys API call",
+    "context": "Title",
+    "maxLength": 40.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.apiCall.description",
+    "source": "One call. One proof. No persistent account.",
+    "context": "Description",
+    "maxLength": 64.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.apiCall.steps.0.label",
+    "source": "Agent creates note",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.apiCall.steps.0.detail",
+    "source": "0.001 ERG face value, provider address in R4",
+    "context": "General content",
+    "maxLength": 66,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.apiCall.steps.1.label",
+    "source": "Provider checks predicate",
+    "context": "General content",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.apiCall.steps.1.detail",
+    "source": "Verifies note value, reserve backing, deadline",
+    "context": "General content",
+    "maxLength": 69,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.apiCall.steps.2.label",
+    "source": "Provider delivers response",
+    "context": "General content",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.apiCall.steps.2.detail",
+    "source": "Returns API result, marks note as spent",
+    "context": "General content",
+    "maxLength": 58.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.apiCall.steps.3.label",
+    "source": "Settlement",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.apiCall.steps.3.detail",
+    "source": "Note burned, ERG released from reserve to provider",
+    "context": "General content",
+    "maxLength": 75,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.credit.title",
+    "source": "Flow B: Agent issues credit to a sub-agent",
+    "context": "Title",
+    "maxLength": 63,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.credit.description",
+    "source": "Reserve deployed. Bounded Notes issued. Tracker monitors.",
+    "context": "Description",
+    "maxLength": 85.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.credit.steps.0.label",
+    "source": "Deploy reserve",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.credit.steps.0.detail",
+    "source": "Lock ERG in reserve contract with credit limit",
+    "context": "General content",
+    "maxLength": 69,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.credit.steps.1.label",
+    "source": "Issue bounded notes",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.credit.steps.1.detail",
+    "source": "Create redeemable Notes against reserve up to credit limit",
+    "context": "General content",
+    "maxLength": 87,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.credit.steps.2.label",
+    "source": "Sub-agent spends notes",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.credit.steps.2.detail",
+    "source": "Notes transferred to providers only inside the policy envelope",
+    "context": "General content",
+    "maxLength": 93,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.credit.steps.3.label",
+    "source": "Verified settlement",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.credit.steps.3.detail",
+    "source": "Reserve settles outstanding Notes only under explicit redemption rules",
+    "context": "General content",
+    "maxLength": 105,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.community.title",
+    "source": "Flow C: Community reserve + tracker",
+    "context": "Title",
+    "maxLength": 52.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.community.description",
+    "source": "A local marketplace, a compute co-op, an agent network.",
+    "context": "Description",
+    "maxLength": 82.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.community.steps.0.label",
+    "source": "Community deploys reserve",
+    "context": "General content",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.community.steps.0.detail",
+    "source": "ERG pooled by community members",
+    "context": "General content",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.community.steps.1.label",
+    "source": "Issue community notes",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.community.steps.1.detail",
+    "source": "Members receive notes proportional to contribution",
+    "context": "General content",
+    "maxLength": 75,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.community.steps.2.label",
+    "source": "Local commerce",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.community.steps.2.detail",
+    "source": "Notes accepted within community, predicates define rules",
+    "context": "General content",
+    "maxLength": 84,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.community.steps.3.label",
+    "source": "Redemption",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.flows.community.steps.3.detail",
+    "source": "Members redeem notes for ERG from reserve anytime",
+    "context": "General content",
+    "maxLength": 73.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.sdks.sectionLabel",
+    "source": "SDKs & Tools",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.sdks.heading",
+    "source": "Start building today",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.sdks.recommended",
+    "source": "recommended",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.sdks.docs",
+    "source": "Docs",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.sdks.fleetSdk.desc",
+    "source": "Build transactions in your browser or Node.js. Best starting point for autonomous work settlement.",
+    "context": "General content",
+    "maxLength": 147,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.sdks.sigmaRust.desc",
+    "source": "High-performance signing and serialization for advanced integrations. Use audited custody and policy controls before handling real funds.",
+    "context": "General content",
+    "maxLength": 205.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.sdks.appKit.desc",
+    "source": "Full-featured SDK for backend services, bots, and server-side agents.",
+    "context": "General content",
+    "maxLength": 103.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.sdks.ergoNodeApi.desc",
+    "source": "Direct access to the node. Submit transactions, query UTXOs, watch addresses.",
+    "context": "General content",
+    "maxLength": 115.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.status.sectionLabel",
+    "source": "Status",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.status.heading",
+    "source": "Stack status",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.status.description",
+    "source": "Ergo mainnet provides the base settlement layer. Accord, ChainCash/Basis and Note/Reserve/Tracker reference flows are testnet-first unless a specific implementation is audited and explicitly marked production-ready.",
+    "context": "Description",
+    "maxLength": 322.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.status.legendLive",
+    "source": "Available base tooling",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.status.legendSoon",
+    "source": "Coming soon",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.status.legendOpen",
+    "source": "Open research problem",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.status.live",
+    "source": "live",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.status.soon",
+    "source": "soon",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.status.open",
+    "source": "open",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.status.ergoTestnetFaucet",
+    "source": "Ergo testnet faucet",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.status.fleetSdk",
+    "source": "Fleet SDK (TypeScript)",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.status.appKit",
+    "source": "AppKit (JVM)",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.status.sigmaRust",
+    "source": "sigma-rust",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.status.chainCash",
+    "source": "ChainCash prototype (notes + reserves)",
+    "context": "General content",
+    "maxLength": 57,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.status.ergoNodeApi",
+    "source": "Ergo Node REST API",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.status.starterRepo",
+    "source": "agent-economy-starter repo",
+    "context": "General content",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.status.identityLayer",
+    "source": "Agent identity layer",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.links.ergoDocs.title",
+    "source": "Ergo Docs",
+    "context": "Title",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.links.ergoDocs.desc",
+    "source": "Official developer documentation",
+    "context": "General content",
+    "maxLength": 48,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.links.devPatterns.title",
+    "source": "Dev Patterns",
+    "context": "Title",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.links.devPatterns.desc",
+    "source": "Copy-paste ErgoScript blueprints",
+    "context": "General content",
+    "maxLength": 48,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.links.babelFees.title",
+    "source": "Babel Fees",
+    "context": "Title",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.links.babelFees.desc",
+    "source": "Pay fees through supported token paths where a Babel box / fee-conversion path exists — key UX for agents",
+    "context": "General content",
+    "maxLength": 157.5,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.cta.title",
+    "source": "Building agents? Talk to us.",
+    "context": "Title",
+    "maxLength": 42,
+    "translation": ""
+  },
+  {
+    "key": "build.buildPage.cta.description",
+    "source": "Book a design session, get code review, or join the builders list. We'll get back with a concrete next step.",
+    "context": "Description",
+    "maxLength": 162,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.breadcrumbBuild",
+    "source": "Build",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.breadcrumbQuickstart",
+    "source": "Quickstart",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.badge",
+    "source": "Under 10 minutes",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.heroTitle1",
+    "source": "First agent payment",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.heroTitle2",
+    "source": "on Ergo testnet.",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.heroDescription",
+    "source": "No theory. No setup ceremony. One npm package, 30 lines, one command — and you see a real transaction on Ergo testnet explorer.",
+    "context": "General content",
+    "maxLength": 190.5,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.prerequisitesTitle",
+    "source": "Prerequisites",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.prereq1",
+    "source": "Node.js 18+ installed",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.prereq2",
+    "source": "A testnet address (create one in Nautilus wallet → Settings → Testnet mode)",
+    "context": "General content",
+    "maxLength": 112.5,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.prereq3",
+    "source": "Testnet ERG from faucet at testnet.ergofaucet.org",
+    "context": "General content",
+    "maxLength": 73.5,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.prereq4",
+    "source": "5 minutes of uninterrupted focus",
+    "context": "General content",
+    "maxLength": 48,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.copied",
+    "source": "Copied",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.copy",
+    "source": "Copy",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.step1Title",
+    "source": "Install Fleet SDK",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.step1Time",
+    "source": "30 seconds",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.step1Note",
+    "source": "Fleet SDK is the official TypeScript/JS SDK for Ergo. Works in Node.js and browsers.",
+    "context": "General content",
+    "maxLength": 126,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.step2Title",
+    "source": "Create agent-pay.js",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.step2Time",
+    "source": "2 minutes",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.step2Note",
+    "source": "This script fetches your testnet UTxOs, builds a transaction, and outputs the unsigned TX object.",
+    "context": "General content",
+    "maxLength": 145.5,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.step3Title",
+    "source": "Run the script",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.step3Time",
+    "source": "10 seconds",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.step3Note",
+    "source": "You'll see the unsigned transaction JSON. Sign it with Nautilus (browser) or a server-side key, then POST to /api/v1/transactions.",
+    "context": "General content",
+    "maxLength": 195,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.step4Title",
+    "source": "Add a Note (agent payment)",
+    "context": "General content",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.step4Time",
+    "source": "5 minutes",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.step4Note",
+    "source": "This extends the basic TX to create a Note — a bearer instrument with a task hash register. The receiver redeems it against a Reserve.",
+    "context": "General content",
+    "maxLength": 201,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.explorerTitle",
+    "source": "See your TX on explorer",
+    "context": "General content",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.explorerDescription",
+    "source": "After submitting, your transaction appears on Ergo testnet explorer. Paste your TX ID at:",
+    "context": "General content",
+    "maxLength": 133.5,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.whatsNextTitle",
+    "source": "What's next",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.nextCard1Title",
+    "source": "Agent Payments Architecture",
+    "context": "General content",
+    "maxLength": 40.5,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.nextCard1Desc",
+    "source": "Reserve, Note, Tracker, Acceptance Predicate — the full technical reference",
+    "context": "General content",
+    "maxLength": 112.5,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.nextCard2Title",
+    "source": "7-Step Playbook",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.nextCard2Desc",
+    "source": "From environment setup to testnet demos and audit-gated release planning",
+    "context": "General content",
+    "maxLength": 108,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.nextCard3Title",
+    "source": "Testnet Demos",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.nextCard3Desc",
+    "source": "See working agent payment flows on Ergo testnet, open source",
+    "context": "General content",
+    "maxLength": 90,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.nextCard4Title",
+    "source": "GitHub: Accord Protocol",
+    "context": "General content",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.nextCard4Desc",
+    "source": "Open source examples: basic payment, Note IOU, acceptance predicate",
+    "context": "General content",
+    "maxLength": 100.5,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.readMore",
+    "source": "Read more",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.ctaTitle",
+    "source": "Ready to go deeper?",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "build.quickstartPage.ctaDescription",
+    "source": "The quickstart gets you moving. The full architecture reference and 7-step playbook are waiting.",
+    "context": "General content",
+    "maxLength": 144,
+    "translation": ""
+  }
+]

@@ -1,20 +1,352 @@
 [
   {
-    "key": "seo.defaultTitle",
-    "value": "Ergo Platform - Sustainable Blockchain for Contractual Money",
-    "context": "SEO metadata - keep concise",
-    "maxLength": 90
+    "key": "seo.seo.defaultTitle",
+    "source": "Ergo — PoW Clearing Layer for Autonomous Work",
+    "context": "SEO metadata",
+    "maxLength": 67.5,
+    "translation": ""
   },
   {
-    "key": "seo.defaultDescription",
-    "value": "Ergo creates advanced cryptographic functions and radically new DeFi functionality on a solid foundation built over a decade of blockchain theory and development.",
-    "context": "SEO metadata - keep concise",
-    "maxLength": 243
+    "key": "seo.seo.defaultDescription",
+    "source": "Ergo is a proof-of-work clearing and proof surface for autonomous work: programmable money, receipts, wallet policy, DeFi, and audit-gated agent settlement.",
+    "context": "SEO metadata",
+    "maxLength": 234,
+    "translation": ""
   },
   {
-    "key": "seo.keywords",
-    "value": "blockchain, cryptocurrency, DeFi, smart contracts, Ergo, UTXO, proof of work",
-    "context": "SEO metadata - keep concise",
-    "maxLength": 114
+    "key": "seo.seo.keywords",
+    "source": "autonomous work clearing, autonomous work settlement, public proof surface, verifiable receipts, agent settlement, AI agent payments, agentic blockchain, blockchain for AI agents, autonomous AI payments blockchain, machine-to-machine payments, ergo blockchain, eUTXO, proof of work, ErgoScript, programmable money, DeFi",
+    "context": "SEO metadata",
+    "maxLength": 478.5,
+    "translation": ""
+  },
+  {
+    "key": "seo.seo.home.meta.title",
+    "source": "Ergo — Where Autonomous Work Gets Paid, Proven, and Settled",
+    "context": "SEO metadata",
+    "maxLength": 88.5,
+    "translation": ""
+  },
+  {
+    "key": "seo.seo.home.meta.description",
+    "source": "A PoW/eUTXO clearing layer and public proof surface for autonomous work: quotes, programmable acceptance, receipt bundles, wallet policy, and audit-gated settlement.",
+    "context": "SEO metadata",
+    "maxLength": 247.5,
+    "translation": ""
+  },
+  {
+    "key": "seo.seo.home.meta.keywords",
+    "source": "autonomous work clearing, autonomous work settlement, public proof surface, verifiable receipt bundles, programmable credit, task-conditioned settlement, wallet policy, AI agent payments, agentic blockchain, blockchain for AI agents, autonomous AI payments blockchain, machine-to-machine commerce, ErgoScript, eUTXO model, proof of work, censorship resistant money, DeFi, privacy, sound money, ergo agent economy",
+    "context": "SEO metadata",
+    "maxLength": 618,
+    "translation": ""
+  },
+  {
+    "key": "seo.seo.home.meta.og.title",
+    "source": "Ergo — Public Proof Surface for Autonomous Work",
+    "context": "SEO metadata",
+    "maxLength": 70.5,
+    "translation": ""
+  },
+  {
+    "key": "seo.seo.home.meta.og.description",
+    "source": "PoW + eUTXO + ErgoScript for programmable credit, verifiable receipts, wallet policy, and audit-gated agent settlement.",
+    "context": "SEO metadata",
+    "maxLength": 178.5,
+    "translation": ""
+  },
+  {
+    "key": "seo.seo.home.meta.og.siteName",
+    "source": "Ergo Blockchain",
+    "context": "SEO metadata",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "seo.seo.home.meta.og.imageAlt",
+    "source": "Ergo — Public Proof Surface for Autonomous Work",
+    "context": "SEO metadata",
+    "maxLength": 70.5,
+    "translation": ""
+  },
+  {
+    "key": "seo.seo.home.meta.twitter.title",
+    "source": "Ergo — Public Proof Surface for Autonomous Work",
+    "context": "SEO metadata",
+    "maxLength": 70.5,
+    "translation": ""
+  },
+  {
+    "key": "seo.seo.home.meta.twitter.description",
+    "source": "PoW + eUTXO for autonomous work settlement: programmable credit, receipt bundles, wallet policy, and audit-gated mainnet claims.",
+    "context": "SEO metadata",
+    "maxLength": 192,
+    "translation": ""
+  },
+  {
+    "key": "seo.seo.home.meta.heroImageAlt",
+    "source": "Ergo Platform — Public Proof Surface for Autonomous Work",
+    "context": "SEO metadata",
+    "maxLength": 84,
+    "translation": ""
+  },
+  {
+    "key": "seo.seo.home.faq.items.0.question",
+    "source": "What is Ergo?",
+    "context": "SEO metadata",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "seo.seo.home.faq.items.0.answer",
+    "source": "Ergo is a secure, open-source Proof-of-Work blockchain for programmable, censorship-resistant money. It uses the eUTXO model combining Bitcoin's security with smart contract capabilities, optional privacy, and predictable low fees (~$0.01).",
+    "context": "SEO metadata",
+    "maxLength": 360,
+    "translation": ""
+  },
+  {
+    "key": "seo.seo.home.faq.items.1.question",
+    "source": "How to buy ERG?",
+    "context": "SEO metadata",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "seo.seo.home.faq.items.1.answer",
+    "source": "You can buy ERG on exchanges like KuCoin, Gate.io, or Bitpanda, and through verified non-custodial routes where active liquidity exists. Spectrum Finance is a historical Ergo DEX reference with a 2024 sunset notice, so verify current venues before trading. First get a wallet (Nautilus, SAFEW, or Ergo Mobile Wallet), then purchase ERG and withdraw to your wallet address.",
+    "context": "SEO metadata",
+    "maxLength": 558,
+    "translation": ""
+  },
+  {
+    "key": "seo.seo.home.faq.items.2.question",
+    "source": "Is Ergo a good investment?",
+    "context": "SEO metadata",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "seo.seo.home.faq.items.2.answer",
+    "source": "Ergo has a fixed supply of 97.7M ERG with no pre-mine and fair launch. It's a Proof-of-Work blockchain with unique technology (eUTXO, Sigma Protocols). As with any cryptocurrency, do your own research and only invest what you can afford to lose.",
+    "context": "SEO metadata",
+    "maxLength": 367.5,
+    "translation": ""
+  },
+  {
+    "key": "seo.seo.home.faq.items.3.question",
+    "source": "Why is Ergo a strong fit for autonomous work settlement?",
+    "context": "SEO metadata",
+    "maxLength": 84,
+    "translation": ""
+  },
+  {
+    "key": "seo.seo.home.faq.items.3.answer",
+    "source": "Ergo's eUTXO model gives deterministic transaction costs, ErgoScript can encode acceptance rules, Babel Fees reduce native-token bootstrapping, and receipt-bearing workflows can connect payment, task verification and settlement. The current agent-economy stack is presented as testnet-first proof until audit gates open.",
+    "context": "SEO metadata",
+    "maxLength": 480,
+    "translation": ""
+  },
+  {
+    "key": "seo.seo.home.faq.items.4.question",
+    "source": "How to get started with Ergo?",
+    "context": "SEO metadata",
+    "maxLength": 43.5,
+    "translation": ""
+  },
+  {
+    "key": "seo.seo.home.faq.items.4.answer",
+    "source": "1) Download a wallet (Nautilus for browser, Ergo Mobile Wallet for phone). 2) Back up your seed phrase securely. 3) Get ERG from an exchange or verified non-custodial route. 4) Explore SigmaUSD, ErgoMixer, NFTs, mining, and current DeFi venues after checking each project's status.",
+    "context": "SEO metadata",
+    "maxLength": 421.5,
+    "translation": ""
+  },
+  {
+    "key": "seo.seo.home.faq.items.5.question",
+    "source": "What wallets support Ergo?",
+    "context": "SEO metadata",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "seo.seo.home.faq.items.5.answer",
+    "source": "Popular Ergo wallets include Nautilus (browser extension), SAFEW (full-featured web wallet), Ergo Mobile Wallet (iOS/Android), Terminus (mobile), and Satergo (desktop). Hardware wallet support is available through Ledger integration.",
+    "context": "SEO metadata",
+    "maxLength": 349.5,
+    "translation": ""
+  },
+  {
+    "key": "seo.footer.platform",
+    "source": "PLATFORM",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "seo.footer.learnTitle",
+    "source": "LEARN",
+    "context": "General content",
+    "maxLength": 7.5,
+    "translation": ""
+  },
+  {
+    "key": "seo.footer.community",
+    "source": "COMMUNITY",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "seo.footer.technology",
+    "source": "Technology",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "seo.footer.useCases",
+    "source": "Use Cases",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "seo.footer.ecosystem",
+    "source": "Ecosystem",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "seo.footer.compare",
+    "source": "Compare Blockchains",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "seo.footer.infographics",
+    "source": "Infographics",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "seo.footer.wallets",
+    "source": "Wallets",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "seo.footer.startHere",
+    "source": "Start Here",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "seo.footer.documentation",
+    "source": "Documentation",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "seo.footer.glossary",
+    "source": "Glossary",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "seo.footer.faq",
+    "source": "FAQ",
+    "context": "General content",
+    "maxLength": 4.5,
+    "translation": ""
+  },
+  {
+    "key": "seo.footer.playbooks",
+    "source": "Playbooks",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "seo.footer.patterns",
+    "source": "Dev Patterns",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "seo.footer.github",
+    "source": "GitHub",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "seo.footer.grants",
+    "source": "Grants",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "seo.footer.blog",
+    "source": "Blog",
+    "context": "General content",
+    "maxLength": 6,
+    "translation": ""
+  },
+  {
+    "key": "seo.footer.discord",
+    "source": "Discord",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "seo.footer.telegram",
+    "source": "Telegram",
+    "context": "General content",
+    "maxLength": 12,
+    "translation": ""
+  },
+  {
+    "key": "seo.footer.twitter",
+    "source": "Twitter",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "seo.footer.allRightsReserved",
+    "source": "ALL RIGHTS RESERVED.",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "seo.footer.copyright",
+    "source": "© {{year}} ERGO PLATFORM. ALL RIGHTS RESERVED.",
+    "context": "General content",
+    "maxLength": 69,
+    "translation": ""
+  },
+  {
+    "key": "seo.footer.openSource",
+    "source": "ERGO IS AN OPEN-SOURCE PROJECT.",
+    "context": "General content",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "seo.footer.contributeOnGithub",
+    "source": "CONTRIBUTE ON GITHUB",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
   }
 ]

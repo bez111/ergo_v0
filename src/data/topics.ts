@@ -74,22 +74,22 @@ export const topics: TopicHub[] = [
   {
     slug: "ergo-defi",
     title: "DeFi on Ergo",
-    subtitle: "Decentralized Finance Without MEV, Without Permission",
+    subtitle: "Decentralized Finance With Strong MEV-Resistance and Open Access",
     seoTitle: "Ergo DeFi — MEV-Resistant DEX & Stablecoins | Ergo",
-    seoDescription: "DeFi without MEV. Explore Ergo's DEXs, stablecoins, oracles & lending. No front-running, predictable fees, fair for all.",
+    seoDescription: "Explore Ergo's eUTXO DeFi: DEX patterns, stablecoins, oracles and lending with strong MEV-resistance, predictable fees, and open access.",
     keywords: ["Ergo DeFi", "eUTXO DeFi", "MEV resistant DEX", "SigmaUSD", "Spectrum Finance", "Oracle Pools", "decentralized finance"],
     
-    heroStatement: "DeFi that actually works for users, not extractors.",
+    heroStatement: "DeFi designed for users, not extractors.",
     
-    introduction: "Ergo's approach to DeFi is fundamentally different from account-based chains like Ethereum. Built on the eUTXO model, Ergo eliminates entire categories of exploits that plague traditional DeFi: eliminates front-running and sandwich attacks by design (no public mempool ordering games). Every transaction's cost is known before you send it. Every trade executes exactly as expected. This isn't a minor improvement - it's a structural advantage that makes DeFi actually usable for regular people, not just sophisticated traders with MEV bots.",
+    introduction: "Ergo's approach to DeFi is fundamentally different from account-based chains like Ethereum. Built on the eUTXO model, Ergo reduces several common DeFi failure modes: boxes make state explicit, transaction effects are easier to reason about before signing, and common account-model MEV patterns such as sandwiching are harder to execute. Transaction fees are typically predictable before submission, but dApp design, oracle design and mempool behavior still matter. This is not a magic shield; it is a structural advantage for building fairer DeFi.",
     
-    whatMakesUnique: "While Ethereum DeFi has become a 'dark forest' where users are hunted by MEV extractors, Ergo's eUTXO model creates a fundamentally fairer environment. Transactions reference specific boxes (UTXOs), making reordering attacks impractical. Oracle Pools provide decentralized price feeds without single points of failure. And because Ergo is PoW with fair launch, there's no VC cartel controlling governance or extracting value from the protocol.",
+    whatMakesUnique: "While account-model DeFi often exposes users to global-state ordering games, Ergo's eUTXO model creates a more analyzable environment. Transactions reference specific boxes (UTXOs), which reduces the surface for common reordering attacks. Oracle Pools provide decentralized price feeds without a single publisher. And because Ergo is PoW with fair launch, there is no VC allocation or validator-governance layer controlling the base protocol.",
     
     keyDifferentiators: [
-      "MEV-resistant by design extraction: transactions can't be front-run or sandwiched by design",
-      "Predictable fees: know exactly what you'll pay before sending (~$0.01)",
+      "MEV-aware by design: eUTXO reduces common front-running and sandwich patterns, but dApp and mempool design still matter",
+      "Predictable fees: users can see the fee before signing; typical simple transactions remain low-cost",
       "Deterministic execution: transactions either fully succeed or fully fail",
-      "Decentralized oracles: Oracle Pools provide trustless price feeds",
+      "Decentralized oracles: Oracle Pools reduce reliance on a single data publisher",
       "Fair launch: no VC allocation, no insider advantages"
     ],
     
@@ -114,7 +114,7 @@ export const topics: TopicHub[] = [
     ],
     
     philosophy: [
-      { type: "infographic", title: "MEV Resistance vs Dark Forest", url: "/infographics/mev-resistance-vs-dark-forest", description: "Why MEV-free trading matters", badge: "Philosophy", priority: 1 },
+      { type: "infographic", title: "MEV Resistance vs Dark Forest", url: "/infographics/mev-resistance-vs-dark-forest", description: "Why reducing MEV-like extraction matters", badge: "Philosophy", priority: 1 },
       { type: "blog", title: "Ergo Manifesto", url: "/blog/ergo-manifesto", description: "The cypherpunk vision behind Ergo", badge: "Manifesto", priority: 1 },
       { type: "infographic", title: "Money Without Masters", url: "/infographics/money-without-masters-ergo-vs-banks-and-vc-crypto", description: "DeFi as financial liberation", badge: "Vision", priority: 2 }
     ],
@@ -129,10 +129,10 @@ export const topics: TopicHub[] = [
     
     keyTerms: [
       { term: "eUTXO", slug: "eutxo", shortDefinition: "Extended UTXO model that enables smart contracts while maintaining Bitcoin-like security" },
-      { term: "MEV Resistance", slug: "mev-resistance", shortDefinition: "Structural protection against front-running and sandwich attacks" },
+      { term: "MEV Resistance", slug: "mev-resistance", shortDefinition: "Structural reduction of common front-running and sandwich patterns" },
       { term: "Oracle Pools", slug: "oracle-pools", shortDefinition: "Decentralized system for bringing off-chain data to smart contracts" },
       { term: "SigmaUSD", slug: "sigmausd", shortDefinition: "Algorithmic stablecoin backed by ERG reserves" },
-      { term: "Babel Fees", slug: "babel-fees", shortDefinition: "Pay transaction fees in any token, not just ERG" },
+      { term: "Babel Fees", slug: "babel-fees", shortDefinition: "Pay transaction fees through supported token-to-ERG fee-conversion paths" },
       { term: "Boxes", slug: "boxes", shortDefinition: "eUTXO containers holding value, tokens, and smart contract data" }
     ],
     
@@ -162,7 +162,7 @@ export const topics: TopicHub[] = [
     
     heroStatement: "Privacy is not about hiding. It's about control.",
     
-    introduction: "Ergo takes a unique approach to blockchain privacy: optional, programmable, and provable. Unlike always-on privacy coins that hide everything, Ergo's Sigma Protocols let you prove things about your data without revealing the data itself. You can prove you're over 18 without showing your birthdate. Prove you have sufficient funds without revealing your balance. Prove membership in a group without identifying yourself. This is privacy that works in the real world - where sometimes you need to prove compliance while protecting your details.",
+    introduction: "Ergo takes a unique approach to blockchain privacy: optional, programmable, and provable. Unlike privacy-by-default chains, Ergo's Sigma Protocols let you prove statements about data without revealing the data itself. You can prove age ranges, balance predicates, or group membership while minimizing disclosure. That supports selective-disclosure workflows, though actual legal compliance depends on jurisdiction, implementation, and the surrounding service provider.",
     
     whatMakesUnique: "Most privacy solutions force a binary choice: full transparency or full opacity. Ergo's Sigma Protocols enable selective disclosure - reveal exactly what's needed, nothing more. This isn't just academic cryptography; it's built into ErgoScript as a first-class primitive. Every smart contract can incorporate zero-knowledge proofs. ErgoMixer provides non-interactive, non-custodial mixing. And because privacy is optional, Ergo remains accessible to regulated entities while empowering individuals.",
     
@@ -246,7 +246,7 @@ export const topics: TopicHub[] = [
     keyDifferentiators: [
       "ASIC-resistant: Autolykos keeps mining accessible to GPU miners",
       "Memory-hard: requires RAM, not just raw compute power",
-      "Storage rent: sustainable miner income after block rewards end",
+      "Storage rent: an additional protocol-level miner revenue path after emissions, with long-term outcomes still depending on adoption and fee markets",
       "Fair launch: no pre-mine advantage for anyone",
       "Pool mining: Autolykos v2 enables pool participation"
     ],
@@ -315,12 +315,12 @@ export const topics: TopicHub[] = [
     
     heroStatement: "Technology that solves real problems, not hype cycles.",
     
-    introduction: "Ergo's technology stack represents years of academic research translated into practical blockchain innovation. Every major component - eUTXO, ErgoScript, NiPoPoWs, Sigma Protocols - comes from peer-reviewed cryptographic research. This isn't technology for technology's sake; each innovation solves specific problems. eUTXO eliminates MEV and enables parallel processing. NiPoPoWs compress blockchain proofs from gigabytes to kilobytes. Sigma Protocols bring zero-knowledge proofs to every smart contract. The result is a blockchain that's simultaneously more secure, more scalable, and more private than its competitors.",
+    introduction: "Ergo's technology stack represents years of academic research translated into practical blockchain innovation. Every major component - eUTXO, ErgoScript, NiPoPoWs, Sigma Protocols - comes from peer-reviewed cryptographic research. This isn't technology for technology's sake; each innovation solves specific problems. eUTXO reduces common MEV patterns and enables parallel processing. NiPoPoWs compress blockchain proofs from gigabytes to kilobytes. Sigma Protocols bring zero-knowledge proofs to smart contracts. The result is a blockchain designed for security, scalability and optional privacy.",
     
     whatMakesUnique: "Most blockchains copy Ethereum's account model or Bitcoin's simple scripts. Ergo charts a different path: extending Bitcoin's UTXO model with rich smart contract capabilities while maintaining its security properties. ErgoScript is a functional language, not imperative like Solidity - this makes contracts easier to verify and harder to exploit. NiPoPoWs enable truly trustless light clients and efficient cross-chain bridges. These aren't incremental improvements; they're architectural advantages.",
     
     keyDifferentiators: [
-      "eUTXO: smart contracts with Bitcoin-level security guarantees",
+      "eUTXO: smart contracts with a Bitcoin-style UTXO security model",
       "ErgoScript: functional, verifiable smart contract language",
       "NiPoPoWs: logarithmic proof compression for light clients",
       "Sigma Protocols: native zero-knowledge proofs",
@@ -395,7 +395,7 @@ export const topics: TopicHub[] = [
     
     heroStatement: "Money without masters. Finance without permission.",
     
-    introduction: "Ergo isn't just a blockchain - it's a statement about what cryptocurrency should be. In a world where most 'crypto' projects are VC-backed, pre-mined, and designed for extraction, Ergo represents a return to first principles. No pre-mine. No ICO. No VC allocation. 100% of ERG comes from mining, just like Bitcoin. This isn't idealism; it's the foundation for genuine decentralization. When no insider group controls a majority of tokens, governance is actually decentralized. When there's no VC exit to fund, development serves users, not investors.",
+    introduction: "Ergo isn't just a blockchain - it's a statement about what cryptocurrency should be. In a world where many projects are VC-backed, pre-mined, and designed around insider allocation, Ergo represents a return to first principles. No pre-mine. No ICO. No VC allocation. 100% of ERG comes from mining, just like Bitcoin. This removes a major insider overhang and gives decentralization a stronger starting point. Long-term governance still depends on open participation, but there is no launch-era token majority reserved for insiders.",
     
     whatMakesUnique: "Ergo was built by people who remember why Bitcoin was created: to provide an alternative to a financial system that serves the powerful at the expense of everyone else. The Ergo Manifesto articulates a vision of financial tools for ordinary people, not just sophisticated traders or wealthy investors. Privacy is a right, not a feature to be regulated away. Self-custody is the default, not an option. And the technology is designed to remain accessible - ASIC-resistant mining, light clients, low fees - so that participation isn't limited to those with resources.",
     
@@ -594,7 +594,7 @@ export const topics: TopicHub[] = [
       { term: "Reserve", slug: "reserve-box", shortDefinition: "Collateral UTxO backing a Note issuance system" },
       { term: "Tracker", slug: "tracker-anti-double-spend", shortDefinition: "On-chain registry preventing double-redemption of Notes" },
       { term: "Acceptance Predicate", slug: "acceptance-predicate", shortDefinition: "ErgoScript condition encoding task completion in the payment itself" },
-      { term: "Babel Fees", slug: "babel-fees-agent", shortDefinition: "Pay transaction fees in any token — agents don't need pre-funded ERG wallets" },
+      { term: "Babel Fees", slug: "babel-fees-agent", shortDefinition: "Pay transaction fees through supported token-to-ERG paths, reducing ERG bootstrapping friction for agents" },
       { term: "ChainCash", slug: "chaincash", shortDefinition: "Open-source prototype reference implementation of the Reserve+Note+Tracker stack — not audited, not production-ready" },
       { term: "Programmable IOU", slug: "programmable-iou", shortDefinition: "A Note with custom acceptance conditions enforced on-chain" },
       { term: "Agent Economy", slug: "agent-economy", shortDefinition: "The emerging system of autonomous AI agents transacting without human intermediaries" }

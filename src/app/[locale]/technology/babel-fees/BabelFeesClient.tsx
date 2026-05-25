@@ -61,10 +61,10 @@ export default function BabelFeesClient() {
               <div>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">Babel Fees</h1>
                 <p className="text-lg md:text-xl text-neutral-300 mb-6 max-w-2xl">
-                  Pay transaction fees with any token
+                  Cover transaction fees through supported token paths
                 </p>
                 <p className="text-base text-neutral-400 mb-8 max-w-2xl leading-relaxed">
-                  Revolutionary fee payment system that allows users to pay Ergo transaction fees with any token instead of ERG, through automated intermediaries who handle the conversion seamlessly.
+                  Babel Fees let users cover Ergo transaction fees through supported token-to-ERG conversion paths while miners still receive ERG.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl border border-orange-500/50">
@@ -85,7 +85,7 @@ export default function BabelFeesClient() {
                     <div className="space-y-4">
                       {[
                         { name: "Standard ERG", icon: Coins, desc: "Traditional fee payment with ERG tokens" },
-                        { name: "Any Token", icon: ArrowRightLeft, desc: "Pay fees with any token you hold" },
+                        { name: "Supported Token Path", icon: ArrowRightLeft, desc: "Use a token where a Babel box/liquidity path exists" },
                         { name: "Auto Exchange", icon: Zap, desc: "Automatic conversion handled by intermediaries" },
                       ].map((option) => (
                         <div key={option.name} className="p-4 rounded-lg bg-neutral-900/60 border border-neutral-700">
@@ -172,7 +172,7 @@ export default function BabelFeesClient() {
                     <div>
                       <h4 className="text-xl font-semibold mb-3 text-orange-400">Definition</h4>
                       <p className="text-neutral-300 leading-relaxed">
-                        Babel Fees are a revolutionary feature that allows users to pay Ergo transaction fees with any token instead of ERG. This is achieved through automated intermediaries who accept your tokens and pay the required ERG fee to miners.
+                        Babel Fees are a fee-abstraction mechanism that lets users cover Ergo transaction fees through supported token-to-ERG paths instead of manually holding ERG for every transaction. Intermediaries accept a supported token and provide the required ERG fee to miners.
                       </p>
                     </div>
 
@@ -328,7 +328,7 @@ export default function BabelFeesClient() {
                           <li className="flex items-start gap-2">
                             <CheckCircle className="w-4 h-4 text-orange-400 mt-0.5 flex-shrink-0" />
                             <div>
-                              <strong className="text-white">Reduced Friction:</strong> Use any token you already own for fees
+                              <strong className="text-white">Reduced Friction:</strong> Use supported token paths where liquidity is available
                             </div>
                           </li>
                         </ul>
@@ -511,7 +511,7 @@ export default function BabelFeesClient() {
                             <Badge variant="outline" className="border-orange-500/50 text-orange-400 text-xs">
                               ✓
                             </Badge>
-                            <span>Supported by all wallets</span>
+                            <span>Wallet support varies by implementation</span>
                           </li>
                         </ul>
                       </div>
@@ -525,7 +525,7 @@ export default function BabelFeesClient() {
                             <Badge variant="outline" className="border-orange-500/50 text-orange-400 text-xs">
                               ⚡
                             </Badge>
-                            <span>Pay with any token you hold</span>
+                            <span>Pay through a supported token path</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <Badge variant="outline" className="border-orange-500/50 text-orange-400 text-xs">

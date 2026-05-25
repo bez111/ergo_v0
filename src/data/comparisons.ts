@@ -196,7 +196,7 @@ export const comparisons: ComparisonData[] = [
         },
         {
           title: "Predictable Fees",
-          description: "No gas price auctions or MEV extraction - fees are stable and predictable",
+          description: "No EVM-style gas price auctions; fees are stable and predictable, with reduced MEV surface",
           icon: "DollarSign",
         },
         {
@@ -238,7 +238,7 @@ export const comparisons: ComparisonData[] = [
     faq: [
       {
         question: "What advantages does Ergo have over Ethereum?",
-        answer: "Ergo offers predictable fees without MEV extraction, eliminates reentrancy attacks by design, provides native privacy via Sigma Protocols, maintains PoW decentralization, and has first-class native tokens without wrapper contracts.",
+        answer: "Ergo offers predictable fees, strong MEV-resistance, no protocol-level reentrancy class, native privacy via Sigma Protocols, PoW decentralization, and first-class native tokens without wrapper contracts.",
       },
       {
         question: "Can Ergo run Ethereum dApps?",
@@ -870,7 +870,7 @@ export const comparisons: ComparisonData[] = [
       },
       {
         question: "Which has better long-term economics?",
-        answer: "Ergo's storage rent provides sustainable miner income after emission ends. Kaspa relies on transaction fees only, which may not sustain security.",
+        answer: "Ergo's storage rent provides an additional miner revenue path after emissions. Kaspa relies primarily on transaction fees after emissions, so both models still depend on real usage and fee-market dynamics.",
       },
     ],
     
@@ -954,7 +954,7 @@ export const comparisons: ComparisonData[] = [
       },
       {
         title: "Long-term Viability",
-        content: "Both face the post-emission challenge. Ergo's storage rent provides sustainable miner income. Ravencoin must rely entirely on transaction fees, which may not sustain security.",
+        content: "Both face the post-emission challenge. Ergo's storage rent adds a protocol-level miner revenue path beyond transaction fees. Ravencoin relies on transaction fees after emissions, so long-term security depends on sustained fee demand.",
         ergoAdvantage: "Storage rent ensures long-term security budget.",
       },
     ],
@@ -1131,7 +1131,7 @@ export const comparisons: ComparisonData[] = [
         },
         {
           title: "MEV Protection",
-          description: "Ergo: no front-running by design. Avalanche: MEV extraction is possible",
+          description: "Ergo: reduced front-running surface by design. Avalanche: MEV extraction is possible",
           icon: "Eye",
         },
       ],
@@ -1143,7 +1143,7 @@ export const comparisons: ComparisonData[] = [
       { feature: "VC Funding", ergo: "None", competitor: "$290M+ raised", ergoAdvantage: true, notes: "No VC influence on Ergo" },
       { feature: "Validator Requirements", ergo: "GPU (any)", competitor: "2000 AVAX (~$50K)", ergoAdvantage: true, notes: "Lower barrier to participate" },
       { feature: "Smart Contracts", ergo: "ErgoScript (eUTXO)", competitor: "Solidity (EVM)", notes: "Different paradigms" },
-      { feature: "MEV", ergo: "Resistant by design", competitor: "Present", ergoAdvantage: true, notes: "eUTXO prevents front-running" },
+      { feature: "MEV", ergo: "Strongly resistant", competitor: "Present", ergoAdvantage: true, notes: "eUTXO reduces common front-running patterns" },
       { feature: "Privacy", ergo: "Sigma Protocols", competitor: "None native", ergoAdvantage: true, notes: "Ergo has L1 privacy" },
       { feature: "TPS (claimed)", ergo: "~47 (scaling via L2)", competitor: "4500+", notes: "Different tradeoffs" },
       { feature: "Finality", ergo: "~10 min (probabilistic)", competitor: "~1 second", notes: "Speed vs security tradeoff" },
@@ -1163,8 +1163,8 @@ export const comparisons: ComparisonData[] = [
       },
       {
         title: "MEV & Front-Running",
-        content: "Avalanche's account model and fast finality enable MEV extraction - validators and bots can front-run user transactions for profit. Ergo's eUTXO model makes front-running structurally impossible because transaction outputs are deterministic.",
-        ergoAdvantage: "MEV-resistant by design extraction means fairer trading for users.",
+        content: "Avalanche's account model and fast finality enable MEV extraction - validators and bots can front-run user transactions for profit. Ergo's eUTXO model makes common front-running patterns harder because transaction inputs and outputs are explicit.",
+        ergoAdvantage: "Strong MEV-resistance means fairer trading for users.",
       },
       {
         title: "Smart Contract Model",
@@ -1186,7 +1186,7 @@ export const comparisons: ComparisonData[] = [
       },
       {
         question: "Can I build the same apps on both?",
-        answer: "Similar apps, different approaches. Avalanche uses Solidity/EVM, Ergo uses ErgoScript/eUTXO. Ergo's model prevents MEV and reentrancy attacks that affect EVM chains.",
+        answer: "Similar apps, different approaches. Avalanche uses Solidity/EVM, Ergo uses ErgoScript/eUTXO. Ergo's model strongly reduces common MEV patterns and removes the protocol-level reentrancy class that affects EVM chains.",
       },
       {
         question: "Which is more decentralized?",
@@ -1238,7 +1238,7 @@ export const comparisons: ComparisonData[] = [
         },
         {
           title: "Philosophy",
-          description: "Ergo: cypherpunk, privacy-focused. Algorand: enterprise, compliance-friendly",
+          description: "Ergo: cypherpunk, privacy-focused. Algorand: enterprise and institution-oriented",
           icon: "Heart",
         },
       ],
@@ -1270,7 +1270,7 @@ export const comparisons: ComparisonData[] = [
       },
       {
         title: "Philosophical Approach",
-        content: "Algorand positions itself for enterprise adoption with compliance-friendly features and academic backing from MIT. Ergo embraces cypherpunk values: privacy, censorship resistance, and financial sovereignty. Different target audiences, different design decisions.",
+        content: "Algorand positions itself for enterprise adoption with institution-oriented features and academic backing from MIT. Ergo embraces cypherpunk values: privacy, censorship resistance, and financial sovereignty. Different target audiences, different design decisions.",
         ergoAdvantage: "Built for individual freedom, not corporate compliance.",
       },
       {
@@ -1297,7 +1297,7 @@ export const comparisons: ComparisonData[] = [
       },
       {
         question: "Which is better for privacy?",
-        answer: "Ergo. Sigma Protocols enable zero-knowledge proofs at L1. Algorand has no native privacy features and is designed to be compliance-friendly.",
+        answer: "Ergo. Sigma Protocols enable zero-knowledge proofs at L1. Algorand has no comparable native privacy layer and is oriented toward enterprise and institutional use cases.",
       },
       {
         question: "Why choose Ergo over Algorand?",
@@ -1322,4 +1322,3 @@ export function getRelatedInfographicTags(slug: string): string[] {
   const comparison = getComparisonBySlug(slug);
   return comparison?.relatedTags || [];
 }
-

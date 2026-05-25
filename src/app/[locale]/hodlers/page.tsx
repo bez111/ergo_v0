@@ -36,7 +36,7 @@ const FAQ_ITEMS = [
   },
   {
     question: "What is Ergo's tokenomics?",
-    answer: "Ergo launched fairly in 2019 with no pre-mine, no ICO, and no VC allocation. Total supply is capped at 97.7M ERG. Block rewards decrease over time (emission schedule). Storage Rent provides sustainable miner income. Treasury receives 10% of block rewards for ecosystem development."
+    answer: "Ergo launched fairly in 2019 with no pre-mine, no ICO, and no VC allocation. Total supply is capped at 97.7M ERG. Block rewards decrease over time according to the emission schedule. Storage Rent adds a protocol-level miner revenue path after long inactivity. Treasury received 10% of block rewards during the emission period for ecosystem development."
   },
   {
     question: "Why hold ERG long-term?",

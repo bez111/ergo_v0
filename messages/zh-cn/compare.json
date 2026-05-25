@@ -34,7 +34,7 @@
             },
             {
               "question": "Ergo 的隐私性比 Monero 更强吗？",
-              "answer": "Ergo 通过 Sigma 协议和 ErgoMixer 提供可选隐私，而 Monero 默认强制隐私。Ergo 的方式在需要合规时允许公开，同时仍能实现强隐私。Monero 更适合最大匿名性，Ergo 更适合兼顾智能合约能力的灵活隐私。"
+              "answer": "Ergo 的隐私是可选的，并可支持选择性披露工作流。实际法律合规取决于司法辖区、具体实现，以及协议周边的服务提供者。"
             }
           ]
         }
@@ -387,7 +387,7 @@
         },
         {
           "question": "在 DeFi 方面，Ergo 和 Cardano 哪个更好？",
-          "answer": "两者都支持基于 eUTXO 的 DeFi。Ergo 拥有 ErgoDEX 和 SigmaUSD 等先驱实现。Cardano 因生态更大而拥有更多项目。Ergo"
+          "answer": "Both support DeFi on eUTXO. Ergo has pioneering references such as ErgoDEX/Spectrum and SigmaUSD, while Cardano has a larger live DeFi ecosystem. The better choice depends on whether you value Ergo PoW/fair-launch design and smaller experimental surface or Cardano larger liquidity and app count."
         }
       ]
     },
@@ -958,7 +958,7 @@
           },
           {
             "title": "理念",
-            "description": "Ergo：密码朋克，注重隐私。Algorand：企业级，合规友好"
+            "description": "Ergo：密码朋克、隐私、抗审查性和金融主权。Algorand：更偏向企业采用和基金会主导的生态系统。"
           }
         ]
       },
@@ -999,7 +999,7 @@
         },
         {
           "question": "哪个在隐私方面更好？",
-          "answer": "Ergo。Sigma 协议在 L1 实现零知识证明。Algorand 没有原生隐私功能，其设计是合规友好的。"
+          "answer": "Ergo 的隐私是可选的，并可支持选择性披露工作流。实际法律合规取决于司法辖区、具体实现，以及协议周边的服务提供者。"
         },
         {
           "question": "为什么选择 Ergo 而非 Algorand？",

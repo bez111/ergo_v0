@@ -344,7 +344,7 @@ const faqData = [
   {
     id: "notable-dapps",
     question: "What are some notable dApps and projects in the Ergo ecosystem?",
-    answer: "Key projects include: ErgoMixer (privacy mixer), SigmaUSD (algorithmic stablecoin), Spectrum Finance (DEX), Oracle Pools (decentralized oracles), Rosen Bridge (cross-chain interoperability), Duckpools (lending), SigmaFi (P2P bonds), ErgoRaffle (crowdfunding), Ergo Auctions (NFT marketplace), Paideia (DAO framework), Nautilus Wallet (browser extension), and various gaming/utility projects.",
+    answer: "Key projects and references include: ErgoMixer (privacy mixer), SigmaUSD (algorithmic stablecoin), Spectrum Finance (historical DEX reference; sunset since 2024), Oracle Pools (decentralized oracles), Rosen Bridge (cross-chain interoperability), Duckpools (lending), SigmaFi (P2P bonds), ErgoRaffle (crowdfunding), Ergo Auctions (NFT marketplace), Paideia (DAO framework), Nautilus Wallet (browser extension), and various gaming/utility projects. Always verify current operational status before using funds.",
     category: "ecosystem",
   },
   {
@@ -368,7 +368,7 @@ const faqData = [
   {
     id: "buy-erg",
     question: "How can I buy Ergo (ERG)?",
-    answer: "You can buy ERG through: 1) Centralized Exchanges (KuCoin, Gate.io, HTX) - register, complete KYC, buy directly with fiat or swap from USDT/BTC/ETH; 2) Crypto Wallets with built-in purchase (if supported); 3) Decentralized Exchanges like Spectrum Finance (requires existing crypto). Always use official platforms and consider transferring to self-custodial wallets for security.",
+    answer: "You can buy ERG through: 1) centralized exchanges such as KuCoin, Gate.io, or HTX where available; 2) crypto wallets with built-in purchase if supported; 3) verified non-custodial routes where active liquidity exists. Spectrum Finance is a historical DEX reference with a 2024 sunset notice, so do not treat it as the default live venue. Always use official platforms and consider transferring to self-custodial wallets for security.",
     category: "wallets",
   },
   {
@@ -607,4 +607,4 @@ export default function FAQPage() {
       `}</style>
     </div>
   );
-} 
+}

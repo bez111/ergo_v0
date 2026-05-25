@@ -42,7 +42,7 @@ export const questions: QuestionEntry[] = [
     persona: "builder",
     stage: "build",
     category: "DeFi",
-    shortAnswer: "Building DeFi on Ergo starts with understanding the eUTXO model and ErgoScript. Unlike account-based chains, Ergo's box model provides deterministic execution, no MEV by design, and predictable gas costs. Use Oracle Pools for price feeds, and leverage existing patterns from Spectrum Finance and SigmaUSD.",
+    shortAnswer: "Building DeFi on Ergo starts with understanding the eUTXO model and ErgoScript. Unlike account-based chains, Ergo's box model provides deterministic execution, strong MEV-resistance, and predictable fee construction. Use Oracle Pools for price feeds, and study existing patterns from Spectrum Finance and SigmaUSD.",
     keyPoints: [
       "Learn eUTXO fundamentals - boxes hold value, data, and spending conditions",
       "Master ErgoScript - Ergo's functional smart contract language",
@@ -60,7 +60,7 @@ export const questions: QuestionEntry[] = [
     jsonLdType: "HowTo",
     priority: 1,
     seoTitle: "How to Build DeFi on Ergo: Complete Developer Guide",
-    seoDescription: "Step-by-step guide to building decentralized finance applications on Ergo using eUTXO, ErgoScript, and Oracle Pools. MEV-resistant by design, predictable fees.",
+    seoDescription: "Step-by-step guide to building decentralized finance applications on Ergo using eUTXO, ErgoScript, and Oracle Pools. Strong MEV-resistance and predictable fees.",
     publishDate: "2025-01-01",
     updatedDate: "2025-11-26"
   },
@@ -76,7 +76,7 @@ export const questions: QuestionEntry[] = [
       "Boxes = UTXOs with superpowers: value + tokens + data + script",
       "Deterministic: execution cost known before sending",
       "Parallel: unrelated transactions process simultaneously",
-      "Secure: no reentrancy, no front-running by design"
+      "Secure: no protocol-level reentrancy; reduced front-running surface"
     ],
     bestResources: [
       { type: "technology", title: "eUTXO Model", url: "/technology/eutxo-model", badge: "Core concept" },
@@ -89,7 +89,7 @@ export const questions: QuestionEntry[] = [
     jsonLdType: "TechArticle",
     priority: 1,
     seoTitle: "What is eUTXO? Extended UTXO Model Explained",
-    seoDescription: "Learn how Ergo's eUTXO model combines Bitcoin's security with smart contract flexibility. Deterministic execution, no MEV, parallel processing.",
+    seoDescription: "Learn how Ergo's eUTXO model combines Bitcoin's security with smart contract flexibility. Deterministic execution, strong MEV-resistance, parallel processing.",
     publishDate: "2025-01-01",
     updatedDate: "2025-11-26"
   },
@@ -102,7 +102,7 @@ export const questions: QuestionEntry[] = [
     category: "DeFi",
     shortAnswer: "Ergo offers structural advantages for DeFi: MEV resistance by design, deterministic gas costs, and no protocol-level reentrancy by construction due to eUTXO. Ethereum has larger ecosystem and liquidity. Choose Ergo for security-critical applications, fair trading, and predictable costs. Choose Ethereum for maximum composability with existing protocols.",
     keyPoints: [
-      "Ergo: MEV-resistant by design, no front-running, no sandwich attacks",
+      "Ergo: strong MEV-resistance; common front-running and sandwich patterns are harder",
       "Ergo: Predictable fees (~$0.01), known before sending",
       "Ergo: No reentrancy vulnerabilities by design",
       "Ethereum: Larger ecosystem, more liquidity, more tooling",
@@ -138,7 +138,7 @@ export const questions: QuestionEntry[] = [
       "Ergo: Optional privacy via Sigma Protocols, selective disclosure",
       "Ergo: Programmable privacy - private smart contracts possible",
       "Monero: Simpler UX for basic private payments",
-      "Ergo: Can prove compliance without revealing details"
+      "Ergo: Can support selective-disclosure proofs without revealing full details"
     ],
     bestResources: [
       { type: "compare", title: "Ergo vs Monero", url: "/compare/ergo-vs-monero", badge: "Full comparison" },
@@ -253,7 +253,7 @@ export const questions: QuestionEntry[] = [
     persona: "cypherpunk",
     stage: "awareness",
     category: "Philosophy",
-    shortAnswer: "Ergo had no pre-mine, no ICO, no VC allocation. 100% of ERG comes from mining. This means no insiders dumping on you, no VCs controlling governance, no foundation with majority stake. Fair launch creates genuine decentralization - the network belongs to miners and users, not early investors seeking exit liquidity.",
+    shortAnswer: "Ergo had no pre-mine, no ICO, no VC allocation. 100% of ERG enters circulation through mining. That removes a major insider-allocation overhang and makes governance less dependent on early investor exits. Long-term decentralization still depends on active miners, users, builders, and community participation.",
     keyPoints: [
       "No pre-mine: zero coins existed before mining started",
       "No ICO/IEO: no token sale to insiders or VCs",
@@ -288,7 +288,7 @@ export const questions: QuestionEntry[] = [
     shortAnswer: "Ergo uses Autolykos v2, a memory-hard, ASIC-resistant PoW algorithm. You can mine with consumer GPUs (4GB+ VRAM). Steps: get a wallet, choose mining software (lolMiner, T-Rex, Nanominer), join a pool (Herominers, 2Miners, Nanopool), configure your miner with pool address and wallet. Solo mining is possible but pools provide steadier income.",
     keyPoints: [
       "GPU mining: works with 4GB+ VRAM cards (AMD/NVIDIA)",
-      "ASIC-resistant: Autolykos v2 levels the playing field",
+      "ASIC-resistant by design: Autolykos v2 reduces specialized-hardware advantages",
       "Pool mining recommended: steadier rewards for most miners",
       "Software: lolMiner, T-Rex, Nanominer, SRBMiner",
       "Profitability: check whattomine.com for current rates"
@@ -425,8 +425,8 @@ export const questions: QuestionEntry[] = [
     relatedQuestions: ["ergo-vs-ethereum-for-defi", "what-is-eutxo", "how-to-build-defi-on-ergo"],
     jsonLdType: "TechArticle",
     priority: 1,
-    seoTitle: "What is MEV Resistance? Why Ergo Has No Front-Running",
-    seoDescription: "MEV resistance on Ergo: how eUTXO prevents front-running, sandwich attacks, and value extraction. No dark forest, fair trading.",
+    seoTitle: "What is MEV Resistance? Why Ergo Reduces Front-Running Risk",
+    seoDescription: "MEV resistance on Ergo: how eUTXO reduces common front-running, sandwich attacks, and value extraction. Fairer trading by design.",
     publishDate: "2025-01-01",
     updatedDate: "2025-11-26"
   },
@@ -439,11 +439,11 @@ export const questions: QuestionEntry[] = [
     persona: "general",
     stage: "awareness",
     category: "Getting Started",
-    shortAnswer: "Start by getting a wallet (Nautilus for browser, Terminus for mobile). Back up your seed phrase securely offline. Get some ERG from an exchange (Gate.io, KuCoin) or DEX (Spectrum). Make a test transaction. Then explore: try DeFi on Spectrum, check out NFTs, or dive into the technology if you're a builder.",
+    shortAnswer: "Start by getting a wallet (Nautilus for browser, Terminus for mobile). Back up your seed phrase securely offline. Get some ERG from a current exchange or verified venue, then make a small test transaction. After that, explore NFTs, mining, DeFi references, or the developer stack if you're a builder.",
     keyPoints: [
       "Wallet: Nautilus (browser), Terminus (mobile), Satergo (desktop)",
       "Seed phrase: write it down, store offline, never share",
-      "Get ERG: exchanges (Gate.io, KuCoin) or Spectrum DEX",
+      "Get ERG: use a current exchange or verified non-custodial venue",
       "Test: send a small transaction to yourself",
       "Explore: DeFi, NFTs, mining, or building"
     ],
@@ -469,10 +469,10 @@ export const questions: QuestionEntry[] = [
     persona: "investor",
     stage: "decision",
     category: "Getting Started",
-    shortAnswer: "ERG is available on centralized exchanges (Gate.io, KuCoin, Bitmart) and decentralized exchanges (Spectrum Finance on Ergo, Rosen Bridge from other chains). For self-custody, buy on an exchange and withdraw to your Nautilus or Terminus wallet. For maximum decentralization, use Spectrum DEX directly with a non-custodial wallet.",
+    shortAnswer: "ERG is available on centralized exchanges such as Gate.io, KuCoin, Bitmart and CoinEx, plus cross-chain routes such as Rosen Bridge depending on current liquidity. Spectrum Finance is a historical Ergo DEX reference that issued a sunset notice in 2024, so verify any active venue before trading. For self-custody, buy where available and withdraw to your Nautilus or Terminus wallet.",
     keyPoints: [
       "Centralized: Gate.io, KuCoin, Bitmart, CoinEx",
-      "Decentralized: Spectrum Finance (native DEX)",
+      "Decentralized routes: verify current active venues and liquidity first",
       "Cross-chain: Rosen Bridge from Cardano, Bitcoin",
       "Self-custody: always withdraw to your own wallet",
       "Verify: check official links, avoid scams"
@@ -488,7 +488,7 @@ export const questions: QuestionEntry[] = [
     jsonLdType: "FAQPage",
     priority: 1,
     seoTitle: "Where to Buy ERG: Exchanges and DEX Guide",
-    seoDescription: "Buy ERG on Gate.io, KuCoin, or Spectrum DEX. Complete guide to purchasing Ergo tokens safely.",
+    seoDescription: "Buy ERG on exchanges or verified non-custodial venues. Complete guide to purchasing Ergo tokens safely.",
     publishDate: "2025-01-01",
     updatedDate: "2025-11-26"
   },
@@ -657,10 +657,10 @@ export const questions: QuestionEntry[] = [
     persona: "investor",
     stage: "decision",
     category: "Getting Started",
-    shortAnswer: "Buy ERG on centralized exchanges (KuCoin, Gate.io, CoinEx) or decentralized exchanges (Spectrum Finance). First create a wallet (Nautilus recommended), then purchase ERG and withdraw to your wallet. Never leave large amounts on exchanges - self-custody is key.",
+    shortAnswer: "Buy ERG on current centralized exchanges such as KuCoin, Gate.io, CoinEx or Bitpanda, or through verified non-custodial routes where liquidity is active. First create a wallet (Nautilus recommended), then purchase ERG and withdraw to your wallet. Never leave large amounts on exchanges - self-custody is key.",
     keyPoints: [
       "Centralized: KuCoin, Gate.io, CoinEx, Bitpanda",
-      "Decentralized: Spectrum Finance (swap from other tokens)",
+      "Decentralized routes: verify current venues, liquidity, and official links",
       "Create wallet first (Nautilus browser extension)",
       "Withdraw to your wallet after purchase",
       "Never share seed phrase with anyone",
@@ -839,7 +839,7 @@ export const questions: QuestionEntry[] = [
     persona: "investor",
     stage: "consideration",
     category: "Philosophy",
-    shortAnswer: "Ergo is designed for 100+ year sustainability through three pillars: Autolykos mining (fair, ASIC-resistant), NiPoPoWs (efficient light clients), and storage rent (prevents bloat, funds miners). Unlike chains that depend on infinite growth, Ergo's economics work even with stable or declining usage.",
+    shortAnswer: "Ergo is designed for long-term sustainability through three pillars: Autolykos mining, NiPoPoWs for efficient light clients, and storage rent to discourage state bloat while adding a miner revenue path. Long-term security still depends on adoption, fee markets, and miner behavior.",
     keyPoints: [
       "Autolykos: ASIC-resistant, decentralized mining",
       "NiPoPoWs: Light clients without trust",
@@ -872,10 +872,10 @@ export const questions: QuestionEntry[] = [
     persona: "miner",
     stage: "consideration",
     category: "Mining",
-    shortAnswer: "Ergo mining profitability depends on your electricity cost, GPU efficiency, and ERG price. Use mining calculators with your specific hardware and power costs. Ergo is one of the most profitable GPU-mineable coins due to Autolykos being ASIC-resistant. Profitability improves significantly with cheap electricity.",
+    shortAnswer: "Ergo mining profitability depends on your electricity cost, GPU efficiency, network difficulty, pool fees, and ERG price. Use mining calculators with your specific hardware and power costs. Autolykos is designed to keep GPU mining viable, but profitability changes with market and network conditions.",
     keyPoints: [
       "Depends on: electricity cost, GPU, ERG price",
-      "ASIC-resistant = GPU mining viable",
+      "ASIC-resistant by design = GPU mining can remain viable when economics support it",
       "Use calculators: whattomine.com, etc.",
       "Cheap electricity is key advantage",
       "Consider long-term ERG price potential",
@@ -964,14 +964,14 @@ export const questions: QuestionEntry[] = [
     persona: "general",
     stage: "decision",
     category: "DeFi",
-    shortAnswer: "Connect your Nautilus wallet to Spectrum Finance, select tokens to swap, review the rate and slippage, then confirm. Spectrum uses AMM liquidity pools for instant trades. You can also provide liquidity to earn fees. All trades are atomic - they complete fully or not at all, with no front-running possible.",
+    shortAnswer: "Spectrum Finance is best treated as a historical Ergo DEX reference: the team published a sunset notice and froze contracts in February 2024. If you are studying old Ergo AMM flows, review Spectrum as a reference implementation, but do not assume it is an active venue for new swaps or liquidity. For any live trading, verify the current venue, liquidity, contract status, and official links first.",
     keyPoints: [
-      "Connect Nautilus wallet to spectrum.fi",
-      "Select tokens and amount to swap",
-      "Review rate, slippage, and fees",
-      "Confirm transaction in wallet",
-      "Provide liquidity to earn fees",
-      "No front-running or MEV extraction"
+      "Historical reference: Spectrum/ErgoDEX AMM design",
+      "Sunset notice and frozen contracts since February 2024",
+      "Do not assume new swaps or liquidity provision are available",
+      "Verify current active Ergo trading venues before using real funds",
+      "Study eUTXO AMM mechanics and atomic settlement patterns",
+      "Ergo's eUTXO model reduces common front-running and MEV surface"
     ],
     bestResources: [
       { type: "glossary", title: "DEX", url: "/learn/glossary/dex", badge: "Concept" },
@@ -982,8 +982,8 @@ export const questions: QuestionEntry[] = [
     relatedQuestions: ["what-is-mev-resistance", "how-to-provide-liquidity-ergo", "ergo-vs-ethereum-for-defi"],
     jsonLdType: "HowTo",
     priority: 2,
-    seoTitle: "How to Use Spectrum DEX: Ergo Decentralized Exchange Guide",
-    seoDescription: "Step-by-step guide to using Spectrum Finance DEX on Ergo. Swap tokens, provide liquidity, earn fees.",
+    seoTitle: "Spectrum Finance on Ergo: Historical DEX Reference",
+    seoDescription: "Spectrum Finance was a major Ergo DEX reference. Learn its historical role and why current trading venues must be verified before use.",
     publishDate: "2025-01-01"
   },
 
@@ -994,13 +994,13 @@ export const questions: QuestionEntry[] = [
     persona: "investor",
     stage: "decision",
     category: "DeFi",
-    shortAnswer: "On Spectrum Finance, select a pool, deposit equal value of both tokens, and receive LP tokens representing your share. You earn a portion of all trading fees. Withdraw anytime by returning LP tokens. Be aware of impermanent loss if token prices diverge significantly.",
+    shortAnswer: "Providing liquidity on Ergo depends on the current active DEX or AMM venue. In general, you deposit equal value of two assets into a pool, receive LP tokens representing your share, and earn a portion of trading fees. Spectrum Finance is historical/frozen since February 2024, so verify the active venue, contracts, liquidity depth, and withdrawal process before depositing funds.",
     keyPoints: [
-      "Choose pool on Spectrum Finance",
+      "Choose a current active Ergo DEX or AMM venue",
       "Deposit equal value of both tokens",
       "Receive LP tokens as receipt",
       "Earn share of trading fees",
-      "Withdraw anytime with LP tokens",
+      "Confirm withdrawal rules before depositing",
       "Risk: impermanent loss if prices diverge"
     ],
     bestResources: [
@@ -1012,7 +1012,7 @@ export const questions: QuestionEntry[] = [
     jsonLdType: "HowTo",
     priority: 2,
     seoTitle: "How to Provide Liquidity on Ergo: Earn Trading Fees",
-    seoDescription: "Guide to providing liquidity on Ergo DEX. Deposit tokens, earn fees, understand impermanent loss.",
+    seoDescription: "Guide to providing liquidity on active Ergo DEX venues. Deposit tokens, earn fees, understand impermanent loss and venue risk.",
     publishDate: "2025-01-01"
   },
 
@@ -1275,7 +1275,7 @@ export const questions: QuestionEntry[] = [
       "Sigma Protocols: Zero-knowledge proofs",
       "Stealth addresses: Hide recipients",
       "Optional privacy: Choose when needed",
-      "Can prove compliance without revealing details"
+      "Can support selective-disclosure proofs without revealing full details"
     ],
     bestResources: [
       { type: "technology", title: "Privacy Features", url: "/technology/privacy-features", badge: "Overview" },
@@ -1359,9 +1359,9 @@ export const questions: QuestionEntry[] = [
     persona: "general",
     stage: "awareness",
     category: "Getting Started",
-    shortAnswer: "Ergo supports a full ecosystem: trade on Spectrum DEX, use SigmaUSD stablecoin, mix transactions with ErgoMixer, collect NFTs on SkyHarbor, mine with GPUs, lend/borrow on DuckPools, bridge to other chains via Rosen, and build dApps with ErgoScript. It's a complete platform for decentralized finance and applications.",
+    shortAnswer: "Ergo supports a broad ecosystem: use SigmaUSD, explore historical and current DeFi references, mix transactions with ErgoMixer where lawful, collect NFTs, mine with GPUs, bridge to other chains via Rosen, and build dApps with ErgoScript. Always verify current project status before sending funds to a third-party app.",
     keyPoints: [
-      "Trade: Spectrum DEX (swaps, liquidity)",
+      "DeFi: verify current venues, contracts, and liquidity before use",
       "Stable value: SigmaUSD stablecoin",
       "Privacy: ErgoMixer transaction mixing",
       "NFTs: SkyHarbor marketplace",
@@ -1461,4 +1461,3 @@ export const questionPersonas = [
   { id: 'cypherpunk', label: 'Cypherpunks' },
   { id: 'general', label: 'General' }
 ];
-

@@ -15,7 +15,7 @@ interface ImageEntry {
 // the page's primary visual. Generic OG fallbacks are not included.
 const IMAGES: ImageEntry[] = [
   // Hub pages
-  { pageUrl: '/', imageLoc: '/og-image.png', title: 'Ergo — The Agentic Blockchain', caption: 'Layer-1 PoW blockchain for autonomous agent payments' },
+  { pageUrl: '/', imageLoc: '/og-image.png', title: 'Ergo — Public Proof Surface for Autonomous Work', caption: 'PoW/eUTXO clearing layer for receipts, wallet policy, programmable acceptance, and audit-gated settlement' },
   { pageUrl: '/agent-economy', imageLoc: '/og/agent-economy.jpg', title: 'Ergo Agent Economy — Notes, Reserves, Trackers', caption: 'Open-source stack for autonomous agent commerce' },
   { pageUrl: '/agent-economy/start', imageLoc: '/og/agent-economy.jpg', title: 'Start Building the Ergo Agent Economy', caption: 'Fastest path through live proof, proof APIs, launch kit, and mainnet gate' },
   { pageUrl: '/agent-economy/live', imageLoc: '/og/agent-economy.jpg', title: 'Ergo Agent Economy Live Hub', caption: 'Operational cockpit for Sage, MCP, receipts, wallet-agent policy, and mainnet gate' },
@@ -29,7 +29,7 @@ const IMAGES: ImageEntry[] = [
 
   // Technology pages
   { pageUrl: '/technology/eutxo-model', imageLoc: '/og/technology/eutxo-vs-accounts.jpg', title: 'Extended UTXO Model on Ergo', caption: 'Programmable UTXO with smart contract logic' },
-  { pageUrl: '/technology/babel-fees', imageLoc: '/og/babel-fees.jpg', title: 'Babel Fees — Pay Transaction Fees with Any Token', caption: 'Revolutionary fee abstraction on Ergo' },
+  { pageUrl: '/technology/babel-fees', imageLoc: '/og/babel-fees.jpg', title: 'Babel Fees — Supported Token Fee Paths', caption: 'Fee abstraction on Ergo' },
   { pageUrl: '/technology/storage-rent', imageLoc: '/og/technology/storage-rent.jpg', title: 'Storage Rent — State Bloat Solution', caption: 'Sustainable blockchain economics' },
   { pageUrl: '/technology/nipopows', imageLoc: '/og/nipopows-explained.jpg', title: 'NIPoPoWs — Light Client Cryptography', caption: 'Non-Interactive Proofs of Proof-of-Work' },
   { pageUrl: '/technology/oracle-pools', imageLoc: '/og/oracle-pools-explained.jpg', title: 'Oracle Pools on Ergo', caption: 'Decentralized data feeds' },

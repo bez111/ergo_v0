@@ -528,7 +528,7 @@
       "ergoMixer": {
         "title": "ErgoMixer",
         "subtitle": "非托管隱私協議",
-        "description": "ErgoMixer 使用 Sigma 協議和環形簽名提供尖端隱私解決方案。在透過可選透明功能保持合規性的同時，享受完整的金融隱私。",
+        "description": "Ergo 的隱私是選用功能，並可支援選擇性揭露工作流。實際法律合規取決於司法管轄區、具體實作，以及協議周邊的服務提供者。",
         "cta": "了解 ERGO 上的隱私",
         "stats": {
           "mixedVolume": {

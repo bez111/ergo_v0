@@ -58,7 +58,7 @@
       "ecosystem": {
         "dApps": {
           "q": "Ergo 上有哪些 dApp？",
-          "a": "Ergo 擁有 SigmaUSD 等 DeFi 協議、Spectrum 等去中心化交易所、NFT 平台和各種工具。查看生態系統頁面了解更多。"
+          "a": "Key DeFi references include SigmaUSD, historical DEX designs such as ErgoDEX/Spectrum, lending protocols, and oracle pools. Always verify each project current operational status before using real funds."
         },
         "defi": {
           "q": "有哪些 DeFi 選項？",
@@ -318,7 +318,7 @@
     },
     "tech-spectrum-dex": {
       "question": "什麼是 Spectrum DEX？",
-      "answer": "Spectrum（前身為 ErgoDEX）是 Ergo 上使用 AMM（自動做市商）池的去中心化交易所。它支持代幣交換、提供流動性和收益農耕。eUTXO 模型使部分訂單成交和比基於帳戶的 DEX 更好的抗 MEV 性等功能成為可能。"
+      "answer": "Spectrum (formerly ErgoDEX) is a historical decentralized exchange reference on Ergo using AMM pools. The team published a sunset notice and froze contracts in February 2024, so treat it as a design/reference example rather than an active venue for new swaps or liquidity. Ergo eUTXO still provides useful DEX design properties such as atomic settlement and reduced common MEV patterns."
     },
     "tech-rosen-bridge": {
       "question": "什麼是 Rosen Bridge？",

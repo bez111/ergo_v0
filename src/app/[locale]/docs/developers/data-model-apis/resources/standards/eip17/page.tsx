@@ -12,7 +12,9 @@ export default function EIP17Page() {
   // dApp-specific part ensuring that user will receive what he is paying for
   val properFundUsage = {
     val userOut = OUTPUTS(1)
-    userOut.propositionBytes == fromBase64("\\$userAddress") && // user must be the recipient
+    OUTPUTS.size >= 4 &&
+      userOut.tokens.size > 0 &&
+      userOut.propositionBytes == fromBase64("\\$userAddress") && // user must be the recipient
       userOut.tokens(0)._1 == fromBase64("\\$scTokenId") && // user must receive SigmaUSD
       userOut.tokens(0)._2 >= \\$scAmountL && // the amount of SigmaUSD must be at least what user is paying for
       HEIGHT < \\$timestampL // this part is always true (timestamp is the unix-timestamp at the time of the request), it will cause compiled address to differ everytime
@@ -20,7 +22,8 @@ export default function EIP17Page() {
   
   // ensuring dApp integrity is preserved - any dApp specific condition to ensure designed procedures won't be violated
   val UIFeeOk = OUTPUTS(2).propositionBytes == fromBase64("\\$implementor") && OUTPUTS.size == 4 // UI fee must go to UI devs not any random person who assembles the transaction
-  val properBank = OUTPUTS(0).tokens(2)._1 == fromBase64("\\$bankNFT") // the real bank box of the sigmaUSD protocol must be used so not any random person can behave as the bank box
+  val properBank = OUTPUTS(0).tokens.size > 2 &&
+    OUTPUTS(0).tokens(2)._1 == fromBase64("\\$bankNFT") // the real bank box of the sigmaUSD protocol must be used so not any random person can behave as the bank box
   val dAppWorksFine = properFundUsage && UIFeeOk && properBank
 
   // in any case, whether assembler refuses to execute the request or the request fails for any reason, user must be able to get back his funds
@@ -264,4 +267,4 @@ export default function EIP17Page() {
       </div>
     </div>
   );
-} 
+}

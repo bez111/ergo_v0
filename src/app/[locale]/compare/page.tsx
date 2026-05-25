@@ -25,7 +25,7 @@ const SEO = {
 const FAQ_ITEMS = [
   {
     question: "Is Ergo better than Ethereum?",
-    answer: "Ergo and Ethereum serve different purposes. Ergo uses eUTXO model which is MEV-resistant by design (eUTXO + no public mempool ordering games), has predictable fees (~$0.01), and is more secure for DeFi. Ethereum has larger ecosystem and more developers. Ergo is better for users who want fair, predictable transactions without MEV extraction."
+    answer: "Ergo and Ethereum serve different purposes. Ergo uses the eUTXO model, which gives strong MEV-resistance and predictable fees, while Ethereum has a larger ecosystem and more developers. Ergo is attractive for users who want fairer, more predictable DeFi execution with less exposure to common front-running patterns."
   },
   {
     question: "How is Ergo different from Cardano?",
@@ -37,11 +37,11 @@ const FAQ_ITEMS = [
   },
   {
     question: "What makes Ergo unique compared to other blockchains?",
-    answer: "Ergo uniquely combines: eUTXO model (Bitcoin security + smart contracts), Sigma Protocols (optional privacy), Storage Rent (long-term sustainability), Autolykos (ASIC-resistant mining), fair launch (no pre-mine, no VC), and MEV-resistance. No other chain has this exact combination."
+    answer: "Ergo combines a PoW/eUTXO model, Sigma Protocols for optional privacy, Storage Rent for long-term sustainability, Autolykos mining, fair-launch tokenomics, and strong resistance to common account-model MEV patterns. That combination makes Ergo unusually well-suited to financial contracts, while every comparison still depends on the exact use case."
   },
   {
     question: "Is Ergo more private than Monero?",
-    answer: "Ergo offers optional privacy through Sigma Protocols and ErgoMixer, while Monero has mandatory privacy. Ergo's approach allows compliance when needed while still enabling strong privacy. Monero is better for maximum anonymity, Ergo is better for flexible privacy with smart contract capabilities."
+    answer: "Ergo offers optional privacy through Sigma Protocols and ErgoMixer, while Monero has mandatory privacy. Ergo can support selective-disclosure workflows, but legal compliance depends on jurisdiction, implementation, and surrounding service providers. Monero is better for maximum anonymity; Ergo is better for programmable privacy with smart contract capabilities."
   }
 ]
 

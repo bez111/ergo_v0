@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { getAlternates, getCanonicalUrl, getOgLocale } from "@/lib/seo"
+import { agentEconomyProofSnapshot } from "@/lib/agent-economy/static-proof-snapshots"
 import { ProofExplorerClient } from "./ProofExplorerClient"
 
 const BASE_URL = "https://www.ergoblockchain.org"
@@ -49,5 +50,5 @@ export async function generateMetadata({
 }
 
 export default function AgentEconomyProofsPage() {
-  return <ProofExplorerClient />
+  return <ProofExplorerClient initialData={agentEconomyProofSnapshot} />
 }

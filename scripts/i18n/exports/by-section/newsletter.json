@@ -1,80 +1,93 @@
 [
   {
-    "key": "newsletter.title",
-    "value": "Stay Updated",
+    "key": "newsletter.newsletter.title",
+    "source": "Stay Updated",
     "context": "Title",
-    "maxLength": 18
+    "maxLength": 18,
+    "translation": ""
   },
   {
-    "key": "newsletter.subtitle",
-    "value": "Get the latest Ergo news and updates",
+    "key": "newsletter.newsletter.subtitle",
+    "source": "Get the latest Ergo news and updates",
     "context": "General content",
-    "maxLength": 54
+    "maxLength": 54,
+    "translation": ""
   },
   {
-    "key": "newsletter.emailLabel",
-    "value": "Email Address",
+    "key": "newsletter.newsletter.emailLabel",
+    "source": "Email Address",
     "context": "General content",
-    "maxLength": 19.5
+    "maxLength": 19.5,
+    "translation": ""
   },
   {
-    "key": "newsletter.emailPlaceholder",
-    "value": "Enter your email address",
+    "key": "newsletter.newsletter.emailPlaceholder",
+    "source": "Enter your email address",
     "context": "General content",
-    "maxLength": 36
+    "maxLength": 36,
+    "translation": ""
   },
   {
-    "key": "newsletter.subscribe",
-    "value": "Subscribe",
+    "key": "newsletter.newsletter.subscribe",
+    "source": "Subscribe",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "newsletter.interests",
-    "value": "Interests (optional)",
+    "key": "newsletter.newsletter.interests",
+    "source": "Interests (optional)",
     "context": "General content",
-    "maxLength": 30
+    "maxLength": 30,
+    "translation": ""
   },
   {
-    "key": "newsletter.privacyNotice",
-    "value": "By subscribing, you agree to our",
+    "key": "newsletter.newsletter.privacyNotice",
+    "source": "By subscribing, you agree to our",
     "context": "General content",
-    "maxLength": 48
+    "maxLength": 48,
+    "translation": ""
   },
   {
-    "key": "newsletter.privacyPolicy",
-    "value": "Privacy Policy",
+    "key": "newsletter.newsletter.privacyPolicy",
+    "source": "Privacy Policy",
     "context": "General content",
-    "maxLength": 21
+    "maxLength": 21,
+    "translation": ""
   },
   {
-    "key": "newsletter.alreadySubscribed.title",
-    "value": "You're subscribed!",
+    "key": "newsletter.newsletter.alreadySubscribed.title",
+    "source": "You're subscribed!",
     "context": "Title",
-    "maxLength": 27
+    "maxLength": 27,
+    "translation": ""
   },
   {
-    "key": "newsletter.segments.developers",
-    "value": "Developers",
+    "key": "newsletter.newsletter.segments.developers",
+    "source": "Developers",
     "context": "General content",
-    "maxLength": 15
+    "maxLength": 15,
+    "translation": ""
   },
   {
-    "key": "newsletter.segments.miners",
-    "value": "Miners",
+    "key": "newsletter.newsletter.segments.miners",
+    "source": "Miners",
     "context": "General content",
-    "maxLength": 9
+    "maxLength": 9,
+    "translation": ""
   },
   {
-    "key": "newsletter.segments.investors",
-    "value": "Investors",
+    "key": "newsletter.newsletter.segments.investors",
+    "source": "Investors",
     "context": "General content",
-    "maxLength": 13.5
+    "maxLength": 13.5,
+    "translation": ""
   },
   {
-    "key": "newsletter.segments.general",
-    "value": "General News",
+    "key": "newsletter.newsletter.segments.general",
+    "source": "General News",
     "context": "General content",
-    "maxLength": 18
+    "maxLength": 18,
+    "translation": ""
   }
 ]

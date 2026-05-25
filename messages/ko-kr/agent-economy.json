@@ -62,7 +62,7 @@
     "whyErgoItems": [
       {
         "title": "eUTXO: 검증 가능한 원자성",
-        "body": "모든 트랜잭션은 결정적입니다. 에이전트는 제출 전에 무엇이 일어날지 정확히 압니다. 재진입도, 숨겨진 글로벌 상태도, MEV 깜짝 사고도 없습니다.",
+        "body": "Ergo의 eUTXO 모델은 계정 기반 체인에서 흔한 front-running 및 sandwich 패턴을 줄이고 실행을 더 예측 가능하게 만듭니다. 그러나 애플리케이션 설계, mempool 정책, 오프체인 주문 흐름은 여전히 중요합니다.",
         "href": "/technology/eutxo-model"
       },
       {

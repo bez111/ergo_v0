@@ -83,10 +83,14 @@ export default function BoxStructurePage() {
         </div>
 
         <CodeBlock>{`{
-   val out = OUTPUTS(0)
-   val token = out.tokens(0)
-   token._1 == fromBase64("nZdrGUBMAfIO6lmSRJq2zEUKGCOeYOYzAeIqbfYs8sg=")  &&
-   token._2 == 1 
+   OUTPUTS.size > 0 && {
+     val out = OUTPUTS(0)
+     out.tokens.size > 0 && {
+       val token = out.tokens(0)
+       token._1 == fromBase64("nZdrGUBMAfIO6lmSRJq2zEUKGCOeYOYzAeIqbfYs8sg=") &&
+       token._2 == 1
+     }
+   }
 }`}</CodeBlock>
 
         <div className="text-gray-300 mb-6 max-w-3xl">
@@ -95,4 +99,4 @@ export default function BoxStructurePage() {
       </div>
     </>
   );
-} 
+}

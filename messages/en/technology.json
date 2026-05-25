@@ -763,8 +763,8 @@
             "icon": "DollarSign"
           },
           {
-            "title": "Spectrum DEX",
-            "description": "Decentralized exchange using price feeds for limit orders and liquidations",
+            "title": "Historical DEX designs",
+            "description": "DEX and lending designs can use price feeds for limit orders, liquidations, and risk checks",
             "icon": "BarChart3"
           },
           {
@@ -1952,7 +1952,7 @@
         },
         {
           "title": "Transaction Ordering",
-          "content": "Transactions in subblocks are ordered deterministically using a combination of timestamp and transaction ID, preventing front-running and ensuring fairness."
+          "content": "Transactions in subblocks are ordered deterministically using a combination of timestamp and transaction ID, reducing discretionary ordering and common front-running surfaces. Fairness still depends on the final implementation, mempool policy, and dApp design."
         },
         {
           "title": "State Management",
@@ -2211,8 +2211,8 @@
           "description": "Algorithmic stablecoin using ERG/USD price feeds"
         },
         {
-          "title": "Spectrum DEX",
-          "description": "Decentralized exchange with real-time price data"
+          "title": "Historical DEX designs",
+          "description": "DEX designs can consume real-time price data for order and risk logic"
         },
         {
           "title": "Lending Protocols",
@@ -2429,7 +2429,7 @@
       "confidential_collectibles": "Confidential collectibles",
       "answer_text_ergo_offers_multiple": "Answer\",\n                text:\n                  \"Ergo offers multiple privacy features including Sigma protocols, ring signatures, zero-knowledge proofs, and confidential transactions. These technologies enable privacy-preserving transactions while maintaining security and compliance.",
       "answer_text_sigma_protocols_are": "Answer\",\n                text:\n                  \"Sigma protocols are zero-knowledge proof systems that allow proving statements about secret values without revealing the values themselves. They enable privacy-preserving authentication and transaction validation.",
-      "answer_text_yes_ergo_s": "Answer\",\n                text:\n                  \"Yes, Ergo's privacy features are designed to be regulatory compliant. They provide selective disclosure capabilities, allowing users to reveal transaction details when required while maintaining privacy by default.",
+      "answer_text_yes_ergo_s": "Answer\",\n                text:\n                  \"Ergo's privacy features are designed to support selective disclosure. Users can reveal transaction details when required while keeping other contexts confidential; actual compliance depends on jurisdiction and implementation.",
       "ergo_bakes_privacy_into_the": "Ergo bakes privacy into the protocol: Sigma protocols, ring/threshold signatures, ErgoMixer, confidential assets and selective disclosure.",
       "ergo_privacy_sigma_protocols_ring": "Ergo privacy,Sigma protocols,ring signatures,zero-knowledge proofs,ErgoMixer,confidential transactions",
       "prepare_funds_text_split_funds": "Prepare funds\", text: \"Split funds and avoid address reuse.",
@@ -2901,8 +2901,8 @@
           "description": "Build decentralized exchanges, lending platforms, and yield farming protocols",
           "examples": [
             "SigmaUSD stablecoin",
-            "ErgoDEX exchange",
-            "Spectrum Finance",
+            "Historical ErgoDEX/Spectrum references",
+            "Current DEX venues after status verification",
             "DuckPools lending"
           ]
         },
@@ -3327,8 +3327,8 @@
             "answer": "Sigma protocols are zero-knowledge proof systems that allow proving statements about secret values without revealing the values themselves. They enable privacy-preserving authentication and transaction validation."
           },
           "regulatoryCompliant": {
-            "question": "Are Ergo's privacy features regulatory compliant?",
-            "answer": "Yes, Ergo's privacy features are designed to be regulatory compliant. They provide selective disclosure capabilities, allowing users to reveal transaction details when required while maintaining privacy by default."
+            "question": "Can Ergo's privacy features support regulatory workflows?",
+            "answer": "Ergo's privacy features can support selective disclosure workflows, allowing users to reveal transaction details when required while keeping other contexts confidential. Actual compliance depends on jurisdiction, implementation, and the surrounding service provider."
           }
         }
       },
@@ -4059,7 +4059,7 @@
         "0": {
           "title": "DEX Order Books",
           "description": "Each order is a separate box, enabling parallel matching and atomic swaps",
-          "example": "Spectrum Finance"
+          "example": "Historical ErgoDEX/Spectrum"
         },
         "1": {
           "title": "Lending Protocols",
@@ -4093,7 +4093,7 @@
         },
         "1": {
           "question": "Can eUTXO handle complex DeFi applications?",
-          "answer": "Yes! Ergo has DEXes (Spectrum), lending protocols, stablecoins (SigmaUSD), and more. The eUTXO model actually makes these more secure by preventing re-entrancy and enabling parallel execution."
+          "answer": "Yes. Ergo supports DEX designs, lending protocols, stablecoins such as SigmaUSD, and other DeFi primitives. Historical implementations like ErgoDEX/Spectrum are useful references, but deployed venues should be checked for current status before use. The eUTXO model removes protocol-level reentrancy and enables parallel execution patterns."
         },
         "2": {
           "question": "Why is the eUTXO model more scalable?",
@@ -4658,7 +4658,7 @@
         },
         "1": {
           "question": "Is Ergo a privacy coin?",
-          "answer": "Ergo offers optional privacy. Users can choose transparent or confidential transactions. Privacy is a feature, not mandatory, maintaining regulatory compliance."
+          "answer": "Ergo privacy is optional and can support selective-disclosure workflows. Actual legal compliance depends on jurisdiction, implementation, and the surrounding service provider."
         },
         "2": {
           "question": "What is ErgoMixer?",
@@ -4681,30 +4681,30 @@
     }
   },
   "babelFees": {
-    "title": "Babel Fees - Pay Transaction Fees with Any Token",
-    "description": "Learn about Babel Fees on Ergo blockchain - pay transaction fees using any token instead of ERG",
+    "title": "Babel Fees - Supported Token Fee Paths",
+    "description": "Learn about Babel Fees on Ergo blockchain - cover transaction fees through supported token-to-ERG paths",
     "subDescription": "Babel Fees allow users to pay transaction fees with tokens other than ERG, improving user experience and token utility",
     "seo": {
       "title": "Babel Fees - Flexible Transaction Fee Payment | Ergo Platform",
-      "description": "Discover how Babel Fees on Ergo blockchain enable paying transaction fees with any token. Learn about the benefits, implementation, and use cases.",
+      "description": "Discover how Babel Fees on Ergo blockchain enable transaction fee abstraction through supported token-to-ERG paths. Learn about the benefits, implementation, and use cases.",
       "keywords": "Babel Fees, Ergo blockchain, transaction fees, token payment, ERG alternative, flexible fees, DeFi Ergo",
-      "ogTitle": "Babel Fees - Pay Transaction Fees with Any Token | Ergo Technology",
-      "ogDescription": "Revolutionary fee payment system that lets users pay Ergo transaction fees with any token via automated intermediaries.",
+      "ogTitle": "Babel Fees - Supported Token Fee Paths | Ergo Technology",
+      "ogDescription": "Fee abstraction that lets users cover Ergo transaction fees through supported token-to-ERG paths.",
       "ogAlt": "Ergo Babel Fees Technology",
-      "twitterTitle": "Babel Fees - Pay Fees with Any Token | Ergo",
-      "twitterDescription": "Pay Ergo transaction fees with any token. Learn how Babel Fees improve UX and token utility."
+      "twitterTitle": "Babel Fees - Supported Token Fee Paths | Ergo",
+      "twitterDescription": "Learn how Babel Fees improve UX through supported token-to-ERG fee paths."
     },
     "schema": {
       "techArticle": {
-        "headline": "Babel Fees: Pay Transaction Fees with Any Token",
-        "description": "Learn how Babel Fees let users pay Ergo transaction fees with any token via automated intermediaries.",
+        "headline": "Babel Fees: Supported Token Fee Paths",
+        "description": "Learn how Babel Fees let users cover Ergo transaction fees through supported token-to-ERG paths.",
         "aboutName": "Babel Fees"
       },
       "faq": {
         "items": [
           {
             "question": "What are Babel Fees?",
-            "answer": "Babel Fees allow users to pay Ergo transaction fees with any token instead of ERG, through automated intermediaries who handle the conversion."
+            "answer": "Babel Fees allow users to cover Ergo transaction fees through supported token-to-ERG paths instead of manually pre-funding ERG for every transaction."
           },
           {
             "question": "How do Babel Fees work?",
@@ -4712,7 +4712,7 @@
           },
           {
             "question": "Which tokens can be used for fees?",
-            "answer": "Any token can be used as long as intermediaries are willing to accept it and convert it to ERG."
+            "answer": "A token can be used only when a Babel box or intermediary is willing to accept it and provide ERG fee coverage."
           },
           {
             "question": "Are Babel Fees more expensive?",
@@ -4722,7 +4722,7 @@
       },
       "howTo": {
         "name": "How to Use Babel Fees",
-        "description": "Step-by-step guide to paying transaction fees with any token using Babel Fees",
+        "description": "Step-by-step guide to paying transaction fees through supported token paths using Babel Fees",
         "steps": [
           {
             "name": "Choose a dApp",
@@ -4746,7 +4746,7 @@
       "exploreWallets": "Explore Wallets",
       "learnMore": "Learn More",
       "readyToUse": "Ready to Use Babel Fees?",
-      "experienceFlexibility": "Experience the flexibility of paying fees with any token"
+      "experienceFlexibility": "Experience the flexibility of supported token fee paths"
     },
     "feePaymentOptions": "Fee Payment Options",
     "options": {
@@ -4755,7 +4755,7 @@
         "description": "Standard fee payment method"
       },
       "anyToken": {
-        "name": "Any Token",
+        "name": "Supported Token Path",
         "description": "Pay with supported tokens"
       },
       "automaticExchange": {
@@ -4778,7 +4778,7 @@
     "whatAreBabelFees": {
       "title": "What Are Babel Fees",
       "whatAre": "What Are They?",
-      "whatAreDescription": "Babel Fees are a mechanism that allows users to pay transaction fees with any token instead of ERG.",
+      "whatAreDescription": "Babel Fees are a mechanism that lets users cover transaction fees through supported token-to-ERG paths instead of directly holding ERG for every fee.",
       "whyCreated": "Why Created",
       "uxImprovement": "UX Improvement",
       "uxImprovementDescription": "Users don't need to hold ERG for transactions",
@@ -5150,8 +5150,8 @@
     },
     "babel-fees": {
       "title": "Babel Fees",
-      "description": "Pay transaction fees with any token instead of ERG through automated intermediaries",
-      "shortDescription": "Pay fees with any token",
+      "description": "Cover transaction fees through supported token-to-ERG paths while miners still receive ERG",
+      "shortDescription": "Supported token fee paths",
       "keywords": "babel fees,transaction fees,ux,token payments,gas abstraction,defi ux,on-chain markets",
       "details": [
         {

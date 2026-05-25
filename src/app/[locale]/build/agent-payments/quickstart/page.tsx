@@ -128,12 +128,12 @@ export async function generateMetadata({
   const { locale } = await params
 
   return {
-    title: "Build Your First Paid Agent Flow on Ergo",
+    title: "Build Your First Verifiable Agent Receipt / Paid Agent Flow on Ergo",
     description:
-      "A developer quickstart for embedding Sage paid agent payments: install the package, request a quote, create a testnet Note, verify payment, and fetch the full receipt bundle.",
+      "A developer quickstart for embedding Sage autonomous work settlement: install the package, request a quote, create a testnet Note, verify payment, and fetch the full receipt bundle.",
     alternates: getAlternates("/build/agent-payments/quickstart", locale),
     openGraph: {
-      title: "Build Your First Paid Agent Flow on Ergo",
+      title: "Build Your First Verifiable Agent Receipt on Ergo",
       description:
         "Install the Sage widget, emit a payment intent, verify an Ergo testnet Note, and fetch the full receipt bundle.",
       url: getCanonicalUrl("/build/agent-payments/quickstart", locale),
@@ -143,7 +143,7 @@ export async function generateMetadata({
           url: `${BASE_URL}/og/agent-economy.jpg`,
           width: 1200,
           height: 630,
-          alt: "Ergo paid agent flow quickstart",
+          alt: "Ergo verifiable agent receipt quickstart",
         },
       ],
       type: "website",

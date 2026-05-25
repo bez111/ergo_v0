@@ -148,7 +148,7 @@
             },
             {
               "question": "Ergo 上有哪些 DeFi 項目？",
-              "answer": "主要 DeFi 項目包括 SigmaUSD（算法穩定幣）、ErgoDEX（DEX）、借貸協議和預言機池。"
+              "answer": "Key DeFi references include SigmaUSD, historical DEX designs such as ErgoDEX/Spectrum, lending protocols, and oracle pools. Always verify each project current operational status before using real funds."
             },
             {
               "question": "哪些錢包支援 Ergo？",

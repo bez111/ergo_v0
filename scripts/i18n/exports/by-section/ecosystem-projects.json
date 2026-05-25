@@ -1,0 +1,1297 @@
+[
+  {
+    "key": "ecosystem-projects.ecosystemProjects.spectrum-finance.description",
+    "source": "Sunset since February 2024 — the team published a formal sunset notice and is winding the project down. Historically a cross-chain eUTXO DEX (Ergo + Cardano) with AMM, yield farming and Babel Fees support. Do not deposit liquidity or new funds.",
+    "context": "Description",
+    "maxLength": 366,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.spectrum-finance.features.0",
+    "source": "Historical: cross-chain DEX (Ergo + Cardano)",
+    "context": "General content",
+    "maxLength": 66,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.spectrum-finance.features.1",
+    "source": "Historical: AMM liquidity pools",
+    "context": "General content",
+    "maxLength": 46.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.spectrum-finance.features.2",
+    "source": "Historical: yield farming",
+    "context": "General content",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.spectrum-finance.features.3",
+    "source": "Historical: Babel Fees support",
+    "context": "General content",
+    "maxLength": 45,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.spectrum-finance.features.4",
+    "source": "Sunset since Feb 2024 — not an active venue",
+    "context": "General content",
+    "maxLength": 64.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergodex.description",
+    "source": "A non-custodial decentralized exchange (DEX) for Ergo and Cardano, enabling AMM and order-book trading across both ecosystems.",
+    "context": "Description",
+    "maxLength": 189,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergodex.features.0",
+    "source": "Cross-chain DEX for Ergo & Cardano",
+    "context": "General content",
+    "maxLength": 51,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergodex.features.1",
+    "source": "Non-custodial trading",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergodex.features.2",
+    "source": "AMM and order-book models",
+    "context": "General content",
+    "maxLength": 37.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergodex.features.3",
+    "source": "Liquidity provision for ERG and ADA ecosystems",
+    "context": "General content",
+    "maxLength": 69,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigmausd.description",
+    "source": "The first eUTXO-based stablecoin, implementing the AgeUSD protocol. It is pegged to the US dollar and backed by ERG with a floating reserve ratio (400%-800%).",
+    "context": "Description",
+    "maxLength": 237,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigmausd.features.0",
+    "source": "Algorithmic Stablecoin",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigmausd.features.1",
+    "source": "ERG Collateralized",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigmausd.features.2",
+    "source": "Decentralized",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigmausd.features.3",
+    "source": "No Liquidation Risk",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.rosen-bridge.description",
+    "source": "An open-source protocol for cross-chain asset transfers between Ergo and other blockchains like Cardano, Bitcoin Runes, and Dogecoin.",
+    "context": "Description",
+    "maxLength": 199.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.rosen-bridge.features.0",
+    "source": "Cross-chain Transfers",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.rosen-bridge.features.1",
+    "source": "Multi-blockchain Support",
+    "context": "General content",
+    "maxLength": 36,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.rosen-bridge.features.2",
+    "source": "Decentralized Watchers",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.rosen-bridge.features.3",
+    "source": "Trustless Bridge",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergomixer.description",
+    "source": "The first non-interactive, non-custodial mixer in the crypto industry. It allows users to privately send tokens using Sigma-protocols for enhanced privacy.",
+    "context": "Description",
+    "maxLength": 232.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergomixer.features.0",
+    "source": "Non-custodial Mixing",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergomixer.features.1",
+    "source": "Token Privacy",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergomixer.features.2",
+    "source": "Sigma Protocols",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergomixer.features.3",
+    "source": "Zero-knowledge Proofs",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.nautilus-wallet.description",
+    "source": "A browser extension and mobile wallet for Ergo, focused on privacy, security, and user experience. It supports Ledger, multiple wallets, and a dApp connector.",
+    "context": "Description",
+    "maxLength": 237,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.nautilus-wallet.features.0",
+    "source": "Browser Extension",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.nautilus-wallet.features.1",
+    "source": "Mobile App",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.nautilus-wallet.features.2",
+    "source": "Ledger Support",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.nautilus-wallet.features.3",
+    "source": "dApp Connector",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.nautilus-wallet.features.4",
+    "source": "Multi-wallet",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.duckpools.description",
+    "source": "A collateralized lending platform with algorithmic lending pools. Users provide ERG or native assets to earn income or borrow assets against ERG collateral.",
+    "context": "Description",
+    "maxLength": 234,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.duckpools.features.0",
+    "source": "Lending Pools",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.duckpools.features.1",
+    "source": "Collateralized Loans",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.duckpools.features.2",
+    "source": "Yield Generation",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.duckpools.features.3",
+    "source": "Native Asset Support",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.paideia.description",
+    "source": "A suite of tools for creating and managing Decentralized Autonomous Organizations (DAOs) on Ergo and Cardano with governance and treasury management.",
+    "context": "Description",
+    "maxLength": 223.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.paideia.features.0",
+    "source": "DAO Creation",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.paideia.features.1",
+    "source": "Governance Tools",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.paideia.features.2",
+    "source": "Treasury Management",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.paideia.features.3",
+    "source": "Proposal Voting",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.paideia.features.4",
+    "source": "Multi-chain",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.oracle-pools.description",
+    "source": "A decentralized oracle system on Ergo that connects smart contracts with external data without needing to trust centralized sources.",
+    "context": "Description",
+    "maxLength": 198,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.oracle-pools.features.0",
+    "source": "Decentralized Oracles",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.oracle-pools.features.1",
+    "source": "Price Feeds",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.oracle-pools.features.2",
+    "source": "External Data",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.oracle-pools.features.3",
+    "source": "Trustless Design",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergo-explorer.description",
+    "source": "The main official block explorer for Ergo. It allows users to track transactions, blocks, addresses, tokens, and view general network statistics.",
+    "context": "Description",
+    "maxLength": 217.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergo-explorer.features.0",
+    "source": "Block Explorer",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergo-explorer.features.1",
+    "source": "Transaction Tracking",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergo-explorer.features.2",
+    "source": "Token Info",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergo-explorer.features.3",
+    "source": "Network Statistics",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergo-explorer.features.4",
+    "source": "Address Lookup",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergopad.description",
+    "source": "A token launch (IDO) and fundraising platform on the Ergo blockchain. It gives token holders the opportunity to participate in IDOs.",
+    "context": "Description",
+    "maxLength": 198,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergopad.features.0",
+    "source": "Token Launch",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergopad.features.1",
+    "source": "IDO Platform",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergopad.features.2",
+    "source": "Staking",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergopad.features.3",
+    "source": "Community Projects",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.mew-finance.description",
+    "source": "A decentralized finance (DeFi) platform offering a suite of financial applications including DEX, NFT marketplace, and various financial tools.",
+    "context": "Description",
+    "maxLength": 214.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.mew-finance.features.0",
+    "source": "DEX",
+    "context": "General content",
+    "maxLength": 4.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.mew-finance.features.1",
+    "source": "NFT Marketplace",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.mew-finance.features.2",
+    "source": "DeFi Suite",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.mew-finance.features.3",
+    "source": "Token Swaps",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.satergo.description",
+    "source": "A comprehensive desktop wallet for Ergo with the option to integrate a full node to support network decentralization. Privacy-focused with offline vault.",
+    "context": "Description",
+    "maxLength": 229.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.satergo.features.0",
+    "source": "Desktop Wallet",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.satergo.features.1",
+    "source": "Full Node Integration",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.satergo.features.2",
+    "source": "Offline Vault",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.satergo.features.3",
+    "source": "Privacy Focus",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.safew.description",
+    "source": "A browser extension wallet for Ergo that integrates with ErgoMixer for enhanced transaction privacy.",
+    "context": "Description",
+    "maxLength": 150,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.safew.features.0",
+    "source": "Browser Extension",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.safew.features.1",
+    "source": "ErgoMixer Integration",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.safew.features.2",
+    "source": "Privacy Enhanced",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.safew.features.3",
+    "source": "dApp Support",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergowatch.description",
+    "source": "An analytical block explorer providing Ergo network metrics, DeFi statistics (e.g., TVL), charts, and dashboards for monitoring blockchain activity.",
+    "context": "Description",
+    "maxLength": 222,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergowatch.features.0",
+    "source": "Analytics",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergowatch.features.1",
+    "source": "DeFi Metrics",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergowatch.features.2",
+    "source": "TVL Tracking",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergowatch.features.3",
+    "source": "Network Dashboards",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergowatch.features.4",
+    "source": "Charts",
+    "context": "General content",
+    "maxLength": 9,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.cyberpixels.description",
+    "source": "A gaming project featuring an open-world pixel-style game with blockchain integration (NFTs, custom tokens, in-game marketplace).",
+    "context": "Description",
+    "maxLength": 193.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.cyberpixels.features.0",
+    "source": "Blockchain Gaming",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.cyberpixels.features.1",
+    "source": "NFT Integration",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.cyberpixels.features.2",
+    "source": "In-game Marketplace",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.cyberpixels.features.3",
+    "source": "Play-to-Earn",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigmafi.description",
+    "source": "A suite of decentralized P2P financial contracts on Ergo, including SigmaBonds for creating P2P debt obligations.",
+    "context": "Description",
+    "maxLength": 169.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigmafi.features.0",
+    "source": "P2P Lending",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigmafi.features.1",
+    "source": "Bond Issuance",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigmafi.features.2",
+    "source": "Decentralized Finance",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigmafi.features.3",
+    "source": "Smart Contracts",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergoraffle.description",
+    "source": "A crowdfunding service with lottery elements, allowing fundraising for projects where participants can win rewards.",
+    "context": "Description",
+    "maxLength": 172.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergoraffle.features.0",
+    "source": "Crowdfunding",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergoraffle.features.1",
+    "source": "Lottery System",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergoraffle.features.2",
+    "source": "Provable Fairness",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergoraffle.features.3",
+    "source": "Project Funding",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.minotaur-wallet.description",
+    "source": "A mobile wallet for Ergo with advanced features like multi-signatures, enhancing fund management security.",
+    "context": "Description",
+    "maxLength": 159,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.minotaur-wallet.features.0",
+    "source": "Mobile Wallet",
+    "context": "General content",
+    "maxLength": 19.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.minotaur-wallet.features.1",
+    "source": "Multi-signature",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.minotaur-wallet.features.2",
+    "source": "Enhanced Security",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.minotaur-wallet.features.3",
+    "source": "Fund Management",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.guapswap.description",
+    "source": "A decentralized smart contract-based service for swapping miner profits on Ergo, allowing automatic exchange of mining rewards.",
+    "context": "Description",
+    "maxLength": 190.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.guapswap.features.0",
+    "source": "Mining Rewards",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.guapswap.features.1",
+    "source": "Auto-swap",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.guapswap.features.2",
+    "source": "Profit Management",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.guapswap.features.3",
+    "source": "Miner Tools",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.dexygold.description",
+    "source": "An algorithmic stablecoin pegged to the price of gold (XAU/USD), utilizing seigniorage, price oracles, and excess ERG collateral.",
+    "context": "Description",
+    "maxLength": 193.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.dexygold.features.0",
+    "source": "Gold-pegged Stablecoin",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.dexygold.features.1",
+    "source": "Algorithmic Design",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.dexygold.features.2",
+    "source": "Oracle Integration",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.dexygold.features.3",
+    "source": "ERG Collateral",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigmao.description",
+    "source": "A platform for trading options (Call/Put, American/European) on Ergo EIP-4 tokens using an order book style.",
+    "context": "Description",
+    "maxLength": 162,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigmao.features.0",
+    "source": "Options Trading",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigmao.features.1",
+    "source": "Call/Put Options",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigmao.features.2",
+    "source": "Order Book",
+    "context": "General content",
+    "maxLength": 15,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigmao.features.3",
+    "source": "EIP-4 Tokens",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.blitz-tcg.description",
+    "source": "A collectible trading card game (TCG) on the Ergo blockchain.",
+    "context": "Description",
+    "maxLength": 91.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.blitz-tcg.features.0",
+    "source": "Trading Card Game",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.blitz-tcg.features.1",
+    "source": "NFT Cards",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.blitz-tcg.features.2",
+    "source": "Competitive Play",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.blitz-tcg.features.3",
+    "source": "Collectibles",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigmaverse.description",
+    "source": "A centralized portal and directory for the Ergo dApp ecosystem, allowing developers to list applications and users to find services.",
+    "context": "Description",
+    "maxLength": 198,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigmaverse.features.0",
+    "source": "dApp Directory",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigmaverse.features.1",
+    "source": "Project Listings",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigmaverse.features.2",
+    "source": "Ecosystem Portal",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigmaverse.features.3",
+    "source": "Discovery Platform",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergone.description",
+    "source": "A decentralized, community-driven marketing platform for promoting Ergo and its projects using the ERGONE token and Proof-of-Commitment Protocol.",
+    "context": "Description",
+    "maxLength": 217.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergone.features.0",
+    "source": "Marketing Platform",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergone.features.1",
+    "source": "Community Driven",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergone.features.2",
+    "source": "Token Incentives",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.ergone.features.3",
+    "source": "Project Promotion",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.hodlbox.description",
+    "source": "A platform encouraging long-term holding of ERG with treasure chests and various fund-locking options, rewarding users with NFTs.",
+    "context": "Description",
+    "maxLength": 193.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.hodlbox.features.0",
+    "source": "HODL Incentives",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.hodlbox.features.1",
+    "source": "Fund Locking",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.hodlbox.features.2",
+    "source": "NFT Rewards",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.hodlbox.features.3",
+    "source": "Long-term Savings",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.tokenjay.description",
+    "source": "A platform for P2P (peer-to-peer) token trading within the Ergo ecosystem.",
+    "context": "Description",
+    "maxLength": 111,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.tokenjay.features.0",
+    "source": "P2P Trading",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.tokenjay.features.1",
+    "source": "Token Swaps",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.tokenjay.features.2",
+    "source": "Decentralized Exchange",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.tokenjay.features.3",
+    "source": "Direct Trading",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.single-tx-swap.description",
+    "source": "A tool for executing P2P (peer-to-peer) token swaps within a single transaction.",
+    "context": "Description",
+    "maxLength": 120,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.single-tx-swap.features.0",
+    "source": "Atomic Swaps",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.single-tx-swap.features.1",
+    "source": "Single Transaction",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.single-tx-swap.features.2",
+    "source": "P2P Exchange",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.single-tx-swap.features.3",
+    "source": "Fast Execution",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.crux-finance.description",
+    "source": "A tool for managing crypto portfolios within the Ergo ecosystem, allowing tracking of P&L, investments, and generating tax reports.",
+    "context": "Description",
+    "maxLength": 196.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.crux-finance.features.0",
+    "source": "Portfolio Tracking",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.crux-finance.features.1",
+    "source": "P&L Analysis",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.crux-finance.features.2",
+    "source": "Tax Reports",
+    "context": "General content",
+    "maxLength": 16.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.crux-finance.features.3",
+    "source": "Investment Management",
+    "context": "General content",
+    "maxLength": 31.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.fleet-sdk.description",
+    "source": "A JavaScript library designed to simplify the creation and signing of transactions on the Ergo blockchain in web applications and Node.js.",
+    "context": "Description",
+    "maxLength": 207,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.fleet-sdk.features.0",
+    "source": "JavaScript SDK",
+    "context": "General content",
+    "maxLength": 21,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.fleet-sdk.features.1",
+    "source": "Transaction Building",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.fleet-sdk.features.2",
+    "source": "Web Integration",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.fleet-sdk.features.3",
+    "source": "Node.js Support",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.appkit.description",
+    "source": "The primary Software Development Kit (SDK) for developing applications on Ergo using JVM-based programming languages.",
+    "context": "Description",
+    "maxLength": 175.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.appkit.features.0",
+    "source": "JVM SDK",
+    "context": "General content",
+    "maxLength": 10.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.appkit.features.1",
+    "source": "Scala/Java Support",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.appkit.features.2",
+    "source": "Smart Contract Development",
+    "context": "General content",
+    "maxLength": 39,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.appkit.features.3",
+    "source": "Official SDK",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigma-rust.description",
+    "source": "An implementation of the ErgoTree interpreter in Rust, providing tools for working with transactions and bindings for various languages.",
+    "context": "Description",
+    "maxLength": 204,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigma-rust.features.0",
+    "source": "Rust Implementation",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigma-rust.features.1",
+    "source": "ErgoTree Interpreter",
+    "context": "General content",
+    "maxLength": 30,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigma-rust.features.2",
+    "source": "Multi-language Bindings",
+    "context": "General content",
+    "maxLength": 34.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigma-rust.features.3",
+    "source": "WASM Support",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.gluon.description",
+    "source": "A protocol developed to strengthen (harden) existing stablecoins in the Ergo ecosystem, such as SigmaUSD.",
+    "context": "Description",
+    "maxLength": 157.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.gluon.features.0",
+    "source": "Stablecoin Enhancement",
+    "context": "General content",
+    "maxLength": 33,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.gluon.features.1",
+    "source": "Protocol Hardening",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.gluon.features.2",
+    "source": "DeFi Infrastructure",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.gluon.features.3",
+    "source": "Stability Mechanism",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.chaincash.description",
+    "source": "A framework for creating decentralized P2P monetary systems on Ergo, allowing users to issue their own currencies backed by trust or collateral.",
+    "context": "Description",
+    "maxLength": 216,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.chaincash.features.0",
+    "source": "P2P Money",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.chaincash.features.1",
+    "source": "Custom Currencies",
+    "context": "General content",
+    "maxLength": 25.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.chaincash.features.2",
+    "source": "Trust-based Backing",
+    "context": "General content",
+    "maxLength": 28.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.chaincash.features.3",
+    "source": "Monetary Framework",
+    "context": "General content",
+    "maxLength": 27,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigrsv.description",
+    "source": "The reserve coin for the SigmaUSD stablecoin protocol. Users mint SigRSV by depositing ERG into reserves and can profit from ERG price increases.",
+    "context": "Description",
+    "maxLength": 217.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigrsv.features.0",
+    "source": "Reserve Coin",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigrsv.features.1",
+    "source": "ERG Exposure",
+    "context": "General content",
+    "maxLength": 18,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigrsv.features.2",
+    "source": "SigmaUSD Backing",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.sigrsv.features.3",
+    "source": "Yield Potential",
+    "context": "General content",
+    "maxLength": 22.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.exle.description",
+    "source": "A lending/borrowing protocol within the Ergo ecosystem, integrated with Crux Finance.",
+    "context": "Description",
+    "maxLength": 127.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.exle.features.0",
+    "source": "Lending Protocol",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.exle.features.1",
+    "source": "Borrowing",
+    "context": "General content",
+    "maxLength": 13.5,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.exle.features.2",
+    "source": "DeFi Integration",
+    "context": "General content",
+    "maxLength": 24,
+    "translation": ""
+  },
+  {
+    "key": "ecosystem-projects.ecosystemProjects.exle.features.3",
+    "source": "Crux Finance Integration",
+    "context": "General content",
+    "maxLength": 36,
+    "translation": ""
+  }
+]

@@ -63,7 +63,7 @@ export function ErgoIn5MinutesClient() {
   ]
 
   const projects = [
-    { name: "Spectrum Finance", description: "Decentralized exchange", type: "DEX" },
+    { name: "Spectrum Finance", description: "Historical DEX reference; sunset since 2024", type: "DEX" },
     { name: "SigmaUSD", description: "Algorithmic stablecoin", type: "Stablecoin" },
     { name: "DuckPools", description: "Algorithmic lending platform", type: "Lending" },
     { name: "Rosen Bridge", description: "Cross-chain bridge connecting Ergo with Cardano and beyond", type: "Bridge" },
@@ -130,7 +130,7 @@ export function ErgoIn5MinutesClient() {
   const faqItems = [
     {
       question: "What is the Ergo blockchain?",
-      answer: "Ergo is a Proof-of-Work blockchain that blends Bitcoin-level security with the eUTXO smart-contract model and Sigma-protocol privacy to power secure, auditable DeFi."
+      answer: "Ergo is a Proof-of-Work blockchain that blends a Bitcoin-style UTXO security model with eUTXO smart contracts and Sigma-protocol privacy patterns."
     },
     {
       question: "How is Ergo different from Ethereum and Bitcoin (eUTXO vs account)?",
@@ -138,7 +138,7 @@ export function ErgoIn5MinutesClient() {
     },
     {
       question: "What are Sigma protocols on Ergo?",
-      answer: "Sigma protocols are native zero-knowledge proofs (AND/OR, threshold, ring) that enable auditable privacy—you keep details confidential yet can prove compliance or selectively disclose when required."
+      answer: "Sigma protocols are native zero-knowledge proofs (AND/OR, threshold, ring) that enable auditable privacy patterns: you can keep details confidential while selectively disclosing or proving specific properties when required."
     },
     {
       question: "What is storage rent on Ergo?",
@@ -158,7 +158,7 @@ export function ErgoIn5MinutesClient() {
     },
     {
       question: "Is Ergo a 'privacy coin'? (compliance & audits)",
-      answer: "Privacy on Ergo is optional and policy-driven: Sigma proofs enable selective disclosure and auditability, making privacy features compatible with compliance workflows."
+      answer: "Privacy on Ergo is optional and policy-driven: Sigma proofs enable selective disclosure and auditability. Actual legal compliance depends on jurisdiction, implementation, and the surrounding service provider."
     }
   ]
 

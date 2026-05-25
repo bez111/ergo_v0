@@ -12,25 +12,25 @@
     },
     "problem": {
       "sectionLabel": "The Problem",
-      "heading": "Why existing payment rails",
-      "headingMuted": "can't serve agents"
+      "heading": "Merchant checkout rails solve commerce.",
+      "headingMuted": "Autonomous work settlement needs another layer."
     },
     "stripeProblemItems": [
       {
         "title": "No persistent identity",
-        "body": "Agents spin up and disappear. Stripe requires KYC, billing accounts, and static merchant IDs — none of which work for ephemeral autonomous processes."
+        "body": "Commerce rails are built around persistent buyers, merchants, accounts, disputes and compliance. Autonomous work flows can be temporary processes acting under bounded authority."
       },
       {
         "title": "One-time payments only",
-        "body": "Agents need credit: issue now, redeem later. Stripe has no programmable IOU layer. Every micro-call requires a round-trip to a payment processor."
+        "body": "Autonomous services often need bounded credit: issue now, redeem later, expire by policy. That is a settlement primitive, not only a checkout event."
       },
       {
         "title": "No programmable acceptance",
-        "body": "You can't tell Stripe 'accept payment only if the agent completed task X and holds credential Y.' Logic lives outside the payment layer — fragile by design."
+        "body": "A work rail needs terms inside the claim: accept only if the task hash, verifier receipt, deadline and policy match. Otherwise payment and verification split apart."
       },
       {
         "title": "Millisecond economics break",
-        "body": "A $0.001 API call through Stripe costs more in fees than the call itself. The rails weren't built for machine-to-machine micropayments at any scale."
+        "body": "Small machine calls need deterministic costs and receipt retention. Human checkout systems can coexist with this, but they do not replace the programmable settlement layer."
       }
     ],
     "creditUnlock": {
@@ -62,7 +62,7 @@
     "whyErgoItems": [
       {
         "title": "eUTXO: verifiable atomicity",
-        "body": "Every transaction is deterministic. Agents know exactly what will happen before submitting. No reentrancy, no hidden global state, no MEV surprises.",
+        "body": "Transactions are deterministic against explicit inputs and outputs. Agents can reason about outcomes before submitting, with no protocol-level reentrancy and less exposure to common account-model MEV patterns.",
         "href": "/technology/eutxo-model"
       },
       {
@@ -72,7 +72,7 @@
       },
       {
         "title": "Babel Fees: agents don't need ERG",
-        "body": "Agents can pay transaction fees with any token. No need to pre-fund an ERG wallet for every new agent instance — critical for ephemeral compute.",
+        "body": "Agents can cover transaction fees through supported token-to-ERG paths. That reduces the need to pre-fund every new agent instance with ERG — critical for ephemeral compute.",
         "href": "/technology/babel-fees"
       },
       {
@@ -170,7 +170,7 @@
     "bml": {
       "tag": "BetterMoneyLabs",
       "heading": "We're building the reference stack.",
-      "description": "Notes, credit, trackers, reserves, acceptance predicates — and the showcase for agent-to-agent payments. If you're building in this space, we want to talk to you.",
+      "description": "Notes, credit, trackers, reserves, acceptance predicates — and the showcase for agent-to-agent settlement receipts. If you're building in this space, we want to talk to you.",
       "ctaArchitecture": "Technical architecture",
       "ctaTalk": "Talk to us"
     },

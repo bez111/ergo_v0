@@ -763,7 +763,7 @@
             "icon": "DollarSign"
           },
           {
-            "title": "Spectrum DEX",
+            "title": "Historical DEX designs",
             "description": "Dezentrale Börse mit Preisfeeds für Limit-Orders und Liquidierungen",
             "icon": "BarChart3"
           },
@@ -2211,7 +2211,7 @@
           "description": "Algorithmischer Stablecoin mit ERG/USD-Preis-Feeds"
         },
         {
-          "title": "Spectrum DEX",
+          "title": "Historical DEX designs",
           "description": "Dezentralisierte Börse mit Echtzeit-Preisdaten"
         },
         {
@@ -4059,7 +4059,7 @@
         "0": {
           "title": "DEX-Orderbücher",
           "description": "Jede Order ist eine separate Box und ermöglicht paralleles Matching und atomare Swaps",
-          "example": "Spectrum Finance"
+          "example": "Historical ErgoDEX/Spectrum"
         },
         "1": {
           "title": "Kreditprotokolle",
@@ -4658,7 +4658,7 @@
         },
         "1": {
           "question": "Ist Ergo eine Datenschutz-Münze?",
-          "answer": "Ergo bietet optionalen Datenschutz. Nutzer können zwischen transparenten oder vertraulichen Transaktionen wählen. Datenschutz ist eine Funktion, nicht verpflichtend, und wahrt die regulatorische Compliance."
+          "answer": "Ergo bietet optionalen Datenschutz durch Sigma Protocols und ErgoMixer, während Monero obligatorischen Datenschutz hat. Ergo kann Selective-Disclosure-Workflows unterstützen; rechtliche Compliance hängt jedoch von Jurisdiktion, Implementierung und den umgebenden Dienstleistern ab."
         },
         "2": {
           "question": "Was ist ErgoMixer?",

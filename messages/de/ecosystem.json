@@ -148,7 +148,7 @@
             },
             {
               "question": "Welche DeFi-Projekte gibt es auf Ergo?",
-              "answer": "Wichtige DeFi-Projekte umfassen SigmaUSD (algorithmischer Stablecoin), ErgoDEX (DEX), Kreditprotokolle und Oracle-Pools."
+              "answer": "Key DeFi references include SigmaUSD, historical DEX designs such as ErgoDEX/Spectrum, lending protocols, and oracle pools. Always verify each project current operational status before using real funds."
             },
             {
               "question": "Welche Wallets unterstützen Ergo?",

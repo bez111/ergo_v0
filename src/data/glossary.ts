@@ -79,7 +79,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     technicalDetails: "Ergo boxes have registers R0-R9 where R0 holds the monetary value, R1 the protecting script (ErgoScript), R2 the tokens, R3 the creation info, and R4-R9 are available for arbitrary data. Scripts can access box contents, context (block height, headers), and perform cryptographic operations via Sigma protocols.",
     
     useCases: [
-      "DEXs with atomic swaps (no front-running possible)",
+      "DEXs with atomic swaps and reduced front-running surface",
       "Multi-signature wallets with complex spending conditions",
       "Time-locked contracts with predictable execution",
       "Privacy-preserving DeFi applications",
@@ -341,7 +341,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     faq: [
       {
         question: "What is Storage Rent in Ergo?",
-        answer: "Storage Rent is a small fee that miners can collect from boxes (UTXOs) that haven't moved in ~4 years. It prevents blockchain bloat, provides sustainable miner income, and ensures lost coins eventually return to circulation.",
+        answer: "Storage Rent is a small fee that miners can collect from boxes (UTXOs) that haven't moved in ~4 years. It discourages blockchain bloat, adds a protocol-level miner revenue path, and can return value from dormant boxes to circulation over time.",
       },
       {
         question: "Will I lose my ERG to Storage Rent?",
@@ -867,7 +867,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: "mev-resistance",
     term: "MEV Resistance",
     
-    shortDefinition: "Ergo's design features that prevent Maximal Extractable Value attacks like front-running and sandwich attacks common on Ethereum.",
+    shortDefinition: "Ergo's design features that reduce Maximal Extractable Value attacks like front-running and sandwich attacks common on account-based DeFi.",
     
     definition: "MEV (Maximal Extractable Value) resistance refers to Ergo's architectural advantages that make it difficult for miners or validators to extract value by reordering, inserting, or censoring transactions. The eUTXO model's deterministic execution and local state make MEV attacks significantly harder than on account-based chains.",
     
@@ -1013,7 +1013,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       "24/7 availability",
     ],
     
-    technicalDetails: "Ergo DeFi benefits from eUTXO's deterministic execution (no failed transactions with lost fees), native multi-asset support (efficient token swaps), and Sigma Protocols (privacy-preserving DeFi). Popular protocols include Spectrum DEX, SigmaUSD stablecoin, and various lending platforms.",
+    technicalDetails: "Ergo DeFi benefits from eUTXO's deterministic execution (no failed transactions with lost fees), native multi-asset support (efficient token swaps), and Sigma Protocols (privacy-preserving DeFi). Examples include SigmaUSD, historical DEX designs such as Spectrum/ErgoDEX, and current or future lending and trading protocols. Verify each deployment's live status before using funds.",
     
     useCases: [
       "Trading on decentralized exchanges (DEXs)",
@@ -1036,7 +1036,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       },
       {
         question: "What DeFi apps exist on Ergo?",
-        answer: "Popular Ergo DeFi includes Spectrum DEX for trading, SigmaUSD stablecoin, various lending protocols, and yield farming opportunities through liquidity provision.",
+        answer: "Ergo DeFi includes SigmaUSD, historical DEX designs such as Spectrum/ErgoDEX, lending and trading protocols, and liquidity-provision patterns. Spectrum Finance is historical/frozen since February 2024, so verify current venues before trading or providing liquidity.",
       },
     ],
     
@@ -1456,7 +1456,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       "Mixing coins for unlinkability",
       "Receiving donations privately",
       "Proving credentials without revealing data",
-      "Compliant privacy (selective disclosure)",
+      "Compliance-aware privacy (selective disclosure)",
     ],
     
     relatedTags: ["privacy", "Sigma Protocols", "ErgoMixer", "stealth addresses", "zero knowledge", "mixing"],
@@ -1618,7 +1618,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     
     shortDefinition: "A non-custodial mixing service on Ergo that uses Sigma Protocols to break transaction links for privacy.",
     
-    definition: "ErgoMixer is a non-custodial coin mixing application that uses Sigma Protocols to provide transaction privacy. Unlike centralized mixers, you never give up custody of your funds. ErgoMixer breaks the link between sending and receiving addresses, making transaction history difficult to trace while remaining compliant-friendly through selective disclosure.",
+    definition: "ErgoMixer is a non-custodial coin mixing application that uses Sigma Protocols to provide transaction privacy. Unlike centralized mixers, you never give up custody of your funds. ErgoMixer can reduce linkability between sending and receiving addresses. Selective-disclosure workflows may help with audit needs, but legal compliance depends on jurisdiction, implementation, and service context.",
     
     keywords: [
       "ergomixer",
@@ -1874,7 +1874,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     relatedTags: ["decentralization", "censorship resistance", "fair launch", "ASIC resistance"],
     faq: [
       { question: "Why does decentralization matter?", answer: "Decentralization prevents censorship, ensures no single party can change rules, and makes the network resilient to attacks or shutdowns." },
-      { question: "How decentralized is Ergo?", answer: "Very. Fair launch (no pre-mine/ICO), ASIC-resistant mining, no VC control, and community governance make Ergo one of the most decentralized smart contract platforms." },
+      { question: "How decentralized is Ergo?", answer: "Ergo is designed to prioritize decentralization: fair launch, no pre-mine/ICO, no VC allocation, GPU-friendly mining, and open community participation. Actual decentralization should be assessed through current mining, node, wallet, and governance data." },
     ],
     category: "general",
     difficulty: "beginner",
@@ -2040,15 +2040,15 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: "dex",
     term: "DEX (Decentralized Exchange)",
     shortDefinition: "A peer-to-peer exchange that allows trading cryptocurrencies without intermediaries or custody.",
-    definition: "Decentralized exchanges enable trustless trading directly from your wallet using smart contracts. On Ergo, DEXs like Spectrum Finance use the eUTXO model for atomic swaps - trades either complete fully or not at all. This eliminates front-running and MEV extraction common on Ethereum DEXs.",
+    definition: "Decentralized exchanges enable non-custodial trading directly from your wallet using smart contracts. On Ergo, historical DEX designs such as Spectrum/ErgoDEX used the eUTXO model for atomic swaps - trades either complete fully or not at all. This reduces the front-running and MEV surface common on account-based DEXs, but current venue status and liquidity must still be verified.",
     keywords: ["dex", "decentralized exchange", "spectrum finance", "atomic swaps", "amm", "liquidity pool", "ergo dex"],
     keyPoints: [
       "Trade directly from your wallet",
-      "No KYC or account required",
+      "No centralized account required for protocol-level use",
       "Atomic swaps ensure fair execution",
-      "No front-running on eUTXO",
+      "Reduced front-running surface on eUTXO",
       "Liquidity pools enable trading",
-      "Spectrum Finance is main Ergo DEX",
+      "Spectrum Finance is a historical reference, not an active default venue",
     ],
     useCases: [
       "Swapping ERG for tokens",
@@ -2058,7 +2058,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     ],
     relatedTags: ["DEX", "Spectrum Finance", "atomic swaps", "AMM", "DeFi", "liquidity"],
     faq: [
-      { question: "What DEXs are on Ergo?", answer: "Spectrum Finance is the main DEX. It uses an AMM model with liquidity pools for trustless, MEV-resistant trading." },
+      { question: "What DEXs are on Ergo?", answer: "Spectrum Finance was a major Ergo DEX reference, but it issued a sunset notice and froze contracts in February 2024. Check the current ecosystem registry and liquidity before using any venue." },
       { question: "Is DEX trading safe?", answer: "DEXs eliminate custodial risk (you control your keys), but smart contract risk exists. Use audited, established protocols." },
     ],
     category: "smart-contracts",
@@ -2070,7 +2070,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: "amm",
     term: "AMM (Automated Market Maker)",
     shortDefinition: "A DEX mechanism using liquidity pools and algorithms instead of order books for trading.",
-    definition: "AMMs replace traditional order books with liquidity pools and mathematical formulas (like x*y=k) to determine prices. Liquidity providers deposit token pairs and earn fees from trades. On Ergo, AMMs benefit from eUTXO's atomic execution - no partial fills or sandwich attacks.",
+    definition: "AMMs replace traditional order books with liquidity pools and mathematical formulas (like x*y=k) to determine prices. Liquidity providers deposit token pairs and earn fees from trades. On Ergo, AMMs benefit from eUTXO's atomic execution and a reduced surface for common sandwich patterns.",
     keywords: ["amm", "automated market maker", "liquidity pool", "constant product", "dex mechanism", "spectrum amm"],
     keyPoints: [
       "No order book needed",
@@ -2078,7 +2078,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       "Liquidity providers earn fees",
       "Anyone can provide liquidity",
       "Slippage depends on pool depth",
-      "eUTXO prevents MEV attacks",
+      "eUTXO reduces common MEV patterns",
     ],
     relatedTags: ["AMM", "DEX", "liquidity pool", "DeFi", "Spectrum Finance"],
     faq: [
@@ -2538,20 +2538,20 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: "front-running",
     term: "Front-Running",
     shortDefinition: "Exploiting advance knowledge of pending transactions to profit, common in DeFi on account-based chains.",
-    definition: "Front-running occurs when someone sees your pending transaction and submits their own with higher fees to execute first, profiting at your expense. This is rampant on Ethereum DeFi. Ergo's eUTXO model largely prevents front-running because transactions reference specific boxes - there's nothing to front-run.",
+    definition: "Front-running occurs when someone sees your pending transaction and submits their own with higher fees to execute first, profiting at your expense. This is common on account-model DeFi. Ergo's eUTXO model reduces the opportunity because transactions reference specific boxes and explicit outputs.",
     keywords: ["front-running", "mev", "sandwich attack", "transaction ordering", "defi exploit"],
     keyPoints: [
       "Exploits pending transaction visibility",
       "Common MEV extraction method",
       "Costs DeFi users billions yearly",
-      "eUTXO makes front-running impractical",
+      "eUTXO makes common front-running patterns harder",
       "Transactions reference specific boxes",
       "No global state to exploit",
     ],
     relatedTags: ["front-running", "MEV", "DeFi", "eUTXO", "security"],
     faq: [
-      { question: "Can I be front-run on Ergo?", answer: "Largely no. eUTXO transactions reference specific boxes, so there's no shared state for attackers to exploit like on Ethereum." },
-      { question: "What about sandwich attacks?", answer: "Also very difficult on Ergo. The eUTXO model's local state prevents the global state manipulation needed for sandwiching." },
+      { question: "Can I be front-run on Ergo?", answer: "Ergo greatly reduces common account-model front-running patterns because eUTXO transactions reference specific boxes, but dApp design, mempool policy and off-chain order flow can still matter." },
+      { question: "What about sandwich attacks?", answer: "They are much harder on Ergo because local state reduces the global-state manipulation used for sandwiching, but this should be described as strong resistance rather than an absolute guarantee." },
     ],
     category: "smart-contracts",
     difficulty: "intermediate",
@@ -2563,20 +2563,20 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: "sandwich-attack",
     term: "Sandwich Attack",
     shortDefinition: "A MEV attack that places transactions before and after a victim's trade to extract profit.",
-    definition: "In a sandwich attack, an attacker sees your pending DEX trade, buys before you (raising the price), lets your trade execute at the worse price, then sells after (profiting from the price impact). This is a major problem on Ethereum. Ergo's eUTXO model makes sandwiching impractical.",
+    definition: "In a sandwich attack, an attacker sees your pending DEX trade, buys before you (raising the price), lets your trade execute at the worse price, then sells after (profiting from the price impact). This is a major problem on account-model DeFi. Ergo's eUTXO model makes common sandwich patterns much harder.",
     keywords: ["sandwich attack", "mev attack", "defi exploit", "front-running", "dex attack"],
     keyPoints: [
       "Buy before victim, sell after",
       "Extracts value from traders",
       "Requires seeing pending transactions",
       "Very common on Ethereum",
-      "eUTXO prevents this attack",
+      "eUTXO strongly reduces this attack surface",
       "Part of 'dark forest' problem",
     ],
     relatedTags: ["sandwich attack", "MEV", "front-running", "DeFi", "security"],
     faq: [
-      { question: "How much do sandwich attacks cost users?", answer: "On Ethereum, billions of dollars yearly. Ergo users don't face this problem due to eUTXO architecture." },
-      { question: "Why can't sandwiches happen on Ergo?", answer: "eUTXO transactions consume specific boxes. An attacker can't insert transactions that affect your specific boxes." },
+      { question: "How much do sandwich attacks cost users?", answer: "On Ethereum-style DeFi, sandwich attacks have extracted very large sums from users. Ergo's eUTXO architecture reduces this risk by avoiding the same global-state ordering dynamics." },
+      { question: "Why are sandwiches harder on Ergo?", answer: "eUTXO transactions consume specific boxes. An attacker generally cannot insert a transaction that changes the exact boxes and outputs your transaction is built to consume." },
     ],
     category: "smart-contracts",
     difficulty: "intermediate",
@@ -2915,9 +2915,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: "aml",
     term: "AML (Anti-Money Laundering)",
     
-    shortDefinition: "Regulatory framework requiring financial institutions to detect and prevent money laundering. Ergo's optional privacy allows compliance while preserving user choice.",
+    shortDefinition: "Regulatory framework requiring financial institutions to detect and prevent money laundering. Ergo's optional privacy can support selective-disclosure workflows while preserving user choice.",
     
-    definition: "Anti-Money Laundering (AML) refers to laws, regulations, and procedures designed to prevent criminals from disguising illegally obtained funds as legitimate income. In cryptocurrency, AML typically involves exchanges implementing Know Your Customer (KYC) procedures and transaction monitoring. Ergo's approach to privacy is AML-compatible: it offers optional privacy features (Sigma protocols, ErgoMixer) rather than privacy-by-default, allowing users to prove transaction legitimacy when required while maintaining privacy for everyday transactions.",
+    definition: "Anti-Money Laundering (AML) refers to laws, regulations, and procedures designed to prevent criminals from disguising illegally obtained funds as legitimate income. In cryptocurrency, AML typically involves exchanges implementing Know Your Customer (KYC) procedures and transaction monitoring. Ergo's optional privacy features, including Sigma Protocols and ErgoMixer, can support selective-disclosure workflows. Actual AML compliance depends on jurisdiction, implementation, and the surrounding service provider.",
     
     keywords: ["aml", "anti-money laundering", "kyc", "compliance", "regulation", "privacy", "exchanges"],
     
@@ -2927,10 +2927,10 @@ export const glossaryTerms: GlossaryTerm[] = [
       "Ergo offers optional, not mandatory, privacy",
       "Sigma protocols enable selective disclosure",
       "Can prove transaction legitimacy when needed",
-      "Balances privacy with regulatory compliance",
+      "Supports selective-disclosure audit workflows",
     ],
     
-    technicalDetails: "Ergo's Sigma protocols enable 'compliant privacy' - users can create zero-knowledge proofs about their transactions without revealing all details. For example, proving funds came from a legitimate source without revealing the exact source. This contrasts with privacy-by-default coins where proving legitimacy is difficult. Exchanges listing ERG implement standard AML/KYC procedures.",
+    technicalDetails: "Ergo's Sigma protocols can support selective-disclosure privacy - users can create zero-knowledge proofs about their transactions without revealing all details. For example, a user may be able to prove a property about funds without revealing the full transaction graph. Actual legal compliance depends on jurisdiction, implementation, and the surrounding service provider. Exchanges listing ERG implement their own AML/KYC procedures.",
     
     useCases: [
       "Understanding exchange requirements",
@@ -2965,7 +2965,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     
     shortDefinition: "Tools and methods for analyzing blockchain data - transaction patterns, network metrics, DeFi stats, and market data. Essential for research and informed decisions.",
     
-    definition: "Blockchain analytics involves collecting, processing, and analyzing on-chain data to derive insights about network activity, user behavior, market trends, and protocol health. For Ergo, analytics tools track metrics like hash rate, transaction volume, DeFi TVL (Total Value Locked), token distributions, and wallet activity. Platforms like Ergo Watch, Spectrum Finance analytics, and block explorers provide this data. Analytics help users make informed decisions, researchers study network behavior, and developers optimize applications.",
+    definition: "Blockchain analytics involves collecting, processing, and analyzing on-chain data to derive insights about network activity, user behavior, market trends, and protocol health. For Ergo, analytics tools track metrics like hash rate, transaction volume, DeFi TVL, token distributions, and wallet activity. Platforms like Ergo Watch, historical Spectrum analytics, and block explorers provide or have provided this data. Analytics help users make informed decisions, researchers study network behavior, and developers optimize applications.",
     
     keywords: ["analytics", "blockchain analytics", "on-chain data", "metrics", "ergo watch", "tvl", "hash rate", "transaction volume"],
     
@@ -2974,7 +2974,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       "Tracks network metrics (hash rate, TPS, fees)",
       "DeFi analytics (TVL, trading volume, yields)",
       "Market data (price, volume, liquidity)",
-      "Tools: Ergo Watch, explorers, Spectrum stats",
+      "Tools: Ergo Watch, explorers, and project-specific dashboards",
       "Essential for research and decision-making",
     ],
     
@@ -2997,7 +2997,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       },
       {
         question: "Where can I find Ergo analytics?",
-        answer: "Ergo Watch provides network metrics, Spectrum Finance shows DeFi analytics, block explorers (explorer.ergoplatform.com) show transaction data, and various community dashboards track specific metrics.",
+        answer: "Ergo Watch provides network metrics, block explorers show transaction data, and current project/community dashboards track specific metrics. Spectrum Finance analytics remain a historical reference rather than a live default DeFi source.",
       },
       {
         question: "Why is blockchain analytics useful?",
@@ -3152,7 +3152,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       },
       {
         question: "Why is Ergo ASIC-resistant?",
-        answer: "Ergo uses the Autolykos algorithm which requires significant memory (2.5GB+ VRAM), making ASIC development economically impractical. This allows anyone with a consumer GPU to mine profitably, promoting decentralization and fair distribution.",
+        answer: "Ergo uses the Autolykos algorithm, which requires significant memory and is designed to reduce specialized-hardware advantages. Consumer GPUs can participate, while profitability depends on hardware, electricity, network difficulty, pool fees, and ERG price.",
       },
       {
         question: "Can I mine Ergo with an ASIC?",
@@ -3314,11 +3314,11 @@ export const glossaryTerms: GlossaryTerm[] = [
       "PoW provides objective, partition-tolerant consensus",
       "ASIC-resistance maintains mining decentralization",
       "Storage Rent ensures long-term economic viability",
-      "eUTXO prevents MEV and reentrancy attacks",
+      "eUTXO reduces common MEV patterns and removes protocol-level reentrancy",
       "Designed for decades of operation",
     ],
     
-    technicalDetails: "Ergo's resilience comes from: 1) Autolykos PoW - objective consensus that resolves network splits without coordination, 2) Memory-hard mining - prevents ASIC centralization, 3) Storage Rent - sustainable fee model after emission ends, 4) eUTXO - deterministic execution preventing exploitation, 5) NiPoPoWs - enables light clients and cross-chain verification, 6) Open source - community can fork if needed.",
+    technicalDetails: "Ergo's resilience comes from: 1) Autolykos PoW - objective consensus that resolves network splits without coordination, 2) Memory-hard mining - reduces ASIC-centralization pressure, 3) Storage Rent - sustainable fee model after emission ends, 4) eUTXO - deterministic execution that reduces common exploit classes but does not remove application-level risk, 5) NiPoPoWs - enables light clients and cross-chain verification, 6) Open source - community can fork if needed.",
     
     useCases: [
       "Evaluating blockchain long-term viability",
@@ -3511,7 +3511,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     
     shortDefinition: "The ability of a blockchain to process any valid transaction without discrimination, preventing governments, corporations, or other entities from blocking or reversing transactions.",
     
-    definition: "Censorship resistance is a fundamental property of decentralized blockchains that ensures no single entity can prevent valid transactions from being processed or reverse confirmed transactions. This is achieved through decentralization of miners/validators, permissionless participation, and cryptographic security. Ergo prioritizes censorship resistance through its Proof-of-Work consensus, ASIC-resistant mining (enabling geographic distribution), and privacy features (Sigma protocols, ErgoMixer) that make transaction censorship technically difficult even if attempted.",
+    definition: "Censorship resistance is a fundamental goal of decentralized blockchains: reducing the ability of any single entity to prevent valid transactions from being processed or reverse confirmed transactions. This is achieved through decentralization of miners/validators, permissionless participation, and cryptographic security. Ergo prioritizes censorship resistance through Proof-of-Work consensus, GPU-friendly mining, and privacy features such as Sigma Protocols and ErgoMixer.",
     
     keywords: ["censorship resistance", "decentralization", "permissionless", "financial freedom", "proof of work", "privacy", "transaction finality"],
     
@@ -3524,7 +3524,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       "Core principle of cryptocurrency and financial freedom",
     ],
     
-    technicalDetails: "Ergo achieves censorship resistance through multiple layers: 1) ASIC-resistant Autolykos enables diverse, global mining preventing geographic concentration. 2) Any valid transaction paying sufficient fees will eventually be included. 3) Sigma protocols enable private transactions that can't be easily identified for censorship. 4) Decentralized network topology prevents single points of control. 5) Open-source code prevents hidden censorship mechanisms.",
+    technicalDetails: "Ergo supports censorship resistance through multiple layers: 1) Autolykos is designed to keep mining GPU-friendly and broadly accessible. 2) Permissionless miners can include valid transactions that pay sufficient fees. 3) Sigma Protocols can reduce unnecessary disclosure in contract flows. 4) Decentralized network topology reduces single points of control. 5) Open-source code makes censorship logic easier to inspect.",
     
     useCases: [
       "Sending funds without bank or government approval",
@@ -3543,7 +3543,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       },
       {
         question: "How does Ergo achieve censorship resistance?",
-        answer: "Ergo achieves censorship resistance through ASIC-resistant Proof-of-Work (enabling diverse global mining), permissionless transaction submission, privacy features (Sigma protocols, ErgoMixer), and decentralized network architecture. No single party can control transaction inclusion.",
+        answer: "Ergo supports censorship resistance through Proof-of-Work, permissionless transaction submission, privacy features such as Sigma Protocols and ErgoMixer, and decentralized network architecture. No protocol-level operator controls transaction inclusion, though real-world liveness still depends on miners, fees, connectivity, and network conditions.",
       },
       {
         question: "Why is censorship resistance important?",
@@ -4978,7 +4978,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     
     shortDefinition: "Equal opportunity for all participants without insider advantages. Ergo's fair launch, ASIC-resistance, and MEV-resistance embody this principle.",
     
-    definition: "Fair competition in blockchain means creating equal opportunity for all participants without privileged access or insider advantages. Ergo exemplifies this through: fair launch (no pre-mine, no ICO, no VC allocation), ASIC-resistant mining (anyone with a GPU can participate), MEV-resistance (transactions can't be front-run), and open-source development (anyone can contribute). This contrasts with blockchains that had large pre-mines, private sales to VCs, or mining algorithms that favor specialized hardware manufacturers.",
+    definition: "Fair competition in blockchain means creating equal opportunity for all participants without privileged access or insider advantages. Ergo exemplifies this through: fair launch (no pre-mine, no ICO, no VC allocation), ASIC-resistant mining (anyone with a GPU can participate), MEV-resistance (common front-running patterns are harder), and open-source development (anyone can contribute). This contrasts with blockchains that had large pre-mines, private sales to VCs, or mining algorithms that favor specialized hardware manufacturers.",
     
     keywords: ["fair competition", "fair launch", "no premine", "asic resistance", "mev resistance", "decentralization", "equal opportunity"],
     
@@ -4986,12 +4986,12 @@ export const glossaryTerms: GlossaryTerm[] = [
       "No pre-mine or insider token allocation",
       "No VC or private sale advantages",
       "ASIC-resistant GPU mining for all",
-      "MEV-resistance prevents front-running",
+      "MEV-resistance reduces common front-running patterns",
       "Open source - anyone can contribute",
       "Level playing field from day one",
     ],
     
-    technicalDetails: "Ergo's fair competition mechanisms: 1) Genesis block had no pre-mined coins - all ERG comes from mining, 2) Autolykos algorithm prevents ASIC advantages, 3) eUTXO model prevents MEV extraction that plagues Ethereum, 4) Permissionless - anyone can mine, build, or participate, 5) Transparent development on GitHub.",
+    technicalDetails: "Ergo's fair competition mechanisms: 1) Genesis block had no pre-mined coins - all ERG comes from mining, 2) Autolykos algorithm resists ASIC advantages, 3) eUTXO model reduces common MEV extraction patterns that plague account-based DeFi, 4) Permissionless - anyone can mine, build, or participate, 5) Transparent development on GitHub.",
     
     useCases: [
       "Evaluating blockchain fairness and decentralization",
@@ -5770,7 +5770,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     
     shortDefinition: "The user-facing layer of blockchain applications - wallets, DEX frontends, and dApp UIs that make complex protocols accessible to regular users.",
     
-    definition: "In blockchain, an interface is the user-facing layer that allows people to interact with underlying protocols without understanding the technical complexity. Wallets like Nautilus provide interfaces for managing ERG and tokens. DEX frontends like Spectrum Finance's website interface with AMM smart contracts. Block explorers interface with node data. Good interfaces abstract away complexity while maintaining security. Since protocols are permissionless, anyone can build alternative interfaces, promoting competition and user choice.",
+    definition: "In blockchain, an interface is the user-facing layer that allows people to interact with underlying protocols without understanding the technical complexity. Wallets like Nautilus provide interfaces for managing ERG and tokens. DEX frontends interface with AMM smart contracts. Block explorers interface with node data. Good interfaces abstract away complexity while maintaining security. Since protocols are permissionless, anyone can build alternative interfaces, promoting competition and user choice.",
     
     keywords: ["interface", "ui", "ux", "frontend", "wallet", "dapp", "user experience", "nautilus"],
     
@@ -5787,7 +5787,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     
     useCases: [
       "Interacting with Ergo blockchain via Nautilus",
-      "Trading on Spectrum Finance frontend",
+      "Trading through a current verified DEX frontend",
       "Viewing transactions on explorers",
       "Building custom dApp interfaces",
     ],
@@ -6103,14 +6103,14 @@ export const glossaryTerms: GlossaryTerm[] = [
     
     shortDefinition: "The ease with which an asset can be bought or sold without significantly affecting its price - high liquidity means easy trading with minimal slippage.",
     
-    definition: "Liquidity refers to how easily an asset can be converted to cash or traded for another asset without causing significant price movement. In cryptocurrency, high liquidity means you can buy or sell large amounts quickly at stable prices, while low liquidity leads to price slippage and difficulty executing trades. On Ergo, liquidity is provided through decentralized exchanges like Spectrum Finance, where users can trade ERG and native tokens. Liquidity providers (LPs) deposit assets into pools and earn trading fees in return.",
+    definition: "Liquidity refers to how easily an asset can be converted to cash or traded for another asset without causing significant price movement. In cryptocurrency, high liquidity means you can buy or sell large amounts quickly at stable prices, while low liquidity leads to price slippage and difficulty executing trades. On Ergo, liquidity can come from centralized exchanges, bridges, and current non-custodial venues. Historical DEXs like Spectrum Finance are useful references, but current active liquidity should be verified before trading.",
     
     keywords: ["liquidity", "trading", "slippage", "liquidity pool", "DEX", "spectrum finance", "market depth", "trading volume"],
     
     keyPoints: [
       "High liquidity = easy trading with minimal price impact",
       "Low liquidity = price slippage on larger trades",
-      "DEXs like Spectrum Finance provide on-chain liquidity",
+      "Current DEXs or bridges may provide on-chain liquidity",
       "Liquidity providers earn fees for depositing assets",
       "Total Value Locked (TVL) indicates ecosystem liquidity",
       "More liquidity attracts more traders and users",
@@ -6135,11 +6135,11 @@ export const glossaryTerms: GlossaryTerm[] = [
       },
       {
         question: "Where can I find liquidity for Ergo tokens?",
-        answer: "The main liquidity source for ERG and Ergo native tokens is Spectrum Finance, a decentralized exchange with AMM pools. Centralized exchanges like KuCoin and Gate.io also provide ERG liquidity for fiat/crypto pairs.",
+        answer: "ERG liquidity depends on current market venues. Centralized exchanges like KuCoin and Gate.io may provide ERG liquidity, while non-custodial routes and bridges vary over time. Spectrum Finance is a historical/frozen DEX reference, so verify live liquidity before trading.",
       },
       {
         question: "How can I provide liquidity on Ergo?",
-        answer: "You can provide liquidity on Spectrum Finance by depositing equal values of two tokens into a pool (e.g., ERG/SigUSD). You'll receive LP tokens representing your share and earn a portion of trading fees. Be aware of impermanent loss risks.",
+        answer: "You can provide liquidity only through a currently active venue. In AMMs, you typically deposit equal values of two tokens, receive LP tokens representing your share, and earn a portion of trading fees. Verify contract status, liquidity depth, withdrawal rules, and impermanent loss risk first.",
       },
     ],
     
@@ -6495,7 +6495,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     
     shortDefinition: "An entity that provides liquidity by continuously quoting buy and sell prices, profiting from the spread while enabling smooth trading for others.",
     
-    definition: "A market maker is a participant who provides liquidity to a market by continuously offering to buy and sell an asset, profiting from the bid-ask spread. In traditional finance, these are typically large institutions. In DeFi, Automated Market Makers (AMMs) like those on Spectrum Finance replace human market makers with smart contracts and liquidity pools. Anyone can become a liquidity provider on Ergo DEXs, earning trading fees in exchange for depositing assets into pools.",
+    definition: "A market maker is a participant who provides liquidity to a market by continuously offering to buy and sell an asset, profiting from the bid-ask spread. In traditional finance, these are typically large institutions. In DeFi, Automated Market Makers (AMMs) replace human market makers with smart contracts and liquidity pools. Historical Ergo designs such as Spectrum/ErgoDEX show the pattern, while current venues must be checked before providing liquidity.",
     
     keywords: ["market maker", "mm", "liquidity provider", "amm", "automated market maker", "bid-ask spread", "spectrum finance", "defi"],
     
@@ -6508,10 +6508,10 @@ export const glossaryTerms: GlossaryTerm[] = [
       "Essential for healthy, liquid markets",
     ],
     
-    technicalDetails: "Traditional market makers manage order books with limit orders. DeFi AMMs use mathematical formulas (like x*y=k) to determine prices based on pool ratios. On Ergo's Spectrum Finance, liquidity providers deposit token pairs into pools and receive LP tokens. When trades occur, the pool rebalances and fees (typically 0.3%) are distributed to LPs. Ergo's eUTXO model enables unique AMM designs with features like concentrated liquidity.",
+    technicalDetails: "Traditional market makers manage order books with limit orders. DeFi AMMs use mathematical formulas (like x*y=k) to determine prices based on pool ratios. In Ergo-style AMMs, liquidity providers deposit token pairs into pools and receive LP tokens. When trades occur, the pool rebalances and fees are distributed to LPs according to the venue's rules. Ergo's eUTXO model enables AMM designs with explicit boxes and composable order flows.",
     
     useCases: [
-      "Providing liquidity on Spectrum Finance",
+      "Providing liquidity on a current active venue",
       "Understanding DEX mechanics and trading",
       "Earning passive income from trading fees",
       "Evaluating market health and liquidity depth",
@@ -6526,11 +6526,11 @@ export const glossaryTerms: GlossaryTerm[] = [
       },
       {
         question: "How do AMMs work on Ergo?",
-        answer: "Ergo's Spectrum Finance uses AMM pools where liquidity providers deposit token pairs. Prices are determined by pool ratios using formulas like x*y=k. Traders swap against pools, and LPs earn a share of trading fees proportional to their contribution.",
+        answer: "Ergo-style AMMs use pools where liquidity providers deposit token pairs. Prices are determined by pool ratios using formulas like x*y=k. Traders swap against pools, and LPs earn a share of trading fees proportional to their contribution. Spectrum Finance is a historical example, not an active default venue.",
       },
       {
         question: "Can I be a market maker on Ergo?",
-        answer: "Yes! Anyone can provide liquidity on Spectrum Finance by depositing tokens into pools. You'll receive LP tokens and earn trading fees. Be aware of impermanent loss risk when pool ratios change significantly.",
+        answer: "Yes, if there is a current active venue for the pair you want. You'll typically receive LP tokens and earn trading fees, but you should verify contract status and impermanent loss risk before depositing funds.",
       },
     ],
     
@@ -6679,7 +6679,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     
     shortDefinition: "Individuals or entities who use computing power to validate transactions, secure the Ergo network, and earn ERG rewards through the Autolykos Proof-of-Work algorithm.",
     
-    definition: "Miners are participants who contribute computational power to the Ergo network, competing to solve cryptographic puzzles and create new blocks. When a miner successfully finds a valid block, they receive block rewards (newly minted ERG) plus transaction fees from included transactions. Ergo uses the Autolykos 2 algorithm which is ASIC-resistant and memory-hard, allowing anyone with a consumer GPU (4GB+ VRAM) to mine profitably. Miners play a crucial role in network security, transaction validation, and maintaining decentralization.",
+    definition: "Miners are participants who contribute computational power to the Ergo network, competing to solve cryptographic puzzles and create new blocks. When a miner successfully finds a valid block, they receive block rewards plus transaction fees from included transactions. Ergo uses the Autolykos 2 algorithm, which is memory-hard and designed to keep GPU mining viable. Profitability depends on hardware, electricity, network difficulty, pool fees, and ERG price.",
     
     keywords: ["miners", "ergo mining", "gpu mining", "autolykos", "block rewards", "proof of work", "network security", "transaction validation"],
     
@@ -6711,7 +6711,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       },
       {
         question: "What do I need to mine Ergo?",
-        answer: "You need a GPU with 4GB+ VRAM (AMD or NVIDIA), mining software (lolMiner, T-Rex, or Nanominer), an Ergo wallet address, and optionally a mining pool. The Autolykos algorithm is ASIC-resistant, so consumer GPUs can mine profitably.",
+        answer: "You need a GPU with 4GB+ VRAM (AMD or NVIDIA), mining software, an Ergo wallet address, and optionally a mining pool. Autolykos is designed to keep GPU mining viable, but profitability depends on hardware, electricity, network difficulty, pool fees, and ERG price.",
       },
       {
         question: "How much can Ergo miners earn?",
@@ -7191,9 +7191,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: "order",
     term: "Order",
     
-    shortDefinition: "An instruction to buy or sell an asset at specified conditions. On Ergo DEXs like Spectrum Finance, orders interact with AMM pools or can be limit orders.",
+    shortDefinition: "An instruction to buy or sell an asset at specified conditions. On Ergo-style DEXs, orders can interact with AMM pools or limit-order contracts.",
     
-    definition: "An order in DeFi is an instruction to exchange one asset for another under specified conditions. On Ergo's decentralized exchanges like Spectrum Finance, orders typically interact with AMM (Automated Market Maker) pools for instant swaps, or can be limit orders that execute when price conditions are met. Unlike centralized exchanges with order books, AMM-based DEXs execute orders against liquidity pools. Ergo's eUTXO model enables unique order types including partial fills and composable multi-step orders.",
+    definition: "An order in DeFi is an instruction to exchange one asset for another under specified conditions. On Ergo-style decentralized exchanges, orders can interact with AMM pools for swaps or limit-order contracts that execute when price conditions are met. Unlike centralized exchanges with order books, AMM-based DEXs execute against liquidity pools. Ergo's eUTXO model enables order types including partial fills and composable multi-step orders.",
     
     keywords: ["order", "swap", "trade", "dex", "amm", "limit order", "spectrum finance", "defi"],
     
@@ -7201,15 +7201,15 @@ export const glossaryTerms: GlossaryTerm[] = [
       "Instruction to buy or sell assets",
       "AMM orders execute against liquidity pools",
       "Limit orders wait for price conditions",
-      "Spectrum Finance is Ergo's main DEX",
+      "Spectrum Finance is a historical Ergo DEX reference",
       "eUTXO enables partial fills and composability",
       "Orders are transactions on the blockchain",
     ],
     
-    technicalDetails: "On Ergo DEXs, market orders swap immediately against AMM pools at current prices (with slippage tolerance). Limit orders create boxes with conditions that can be spent when price reaches the target. The eUTXO model allows orders to be partially filled across multiple transactions. Order execution is MEV-resistant due to the UTXO model - the order specifies exact outputs, preventing front-running.",
+    technicalDetails: "On Ergo DEXs, market orders swap immediately against AMM pools at current prices (with slippage tolerance). Limit orders create boxes with conditions that can be spent when price reaches the target. The eUTXO model allows orders to be partially filled across multiple transactions. Order execution is MEV-resistant due to the UTXO model: the order specifies exact outputs, reducing common front-running patterns.",
     
     useCases: [
-      "Swapping tokens on Spectrum Finance",
+      "Swapping tokens on a current active DEX venue",
       "Setting limit orders for better prices",
       "Understanding DEX trading mechanics",
       "Comparing CEX vs DEX order execution",
@@ -7220,7 +7220,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     faq: [
       {
         question: "How do orders work on Ergo DEXs?",
-        answer: "On Spectrum Finance, market orders swap instantly against AMM liquidity pools. You specify input/output tokens and slippage tolerance. Limit orders can also be set to execute when prices reach your target.",
+        answer: "On an AMM venue, market orders swap against liquidity pools. You specify input/output tokens and slippage tolerance. Some DEX designs can also support limit orders that execute when prices reach your target. Verify the current venue and contract status before trading.",
       },
       {
         question: "What is slippage in an order?",
@@ -7422,7 +7422,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     
     shortDefinition: "Ergo's suite of privacy-enhancing technologies including Sigma protocols for zero-knowledge proofs and ErgoMixer for transaction mixing, enabling optional privacy for users.",
     
-    definition: "Privacy tools on Ergo encompass a range of technologies that allow users to enhance their financial privacy while maintaining regulatory compliance options. The foundation is Sigma protocols - composable zero-knowledge proofs that enable proving statements without revealing underlying data. ErgoMixer provides non-interactive, non-custodial coin mixing to break transaction linkability. Unlike privacy-by-default coins, Ergo offers optional privacy - users choose when and how much privacy they need, making it suitable for both private transactions and transparent business use.",
+    definition: "Privacy tools on Ergo encompass a range of technologies that allow users to enhance financial privacy and design selective-disclosure workflows. The foundation is Sigma protocols - composable zero-knowledge proofs that enable proving statements without revealing underlying data. ErgoMixer provides non-interactive, non-custodial coin mixing to break transaction linkability. Unlike privacy-by-default coins, Ergo offers optional privacy - users choose when and how much privacy they need, while actual legal compliance depends on jurisdiction, implementation and surrounding service providers.",
     
     keywords: ["privacy tools", "sigma protocols", "ergomixer", "zero knowledge", "coin mixing", "optional privacy", "financial privacy", "zk proofs"],
     
@@ -7431,7 +7431,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       "ErgoMixer: non-custodial, non-interactive mixing",
       "Optional privacy - user chooses level of privacy",
       "Ring signatures and stealth addresses possible",
-      "Compliant privacy - can prove things without revealing data",
+      "Compliance-aware privacy - can prove things without revealing data",
       "Foundation for private DeFi applications",
     ],
     
@@ -8474,7 +8474,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     
     shortDefinition: "Optional fees charged by frontend interfaces for DeFi protocols, rewarding developers who build user-friendly access to decentralized applications.",
     
-    definition: "UI fees are optional charges that frontend interface providers can add when users interact with DeFi protocols through their interface. Since DeFi protocols are permissionless smart contracts, anyone can build a frontend to access them. UI fees incentivize developers to create and maintain quality user interfaces by allowing them to earn revenue from usage. On Ergo, protocols like Spectrum Finance may have UI fees that go to the team maintaining the interface, separate from the protocol fees that go to liquidity providers.",
+    definition: "UI fees are optional charges that frontend interface providers can add when users interact with DeFi protocols through their interface. Since DeFi protocols are permissionless smart contracts, anyone can build a frontend to access them. UI fees incentivize developers to create and maintain quality user interfaces by allowing them to earn revenue from usage. On Ergo-style DeFi apps, UI fees can go to the team maintaining the interface, separate from protocol or liquidity-provider fees.",
     
     keywords: ["ui fee", "frontend fee", "interface fee", "defi", "dapp", "spectrum finance", "developer incentives"],
     
@@ -8726,7 +8726,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     
     shortDefinition: "Returns earned on cryptocurrency holdings through activities like liquidity provision, lending, or other DeFi strategies - expressed as APY (Annual Percentage Yield).",
     
-    definition: "Yield in cryptocurrency refers to the returns earned on holdings through various DeFi activities. Unlike traditional savings accounts, crypto yield comes from providing liquidity to DEXs (earning trading fees), lending assets (earning interest), or participating in other protocol incentives. On Ergo, yield opportunities exist through Spectrum Finance liquidity pools, SigmaFi lending, and other DeFi protocols. Yields are typically expressed as APY (Annual Percentage Yield) and can range from a few percent to much higher for riskier strategies.",
+    definition: "Yield in cryptocurrency refers to the returns earned on holdings through various DeFi activities. Unlike traditional savings accounts, crypto yield comes from providing liquidity to DEXs, lending assets, or participating in protocol incentives. On Ergo, yield opportunities depend on current active protocols and liquidity. Historical platforms such as Spectrum Finance are useful references, but should not be treated as active default yield venues. Yields are typically expressed as APY and can be much riskier than they look.",
     
     keywords: ["yield", "apy", "defi yield", "liquidity mining", "yield farming", "passive income", "spectrum finance", "sigmafi"],
     
@@ -8734,16 +8734,16 @@ export const glossaryTerms: GlossaryTerm[] = [
       "Returns earned on crypto holdings through DeFi",
       "Expressed as APY (Annual Percentage Yield)",
       "Sources: liquidity provision, lending, protocol rewards",
-      "Ergo yield: Spectrum Finance pools, SigmaFi lending",
+      "Ergo yield depends on current active protocols and liquidity",
       "Higher yields often mean higher risks",
       "Not the same as staking (Ergo is Proof of Work)",
     ],
     
-    technicalDetails: "Yield on Ergo primarily comes from: 1) Liquidity provision on Spectrum Finance - earning ~0.3% of trading fees proportional to pool share. 2) Lending on SigmaFi - earning interest from borrowers. 3) Protocol incentives - some projects distribute tokens to participants. APY calculations assume compounding; APR does not. Real yields fluctuate based on trading volume, utilization rates, and token prices.",
+    technicalDetails: "Yield on Ergo can come from liquidity provision, lending, or protocol incentives when current deployments are active. APY calculations assume compounding; APR does not. Real yields fluctuate based on trading volume, utilization rates, token prices, contract risk, and venue status.",
     
     useCases: [
       "Earning passive income on ERG holdings",
-      "Providing liquidity on Spectrum Finance",
+      "Providing liquidity on a current active venue",
       "Lending assets on SigmaFi",
       "Comparing DeFi opportunities",
       "Understanding risk/reward tradeoffs",
@@ -8758,7 +8758,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       },
       {
         question: "How can I earn yield on Ergo?",
-        answer: "On Ergo, you can earn yield by: 1) Providing liquidity on Spectrum Finance DEX and earning trading fees. 2) Lending assets on SigmaFi and earning interest. 3) Participating in various protocol incentive programs.",
+        answer: "On Ergo, potential yield paths include liquidity provision, lending, and protocol incentives when active deployments exist. Verify protocol status, liquidity, audits, withdrawal rules, and risk before committing funds.",
       },
       {
         question: "Is yield farming safe?",
@@ -9184,13 +9184,13 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: "babel-fees-agent",
     term: "Babel Fees (Agent Context)",
 
-    shortDefinition: "Ergo's mechanism for paying transaction fees in any token — critical for autonomous agents that don't hold a pre-funded ERG wallet.",
+    shortDefinition: "Ergo's mechanism for paying transaction fees through supported token-to-ERG paths — useful for autonomous agents that should not always hold a pre-funded ERG wallet.",
 
-    definition: "Babel Fees is Ergo's protocol for paying transaction fees in tokens other than the native ERG. A node or miner posts a 'Babel box' offering an exchange rate: submit X tokens, receive fee coverage in ERG. For autonomous agents, this is critical infrastructure: agents are often funded in application tokens, not ERG. Without Babel Fees, every agent instance would need a bootstrapped ERG wallet just to pay gas — a coordination overhead that breaks ephemeral agent architectures. With Babel Fees, an agent receiving a payment in any Ergo token can immediately pay transaction fees from those tokens.",
+    definition: "Babel Fees is Ergo's protocol for paying transaction fees through supported tokens instead of directly spending native ERG. A node or miner posts a 'Babel box' offering an exchange rate: submit X supported tokens, receive fee coverage in ERG. For autonomous agents, this can reduce bootstrapping friction because agents may be funded in application tokens, not ERG. Without a supported Babel-fee path, an agent still needs ERG or another fee-payment arrangement.",
 
     keywords: [
       "babel fees ergo",
-      "pay transaction fees any token",
+      "pay transaction fees with supported tokens",
       "gas abstraction blockchain",
       "ergo fee abstraction",
       "agent fee payment",
@@ -9200,9 +9200,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     ],
 
     keyPoints: [
-      "Agents can pay tx fees in any Ergo native token — not only ERG",
+      "Agents can pay tx fees through supported Ergo native-token paths — not only direct ERG payments",
       "Nodes post 'Babel boxes' with exchange rates for fee coverage",
-      "Eliminates need to pre-fund agent wallets with ERG",
+      "Reduces the need to pre-fund agent wallets with ERG where supported paths exist",
       "Critical for ephemeral agent instances spun up on demand",
       "Implemented at the protocol level, not as a wrapper",
       "Enables true token-denominated agent economies",
@@ -9221,11 +9221,11 @@ export const glossaryTerms: GlossaryTerm[] = [
     faq: [
       {
         question: "What are Babel Fees on Ergo?",
-        answer: "Babel Fees let users and agents pay Ergo transaction fees in any token, not just ERG. A Babel box posted by a node offers to cover fees in exchange for tokens at a set rate. This means agents don't need a pre-funded ERG wallet — they can pay fees from any token they hold.",
+        answer: "Babel Fees let users and agents cover Ergo transaction fees through supported token-to-ERG paths, not only direct ERG payments. A Babel box posted by a node offers to cover fees in exchange for a supported token at a set rate.",
       },
       {
         question: "Why are Babel Fees important for AI agents?",
-        answer: "AI agents are ephemeral — they spin up, run, and disappear. Requiring each agent to hold pre-funded ERG for gas is a coordination bottleneck. Babel Fees remove this requirement: an agent can be bootstrapped with any token and immediately transact.",
+        answer: "AI agents are ephemeral — they spin up, run, and disappear. Requiring each agent to hold pre-funded ERG for gas is a coordination bottleneck. Babel Fees reduce this requirement when a supported token-to-ERG fee path is available.",
       },
     ],
 

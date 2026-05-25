@@ -12,26 +12,35 @@ export async function generateMetadata({
   const { locale } = await params
 
   return {
-    title: "Agent Payment Architecture — Reserve, Note, Tracker, Predicate | Ergo",
+    title: "Autonomous Work Clearing & Agent Payment Architecture | Ergo",
     description:
-      "Technical reference for building agent payments on Ergo. Four on-chain primitives, three composable flows, Fleet SDK code examples. Reserve → Note → Tracker → Acceptance Predicate.",
+      "Technical reference for autonomous work clearing and agent payments on Ergo: Reserve, Note, Tracker, Acceptance Predicate, Fleet SDK examples, receipts, and audit-gated settlement boundaries.",
     keywords: [
       // Architecture / technical
+      "autonomous work clearing architecture",
       "agent payment architecture blockchain",
       "ErgoScript acceptance predicates",
+      "Fleet SDK receipts",
       "Fleet SDK agent payments",
       "reserve contract ErgoScript",
       "note contract blockchain",
       "tracker contract anti-double-spend",
       "ChainCash implementation",
       // AI agent specific
+      "autonomous work settlement infrastructure",
       "AI agent payment infrastructure",
+      "autonomous agent settlement stack",
       "autonomous agent payment stack",
+      "crypto agent receipt tutorial",
       "crypto agent payment tutorial",
+      "agent receipt SDK blockchain",
       "agent payment SDK blockchain",
+      "AI agent API settlement",
       "AI agent API payment",
+      "LLM autonomous settlement developer",
       "LLM agent payments developer",
       "autonomous agent blockchain developer",
+      "multi-agent settlement flow",
       "multi-agent payment flow",
       // Ergo developer
       "Ergo smart contracts tutorial",
@@ -45,13 +54,13 @@ export async function generateMetadata({
       "programmable credit blockchain developer",
       "trustless agent settlement code",
       "bearer instrument smart contract",
-      "autonomous payment rails tutorial",
+      "autonomous work clearing tutorial",
     ],
     alternates: getAlternates("/build/agent-payments", locale),
     openGraph: {
-      title: "Agent Payment Architecture on Ergo",
+      title: "Autonomous Work Clearing & Agent Payments on Ergo",
       description:
-        "Reserve · Note · Tracker · Predicate — four primitives for building verifiable agent-to-agent payments. With Fleet SDK examples.",
+        "Reserve · Note · Tracker · Predicate — four primitives for building verifiable agent-to-agent settlement receipts. With Fleet SDK examples.",
       url: getCanonicalUrl("/build/agent-payments", locale),
       siteName: "Ergo Blockchain",
       images: [
@@ -59,7 +68,7 @@ export async function generateMetadata({
           url: `${BASE_URL}/og/agent-payments.jpg`,
           width: 1200,
           height: 630,
-          alt: "Ergo Agent Payment Architecture — Reserve, Note, Tracker, Predicate",
+          alt: "Ergo Autonomous Work Clearing — Reserve, Note, Tracker, Predicate",
         },
       ],
       type: "website",
@@ -67,17 +76,17 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: "Agent Payment Stack — Technical Architecture",
+      title: "Autonomous Work Clearing & Agent Payments — Technical Architecture",
       description:
-        "Reserve → Note → Tracker → Acceptance Predicate. The reference architecture for agent payments on Ergo.",
+        "Reserve → Note → Tracker → Acceptance Predicate. The reference architecture for autonomous work settlement on Ergo.",
       images: [`${BASE_URL}/og/agent-payments.jpg`],
       creator: "@ergoplatform",
       site: "@ergoplatform",
     },
     other: {
-      "ai-content-type": "technical-reference-agent-payments",
-      "ai-topic": "ErgoScript, Fleet SDK, agent payment primitives, blockchain developer tutorial",
-      "ai-use-case": "Building autonomous agent payment infrastructure on Ergo blockchain",
+      "ai-content-type": "technical-reference-autonomous-work-clearing-agent-payments",
+      "ai-topic": "ErgoScript, Fleet SDK, receipt primitives, agent payment primitives, blockchain developer tutorial",
+      "ai-use-case": "Building autonomous work settlement and agent payment infrastructure on Ergo blockchain",
     },
   }
 }
@@ -90,7 +99,7 @@ const agentPaymentsSchema = {
       "@type": "HowTo",
       "@id": `${BASE_URL}/build/agent-payments#howto`,
       "name": "Build Agent Payments on Ergo Blockchain",
-      "description": "Step-by-step guide to implementing the four agent payment primitives on Ergo: Reserve, Note, Tracker, and Acceptance Predicate using Fleet SDK and ErgoScript.",
+      "description": "Step-by-step guide to implementing four autonomous work clearing primitives on Ergo: Reserve, Note, Tracker, and Acceptance Predicate using Fleet SDK and ErgoScript.",
       "totalTime": "PT3H",
       "tool": [
         { "@type": "HowToTool", "name": "Fleet SDK (npm: @fleet-sdk/core)" },
@@ -125,7 +134,7 @@ const agentPaymentsSchema = {
         {
           "@type": "HowToStep",
           "name": "Compose Into a Full Agent Flow",
-          "text": "Combine Reserve + Note + Tracker + Predicate using Fleet SDK TransactionBuilder to create a complete agent payment transaction: agent issues note, service validates predicate, provider redeems against reserve.",
+          "text": "Combine Reserve + Note + Tracker + Predicate using Fleet SDK TransactionBuilder to create a complete settlement receipt flow: agent issues note, service validates predicate, provider redeems against reserve.",
           "url": `${BASE_URL}/build/agent-payments`,
         },
       ],
@@ -134,7 +143,7 @@ const agentPaymentsSchema = {
       "@type": "TechArticle",
       "@id": `${BASE_URL}/build/agent-payments#article`,
       "headline": "Agent Payment Primitives on Ergo — Reserve, Note, Tracker, Predicate",
-      "description": "Complete technical reference for the four on-chain primitives powering autonomous agent payments on Ergo blockchain.",
+      "description": "Complete technical reference for the four on-chain primitives powering autonomous work settlement on Ergo blockchain.",
       "about": [
         { "@type": "Thing", "name": "Fleet SDK" },
         { "@type": "Thing", "name": "ErgoScript" },

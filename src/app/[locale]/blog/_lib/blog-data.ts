@@ -261,7 +261,7 @@ export const blogPosts: BlogPost[] = [
     id: 'sigma-protocols-privacy',
     slug: 'sigma-protocols-privacy',
     title: 'Ergo And Sigma Protocols: The Next Step In Blockchain Privacy',
-    excerpt: 'As first-gen privacy coins see a resurgence of activity, Ergo\'s composable zero-knowledge signatures offer new options for compliant confidentiality.',
+    excerpt: 'As first-gen privacy coins see a resurgence of activity, Ergo\'s composable zero-knowledge signatures offer new options for selective-disclosure confidentiality.',
     date: '2025-12-04',
     lastUpdated: '2025-12-04',
     author: authors['ergo-team']!,
@@ -314,9 +314,9 @@ export const blogPosts: BlogPost[] = [
   {
     id: 'babel-fees',
     slug: 'babel-fees',
-    title: 'Babel Fees: Pay Ergo Transaction Fees in Any Token',
+    title: 'Babel Fees: Supported Token Fee Paths on Ergo',
     excerpt:
-      "Ergo's Babel Fees turn gas payments into an on-chain market, letting users pay transaction fees in almost any token while miners still receive ERG.",
+      "Ergo's Babel Fees turn gas payments into an on-chain market, letting users cover transaction fees through supported token-to-ERG paths while miners still receive ERG.",
     date: '2025-12-14',
     lastUpdated: '2025-12-14',
     author: authors['technical-team']!,

@@ -11,12 +11,12 @@ import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 // SEO Configuration
 const SEO = {
   slug: "babel-fees",
-  title: "Babel Fees: Pay Ergo Transaction Fees in Any Token",
-  description: "Learn how Ergo's Babel Fees let users pay transaction fees in any token they hold. Miners still receive ERG through on-chain Babel boxes — true gas abstraction.",
+  title: "Babel Fees: Supported Token Fee Paths on Ergo",
+  description: "Learn how Ergo's Babel Fees let users cover transaction fees through supported token-to-ERG paths. Miners still receive ERG through on-chain Babel boxes.",
   ogImage: "/og/babel-fees.jpg",
   publishedTime: "2024-11-18T00:00:00Z",
   keywords: [
-    "Babel Fees", "pay gas in any token", "Ergo gas abstraction",
+    "Babel Fees", "supported token fee paths", "Ergo gas abstraction",
     "eUTXO fees", "on-chain fee market", "blockchain UX",
     "SigmaUSD fees", "transaction fee abstraction", "multi-token fees", "Ergo DeFi"
   ],
@@ -26,7 +26,7 @@ const SEO = {
 const FAQ_ITEMS = [
   {
     question: "What are Babel Fees on Ergo?",
-    answer: "Babel Fees allow users to pay Ergo transaction fees using any token, not just ERG. Miners create 'Babel boxes' that swap user tokens for ERG, enabling true gas abstraction without requiring users to hold the native coin."
+    answer: "Babel Fees allow users to cover Ergo transaction fees through supported token-to-ERG paths, not only direct ERG payments. Miners create 'Babel boxes' that swap supported user tokens for ERG fee coverage."
   },
   {
     question: "How do Babel Fees work technically?",
@@ -64,7 +64,7 @@ export default function BabelFeesPage() {
     {
       ...createTechArticleSchema(`/blog/${SEO.slug}`, {
         headline: SEO.title,
-        description: "Most blockchains force users to keep the native coin just to pay gas. Ergo's Babel Fees turn transaction fees into an on-chain market, so users can pay with almost any token while miners still receive ERG.",
+        description: "Most blockchains force users to keep the native coin just to pay gas. Ergo's Babel Fees turn transaction fees into an on-chain market, so users can cover fees through supported token-to-ERG paths while miners still receive ERG.",
         image: SEO.ogImage,
         datePublished: "2024-11-18",
         proficiencyLevel: "Intermediate",

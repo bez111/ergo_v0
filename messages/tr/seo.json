@@ -1,24 +1,24 @@
 {
   "seo": {
-    "defaultTitle": "Ergo — Sözleşmeli Para İçin Ajanlık Blok Zinciri",
-    "defaultDescription": "Ergo, ajanlık blok zinciridir (agentic blockchain) — özerk AI ajan ödemeleri, DeFi ve karşı taraf riski olmayan programlanabilir para için tasarlanmış PoW + eUTXO + ErgoScript.",
-    "keywords": "ajanlık blok zinciri, agentic blockchain, AI ajanlar için blok zinciri, blockchain for AI agents, özerk AI ödeme blok zinciri, autonomous AI payments blockchain, AI ajan ödemeleri, AI agent payments, ergo blok zinciri, ergo blockchain, kripto para, cryptocurrency, DeFi, merkeziyetsiz finans, akıllı sözleşmeler, smart contracts, Ergo, eUTXO, iş kanıtı, proof of work",
+    "defaultTitle": "Ergo — Özerk çalışma için public proof surface",
+    "defaultDescription": "Ergo, özerk çalışma için PoW/eUTXO clearing katmanı ve public proof surface sunar: programlanabilir kabul kuralları, receipt bundle'ları, wallet policy, DeFi ve audit-gated settlement.",
+    "keywords": "özerk çalışma settlement, public proof surface, doğrulanabilir receipt, wallet policy, agent economy, agentic blockchain, AI ajanlar için blok zinciri, ergo blok zinciri, kripto para, DeFi, akıllı sözleşmeler, Ergo, eUTXO, proof of work",
     "home": {
       "meta": {
-        "title": "Ergo — Ajanlık Blok Zinciri | MEV Dirençli PoW Akıllı Sözleşmeler",
-        "description": "Ajanlık blok zinciri (agentic blockchain): DeFi, AI ajan ödemeleri, gizlilik ve sağlam para için PoW + eUTXO. Öngörülebilir düşük ücretler, ön madencilik yok, VC yok — finansal özgürlük için cypherpunk'lar tarafından inşa edildi.",
+        "title": "Ergo — Özerk çalışmanın ödendiği, kanıtlandığı ve sonuçlandırıldığı yer",
+        "description": "Özerk çalışma için PoW/eUTXO clearing katmanı ve public proof surface: teklifler, programlanabilir kabul, receipt bundle'ları, wallet policy ve audit-gated settlement.",
         "keywords": "ajanlık blok zinciri, agentic blockchain, AI ajanlar için blok zinciri, blockchain for AI agents, özerk AI ödeme blok zinciri, autonomous AI payments blockchain, AI ajan ödemeleri, AI agent payments, ergo blok zinciri, ergo blockchain, merkeziyetsiz finans, decentralized finance, MEV dirençli blok zinciri, MEV resistant blockchain, eUTXO modeli, eUTXO model, sansüre dirençli para, censorship resistant money, ASIC dirençli madencilik, ASIC resistant mining, adil başlangıç kripto parası, fair launch cryptocurrency, programlanabilir para, programmable money, finansal egemenlik, financial sovereignty, cypherpunk blok zinciri, cypherpunk blockchain, DeFi, gizlilik, privacy, sağlam para, sound money, ergo agent economy",
         "og": {
-          "title": "Ergo — Peer-to-Peer Agent Economy",
-          "description": "Ajanlık blok zinciri: PoW + eUTXO + ErgoScript ile özerk AI ajan ödemeleri, programlanabilir kredi ve güvensiz makine-makine ticareti.",
+          "title": "Ergo — Özerk çalışma için public proof surface",
+          "description": "Programlanabilir kredi, doğrulanabilir receipt'ler, wallet policy ve audit-gated ajan settlement için PoW + eUTXO + ErgoScript.",
           "siteName": "Ergo Blockchain",
-          "imageAlt": "Ergo — Peer-to-Peer Agent Economy"
+          "imageAlt": "Ergo — Özerk çalışma için public proof surface"
         },
         "twitter": {
-          "title": "Ergo — Peer-to-Peer Agent Economy",
-          "description": "Ajanlık blok zinciri: PoW + eUTXO ile özerk AI ajan ödemeleri, programlanabilir kredi ve makine-makine ticareti. KYC yok, gas bootstrapping yok."
+          "title": "Ergo — Özerk çalışma için public proof surface",
+          "description": "Özerk çalışma settlement için PoW + eUTXO: programlanabilir kredi, receipt bundle'ları, wallet policy ve audit-gated mainnet claim'leri."
         },
-        "heroImageAlt": "Ergo Platform — The Agentic Blockchain for Peer-to-Peer Agent Economy"
+        "heroImageAlt": "Ergo Platform — Özerk çalışma için public proof surface"
       },
       "faq": {
         "items": [
@@ -28,19 +28,19 @@
           },
           {
             "question": "ERG nasıl satın alınır?",
-            "answer": "ERG'yi KuCoin, Gate.io, Bitpanda gibi borsalarda veya Spectrum Finance gibi merkeziyetsiz borsalarda satın alabilirsiniz. Önce bir cüzdan edinin (Nautilus, SAFEW veya Ergo Mobil Cüzdanı), ardından ERG satın alıp cüzdan adresinize çekin."
+            "answer": "You can buy ERG on exchanges like KuCoin, Gate.io, or Bitpanda, and through verified non-custodial routes where active liquidity exists. Spectrum Finance is a historical Ergo DEX reference with a 2024 sunset notice, so verify current venues before trading. First get a wallet, then purchase ERG and withdraw to your wallet address."
           },
           {
             "question": "Ergo iyi bir yatırım mıdır?",
             "answer": "Ergo, ön madenciliği ve adil başlangıcı olmayan 97,7 milyon ERG sabit arzına sahiptir. Benzersiz teknolojiye (eUTXO, Sigma Protocols) sahip bir İş Kanıtı blok zinciridir. Her kripto parada olduğu gibi, kendi araştırmanızı yapın ve kaybetmeyi göze alabileceğiniz kadar yatırım yapın."
           },
           {
-            "question": "Ergo neden AI ajanları ve makine-makine ödemeleri için idealdir?",
-            "answer": "Ergo'nun eUTXO modeli deterministik maliyetler sağlar — ajanlar kesin ücretleri önceden bilir. Babel Fees, ajanların ERG ön yüklemesi yapmadan herhangi bir token ile ödeme yapmasına olanak tanır. ErgoScript, kabul koşullarını doğrudan ödemelere gömer. KYC yok, gas bootstrapping yok, kalıcı kimlik gereksinimi yok. Protokol düzeyinde dört ajan ödeme primitifinin tamamına sahip tek blok zinciridir."
+            "question": "Ergo özerk çalışma settlement için neden güçlü bir uyum sağlar?",
+            "answer": "Ergo'nun eUTXO modeli deterministik maliyetler sunar, ErgoScript kabul kurallarını kodlayabilir, Babel Fees native token ön yükleme ihtiyacını azaltır ve receipt workflow'ları ödeme, doğrulama ve settlement'ı birbirine bağlar. Mevcut agent-economy stack'i audit gate'ler açılana kadar testnet-first kalır."
           },
           {
             "question": "Ergo'ya nasıl başlanır?",
-            "answer": "1) Bir cüzdan indirin (tarayıcı için Nautilus, telefon için Ergo Mobil Cüzdanı). 2) Tohum ifadenizi güvenli şekilde yedekleyin. 3) Bir borsadan veya DEX'ten ERG alın. 4) Spectrum Finance, SigmaUSD veya ErgoMixer gibi DeFi uygulamalarını keşfedin."
+            "answer": "1) Download a wallet. 2) Back up your seed phrase securely. 3) Get ERG from an exchange or verified non-custodial route. 4) Explore SigmaUSD, ErgoMixer, NFTs, mining, and current DeFi venues after checking each project status."
           },
           {
             "question": "Ergo'yu hangi cüzdanlar destekler?",
