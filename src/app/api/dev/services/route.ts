@@ -30,6 +30,7 @@ export async function GET(req: Request) {
     walletAgentPolicyPlayground,
     ergoConnect,
     agentServicePublish,
+    agentReputation,
     agentJobAcceptance,
     agentJobQuote,
   ] = await Promise.all([
@@ -44,6 +45,7 @@ export async function GET(req: Request) {
     probe(`${origin}/build/agent-payments/policy-playground`),
     probe(`${origin}/.well-known/ergo-connect.json`),
     probe(`${origin}/api/agents/publish`),
+    probe(`${origin}/api/agents/reputation`),
     probe(`${origin}/api/jobs/accept`),
     probe(`${origin}/api/jobs/quote`),
   ])
@@ -86,6 +88,7 @@ export async function GET(req: Request) {
         wallet_agent_policy_playground: walletAgentPolicyPlayground,
         ergo_connect: ergoConnect,
         agent_service_publish: agentServicePublish,
+        agent_reputation: agentReputation,
         agent_job_acceptance: agentJobAcceptance,
         agent_job_quote: agentJobQuote,
       },

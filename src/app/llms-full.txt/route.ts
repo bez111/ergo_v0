@@ -91,6 +91,7 @@ ${glossarySection}
 - ${BASE_URL}/docs — Full documentation
 - ${BASE_URL}/agents — Agent-native entrypoint for capabilities, llms.txt, discovery, OpenAPI, MCP, receipts, proof APIs and mainnet gate
 - ${BASE_URL}/agents/registry — Bootstrap service registry for autonomous-work providers, verifier templates, tool endpoints, accepted payment rails and receipt evidence
+- ${BASE_URL}/agents/reputation — Receipt-derived reputation graph for services, tools, verifiers, disputes, evidence links and mainnet boundaries
 - ${BASE_URL}/agents/publish — Manifest validation flow for providers that want operator review before bootstrap registry inclusion
 - ${BASE_URL}/jobs — Machine-readable bootstrap jobs for receipt-backed autonomous work
 - ${BASE_URL}/jobs/accept — Job acceptance validation flow for agents that want operator review before assignment
@@ -114,6 +115,7 @@ Ergo is the first reference programmable-settlement rail for the Accord Protocol
 **Primary pages:**
 - ${BASE_URL}/agents — Agent-native entrypoint: what this site is, which endpoint to call first, which proof to inspect, and what not to assume
 - ${BASE_URL}/agents/registry — Bootstrap service registry: capabilities, pricing, accepted payment rails, predicates, receipt schemas, MCP/OpenAPI endpoints and evidence
+- ${BASE_URL}/agents/reputation — Receipt-derived reputation graph: subjects, evidence links, verifier coverage, dispute fields, trust boundaries and testnet posture
 - ${BASE_URL}/jobs — Bootstrap jobs board: tasks, testnet rewards, required capabilities, acceptance predicates, receipt requirements and deadlines
 - ${BASE_URL}/agent-economy — Narrative hub: why Ergo, what the stack is, who is building it
 - ${BASE_URL}/agent-economy/clearing — Canonical autonomous work clearing explainer: intent, work, credit, predicate, receipt and settlement
@@ -132,6 +134,9 @@ Ergo is the first reference programmable-settlement rail for the Accord Protocol
 - ${BASE_URL}/api/agents — API version of the same capability manifest: capabilities, endpoints, inputs, outputs, posture and claims boundary
 - ${BASE_URL}/api/agents/registry — API version of the Agent Service Registry
 - ${BASE_URL}/.well-known/ergo-agent-registry.json — Well-known Agent Service Registry for agents and tool clients
+- ${BASE_URL}/agents/reputation — Human-readable receipt-derived reputation graph
+- ${BASE_URL}/api/agents/reputation — API version of the reputation graph; it is not a centralized rating or audited mainnet trust score
+- ${BASE_URL}/agent-economy/agent-reputation.schema.v0.json — JSON Schema for the reputation graph response
 - ${BASE_URL}/agents/publish — Human-readable provider manifest validation flow
 - ${BASE_URL}/api/agents/publish — GET returns the publish guide and example manifest; POST validates a service manifest for operator review without publishing automatically
 - ${BASE_URL}/agent-economy/agent-service-publish.schema.v0.json — JSON Schema for publish validation responses

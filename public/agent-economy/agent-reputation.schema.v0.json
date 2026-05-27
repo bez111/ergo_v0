@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.ergoblockchain.org/agent-economy/agent-reputation.schema.v0.json",
+  "title": "Ergo Agent Reputation Graph",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "version",
+    "status",
+    "last_reviewed",
+    "canonical",
+    "human",
+    "schema",
+    "posture",
+    "public_claim",
+    "methodology",
+    "summary",
+    "subjects",
+    "edges",
+    "next_steps"
+  ],
+  "properties": {
+    "type": { "const": "ergo.agent_reputation_graph.v0" },
+    "version": { "const": "v0" },
+    "status": { "const": "receipt_derived_testnet_bootstrap" },
+    "last_reviewed": { "type": "string" },
+    "canonical": { "type": "string", "format": "uri" },
+    "human": { "type": "string", "format": "uri" },
+    "schema": { "type": "string", "format": "uri" },
+    "posture": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["network", "mainnet_ready", "production_custody"],
+      "properties": {
+        "network": { "const": "ergo_testnet" },
+        "mainnet_ready": { "const": false },
+        "production_custody": { "const": false }
+      }
+    },
+    "public_claim": { "type": "string" },
+    "methodology": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["principle", "included_signals", "excluded_signals"],
+      "properties": {
+        "principle": { "type": "string" },
+        "included_signals": { "type": "array", "items": { "type": "string" } },
+        "excluded_signals": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "subjects_total",
+        "receipt_backed_subjects",
+        "live_testnet_subjects",
+        "reference_templates",
+        "mainnet_ready_subjects",
+        "full_receipt_bundles",
+        "settled_testnet_notes",
+        "verifier_reports",
+        "disputes"
+      ],
+      "properties": {
+        "subjects_total": { "type": "integer", "minimum": 0 },
+        "receipt_backed_subjects": { "type": "integer", "minimum": 0 },
+        "live_testnet_subjects": { "type": "integer", "minimum": 0 },
+        "reference_templates": { "type": "integer", "minimum": 0 },
+        "mainnet_ready_subjects": { "const": 0 },
+        "full_receipt_bundles": { "type": "integer", "minimum": 0 },
+        "settled_testnet_notes": { "type": "integer", "minimum": 0 },
+        "verifier_reports": { "type": "integer", "minimum": 0 },
+        "disputes": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "subjects": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/subject" }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["from", "to", "kind", "evidence"],
+        "properties": {
+          "from": { "type": "string" },
+          "to": { "type": "string" },
+          "kind": { "type": "string" },
+          "evidence": { "type": "string", "format": "uri" }
+        }
+      }
+    },
+    "next_steps": { "type": "array", "items": { "type": "string" } }
+  },
+  "$defs": {
+    "subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "label",
+        "role",
+        "status",
+        "summary",
+        "metrics",
+        "evidence",
+        "trust_boundary",
+        "next_improvement"
+      ],
+      "properties": {
+        "id": { "type": "string" },
+        "label": { "type": "string" },
+        "role": { "type": "string" },
+        "status": { "type": "string" },
+        "summary": { "type": "string" },
+        "metrics": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "full_receipt_bundles",
+            "settled_testnet_notes",
+            "expired_jobs",
+            "disputed_receipts",
+            "verifier_reports",
+            "median_settlement_time"
+          ],
+          "properties": {
+            "full_receipt_bundles": { "type": "integer", "minimum": 0 },
+            "settled_testnet_notes": { "type": "integer", "minimum": 0 },
+            "expired_jobs": { "type": "integer", "minimum": 0 },
+            "disputed_receipts": { "type": "integer", "minimum": 0 },
+            "verifier_reports": { "type": "integer", "minimum": 0 },
+            "median_settlement_time": { "type": "string" }
+          }
+        },
+        "evidence": {
+          "type": "object",
+          "additionalProperties": { "type": "string", "format": "uri" }
+        },
+        "trust_boundary": { "type": "string" },
+        "next_improvement": { "type": "string" }
+      }
+    }
+  }
+}

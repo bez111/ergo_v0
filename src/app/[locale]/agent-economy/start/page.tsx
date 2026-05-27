@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import type { ReactNode } from "react"
 import {
   ArrowRight,
+  BarChart3,
   Bot,
   CheckCircle2,
   ClipboardCheck,
@@ -151,6 +152,12 @@ const developerSurfaces = [
     href: "/agents/publish",
     icon: UploadCloud,
     value: "provider manifest",
+  },
+  {
+    label: "Reputation",
+    href: "/agents/reputation",
+    icon: BarChart3,
+    value: "receipt graph",
   },
   {
     label: "Accept job",

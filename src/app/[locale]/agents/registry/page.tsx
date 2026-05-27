@@ -165,6 +165,13 @@ export default function AgentServiceRegistryPage() {
                     Publish service
                     <ArrowRight className="h-4 w-4" />
                   </RegistryLink>
+                  <RegistryLink
+                    href="/agents/reputation"
+                    className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-black/70 px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-neutral-200 transition-colors hover:border-orange-500/45 hover:bg-orange-500/10"
+                  >
+                    Reputation graph
+                    <ArrowRight className="h-4 w-4" />
+                  </RegistryLink>
                 </div>
               </div>
 

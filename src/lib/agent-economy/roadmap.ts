@@ -191,14 +191,16 @@ export const agentEconomyRoadmap = {
     },
     {
       id: "receipt-reputation-graph",
-      phase: "build_next" as AgentEconomyRoadmapPhase,
+      phase: "live" as AgentEconomyRoadmapPhase,
       title: "Receipt-Derived Reputation Graph",
       summary:
-        "Turn receipts into reputation signals for providers, buyers, verifiers, reserves, predicates, and service categories: completed receipts, settled receipts, expiry, dispute rate, verifier coverage, median settlement time, and accepted reserves.",
+        "A bootstrap reputation graph now turns receipts into visible trust signals for providers, tools, verifier templates, predicates, and service categories: completed receipts, settled receipts, disputes, verifier coverage, evidence links, and mainnet boundaries.",
       proof_links: [
+        "https://www.ergoblockchain.org/agents/reputation",
+        "https://www.ergoblockchain.org/api/agents/reputation",
+        "https://www.ergoblockchain.org/agent-economy/agent-reputation.schema.v0.json",
         "https://www.ergoblockchain.org/agent-economy/proofs",
         "https://www.ergoblockchain.org/api/agent-economy/proofs",
-        "https://www.ergoblockchain.org/api/sage/receipt/f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81",
       ],
     },
     {
@@ -297,6 +299,8 @@ export const agentEconomyRoadmap = {
     service_registry: "https://www.ergoblockchain.org/agents/registry",
     service_registry_api: "https://www.ergoblockchain.org/api/agents/registry",
     service_registry_manifest: "https://www.ergoblockchain.org/.well-known/ergo-agent-registry.json",
+    reputation_graph: "https://www.ergoblockchain.org/agents/reputation",
+    reputation_graph_api: "https://www.ergoblockchain.org/api/agents/reputation",
     service_publish: "https://www.ergoblockchain.org/agents/publish",
     service_publish_api: "https://www.ergoblockchain.org/api/agents/publish",
     jobs_board: "https://www.ergoblockchain.org/jobs",
@@ -327,12 +331,6 @@ export const agentEconomyRoadmap = {
       id: "wallet-agent-reference-flow",
       owner: "repo",
       label: "Tighten wallet-agent runner around policy, simulation, signing boundary, and receipts",
-      blocked_by_external: false,
-    },
-    {
-      id: "receipt-reputation-graph",
-      owner: "repo",
-      label: "Index receipt history into provider, verifier, reserve, predicate, and category reputation signals",
       blocked_by_external: false,
     },
     {

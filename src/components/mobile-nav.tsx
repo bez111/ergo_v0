@@ -49,6 +49,9 @@ export function MobileNav({ items }: MobileNavProps) {
     if (title === "Publish Service") {
       return "Publish Service"
     }
+    if (title === "Reputation Graph") {
+      return "Reputation Graph"
+    }
     if (title === "Accept Job") {
       return "Accept Job"
     }

@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import type { ReactNode } from "react"
 import {
   ArrowRight,
+  BarChart3,
   CheckCircle2,
   ClipboardCheck,
   ExternalLink,
@@ -95,6 +96,12 @@ const quickLinks = [
     href: "/agents/publish",
     icon: UploadCloud,
     detail: "Validate provider manifests before registry review: capability, pricing, payment rails, predicates, receipts, and evidence.",
+  },
+  {
+    label: "Reputation graph",
+    href: "/agents/reputation",
+    icon: BarChart3,
+    detail: "Receipt-derived trust signals for providers, tools, verifier templates, settlement evidence, and disputes.",
   },
   {
     label: "Accept job",

@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import type { ReactNode } from "react"
 import {
   ArrowRight,
+  BarChart3,
   Bot,
   Braces,
   ClipboardCheck,
@@ -61,6 +62,12 @@ const primarySteps = [
     body: "Validate a provider manifest before it can be reviewed for the bootstrap service registry.",
   },
   {
+    label: "Query reputation",
+    href: "/agents/reputation",
+    icon: BarChart3,
+    body: "Inspect receipt-derived trust signals before treating a provider, verifier, or tool endpoint as reliable.",
+  },
+  {
     label: "Accept job",
     href: "/jobs/accept",
     icon: ClipboardCheck,
@@ -92,6 +99,7 @@ const endpointRows = [
   ["Service registry", "/api/agents/registry"],
   ["Well-known service registry", "/.well-known/ergo-agent-registry.json"],
   ["Service publish validation", "/api/agents/publish"],
+  ["Reputation graph", "/api/agents/reputation"],
   ["Agent jobs", "/api/jobs"],
   ["Job acceptance validation", "/api/jobs/accept"],
   ["Job quote scaffold", "/api/jobs/quote"],

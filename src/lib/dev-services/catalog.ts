@@ -1,5 +1,6 @@
 import {
   Bot,
+  BarChart3,
   Boxes,
   Braces,
   CheckCircle2,
@@ -225,6 +226,24 @@ export const devServices: DevService[] = [
       "POST validates only; it never publishes automatically.",
       "Requires ergo_testnet posture, mainnet_ready=false, production_custody=false, and receipt expectations.",
       "Designed for provider agents that want to enter the bootstrap registry safely.",
+    ],
+  },
+  {
+    id: "agent-reputation-graph",
+    title: "Agent Reputation Graph",
+    summary:
+      "Receipt-derived trust surface for providers, tools, verifier templates, settlement evidence, disputes, and mainnet boundaries.",
+    href: "/agents/reputation",
+    apiHref: "/api/agents/reputation",
+    category: "agents",
+    state: "live",
+    latency: "instant",
+    icon: BarChart3,
+    machineReadable: true,
+    notes: [
+      "Not a centralized score or identity claim.",
+      "Uses receipts, settlements, verifier coverage, and visible failure modes as reputation inputs.",
+      "Keeps mainnet_ready=false until external review and audit-bound script identity exist.",
     ],
   },
   {

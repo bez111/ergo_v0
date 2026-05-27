@@ -104,6 +104,7 @@ export function Footer() {
         { label: "Agent Economy", href: localizedPath("agent-economy") },
         { label: "First Receipt", href: localizedPath("agent-economy/first-receipt") },
         { label: "Publish Service", href: localizedPath("agents/publish") },
+        { label: "Reputation", href: localizedPath("agents/reputation") },
         { label: "Accept Job", href: localizedPath("jobs/accept") },
         { label: "Quote Job", href: localizedPath("jobs/quote") },
         { label: "ErgoConnect", href: localizedPath("build/ergo-connect") },

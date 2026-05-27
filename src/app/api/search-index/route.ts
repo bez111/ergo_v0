@@ -207,6 +207,18 @@ export async function GET() {
       schema: ['HowTo', 'SoftwareApplication', 'Dataset']
     },
     {
+      id: 'agent-reputation',
+      type: 'page',
+      title: 'Agent Reputation Graph - Ergo Receipt-Derived Trust',
+      description: 'Inspect receipt-derived reputation signals for Ergo agent services: full receipts, testnet settlements, verifier coverage, disputes, evidence links, and mainnet boundaries.',
+      url: '/agents/reputation',
+      absoluteUrl: `${baseUrl}/agents/reputation`,
+      priority: 0.9,
+      changeFrequency: 'weekly',
+      keywords: 'agent reputation graph, receipt-derived trust, Ergo autonomous work, settlement evidence, verifier coverage, agent service reputation, testnet receipts',
+      schema: ['WebPage', 'SoftwareApplication', 'Dataset']
+    },
+    {
       id: 'agent-job-acceptance',
       type: 'page',
       title: 'Accept Agent Job - Ergo Worker Intent Validation',

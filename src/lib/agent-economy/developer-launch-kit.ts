@@ -23,6 +23,9 @@ export const agentEconomyDeveloperLaunchKit = {
     service_publish: "https://www.ergoblockchain.org/agents/publish",
     service_publish_api: "https://www.ergoblockchain.org/api/agents/publish",
     service_publish_schema: "https://www.ergoblockchain.org/agent-economy/agent-service-publish.schema.v0.json",
+    reputation_graph: "https://www.ergoblockchain.org/agents/reputation",
+    reputation_graph_api: "https://www.ergoblockchain.org/api/agents/reputation",
+    reputation_graph_schema: "https://www.ergoblockchain.org/agent-economy/agent-reputation.schema.v0.json",
     job_acceptance: "https://www.ergoblockchain.org/jobs/accept",
     job_acceptance_api: "https://www.ergoblockchain.org/api/jobs/accept",
     job_acceptance_schema: "https://www.ergoblockchain.org/agent-economy/agent-job-acceptance.schema.v0.json",
@@ -148,6 +151,14 @@ export const agentEconomyDeveloperLaunchKit = {
       curl:
         "curl -sS -X POST https://www.ergoblockchain.org/api/agents/publish -H 'content-type: application/json' --data @service-manifest.json",
       checks: ["type", "accepted_for_operator_review", "errors", "warnings", "next_steps"],
+    },
+    {
+      id: "agent-reputation-graph",
+      label: "Agent reputation graph",
+      method: "GET",
+      url: "https://www.ergoblockchain.org/api/agents/reputation",
+      curl: "curl -sS https://www.ergoblockchain.org/api/agents/reputation",
+      checks: ["type", "summary.receipt_backed_subjects", "subjects[].evidence", "subjects[].trust_boundary", "posture.mainnet_ready"],
     },
     {
       id: "agent-job-acceptance",

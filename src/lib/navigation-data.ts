@@ -15,6 +15,11 @@ export const mainNavItems = [
         description: "Validate a provider manifest before operator review and registry inclusion.",
       },
       {
+        title: "Reputation Graph",
+        href: "/agents/reputation",
+        description: "Receipt-derived reputation signals for providers, tools, verifiers, and trust boundaries.",
+      },
+      {
         title: "Accept Job",
         href: "/jobs/accept",
         description: "Validate a worker intent before a bootstrap job can be assigned for receipt-backed work.",
@@ -100,6 +105,11 @@ export const mainNavItems = [
         title: "Publish Service",
         href: "/agents/publish",
         description: "Provider path for capability, pricing, payment rails, predicates, receipts, and evidence validation.",
+      },
+      {
+        title: "Reputation Graph",
+        href: "/agents/reputation",
+        description: "Receipt-derived trust surface for services, verifier coverage, disputes, and settlement evidence.",
       },
       {
         title: "Accept Job",

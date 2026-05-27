@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import {
   AlertTriangle,
   ArrowRight,
+  BarChart3,
   Bot,
   CheckCircle2,
   CircuitBoard,
@@ -69,6 +70,7 @@ interface LiveStatusResponse {
     wallet_agent_policy_playground_published?: boolean
     developer_launch_kit_published?: boolean
     agent_service_publish_published?: boolean
+    agent_reputation_published?: boolean
     agent_job_acceptance_published?: boolean
     agent_job_quote_published?: boolean
   }
@@ -119,6 +121,7 @@ const GATE_ICONS: Record<string, typeof Bot> = {
   "wallet-agent-policy-playground": SlidersHorizontal,
   "ergo-connect-wallet-boundary": WalletCards,
   "agent-service-publish": UploadCloud,
+  "agent-reputation-graph": BarChart3,
   "agent-job-acceptance": ClipboardCheck,
   "agent-job-quote": ScrollText,
   "mcp-fly": Network,
@@ -724,6 +727,7 @@ function skeletonGates(): LiveGate[] {
     "wallet-agent-policy-playground",
     "ergo-connect-wallet-boundary",
     "agent-service-publish",
+    "agent-reputation-graph",
     "agent-job-acceptance",
     "agent-job-quote",
     "mcp-fly",

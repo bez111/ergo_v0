@@ -89,6 +89,16 @@
       "destination": "/agents/registry"
     },
     {
+      "source": "/reputation",
+      "has": [
+        {
+          "type": "host",
+          "value": "agents.ergoblockchain.org"
+        }
+      ],
+      "destination": "/agents/reputation"
+    },
+    {
       "source": "/publish",
       "has": [
         {
@@ -297,6 +307,16 @@
         }
       ],
       "destination": "/api/agents/registry"
+    },
+    {
+      "source": "/api/reputation",
+      "has": [
+        {
+          "type": "host",
+          "value": "agents.ergoblockchain.org"
+        }
+      ],
+      "destination": "/api/agents/reputation"
     },
     {
       "source": "/api/publish",

@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "Ergo Agent Economy Public API",
-    "version": "0.1.7",
+    "version": "0.1.8",
     "summary": "Machine-readable API contract for the Ergo Agent Economy testnet proof surface.",
     "description": "Public Agent Economy APIs expose discovery, live status, proof exploration, launch-kit data, review evidence, wallet-agent policy checks, and Sage receipt surfaces. This contract is testnet-first and does not imply mainnet readiness."
   },
@@ -97,6 +97,25 @@
               "application/json": {
                 "schema": {
                   "$ref": "https://www.ergoblockchain.org/agent-economy/agent-service-registry.schema.v0.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/agents/reputation": {
+      "get": {
+        "tags": ["Agent Discovery"],
+        "operationId": "getAgentReputationGraph",
+        "summary": "Get the receipt-derived agent reputation graph",
+        "responses": {
+          "200": {
+            "description": "Reputation graph with subjects, receipt-derived metrics, evidence links, trust boundaries, and mainnet posture",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://www.ergoblockchain.org/agent-economy/agent-reputation.schema.v0.json"
                 }
               }
             }
