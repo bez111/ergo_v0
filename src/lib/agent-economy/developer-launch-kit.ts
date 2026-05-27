@@ -17,6 +17,9 @@ export const agentEconomyDeveloperLaunchKit = {
     first_receipt_api: "https://www.ergoblockchain.org/api/agent-economy/first-receipt",
     first_receipt_schema: "https://www.ergoblockchain.org/agent-economy/first-receipt-flow.schema.v0.json",
     policy_check_schema: "https://www.ergoblockchain.org/agent-economy/wallet-agent-policy-check.schema.v0.json",
+    ergo_connect: "https://www.ergoblockchain.org/build/ergo-connect",
+    ergo_connect_manifest: "https://www.ergoblockchain.org/.well-known/ergo-connect.json",
+    ergo_connect_schema: "https://www.ergoblockchain.org/agent-economy/ergo-connect.schema.v0.json",
     agent_host: "https://agents.ergoblockchain.org",
     live_hub: "https://www.ergoblockchain.org/agent-economy/live",
     discovery: "https://www.ergoblockchain.org/.well-known/agent-economy.json",
@@ -66,6 +69,13 @@ export const agentEconomyDeveloperLaunchKit = {
       expected: "Over-cap, wrong-recipient, stale-expiry, and missing-receipt examples are denied.",
     },
     {
+      id: "inspect-wallet-boundary",
+      label: "Inspect wallet boundary",
+      href: "https://www.ergoblockchain.org/build/ergo-connect",
+      goal: "Confirm which pieces prove address control, check policy, hand off reduced transactions, and retain receipts.",
+      expected: "Agents never hold raw private keys and mainnet signing remains blocked by policy/gate.",
+    },
+    {
       id: "build-same-flow",
       label: "Build same flow",
       href: "https://www.ergoblockchain.org/build/agent-payments/quickstart",
@@ -112,6 +122,14 @@ export const agentEconomyDeveloperLaunchKit = {
       url: "https://www.ergoblockchain.org/agent-economy/openapi.v0.json",
       curl: "curl -sS https://www.ergoblockchain.org/agent-economy/openapi.v0.json",
       checks: ["openapi", "paths", "x-ergo-posture.mainnet_ready"],
+    },
+    {
+      id: "ergo-connect",
+      label: "ErgoConnect wallet boundary",
+      method: "GET",
+      url: "https://www.ergoblockchain.org/.well-known/ergo-connect.json",
+      curl: "curl -sS https://www.ergoblockchain.org/.well-known/ergo-connect.json",
+      checks: ["type", "caip.namespace", "security_boundary.agents_do_not_hold_private_keys", "posture.mainnet_ready"],
     },
     {
       id: "agent-roadmap",

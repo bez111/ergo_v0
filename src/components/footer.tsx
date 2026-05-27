@@ -103,6 +103,7 @@ export function Footer() {
         { label: "Agents", href: localizedPath("agents") },
         { label: "Agent Economy", href: localizedPath("agent-economy") },
         { label: "First Receipt", href: localizedPath("agent-economy/first-receipt") },
+        { label: "ErgoConnect", href: localizedPath("build/ergo-connect") },
         { label: "Demos", href: localizedPath("demos") },
         { label: t("grants") || "Grants", href: localizedPath("ecosystem/grants") },
         { label: "GitHub", href: "https://github.com/ergoplatform", external: true },

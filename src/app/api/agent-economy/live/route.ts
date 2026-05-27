@@ -110,7 +110,7 @@ export async function GET(req: Request) {
   const requestOrigin = new URL(req.url).origin
   const siteBaseUrl = trimSlash(process.env.AGENT_ECONOMY_LIVE_BASE_URL ?? requestOrigin)
 
-  const [activity, storage, accord, conformanceEvidence, registry, signer, widgetNpm, mcpFly, mcpDns, mainnetGate, reviewPack, launchKit, proofExplorer, walletAgent, walletAgentPolicy, walletAgentReferenceFlow, walletAgentPolicyPlayground] = await Promise.all([
+  const [activity, storage, accord, conformanceEvidence, registry, signer, widgetNpm, mcpFly, mcpDns, mainnetGate, reviewPack, launchKit, proofExplorer, walletAgent, walletAgentPolicy, walletAgentReferenceFlow, walletAgentPolicyPlayground, ergoConnect] = await Promise.all([
     probeJson<SageActivityResponse>(`${siteBaseUrl}/api/sage/activity?limit=8`),
     probeJson<SageReceiptStorageHealthResponse>(
       `${siteBaseUrl}/api/sage/receipt/blob-probe-2026-05-16`,
@@ -142,6 +142,9 @@ export async function GET(req: Request) {
       `${siteBaseUrl}/api/agent-economy/wallet-agent/reference-flow`,
     ),
     probePage(`${siteBaseUrl}/build/agent-payments/policy-playground`),
+    probeJson<{ type?: string; status?: string; security_boundary?: { agents_do_not_hold_private_keys?: boolean } }>(
+      `${siteBaseUrl}/.well-known/ergo-connect.json`,
+    ),
   ])
 
   const latestFullReceipt = await discoverLatestFullReceipt(
@@ -322,6 +325,17 @@ export async function GET(req: Request) {
         ? "Interactive policy verdict playground is available for developers"
         : walletAgentPolicyPlayground.error ?? "wallet-agent policy playground unavailable",
       "/build/agent-payments/policy-playground",
+    ),
+    gate(
+      "ergo-connect-wallet-boundary",
+      "ErgoConnect wallet boundary",
+      ergoConnect.ok && ergoConnect.data?.security_boundary?.agents_do_not_hold_private_keys === true
+        ? "live"
+        : "degraded",
+      ergoConnect.ok
+        ? "CAIP-native wallet boundary manifest is published for ErgoAuth, ErgoPay, policy, and receipt expectations"
+        : ergoConnect.error ?? "ErgoConnect manifest unavailable",
+      "/build/ergo-connect",
     ),
     gate(
       "mcp-fly",

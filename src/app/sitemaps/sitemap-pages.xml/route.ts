@@ -47,6 +47,7 @@ export async function GET() {
     { url: '/agents', priority: 0.95, changefreq: 'weekly' as const },
     { url: '/agents/registry', priority: 0.9, changefreq: 'weekly' as const },
     { url: '/jobs', priority: 0.9, changefreq: 'weekly' as const },
+    { url: '/build/ergo-connect', priority: 0.85, changefreq: 'weekly' as const },
     // Agent Economy & Build
     { url: '/agent-economy', priority: 0.9, changefreq: 'weekly' as const },
     { url: '/agent-economy/start', priority: 0.9, changefreq: 'weekly' as const },

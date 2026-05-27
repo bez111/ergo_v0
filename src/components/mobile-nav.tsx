@@ -43,6 +43,9 @@ export function MobileNav({ items }: MobileNavProps) {
     if (title === "First Receipt" || title === "First Receipt Flow") {
       return title
     }
+    if (title === "ErgoConnect") {
+      return "ErgoConnect"
+    }
     
     const titleKey = title.toLowerCase()
     

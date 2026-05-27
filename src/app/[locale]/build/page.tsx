@@ -1,4 +1,4 @@
-import { ArrowRight, Code2, Play, ReceiptText, ServerCog, TerminalSquare } from "lucide-react"
+import { ArrowRight, Code2, Play, ReceiptText, ServerCog, TerminalSquare, WalletCards } from "lucide-react"
 import { Link } from "@/i18n/navigation"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
@@ -24,6 +24,13 @@ const buildTools = [
     href: "/build/agent-payments",
     icon: ReceiptText,
     label: "Inspect flow",
+  },
+  {
+    title: "ErgoConnect",
+    description: "Define the wallet boundary for agents: ErgoAuth proof, ErgoPay handoff, policy verdicts, and receipt expectations.",
+    href: "/build/ergo-connect",
+    icon: WalletCards,
+    label: "Read spec",
   },
   {
     title: "Developer Services",
@@ -56,7 +63,7 @@ export default function BuildIndexPage() {
               </p>
             </div>
 
-            <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-5">
               {buildTools.map((tool) => (
                 <Link
                   key={tool.href}

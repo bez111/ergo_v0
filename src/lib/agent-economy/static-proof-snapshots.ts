@@ -158,6 +158,7 @@ export const agentEconomyLiveSnapshot = {
     ["wallet-agent-policy", "Wallet-agent policy check", "live", "Policy profile schema, template, and deterministic verdict API are published", "/api/agent-economy/wallet-agent/policy-check"],
     ["wallet-agent-reference-flow", "Wallet-agent reference flow", "live", "Reference runner API is published for host-owned wallet flows", "/build/agent-payments/wallet-agent-runner"],
     ["wallet-agent-policy-playground", "Wallet-agent policy playground", "live", "Interactive policy verdict playground is available for developers", "/build/agent-payments/policy-playground"],
+    ["ergo-connect-wallet-boundary", "ErgoConnect wallet boundary", "live", "CAIP-native wallet boundary manifest is published for ErgoAuth, ErgoPay, policy, and receipt expectations", "/build/ergo-connect"],
     ["mcp-fly", "MCP Fly endpoint", "live", "Service 0.1.0 responding", "https://ergoblockchain-mcp.fly.dev/health"],
     ["mcp-dns", "MCP public DNS", "live", "mcp.ergoblockchain.org is resolving", "https://mcp.ergoblockchain.org/health"],
     ["playground", "ErgoScript playground", "live", "Runtime live; async WASM build warning cleared", "/build/playground"],

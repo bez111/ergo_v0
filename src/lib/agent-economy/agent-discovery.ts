@@ -26,6 +26,9 @@ export const agentEntrypoints = {
   jobs_page: `${BASE_URL}/jobs`,
   jobs_api: `${BASE_URL}/api/jobs`,
   jobs_manifest: `${BASE_URL}/.well-known/ergo-agent-jobs.json`,
+  ergo_connect_page: `${BASE_URL}/build/ergo-connect`,
+  ergo_connect_manifest: `${BASE_URL}/.well-known/ergo-connect.json`,
+  ergo_connect_schema: `${BASE_URL}/agent-economy/ergo-connect.schema.v0.json`,
   llms_txt: `${BASE_URL}/llms.txt`,
   llms_full: `${BASE_URL}/llms-full.txt`,
   well_known_agent_manifest: `${BASE_URL}/.well-known/agents.json`,
@@ -139,6 +142,16 @@ export const agentCapabilities = [
     human_url: agentEntrypoints.jobs_page,
     first_step: true,
   },
+  {
+    id: "inspect_wallet_boundary",
+    label: "Inspect ErgoConnect wallet boundary",
+    capability: "wallet_boundary",
+    input: "agent payment intent",
+    output: "CAIP Ergo identifiers, ErgoAuth proof role, ErgoPay handoff role, wallet policy boundary, receipt expectation, and forbidden signing assumptions.",
+    status: "spec_bootstrap_testnet",
+    endpoint: agentEntrypoints.ergo_connect_manifest,
+    human_url: agentEntrypoints.ergo_connect_page,
+  },
 ] as const
 
 export const agentQuestions = [
@@ -192,6 +205,7 @@ export const agentCapabilityManifest = {
     llms_txt: agentEntrypoints.llms_txt,
     service_registry: agentEntrypoints.service_registry_api,
     jobs: agentEntrypoints.jobs_api,
+    ergo_connect: agentEntrypoints.ergo_connect_manifest,
     discovery_api: agentEntrypoints.agent_economy_discovery_api,
     openapi: agentEntrypoints.openapi,
     mcp_health: agentEntrypoints.mcp_health,
@@ -220,6 +234,7 @@ export const agentCapabilityManifest = {
     "Call /api/agents.",
     "Call /api/agents/registry to discover bootstrap services.",
     "Call /api/jobs to discover receipt-backed bootstrap work.",
+    "Read /.well-known/ergo-connect.json before constructing wallet or signing assumptions.",
     "Call /api/agent-economy/discovery.",
     "Call /api/agent-economy/first-receipt for the shortest developer path.",
     "Inspect /api/agent-economy/proofs.",

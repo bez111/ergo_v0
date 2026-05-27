@@ -99,6 +99,16 @@
       "destination": "/jobs"
     },
     {
+      "source": "/ergo-connect",
+      "has": [
+        {
+          "type": "host",
+          "value": "agents.ergoblockchain.org"
+        }
+      ],
+      "destination": "/build/ergo-connect"
+    },
+    {
       "source": "/sage-widget",
       "has": [
         {

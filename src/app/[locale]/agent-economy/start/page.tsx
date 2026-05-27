@@ -137,6 +137,12 @@ const developerSurfaces = [
     icon: WalletCards,
     value: "spec layer",
   },
+  {
+    label: "ErgoConnect",
+    href: "/build/ergo-connect",
+    icon: WalletCards,
+    value: "wallet boundary",
+  },
 ]
 
 export async function generateMetadata({

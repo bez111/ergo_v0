@@ -291,6 +291,18 @@ export async function GET() {
       schema: ['TechArticle', 'Dataset']
     },
     {
+      id: 'ergo-connect-wallet-boundary',
+      type: 'page',
+      title: 'ErgoConnect Wallet Boundary',
+      description: 'TrustConnect-style CAIP-native wallet boundary spec for Ergo autonomous work: ErgoAuth proof, ErgoPay handoff, wallet policy, reduced transactions, receipt expectations and audit-gated mainnet posture.',
+      url: '/build/ergo-connect',
+      absoluteUrl: `${baseUrl}/build/ergo-connect`,
+      priority: 0.85,
+      changeFrequency: 'weekly',
+      keywords: 'ErgoConnect, Ergo wallet connect, CAIP Ergo namespace, ErgoAuth, ErgoPay, wallet policy, AI agent wallet, autonomous work settlement, receipt-backed signing',
+      schema: ['SoftwareApplication', 'Dataset', 'TechArticle']
+    },
+    {
       id: 'community',
       type: 'page',
       title: 'Community - No VC, No Premine, Built by Ergo Contributors',

@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "Ergo Agent Economy Public API",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "summary": "Machine-readable API contract for the Ergo Agent Economy testnet proof surface.",
     "description": "Public Agent Economy APIs expose discovery, live status, proof exploration, launch-kit data, review evidence, wallet-agent policy checks, and Sage receipt surfaces. This contract is testnet-first and does not imply mainnet readiness."
   },
@@ -154,6 +154,25 @@
               "application/json": {
                 "schema": {
                   "$ref": "https://www.ergoblockchain.org/agent-economy/agent-jobs.schema.v0.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/.well-known/ergo-connect.json": {
+      "get": {
+        "tags": ["Wallet Agent"],
+        "operationId": "getErgoConnectWalletBoundary",
+        "summary": "Get the ErgoConnect wallet boundary manifest",
+        "responses": {
+          "200": {
+            "description": "CAIP-native wallet boundary manifest for Ergo autonomous-work flows. This is a testnet-first spec surface, not a production wallet or custody claim.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://www.ergoblockchain.org/agent-economy/ergo-connect.schema.v0.json"
                 }
               }
             }

@@ -10,6 +10,7 @@ import {
   Network,
   ReceiptText,
   ShieldCheck,
+  WalletCards,
 } from "lucide-react"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
@@ -52,6 +53,12 @@ const primarySteps = [
     body: "Bootstrap service registry plus machine-readable jobs for agents that want to earn receipt-backed testnet work.",
   },
   {
+    label: "Inspect wallet boundary",
+    href: "/build/ergo-connect",
+    icon: WalletCards,
+    body: "Read the CAIP-native ErgoConnect boundary before assuming an agent can sign, spend, or hold wallet authority.",
+  },
+  {
     label: "Use MCP",
     href: "https://mcp.ergoblockchain.org/health",
     icon: Network,
@@ -66,6 +73,8 @@ const endpointRows = [
   ["Well-known service registry", "/.well-known/ergo-agent-registry.json"],
   ["Agent jobs", "/api/jobs"],
   ["Well-known jobs", "/.well-known/ergo-agent-jobs.json"],
+  ["ErgoConnect", "/build/ergo-connect"],
+  ["Well-known ErgoConnect", "/.well-known/ergo-connect.json"],
   ["Agent Economy discovery", "/api/agent-economy/discovery"],
   ["First receipt flow", "/api/agent-economy/first-receipt"],
   ["OpenAPI", "/agent-economy/openapi.v0.json"],

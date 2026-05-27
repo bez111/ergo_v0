@@ -14,6 +14,7 @@ const agentsHostRoutes = [
   ['/roadmap', '/agent-economy/roadmap'],
   ['/registry', '/agents/registry'],
   ['/jobs', '/jobs'],
+  ['/ergo-connect', '/build/ergo-connect'],
   ['/sage-widget', '/agent-economy/sage-widget'],
   ['/wallet-agent', '/agent-economy/wallet-agent'],
   ['/wallet-agent-runner', '/build/agent-payments/wallet-agent-runner'],

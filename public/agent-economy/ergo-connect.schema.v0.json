@@ -1,0 +1,186 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.ergoblockchain.org/agent-economy/ergo-connect.schema.v0.json",
+  "title": "ErgoConnect Wallet Boundary",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "version",
+    "status",
+    "last_reviewed",
+    "canonical",
+    "schema",
+    "purpose",
+    "positioning",
+    "posture",
+    "claim_boundary",
+    "caip",
+    "capabilities",
+    "signing_surfaces",
+    "flow",
+    "package_plan",
+    "demo",
+    "example_policy",
+    "manifests",
+    "security_boundary",
+    "recommended_agent_path"
+  ],
+  "properties": {
+    "type": { "const": "ergo.connect.wallet_boundary.v0" },
+    "version": { "const": "v0" },
+    "status": { "const": "spec_bootstrap_testnet" },
+    "last_reviewed": { "type": "string" },
+    "canonical": { "type": "string", "format": "uri" },
+    "schema": { "type": "string", "format": "uri" },
+    "purpose": { "type": "string" },
+    "positioning": { "type": "string" },
+    "posture": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["network", "mainnet_ready", "production_custody", "audit_gate"],
+      "properties": {
+        "network": { "const": "ergo_testnet" },
+        "mainnet_ready": { "const": false },
+        "production_custody": { "const": false },
+        "audit_gate": { "type": "string" }
+      }
+    },
+    "claim_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["safe_claim", "do_not_claim", "public_language"],
+      "properties": {
+        "safe_claim": { "type": "string" },
+        "do_not_claim": { "type": "string" },
+        "public_language": { "type": "string" }
+      }
+    },
+    "caip": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["namespace", "mainnet", "testnet", "account_format", "asset_format"],
+      "properties": {
+        "namespace": { "const": "ergo" },
+        "mainnet": { "type": "string" },
+        "testnet": { "type": "string" },
+        "account_format": { "type": "string" },
+        "asset_format": { "type": "string" }
+      }
+    },
+    "capabilities": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label", "description"],
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "flow": {
+      "type": "array",
+      "minItems": 5,
+      "items": { "type": "string" }
+    },
+    "signing_surfaces": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label", "role", "custody_boundary"],
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "type": "string" },
+          "role": { "type": "string" },
+          "custody_boundary": { "type": "string" }
+        }
+      }
+    },
+    "package_plan": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "demo": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "status", "allow_case", "deny_case", "expected_result"],
+      "properties": {
+        "id": { "type": "string" },
+        "status": { "type": "string" },
+        "allow_case": { "type": "string" },
+        "deny_case": { "type": "string" },
+        "expected_result": { "type": "string" }
+      }
+    },
+    "example_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "network",
+        "daily_budget_erg",
+        "max_per_task_erg",
+        "allowed_categories",
+        "allowed_providers",
+        "requires_receipt",
+        "requires_task_hash",
+        "max_expiry_blocks",
+        "mainnet_allowed"
+      ],
+      "properties": {
+        "id": { "type": "string" },
+        "network": { "const": "ergo_testnet" },
+        "daily_budget_erg": { "type": "string" },
+        "max_per_task_erg": { "type": "string" },
+        "allowed_categories": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "allowed_providers": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "requires_receipt": { "const": true },
+        "requires_task_hash": { "const": true },
+        "max_expiry_blocks": { "type": "integer", "minimum": 1 },
+        "mainnet_allowed": { "const": false }
+      }
+    },
+    "manifests": {
+      "type": "object",
+      "additionalProperties": { "type": "string", "format": "uri" }
+    },
+    "security_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "agents_do_not_hold_private_keys",
+        "host_does_not_silently_sign",
+        "human_or_wallet_policy_required",
+        "receipt_required_for_agent_spend",
+        "mainnet_claims_audit_gated",
+        "mcp_tools_prepare_intents_not_signatures"
+      ],
+      "properties": {
+        "agents_do_not_hold_private_keys": { "const": true },
+        "host_does_not_silently_sign": { "const": true },
+        "human_or_wallet_policy_required": { "const": true },
+        "receipt_required_for_agent_spend": { "const": true },
+        "mainnet_claims_audit_gated": { "const": true },
+        "mcp_tools_prepare_intents_not_signatures": { "const": true }
+      }
+    },
+    "recommended_agent_path": {
+      "type": "array",
+      "minItems": 3,
+      "items": { "type": "string" }
+    }
+  }
+}

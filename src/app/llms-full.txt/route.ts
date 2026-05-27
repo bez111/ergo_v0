@@ -92,6 +92,7 @@ ${glossarySection}
 - ${BASE_URL}/agents — Agent-native entrypoint for capabilities, llms.txt, discovery, OpenAPI, MCP, receipts, proof APIs and mainnet gate
 - ${BASE_URL}/agents/registry — Bootstrap service registry for autonomous-work providers, verifier templates, tool endpoints, accepted payment rails and receipt evidence
 - ${BASE_URL}/jobs — Machine-readable bootstrap jobs for receipt-backed autonomous work
+- ${BASE_URL}/build/ergo-connect — ErgoConnect wallet boundary spec for CAIP Ergo identifiers, ErgoAuth proof, ErgoPay handoff, wallet policy, reduced transactions and receipt expectations
 
 ## Primary User Paths
 
@@ -130,6 +131,9 @@ Ergo is the first reference programmable-settlement rail for the Accord Protocol
 - ${BASE_URL}/.well-known/ergo-agent-registry.json — Well-known Agent Service Registry for agents and tool clients
 - ${BASE_URL}/api/jobs — API version of the Agent Jobs Board
 - ${BASE_URL}/.well-known/ergo-agent-jobs.json — Well-known jobs board for autonomous agents
+- ${BASE_URL}/build/ergo-connect — Human-readable ErgoConnect wallet boundary: connect wallet, prove address control, apply local policy, hand off one exact unsigned/reduced transaction and verify the receipt
+- ${BASE_URL}/.well-known/ergo-connect.json — Machine-readable ErgoConnect wallet boundary manifest
+- ${BASE_URL}/agent-economy/ergo-connect.schema.v0.json — JSON Schema for the ErgoConnect wallet boundary manifest
 - ${BASE_URL}/api/agent-economy/discovery — API version of the same discovery descriptor with schema link headers
 - ${BASE_URL}/.well-known/accord — Sage Accord provider descriptor with testnet L1 conformance evidence and full receipt link
 - ${BASE_URL}/agent-economy/discovery.schema.v0.json — JSON Schema for the Agent Economy discovery descriptor
@@ -219,6 +223,7 @@ sigmaProp(
 - No protocol-level reentrancy — each UTxO can only be spent once (application bugs still possible)
 - Current public demos should be treated as mock/testnet examples, not mainnet custody guides
 - Mainnet use remains blocked unless signed audit manifests mark the specific implementation production-ready
+- ErgoConnect is a TrustConnect-style / CAIP-native spec surface for Ergo wallet boundaries; do not claim upstream Trust Wallet or TrustConnect production support unless upstream support exists
 - Testnet/mock demos are available at ${BASE_URL}/demos
 - Runtime network, SigmaUSD, mempool, token and prototype agent-economy metrics are available at ${BASE_URL}/ergo-watch and ${BASE_URL}/api/ergo-watch
 - Fleet SDK npm package: @fleet-sdk/core

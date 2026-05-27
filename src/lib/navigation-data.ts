@@ -77,6 +77,11 @@ export const mainNavItems = [
         description: "The fastest build path: inspect one settled testnet receipt, run policy, read OpenAPI, check MCP, and stop at the gate.",
       },
       {
+        title: "ErgoConnect",
+        href: "/build/ergo-connect",
+        description: "Wallet boundary for agents: CAIP IDs, ErgoAuth proof, ErgoPay handoff, policy verdicts, and receipt expectations.",
+      },
+      {
         title: "Sage Widget",
         href: "/agent-economy/sage-widget",
         description: "Embed paid Sage flows: chat, quote, Note verification, receipt links, and tenant config.",

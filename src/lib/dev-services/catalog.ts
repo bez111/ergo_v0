@@ -18,6 +18,7 @@ import {
   ShieldCheck,
   SlidersHorizontal,
   TerminalSquare,
+  WalletCards,
   type LucideIcon,
 } from "lucide-react"
 
@@ -237,6 +238,23 @@ export const devServices: DevService[] = [
       "Checks recipient, reserve, amount, fee, expiry, task hash, and receipt expectations.",
       "Request and verdict schema: /agent-economy/wallet-agent-policy-check.schema.v0.json.",
       "Returns reasons and warnings only; it never signs or broadcasts.",
+    ],
+  },
+  {
+    id: "ergo-connect-wallet-boundary",
+    title: "ErgoConnect Wallet Boundary",
+    summary: "CAIP-native spec surface for ErgoAuth proof, ErgoPay handoff, wallet policy, reduced transactions, and receipt expectations.",
+    href: "/build/ergo-connect",
+    apiHref: "/.well-known/ergo-connect.json",
+    category: "agents",
+    state: "live",
+    latency: "network",
+    icon: WalletCards,
+    machineReadable: true,
+    notes: [
+      "Spec/bootstrap surface only; it is not production wallet software.",
+      "Explicitly forbids claiming upstream Trust Wallet or TrustConnect production support until upstream support exists.",
+      "Keeps agents outside private keys and silent signing authority.",
     ],
   },
   {
