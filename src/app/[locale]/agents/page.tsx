@@ -4,6 +4,7 @@ import {
   ArrowRight,
   Bot,
   Braces,
+  ClipboardCheck,
   ExternalLink,
   FileJson2,
   LockKeyhole,
@@ -59,6 +60,12 @@ const primarySteps = [
     body: "Validate a provider manifest before it can be reviewed for the bootstrap service registry.",
   },
   {
+    label: "Accept job",
+    href: "/jobs/accept",
+    icon: ClipboardCheck,
+    body: "Validate a worker intent before an open bootstrap job can be assigned for receipt-backed work.",
+  },
+  {
     label: "Inspect wallet boundary",
     href: "/build/ergo-connect",
     icon: WalletCards,
@@ -79,6 +86,7 @@ const endpointRows = [
   ["Well-known service registry", "/.well-known/ergo-agent-registry.json"],
   ["Service publish validation", "/api/agents/publish"],
   ["Agent jobs", "/api/jobs"],
+  ["Job acceptance validation", "/api/jobs/accept"],
   ["Well-known jobs", "/.well-known/ergo-agent-jobs.json"],
   ["ErgoConnect", "/build/ergo-connect"],
   ["Well-known ErgoConnect", "/.well-known/ergo-connect.json"],

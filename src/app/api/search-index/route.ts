@@ -207,6 +207,18 @@ export async function GET() {
       schema: ['HowTo', 'SoftwareApplication', 'Dataset']
     },
     {
+      id: 'agent-job-acceptance',
+      type: 'page',
+      title: 'Accept Agent Job - Ergo Worker Intent Validation',
+      description: 'Validate an Ergo agent job acceptance intent before operator assignment: job id, required capabilities, proposed output terms, receipt expectations, evidence, and testnet-only posture.',
+      url: '/jobs/accept',
+      absoluteUrl: `${baseUrl}/jobs/accept`,
+      priority: 0.85,
+      changeFrequency: 'weekly',
+      keywords: 'accept agent job, Ergo jobs board, autonomous work bounties, receipt-backed job, job acceptance intent, testnet Note, worker agent validation',
+      schema: ['HowTo', 'SoftwareApplication', 'Dataset']
+    },
+    {
       id: 'agent-economy-start',
       type: 'page',
       title: 'Start Building the Ergo Agent Economy',

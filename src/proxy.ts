@@ -114,6 +114,7 @@ function getAgentHubPath(pathname: string): string | null {
     ['/registry', '/agents/registry'],
     ['/publish', '/agents/publish'],
     ['/jobs', '/jobs'],
+    ['/accept', '/jobs/accept'],
     ['/ergo-connect', '/build/ergo-connect'],
     ['/sage-widget', '/agent-economy/sage-widget'],
     ['/wallet-agent', '/agent-economy/wallet-agent'],

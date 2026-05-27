@@ -110,7 +110,7 @@ export async function GET(req: Request) {
   const requestOrigin = new URL(req.url).origin
   const siteBaseUrl = trimSlash(process.env.AGENT_ECONOMY_LIVE_BASE_URL ?? requestOrigin)
 
-  const [activity, storage, accord, conformanceEvidence, registry, signer, widgetNpm, mcpFly, mcpDns, mainnetGate, reviewPack, launchKit, proofExplorer, walletAgent, walletAgentPolicy, walletAgentReferenceFlow, walletAgentPolicyPlayground, ergoConnect, agentServicePublish] = await Promise.all([
+  const [activity, storage, accord, conformanceEvidence, registry, signer, widgetNpm, mcpFly, mcpDns, mainnetGate, reviewPack, launchKit, proofExplorer, walletAgent, walletAgentPolicy, walletAgentReferenceFlow, walletAgentPolicyPlayground, ergoConnect, agentServicePublish, agentJobAcceptance] = await Promise.all([
     probeJson<SageActivityResponse>(`${siteBaseUrl}/api/sage/activity?limit=8`),
     probeJson<SageReceiptStorageHealthResponse>(
       `${siteBaseUrl}/api/sage/receipt/blob-probe-2026-05-16`,
@@ -147,6 +147,9 @@ export async function GET(req: Request) {
     ),
     probeJson<{ ok?: boolean; type?: string; example_validation?: { accepted_for_operator_review?: boolean } }>(
       `${siteBaseUrl}/api/agents/publish`,
+    ),
+    probeJson<{ ok?: boolean; type?: string; example_validation?: { accepted_for_operator_review?: boolean } }>(
+      `${siteBaseUrl}/api/jobs/accept`,
     ),
   ])
 
@@ -354,6 +357,19 @@ export async function GET(req: Request) {
       "/agents/publish",
     ),
     gate(
+      "agent-job-acceptance",
+      "Agent job acceptance validator",
+      agentJobAcceptance.ok &&
+        agentJobAcceptance.data?.ok === true &&
+        agentJobAcceptance.data.example_validation?.accepted_for_operator_review === true
+        ? "live"
+        : "degraded",
+      agentJobAcceptance.ok && agentJobAcceptance.data?.ok === true
+        ? "Worker intent validation is published before job operator assignment"
+        : agentJobAcceptance.error ?? "agent job acceptance validator unavailable",
+      "/jobs/accept",
+    ),
+    gate(
       "mcp-fly",
       "MCP Fly endpoint",
       mcpFly.ok && mcpFly.data?.ok === true ? "live" : "degraded",
@@ -452,6 +468,8 @@ export async function GET(req: Request) {
       developer_launch_kit_published: launchKit.ok && launchKit.data?.ok === true,
       agent_service_publish_published:
         agentServicePublish.ok && agentServicePublish.data?.ok === true,
+      agent_job_acceptance_published:
+        agentJobAcceptance.ok && agentJobAcceptance.data?.ok === true,
       proof_explorer_published: proofExplorer.ok,
       sage_wallet_event_count: activity.data?.total ?? 0,
       sage_settlement_count: settlementCount,
@@ -531,6 +549,7 @@ export async function GET(req: Request) {
       wallet_agent_policy_playground: publicProbe(walletAgentPolicyPlayground),
       ergo_connect: publicProbe(ergoConnect),
       agent_service_publish: publicProbe(agentServicePublish),
+      agent_job_acceptance: publicProbe(agentJobAcceptance),
       mcp_fly: publicProbe(mcpFly),
       mcp_dns: publicProbe(mcpDns),
       mainnet_gate: publicProbe(mainnetGate),

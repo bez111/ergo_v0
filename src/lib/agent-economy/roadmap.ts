@@ -166,6 +166,18 @@ export const agentEconomyRoadmap = {
       ],
     },
     {
+      id: "agent-job-acceptance",
+      phase: "live" as AgentEconomyRoadmapPhase,
+      title: "Agent Job Acceptance Validator",
+      summary:
+        "A worker-agent intent can now be validated before operator assignment: job id, required capabilities, proposed output terms, receipt expectations, evidence URLs, forbidden claims, and testnet-only posture.",
+      proof_links: [
+        "https://www.ergoblockchain.org/jobs/accept",
+        "https://www.ergoblockchain.org/api/jobs/accept",
+        "https://www.ergoblockchain.org/agent-economy/agent-job-acceptance.schema.v0.json",
+      ],
+    },
+    {
       id: "receipt-reputation-graph",
       phase: "build_next" as AgentEconomyRoadmapPhase,
       title: "Receipt-Derived Reputation Graph",
@@ -191,10 +203,10 @@ export const agentEconomyRoadmap = {
     },
     {
       id: "ergo-connect-wallet-boundary",
-      phase: "build_next" as AgentEconomyRoadmapPhase,
+      phase: "live" as AgentEconomyRoadmapPhase,
       title: "ErgoConnect Wallet Boundary",
       summary:
-        "Define a TrustConnect-style, CAIP-native Ergo wallet boundary for autonomous work: wallet connection, ErgoAuth proof, wallet policy, unsigned or reduced transaction handoff, ErgoPay signing, receipt expectation, and settlement verification. This is a roadmap/spec item, not a claim of upstream Trust Wallet support.",
+        "Published a TrustConnect-style, CAIP-native Ergo wallet boundary for autonomous work: wallet connection, ErgoAuth proof, wallet policy, unsigned or reduced transaction handoff, ErgoPay signing, receipt expectation, and settlement verification. This is a spec/bootstrap surface, not a claim of upstream Trust Wallet support.",
       proof_links: [
         "https://www.ergoblockchain.org/build/ergo-connect",
         "https://www.ergoblockchain.org/.well-known/ergo-connect.json",
@@ -273,9 +285,13 @@ export const agentEconomyRoadmap = {
     service_registry: "https://www.ergoblockchain.org/agents/registry",
     service_registry_api: "https://www.ergoblockchain.org/api/agents/registry",
     service_registry_manifest: "https://www.ergoblockchain.org/.well-known/ergo-agent-registry.json",
+    service_publish: "https://www.ergoblockchain.org/agents/publish",
+    service_publish_api: "https://www.ergoblockchain.org/api/agents/publish",
     jobs_board: "https://www.ergoblockchain.org/jobs",
     jobs_api: "https://www.ergoblockchain.org/api/jobs",
     jobs_manifest: "https://www.ergoblockchain.org/.well-known/ergo-agent-jobs.json",
+    job_acceptance: "https://www.ergoblockchain.org/jobs/accept",
+    job_acceptance_api: "https://www.ergoblockchain.org/api/jobs/accept",
     ergo_connect: "https://www.ergoblockchain.org/build/ergo-connect",
     ergo_connect_manifest: "https://www.ergoblockchain.org/.well-known/ergo-connect.json",
     openapi: "https://www.ergoblockchain.org/agent-economy/openapi.v0.json",
@@ -300,15 +316,9 @@ export const agentEconomyRoadmap = {
       blocked_by_external: false,
     },
     {
-      id: "agent-service-registry",
+      id: "agent-job-quote-flow",
       owner: "repo",
-      label: "Add provider submission and validation flow on top of the live service registry",
-      blocked_by_external: false,
-    },
-    {
-      id: "agent-jobs-board",
-      owner: "repo",
-      label: "Add job acceptance, quote, receipt expectation, and operator approval flow on top of the live jobs board",
+      label: "Add quote and receipt-settlement handoff after job acceptance so accepted bootstrap work can become a full receipt flow",
       blocked_by_external: false,
     },
     {

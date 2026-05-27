@@ -5,6 +5,7 @@ import {
   Bot,
   BriefcaseBusiness,
   CalendarClock,
+  ClipboardCheck,
   ExternalLink,
   FileJson2,
   LockKeyhole,
@@ -134,8 +135,15 @@ export default function AgentJobsPage() {
                 </p>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <JobsLink
-                    href="/api/jobs"
+                    href="/jobs/accept"
                     className="inline-flex items-center gap-2 rounded-lg border border-orange-500 bg-orange-500 px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-black transition-colors hover:bg-orange-400"
+                  >
+                    Accept job
+                    <ClipboardCheck className="h-4 w-4" />
+                  </JobsLink>
+                  <JobsLink
+                    href="/api/jobs"
+                    className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-black/70 px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-neutral-200 transition-colors hover:border-orange-500/45 hover:bg-orange-500/10"
                   >
                     Jobs JSON
                     <FileJson2 className="h-4 w-4" />
@@ -285,6 +293,13 @@ function JobCard({ job }: { job: AgentJob }) {
       </div>
 
       <div className="mt-5 space-y-2">
+        <JobsLink
+          href="/jobs/accept"
+          className="flex min-w-0 items-center gap-2 rounded-md border border-orange-500/35 bg-orange-500/10 px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-orange-100 transition hover:border-orange-500/60 hover:bg-orange-500/15"
+        >
+          <ClipboardCheck className="h-3.5 w-3.5 shrink-0 text-orange-300" />
+          Accept this job
+        </JobsLink>
         {job.links.map((href) => (
           <JobsLink
             key={href}

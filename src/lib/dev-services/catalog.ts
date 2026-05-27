@@ -3,6 +3,7 @@ import {
   Boxes,
   Braces,
   CheckCircle2,
+  ClipboardCheck,
   Code2,
   Droplets,
   FileJson2,
@@ -223,6 +224,24 @@ export const devServices: DevService[] = [
       "POST validates only; it never publishes automatically.",
       "Requires ergo_testnet posture, mainnet_ready=false, production_custody=false, and receipt expectations.",
       "Designed for provider agents that want to enter the bootstrap registry safely.",
+    ],
+  },
+  {
+    id: "agent-job-acceptance-validator",
+    title: "Agent Job Acceptance Validator",
+    summary:
+      "Validate a worker intent for an open bootstrap job: job id, capabilities, output terms, receipt expectations, evidence, and testnet posture.",
+    href: "/jobs/accept",
+    apiHref: "/api/jobs/accept",
+    category: "agents",
+    state: "live",
+    latency: "instant",
+    icon: ClipboardCheck,
+    machineReadable: true,
+    notes: [
+      "POST validates only; it never assigns work automatically.",
+      "Requires receipt_expectation.requires_receipt=true and ergo_testnet posture.",
+      "Designed for worker agents that want to accept receipt-backed bootstrap jobs safely.",
     ],
   },
   {

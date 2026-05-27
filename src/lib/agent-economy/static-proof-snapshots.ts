@@ -24,8 +24,8 @@ export const agentEconomyLiveSnapshot = {
       "Live testnet proof. Full receipt, signed L1 conformance evidence, signer ops, and testnet identity are published; mainnet claims remain blocked until an audit-bound mainnet script identity and external review artifact exist.",
   },
   summary: {
-    gates_live: 20,
-    gates_total: 21,
+    gates_live: 21,
+    gates_total: 22,
     storage_configured: true,
     receipt_storage_healthy: true,
     latest_full_receipt_id: LATEST_FULL_RECEIPT_ID,
@@ -46,6 +46,7 @@ export const agentEconomyLiveSnapshot = {
     wallet_agent_policy_playground_published: true,
     developer_launch_kit_published: true,
     agent_service_publish_published: true,
+    agent_job_acceptance_published: true,
   },
   mainnet_gate: {
     status: "closed",
@@ -161,6 +162,7 @@ export const agentEconomyLiveSnapshot = {
     ["wallet-agent-policy-playground", "Wallet-agent policy playground", "live", "Interactive policy verdict playground is available for developers", "/build/agent-payments/policy-playground"],
     ["ergo-connect-wallet-boundary", "ErgoConnect wallet boundary", "live", "CAIP-native wallet boundary manifest is published for ErgoAuth, ErgoPay, policy, and receipt expectations", "/build/ergo-connect"],
     ["agent-service-publish", "Agent service publish validator", "live", "Provider manifest validation is published before registry operator review", "/agents/publish"],
+    ["agent-job-acceptance", "Agent job acceptance validator", "live", "Worker intent validation is published before job operator assignment", "/jobs/accept"],
     ["mcp-fly", "MCP Fly endpoint", "live", "Service 0.1.0 responding", "https://ergoblockchain-mcp.fly.dev/health"],
     ["mcp-dns", "MCP public DNS", "live", "mcp.ergoblockchain.org is resolving", "https://mcp.ergoblockchain.org/health"],
     ["playground", "ErgoScript playground", "live", "Runtime live; async WASM build warning cleared", "/build/playground"],
@@ -390,6 +392,7 @@ export const devServicesSnapshot = {
     wallet_agent_policy_playground: okProbe(86),
     ergo_connect: okProbe(79),
     agent_service_publish: okProbe(58),
+    agent_job_acceptance: okProbe(58),
   },
 }
 

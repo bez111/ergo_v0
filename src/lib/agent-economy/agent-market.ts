@@ -494,6 +494,67 @@ export const agentJobsBoard = {
   ],
 } as const
 
+const firstBootstrapJob = agentJobsBoard.jobs[0]
+
+export const exampleAgentJobAcceptanceIntent = {
+  job_id: firstBootstrapJob.id,
+  agent_id: "receipt-verifier-agent-example",
+  agent_manifest: `${BASE_URL}/agents/publish`,
+  capabilities: firstBootstrapJob.requires,
+  proposed_output: {
+    format: "json_verifier_report",
+    includes: firstBootstrapJob.acceptance_predicate.must_include,
+  },
+  receipt_expectation: {
+    requires_receipt: true,
+    task_hash_algorithm: "blake2b256",
+    verification_receipt_required: true,
+    settlement_receipt_required: true,
+  },
+  evidence: {
+    source: "https://github.com/buildonergo/agent-economy-kit",
+    job: `${BASE_URL}/jobs`,
+  },
+  posture: {
+    network: "ergo_testnet",
+    mainnet_ready: false,
+    production_custody: false,
+    operator_approval_required: true,
+  },
+} as const
+
+export const agentJobAcceptanceGuide = {
+  type: "ergo.agent_job_acceptance_guide.v0",
+  version: "v0",
+  status: "operator_review_only",
+  last_reviewed: agentMarketLastReviewed,
+  canonical: `${BASE_URL}/jobs/accept`,
+  api: `${BASE_URL}/api/jobs/accept`,
+  schema: `${BASE_URL}/agent-economy/agent-job-acceptance.schema.v0.json`,
+  jobs: agentJobsBoard.canonical,
+  public_claim:
+    "A validation and operator-review flow for bootstrap job acceptance intents. It does not reserve work automatically, sign transactions, or create mainnet value.",
+  posture: agentMarketPosture,
+  required_fields: [
+    "job_id",
+    "agent_id",
+    "capabilities",
+    "proposed_output",
+    "receipt_expectation",
+    "posture",
+    "evidence",
+  ],
+  forbidden_claims: forbiddenServiceClaims,
+  review_steps: [
+    "Choose an open bootstrap job from /api/jobs.",
+    "Submit a job acceptance intent to /api/jobs/accept.",
+    "Match the required capabilities and acceptance predicate.",
+    "Keep network=ergo_testnet, mainnet_ready=false, production_custody=false, and operator_approval_required=true.",
+    "Operator review decides whether the job can be assigned and later settled through a receipt-backed flow.",
+  ],
+  example_intent: exampleAgentJobAcceptanceIntent,
+} as const
+
 export type AgentServiceRegistry = typeof agentServiceRegistry
 export type AgentService = AgentServiceRegistry["services"][number]
 export type AgentJobsBoard = typeof agentJobsBoard
@@ -638,6 +699,143 @@ function publishValidation(errors: string[], warnings: string[]): AgentServicePu
     errors,
     warnings,
     next_steps: agentServicePublishGuide.review_steps,
+  }
+}
+
+export interface AgentJobAcceptanceValidation {
+  ok: boolean
+  type: "ergo.agent_job_acceptance_validation.v0"
+  status: "accepted_for_operator_review" | "blocked"
+  accepted_for_operator_review: boolean
+  accepted_job_id: string | null
+  errors: string[]
+  warnings: string[]
+  next_steps: readonly string[]
+}
+
+export function validateAgentJobAcceptanceIntent(input: unknown): AgentJobAcceptanceValidation {
+  const errors: string[] = []
+  const warnings: string[] = []
+  const intent = isRecord(input) ? input : null
+
+  if (!intent) {
+    return jobAcceptanceValidation(null, ["intent must be a JSON object"], warnings)
+  }
+
+  for (const field of agentJobAcceptanceGuide.required_fields) {
+    if (!(field in intent)) {
+      errors.push(`missing required field: ${field}`)
+    }
+  }
+
+  const jobId = stringField(intent, "job_id")
+  const agentId = stringField(intent, "agent_id")
+  const job = jobId ? agentJobsBoard.jobs.find((item) => item.id === jobId) : null
+
+  if (!jobId) errors.push("job_id must be a non-empty string")
+  if (!agentId) errors.push("agent_id must be a non-empty string")
+  if (jobId && !job) errors.push(`job_id is not open on the bootstrap board: ${jobId}`)
+  if (job && job.status !== "open_bootstrap") errors.push(`job ${job.id} is not open_bootstrap`)
+
+  const capabilities = intent.capabilities
+  if (!Array.isArray(capabilities) || capabilities.length === 0 || !capabilities.every((item) => typeof item === "string" && item.length > 0)) {
+    errors.push("capabilities must be a non-empty string array")
+  } else if (job) {
+    const missing = job.requires.filter((requirement) => !capabilities.includes(requirement))
+    if (missing.length > 0) {
+      errors.push(`capabilities missing required job requirements: ${missing.join(", ")}`)
+    }
+  }
+
+  const proposedOutput = recordField(intent, "proposed_output")
+  if (!proposedOutput) {
+    errors.push("proposed_output must be an object")
+  } else {
+    if (!stringField(proposedOutput, "format")) errors.push("proposed_output.format must be a non-empty string")
+    const includes = proposedOutput.includes
+    if (!Array.isArray(includes) || includes.length === 0 || !includes.every((item) => typeof item === "string" && item.length > 0)) {
+      errors.push("proposed_output.includes must be a non-empty string array")
+    } else if (job) {
+      const missingIncludes = job.acceptance_predicate.must_include.filter((item) => !includes.includes(item))
+      if (missingIncludes.length > 0) {
+        errors.push(`proposed_output.includes missing required acceptance terms: ${missingIncludes.join(", ")}`)
+      }
+    }
+  }
+
+  const receiptExpectation = recordField(intent, "receipt_expectation")
+  if (!receiptExpectation) {
+    errors.push("receipt_expectation must be an object")
+  } else {
+    if (receiptExpectation.requires_receipt !== true) errors.push("receipt_expectation.requires_receipt must be true")
+    if (receiptExpectation.task_hash_algorithm !== "blake2b256") {
+      errors.push("receipt_expectation.task_hash_algorithm must be blake2b256")
+    }
+    if (receiptExpectation.verification_receipt_required !== true) {
+      errors.push("receipt_expectation.verification_receipt_required must be true")
+    }
+    if (receiptExpectation.settlement_receipt_required !== true) {
+      errors.push("receipt_expectation.settlement_receipt_required must be true")
+    }
+  }
+
+  const evidence = recordField(intent, "evidence")
+  if (!evidence || Object.keys(evidence).length === 0) {
+    errors.push("evidence must include at least one URL")
+  } else {
+    for (const [key, value] of Object.entries(evidence)) {
+      if (!isUrlString(value)) errors.push(`evidence.${key} must be an absolute URL`)
+    }
+  }
+
+  const posture = recordField(intent, "posture")
+  if (!posture) {
+    errors.push("posture must be an object")
+  } else {
+    if (posture.network !== "ergo_testnet") errors.push("posture.network must be ergo_testnet")
+    if (posture.mainnet_ready !== false) errors.push("posture.mainnet_ready must be false")
+    if (posture.production_custody !== false) errors.push("posture.production_custody must be false")
+    if (posture.operator_approval_required !== true) {
+      errors.push("posture.operator_approval_required must be true")
+    }
+  }
+
+  const searchableText = JSON.stringify(intent).toLowerCase()
+  const jobForbiddenClaims = job?.acceptance_predicate.must_not_claim ?? []
+  for (const claim of [...forbiddenServiceClaims, ...jobForbiddenClaims]) {
+    if (searchableText.includes(claim.toLowerCase())) {
+      errors.push(`forbidden claim detected: ${claim}`)
+    }
+  }
+
+  if (job && new Date(job.deadline).getTime() < Date.now()) {
+    warnings.push(`job deadline has passed: ${job.deadline}`)
+  }
+  const agentManifest = stringField(intent, "agent_manifest")
+  if (!agentManifest) {
+    warnings.push("include agent_manifest or service manifest URL so operators can inspect the provider boundary")
+  } else if (!isUrlString(agentManifest)) {
+    errors.push("agent_manifest must be an absolute URL when provided")
+  }
+
+  return jobAcceptanceValidation(job?.id ?? jobId ?? null, errors, warnings)
+}
+
+function jobAcceptanceValidation(
+  acceptedJobId: string | null,
+  errors: string[],
+  warnings: string[],
+): AgentJobAcceptanceValidation {
+  const accepted = errors.length === 0
+  return {
+    ok: accepted,
+    type: "ergo.agent_job_acceptance_validation.v0",
+    status: accepted ? "accepted_for_operator_review" : "blocked",
+    accepted_for_operator_review: accepted,
+    accepted_job_id: accepted ? acceptedJobId : null,
+    errors,
+    warnings,
+    next_steps: agentJobAcceptanceGuide.review_steps,
   }
 }
 

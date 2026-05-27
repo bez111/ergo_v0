@@ -8,6 +8,7 @@ import {
   Bot,
   CheckCircle2,
   CircuitBoard,
+  ClipboardCheck,
   Code2,
   ExternalLink,
   GitBranch,
@@ -67,6 +68,7 @@ interface LiveStatusResponse {
     wallet_agent_policy_playground_published?: boolean
     developer_launch_kit_published?: boolean
     agent_service_publish_published?: boolean
+    agent_job_acceptance_published?: boolean
   }
   mainnet_gate?: {
     status: string
@@ -115,6 +117,7 @@ const GATE_ICONS: Record<string, typeof Bot> = {
   "wallet-agent-policy-playground": SlidersHorizontal,
   "ergo-connect-wallet-boundary": WalletCards,
   "agent-service-publish": UploadCloud,
+  "agent-job-acceptance": ClipboardCheck,
   "mcp-fly": Network,
   "mcp-dns": Globe2,
   "mainnet-audit-gate": AlertTriangle,

@@ -96,6 +96,12 @@ const quickLinks = [
     detail: "Validate provider manifests before registry review: capability, pricing, payment rails, predicates, receipts, and evidence.",
   },
   {
+    label: "Accept job",
+    href: "/jobs/accept",
+    icon: ClipboardCheck,
+    detail: "Validate a worker intent before assignment: job id, capabilities, output terms, receipt expectations, evidence, and testnet posture.",
+  },
+  {
     label: "Developer services",
     href: "/build/services",
     icon: TerminalSquare,

@@ -15,6 +15,11 @@ export const mainNavItems = [
         description: "Validate a provider manifest before operator review and registry inclusion.",
       },
       {
+        title: "Accept Job",
+        href: "/jobs/accept",
+        description: "Validate a worker intent before a bootstrap job can be assigned for receipt-backed work.",
+      },
+      {
         title: "Live Proof Hub",
         href: "/agent-economy/live",
         description: "Operational dashboard for Sage, receipts, MCP, widget, policy, and mainnet gate.",
@@ -90,6 +95,11 @@ export const mainNavItems = [
         title: "Publish Service",
         href: "/agents/publish",
         description: "Provider path for capability, pricing, payment rails, predicates, receipts, and evidence validation.",
+      },
+      {
+        title: "Accept Job",
+        href: "/jobs/accept",
+        description: "Worker path for job id, capabilities, output terms, receipt expectations, evidence, and testnet posture.",
       },
       {
         title: "Sage Widget",

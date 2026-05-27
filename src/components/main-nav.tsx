@@ -39,6 +39,9 @@ export function MainNav() {
     if (title === "Publish Service") {
       return "Publish Service"
     }
+    if (title === "Accept Job") {
+      return "Accept Job"
+    }
     
     const titleKey = title.toLowerCase()
     

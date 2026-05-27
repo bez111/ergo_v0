@@ -4,6 +4,7 @@ import {
   ArrowRight,
   Bot,
   CheckCircle2,
+  ClipboardCheck,
   Code2,
   ExternalLink,
   FileJson2,
@@ -149,6 +150,12 @@ const developerSurfaces = [
     href: "/agents/publish",
     icon: UploadCloud,
     value: "provider manifest",
+  },
+  {
+    label: "Accept job",
+    href: "/jobs/accept",
+    icon: ClipboardCheck,
+    value: "worker intent",
   },
 ]
 

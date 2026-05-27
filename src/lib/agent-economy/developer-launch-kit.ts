@@ -23,6 +23,9 @@ export const agentEconomyDeveloperLaunchKit = {
     service_publish: "https://www.ergoblockchain.org/agents/publish",
     service_publish_api: "https://www.ergoblockchain.org/api/agents/publish",
     service_publish_schema: "https://www.ergoblockchain.org/agent-economy/agent-service-publish.schema.v0.json",
+    job_acceptance: "https://www.ergoblockchain.org/jobs/accept",
+    job_acceptance_api: "https://www.ergoblockchain.org/api/jobs/accept",
+    job_acceptance_schema: "https://www.ergoblockchain.org/agent-economy/agent-job-acceptance.schema.v0.json",
     agent_host: "https://agents.ergoblockchain.org",
     live_hub: "https://www.ergoblockchain.org/agent-economy/live",
     discovery: "https://www.ergoblockchain.org/.well-known/agent-economy.json",
@@ -142,6 +145,15 @@ export const agentEconomyDeveloperLaunchKit = {
       curl:
         "curl -sS -X POST https://www.ergoblockchain.org/api/agents/publish -H 'content-type: application/json' --data @service-manifest.json",
       checks: ["type", "accepted_for_operator_review", "errors", "warnings", "next_steps"],
+    },
+    {
+      id: "agent-job-acceptance",
+      label: "Agent job acceptance validation",
+      method: "POST",
+      url: "https://www.ergoblockchain.org/api/jobs/accept",
+      curl:
+        "curl -sS -X POST https://www.ergoblockchain.org/api/jobs/accept -H 'content-type: application/json' --data @job-acceptance-intent.json",
+      checks: ["type", "accepted_for_operator_review", "accepted_job_id", "errors", "warnings"],
     },
     {
       id: "agent-roadmap",

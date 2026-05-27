@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.ergoblockchain.org/agent-economy/agent-job-acceptance.schema.v0.json",
+  "title": "Ergo Agent Job Acceptance Validation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "ok",
+    "type",
+    "status",
+    "accepted_for_operator_review",
+    "accepted_job_id",
+    "errors",
+    "warnings",
+    "next_steps"
+  ],
+  "properties": {
+    "ok": { "type": "boolean" },
+    "type": { "const": "ergo.agent_job_acceptance_validation.v0" },
+    "status": { "enum": ["accepted_for_operator_review", "blocked"] },
+    "accepted_for_operator_review": { "type": "boolean" },
+    "accepted_job_id": {
+      "type": ["string", "null"],
+      "description": "The open bootstrap job id accepted for operator review, or null when validation is blocked."
+    },
+    "errors": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "warnings": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "next_steps": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}
