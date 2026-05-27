@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.ergoblockchain.org/agent-economy/agent-service-registry.schema.v0.json",
+  "title": "Ergo Agent Service Registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "version",
+    "status",
+    "last_reviewed",
+    "canonical",
+    "schema",
+    "posture",
+    "recommended_summary",
+    "registry_policy",
+    "counts",
+    "services"
+  ],
+  "properties": {
+    "type": { "const": "ergo.agent_service_registry.v0" },
+    "version": { "const": "v0" },
+    "status": { "const": "testnet_bootstrap_registry" },
+    "last_reviewed": { "type": "string" },
+    "canonical": { "type": "string", "format": "uri" },
+    "schema": { "type": "string", "format": "uri" },
+    "posture": { "$ref": "#/$defs/posture" },
+    "recommended_summary": { "type": "string" },
+    "registry_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["publishable_entry_types", "required_provider_fields", "forbidden_claims"],
+      "properties": {
+        "publishable_entry_types": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_provider_fields": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "forbidden_claims": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["services_total", "live_testnet", "reference_templates", "mainnet_ready"],
+      "properties": {
+        "services_total": { "type": "integer", "minimum": 0 },
+        "live_testnet": { "type": "integer", "minimum": 0 },
+        "reference_templates": { "type": "integer", "minimum": 0 },
+        "mainnet_ready": { "const": 0 }
+      }
+    },
+    "services": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/service" }
+    }
+  },
+  "$defs": {
+    "posture": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "network", "mainnet_ready", "production_custody", "audit_gate"],
+      "properties": {
+        "status": { "const": "testnet_bootstrap_not_mainnet_market" },
+        "network": { "const": "ergo_testnet" },
+        "mainnet_ready": { "const": false },
+        "production_custody": { "const": false },
+        "audit_gate": { "type": "string" }
+      }
+    },
+    "service": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "category",
+        "status",
+        "summary",
+        "capabilities",
+        "endpoints",
+        "pricing",
+        "accepted_payment",
+        "predicate_requirements",
+        "evidence",
+        "posture"
+      ],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "category": { "type": "string" },
+        "status": { "enum": ["live_testnet", "reference_template"] },
+        "summary": { "type": "string" },
+        "capabilities": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "endpoints": {
+          "type": "object",
+          "additionalProperties": { "type": "string", "format": "uri" }
+        },
+        "pricing": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["mode", "min_price", "unit", "currency"],
+          "properties": {
+            "mode": { "type": "string" },
+            "min_price": { "type": "string" },
+            "unit": { "type": "string" },
+            "currency": { "type": "string" }
+          }
+        },
+        "accepted_payment": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["rails", "requires_receipt", "accepted_reserves", "mainnet_ready"],
+          "properties": {
+            "rails": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "requires_receipt": { "type": "boolean" },
+            "accepted_reserves": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "mainnet_ready": { "const": false }
+          }
+        },
+        "predicate_requirements": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["task_hash", "deadline_required", "max_expiry_blocks", "receipt_schema"],
+          "properties": {
+            "task_hash": { "type": "string" },
+            "deadline_required": { "type": "boolean" },
+            "max_expiry_blocks": { "type": "integer", "minimum": 0 },
+            "receipt_schema": { "type": "string" }
+          }
+        },
+        "evidence": {
+          "type": "object",
+          "additionalProperties": { "type": "string", "format": "uri" }
+        },
+        "posture": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["network", "mainnet_ready", "audit_status", "production_custody"],
+          "properties": {
+            "network": { "const": "ergo_testnet" },
+            "mainnet_ready": { "const": false },
+            "audit_status": { "type": "string" },
+            "production_custody": { "const": false }
+          }
+        }
+      }
+    }
+  }
+}

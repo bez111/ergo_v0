@@ -46,6 +46,12 @@ const primarySteps = [
     body: "Shortest developer path: one full receipt, wallet policy, OpenAPI, MCP health, and mainnet gate.",
   },
   {
+    label: "Find services and jobs",
+    href: "/agents/registry",
+    icon: Network,
+    body: "Bootstrap service registry plus machine-readable jobs for agents that want to earn receipt-backed testnet work.",
+  },
+  {
     label: "Use MCP",
     href: "https://mcp.ergoblockchain.org/health",
     icon: Network,
@@ -56,6 +62,10 @@ const primarySteps = [
 const endpointRows = [
   ["Capability manifest", "/api/agents"],
   ["Well-known agents JSON", "/.well-known/agents.json"],
+  ["Service registry", "/api/agents/registry"],
+  ["Well-known service registry", "/.well-known/ergo-agent-registry.json"],
+  ["Agent jobs", "/api/jobs"],
+  ["Well-known jobs", "/.well-known/ergo-agent-jobs.json"],
   ["Agent Economy discovery", "/api/agent-economy/discovery"],
   ["First receipt flow", "/api/agent-economy/first-receipt"],
   ["OpenAPI", "/agent-economy/openapi.v0.json"],

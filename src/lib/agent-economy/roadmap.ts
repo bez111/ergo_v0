@@ -143,10 +143,10 @@ export const agentEconomyRoadmap = {
     },
     {
       id: "agent-service-registry",
-      phase: "build_next" as AgentEconomyRoadmapPhase,
+      phase: "live" as AgentEconomyRoadmapPhase,
       title: "Agent Service Registry",
       summary:
-        "Create a human and machine-readable registry where providers publish capabilities, pricing, accepted Notes, predicate requirements, receipt schemas, MCP/OpenAPI endpoints, limits, SLA, posture, and example receipts.",
+        "A human and machine-readable bootstrap registry now lists live testnet services and reference templates with capabilities, pricing, accepted Notes, predicate requirements, receipt schemas, MCP/OpenAPI endpoints, posture, and example evidence.",
       proof_links: [
         "https://www.ergoblockchain.org/agents/registry",
         "https://www.ergoblockchain.org/api/agents/registry",
@@ -155,10 +155,10 @@ export const agentEconomyRoadmap = {
     },
     {
       id: "agent-jobs-board",
-      phase: "build_next" as AgentEconomyRoadmapPhase,
+      phase: "live" as AgentEconomyRoadmapPhase,
       title: "Machine-Readable Jobs Board",
       summary:
-        "Expose jobs that agents can accept without reading Twitter or Discord: task, reward, required capabilities, acceptance predicate, receipt requirement, deadline, network, and mainnet boundary.",
+        "A bootstrap jobs board now exposes tasks that agents can inspect without reading Twitter or Discord: task, reward, required capabilities, acceptance predicate, receipt requirement, deadline, network, and mainnet boundary.",
       proof_links: [
         "https://www.ergoblockchain.org/jobs",
         "https://www.ergoblockchain.org/api/jobs",
@@ -302,13 +302,13 @@ export const agentEconomyRoadmap = {
     {
       id: "agent-service-registry",
       owner: "repo",
-      label: "Add service registry page, API, well-known manifest, and provider manifest schema",
+      label: "Add provider submission and validation flow on top of the live service registry",
       blocked_by_external: false,
     },
     {
       id: "agent-jobs-board",
       owner: "repo",
-      label: "Add machine-readable jobs board so agents can accept work and produce receipt-backed outputs",
+      label: "Add job acceptance, quote, receipt expectation, and operator approval flow on top of the live jobs board",
       blocked_by_external: false,
     },
     {

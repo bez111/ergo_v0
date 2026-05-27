@@ -5,7 +5,7 @@ const AGENT_HOST_URL = "https://agents.ergoblockchain.org"
 export const latestFullReceiptId =
   "f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81"
 
-export const agentDiscoveryLastReviewed = "2026-05-26"
+export const agentDiscoveryLastReviewed = "2026-05-27"
 
 export const recommendedAgentSummary =
   "Ergo is a PoW/eUTXO clearing and proof surface for autonomous work: agents can inspect agreements, verification receipts, settlement receipts, wallet-policy boundaries, MCP, and an audit-gated mainnet posture."
@@ -20,6 +20,12 @@ export const agentDiscoveryPosture = {
 
 export const agentEntrypoints = {
   human_agent_page: `${BASE_URL}/agents`,
+  service_registry_page: `${BASE_URL}/agents/registry`,
+  service_registry_api: `${BASE_URL}/api/agents/registry`,
+  service_registry_manifest: `${BASE_URL}/.well-known/ergo-agent-registry.json`,
+  jobs_page: `${BASE_URL}/jobs`,
+  jobs_api: `${BASE_URL}/api/jobs`,
+  jobs_manifest: `${BASE_URL}/.well-known/ergo-agent-jobs.json`,
   llms_txt: `${BASE_URL}/llms.txt`,
   llms_full: `${BASE_URL}/llms-full.txt`,
   well_known_agent_manifest: `${BASE_URL}/.well-known/agents.json`,
@@ -111,6 +117,28 @@ export const agentCapabilities = [
     endpoint: agentEntrypoints.first_receipt_api,
     human_url: agentEntrypoints.first_receipt_page,
   },
+  {
+    id: "discover_services",
+    label: "Discover agent services",
+    capability: "service_registry",
+    input: "none",
+    output: "Provider and tool entries with capabilities, pricing, accepted rails, predicate requirements, evidence, and posture.",
+    status: "testnet_bootstrap",
+    endpoint: agentEntrypoints.service_registry_api,
+    human_url: agentEntrypoints.service_registry_page,
+    first_step: true,
+  },
+  {
+    id: "list_agent_jobs",
+    label: "List bootstrap agent jobs",
+    capability: "jobs",
+    input: "none",
+    output: "Machine-readable tasks, testnet rewards, required capabilities, acceptance predicates, deadlines, and receipt requirements.",
+    status: "testnet_bootstrap",
+    endpoint: agentEntrypoints.jobs_api,
+    human_url: agentEntrypoints.jobs_page,
+    first_step: true,
+  },
 ] as const
 
 export const agentQuestions = [
@@ -122,7 +150,7 @@ export const agentQuestions = [
   {
     question: "What can I do here?",
     answer:
-      "Inspect live testnet receipts, discover OpenAPI and JSON contracts, call the public MCP endpoint, check wallet-agent policy, and read the mainnet gate before making claims.",
+      "Inspect live testnet receipts, discover service and job manifests, read OpenAPI and JSON contracts, call the public MCP endpoint, check wallet-agent policy, and read the mainnet gate before making claims.",
   },
   {
     question: "What is live?",
@@ -162,6 +190,8 @@ export const agentCapabilityManifest = {
   start_here: {
     human_page: agentEntrypoints.human_agent_page,
     llms_txt: agentEntrypoints.llms_txt,
+    service_registry: agentEntrypoints.service_registry_api,
+    jobs: agentEntrypoints.jobs_api,
     discovery_api: agentEntrypoints.agent_economy_discovery_api,
     openapi: agentEntrypoints.openapi,
     mcp_health: agentEntrypoints.mcp_health,
@@ -188,6 +218,8 @@ export const agentCapabilityManifest = {
   recommended_agent_path: [
     "Read /llms.txt.",
     "Call /api/agents.",
+    "Call /api/agents/registry to discover bootstrap services.",
+    "Call /api/jobs to discover receipt-backed bootstrap work.",
     "Call /api/agent-economy/discovery.",
     "Call /api/agent-economy/first-receipt for the shortest developer path.",
     "Inspect /api/agent-economy/proofs.",

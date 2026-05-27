@@ -11,12 +11,18 @@ export default function robots(): MetadataRoute.Robots {
         allow: [
           '/',
           '/agents',
+          '/agents/registry',
+          '/jobs',
           '/llms.txt',
           '/llms-full.txt',
           '/.well-known/agents.json',
+          '/.well-known/ergo-agent-registry.json',
+          '/.well-known/ergo-agent-jobs.json',
           '/.well-known/agent-economy.json',
           '/agent-economy/openapi.v0.json',
           '/agent-economy/agent-capabilities.schema.v0.json',
+          '/agent-economy/agent-service-registry.schema.v0.json',
+          '/agent-economy/agent-jobs.schema.v0.json',
           '/agent-economy/discovery.schema.v0.json',
         ],
         disallow: [

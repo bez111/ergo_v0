@@ -79,6 +79,26 @@
       "destination": "/agent-economy/roadmap"
     },
     {
+      "source": "/registry",
+      "has": [
+        {
+          "type": "host",
+          "value": "agents.ergoblockchain.org"
+        }
+      ],
+      "destination": "/agents/registry"
+    },
+    {
+      "source": "/jobs",
+      "has": [
+        {
+          "type": "host",
+          "value": "agents.ergoblockchain.org"
+        }
+      ],
+      "destination": "/jobs"
+    },
+    {
       "source": "/sage-widget",
       "has": [
         {
@@ -227,6 +247,26 @@
         }
       ],
       "destination": "/api/agent-economy/roadmap"
+    },
+    {
+      "source": "/api/registry",
+      "has": [
+        {
+          "type": "host",
+          "value": "agents.ergoblockchain.org"
+        }
+      ],
+      "destination": "/api/agents/registry"
+    },
+    {
+      "source": "/api/jobs",
+      "has": [
+        {
+          "type": "host",
+          "value": "agents.ergoblockchain.org"
+        }
+      ],
+      "destination": "/api/jobs"
     },
     {
       "source": "/api/wallet-agent/policy-check",

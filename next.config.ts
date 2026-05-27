@@ -12,6 +12,8 @@ const agentsHostRoutes = [
   ['/launch-kit', '/agent-economy/launch-kit'],
   ['/proofs', '/agent-economy/proofs'],
   ['/roadmap', '/agent-economy/roadmap'],
+  ['/registry', '/agents/registry'],
+  ['/jobs', '/jobs'],
   ['/sage-widget', '/agent-economy/sage-widget'],
   ['/wallet-agent', '/agent-economy/wallet-agent'],
   ['/wallet-agent-runner', '/build/agent-payments/wallet-agent-runner'],
@@ -27,6 +29,8 @@ const agentsHostRoutes = [
   ['/api/launch-kit', '/api/agent-economy/launch-kit'],
   ['/api/proofs', '/api/agent-economy/proofs'],
   ['/api/roadmap', '/api/agent-economy/roadmap'],
+  ['/api/registry', '/api/agents/registry'],
+  ['/api/jobs', '/api/jobs'],
   ['/api/wallet-agent/policy-check', '/api/agent-economy/wallet-agent/policy-check'],
   ['/api/wallet-agent/reference-flow', '/api/agent-economy/wallet-agent/reference-flow'],
 ] as const;

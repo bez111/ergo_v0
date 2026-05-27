@@ -90,6 +90,8 @@ ${glossarySection}
 - ${BASE_URL}/patterns — ErgoScript patterns
 - ${BASE_URL}/docs — Full documentation
 - ${BASE_URL}/agents — Agent-native entrypoint for capabilities, llms.txt, discovery, OpenAPI, MCP, receipts, proof APIs and mainnet gate
+- ${BASE_URL}/agents/registry — Bootstrap service registry for autonomous-work providers, verifier templates, tool endpoints, accepted payment rails and receipt evidence
+- ${BASE_URL}/jobs — Machine-readable bootstrap jobs for receipt-backed autonomous work
 
 ## Primary User Paths
 
@@ -107,6 +109,8 @@ Ergo is the first reference programmable-settlement rail for the Accord Protocol
 
 **Primary pages:**
 - ${BASE_URL}/agents — Agent-native entrypoint: what this site is, which endpoint to call first, which proof to inspect, and what not to assume
+- ${BASE_URL}/agents/registry — Bootstrap service registry: capabilities, pricing, accepted payment rails, predicates, receipt schemas, MCP/OpenAPI endpoints and evidence
+- ${BASE_URL}/jobs — Bootstrap jobs board: tasks, testnet rewards, required capabilities, acceptance predicates, receipt requirements and deadlines
 - ${BASE_URL}/agent-economy — Narrative hub: why Ergo, what the stack is, who is building it
 - ${BASE_URL}/agent-economy/clearing — Canonical autonomous work clearing explainer: intent, work, credit, predicate, receipt and settlement
 - ${BASE_URL}/agent-economy/interop — Interop map: x402 payment handshakes, AP2 authorization, Stripe checkout, marketplaces and Ergo clearing/proof
@@ -122,6 +126,10 @@ Ergo is the first reference programmable-settlement rail for the Accord Protocol
 - ${BASE_URL}/.well-known/agent-economy.json — Well-known discovery entrypoint for Agent Economy pages, APIs, Sage receipt evidence, MCP, package surfaces and verification commands
 - ${BASE_URL}/.well-known/agents.json — Well-known capability manifest for AI agents, LLM crawlers, MCP clients and tool registries
 - ${BASE_URL}/api/agents — API version of the same capability manifest: capabilities, endpoints, inputs, outputs, posture and claims boundary
+- ${BASE_URL}/api/agents/registry — API version of the Agent Service Registry
+- ${BASE_URL}/.well-known/ergo-agent-registry.json — Well-known Agent Service Registry for agents and tool clients
+- ${BASE_URL}/api/jobs — API version of the Agent Jobs Board
+- ${BASE_URL}/.well-known/ergo-agent-jobs.json — Well-known jobs board for autonomous agents
 - ${BASE_URL}/api/agent-economy/discovery — API version of the same discovery descriptor with schema link headers
 - ${BASE_URL}/.well-known/accord — Sage Accord provider descriptor with testnet L1 conformance evidence and full receipt link
 - ${BASE_URL}/agent-economy/discovery.schema.v0.json — JSON Schema for the Agent Economy discovery descriptor
