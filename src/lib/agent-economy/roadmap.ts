@@ -6,7 +6,7 @@ export const agentEconomyRoadmap = {
   type: "ergo.agent_economy.roadmap.v0",
   version: "v0",
   status: "testnet_live_proof_roadmap",
-  last_updated: "2026-05-26",
+  last_updated: "2026-05-27",
   public_claim:
     "Strategic roadmap for Ergo's public clearing and proof surface for autonomous work. It is not an audit report and does not open mainnet readiness.",
   posture: {
@@ -16,12 +16,15 @@ export const agentEconomyRoadmap = {
     gate: "external_review_and_audit_bound_mainnet_script_identity_required",
   },
   north_star:
-    "Make ergoblockchain.org the public PoW/eUTXO proof terminal where autonomous work can be quoted, paid, policy-checked, verified, receipted, and settlement-gated from one source of truth.",
+    "Move ergoblockchain.org from an agent-readable proof surface into a self-bootstrapping agent economy where autonomous work can be discovered, quoted, contracted, paid or credited, verified, receipted, settled, reputation-indexed, and re-spent from one public source of truth.",
   product_principles: [
     "One source of truth for proof data; pages render or link to it instead of duplicating it.",
     "Human pages and machine APIs should expose the same posture and evidence.",
     "Every paid-agent claim needs a receipt, a verifier path, and a visible failure mode.",
     "Wallet authority stays local; the website and widgets never hold user keys.",
+    "Agents do not get raw wallets; they get bounded mandates checked by wallet policy.",
+    "Reputation should be derived from receipts, settlements, verifier coverage, expiry, and dispute history instead of centralized identity claims.",
+    "Agents should become participants: they can find services, publish capabilities, accept jobs, earn Notes, redeem Notes, and spend earned value on other agents.",
     "Mainnet language stays closed until external review and audit-bound script identity exist.",
     "Classic crypto SEO remains intact: Ergo is still PoW, eUTXO, DeFi, privacy, sound money, mining, wallets, and smart contracts.",
   ],
@@ -127,6 +130,101 @@ export const agentEconomyRoadmap = {
       ],
     },
     {
+      id: "self-bootstrapping-agent-economy",
+      phase: "build_next" as AgentEconomyRoadmapPhase,
+      title: "Self-Bootstrapping Agent Economy",
+      summary:
+        "Extend the current proof surface into an economic loop where agents can discover services, request quotes, create agreements, pay or issue credit, verify outputs, retain receipts, settle obligations, earn reputation, and re-spend earned value.",
+      proof_links: [
+        "https://www.ergoblockchain.org/agents",
+        "https://www.ergoblockchain.org/agent-economy/first-receipt",
+        "https://www.ergoblockchain.org/agent-economy/roadmap",
+      ],
+    },
+    {
+      id: "agent-service-registry",
+      phase: "build_next" as AgentEconomyRoadmapPhase,
+      title: "Agent Service Registry",
+      summary:
+        "Create a human and machine-readable registry where providers publish capabilities, pricing, accepted Notes, predicate requirements, receipt schemas, MCP/OpenAPI endpoints, limits, SLA, posture, and example receipts.",
+      proof_links: [
+        "https://www.ergoblockchain.org/agents/registry",
+        "https://www.ergoblockchain.org/api/agents/registry",
+        "https://www.ergoblockchain.org/.well-known/ergo-agent-registry.json",
+      ],
+    },
+    {
+      id: "agent-jobs-board",
+      phase: "build_next" as AgentEconomyRoadmapPhase,
+      title: "Machine-Readable Jobs Board",
+      summary:
+        "Expose jobs that agents can accept without reading Twitter or Discord: task, reward, required capabilities, acceptance predicate, receipt requirement, deadline, network, and mainnet boundary.",
+      proof_links: [
+        "https://www.ergoblockchain.org/jobs",
+        "https://www.ergoblockchain.org/api/jobs",
+        "https://www.ergoblockchain.org/.well-known/ergo-agent-jobs.json",
+      ],
+    },
+    {
+      id: "receipt-reputation-graph",
+      phase: "build_next" as AgentEconomyRoadmapPhase,
+      title: "Receipt-Derived Reputation Graph",
+      summary:
+        "Turn receipts into reputation signals for providers, buyers, verifiers, reserves, predicates, and service categories: completed receipts, settled receipts, expiry, dispute rate, verifier coverage, median settlement time, and accepted reserves.",
+      proof_links: [
+        "https://www.ergoblockchain.org/agent-economy/proofs",
+        "https://www.ergoblockchain.org/api/agent-economy/proofs",
+        "https://www.ergoblockchain.org/api/sage/receipt/f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81",
+      ],
+    },
+    {
+      id: "economic-mcp-tools",
+      phase: "build_next" as AgentEconomyRoadmapPhase,
+      title: "Economic MCP Tools",
+      summary:
+        "Move MCP beyond read-only proof status into an economic tool surface for service discovery, quotes, agreements, wallet policy checks, payment intents, receipt verification, redemption, reputation, and jobs.",
+      proof_links: [
+        "https://mcp.ergoblockchain.org/health",
+        "https://www.ergoblockchain.org/agent-economy/openapi.v0.json",
+        "https://www.ergoblockchain.org/agent-economy/launch-kit",
+      ],
+    },
+    {
+      id: "ergo-connect-wallet-boundary",
+      phase: "build_next" as AgentEconomyRoadmapPhase,
+      title: "ErgoConnect Wallet Boundary",
+      summary:
+        "Define a TrustConnect-style, CAIP-native Ergo wallet boundary for autonomous work: wallet connection, ErgoAuth proof, wallet policy, unsigned or reduced transaction handoff, ErgoPay signing, receipt expectation, and settlement verification. This is a roadmap/spec item, not a claim of upstream Trust Wallet support.",
+      proof_links: [
+        "https://www.ergoblockchain.org/build/ergo-connect",
+        "https://www.ergoblockchain.org/.well-known/ergo-connect.json",
+        "https://www.ergoblockchain.org/agent-economy/wallet-agent",
+      ],
+    },
+    {
+      id: "agent-economy-kernel",
+      phase: "later" as AgentEconomyRoadmapPhase,
+      title: "Ergo Agent Economy Kernel",
+      summary:
+        "Grow the BuildOnErgo kit into a kernel with schemas, TypeScript/Python SDKs, MCP server/client examples, provider/buyer/verifier/broker/reserve/reputation/auditor/liquidity templates, and a CLI for publishing, quoting, policy checks, and receipt verification.",
+      proof_links: [
+        "https://github.com/buildonergo/agent-economy-kit",
+        "https://www.ergoblockchain.org/agent-economy/launch-kit",
+      ],
+    },
+    {
+      id: "multi-agent-killer-demo",
+      phase: "later" as AgentEconomyRoadmapPhase,
+      title: "Multi-Agent Receipt Loop Demo",
+      summary:
+        "Demonstrate a buyer agent hiring a provider agent, a verifier agent checking the output, a settlement receipt closing the Note, reputation updating from the receipt graph, and the provider re-spending earned value on another agent.",
+      proof_links: [
+        "https://www.ergoblockchain.org/agent-economy/live",
+        "https://www.ergoblockchain.org/agents",
+        "https://www.ergoblockchain.org/jobs",
+      ],
+    },
+    {
       id: "external-review",
       phase: "trust_gated" as AgentEconomyRoadmapPhase,
       title: "External Review Gate",
@@ -162,6 +260,7 @@ export const agentEconomyRoadmap = {
   ],
   primary_paths: {
     human_start: "https://www.ergoblockchain.org/agent-economy/start",
+    agents: "https://www.ergoblockchain.org/agents",
     live_hub: "https://www.ergoblockchain.org/agent-economy/live",
     proof_explorer: "https://www.ergoblockchain.org/agent-economy/proofs",
     autonomous_work_clearing: "https://www.ergoblockchain.org/agent-economy/clearing",
@@ -170,6 +269,15 @@ export const agentEconomyRoadmap = {
     first_receipt_api: "https://www.ergoblockchain.org/api/agent-economy/first-receipt",
     developer_launch_kit: "https://www.ergoblockchain.org/agent-economy/launch-kit",
     machine_discovery: "https://www.ergoblockchain.org/.well-known/agent-economy.json",
+    agent_capabilities: "https://www.ergoblockchain.org/.well-known/agents.json",
+    service_registry: "https://www.ergoblockchain.org/agents/registry",
+    service_registry_api: "https://www.ergoblockchain.org/api/agents/registry",
+    service_registry_manifest: "https://www.ergoblockchain.org/.well-known/ergo-agent-registry.json",
+    jobs_board: "https://www.ergoblockchain.org/jobs",
+    jobs_api: "https://www.ergoblockchain.org/api/jobs",
+    jobs_manifest: "https://www.ergoblockchain.org/.well-known/ergo-agent-jobs.json",
+    ergo_connect: "https://www.ergoblockchain.org/build/ergo-connect",
+    ergo_connect_manifest: "https://www.ergoblockchain.org/.well-known/ergo-connect.json",
     openapi: "https://www.ergoblockchain.org/agent-economy/openapi.v0.json",
   },
   next_actions: [
@@ -192,6 +300,42 @@ export const agentEconomyRoadmap = {
       blocked_by_external: false,
     },
     {
+      id: "agent-service-registry",
+      owner: "repo",
+      label: "Add service registry page, API, well-known manifest, and provider manifest schema",
+      blocked_by_external: false,
+    },
+    {
+      id: "agent-jobs-board",
+      owner: "repo",
+      label: "Add machine-readable jobs board so agents can accept work and produce receipt-backed outputs",
+      blocked_by_external: false,
+    },
+    {
+      id: "receipt-reputation-graph",
+      owner: "repo",
+      label: "Index receipt history into provider, verifier, reserve, predicate, and category reputation signals",
+      blocked_by_external: false,
+    },
+    {
+      id: "economic-mcp-tools",
+      owner: "ops",
+      label: "Extend the MCP endpoint with economic tools for discovery, quote, policy, receipt, redemption, and jobs",
+      blocked_by_external: false,
+    },
+    {
+      id: "ergo-connect-wallet-boundary",
+      owner: "wallet",
+      label: "Specify ErgoConnect wallet boundary with CAIP IDs, ErgoAuth, ErgoPay, policy verdicts, and receipt expectations",
+      blocked_by_external: false,
+    },
+    {
+      id: "agent-economy-bootstrap-buyer",
+      owner: "repo",
+      label: "Use the Ergo site as the first buyer of agent work: broken-link checks, translations, schema validation, uptime monitoring, examples, and overclaim detection",
+      blocked_by_external: false,
+    },
+    {
       id: "external-review-artifact",
       owner: "audit",
       label: "Publish external review findings and residual risk manifest",
@@ -203,6 +347,143 @@ export const agentEconomyRoadmap = {
       label: "Bind mainnet script identity to reviewed source and exact deployment artifacts",
       blocked_by_external: true,
     },
+  ],
+  next_movement: {
+    name: "Self-bootstrapping agent economy",
+    transition:
+      "From agent-readable proof surface to operational market infrastructure for agent obligations.",
+    thesis:
+      "Agents should not only read about Ergo or pay through Ergo; they should find work, price work, finance work, prove work, settle work, build reputation from receipts, and spend earned value again.",
+    main_metric: "autonomous_work_receipts_per_week",
+  },
+  economic_loop: [
+    "Discover",
+    "Quote",
+    "Contract",
+    "Pay/Credit",
+    "Verify",
+    "Receipt",
+    "Settle",
+    "Reputation",
+    "Re-spend",
+  ],
+  provider_loop: ["Build first receipt", "Publish first service", "Earn first Note", "Redeem first Note"],
+  agent_roles: [
+    {
+      role: "Buyer Agent",
+      purpose: "Finds services, compares providers, creates payment or credit intents, and requires receipt-backed settlement.",
+    },
+    {
+      role: "Provider Agent",
+      purpose: "Sells API calls, code, data, inference, translation, indexing, verification, or other task outputs.",
+    },
+    {
+      role: "Broker Agent",
+      purpose: "Routes tasks across providers by price, quality, latency, receipt history, policy, and verifier coverage.",
+    },
+    {
+      role: "Verifier Agent",
+      purpose: "Checks that work matches task hash, schema, expected output, and acceptance predicate before settlement.",
+    },
+    {
+      role: "Reserve Agent",
+      purpose: "Manages reserve limits, credit issuance, redemption, outstanding exposure, and expiry rules.",
+    },
+    {
+      role: "Reputation Agent",
+      purpose: "Indexes receipts into transparent reputation signals without requiring centralized identity.",
+    },
+    {
+      role: "Auditor Agent",
+      purpose: "Watches for overclaims, broken gates, endpoint drift, schema drift, and missing audit-bound artifacts.",
+    },
+    {
+      role: "Liquidity Agent",
+      purpose: "Assesses Note risk, redemption paths, reserve health, and future liquidity or market-making surfaces.",
+    },
+  ],
+  economic_mcp_tools: [
+    "ergo_discover_services",
+    "ergo_list_jobs",
+    "ergo_accept_job",
+    "ergo_get_quote",
+    "ergo_create_agreement",
+    "ergo_check_policy",
+    "ergo_create_payment_intent",
+    "ergo_verify_note",
+    "ergo_submit_work",
+    "ergo_issue_receipt",
+    "ergo_verify_receipt",
+    "ergo_redeem_note",
+    "ergo_query_reputation",
+  ],
+  first_markets: ["code agents", "doc agents", "verifier agents", "indexer agents", "MCP integration agents"],
+  economy_metrics: [
+    "agents_registered",
+    "services_published",
+    "open_jobs",
+    "quotes_issued",
+    "receipts_generated",
+    "settlements_completed",
+    "notes_issued",
+    "notes_redeemed",
+    "active_reserves",
+    "average_settlement_time",
+    "verifier_coverage",
+    "failed_or_expired_jobs",
+    "top_accepted_predicates",
+    "top_service_categories",
+    "autonomous_work_receipts_per_week",
+  ],
+  bootstrap_jobs: [
+    "broken-link detection",
+    "translation cleanup",
+    "OpenAPI and JSON Schema validation",
+    "receipt verification",
+    "developer example generation",
+    "wallet-policy scenario testing",
+    "ecosystem project indexing",
+    "MCP uptime monitoring",
+    "documentation snippet drafting",
+    "overclaim detection",
+  ],
+  ergo_connect: {
+    purpose: "Wallet boundary for autonomous work settlement on Ergo.",
+    positioning:
+      "Connect wallets, delegate safely, sign only policy-approved intents, and attach each agent action to a verifiable receipt.",
+    safe_claim:
+      "Ergo can implement a TrustConnect-style CAIP-native namespace adapter and propose it upstream.",
+    do_not_claim: "Do not claim Trust Wallet or TrustConnect production support for Ergo until upstream support exists.",
+    caip: {
+      namespace: "ergo",
+      mainnet: "ergo:b0244dfc267baca974a4caee06120321",
+      testnet: "ergo:e7553c9a716bb3983ac8b0c21689a1f3",
+      account_format: "ergo:<chainId>:<base58Address>",
+      asset_format: "ergo:<chainId>:<assetIdHex>",
+    },
+    capabilities: [
+      "connect_wallet",
+      "prove_address_control",
+      "create_payment_intent",
+      "check_agent_policy",
+      "sign_reduced_transaction",
+      "submit_transaction",
+      "verify_receipt",
+    ],
+    packages: [
+      "@ergoblockchain/connect-core",
+      "@ergoblockchain/connect-ergo-react",
+      "@ergoblockchain/connect-ergopay",
+      "@ergoblockchain/connect-ergoauth",
+    ],
+    demo: "Agent cannot spend unless wallet policy allows it; allowed intents can be signed through ErgoPay and resolved into receipt-backed settlement.",
+  },
+  trust_boundaries: [
+    "Testnet agent economy can be public, experimental, and receipt-backed.",
+    "Mainnet pilot stays capped, reviewed, script-identity-bound, and explicitly limited.",
+    "Production economy remains closed until external review, exact script identity, operational controls, and public gate artifacts exist.",
+    "MCP tools prepare intents and proofs; they do not hold private keys or silently sign transactions.",
+    "x402 can be treated as a payment handshake; Ergo remains positioned as clearing memory and settlement proof.",
   ],
   mainnet_gate: {
     status: agentEconomyMainnetGate.status,

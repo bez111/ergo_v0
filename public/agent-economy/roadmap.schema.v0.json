@@ -14,6 +14,16 @@
     "phases",
     "primary_paths",
     "next_actions",
+    "next_movement",
+    "economic_loop",
+    "provider_loop",
+    "agent_roles",
+    "economic_mcp_tools",
+    "first_markets",
+    "economy_metrics",
+    "bootstrap_jobs",
+    "ergo_connect",
+    "trust_boundaries",
     "mainnet_gate"
   ],
   "properties": {
@@ -79,6 +89,99 @@
           "blocked_by_external": { "type": "boolean" }
         }
       }
+    },
+    "next_movement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "transition", "thesis", "main_metric"],
+      "properties": {
+        "name": { "type": "string" },
+        "transition": { "type": "string" },
+        "thesis": { "type": "string" },
+        "main_metric": { "type": "string" }
+      }
+    },
+    "economic_loop": {
+      "type": "array",
+      "minItems": 5,
+      "items": { "type": "string" }
+    },
+    "provider_loop": {
+      "type": "array",
+      "minItems": 3,
+      "items": { "type": "string" }
+    },
+    "agent_roles": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["role", "purpose"],
+        "properties": {
+          "role": { "type": "string" },
+          "purpose": { "type": "string" }
+        }
+      }
+    },
+    "economic_mcp_tools": {
+      "type": "array",
+      "minItems": 5,
+      "items": { "type": "string" }
+    },
+    "first_markets": {
+      "type": "array",
+      "minItems": 3,
+      "items": { "type": "string" }
+    },
+    "economy_metrics": {
+      "type": "array",
+      "minItems": 5,
+      "items": { "type": "string" }
+    },
+    "bootstrap_jobs": {
+      "type": "array",
+      "minItems": 3,
+      "items": { "type": "string" }
+    },
+    "ergo_connect": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["purpose", "positioning", "safe_claim", "do_not_claim", "caip", "capabilities", "packages", "demo"],
+      "properties": {
+        "purpose": { "type": "string" },
+        "positioning": { "type": "string" },
+        "safe_claim": { "type": "string" },
+        "do_not_claim": { "type": "string" },
+        "caip": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["namespace", "mainnet", "testnet", "account_format", "asset_format"],
+          "properties": {
+            "namespace": { "const": "ergo" },
+            "mainnet": { "type": "string" },
+            "testnet": { "type": "string" },
+            "account_format": { "type": "string" },
+            "asset_format": { "type": "string" }
+          }
+        },
+        "capabilities": {
+          "type": "array",
+          "minItems": 3,
+          "items": { "type": "string" }
+        },
+        "packages": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "demo": { "type": "string" }
+      }
+    },
+    "trust_boundaries": {
+      "type": "array",
+      "minItems": 3,
+      "items": { "type": "string" }
     },
     "mainnet_gate": {
       "type": "object",

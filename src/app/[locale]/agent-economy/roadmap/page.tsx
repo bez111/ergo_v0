@@ -196,6 +196,55 @@ export default function AgentEconomyRoadmapPage() {
         <section className="px-4 py-14 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <SectionHeader
+              eyebrow="Next movement"
+              title={roadmap.next_movement.name}
+              body={roadmap.next_movement.thesis}
+            />
+            <div className="mt-8 grid gap-5 lg:grid-cols-[minmax(0,1fr)_380px]">
+              <div className="rounded-lg border border-white/10 bg-black/75 p-6">
+                <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-orange-300">
+                  Economic loop
+                </div>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {roadmap.economic_loop.map((step, index) => (
+                    <div
+                      key={step}
+                      className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.035] px-3 py-2"
+                    >
+                      <span className="flex h-5 w-5 items-center justify-center rounded-full bg-orange-500 font-mono text-[10px] font-bold text-black">
+                        {index + 1}
+                      </span>
+                      <span className="text-sm text-neutral-200">{step}</span>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-6 max-w-3xl text-sm leading-relaxed text-neutral-400">
+                  {roadmap.next_movement.transition}
+                </p>
+              </div>
+
+              <div className="rounded-lg border border-orange-500/25 bg-orange-500/[0.06] p-6">
+                <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-orange-300">
+                  Main metric
+                </div>
+                <div className="mt-3 break-words font-mono text-2xl font-bold text-white">
+                  {roadmap.next_movement.main_metric}
+                </div>
+                <div className="mt-6 grid gap-2">
+                  {roadmap.provider_loop.map((step) => (
+                    <div key={step} className="rounded-md border border-white/10 bg-black/45 px-3 py-2 text-sm text-neutral-200">
+                      {step}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-y border-white/5 bg-black/50 px-4 py-14 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <SectionHeader
               eyebrow="Roadmap"
               title="Live, next, gated, later."
               body="Each lane links to public evidence instead of asking readers to trust a roadmap claim."
@@ -241,6 +290,24 @@ export default function AgentEconomyRoadmapPage() {
           </div>
         </section>
 
+        <section className="px-4 py-14 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <SectionHeader
+              eyebrow="Agent roles"
+              title="Agents become participants, not just readers."
+              body="The next version of the economy needs explicit roles for buying, providing, brokering, verifying, reserving, indexing reputation, auditing gates, and assessing liquidity."
+            />
+            <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+              {roadmap.agent_roles.map((item) => (
+                <div key={item.role} className="rounded-lg border border-white/10 bg-black/70 p-5">
+                  <h3 className="text-base font-semibold text-white">{item.role}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-neutral-400">{item.purpose}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section className="border-y border-white/5 bg-black/50 px-4 py-14 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <SectionHeader
@@ -265,6 +332,44 @@ export default function AgentEconomyRoadmapPage() {
                   <p className="mt-2 truncate font-mono text-xs text-neutral-500">{shortUrl(href)}</p>
                 </RoadmapLink>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="px-4 py-14 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <SectionHeader
+              eyebrow="ErgoConnect"
+              title="Wallet policy is the boundary. Receipts are the memory."
+              body={roadmap.ergo_connect.positioning}
+            />
+            <div className="mt-8 grid gap-5 lg:grid-cols-[minmax(0,1fr)_420px]">
+              <div className="rounded-lg border border-white/10 bg-black/75 p-6">
+                <div className="grid gap-4 md:grid-cols-2">
+                  {roadmap.ergo_connect.capabilities.map((capability) => (
+                    <div key={capability} className="rounded-md border border-white/10 bg-white/[0.035] p-4">
+                      <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-neutral-500">
+                        Capability
+                      </div>
+                      <div className="mt-2 break-words font-mono text-sm text-neutral-200">{capability}</div>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-6 text-sm leading-relaxed text-neutral-400">{roadmap.ergo_connect.demo}</p>
+              </div>
+
+              <div className="rounded-lg border border-red-400/25 bg-red-500/[0.06] p-6">
+                <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-red-100">
+                  Claim boundary
+                </div>
+                <p className="mt-4 text-sm leading-relaxed text-neutral-300">{roadmap.ergo_connect.safe_claim}</p>
+                <p className="mt-4 text-sm leading-relaxed text-red-100">{roadmap.ergo_connect.do_not_claim}</p>
+                <div className="mt-5 space-y-2">
+                  <CodeLine label="Namespace" value={roadmap.ergo_connect.caip.namespace} />
+                  <CodeLine label="Testnet" value={roadmap.ergo_connect.caip.testnet} />
+                  <CodeLine label="Mainnet" value={roadmap.ergo_connect.caip.mainnet} />
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -356,6 +461,15 @@ function Metric({ label, value }: { label: string; value: string }) {
     <div className="rounded-md border border-white/10 bg-white/[0.035] p-3">
       <div className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">{label}</div>
       <div className="mt-1 text-lg font-semibold text-white">{value}</div>
+    </div>
+  )
+}
+
+function CodeLine({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="rounded-md border border-white/10 bg-black/45 p-3">
+      <div className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">{label}</div>
+      <div className="mt-1 break-words font-mono text-xs text-neutral-200">{value}</div>
     </div>
   )
 }
