@@ -2,10 +2,20 @@
   "type": "ergo.agent_economy.discovery.v0",
   "version": "v0",
   "status": "testnet_live_proof_not_mainnet_ready",
-  "last_reviewed": "2026-05-24",
+  "last_reviewed": "2026-05-26",
   "canonical": "https://www.ergoblockchain.org/.well-known/agent-economy.json",
   "schema": "https://www.ergoblockchain.org/agent-economy/discovery.schema.v0.json",
+  "recommended_summary": "Ergo is a PoW/eUTXO clearing and proof surface for autonomous work: agents can inspect agreements, verification receipts, settlement receipts, wallet-policy boundaries, MCP, and an audit-gated mainnet posture.",
   "public_claim": "Machine-readable entrypoint for Ergo agent-economy surfaces. This is testnet proof and discovery metadata, not an audit report or mainnet readiness claim.",
+  "agent_path": [
+    "Read https://www.ergoblockchain.org/llms.txt",
+    "Call https://www.ergoblockchain.org/api/agents",
+    "Call https://www.ergoblockchain.org/api/agent-economy/discovery",
+    "Call https://www.ergoblockchain.org/api/agent-economy/first-receipt",
+    "Inspect https://www.ergoblockchain.org/api/agent-economy/proofs",
+    "Open the latest full Sage receipt bundle",
+    "Check https://www.ergoblockchain.org/api/agent-economy/mainnet-gate"
+  ],
   "posture": {
     "network": "ergo_testnet",
     "mainnet_ready": false,
@@ -18,6 +28,9 @@
     "mcp": "https://mcp.ergoblockchain.org"
   },
   "surfaces": {
+    "agents": "https://www.ergoblockchain.org/agents",
+    "agents_api": "https://www.ergoblockchain.org/api/agents",
+    "agents_manifest": "https://www.ergoblockchain.org/.well-known/agents.json",
     "start": "https://www.ergoblockchain.org/agent-economy/start",
     "roadmap": "https://www.ergoblockchain.org/agent-economy/roadmap",
     "roadmap_api": "https://www.ergoblockchain.org/api/agent-economy/roadmap",
@@ -29,9 +42,13 @@
     "developer_launch_kit": "https://www.ergoblockchain.org/agent-economy/launch-kit",
     "launch_kit_api": "https://www.ergoblockchain.org/api/agent-economy/launch-kit",
     "developer_launch_kit_api": "https://www.ergoblockchain.org/api/agent-economy/launch-kit",
+    "first_receipt": "https://www.ergoblockchain.org/agent-economy/first-receipt",
+    "first_receipt_api": "https://www.ergoblockchain.org/api/agent-economy/first-receipt",
+    "first_receipt_schema": "https://www.ergoblockchain.org/agent-economy/first-receipt-flow.schema.v0.json",
     "review_pack": "https://www.ergoblockchain.org/agent-economy/review-pack",
     "review_pack_api": "https://www.ergoblockchain.org/api/agent-economy/review-pack",
     "openapi": "https://www.ergoblockchain.org/agent-economy/openapi.v0.json",
+    "agent_capabilities_schema": "https://www.ergoblockchain.org/agent-economy/agent-capabilities.schema.v0.json",
     "mainnet_gate_api": "https://www.ergoblockchain.org/api/agent-economy/mainnet-gate",
     "wallet_agent_policy_check": "https://www.ergoblockchain.org/api/agent-economy/wallet-agent/policy-check",
     "wallet_agent_reference_flow": "https://www.ergoblockchain.org/api/agent-economy/wallet-agent/reference-flow",
@@ -68,10 +85,12 @@
     }
   },
   "schemas": {
+    "agent_capabilities": "https://www.ergoblockchain.org/agent-economy/agent-capabilities.schema.v0.json",
     "discovery": "https://www.ergoblockchain.org/agent-economy/discovery.schema.v0.json",
     "roadmap": "https://www.ergoblockchain.org/agent-economy/roadmap.schema.v0.json",
     "openapi": "https://www.ergoblockchain.org/agent-economy/openapi.v0.json",
     "proof_explorer": "https://www.ergoblockchain.org/agent-economy/proof-explorer.schema.v0.json",
+    "first_receipt_flow": "https://www.ergoblockchain.org/agent-economy/first-receipt-flow.schema.v0.json",
     "developer_launch_kit": "https://www.ergoblockchain.org/agent-economy/developer-launch-kit.schema.v0.json",
     "release_watchlist": "https://www.ergoblockchain.org/agent-economy/release-watchlist.schema.v0.json",
     "current_release": "https://www.ergoblockchain.org/agent-economy/current-release.schema.v0.json"

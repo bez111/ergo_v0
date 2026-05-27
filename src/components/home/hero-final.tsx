@@ -20,11 +20,11 @@ export function HeroFinal() {
   const locale = useLocale()
   const ru = locale === "ru"
   const staticHeadline = ru
-    ? "Где агенты закрывают работу расчётом."
-    : "Where agents settle work."
+    ? "Где автономная работа оплачивается, доказывается и закрывается."
+    : "Where autonomous work gets paid, proven, and settled."
   const subtitle = ru
-    ? "PoW/eUTXO слой для programmable credit, acceptance rules, receipt-пакетов и audit-gated settlement."
-    : "A PoW/eUTXO clearing layer for programmable credit, acceptance rules, receipt bundles, and audit-gated settlement."
+    ? "Автономным агентам нужны не только платежи: им нужны программируемый кредит, принятие работы по условиям, проверяемые receipts, политика кошелька и нейтральный расчёт на PoW/eUTXO."
+    : "Autonomous agents need more than payments: programmable credit, task-conditioned acceptance, verifiable receipts, wallet policy, and neutral PoW/eUTXO settlement."
   const typedHeadline = useTypewriterLoop(staticHeadline)
 
   const proofStrip = ru ? [
@@ -113,12 +113,12 @@ export function HeroFinal() {
               aria-hidden="true"
               data-nosnippet
               suppressHydrationWarning
-              className="text-center font-mono font-extrabold text-white"
+              className="mx-auto text-center font-mono font-extrabold text-white"
               style={{
-                fontSize: "clamp(16px, 4.8vw, 56px)",
+                fontSize: "clamp(10px, 2.9vw, 42px)",
                 letterSpacing: "0",
-                lineHeight: 1.08,
-                maxWidth: "calc(100vw - 32px)",
+                lineHeight: 1,
+                maxWidth: "min(92vw, 1420px)",
                 whiteSpace: "nowrap",
               }}
             >
@@ -130,10 +130,10 @@ export function HeroFinal() {
             <p
               className="mx-auto mt-6 text-neutral-300"
               style={{
-                fontSize: "clamp(16px, 1.7vw, 20px)",
+                fontSize: "clamp(15px, 1.45vw, 19px)",
                 lineHeight: 1.5,
                 opacity: 0.88,
-                maxWidth: "58ch",
+                maxWidth: "64ch",
               }}
             >
               {subtitle}

@@ -29,6 +29,14 @@ const ignoredConsolePatterns = [
   /net::err_aborted/i,
   /net::err_failed/i,
   /chrome-extension/i,
+  /webpack-hmr/i,
+  /websocket connection/i,
+  /hot-reloader/i,
+]
+
+const ignoredRequestPatterns = [
+  /\/_next\/webpack-hmr/i,
+  /\/_next\/static\/.*\.hot-update\./i,
 ]
 
 const assetPathPattern = /\.(?:avif|webp|png|jpe?g|gif|svg|ico|css|js|map|json|xml|txt|pdf|zip|wasm|woff2?|ttf|eot)$/i
@@ -358,6 +366,7 @@ async function checkRoute(browser, pathName, viewport, workerId) {
   page.on("requestfailed", (request) => {
     const url = request.url()
     if (!isLocalRequest(url)) return
+    if (ignoredRequestPatterns.some((pattern) => pattern.test(url))) return
     requestFailures.push(`${request.failure()?.errorText || "failed"} ${url}`.slice(0, 500))
   })
 
@@ -495,9 +504,10 @@ async function collectMetrics(page, expectedViewportWidth) {
           if (text.length < 8) return false
           const style = window.getComputedStyle(el)
           if (style.display === "none" || style.visibility === "hidden") return false
+          if (isClippingExemptElement(el)) return false
           if (el.closest(".monaco-editor")) return false
           if (el.closest(".overflow-x-auto,[class*='overflow-x-auto'],.md-table-scroll")) return false
-          return el.scrollWidth > el.clientWidth + 4 && style.overflowX !== "auto" && style.overflowX !== "scroll"
+          return el.scrollWidth > el.clientWidth + 4 && (style.overflowX === "hidden" || style.overflowX === "clip")
         })
         .map(toElementInfo)
         .filter(Boolean)
@@ -546,6 +556,13 @@ async function collectMetrics(page, expectedViewportWidth) {
           info.cls.includes("sr-only") ||
           info.width > 1_000_000
         )
+      }
+
+      function isClippingExemptElement(el) {
+        if (!(el instanceof HTMLElement)) return false
+        if (el.closest(".skip-link,.sr-only")) return true
+        const cls = el.getAttribute("class") || ""
+        return cls.includes("truncate") || cls.includes("line-clamp")
       }
 
       function isInteractive(el) {

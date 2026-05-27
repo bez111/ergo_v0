@@ -26,7 +26,7 @@ export default function BabelFleetPage() {
       {/* Introduction */}
       <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6">
         <p className="text-gray-300">
-          The Babel Fees Plugin is a specialized extension for the Fleet SDK designed to simplify the process of using Babel Fees within Ergo transactions. Babel Fees is a mechanism that allows users to pay transaction fees with tokens instead of ERG, particularly beneficial for those with limited or no ERG balances. The plugin automates the complex process of token-to-ERG conversion necessary for utilizing Babel Fees. It integrates seamlessly into the Fleet SDK's transaction framework, enabling developers to build sophisticated transactions that don't require users to have a native ERG balance for transaction fee payments.
+          The Babel Fees Plugin is a specialized extension for the Fleet SDK designed to simplify the process of using Babel Fees within Ergo transactions. Babel Fees are supported token-to-ERG fee paths that can help users cover transaction fees through available Babel Boxes, particularly useful for those with limited ERG balances. The plugin automates the token-to-ERG conversion flow necessary for utilizing Babel Fees when liquidity and accepted tokens are available. It integrates seamlessly into the Fleet SDK's transaction framework, enabling developers to build sophisticated transactions that reduce native ERG bootstrapping friction without implying any-token fee coverage.
         </p>
       </div>
 
@@ -34,7 +34,7 @@ export default function BabelFleetPage() {
       <div className="bg-green-400/10 border border-green-400/20 rounded-xl p-6">
         <h2 className="text-2xl font-bold mb-4 text-green-400">What are Babel Fees?</h2>
         <p className="text-gray-300 mb-4">
-          At its core, <Link href="/docs/developers/data-model-apis/babel-fees" className="text-orange-400 hover:underline">Babel Fees</Link> is an Ergo protocol feature that enables users to pay transaction fees using a variety of tokens, rather than being restricted to using ERG. This is done by leveraging smart contracts which act as liquidity sources (called "Babel Boxes") for token-to-ERG swaps. These contracts are set up by others who wish to provide this liquidity to users.
+          At its core, <Link href="/docs/developers/data-model-apis/babel-fees" className="text-orange-400 hover:underline">Babel Fees</Link> is an Ergo protocol feature that enables users to cover transaction fees through supported token-to-ERG paths when a suitable Babel Box exists. This is done by leveraging smart contracts which act as liquidity sources (called "Babel Boxes") for token-to-ERG swaps. These contracts are set up by others who wish to provide this liquidity to users.
         </p>
         <p className="text-gray-300 mb-4">Babel Fees offer key benefits:</p>
         <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
@@ -141,7 +141,7 @@ console.log(tx);`}
             <li><code className="bg-neutral-700 px-1 py-0.5 rounded">build()</code> finalizes the transaction object.</li>
           </ul>
           <p className="text-gray-300 mt-2">
-            This example showcases how to use Babel Fees with the plugin without any direct ERG input from the user for transaction fees.
+            This example showcases how to use Babel Fees with the plugin when a supported token-to-ERG path can provide the ERG needed for transaction fees.
           </p>
         </div>
       </div>
@@ -353,4 +353,4 @@ if (isValid) {
       </div>
     </div>
   );
-} 
+}

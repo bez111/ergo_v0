@@ -208,7 +208,7 @@ export function ProofExplorerClient({
 
         <section className="relative overflow-hidden px-4 pb-12 pt-28 sm:px-6 lg:px-8">
           <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-orange-400/70 to-transparent" />
-          <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-7xl min-w-0">
             <Breadcrumbs
               items={[
                 { name: "Agent Economy", href: "/agent-economy" },
@@ -356,7 +356,7 @@ export function ProofExplorerClient({
           </div>
         </section>
 
-        <section className="px-4 py-12 sm:px-6 lg:px-8">
+        <section className="border-y border-white/5 bg-black/80 px-4 py-12 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
               <div>
@@ -367,7 +367,7 @@ export function ProofExplorerClient({
                   Inspect the current proof set.
                 </h2>
               </div>
-              <div className="flex max-w-full gap-2 overflow-x-auto pb-1">
+              <div className="flex min-w-0 max-w-full gap-2 overflow-x-auto pb-1">
                 {FILTERS.map((item) => (
                   <button
                     key={item.value}
@@ -391,7 +391,7 @@ export function ProofExplorerClient({
               </div>
             ) : null}
 
-            <div className="mt-8 grid gap-4 lg:grid-cols-2">
+            <div className="mt-8 grid min-w-0 gap-4 lg:grid-cols-2">
               {(proofs.length > 0 ? proofs : skeletonProofs()).map((proof) => (
                 <ProofCard key={proof.id} proof={proof} loading={!data} />
               ))}
@@ -469,7 +469,7 @@ function VerifyStep({
             {label}
           </div>
           <pre className="mt-2 max-w-full overflow-x-auto rounded-md border border-white/10 bg-black/65 p-3 text-xs leading-relaxed text-orange-100">
-            <code>{command}</code>
+            <code className="block w-max max-w-none">{command}</code>
           </pre>
           <p className="mt-3 text-sm leading-relaxed text-neutral-400">
             {expect}
@@ -483,39 +483,39 @@ function VerifyStep({
 function ProofCard({ proof, loading }: { proof: ProofRecord; loading: boolean }) {
   const Icon = KIND_ICON[proof.kind]
   return (
-    <article className={`rounded-lg border border-white/12 bg-neutral-950/90 p-5 shadow-[0_22px_70px_rgba(0,0,0,0.52)] backdrop-blur-md ${loading ? "animate-pulse" : ""}`}>
-      <div className="flex items-start justify-between gap-4">
-        <div className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-md border border-orange-500/25 bg-orange-500/10">
+    <article className={`min-w-0 overflow-hidden rounded-lg border border-white/12 bg-[#030303]/95 p-5 shadow-[0_22px_70px_rgba(0,0,0,0.72)] backdrop-blur-md ${loading ? "animate-pulse" : ""}`}>
+      <div className="flex min-w-0 items-start justify-between gap-3">
+        <div className="flex min-w-0 items-center gap-3">
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-orange-500/25 bg-orange-500/10">
             <Icon className="h-5 w-5 text-orange-300" />
           </div>
-          <div>
+          <div className="min-w-0">
             <div className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">
               {KIND_LABEL[proof.kind]}
             </div>
-            <h3 className="mt-1 text-lg font-semibold text-white">{proof.title}</h3>
+            <h3 className="mt-1 break-words text-lg font-semibold text-white">{proof.title}</h3>
           </div>
         </div>
-        <span className={`inline-flex items-center gap-2 rounded-full border px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest ${STATE_STYLE[proof.state]}`}>
+        <span className={`inline-flex shrink-0 items-center gap-2 rounded-full border px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest ${STATE_STYLE[proof.state]}`}>
           <span className={`h-2 w-2 rounded-full ${STATE_DOT[proof.state]}`} />
           {proof.state}
         </span>
       </div>
 
-      <p className="mt-4 min-h-[58px] text-sm leading-relaxed text-neutral-400">
+      <p className="mt-4 min-h-[58px] break-words text-sm leading-relaxed text-neutral-400">
         {proof.description}
       </p>
 
-      <div className="mt-5 grid gap-2 sm:grid-cols-2">
+      <div className="mt-5 grid min-w-0 gap-2 sm:grid-cols-2">
         {proof.checks.slice(0, 4).map((check) => (
-          <div key={`${proof.id}-${check.label}`} className="rounded-md border border-white/10 bg-black/65 p-3">
+          <div key={`${proof.id}-${check.label}`} className="min-w-0 rounded-md border border-white/10 bg-black/85 p-3">
             <div className="flex items-center justify-between gap-2">
-              <span className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">
+              <span className="min-w-0 truncate font-mono text-[10px] uppercase tracking-widest text-neutral-500">
                 {check.label}
               </span>
               <span className={`h-2 w-2 rounded-full ${STATE_DOT[check.state]}`} />
             </div>
-            <div className="mt-2 truncate font-mono text-xs text-neutral-300" title={check.value}>
+            <div className="mt-2 break-all font-mono text-xs text-neutral-300" title={check.value}>
               {check.value}
             </div>
           </div>

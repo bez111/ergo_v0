@@ -100,7 +100,9 @@ export function Footer() {
     {
       title: "Build",
       links: [
+        { label: "Agents", href: localizedPath("agents") },
         { label: "Agent Economy", href: localizedPath("agent-economy") },
+        { label: "First Receipt", href: localizedPath("agent-economy/first-receipt") },
         { label: "Demos", href: localizedPath("demos") },
         { label: t("grants") || "Grants", href: localizedPath("ecosystem/grants") },
         { label: "GitHub", href: "https://github.com/ergoplatform", external: true },

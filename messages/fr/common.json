@@ -472,7 +472,19 @@
     "developer services": "Services développeurs",
     "developer_services_description": "Faucet, inspecteur d’adresses, recherche tx/box, vérificateur de reçus, hasher et état des services.",
     "sage widget": "Widget Sage",
-    "sage_widget_description": "Intégrez les flux Sage payants: chat, devis, vérification de Note, liens de reçu et configuration tenant."
+    "sage_widget_description": "Intégrez les flux Sage payants: chat, devis, vérification de Note, liens de reçu et configuration tenant.",
+    "clearing": "Clearing",
+    "clearing_description": "The category thesis: autonomous work needs credit, predicates, receipts, and settlement.",
+    "interop": "Interop",
+    "interop_description": "How x402, AP2, Stripe, marketplaces, and Ergo fit into the agent-payment stack.",
+    "proof": "Proof",
+    "proof_description": "Receipts, live status, signed evidence, and audit gates.",
+    "live proof hub": "Live Proof Hub",
+    "proof explorer": "Proof Explorer",
+    "latest receipt": "Latest Receipt",
+    "mainnet gate": "Mainnet Gate",
+    "review pack": "Review Pack",
+    "launch kit": "Launch Kit"
   },
   "errors": {
     "network": {

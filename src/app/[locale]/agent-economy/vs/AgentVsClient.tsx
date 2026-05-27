@@ -74,7 +74,7 @@ const CRITERIA: CriterionRow[] = [
     criterion: "Acceptance predicates",
     description: "Payment can encode 'accept only if task X is complete' logic on-chain.",
     ergo: "yes",
-    ergoNote: "ErgoScript acceptance predicates are first-class protocol primitives.",
+    ergoNote: "ErgoScript makes task-conditioned spending rules natural inside eUTXO boxes.",
     ethereum: "partial",
     ethereumNote: "Possible via escrow contracts, but not embedded in the payment instrument itself.",
     solana: "no",
@@ -146,7 +146,7 @@ const CRITERIA: CriterionRow[] = [
     criterion: "Ephemeral agent support",
     description: "Agents can operate without persistent identity, KYC, or pre-registered wallets.",
     ergo: "yes",
-    ergoNote: "Any key pair can transact. Babel Fees remove ERG bootstrapping requirement.",
+    ergoNote: "Any key pair can transact. Babel Fees can reduce ERG bootstrapping where a supported fee path exists.",
     ethereum: "partial",
     ethereumNote: "Any address can transact but ETH required for gas. ERC-4337 helps but adds complexity.",
     solana: "partial",
@@ -214,8 +214,8 @@ const HIGHLIGHTS = [
   },
   {
     icon: Code2,
-    title: "Native protocol-level acceptance predicates",
-    body: "ErgoScript acceptance predicates embed task completion logic directly in payment instruments. No off-chain oracle, no escrow contract, no dispute layer.",
+    title: "Task-conditioned acceptance predicates",
+    body: "ErgoScript can place task-completion logic directly in eUTXO spending rules, reducing the amount of custom application-layer machinery needed for work settlement.",
   },
   {
     icon: Coins,

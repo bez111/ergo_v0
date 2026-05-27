@@ -13,7 +13,7 @@ export async function GET() {
   return NextResponse.json(discovery, {
     headers: {
       "Cache-Control": "s-maxage=300, stale-while-revalidate=600",
-      Link: '</agent-economy/discovery.schema.v0.json>; rel="describedby"; type="application/schema+json"',
+      Link: '</agent-economy/discovery.schema.v0.json>; rel="describedby"; type="application/schema+json", </.well-known/agents.json>; rel="related"; type="application/json"',
     },
   })
 }

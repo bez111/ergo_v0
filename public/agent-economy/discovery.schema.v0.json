@@ -26,7 +26,13 @@
     "last_reviewed": { "type": "string" },
     "canonical": { "type": "string", "format": "uri" },
     "schema": { "type": "string", "format": "uri" },
+    "recommended_summary": { "type": "string", "minLength": 40 },
     "public_claim": { "type": "string" },
+    "agent_path": {
+      "type": "array",
+      "minItems": 4,
+      "items": { "type": "string" }
+    },
     "posture": {
       "type": "object",
       "additionalProperties": false,

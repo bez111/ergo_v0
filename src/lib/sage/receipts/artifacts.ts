@@ -136,6 +136,7 @@ export function normalizeVerificationReceiptForAccordV0(
   agreement: AccordAgreement,
 ): SageVerificationReceiptJson {
   const { signature: _oldSignature, ...rest } = receipt
+  void _oldSignature
   const receiptId = isAccordObjectId("vr", receipt.receipt_id)
     ? receipt.receipt_id
     : accordObjectId("vr", {
@@ -167,6 +168,7 @@ export function normalizeSettlementReceiptForAccordV0(
   network: SageReceiptNetwork,
 ): SageSettlementReceiptJson {
   const { signature: _oldSignature, ...rest } = receipt
+  void _oldSignature
   const settlementId = isAccordObjectId("sr", receipt.settlement_id)
     ? receipt.settlement_id
     : accordObjectId("sr", {

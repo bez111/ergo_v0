@@ -472,7 +472,19 @@
     "developer services": "開發者服務",
     "developer_services_description": "Faucet、地址檢查器、tx/box 查詢、收據驗證器、雜湊工具和服務狀態。",
     "sage widget": "Sage 小工具",
-    "sage_widget_description": "嵌入付費 Sage 流程：聊天、報價、Note 驗證、receipt 連結與 tenant 設定。"
+    "sage_widget_description": "嵌入付費 Sage 流程：聊天、報價、Note 驗證、receipt 連結與 tenant 設定。",
+    "clearing": "Clearing",
+    "clearing_description": "The category thesis: autonomous work needs credit, predicates, receipts, and settlement.",
+    "interop": "Interop",
+    "interop_description": "How x402, AP2, Stripe, marketplaces, and Ergo fit into the agent-payment stack.",
+    "proof": "Proof",
+    "proof_description": "Receipts, live status, signed evidence, and audit gates.",
+    "live proof hub": "Live Proof Hub",
+    "proof explorer": "Proof Explorer",
+    "latest receipt": "Latest Receipt",
+    "mainnet gate": "Mainnet Gate",
+    "review pack": "Review Pack",
+    "launch kit": "Launch Kit"
   },
   "errors": {
     "network": {

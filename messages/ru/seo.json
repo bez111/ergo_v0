@@ -1,22 +1,22 @@
 {
   "seo": {
     "defaultTitle": "Ergo — PoW/eUTXO блокчейн для DeFi, приватности и автономной работы",
-    "defaultDescription": "Ergo — PoW/eUTXO блокчейн для DeFi, приватности и sound money, который становится публичным proof-and-clearing слоем для автономной работы.",
+    "defaultDescription": "Ergo — PoW/eUTXO блокчейн для DeFi, приватности и sound money, а также публичный слой клиринга, где автономная работа оплачивается, доказывается и закрывается расчётом.",
     "keywords": "агентский блокчейн, блокчейн для AI-агентов, блокчейн для автономных AI-платежей, платежи AI-агентов, ergo blockchain, криптовалюта, DeFi, приватность, надёжные деньги, sound money, смарт-контракты, Ergo, ERG, кошелёк ERG, eUTXO, доказательство работы, Proof of Work, ErgoScript, Sigma Protocols, Autolykos, GPU майнинг, Babel Fees, Storage Rent, NiPoPoWs, Oracle Pools, Rosen Bridge, SigmaUSD, цензуроустойчивые деньги, fair launch, no premine, финансовый суверенитет",
     "home": {
       "meta": {
         "title": "Ergo — PoW/eUTXO блокчейн для DeFi и автономной работы",
-        "description": "PoW/eUTXO блокчейн для DeFi, приватности и sound money, теперь ещё и публичный proof-and-clearing слой для автономной работы: receipts, wallet policy и settlement.",
+        "description": "PoW/eUTXO блокчейн для DeFi, приватности и sound money, теперь ещё и публичная proof-and-clearing surface, где автономная работа оплачивается, доказывается и закрывается расчётом.",
         "keywords": "агентский блокчейн, блокчейн для AI-агентов, блокчейн для автономных AI-платежей, платежи AI-агентов, ergo blockchain, децентрализованные финансы, блокчейн без MEV, модель eUTXO, цензуроустойчивые деньги, ASIC-устойчивый майнинг, справедливый запуск криптовалюты, программируемые деньги, финансовый суверенитет, блокчейн киберпанков, DeFi, приватность, надёжные деньги, sound money, ERG, кошелёк ERG, купить ERG, ErgoScript, Sigma Protocols, Autolykos, GPU майнинг, Babel Fees, Storage Rent, NiPoPoWs, Oracle Pools, Rosen Bridge, SigmaUSD, MEV resistance, ergo agent economy",
         "og": {
           "title": "Ergo — DeFi, приватность и клиринг автономной работы",
-          "description": "PoW/eUTXO блокчейн для DeFi, приватности и sound money, с публичной proof surface для receipts автономной работы и audit-gated settlement.",
+          "description": "PoW/eUTXO блокчейн для DeFi, приватности и sound money, с публичной proof surface для receipts автономной работы, wallet policy и audit-gated settlement.",
           "siteName": "Ergo Blockchain",
           "imageAlt": "Ergo — публичная proof surface для автономной работы"
         },
         "twitter": {
           "title": "Ergo — DeFi, приватность и клиринг автономной работы",
-          "description": "PoW/eUTXO для DeFi, приватности, sound money и расчётов автономной работы: receipts, wallet policy и audit-gated mainnet claims."
+          "description": "PoW/eUTXO для DeFi, приватности, sound money и клиринга автономной работы: receipts, wallet policy и audit-gated mainnet claims."
         },
         "heroImageAlt": "Ergo Platform — публичная proof surface для автономной работы"
       },

@@ -42,6 +42,11 @@ const steps = [
     args: ["run", "audit:locales"],
   },
   {
+    label: "Audit SEO keyword coverage",
+    command: npm,
+    args: ["run", "audit:seo"],
+  },
+  {
     label: "Type-check",
     command: npm,
     args: ["run", "type-check"],

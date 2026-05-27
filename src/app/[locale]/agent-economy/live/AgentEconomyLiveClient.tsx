@@ -180,6 +180,52 @@ export function AgentEconomyLiveClient({
   }, [])
 
   const gates = status?.gates ?? []
+  const latestReceiptHref = status?.summary.latest_full_receipt_id
+    ? `/r/sage/${status.summary.latest_full_receipt_id}`
+    : "/agent-economy/proofs"
+  const dashboardRows = [
+    {
+      label: "Sage paid flow",
+      value: status ? "Live testnet proof" : "refreshing",
+      state: "live" as GateState,
+      href: "/api/sage/activity",
+    },
+    {
+      label: "Latest full receipt",
+      value: status?.summary.latest_full_receipt_id ? "Found" : "Needed",
+      state: status?.summary.latest_full_receipt_id ? "live" as GateState : "pending" as GateState,
+      href: latestReceiptHref,
+    },
+    {
+      label: "Signed evidence",
+      value: status?.summary.accord_conformance_level
+        ? `${status.summary.accord_conformance_level} live`
+        : "pending",
+      state: status?.summary.accord_conformance_level ? "live" as GateState : "pending" as GateState,
+      href: status?.summary.accord_conformance_evidence ?? "/agent-economy/proofs",
+    },
+    {
+      label: "MCP",
+      value: "Live",
+      state: "live" as GateState,
+      href: "https://mcp.ergoblockchain.org/health",
+    },
+    {
+      label: "Widget",
+      value: status?.summary.sage_widget_npm_version
+        ? `v${status.summary.sage_widget_npm_version}`
+        : "v0.3",
+      state: "live" as GateState,
+      href: "/agent-economy/sage-widget",
+    },
+    {
+      label: "Mainnet",
+      value: status?.summary.mainnet_gate_status ?? "closed",
+      state: "blocked" as GateState,
+      href: "/agent-economy/trust",
+    },
+  ]
+
   return (
     <BackgroundWrapper>
       <main className="min-h-screen text-white">
@@ -261,6 +307,16 @@ export function AgentEconomyLiveClient({
                   <MiniStat label="Full receipt" value={status?.summary.latest_full_receipt_id ? "found" : "needed"} />
                   <MiniStat label="Sage events" value={status ? String(status.summary.sage_wallet_event_count) : "refreshing"} />
                   <MiniStat label="Signer" value={status?.summary.sage_signer_status ?? "refreshing"} />
+                </div>
+                <div className="mt-5 border-t border-white/10 pt-4">
+                  <div className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">
+                    Trust dashboard
+                  </div>
+                  <div className="mt-3 space-y-2">
+                    {dashboardRows.map((row) => (
+                      <StatusRow key={row.label} {...row} />
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -510,6 +566,51 @@ function MiniStat({ label, value }: { label: string; value: string }) {
   )
 }
 
+function StatusRow({
+  label,
+  value,
+  state,
+  href,
+}: {
+  label: string
+  value: string
+  state: GateState
+  href: string
+}) {
+  const external = href.startsWith("http")
+  const content = (
+    <>
+      <span className="truncate text-neutral-400">{label}</span>
+      <span className="flex min-w-0 items-center gap-2 font-mono text-xs uppercase tracking-wider text-neutral-100">
+        <span className={`h-2 w-2 rounded-full ${STATE_DOT[state]}`} />
+        <span className="truncate">{value}</span>
+      </span>
+    </>
+  )
+
+  if (external) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex min-h-[36px] items-center justify-between gap-3 rounded-md border border-white/8 bg-black/55 px-3 text-sm transition-colors hover:border-orange-500/30 hover:bg-orange-500/[0.045]"
+      >
+        {content}
+      </a>
+    )
+  }
+
+  return (
+    <Link
+      href={href}
+      className="flex min-h-[36px] items-center justify-between gap-3 rounded-md border border-white/8 bg-black/55 px-3 text-sm transition-colors hover:border-orange-500/30 hover:bg-orange-500/[0.045]"
+    >
+      {content}
+    </Link>
+  )
+}
+
 function ProofTile({
   icon: Icon,
   label,
@@ -576,14 +677,6 @@ function LifecycleStageCard({
       {content}
     </Link>
   )
-}
-
-function gateStateLabel(state?: GateState) {
-  if (!state) return "pending"
-  if (state === "live") return "live"
-  if (state === "pending") return "pending"
-  if (state === "blocked") return "blocked"
-  return "degraded"
 }
 
 function fallbackActions() {

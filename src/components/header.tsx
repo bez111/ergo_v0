@@ -70,7 +70,7 @@ export function Header() {
         )}
       >
         <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-6 md:gap-10">
+          <div className="flex min-w-0 items-center gap-4 lg:gap-6">
             <Link href="/" className="flex items-center space-x-2 md:space-x-3">
               <svg
                 width="28"
@@ -91,7 +91,7 @@ export function Header() {
               </svg>
               <span
                 className={cn(
-                  "font-bold text-lg md:text-xl text-primary transition-all duration-300",
+                  "font-bold text-lg text-primary transition-all duration-300 xl:text-xl",
                   glitchActive && "ergo-glitch",
                 )}
               >
@@ -114,7 +114,7 @@ export function Header() {
             </Button>
 
             <CyberButton
-              className="hidden md:flex gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-black font-mono uppercase tracking-wider px-6 py-3"
+              className="hidden gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-black font-mono uppercase tracking-[0.12em] px-3 py-2 text-xs md:flex xl:px-6 xl:py-3 xl:text-sm"
               asChild
             >
               <Link href="/wallet" className="inline-flex items-center gap-2">

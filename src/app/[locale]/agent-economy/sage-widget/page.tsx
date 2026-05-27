@@ -4,7 +4,6 @@ import {
   BadgeCheck,
   Bot,
   Boxes,
-  CheckCircle2,
   Code2,
   ExternalLink,
   FileJson2,

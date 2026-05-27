@@ -27,7 +27,7 @@ const FAQ_ITEMS = [
   },
   {
     question: "How long does it take to learn ErgoScript?",
-    answer: "Basic ErgoScript takes 2-4 weeks with consistent practice. Building production dApps typically takes 2-3 months. The eUTXO model has a learning curve, but once understood, development becomes faster and safer than account-based chains."
+    answer: "Basic ErgoScript can be learned in a few weeks with consistent practice. Production dApps require deeper eUTXO design, testing, audits, and operational review. The model has a learning curve, but it makes state transitions explicit and removes the protocol-level reentrancy class."
   },
   {
     question: "Are there Ergo development courses?",
@@ -35,7 +35,7 @@ const FAQ_ITEMS = [
   },
   {
     question: "Where can I find Ergo code examples?",
-    answer: "Explore the Patterns section for reusable contract patterns, check GitHub repos of ecosystem projects, read technical blog articles, and browse the Ergo docs for code snippets. The /patterns page has copy-paste blueprints."
+    answer: "Explore the Patterns section for reusable contract ideas, check GitHub repos of ecosystem projects, read technical blog articles, and browse the Ergo docs for code snippets. Treat every snippet as educational until you adapt, test, and review it."
   }
 ]
 

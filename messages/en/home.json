@@ -36,7 +36,7 @@
       "blockTime": {
         "value": "~2 min",
         "label": "Block time",
-        "hint": "Fast, predictable finality"
+        "hint": "Fast block cadence, probabilistic PoW settlement"
       },
       "mev": {
         "value": "MEV-resistant",

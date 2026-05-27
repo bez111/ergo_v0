@@ -27,7 +27,7 @@ export default function BabelFeesImplementationPage() {
       <div className="bg-blue-400/10 border border-blue-400/20 rounded-xl p-6">
         <h2 className="text-2xl font-bold mb-4 text-blue-400">Overview</h2>
         <p className="text-gray-300">
-          This guide provides detailed instructions for implementing Babel fees in your Ergo applications. The implementation example demonstrates how to enable users to pay transaction fees using tokens instead of ERG, which is particularly useful for new users who may not have ERG in their wallets.
+          This guide provides detailed instructions for implementing Babel fees in your Ergo applications. The implementation example demonstrates how to let users cover transaction fees through supported token-to-ERG paths when suitable Babel Boxes and liquidity are available, which can help new users who may not yet have enough ERG in their wallets.
         </p>
       </div>
 
@@ -421,4 +421,4 @@ npx webpack`}
       </div>
     </div>
   );
-} 
+}

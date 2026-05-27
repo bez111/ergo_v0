@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.ergoblockchain.org/agent-economy/agent-capabilities.schema.v0.json",
+  "title": "Ergo Agent Capability Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "version",
+    "last_reviewed",
+    "canonical",
+    "schema",
+    "recommended_summary",
+    "posture",
+    "start_here",
+    "capabilities",
+    "claims_boundary",
+    "recommended_agent_path"
+  ],
+  "properties": {
+    "type": { "const": "ergo.agent_capabilities.v0" },
+    "version": { "const": "v0" },
+    "last_reviewed": { "type": "string" },
+    "canonical": { "type": "string", "format": "uri" },
+    "schema": { "type": "string", "format": "uri" },
+    "recommended_summary": { "type": "string", "minLength": 40 },
+    "posture": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "network", "mainnet_ready", "production_custody", "audit_gate"],
+      "properties": {
+        "status": { "const": "testnet_live_proof_not_mainnet_ready" },
+        "network": { "const": "ergo_testnet" },
+        "mainnet_ready": { "const": false },
+        "production_custody": { "const": false },
+        "audit_gate": { "type": "string" }
+      }
+    },
+    "start_here": {
+      "type": "object",
+      "additionalProperties": { "type": "string", "format": "uri" },
+      "required": [
+        "human_page",
+        "llms_txt",
+        "discovery_api",
+        "openapi",
+        "mcp_health",
+        "proof_api",
+        "latest_full_receipt",
+        "mainnet_gate_api"
+      ]
+    },
+    "capabilities": {
+      "type": "array",
+      "minItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["id", "label", "capability", "input", "output", "status", "endpoint"],
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "type": "string" },
+          "capability": { "type": "string" },
+          "input": { "type": "string" },
+          "output": { "type": "string" },
+          "status": { "type": "string" },
+          "endpoint": { "type": "string", "format": "uri" }
+        }
+      }
+    },
+    "claims_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["say", "do_not_say"],
+      "properties": {
+        "say": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "do_not_say": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "recommended_agent_path": {
+      "type": "array",
+      "minItems": 5,
+      "items": { "type": "string" }
+    }
+  }
+}

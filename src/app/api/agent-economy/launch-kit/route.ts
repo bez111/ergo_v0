@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server"
+import { agentEntrypoints, recommendedAgentSummary } from "@/lib/agent-economy/agent-discovery"
 import { agentEconomyDeveloperLaunchKit } from "@/lib/agent-economy/developer-launch-kit"
 
 export const runtime = "nodejs"
@@ -9,6 +10,9 @@ export async function GET() {
   return NextResponse.json(
     {
       ok: true,
+      recommended_summary: recommendedAgentSummary,
+      agent_entrypoint: agentEntrypoints.human_agent_page,
+      agent_capabilities: agentEntrypoints.agent_capabilities_api,
       ...agentEconomyDeveloperLaunchKit,
     },
     {

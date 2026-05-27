@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server"
+import { agentEntrypoints, recommendedAgentSummary } from "@/lib/agent-economy/agent-discovery"
 import { agentEconomyMainnetGate, type MainnetGateBlocker } from "@/lib/agent-economy/mainnet-gate"
 
 type GateState = "live" | "pending" | "blocked" | "degraded"
@@ -384,6 +385,9 @@ export async function GET(req: Request) {
   const body = {
     ok: true,
     type: "agent_economy.live_status.v1",
+    recommended_summary: recommendedAgentSummary,
+    agent_entrypoint: agentEntrypoints.human_agent_page,
+    agent_capabilities: agentEntrypoints.agent_capabilities_api,
     generated_at: new Date().toISOString(),
     took_ms: Date.now() - started,
     posture: {
@@ -394,6 +398,8 @@ export async function GET(req: Request) {
     monitor: {
       request_origin: requestOrigin,
       site_base_url: siteBaseUrl,
+      agents: agentEntrypoints.human_agent_page,
+      capabilities_api: agentEntrypoints.agent_capabilities_api,
     },
     summary: {
       gates_live: gates.filter((item) => item.state === "live").length,
@@ -551,13 +557,13 @@ async function probeJson<T>(
       signal: AbortSignal.timeout(opts.timeoutMs ?? 4_000),
     })
     const text = await res.text()
-    const data = text ? JSON.parse(text) as T : null
+    const parsed = parseJsonProbe<T>(text, url)
     return {
-      ok: res.ok,
+      ok: res.ok && parsed.error === null,
       status: res.status,
       ms: Date.now() - started,
-      data,
-      error: res.ok ? null : `HTTP ${res.status}`,
+      data: parsed.data,
+      error: parsed.error ?? (res.ok ? null : `HTTP ${res.status}`),
     }
   } catch (error) {
     return {
@@ -567,6 +573,29 @@ async function probeJson<T>(
       data: null,
       error: error instanceof Error ? error.message : "probe failed",
     }
+  }
+}
+
+function parseJsonProbe<T>(text: string, url: string): { data: T | null; error: string | null } {
+  if (!text) return { data: null, error: null }
+
+  try {
+    return { data: JSON.parse(text) as T, error: null }
+  } catch (error) {
+    const path = safePathname(url)
+    const message = error instanceof Error ? error.message : "invalid JSON"
+    return {
+      data: null,
+      error: `Invalid JSON from ${path}: ${message}`,
+    }
+  }
+}
+
+function safePathname(url: string) {
+  try {
+    return new URL(url).pathname
+  } catch {
+    return url.slice(0, 120)
   }
 }
 

@@ -1,22 +1,22 @@
 {
   "seo": {
     "defaultTitle": "Ergo — PoW/eUTXO Blockchain for DeFi, Privacy & Autonomous Work",
-    "defaultDescription": "Ergo is a PoW/eUTXO blockchain for DeFi, privacy and sound money, now becoming a public proof and clearing layer for autonomous work.",
+    "defaultDescription": "Ergo is a PoW/eUTXO blockchain for DeFi, privacy and sound money, and a public clearing layer where autonomous work gets paid, proven and settled.",
     "keywords": "autonomous work clearing, autonomous work settlement, public proof surface, verifiable receipts, agent settlement, AI agent payments, agentic blockchain, blockchain for AI agents, autonomous AI payments blockchain, machine-to-machine payments, ergo blockchain, Ergo, ERG, ERG coin, ERG wallet, buy ERG, PoW blockchain, proof of work, eUTXO, UTXO DeFi, eUTXO smart contracts, ErgoScript, Sigma Protocols, Autolykos, GPU mining, ASIC resistant mining, Babel Fees, Storage Rent, NiPoPoWs, Oracle Pools, native tokens, DeFi, privacy, ErgoMixer, SigmaUSD, Rosen Bridge, programmable money, censorship resistant money, sound money, fair launch cryptocurrency, no premine, cypherpunk blockchain, MEV resistance",
     "home": {
       "meta": {
         "title": "Ergo — PoW/eUTXO Blockchain for DeFi & Autonomous Work",
-        "description": "PoW/eUTXO blockchain for DeFi, privacy and sound money, now a public proof and clearing layer for autonomous work: receipts, wallet policy and settlement.",
+        "description": "PoW/eUTXO blockchain for DeFi, privacy and sound money, now a public clearing and proof surface where autonomous work gets paid, proven and settled.",
         "keywords": "autonomous work clearing, autonomous work settlement, public proof surface, verifiable receipt bundles, programmable credit, task-conditioned settlement, wallet policy, AI agent payments, agentic blockchain, blockchain for AI agents, autonomous AI payments blockchain, machine-to-machine commerce, Ergo blockchain, Ergo, ERG, ERG coin, ERG wallet, buy ERG, PoW blockchain, proof of work, eUTXO model, UTXO DeFi, eUTXO smart contracts, ErgoScript, Sigma Protocols, Autolykos, GPU mining, ASIC resistant mining, Babel Fees, Storage Rent, NiPoPoWs, Oracle Pools, native tokens, DeFi, decentralized finance, privacy, ErgoMixer, SigmaUSD, Rosen Bridge, Spectrum Finance, smart contracts, programmable money, censorship resistant money, sound money, fair launch cryptocurrency, no premine, self custody, financial sovereignty, cypherpunk blockchain, MEV resistance, ergo agent economy",
         "og": {
           "title": "Ergo — DeFi, Privacy & Autonomous Work Clearing",
-          "description": "PoW/eUTXO blockchain for DeFi, privacy and sound money, with a public proof surface for autonomous work receipts and audit-gated settlement.",
+          "description": "PoW/eUTXO blockchain for DeFi, privacy and sound money, with a public proof surface for autonomous work receipts, wallet policy and audit-gated settlement.",
           "siteName": "Ergo Blockchain",
           "imageAlt": "Ergo — Public Proof Surface for Autonomous Work"
         },
         "twitter": {
           "title": "Ergo — DeFi, Privacy & Autonomous Work Clearing",
-          "description": "PoW/eUTXO for DeFi, privacy, sound money and autonomous work settlement: receipts, wallet policy, and audit-gated mainnet claims."
+          "description": "PoW/eUTXO for DeFi, privacy, sound money and autonomous work clearing: receipts, wallet policy, and audit-gated mainnet claims."
         },
         "heroImageAlt": "Ergo Platform — Public Proof Surface for Autonomous Work"
       },

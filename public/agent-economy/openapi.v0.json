@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "Ergo Agent Economy Public API",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "summary": "Machine-readable API contract for the Ergo Agent Economy testnet proof surface.",
     "description": "Public Agent Economy APIs expose discovery, live status, proof exploration, launch-kit data, review evidence, wallet-agent policy checks, and Sage receipt surfaces. This contract is testnet-first and does not imply mainnet readiness."
   },
@@ -19,6 +19,7 @@
   ],
   "tags": [
     { "name": "Discovery", "description": "Machine-readable entrypoints and schema links." },
+    { "name": "Agent Discovery", "description": "Capability manifest for agents, LLM crawlers, MCP clients, and tool registries." },
     { "name": "Live Proof", "description": "Operational status and proof-chain APIs." },
     { "name": "Developer", "description": "Builder launch kit and developer-facing contracts." },
     { "name": "Developer Tools", "description": "Stateless helper APIs for hashing, address inspection, explorer lookup, and receipt checks." },
@@ -39,6 +40,44 @@
               "application/json": {
                 "schema": {
                   "$ref": "https://www.ergoblockchain.org/agent-economy/discovery.schema.v0.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/.well-known/agents.json": {
+      "get": {
+        "tags": ["Agent Discovery"],
+        "operationId": "getWellKnownAgentCapabilities",
+        "summary": "Get the well-known capability manifest for autonomous agents",
+        "responses": {
+          "200": {
+            "description": "Capability manifest for agents evaluating Ergo proof surfaces",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://www.ergoblockchain.org/agent-economy/agent-capabilities.schema.v0.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/agents": {
+      "get": {
+        "tags": ["Agent Discovery"],
+        "operationId": "getAgentCapabilities",
+        "summary": "Get the canonical capability map for agents",
+        "responses": {
+          "200": {
+            "description": "Capabilities, endpoints, posture, claim boundary, and recommended path for agents",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://www.ergoblockchain.org/agent-economy/agent-capabilities.schema.v0.json"
                 }
               }
             }
@@ -108,6 +147,25 @@
               "application/json": {
                 "schema": {
                   "$ref": "https://www.ergoblockchain.org/agent-economy/developer-launch-kit.schema.v0.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/agent-economy/first-receipt": {
+      "get": {
+        "tags": ["Developer"],
+        "operationId": "getAgentEconomyFirstReceiptFlow",
+        "summary": "Get the first receipt developer flow",
+        "responses": {
+          "200": {
+            "description": "Golden path from live status to one full receipt bundle, policy check, OpenAPI, MCP health, and mainnet gate",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://www.ergoblockchain.org/agent-economy/first-receipt-flow.schema.v0.json"
                 }
               }
             }

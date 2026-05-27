@@ -27,6 +27,12 @@ export function MainNav() {
     if (title === "Start Here") {
       return "Start Here"
     }
+    if (title === "Agents") {
+      return "Agents"
+    }
+    if (title === "First Receipt" || title === "First Receipt Flow") {
+      return title
+    }
     
     const titleKey = title.toLowerCase()
     
@@ -45,6 +51,8 @@ export function MainNav() {
       // Build section (new)
       "Build on the agent economy stack": "build_description",
       "Why Ergo is the base layer for autonomous economic agents: credit, notes, programmable trust.": "agent_economy_description",
+      "The category thesis: autonomous work needs credit, predicates, receipts, and settlement.": "clearing_description",
+      "How x402, AP2, Stripe, marketplaces, and Ergo fit into the agent-payment stack.": "interop_description",
       "Technical architecture: Reserve · Note · Tracker · Predicate. With Fleet SDK code examples.": "agent_payments_description",
       "Embed paid Sage flows: chat, quote, Note verification, receipt links, and tenant config.": "sage_widget_description",
       "Compile ErgoScript in the browser with Monaco, Fleet compiler, and sigma-rust WASM.": "playground_description",
@@ -118,16 +126,16 @@ export function MainNav() {
   }
 
   return (
-    <div className="hidden md:flex">
+    <div className="hidden lg:flex">
       <NavigationMenu>
-        <NavigationMenuList>
+        <NavigationMenuList className="gap-0.5 xl:gap-1">
           {mainNavItems
             .map((item) =>
               item.children ? (
                 <NavigationMenuItem key={item.title}>
                   <NavigationMenuTrigger
                     style={{ caretColor: "transparent", userSelect: "none" }}
-                    className="font-mono uppercase tracking-wider text-sm bg-transparent hover:bg-primary/10 hover:text-primary data-[state=open]:bg-primary/10 data-[state=open]:text-primary"
+                    className="h-10 px-2.5 font-mono text-xs uppercase tracking-[0.12em] bg-transparent hover:bg-primary/10 hover:text-primary data-[state=open]:bg-primary/10 data-[state=open]:text-primary xl:px-3 xl:text-sm"
                   >
                     {getNavTitle(item.title)}
                   </NavigationMenuTrigger>
@@ -159,7 +167,7 @@ export function MainNav() {
                       style={{ caretColor: "transparent", userSelect: "none" }}
                       className={cn(
                         navigationMenuTriggerStyle(),
-                        "font-mono uppercase tracking-wider text-sm bg-transparent hover:bg-primary/10 hover:text-primary",
+                        "h-10 px-2.5 font-mono text-xs uppercase tracking-[0.12em] bg-transparent hover:bg-primary/10 hover:text-primary xl:px-3 xl:text-sm",
                         pathname.endsWith(item.href) &&
                           "text-primary font-medium",
                       )}
@@ -177,7 +185,7 @@ export function MainNav() {
                 style={{ caretColor: "transparent", userSelect: "none" }}
                 className={cn(
                   navigationMenuTriggerStyle(),
-                  "font-mono uppercase tracking-wider text-sm bg-transparent hover:bg-primary/10 hover:text-primary",
+                  "h-10 px-2.5 font-mono text-xs uppercase tracking-[0.12em] bg-transparent hover:bg-primary/10 hover:text-primary xl:px-3 xl:text-sm",
                   pathname === "/docs" && "text-primary font-medium",
                 )}
               >
@@ -192,7 +200,7 @@ export function MainNav() {
                 style={{ caretColor: "transparent", userSelect: "none" }}
                 className={cn(
                   navigationMenuTriggerStyle(),
-                  "font-mono uppercase tracking-wider text-sm bg-transparent hover:bg-primary/10 hover:text-primary",
+                  "h-10 px-2.5 font-mono text-xs uppercase tracking-[0.12em] bg-transparent hover:bg-primary/10 hover:text-primary xl:px-3 xl:text-sm",
                   pathname === "/blog" && "text-primary font-medium",
                 )}
               >

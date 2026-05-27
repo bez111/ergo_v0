@@ -53,12 +53,12 @@ export async function generateMetadata({
   return {
     title: "Agent Economy Roadmap | Ergo",
     description:
-      "A strategic roadmap for Ergo's Agent Economy live proof surface: what is live now, what is being built next, and what remains audit-gated before mainnet.",
+      "A strategic roadmap for Ergo's autonomous work clearing and proof surface: what is live now, what is being built next, and what remains audit-gated before mainnet.",
     alternates: getAlternates("/agent-economy/roadmap", locale),
     openGraph: {
       title: "Ergo Agent Economy Roadmap",
       description:
-        "The public roadmap for the Agent Economy proof surface: live testnet proof, developer surfaces, widget work, wallet-agent references, and mainnet gates.",
+        "The public roadmap for autonomous work clearing on Ergo: live testnet proof, receipt bundles, developer surfaces, widget work, wallet-agent references, and mainnet gates.",
       url: getCanonicalUrl("/agent-economy/roadmap", locale),
       siteName: "Ergo Blockchain",
       images: [
@@ -76,7 +76,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: "Ergo Agent Economy Roadmap",
       description:
-        "Live proof now, stronger developer surfaces next, and a closed mainnet gate until review artifacts exist.",
+        "Live proof now, receipt-first developer surfaces next, and a closed mainnet gate until review artifacts exist.",
       images: [`${BASE_URL}/og/agent-economy.jpg`],
       creator: "@ergoplatform",
       site: "@ergoplatform",
@@ -117,12 +117,13 @@ export default function AgentEconomyRoadmapPage() {
                   </span>
                 </div>
                 <h1 className="mt-6 max-w-5xl text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-7xl">
-                  The site is becoming a public proof surface for agent commerce.
+                  The site is becoming a public proof terminal for autonomous work.
                 </h1>
                 <p className="mt-6 max-w-3xl text-lg leading-relaxed text-neutral-300">
                   The roadmap is deliberately evidence-first: live testnet
-                  proof, developer entrypoints, wallet-agent boundaries, and a
-                  closed mainnet gate until external review artifacts exist.
+                  proof, full receipt bundles, developer entrypoints,
+                  wallet-agent boundaries, and a closed mainnet gate until
+                  external review artifacts exist.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <RoadmapLink

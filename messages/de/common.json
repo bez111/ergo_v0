@@ -472,7 +472,19 @@
     "developer services": "Entwicklerdienste",
     "developer_services_description": "Faucet-Oberfläche, Adressinspektor, Tx/Box-Suche, Receipt-Verifier, Hasher und Servicestatus.",
     "sage widget": "Sage Widget",
-    "sage_widget_description": "Bette bezahlte Sage-Flows ein: Chat, Quote, Note-Verifizierung, Receipt-Links und Tenant-Konfiguration."
+    "sage_widget_description": "Bette bezahlte Sage-Flows ein: Chat, Quote, Note-Verifizierung, Receipt-Links und Tenant-Konfiguration.",
+    "clearing": "Clearing",
+    "clearing_description": "The category thesis: autonomous work needs credit, predicates, receipts, and settlement.",
+    "interop": "Interop",
+    "interop_description": "How x402, AP2, Stripe, marketplaces, and Ergo fit into the agent-payment stack.",
+    "proof": "Proof",
+    "proof_description": "Receipts, live status, signed evidence, and audit gates.",
+    "live proof hub": "Live Proof Hub",
+    "proof explorer": "Proof Explorer",
+    "latest receipt": "Latest Receipt",
+    "mainnet gate": "Mainnet Gate",
+    "review pack": "Review Pack",
+    "launch kit": "Launch Kit"
   },
   "errors": {
     "network": {

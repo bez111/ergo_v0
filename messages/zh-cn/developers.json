@@ -31,6 +31,10 @@
         "dApp development",
         "agentic blockchain",
         "Ergo grants",
+        "ErgoScript tutorial",
+        "dApp development",
+        "autonomous work clearing",
+        "Ergo grants",
         "ErgoScript tutorial"
       ]
     },
@@ -208,7 +212,7 @@
         {
           "slug": "babel-fees",
           "title": "Babel Fees",
-          "description": "Pay fees with any token"
+          "description": "Pay fees through supported token-to-ERG paths"
         },
         {
           "slug": "subblocks",

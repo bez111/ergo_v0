@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useMemo, useState } from "react"
+import { useCallback, useEffect, useMemo, useState } from "react"
 import {
   AlertTriangle,
   CheckCircle2,
@@ -185,7 +185,7 @@ export function PolicyPlaygroundClient() {
   const requestJson = useMemo(() => JSON.stringify(requestPayload, null, 2), [requestPayload])
   const verdictJson = useMemo(() => JSON.stringify(verdict ?? {}, null, 2), [verdict])
 
-  async function runCheck(signal?: AbortSignal) {
+  const runCheck = useCallback(async (signal?: AbortSignal) => {
     setLoading(true)
     setError(null)
     try {
@@ -205,7 +205,7 @@ export function PolicyPlaygroundClient() {
     } finally {
       if (!signal?.aborted) setLoading(false)
     }
-  }
+  }, [requestPayload])
 
   useEffect(() => {
     const controller = new AbortController()
@@ -216,7 +216,7 @@ export function PolicyPlaygroundClient() {
       window.clearTimeout(timer)
       controller.abort()
     }
-  }, [requestJson])
+  }, [requestJson, runCheck])
 
   async function copy(kind: "request" | "verdict", value: string) {
     await navigator.clipboard.writeText(value)

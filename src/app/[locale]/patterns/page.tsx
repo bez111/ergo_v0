@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title,
     description,
-    keywords: ["ErgoScript patterns", "Ergo smart contracts", "ErgoScript examples", "eUTXO patterns", "Ergo developer", "blockchain patterns", "DeFi patterns", "copy paste smart contracts"],
+    keywords: ["ErgoScript patterns", "Ergo smart contracts", "ErgoScript examples", "eUTXO patterns", "Ergo developer", "blockchain patterns", "DeFi patterns", "auditable contract blueprints"],
     openGraph: {
       title,
       description,

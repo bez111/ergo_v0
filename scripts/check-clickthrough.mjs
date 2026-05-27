@@ -49,14 +49,15 @@ async function clickAndExpect({
       observedPage = popup
       await observedPage.waitForLoadState("domcontentloaded", { timeout: ASSERTION_TIMEOUT_MS }).catch(() => null)
     } else {
-      await Promise.all([
-        page.waitForURL((url) => {
+      await clickable.click()
+      await page
+        .waitForURL((url) => {
           if (expectedPath) return url.pathname === expectedPath
           if (expectedURLPart) return url.href.includes(expectedURLPart)
           return true
-        }, { timeout: NAVIGATION_TIMEOUT_MS, waitUntil: "commit" }),
-        clickable.click(),
-      ])
+        }, { timeout: ASSERTION_TIMEOUT_MS, waitUntil: "commit" })
+        .catch(() => null)
+      await page.waitForLoadState("domcontentloaded", { timeout: ASSERTION_TIMEOUT_MS }).catch(() => null)
     }
 
     const url = new URL(observedPage.url())

@@ -70,6 +70,7 @@ export const FORCE_INDEX_PATHS: string[] = [
   '/infographics',
   '/questions',
   '/topics',
+  '/agents',
   
   // Key docs hubs
   '/docs/developers',

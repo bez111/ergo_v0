@@ -8,7 +8,17 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: '/',
+        allow: [
+          '/',
+          '/agents',
+          '/llms.txt',
+          '/llms-full.txt',
+          '/.well-known/agents.json',
+          '/.well-known/agent-economy.json',
+          '/agent-economy/openapi.v0.json',
+          '/agent-economy/agent-capabilities.schema.v0.json',
+          '/agent-economy/discovery.schema.v0.json',
+        ],
         disallow: [
           '/api/',
           '/_next/',
@@ -105,6 +115,10 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
       {
+        userAgent: 'OAI-SearchBot',
+        allow: '/',
+      },
+      {
         userAgent: 'ChatGPT-User', // ChatGPT browsing
         allow: '/',
       },
@@ -118,6 +132,14 @@ export default function robots(): MetadataRoute.Robots {
       },
       {
         userAgent: 'Claude-Web', // Claude browsing
+        allow: '/',
+      },
+      {
+        userAgent: 'ClaudeBot',
+        allow: '/',
+      },
+      {
+        userAgent: 'Claude-SearchBot',
         allow: '/',
       },
       {
@@ -155,4 +177,4 @@ export default function robots(): MetadataRoute.Robots {
     ],
     host: baseUrl,
   }
-} 
+}

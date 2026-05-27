@@ -89,6 +89,7 @@ ${glossarySection}
 - ${BASE_URL}/playbooks — Developer playbooks
 - ${BASE_URL}/patterns — ErgoScript patterns
 - ${BASE_URL}/docs — Full documentation
+- ${BASE_URL}/agents — Agent-native entrypoint for capabilities, llms.txt, discovery, OpenAPI, MCP, receipts, proof APIs and mainnet gate
 
 ## Primary User Paths
 
@@ -105,18 +106,26 @@ ${glossarySection}
 Ergo is the first reference programmable-settlement rail for the Accord Protocol and related agent-payment experiments. This section is a retrieval guide for AI assistants and language models. It must not be read as production certification for Accord, ChainCash, Basis or any specific Note/Reserve/Tracker implementation.
 
 **Primary pages:**
+- ${BASE_URL}/agents — Agent-native entrypoint: what this site is, which endpoint to call first, which proof to inspect, and what not to assume
 - ${BASE_URL}/agent-economy — Narrative hub: why Ergo, what the stack is, who is building it
+- ${BASE_URL}/agent-economy/clearing — Canonical autonomous work clearing explainer: intent, work, credit, predicate, receipt and settlement
+- ${BASE_URL}/agent-economy/interop — Interop map: x402 payment handshakes, AP2 authorization, Stripe checkout, marketplaces and Ergo clearing/proof
 - ${BASE_URL}/agent-economy/start — Fastest starting path: live proof, proof APIs, launch kit, developer surfaces and mainnet gate boundary
 - ${BASE_URL}/agent-economy/live — Operational cockpit for Sage, receipts, Accord, MCP, widget, wallet-agent surfaces and the mainnet gate
+- ${BASE_URL}/agent-economy/first-receipt — Golden developer path around one full receipt: live status, receipt JSON, wallet policy, OpenAPI, MCP health and mainnet gate
+- ${BASE_URL}/api/agent-economy/first-receipt — Machine-readable contract for the same first receipt flow
 - ${BASE_URL}/agent-economy/launch-kit — Five-minute developer launch kit: live status, policy checks, receipts, MCP, services, widget, guardrails, and schema-backed JSON
 - ${BASE_URL}/agent-economy/proofs — Public proof explorer for full Sage receipt bundles, signed Accord conformance evidence, MCP health, widget npm state, recent Sage activity and the closed mainnet gate
 - ${BASE_URL}/agent-economy/roadmap — Strategic live/next/gated/later roadmap for the public proof surface and mainnet gate
 - ${BASE_URL}/api/agent-economy/roadmap — Machine-readable roadmap source
 - ${BASE_URL}/api/agent-economy/proofs — Machine-readable proof explorer source
 - ${BASE_URL}/.well-known/agent-economy.json — Well-known discovery entrypoint for Agent Economy pages, APIs, Sage receipt evidence, MCP, package surfaces and verification commands
+- ${BASE_URL}/.well-known/agents.json — Well-known capability manifest for AI agents, LLM crawlers, MCP clients and tool registries
+- ${BASE_URL}/api/agents — API version of the same capability manifest: capabilities, endpoints, inputs, outputs, posture and claims boundary
 - ${BASE_URL}/api/agent-economy/discovery — API version of the same discovery descriptor with schema link headers
 - ${BASE_URL}/.well-known/accord — Sage Accord provider descriptor with testnet L1 conformance evidence and full receipt link
 - ${BASE_URL}/agent-economy/discovery.schema.v0.json — JSON Schema for the Agent Economy discovery descriptor
+- ${BASE_URL}/agent-economy/first-receipt-flow.schema.v0.json — JSON Schema for the first receipt flow API response
 - ${BASE_URL}/agent-economy/openapi.v0.json — OpenAPI contract for public Agent Economy and Sage proof APIs
 - ${BASE_URL}/agent-economy/developer-launch-kit.schema.v0.json — JSON Schema for the launch kit API response
 - ${BASE_URL}/build/agent-payments — Technical reference: primitives, code, SDK comparison
@@ -229,6 +238,9 @@ sigmaProp(
 - Search index: ${BASE_URL}/api/search.json
 - robots.txt: ${BASE_URL}/robots.txt
 - llms.txt (concise): ${BASE_URL}/llms.txt
+- Agent capability page: ${BASE_URL}/agents
+- Agent capability manifest: ${BASE_URL}/.well-known/agents.json
+- Agent capability API: ${BASE_URL}/api/agents
 `
 
   return new NextResponse(content, {

@@ -1,5 +1,52 @@
 export const mainNavItems = [
   {
+    title: "Proof",
+    href: "/agent-economy/proofs",
+    description: "Receipts, live status, signed evidence, and audit gates",
+    children: [
+      {
+        title: "Agents",
+        href: "/agents",
+        description: "Machine-native entrypoint: llms.txt, capability manifest, discovery API, OpenAPI, MCP, receipts, and mainnet gate.",
+      },
+      {
+        title: "Live Proof Hub",
+        href: "/agent-economy/live",
+        description: "Operational dashboard for Sage, receipts, MCP, widget, policy, and mainnet gate.",
+      },
+      {
+        title: "Proof Explorer",
+        href: "/agent-economy/proofs",
+        description: "Inspect receipt bundles, conformance evidence, MCP health, widget state, and audit gates.",
+      },
+      {
+        title: "First Receipt",
+        href: "/agent-economy/first-receipt",
+        description: "One developer path from live status to a full receipt bundle, wallet policy, MCP, and mainnet gate.",
+      },
+      {
+        title: "Latest Receipt",
+        href: "/r/sage/f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81",
+        description: "Open the latest full Sage receipt: Agreement, Verification Receipt, Settlement Receipt, and chain proof.",
+      },
+      {
+        title: "Mainnet Gate",
+        href: "/agent-economy/trust",
+        description: "See what is live on testnet and what remains blocked before any mainnet readiness claim.",
+      },
+      {
+        title: "Review Pack",
+        href: "/agent-economy/review-pack",
+        description: "External review scope, evidence checklist, allowed language, and forbidden claims.",
+      },
+      {
+        title: "Launch Kit",
+        href: "/agent-economy/launch-kit",
+        description: "One developer path from live status to receipt bundle, wallet policy, MCP, and widget integration.",
+      },
+    ],
+  },
+  {
     title: "Build",
     href: "/agent-economy",
     description: "Build on the agent economy stack",
@@ -10,9 +57,24 @@ export const mainNavItems = [
         description: "Why Ergo is the base layer for autonomous economic agents: credit, notes, programmable trust.",
       },
       {
+        title: "Clearing",
+        href: "/agent-economy/clearing",
+        description: "The category thesis: autonomous work needs credit, predicates, receipts, and settlement.",
+      },
+      {
+        title: "Interop",
+        href: "/agent-economy/interop",
+        description: "How x402, AP2, Stripe, marketplaces, and Ergo fit into the agent-payment stack.",
+      },
+      {
         title: "Agent Payments",
         href: "/build/agent-payments",
         description: "Technical architecture: Reserve · Note · Tracker · Predicate. With Fleet SDK code examples.",
+      },
+      {
+        title: "First Receipt Flow",
+        href: "/agent-economy/first-receipt",
+        description: "The fastest build path: inspect one settled testnet receipt, run policy, read OpenAPI, check MCP, and stop at the gate.",
       },
       {
         title: "Sage Widget",
@@ -52,43 +114,6 @@ export const mainNavItems = [
     ],
   },
   {
-    title: "Start",
-    href: "/start",
-    description: "Begin your journey with Ergo",
-    children: [
-      {
-        title: "Start Here",
-        href: "/start",
-        description: "Get started with Ergo blockchain in 3 simple steps: download a wallet, get ERG tokens, and make your first transaction.",
-      },
-      {
-        title: "Quick Introduction",
-        href: "/start/introduction",
-        description: "A brief overview of Ergo's purpose, design principles, and core advantages over other blockchains.",
-      },
-      {
-        title: "Platform Comparison",
-        href: "/start/comparison",
-        description: "Compare Ergo to Bitcoin, Ethereum, Solana and other blockchains across key technical features.",
-      },
-      {
-        title: "Onboarding Quiz",
-        href: "/start/quiz",
-        description: "Find your personalized path on Ergo: investor, developer, miner, NFT creator, or everyday user.",
-      },
-      {
-        title: "Join the Community",
-        href: "/start/community",
-        description: "Connect with the Ergo community on Discord, Telegram, Reddit, X, and the official forum.",
-      },
-      {
-        title: "FAQ",
-        href: "/faq",
-        description: "Answers to common questions about Ergo for beginners and advanced users.",
-      },
-    ],
-  },
-  {
     title: "Use",
     href: "/use",
     description: "Practical guides and user how-tos",
@@ -113,15 +138,8 @@ export const mainNavItems = [
         href: "/use/defi",
         description: "Where to earn yield on Ergo: staking, farming, lending, and liquidity provider fees.",
       },
-    ],
-  },
-  {
-    title: "Ecosystem",
-    href: "/ecosystem",
-    description: "Projects, dashboards, and partners",
-    children: [
       {
-        title: "Explore dApps & Services",
+        title: "Ecosystem",
         href: "/ecosystem",
         description: "One comprehensive directory of wallets, bridges, tools, and community projects.",
       },
@@ -142,7 +160,6 @@ export const mainNavItems = [
       },
     ],
   },
-  // Removed Build section to reduce top-level items and avoid duplication with DOCS
   {
     title: "Technology",
     href: "/technology",
@@ -196,6 +213,21 @@ export const mainNavItems = [
         description: "Your starting point for mastering Ergo: guides, glossary, Q&A, playbooks, and more.",
       },
       {
+        title: "Start Here",
+        href: "/start",
+        description: "Get started with Ergo blockchain in 3 simple steps: download a wallet, get ERG tokens, and make your first transaction.",
+      },
+      {
+        title: "Quick Introduction",
+        href: "/start/introduction",
+        description: "A brief overview of Ergo's purpose, design principles, and core advantages over other blockchains.",
+      },
+      {
+        title: "Platform Comparison",
+        href: "/start/comparison",
+        description: "Compare Ergo to Bitcoin, Ethereum, Solana and other blockchains across key technical features.",
+      },
+      {
         title: "Glossary",
         href: "/learn/glossary",
         description: "Definitions of key Ergo and blockchain terminology in one searchable reference.",
@@ -219,6 +251,11 @@ export const mainNavItems = [
         title: "Dev Patterns",
         href: "/patterns",
         description: "Smart-contract patterns and reusable blueprints for developers.",
+      },
+      {
+        title: "FAQ",
+        href: "/faq",
+        description: "Answers to common questions about Ergo for beginners and advanced users.",
       },
     ],
   },

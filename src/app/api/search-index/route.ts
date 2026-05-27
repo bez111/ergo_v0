@@ -65,13 +65,13 @@ export async function GET() {
     {
       id: 'home',
       type: 'page',
-      title: 'Ergo Platform - Resilient DeFi Blockchain for the People',
-      description: 'Ergo: PoW blockchain with eUTXO smart contracts, built-in privacy via Sigma protocols, and sustainable tokenomics.',
+      title: 'Ergo - PoW/eUTXO Blockchain for DeFi and Autonomous Work',
+      description: 'Ergo combines PoW/eUTXO smart contracts, DeFi, privacy, sound money, and a public proof surface where autonomous work gets paid, proven and settled.',
       url: '/',
       absoluteUrl: baseUrl,
       priority: 1.0,
       changeFrequency: 'daily',
-      keywords: 'ergo, blockchain, defi, cryptocurrency, smart contracts, eutxo, privacy',
+      keywords: 'ergo, blockchain, defi, cryptocurrency, smart contracts, eutxo, privacy, sound money, autonomous work clearing, proof surface, receipt bundles',
       schema: ['Organization', 'WebSite']
     },
     {
@@ -183,6 +183,18 @@ export async function GET() {
       schema: ['TechArticle', 'SoftwareApplication']
     },
     {
+      id: 'agents-capability-surface',
+      type: 'page',
+      title: 'For Autonomous Agents - Ergo Capability Surface',
+      description: 'Agent-native entrypoint for llms.txt, capability manifest, discovery API, OpenAPI, MCP, receipt bundles, proof APIs, wallet policy and mainnet gate.',
+      url: '/agents',
+      absoluteUrl: `${baseUrl}/agents`,
+      priority: 0.95,
+      changeFrequency: 'weekly',
+      keywords: 'agent-discoverable website, AI agent capabilities, llms.txt, MCP endpoint, OpenAPI, proof API, full receipt bundle, autonomous work clearing, mainnet gate',
+      schema: ['WebPage', 'SoftwareApplication', 'Dataset']
+    },
+    {
       id: 'agent-economy-start',
       type: 'page',
       title: 'Start Building the Ergo Agent Economy',
@@ -217,6 +229,42 @@ export async function GET() {
       changeFrequency: 'weekly',
       keywords: 'agent economy launch kit, developer launch kit schema, Sage widget, policy-check, MCP, receipt bundle, Ergo developer services',
       schema: ['TechArticle', 'SoftwareApplication']
+    },
+    {
+      id: 'agent-economy-first-receipt',
+      type: 'page',
+      title: 'Build First Agent Receipt',
+      description: 'A golden developer path around one settled testnet receipt: live status, full receipt JSON, wallet policy check, OpenAPI, MCP health and mainnet gate.',
+      url: '/agent-economy/first-receipt',
+      absoluteUrl: `${baseUrl}/agent-economy/first-receipt`,
+      priority: 0.9,
+      changeFrequency: 'weekly',
+      keywords: 'build first receipt, full receipt bundle, agent payment receipt, wallet policy check, MCP health, OpenAPI, mainnet gate, autonomous work clearing',
+      schema: ['HowTo', 'SoftwareApplication', 'Dataset']
+    },
+    {
+      id: 'agent-economy-clearing',
+      type: 'page',
+      title: 'Autonomous Work Clearing on Ergo',
+      description: 'Canonical explanation of why autonomous agents need more than payments: intent, work, credit, predicates, receipts and PoW/eUTXO settlement.',
+      url: '/agent-economy/clearing',
+      absoluteUrl: `${baseUrl}/agent-economy/clearing`,
+      priority: 0.9,
+      changeFrequency: 'weekly',
+      keywords: 'autonomous work clearing, agent payments, programmable credit, task-conditioned payments, receipt bundles, eUTXO settlement, ErgoScript predicates',
+      schema: ['TechArticle', 'SoftwareApplication']
+    },
+    {
+      id: 'agent-economy-interop',
+      type: 'page',
+      title: 'Agent Payment Interop: x402, AP2, Stripe, Marketplaces, and Ergo',
+      description: 'Comparison page mapping x402 payment handshakes, AP2 authorization, Stripe checkout, marketplaces, and Ergo clearing/proof surfaces.',
+      url: '/agent-economy/interop',
+      absoluteUrl: `${baseUrl}/agent-economy/interop`,
+      priority: 0.88,
+      changeFrequency: 'weekly',
+      keywords: 'x402, Google AP2, Stripe Agentic Commerce, NEAR Agent Market, agent payment interop, autonomous work clearing, Ergo proof surface',
+      schema: ['TechArticle', 'FAQPage']
     },
     {
       id: 'agent-economy-proof-explorer',

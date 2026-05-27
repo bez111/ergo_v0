@@ -61,6 +61,7 @@
     "qa:sitemap-crawl": "node scripts/mobile-crawl.mjs --status-only",
     "audit:blog": "node scripts/blog-content-audit.mjs",
     "audit:claims": "node scripts/content-claim-audit.mjs",
+    "audit:seo": "node scripts/seo-keyword-audit.mjs",
     "audit:agent-host": "node scripts/agent-host-routes-audit.mjs",
     "audit:agent-economy-gate": "node scripts/agent-economy-gate-audit.mjs",
     "audit:locales": "node scripts/localization-audit.mjs",

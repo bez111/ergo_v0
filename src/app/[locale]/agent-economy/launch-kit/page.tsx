@@ -2,10 +2,8 @@ import type { Metadata } from "next"
 import type { ReactNode } from "react"
 import {
   ArrowRight,
-  Bot,
   CheckCircle2,
   ClipboardCheck,
-  Code2,
   ExternalLink,
   FileJson2,
   GitBranch,
@@ -227,11 +225,11 @@ export default function AgentEconomyLaunchKitPage() {
         <section className="px-4 py-14 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <SectionHeader
-              eyebrow="First run"
-              title="Five checks before you build."
-              body="The goal is to see the whole chain once: status, policy, receipt, workbench, and embeddable host surface."
+              eyebrow="Golden path"
+              title="One receipt path before the full API surface."
+              body="The first developer journey should be boring and concrete: check live state, open one receipt, inspect its JSON, run policy, build the same flow, then read the mainnet gate."
             />
-            <div className="mt-8 grid gap-4 lg:grid-cols-5">
+            <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               {kit.five_minute_path.map((step, index) => (
                 <LaunchLink
                   key={step.id}

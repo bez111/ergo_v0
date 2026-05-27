@@ -94,7 +94,7 @@ const FAQ_ITEMS = [
   },
   {
     question: "Where can I find ErgoScript code examples?",
-    answer: "Check the /patterns page for copy-paste ready contract patterns, /playbooks for step-by-step guides, and docs.ergoplatform.com for the official reference. GitHub repos of ecosystem projects provide real-world examples."
+    answer: "Check the /patterns page for educational contract blueprints, /playbooks for step-by-step guides, and docs.ergoplatform.com for the official reference. Treat snippets as starting points: adapt, test, and review them before using real funds."
   },
   {
     question: "Are there grants for Ergo developers?",

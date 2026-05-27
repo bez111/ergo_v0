@@ -10,10 +10,50 @@ export async function GET() {
       {
         title: "Home",
         url: "/",
-        description: "Ergo Platform - Next-generation smart contract platform",
-        keywords: ["ergo", "blockchain", "smart contracts", "defi", "cryptocurrency"],
-        content: "Ergo is a next-generation proof-of-work blockchain platform enabling new models of financial interaction",
+        description: "Ergo Platform - PoW/eUTXO blockchain for DeFi, privacy, sound money and autonomous work clearing",
+        keywords: ["ergo", "blockchain", "smart contracts", "defi", "cryptocurrency", "autonomous work clearing", "proof of work", "eutxo"],
+        content: "Ergo is a proof-of-work eUTXO blockchain for DeFi, privacy, sound money, smart contracts and verifiable autonomous work settlement",
         category: "main"
+      },
+      {
+        title: "Agent Economy",
+        url: "/agent-economy",
+        description: "Autonomous agents need programmable credit, task-conditioned acceptance, receipt bundles and neutral settlement",
+        keywords: ["agent economy", "AI agents", "autonomous work", "programmable credit", "receipt bundles", "MCP", "x402"],
+        content: "Ergo provides a testnet-first proof surface for agent payments, receipts, wallet policy and audit-gated settlement",
+        category: "agent-economy"
+      },
+      {
+        title: "For Autonomous Agents",
+        url: "/agents",
+        description: "Agent-native entrypoint for capabilities, llms.txt, discovery, OpenAPI, MCP, receipts, proof APIs and mainnet gate",
+        keywords: ["agents", "agent-discoverable", "llms.txt", "MCP", "OpenAPI", "capability manifest", "receipt bundles", "mainnet gate"],
+        content: "Agents can find Ergo capabilities, inspect full receipt bundles, call discovery APIs, use MCP, check wallet policy and preserve the audit-gated testnet proof boundary",
+        category: "agent-economy"
+      },
+      {
+        title: "Build First Agent Receipt",
+        url: "/agent-economy/first-receipt",
+        description: "Golden developer path around one full receipt bundle, wallet policy check, OpenAPI, MCP health and mainnet gate",
+        keywords: ["first receipt", "full receipt bundle", "wallet policy", "OpenAPI", "MCP", "mainnet gate", "autonomous work clearing"],
+        content: "Build around one settled Sage receipt first: check live status, open the full receipt JSON, run policy-check, read OpenAPI, verify MCP health and stop at the audit-gated mainnet boundary",
+        category: "agent-economy"
+      },
+      {
+        title: "Autonomous Work Clearing",
+        url: "/agent-economy/clearing",
+        description: "Why autonomous work needs more than payments: intent, work, credit, predicate, receipt and settlement",
+        keywords: ["autonomous work clearing", "agent payments", "task-conditioned payments", "eUTXO settlement", "ErgoScript predicates"],
+        content: "Payments move value; clearing resolves obligations; receipts prove work; settlement closes the loop",
+        category: "agent-economy"
+      },
+      {
+        title: "Agent Payment Interop",
+        url: "/agent-economy/interop",
+        description: "x402, AP2, Stripe, marketplaces and Ergo mapped by layer",
+        keywords: ["x402", "Google AP2", "Stripe Agentic Commerce", "agent payment interop", "Ergo proof surface"],
+        content: "x402 handles payment handshakes, AP2 handles authorization, checkout rails handle commerce, and Ergo targets clearing and proof",
+        category: "agent-economy"
       },
       {
         title: "Technology",
@@ -96,7 +136,8 @@ export async function GET() {
       { id: "mining", name: "Mining", priority: 5 },
       { id: "tools", name: "Tools & Wallets", priority: 6 },
       { id: "docs", name: "Documentation", priority: 7 },
-      { id: "start", name: "Getting Started", priority: 8 }
+      { id: "start", name: "Getting Started", priority: 8 },
+      { id: "agent-economy", name: "Agent Economy", priority: 9 }
     ]
   }
   
@@ -106,4 +147,4 @@ export async function GET() {
       'Content-Type': 'application/json',
     }
   })
-} 
+}

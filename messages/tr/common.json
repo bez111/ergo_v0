@@ -472,7 +472,19 @@
     "developer services": "Geliştirici Servisleri",
     "developer_services_description": "Faucet yüzeyi, adres denetleyici, tx/box arama, receipt doğrulayıcı, hasher ve servis durumu.",
     "sage widget": "Sage Widget",
-    "sage_widget_description": "Ücretli Sage akışlarını gömün: sohbet, teklif, Note doğrulama, receipt bağlantıları ve tenant yapılandırması."
+    "sage_widget_description": "Ücretli Sage akışlarını gömün: sohbet, teklif, Note doğrulama, receipt bağlantıları ve tenant yapılandırması.",
+    "clearing": "Clearing",
+    "clearing_description": "The category thesis: autonomous work needs credit, predicates, receipts, and settlement.",
+    "interop": "Interop",
+    "interop_description": "How x402, AP2, Stripe, marketplaces, and Ergo fit into the agent-payment stack.",
+    "proof": "Proof",
+    "proof_description": "Receipts, live status, signed evidence, and audit gates.",
+    "live proof hub": "Live Proof Hub",
+    "proof explorer": "Proof Explorer",
+    "latest receipt": "Latest Receipt",
+    "mainnet gate": "Mainnet Gate",
+    "review pack": "Review Pack",
+    "launch kit": "Launch Kit"
   },
   "errors": {
     "network": {

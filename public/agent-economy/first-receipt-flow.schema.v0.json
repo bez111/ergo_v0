@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.ergoblockchain.org/agent-economy/first-receipt-flow.schema.v0.json",
+  "title": "Ergo First Receipt Flow",
+  "description": "Machine-readable golden path for inspecting one full Sage receipt bundle, checking wallet policy, and preserving the mainnet gate boundary.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "ok",
+    "type",
+    "version",
+    "status",
+    "last_updated",
+    "recommended_summary",
+    "public_claim",
+    "posture",
+    "network",
+    "mainnet_ready",
+    "production_custody",
+    "canonical",
+    "api",
+    "schema",
+    "outcome",
+    "one_command_probe",
+    "steps",
+    "policy_check",
+    "developer_next_actions",
+    "guardrails"
+  ],
+  "properties": {
+    "ok": { "const": true },
+    "type": { "const": "ergo.agent_economy.first_receipt_flow.v0" },
+    "version": { "const": "v0" },
+    "status": { "const": "testnet_live_proof" },
+    "last_updated": { "type": "string", "format": "date" },
+    "recommended_summary": { "type": "string", "minLength": 40 },
+    "public_claim": { "type": "string", "minLength": 40 },
+    "posture": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "network", "mainnet_ready", "production_custody", "audit_gate"],
+      "properties": {
+        "status": { "const": "testnet_live_proof_not_mainnet_ready" },
+        "network": { "const": "ergo_testnet" },
+        "mainnet_ready": { "const": false },
+        "production_custody": { "const": false },
+        "audit_gate": { "type": "string" }
+      }
+    },
+    "network": { "const": "ergo_testnet" },
+    "mainnet_ready": { "const": false },
+    "production_custody": { "const": false },
+    "canonical": { "type": "string", "format": "uri" },
+    "api": { "type": "string", "format": "uri" },
+    "schema": { "type": "string", "format": "uri" },
+    "outcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "goal",
+        "receipt_id",
+        "receipt_page",
+        "receipt_api",
+        "expected_receipt_type",
+        "expected_status",
+        "contains"
+      ],
+      "properties": {
+        "goal": { "type": "string" },
+        "receipt_id": { "type": "string", "minLength": 64 },
+        "receipt_page": { "type": "string", "format": "uri" },
+        "receipt_api": { "type": "string", "format": "uri" },
+        "expected_receipt_type": { "const": "full_receipt_bundle" },
+        "expected_status": { "const": "settled_on_chain" },
+        "contains": {
+          "type": "array",
+          "minItems": 4,
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "one_command_probe": { "$ref": "#/$defs/command" },
+    "steps": {
+      "type": "array",
+      "minItems": 5,
+      "items": { "$ref": "#/$defs/step" }
+    },
+    "policy_check": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["endpoint", "example_request", "example_verdict", "signing_boundary"],
+      "properties": {
+        "endpoint": { "type": "string", "format": "uri" },
+        "example_request": { "type": "object" },
+        "example_verdict": { "type": "object" },
+        "signing_boundary": { "type": "string" }
+      }
+    },
+    "developer_next_actions": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/action" }
+    },
+    "guardrails": {
+      "type": "array",
+      "minItems": 4,
+      "items": { "type": "string" }
+    }
+  },
+  "$defs": {
+    "command": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "command", "expect"],
+      "properties": {
+        "label": { "type": "string" },
+        "command": { "type": "string" },
+        "expect": { "type": "string" }
+      }
+    },
+    "step": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "method", "endpoint", "command", "expect", "status"],
+      "properties": {
+        "id": { "type": "string" },
+        "label": { "type": "string" },
+        "method": { "enum": ["GET", "POST"] },
+        "endpoint": { "type": "string", "format": "uri" },
+        "command": { "type": "string" },
+        "expect": { "type": "string" },
+        "status": { "type": "string" }
+      }
+    },
+    "action": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "href", "reason"],
+      "properties": {
+        "id": { "type": "string" },
+        "label": { "type": "string" },
+        "href": { "type": "string", "format": "uri" },
+        "reason": { "type": "string" }
+      }
+    }
+  }
+}

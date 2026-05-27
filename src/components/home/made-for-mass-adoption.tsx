@@ -110,12 +110,12 @@ export function MadeForMassAdoption() {
               <Card className="bg-black/80 border border-white/10 hover:bg-black/90 hover:border-orange-500/50 rounded-2xl md:rounded-3xl transition-all duration-300 hover:-translate-y-0.5 cursor-pointer">
                 <div className="p-4 md:p-5">
                   {/* Icon and Title in same line */}
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="flex items-center gap-3">
+                  <div className="flex min-w-0 items-center gap-3 mb-3">
+                    <div className="flex min-w-0 items-center gap-3">
                       <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 flex items-center justify-center group-hover:scale-110 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex-shrink-0">
                         <path.icon className="w-6 h-6 text-orange-400 group-hover:text-orange-300 transition-colors" />
                       </div>
-                      <h3 className="text-xl font-bold text-white group-hover:text-orange-100 transition-colors leading-tight">
+                      <h3 className="min-w-0 text-xl font-bold text-white group-hover:text-orange-100 transition-colors leading-tight">
                         {path.title}
                       </h3>
                     </div>

@@ -10,6 +10,7 @@ import { HeroFinal } from "@/components/home/hero-final"
 import { WhyErgo } from "@/components/home/why-ergo-new"
 import { LiveNetworkStats } from "@/components/home/live-network-stats"
 import { AutonomousClearingSection } from "@/components/home/autonomous-clearing-section"
+import { LatestReceiptSection } from "@/components/home/latest-receipt-section"
 import { FAQSchema } from "@/components/seo/faq-schema"
 import { ERGProductSchema } from "@/components/seo/erg-product-schema"
 import { PerformanceOptimizations } from "@/components/seo/performance-optimizations"
@@ -139,6 +140,7 @@ export default async function HomePage({ params }: HomePageProps) {
       <main className="min-h-screen bg-black text-white relative overflow-hidden">
         <BackgroundWrapper>
           <HeroFinal />
+          <LatestReceiptSection locale={locale} />
           <AutonomousClearingSection locale={locale} />
           <AgentEconomySection />
           <WhyErgo />

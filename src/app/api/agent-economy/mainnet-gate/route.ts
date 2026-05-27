@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server"
+import { agentEntrypoints, recommendedAgentSummary } from "@/lib/agent-economy/agent-discovery"
 import { agentEconomyMainnetGate } from "@/lib/agent-economy/mainnet-gate"
 
 export const runtime = "nodejs"
@@ -12,6 +13,9 @@ export async function GET() {
   return NextResponse.json(
     {
       ok: true,
+      recommended_summary: recommendedAgentSummary,
+      agent_entrypoint: agentEntrypoints.human_agent_page,
+      agent_capabilities: agentEntrypoints.agent_capabilities_api,
       ...agentEconomyMainnetGate,
       mainnet_ready: false,
       production_custody: false,
