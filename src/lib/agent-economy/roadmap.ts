@@ -83,8 +83,9 @@ export const agentEconomyRoadmap = {
       phase: "build_next" as AgentEconomyRoadmapPhase,
       title: "Embeddable Paid Sage Widget",
       summary:
-        "Move the published widget from a strong v0.3 payment surface toward a polished host demo: quote, wallet launch, verification, chat, receipt callback, tenant config, and failure-state UX.",
+        "v0.4 source is prepared with embed config helpers, capability manifest, and generated React/vanilla snippets. npm latest remains v0.3 until a release tag publishes through Trusted Publishing.",
       proof_links: [
+        "https://github.com/bez111/sage-widget",
         "https://www.npmjs.com/package/@ergoblockchain/sage-widget",
         "https://www.ergoblockchain.org/agent-economy/sage-widget",
       ],

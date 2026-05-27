@@ -92,7 +92,7 @@ export async function generateMetadata({
   return {
     title: "Sage Widget | Embed Paid Agent Payments on Ergo",
     description:
-      "Embed Sage as a React or vanilla widget: chat, quote, manual Note verification, receipt links, and full Accord receipt bundles for Ergo testnet proof flows.",
+      "Embed Sage as a React or vanilla widget: chat, quote, manual Note verification, receipt links, full Accord receipt bundles, and source-ready embed helpers for Ergo testnet proof flows.",
     alternates: getAlternates("/agent-economy/sage-widget", locale),
     openGraph: {
       title: "Sage Widget for Ergo Agent Payments",
@@ -132,14 +132,14 @@ const statusItems: Array<{
 }> = [
   {
     label: "Source",
-    value: "v0.3.0",
-    detail: "Source is published with payment intent JSON, wallet launcher hooks, React, vanilla, typed API helpers, and smoke checks.",
+    value: "v0.4.0 source",
+    detail: "GitHub main now includes embed config helpers, capability manifest, and generated React/vanilla snippet helpers. npm release remains gated by tag publish.",
     icon: GitBranch,
     tone: "live",
   },
   {
     label: "npm",
-    value: "published",
+    value: "v0.3.0 latest",
     detail: "npm latest is v0.3.0, published through GitHub Actions Trusted Publishing without local OTP prompts or long-lived npm tokens.",
     icon: PackageCheck,
     tone: "live",
@@ -185,6 +185,7 @@ const flowItems = [
 
 const releaseChecklist = [
   "v0.3.0 adds portable SagePaymentIntent JSON for host-owned wallet flows",
+  "v0.4.0 source adds capability manifest plus React, vanilla, and hosted-feed snippet generators",
   "Published tarball includes root, React, vanilla, type declarations, README, and license",
   "Live host demo calls the production Sage quote, verify, chat, and receipt APIs",
   "Keep wallet signing outside the widget; host apps own wallet policy and signing",
@@ -265,15 +266,15 @@ export default function SageWidgetPage() {
                     <div className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">
                       Release posture
                     </div>
-                    <div className="mt-1 text-2xl font-bold text-white">v0.3.0 published</div>
+                    <div className="mt-1 text-2xl font-bold text-white">v0.4 source ready</div>
                   </div>
                   <BadgeCheck className="h-9 w-9 text-orange-300" />
                 </div>
                 <p className="mt-4 text-sm leading-relaxed text-neutral-400">
-                  The v0.3.0 paid widget surface is published on npm via GitHub
-                  Actions Trusted Publishing. The canonical Sage host remains a
-                  testnet proof, with mainnet wording closed behind audit
-                  evidence.
+                  The v0.4.0 source is pushed with embed helpers and a widget
+                  capability manifest. npm latest remains v0.3.0 until the
+                  release tag publishes through GitHub Actions Trusted
+                  Publishing. The canonical Sage host remains a testnet proof.
                 </p>
                 <div className="mt-5 rounded-md border border-white/10 bg-white/[0.03] p-3 font-mono text-xs text-neutral-300">
                   npm install @ergoblockchain/sage-widget
