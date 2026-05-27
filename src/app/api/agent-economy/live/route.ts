@@ -110,7 +110,7 @@ export async function GET(req: Request) {
   const requestOrigin = new URL(req.url).origin
   const siteBaseUrl = trimSlash(process.env.AGENT_ECONOMY_LIVE_BASE_URL ?? requestOrigin)
 
-  const [activity, storage, accord, conformanceEvidence, registry, signer, widgetNpm, mcpFly, mcpDns, mainnetGate, reviewPack, launchKit, proofExplorer, walletAgent, walletAgentPolicy, walletAgentReferenceFlow, walletAgentPolicyPlayground, ergoConnect, agentServicePublish, agentJobAcceptance] = await Promise.all([
+  const [activity, storage, accord, conformanceEvidence, registry, signer, widgetNpm, mcpFly, mcpDns, mainnetGate, reviewPack, launchKit, proofExplorer, walletAgent, walletAgentPolicy, walletAgentReferenceFlow, walletAgentPolicyPlayground, ergoConnect, agentServicePublish, agentJobAcceptance, agentJobQuote] = await Promise.all([
     probeJson<SageActivityResponse>(`${siteBaseUrl}/api/sage/activity?limit=8`),
     probeJson<SageReceiptStorageHealthResponse>(
       `${siteBaseUrl}/api/sage/receipt/blob-probe-2026-05-16`,
@@ -150,6 +150,9 @@ export async function GET(req: Request) {
     ),
     probeJson<{ ok?: boolean; type?: string; example_validation?: { accepted_for_operator_review?: boolean } }>(
       `${siteBaseUrl}/api/jobs/accept`,
+    ),
+    probeJson<{ ok?: boolean; type?: string; example_validation?: { quote_scaffold_ready?: boolean } }>(
+      `${siteBaseUrl}/api/jobs/quote`,
     ),
   ])
 
@@ -370,6 +373,19 @@ export async function GET(req: Request) {
       "/jobs/accept",
     ),
     gate(
+      "agent-job-quote",
+      "Agent job quote scaffold",
+      agentJobQuote.ok &&
+        agentJobQuote.data?.ok === true &&
+        agentJobQuote.data.example_validation?.quote_scaffold_ready === true
+        ? "live"
+        : "degraded",
+      agentJobQuote.ok && agentJobQuote.data?.ok === true
+        ? "Quote, Agreement draft, receipt expectation, and settlement handoff scaffold is published"
+        : agentJobQuote.error ?? "agent job quote scaffold unavailable",
+      "/jobs/quote",
+    ),
+    gate(
       "mcp-fly",
       "MCP Fly endpoint",
       mcpFly.ok && mcpFly.data?.ok === true ? "live" : "degraded",
@@ -470,6 +486,8 @@ export async function GET(req: Request) {
         agentServicePublish.ok && agentServicePublish.data?.ok === true,
       agent_job_acceptance_published:
         agentJobAcceptance.ok && agentJobAcceptance.data?.ok === true,
+      agent_job_quote_published:
+        agentJobQuote.ok && agentJobQuote.data?.ok === true,
       proof_explorer_published: proofExplorer.ok,
       sage_wallet_event_count: activity.data?.total ?? 0,
       sage_settlement_count: settlementCount,
@@ -550,6 +568,7 @@ export async function GET(req: Request) {
       ergo_connect: publicProbe(ergoConnect),
       agent_service_publish: publicProbe(agentServicePublish),
       agent_job_acceptance: publicProbe(agentJobAcceptance),
+      agent_job_quote: publicProbe(agentJobQuote),
       mcp_fly: publicProbe(mcpFly),
       mcp_dns: publicProbe(mcpDns),
       mainnet_gate: publicProbe(mainnetGate),

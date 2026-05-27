@@ -13,6 +13,7 @@ import {
   PackageCheck,
   Radio,
   ReceiptText,
+  ScrollText,
   ShieldCheck,
   TerminalSquare,
   UploadCloud,
@@ -156,6 +157,12 @@ const developerSurfaces = [
     href: "/jobs/accept",
     icon: ClipboardCheck,
     value: "worker intent",
+  },
+  {
+    label: "Quote job",
+    href: "/jobs/quote",
+    icon: ScrollText,
+    value: "agreement draft",
   },
 ]
 

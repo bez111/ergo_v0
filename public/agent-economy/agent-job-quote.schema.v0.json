@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.ergoblockchain.org/agent-economy/agent-job-quote.schema.v0.json",
+  "title": "Ergo Agent Job Quote Validation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "ok",
+    "type",
+    "status",
+    "quote_scaffold_ready",
+    "accepted_job_id",
+    "quote",
+    "errors",
+    "warnings",
+    "next_steps"
+  ],
+  "properties": {
+    "ok": { "type": "boolean" },
+    "type": { "const": "ergo.agent_job_quote_validation.v0" },
+    "status": { "enum": ["quote_scaffold_ready", "blocked"] },
+    "quote_scaffold_ready": { "type": "boolean" },
+    "accepted_job_id": {
+      "type": ["string", "null"]
+    },
+    "quote": {
+      "type": ["object", "null"],
+      "additionalProperties": true,
+      "description": "A non-custodial quote and receipt handoff scaffold. It is not an assignment, signed transaction, escrow, or mainnet payout."
+    },
+    "errors": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "warnings": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "next_steps": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

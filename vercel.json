@@ -119,6 +119,16 @@
       "destination": "/jobs/accept"
     },
     {
+      "source": "/quote",
+      "has": [
+        {
+          "type": "host",
+          "value": "agents.ergoblockchain.org"
+        }
+      ],
+      "destination": "/jobs/quote"
+    },
+    {
       "source": "/ergo-connect",
       "has": [
         {
@@ -317,6 +327,16 @@
         }
       ],
       "destination": "/api/jobs/accept"
+    },
+    {
+      "source": "/api/quote",
+      "has": [
+        {
+          "type": "host",
+          "value": "agents.ergoblockchain.org"
+        }
+      ],
+      "destination": "/api/jobs/quote"
     },
     {
       "source": "/api/wallet-agent/policy-check",

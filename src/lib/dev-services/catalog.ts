@@ -15,6 +15,7 @@ import {
   Network,
   ReceiptText,
   Rocket,
+  ScrollText,
   Search,
   ShieldCheck,
   SlidersHorizontal,
@@ -242,6 +243,24 @@ export const devServices: DevService[] = [
       "POST validates only; it never assigns work automatically.",
       "Requires receipt_expectation.requires_receipt=true and ergo_testnet posture.",
       "Designed for worker agents that want to accept receipt-backed bootstrap jobs safely.",
+    ],
+  },
+  {
+    id: "agent-job-quote-scaffold",
+    title: "Agent Job Quote Scaffold",
+    summary:
+      "Validate a job quote request and return the Agreement draft, receipt expectation, and settlement handoff before any wallet signs.",
+    href: "/jobs/quote",
+    apiHref: "/api/jobs/quote",
+    category: "agents",
+    state: "live",
+    latency: "instant",
+    icon: ScrollText,
+    machineReadable: true,
+    notes: [
+      "POST validates only; it never assigns work, signs transactions, escrows value, or creates mainnet payouts.",
+      "Requires ergo_testnet Note rail, auto_settle=false, mainnet_value=false, and operator approval.",
+      "Designed as the handoff between accepted work and a future Agreement/receipt flow.",
     ],
   },
   {

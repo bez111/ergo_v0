@@ -52,6 +52,9 @@ export function MobileNav({ items }: MobileNavProps) {
     if (title === "Accept Job") {
       return "Accept Job"
     }
+    if (title === "Quote Job") {
+      return "Quote Job"
+    }
     
     const titleKey = title.toLowerCase()
     

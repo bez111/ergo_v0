@@ -11,6 +11,7 @@ import {
   PackageCheck,
   Radio,
   Rocket,
+  ScrollText,
   ShieldCheck,
   TerminalSquare,
   UploadCloud,
@@ -100,6 +101,12 @@ const quickLinks = [
     href: "/jobs/accept",
     icon: ClipboardCheck,
     detail: "Validate a worker intent before assignment: job id, capabilities, output terms, receipt expectations, evidence, and testnet posture.",
+  },
+  {
+    label: "Quote job",
+    href: "/jobs/quote",
+    icon: ScrollText,
+    detail: "Scaffold a job-bound quote, Agreement draft, receipt expectation, and settlement handoff before signing.",
   },
   {
     label: "Developer services",

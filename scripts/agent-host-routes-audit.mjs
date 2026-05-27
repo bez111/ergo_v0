@@ -20,6 +20,7 @@ const expectedRewrites = [
   ["/publish", "/agents/publish"],
   ["/jobs", "/jobs"],
   ["/accept", "/jobs/accept"],
+  ["/quote", "/jobs/quote"],
   ["/ergo-connect", "/build/ergo-connect"],
   ["/sage-widget", "/agent-economy/sage-widget"],
   ["/wallet-agent", "/agent-economy/wallet-agent"],
@@ -40,6 +41,7 @@ const expectedRewrites = [
   ["/api/publish", "/api/agents/publish"],
   ["/api/jobs", "/api/jobs"],
   ["/api/accept", "/api/jobs/accept"],
+  ["/api/quote", "/api/jobs/quote"],
   ["/api/wallet-agent/policy-check", "/api/agent-economy/wallet-agent/policy-check"],
   ["/api/wallet-agent/reference-flow", "/api/agent-economy/wallet-agent/reference-flow"],
 ]

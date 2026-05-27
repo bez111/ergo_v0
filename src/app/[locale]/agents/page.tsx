@@ -10,6 +10,7 @@ import {
   LockKeyhole,
   Network,
   ReceiptText,
+  ScrollText,
   ShieldCheck,
   WalletCards,
 } from "lucide-react"
@@ -66,6 +67,12 @@ const primarySteps = [
     body: "Validate a worker intent before an open bootstrap job can be assigned for receipt-backed work.",
   },
   {
+    label: "Quote job",
+    href: "/jobs/quote",
+    icon: ScrollText,
+    body: "Scaffold a job-bound quote, Agreement draft, receipt expectation, and settlement handoff before wallet signing.",
+  },
+  {
     label: "Inspect wallet boundary",
     href: "/build/ergo-connect",
     icon: WalletCards,
@@ -87,6 +94,7 @@ const endpointRows = [
   ["Service publish validation", "/api/agents/publish"],
   ["Agent jobs", "/api/jobs"],
   ["Job acceptance validation", "/api/jobs/accept"],
+  ["Job quote scaffold", "/api/jobs/quote"],
   ["Well-known jobs", "/.well-known/ergo-agent-jobs.json"],
   ["ErgoConnect", "/build/ergo-connect"],
   ["Well-known ErgoConnect", "/.well-known/ergo-connect.json"],

@@ -20,6 +20,11 @@ export const mainNavItems = [
         description: "Validate a worker intent before a bootstrap job can be assigned for receipt-backed work.",
       },
       {
+        title: "Quote Job",
+        href: "/jobs/quote",
+        description: "Scaffold quote, Agreement draft, receipt expectation, and settlement handoff before wallet signing.",
+      },
+      {
         title: "Live Proof Hub",
         href: "/agent-economy/live",
         description: "Operational dashboard for Sage, receipts, MCP, widget, policy, and mainnet gate.",
@@ -100,6 +105,11 @@ export const mainNavItems = [
         title: "Accept Job",
         href: "/jobs/accept",
         description: "Worker path for job id, capabilities, output terms, receipt expectations, evidence, and testnet posture.",
+      },
+      {
+        title: "Quote Job",
+        href: "/jobs/quote",
+        description: "Agreement preimage for accepted work: quote terms, receipt expectations, and settlement boundary.",
       },
       {
         title: "Sage Widget",

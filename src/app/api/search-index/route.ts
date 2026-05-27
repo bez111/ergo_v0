@@ -219,6 +219,18 @@ export async function GET() {
       schema: ['HowTo', 'SoftwareApplication', 'Dataset']
     },
     {
+      id: 'agent-job-quote',
+      type: 'page',
+      title: 'Quote Agent Job - Ergo Agreement and Receipt Handoff',
+      description: 'Scaffold an Ergo agent job quote after acceptance: quote terms, Agreement draft, receipt expectation, settlement boundary, testnet Note rail, and operator approval.',
+      url: '/jobs/quote',
+      absoluteUrl: `${baseUrl}/jobs/quote`,
+      priority: 0.85,
+      changeFrequency: 'weekly',
+      keywords: 'quote agent job, Ergo agreement draft, receipt handoff, autonomous work quote, testnet Note, settlement boundary, agent job quote validation',
+      schema: ['HowTo', 'SoftwareApplication', 'Dataset']
+    },
+    {
       id: 'agent-economy-start',
       type: 'page',
       title: 'Start Building the Ergo Agent Economy',

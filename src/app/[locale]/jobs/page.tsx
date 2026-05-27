@@ -10,6 +10,7 @@ import {
   FileJson2,
   LockKeyhole,
   ReceiptText,
+  ScrollText,
   ShieldCheck,
 } from "lucide-react"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
@@ -140,6 +141,13 @@ export default function AgentJobsPage() {
                   >
                     Accept job
                     <ClipboardCheck className="h-4 w-4" />
+                  </JobsLink>
+                  <JobsLink
+                    href="/jobs/quote"
+                    className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-black/70 px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-neutral-200 transition-colors hover:border-orange-500/45 hover:bg-orange-500/10"
+                  >
+                    Quote job
+                    <ScrollText className="h-4 w-4" />
                   </JobsLink>
                   <JobsLink
                     href="/api/jobs"
@@ -299,6 +307,13 @@ function JobCard({ job }: { job: AgentJob }) {
         >
           <ClipboardCheck className="h-3.5 w-3.5 shrink-0 text-orange-300" />
           Accept this job
+        </JobsLink>
+        <JobsLink
+          href="/jobs/quote"
+          className="flex min-w-0 items-center gap-2 rounded-md border border-white/10 bg-white/[0.03] px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-neutral-300 transition hover:border-orange-500/35 hover:text-white"
+        >
+          <ScrollText className="h-3.5 w-3.5 shrink-0 text-orange-300" />
+          Quote handoff
         </JobsLink>
         {job.links.map((href) => (
           <JobsLink

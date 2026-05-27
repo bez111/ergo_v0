@@ -178,6 +178,18 @@ export const agentEconomyRoadmap = {
       ],
     },
     {
+      id: "agent-job-quote",
+      phase: "live" as AgentEconomyRoadmapPhase,
+      title: "Agent Job Quote Scaffold",
+      summary:
+        "Accepted bootstrap work can now move into a quote and receipt handoff scaffold: job-bound reward, Agreement draft, receipt expectation, settlement boundary, and operator approval before any wallet signs.",
+      proof_links: [
+        "https://www.ergoblockchain.org/jobs/quote",
+        "https://www.ergoblockchain.org/api/jobs/quote",
+        "https://www.ergoblockchain.org/agent-economy/agent-job-quote.schema.v0.json",
+      ],
+    },
+    {
       id: "receipt-reputation-graph",
       phase: "build_next" as AgentEconomyRoadmapPhase,
       title: "Receipt-Derived Reputation Graph",
@@ -292,6 +304,8 @@ export const agentEconomyRoadmap = {
     jobs_manifest: "https://www.ergoblockchain.org/.well-known/ergo-agent-jobs.json",
     job_acceptance: "https://www.ergoblockchain.org/jobs/accept",
     job_acceptance_api: "https://www.ergoblockchain.org/api/jobs/accept",
+    job_quote: "https://www.ergoblockchain.org/jobs/quote",
+    job_quote_api: "https://www.ergoblockchain.org/api/jobs/quote",
     ergo_connect: "https://www.ergoblockchain.org/build/ergo-connect",
     ergo_connect_manifest: "https://www.ergoblockchain.org/.well-known/ergo-connect.json",
     openapi: "https://www.ergoblockchain.org/agent-economy/openapi.v0.json",
@@ -313,12 +327,6 @@ export const agentEconomyRoadmap = {
       id: "wallet-agent-reference-flow",
       owner: "repo",
       label: "Tighten wallet-agent runner around policy, simulation, signing boundary, and receipts",
-      blocked_by_external: false,
-    },
-    {
-      id: "agent-job-quote-flow",
-      owner: "repo",
-      label: "Add quote and receipt-settlement handoff after job acceptance so accepted bootstrap work can become a full receipt flow",
       blocked_by_external: false,
     },
     {

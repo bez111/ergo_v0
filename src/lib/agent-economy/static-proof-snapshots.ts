@@ -24,8 +24,8 @@ export const agentEconomyLiveSnapshot = {
       "Live testnet proof. Full receipt, signed L1 conformance evidence, signer ops, and testnet identity are published; mainnet claims remain blocked until an audit-bound mainnet script identity and external review artifact exist.",
   },
   summary: {
-    gates_live: 21,
-    gates_total: 22,
+    gates_live: 22,
+    gates_total: 23,
     storage_configured: true,
     receipt_storage_healthy: true,
     latest_full_receipt_id: LATEST_FULL_RECEIPT_ID,
@@ -47,6 +47,7 @@ export const agentEconomyLiveSnapshot = {
     developer_launch_kit_published: true,
     agent_service_publish_published: true,
     agent_job_acceptance_published: true,
+    agent_job_quote_published: true,
   },
   mainnet_gate: {
     status: "closed",
@@ -163,6 +164,7 @@ export const agentEconomyLiveSnapshot = {
     ["ergo-connect-wallet-boundary", "ErgoConnect wallet boundary", "live", "CAIP-native wallet boundary manifest is published for ErgoAuth, ErgoPay, policy, and receipt expectations", "/build/ergo-connect"],
     ["agent-service-publish", "Agent service publish validator", "live", "Provider manifest validation is published before registry operator review", "/agents/publish"],
     ["agent-job-acceptance", "Agent job acceptance validator", "live", "Worker intent validation is published before job operator assignment", "/jobs/accept"],
+    ["agent-job-quote", "Agent job quote scaffold", "live", "Quote, Agreement draft, receipt expectation, and settlement handoff scaffold is published", "/jobs/quote"],
     ["mcp-fly", "MCP Fly endpoint", "live", "Service 0.1.0 responding", "https://ergoblockchain-mcp.fly.dev/health"],
     ["mcp-dns", "MCP public DNS", "live", "mcp.ergoblockchain.org is resolving", "https://mcp.ergoblockchain.org/health"],
     ["playground", "ErgoScript playground", "live", "Runtime live; async WASM build warning cleared", "/build/playground"],
@@ -229,8 +231,8 @@ export const agentEconomyProofSnapshot = {
     full_receipt_count: 1,
     chain_only_receipt_count: 0,
     latest_full_receipt_id: LATEST_FULL_RECEIPT_ID,
-    gates_live: 20,
-    gates_total: 21,
+    gates_live: 21,
+    gates_total: 22,
     mainnet_gate_status: "closed",
   },
   surfaces: {
@@ -370,10 +372,10 @@ export const devServicesSnapshot = {
   ok: true,
   generated_at: "2026-05-24T19:34:46.295Z",
   counts: {
-    total: 21,
-    live: 19,
+    total: 22,
+    live: 20,
     guarded: 2,
-    machine_readable: 18,
+    machine_readable: 19,
   },
   faucet: {
     configured: false,
@@ -393,6 +395,7 @@ export const devServicesSnapshot = {
     ergo_connect: okProbe(79),
     agent_service_publish: okProbe(58),
     agent_job_acceptance: okProbe(58),
+    agent_job_quote: okProbe(61),
   },
 }
 

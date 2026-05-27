@@ -31,6 +31,7 @@ export async function GET(req: Request) {
     ergoConnect,
     agentServicePublish,
     agentJobAcceptance,
+    agentJobQuote,
   ] = await Promise.all([
     probe(`${origin}/api/health`),
     probe(`${origin}/api/agent-economy/live`),
@@ -44,6 +45,7 @@ export async function GET(req: Request) {
     probe(`${origin}/.well-known/ergo-connect.json`),
     probe(`${origin}/api/agents/publish`),
     probe(`${origin}/api/jobs/accept`),
+    probe(`${origin}/api/jobs/quote`),
   ])
 
   return NextResponse.json(
@@ -85,6 +87,7 @@ export async function GET(req: Request) {
         ergo_connect: ergoConnect,
         agent_service_publish: agentServicePublish,
         agent_job_acceptance: agentJobAcceptance,
+        agent_job_quote: agentJobQuote,
       },
     },
     {

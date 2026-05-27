@@ -2,7 +2,7 @@ export const agentEconomyDeveloperLaunchKit = {
   type: "ergo.agent_economy.developer_launch_kit.v0",
   version: "v0",
   status: "testnet_live_proof",
-  last_updated: "2026-05-26",
+  last_updated: "2026-05-27",
   public_claim:
     "A practical developer entrypoint for Ergo's testnet-first agent economy surfaces. Mainnet remains audit-gated.",
   entrypoints: {
@@ -26,6 +26,9 @@ export const agentEconomyDeveloperLaunchKit = {
     job_acceptance: "https://www.ergoblockchain.org/jobs/accept",
     job_acceptance_api: "https://www.ergoblockchain.org/api/jobs/accept",
     job_acceptance_schema: "https://www.ergoblockchain.org/agent-economy/agent-job-acceptance.schema.v0.json",
+    job_quote: "https://www.ergoblockchain.org/jobs/quote",
+    job_quote_api: "https://www.ergoblockchain.org/api/jobs/quote",
+    job_quote_schema: "https://www.ergoblockchain.org/agent-economy/agent-job-quote.schema.v0.json",
     agent_host: "https://agents.ergoblockchain.org",
     live_hub: "https://www.ergoblockchain.org/agent-economy/live",
     discovery: "https://www.ergoblockchain.org/.well-known/agent-economy.json",
@@ -154,6 +157,15 @@ export const agentEconomyDeveloperLaunchKit = {
       curl:
         "curl -sS -X POST https://www.ergoblockchain.org/api/jobs/accept -H 'content-type: application/json' --data @job-acceptance-intent.json",
       checks: ["type", "accepted_for_operator_review", "accepted_job_id", "errors", "warnings"],
+    },
+    {
+      id: "agent-job-quote",
+      label: "Agent job quote scaffold",
+      method: "POST",
+      url: "https://www.ergoblockchain.org/api/jobs/quote",
+      curl:
+        "curl -sS -X POST https://www.ergoblockchain.org/api/jobs/quote -H 'content-type: application/json' --data @job-quote-request.json",
+      checks: ["type", "quote_scaffold_ready", "accepted_job_id", "quote.agreement_draft", "quote.settlement_handoff"],
     },
     {
       id: "agent-roadmap",

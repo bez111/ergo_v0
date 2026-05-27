@@ -22,12 +22,14 @@ const checks = [
   { path: "/agents/publish", expect: [200] },
   { path: "/jobs", expect: [200] },
   { path: "/jobs/accept", expect: [200] },
+  { path: "/jobs/quote", expect: [200] },
   { path: "/build/ergo-connect", expect: [200] },
   { path: "/agent-economy/agent-capabilities.schema.v0.json", expect: [200] },
   { path: "/agent-economy/agent-service-registry.schema.v0.json", expect: [200] },
   { path: "/agent-economy/agent-service-publish.schema.v0.json", expect: [200] },
   { path: "/agent-economy/agent-jobs.schema.v0.json", expect: [200] },
   { path: "/agent-economy/agent-job-acceptance.schema.v0.json", expect: [200] },
+  { path: "/agent-economy/agent-job-quote.schema.v0.json", expect: [200] },
   { path: "/agent-economy/ergo-connect.schema.v0.json", expect: [200] },
   { path: "/agent-economy/discovery.schema.v0.json", expect: [200] },
   { path: "/agent-economy/roadmap.schema.v0.json", expect: [200] },
@@ -63,6 +65,7 @@ const checks = [
   { path: "/api/agents/publish", expect: [200] },
   { path: "/api/jobs", expect: [200] },
   { path: "/api/jobs/accept", expect: [200] },
+  { path: "/api/jobs/quote", expect: [200] },
   { path: "/api/agent-economy/release/current", expect: [200] },
   { path: "/api/agent-economy/mainnet-gate", expect: [200] },
   { path: "/api/agent-economy/review-pack", expect: [200] },
@@ -93,6 +96,7 @@ const hostChecks = process.env.CHECK_AGENT_HOSTS === "true"
       { url: "https://agents.ergoblockchain.org/publish", expect: [200], label: "agents publish" },
       { url: "https://agents.ergoblockchain.org/jobs", expect: [200], label: "agents jobs" },
       { url: "https://agents.ergoblockchain.org/accept", expect: [200], label: "agents accept job" },
+      { url: "https://agents.ergoblockchain.org/quote", expect: [200], label: "agents quote job" },
       { url: "https://agents.ergoblockchain.org/ergo-connect", expect: [200], label: "agents ergo-connect" },
       { url: "https://agents.ergoblockchain.org/review-pack", expect: [200], label: "agents review-pack" },
       { url: "https://agents.ergoblockchain.org/sage-widget", expect: [200], label: "agents sage-widget" },
@@ -116,6 +120,7 @@ const hostChecks = process.env.CHECK_AGENT_HOSTS === "true"
       { url: "https://agents.ergoblockchain.org/api/publish", expect: [200], label: "agents api/publish" },
       { url: "https://agents.ergoblockchain.org/api/jobs", expect: [200], label: "agents api/jobs" },
       { url: "https://agents.ergoblockchain.org/api/accept", expect: [200], label: "agents api/accept" },
+      { url: "https://agents.ergoblockchain.org/api/quote", expect: [200], label: "agents api/quote" },
     ]
   : []
 

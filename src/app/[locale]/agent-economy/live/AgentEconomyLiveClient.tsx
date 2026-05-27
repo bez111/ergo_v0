@@ -17,6 +17,7 @@ import {
   Radio,
   ReceiptText,
   Rocket,
+  ScrollText,
   ShieldCheck,
   SlidersHorizontal,
   UploadCloud,
@@ -69,6 +70,7 @@ interface LiveStatusResponse {
     developer_launch_kit_published?: boolean
     agent_service_publish_published?: boolean
     agent_job_acceptance_published?: boolean
+    agent_job_quote_published?: boolean
   }
   mainnet_gate?: {
     status: string
@@ -118,6 +120,7 @@ const GATE_ICONS: Record<string, typeof Bot> = {
   "ergo-connect-wallet-boundary": WalletCards,
   "agent-service-publish": UploadCloud,
   "agent-job-acceptance": ClipboardCheck,
+  "agent-job-quote": ScrollText,
   "mcp-fly": Network,
   "mcp-dns": Globe2,
   "mainnet-audit-gate": AlertTriangle,
@@ -720,6 +723,9 @@ function skeletonGates(): LiveGate[] {
     "wallet-agent-reference-flow",
     "wallet-agent-policy-playground",
     "ergo-connect-wallet-boundary",
+    "agent-service-publish",
+    "agent-job-acceptance",
+    "agent-job-quote",
     "mcp-fly",
     "mcp-dns",
     "playground",

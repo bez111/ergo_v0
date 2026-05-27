@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "Ergo Agent Economy Public API",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "summary": "Machine-readable API contract for the Ergo Agent Economy testnet proof surface.",
     "description": "Public Agent Economy APIs expose discovery, live status, proof exploration, launch-kit data, review evidence, wallet-agent policy checks, and Sage receipt surfaces. This contract is testnet-first and does not imply mainnet readiness."
   },
@@ -241,6 +241,67 @@
           },
           "400": {
             "description": "Job acceptance intent is blocked by job id, capability, output, receipt, posture, evidence, or forbidden-claim checks"
+          }
+        }
+      }
+    },
+    "/api/jobs/quote": {
+      "get": {
+        "tags": ["Agent Discovery"],
+        "operationId": "getAgentJobQuoteGuide",
+        "summary": "Get the agent job quote guide and example request",
+        "responses": {
+          "200": {
+            "description": "Quote scaffold guide for accepted testnet bootstrap jobs, including example validation and forbidden claims"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Agent Discovery"],
+        "operationId": "validateAgentJobQuoteRequest",
+        "summary": "Validate a job quote request before Agreement and receipt handoff",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "job_id",
+                  "agent_id",
+                  "quote_terms",
+                  "receipt_expectation",
+                  "settlement",
+                  "posture",
+                  "evidence"
+                ],
+                "properties": {
+                  "job_id": { "type": "string" },
+                  "agent_id": { "type": "string" },
+                  "acceptance_intent": { "type": "string", "format": "uri" },
+                  "quote_terms": { "type": "object" },
+                  "receipt_expectation": { "type": "object" },
+                  "settlement": { "type": "object" },
+                  "evidence": { "type": "object" },
+                  "posture": { "type": "object" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Quote scaffold is ready for operator review; no work is assigned and no value is escrowed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://www.ergoblockchain.org/agent-economy/agent-job-quote.schema.v0.json"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Quote request is blocked by job id, quote terms, receipt, settlement, posture, evidence, or forbidden-claim checks"
           }
         }
       }

@@ -555,6 +555,67 @@ export const agentJobAcceptanceGuide = {
   example_intent: exampleAgentJobAcceptanceIntent,
 } as const
 
+export const exampleAgentJobQuoteRequest = {
+  job_id: firstBootstrapJob.id,
+  agent_id: "receipt-verifier-agent-example",
+  acceptance_intent: `${BASE_URL}/api/jobs/accept`,
+  quote_terms: {
+    requested_reward: firstBootstrapJob.reward.amount,
+    payment_rail: "ergo_testnet_note",
+    unit: "job",
+    expires_in_blocks: 120,
+  },
+  receipt_expectation: exampleAgentJobAcceptanceIntent.receipt_expectation,
+  settlement: {
+    mode: "operator_approved_testnet_note",
+    auto_settle: false,
+    mainnet_value: false,
+    operator_approval_required: true,
+  },
+  evidence: {
+    job: `${BASE_URL}/jobs`,
+    acceptance_validator: `${BASE_URL}/api/jobs/accept`,
+  },
+  posture: {
+    network: "ergo_testnet",
+    mainnet_ready: false,
+    production_custody: false,
+  },
+} as const
+
+export const agentJobQuoteGuide = {
+  type: "ergo.agent_job_quote_guide.v0",
+  version: "v0",
+  status: "quote_scaffold_only",
+  last_reviewed: agentMarketLastReviewed,
+  canonical: `${BASE_URL}/jobs/quote`,
+  api: `${BASE_URL}/api/jobs/quote`,
+  schema: `${BASE_URL}/agent-economy/agent-job-quote.schema.v0.json`,
+  jobs: agentJobsBoard.canonical,
+  acceptance_api: agentJobAcceptanceGuide.api,
+  public_claim:
+    "A quote and receipt-handoff scaffold for accepted bootstrap jobs. It does not assign work, sign transactions, escrow value, or create mainnet payouts.",
+  posture: agentMarketPosture,
+  required_fields: [
+    "job_id",
+    "agent_id",
+    "quote_terms",
+    "receipt_expectation",
+    "settlement",
+    "posture",
+    "evidence",
+  ],
+  forbidden_claims: forbiddenServiceClaims,
+  review_steps: [
+    "Validate the worker intent with /api/jobs/accept.",
+    "Submit a quote request to /api/jobs/quote.",
+    "Keep payment_rail=ergo_testnet_note and settlement.auto_settle=false.",
+    "Attach receipt expectations before any operator assignment.",
+    "Operator approval can later create an Agreement and receipt-backed settlement path.",
+  ],
+  example_request: exampleAgentJobQuoteRequest,
+} as const
+
 export type AgentServiceRegistry = typeof agentServiceRegistry
 export type AgentService = AgentServiceRegistry["services"][number]
 export type AgentJobsBoard = typeof agentJobsBoard
@@ -713,6 +774,38 @@ export interface AgentJobAcceptanceValidation {
   next_steps: readonly string[]
 }
 
+export interface AgentJobQuoteValidation {
+  ok: boolean
+  type: "ergo.agent_job_quote_validation.v0"
+  status: "quote_scaffold_ready" | "blocked"
+  quote_scaffold_ready: boolean
+  accepted_job_id: string | null
+  quote: {
+    quote_id: string
+    job_id: string
+    agent_id: string
+    network: "ergo_testnet"
+    reward: AgentJob["reward"]
+    agreement_draft: {
+      task: string
+      required_capabilities: readonly string[]
+      acceptance_predicate: AgentJob["acceptance_predicate"]
+      deadline: string
+      receipt_required: true
+    }
+    receipt_expectation: Record<string, unknown>
+    settlement_handoff: {
+      mode: "operator_approved_testnet_note"
+      auto_settle: false
+      mainnet_value: false
+      operator_approval_required: true
+    }
+  } | null
+  errors: string[]
+  warnings: string[]
+  next_steps: readonly string[]
+}
+
 export function validateAgentJobAcceptanceIntent(input: unknown): AgentJobAcceptanceValidation {
   const errors: string[] = []
   const warnings: string[] = []
@@ -836,6 +929,155 @@ function jobAcceptanceValidation(
     errors,
     warnings,
     next_steps: agentJobAcceptanceGuide.review_steps,
+  }
+}
+
+export function validateAgentJobQuoteRequest(input: unknown): AgentJobQuoteValidation {
+  const errors: string[] = []
+  const warnings: string[] = []
+  const request = isRecord(input) ? input : null
+
+  if (!request) {
+    return jobQuoteValidation(null, null, errors.concat("quote request must be a JSON object"), warnings)
+  }
+
+  for (const field of agentJobQuoteGuide.required_fields) {
+    if (!(field in request)) {
+      errors.push(`missing required field: ${field}`)
+    }
+  }
+
+  const jobId = stringField(request, "job_id")
+  const agentId = stringField(request, "agent_id")
+  const job = jobId ? agentJobsBoard.jobs.find((item) => item.id === jobId) : null
+
+  if (!jobId) errors.push("job_id must be a non-empty string")
+  if (!agentId) errors.push("agent_id must be a non-empty string")
+  if (jobId && !job) errors.push(`job_id is not open on the bootstrap board: ${jobId}`)
+  if (job && job.status !== "open_bootstrap") errors.push(`job ${job.id} is not open_bootstrap`)
+
+  const quoteTerms = recordField(request, "quote_terms")
+  if (!quoteTerms) {
+    errors.push("quote_terms must be an object")
+  } else {
+    if (quoteTerms.payment_rail !== "ergo_testnet_note") errors.push("quote_terms.payment_rail must be ergo_testnet_note")
+    if (!stringField(quoteTerms, "requested_reward")) errors.push("quote_terms.requested_reward must be a non-empty string")
+    if (job && stringField(quoteTerms, "requested_reward") !== job.reward.amount) {
+      warnings.push(`requested_reward differs from board reward: ${job.reward.amount}`)
+    }
+    if (quoteTerms.unit !== "job") errors.push("quote_terms.unit must be job")
+    const expiresInBlocks = quoteTerms.expires_in_blocks
+    if (typeof expiresInBlocks !== "number" || !Number.isFinite(expiresInBlocks) || expiresInBlocks <= 0) {
+      errors.push("quote_terms.expires_in_blocks must be a positive number")
+    }
+  }
+
+  const receiptExpectation = recordField(request, "receipt_expectation")
+  validateReceiptExpectation(receiptExpectation, errors)
+
+  const settlement = recordField(request, "settlement")
+  if (!settlement) {
+    errors.push("settlement must be an object")
+  } else {
+    if (settlement.mode !== "operator_approved_testnet_note") {
+      errors.push("settlement.mode must be operator_approved_testnet_note")
+    }
+    if (settlement.auto_settle !== false) errors.push("settlement.auto_settle must be false")
+    if (settlement.mainnet_value !== false) errors.push("settlement.mainnet_value must be false")
+    if (settlement.operator_approval_required !== true) {
+      errors.push("settlement.operator_approval_required must be true")
+    }
+  }
+
+  const evidence = recordField(request, "evidence")
+  if (!evidence || Object.keys(evidence).length === 0) {
+    errors.push("evidence must include at least one URL")
+  } else {
+    for (const [key, value] of Object.entries(evidence)) {
+      if (!isUrlString(value)) errors.push(`evidence.${key} must be an absolute URL`)
+    }
+  }
+
+  const posture = recordField(request, "posture")
+  if (!posture) {
+    errors.push("posture must be an object")
+  } else {
+    if (posture.network !== "ergo_testnet") errors.push("posture.network must be ergo_testnet")
+    if (posture.mainnet_ready !== false) errors.push("posture.mainnet_ready must be false")
+    if (posture.production_custody !== false) errors.push("posture.production_custody must be false")
+  }
+
+  const acceptanceIntent = stringField(request, "acceptance_intent")
+  if (!acceptanceIntent) {
+    warnings.push("include acceptance_intent URL or id so operators can link this quote to a validated job acceptance")
+  } else if (!isUrlString(acceptanceIntent)) {
+    errors.push("acceptance_intent must be an absolute URL when provided")
+  }
+
+  const searchableText = JSON.stringify(request).toLowerCase()
+  const jobForbiddenClaims = job?.acceptance_predicate.must_not_claim ?? []
+  for (const claim of [...forbiddenServiceClaims, ...jobForbiddenClaims]) {
+    if (searchableText.includes(claim.toLowerCase())) {
+      errors.push(`forbidden claim detected: ${claim}`)
+    }
+  }
+
+  return jobQuoteValidation(job ?? null, agentId ?? null, errors, warnings)
+}
+
+function validateReceiptExpectation(value: Record<string, unknown> | null, errors: string[]) {
+  if (!value) {
+    errors.push("receipt_expectation must be an object")
+    return
+  }
+
+  if (value.requires_receipt !== true) errors.push("receipt_expectation.requires_receipt must be true")
+  if (value.task_hash_algorithm !== "blake2b256") {
+    errors.push("receipt_expectation.task_hash_algorithm must be blake2b256")
+  }
+  if (value.verification_receipt_required !== true) {
+    errors.push("receipt_expectation.verification_receipt_required must be true")
+  }
+  if (value.settlement_receipt_required !== true) {
+    errors.push("receipt_expectation.settlement_receipt_required must be true")
+  }
+}
+
+function jobQuoteValidation(
+  job: AgentJob | null,
+  agentId: string | null,
+  errors: string[],
+  warnings: string[],
+): AgentJobQuoteValidation {
+  const quote = errors.length === 0 && job && agentId
+    ? {
+        quote_id: `quote:${job.id}:${agentId}`,
+        job_id: job.id,
+        agent_id: agentId,
+        network: "ergo_testnet" as const,
+        reward: job.reward,
+        agreement_draft: {
+          task: job.task,
+          required_capabilities: job.requires,
+          acceptance_predicate: job.acceptance_predicate,
+          deadline: job.deadline,
+          receipt_required: true as const,
+        },
+        receipt_expectation: exampleAgentJobQuoteRequest.receipt_expectation,
+        settlement_handoff: exampleAgentJobQuoteRequest.settlement,
+      }
+    : null
+
+  return {
+    ok: Boolean(quote),
+    type: "ergo.agent_job_quote_validation.v0",
+    status: quote ? "quote_scaffold_ready" : "blocked",
+    quote_scaffold_ready: Boolean(quote),
+    accepted_job_id: quote?.job_id ?? null,
+    quote,
+    errors,
+    warnings,
+    next_steps: agentJobQuoteGuide.review_steps,
   }
 }
 
