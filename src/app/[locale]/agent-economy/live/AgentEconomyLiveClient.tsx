@@ -18,6 +18,7 @@ import {
   Rocket,
   ShieldCheck,
   SlidersHorizontal,
+  UploadCloud,
   WalletCards,
 } from "lucide-react"
 import { Link } from "@/i18n/navigation"
@@ -65,6 +66,7 @@ interface LiveStatusResponse {
     wallet_agent_reference_flow_published?: boolean
     wallet_agent_policy_playground_published?: boolean
     developer_launch_kit_published?: boolean
+    agent_service_publish_published?: boolean
   }
   mainnet_gate?: {
     status: string
@@ -112,6 +114,7 @@ const GATE_ICONS: Record<string, typeof Bot> = {
   "wallet-agent-reference-flow": GitBranch,
   "wallet-agent-policy-playground": SlidersHorizontal,
   "ergo-connect-wallet-boundary": WalletCards,
+  "agent-service-publish": UploadCloud,
   "mcp-fly": Network,
   "mcp-dns": Globe2,
   "mainnet-audit-gate": AlertTriangle,

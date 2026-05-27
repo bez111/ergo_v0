@@ -18,6 +18,7 @@ import {
   ShieldCheck,
   SlidersHorizontal,
   TerminalSquare,
+  UploadCloud,
   WalletCards,
   type LucideIcon,
 } from "lucide-react"
@@ -205,6 +206,23 @@ export const devServices: DevService[] = [
     notes: [
       "Canonical machine entrypoint for tools that need to discover the live proof surface.",
       "Schema: /agent-economy/discovery.schema.v0.json.",
+    ],
+  },
+  {
+    id: "agent-service-publish-validator",
+    title: "Agent Service Publish Validator",
+    summary: "Validate a provider manifest for capabilities, pricing, payment rails, predicates, receipts, evidence, and forbidden claims before operator review.",
+    href: "/agents/publish",
+    apiHref: "/api/agents/publish",
+    category: "agents",
+    state: "live",
+    latency: "instant",
+    icon: UploadCloud,
+    machineReadable: true,
+    notes: [
+      "POST validates only; it never publishes automatically.",
+      "Requires ergo_testnet posture, mainnet_ready=false, production_custody=false, and receipt expectations.",
+      "Designed for provider agents that want to enter the bootstrap registry safely.",
     ],
   },
   {

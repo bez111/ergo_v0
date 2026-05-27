@@ -158,6 +158,13 @@ export default function AgentServiceRegistryPage() {
                     Schema
                     <FileJson2 className="h-4 w-4" />
                   </RegistryLink>
+                  <RegistryLink
+                    href="/agents/publish"
+                    className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-black/70 px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-neutral-200 transition-colors hover:border-orange-500/45 hover:bg-orange-500/10"
+                  >
+                    Publish service
+                    <ArrowRight className="h-4 w-4" />
+                  </RegistryLink>
                 </div>
               </div>
 
@@ -235,10 +242,10 @@ export default function AgentServiceRegistryPage() {
                 </p>
               </div>
               <RegistryLink
-                href="/jobs"
+                href="/agents/publish"
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-orange-500 bg-orange-500 px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-black transition hover:bg-orange-400"
               >
-                Open jobs
+                Publish service
                 <ArrowRight className="h-4 w-4" />
               </RegistryLink>
             </div>

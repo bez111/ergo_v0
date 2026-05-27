@@ -24,8 +24,8 @@ export const agentEconomyLiveSnapshot = {
       "Live testnet proof. Full receipt, signed L1 conformance evidence, signer ops, and testnet identity are published; mainnet claims remain blocked until an audit-bound mainnet script identity and external review artifact exist.",
   },
   summary: {
-    gates_live: 18,
-    gates_total: 19,
+    gates_live: 20,
+    gates_total: 21,
     storage_configured: true,
     receipt_storage_healthy: true,
     latest_full_receipt_id: LATEST_FULL_RECEIPT_ID,
@@ -45,6 +45,7 @@ export const agentEconomyLiveSnapshot = {
     wallet_agent_reference_flow_published: true,
     wallet_agent_policy_playground_published: true,
     developer_launch_kit_published: true,
+    agent_service_publish_published: true,
   },
   mainnet_gate: {
     status: "closed",
@@ -159,6 +160,7 @@ export const agentEconomyLiveSnapshot = {
     ["wallet-agent-reference-flow", "Wallet-agent reference flow", "live", "Reference runner API is published for host-owned wallet flows", "/build/agent-payments/wallet-agent-runner"],
     ["wallet-agent-policy-playground", "Wallet-agent policy playground", "live", "Interactive policy verdict playground is available for developers", "/build/agent-payments/policy-playground"],
     ["ergo-connect-wallet-boundary", "ErgoConnect wallet boundary", "live", "CAIP-native wallet boundary manifest is published for ErgoAuth, ErgoPay, policy, and receipt expectations", "/build/ergo-connect"],
+    ["agent-service-publish", "Agent service publish validator", "live", "Provider manifest validation is published before registry operator review", "/agents/publish"],
     ["mcp-fly", "MCP Fly endpoint", "live", "Service 0.1.0 responding", "https://ergoblockchain-mcp.fly.dev/health"],
     ["mcp-dns", "MCP public DNS", "live", "mcp.ergoblockchain.org is resolving", "https://mcp.ergoblockchain.org/health"],
     ["playground", "ErgoScript playground", "live", "Runtime live; async WASM build warning cleared", "/build/playground"],
@@ -225,8 +227,8 @@ export const agentEconomyProofSnapshot = {
     full_receipt_count: 1,
     chain_only_receipt_count: 0,
     latest_full_receipt_id: LATEST_FULL_RECEIPT_ID,
-    gates_live: 18,
-    gates_total: 19,
+    gates_live: 20,
+    gates_total: 21,
     mainnet_gate_status: "closed",
   },
   surfaces: {
@@ -366,10 +368,10 @@ export const devServicesSnapshot = {
   ok: true,
   generated_at: "2026-05-24T19:34:46.295Z",
   counts: {
-    total: 20,
-    live: 18,
+    total: 21,
+    live: 19,
     guarded: 2,
-    machine_readable: 17,
+    machine_readable: 18,
   },
   faucet: {
     configured: false,
@@ -386,6 +388,8 @@ export const devServicesSnapshot = {
     wallet_agent_policy: okProbe(84),
     wallet_agent_reference_flow: okProbe(1325),
     wallet_agent_policy_playground: okProbe(86),
+    ergo_connect: okProbe(79),
+    agent_service_publish: okProbe(58),
   },
 }
 

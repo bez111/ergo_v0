@@ -46,6 +46,9 @@ export function MobileNav({ items }: MobileNavProps) {
     if (title === "ErgoConnect") {
       return "ErgoConnect"
     }
+    if (title === "Publish Service") {
+      return "Publish Service"
+    }
     
     const titleKey = title.toLowerCase()
     

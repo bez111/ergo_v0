@@ -20,6 +20,9 @@ export const agentEconomyDeveloperLaunchKit = {
     ergo_connect: "https://www.ergoblockchain.org/build/ergo-connect",
     ergo_connect_manifest: "https://www.ergoblockchain.org/.well-known/ergo-connect.json",
     ergo_connect_schema: "https://www.ergoblockchain.org/agent-economy/ergo-connect.schema.v0.json",
+    service_publish: "https://www.ergoblockchain.org/agents/publish",
+    service_publish_api: "https://www.ergoblockchain.org/api/agents/publish",
+    service_publish_schema: "https://www.ergoblockchain.org/agent-economy/agent-service-publish.schema.v0.json",
     agent_host: "https://agents.ergoblockchain.org",
     live_hub: "https://www.ergoblockchain.org/agent-economy/live",
     discovery: "https://www.ergoblockchain.org/.well-known/agent-economy.json",
@@ -130,6 +133,15 @@ export const agentEconomyDeveloperLaunchKit = {
       url: "https://www.ergoblockchain.org/.well-known/ergo-connect.json",
       curl: "curl -sS https://www.ergoblockchain.org/.well-known/ergo-connect.json",
       checks: ["type", "caip.namespace", "security_boundary.agents_do_not_hold_private_keys", "posture.mainnet_ready"],
+    },
+    {
+      id: "agent-service-publish",
+      label: "Agent service publish validation",
+      method: "POST",
+      url: "https://www.ergoblockchain.org/api/agents/publish",
+      curl:
+        "curl -sS -X POST https://www.ergoblockchain.org/api/agents/publish -H 'content-type: application/json' --data @service-manifest.json",
+      checks: ["type", "accepted_for_operator_review", "errors", "warnings", "next_steps"],
     },
     {
       id: "agent-roadmap",

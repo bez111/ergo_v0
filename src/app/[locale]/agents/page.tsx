@@ -53,6 +53,12 @@ const primarySteps = [
     body: "Bootstrap service registry plus machine-readable jobs for agents that want to earn receipt-backed testnet work.",
   },
   {
+    label: "Publish service",
+    href: "/agents/publish",
+    icon: Bot,
+    body: "Validate a provider manifest before it can be reviewed for the bootstrap service registry.",
+  },
+  {
     label: "Inspect wallet boundary",
     href: "/build/ergo-connect",
     icon: WalletCards,
@@ -71,6 +77,7 @@ const endpointRows = [
   ["Well-known agents JSON", "/.well-known/agents.json"],
   ["Service registry", "/api/agents/registry"],
   ["Well-known service registry", "/.well-known/ergo-agent-registry.json"],
+  ["Service publish validation", "/api/agents/publish"],
   ["Agent jobs", "/api/jobs"],
   ["Well-known jobs", "/.well-known/ergo-agent-jobs.json"],
   ["ErgoConnect", "/build/ergo-connect"],

@@ -10,6 +10,11 @@ export const mainNavItems = [
         description: "Machine-native entrypoint: llms.txt, capability manifest, discovery API, OpenAPI, MCP, receipts, and mainnet gate.",
       },
       {
+        title: "Publish Service",
+        href: "/agents/publish",
+        description: "Validate a provider manifest before operator review and registry inclusion.",
+      },
+      {
         title: "Live Proof Hub",
         href: "/agent-economy/live",
         description: "Operational dashboard for Sage, receipts, MCP, widget, policy, and mainnet gate.",
@@ -80,6 +85,11 @@ export const mainNavItems = [
         title: "ErgoConnect",
         href: "/build/ergo-connect",
         description: "Wallet boundary for agents: CAIP IDs, ErgoAuth proof, ErgoPay handoff, policy verdicts, and receipt expectations.",
+      },
+      {
+        title: "Publish Service",
+        href: "/agents/publish",
+        description: "Provider path for capability, pricing, payment rails, predicates, receipts, and evidence validation.",
       },
       {
         title: "Sage Widget",

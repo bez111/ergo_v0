@@ -14,6 +14,7 @@ import {
   ReceiptText,
   ShieldCheck,
   TerminalSquare,
+  UploadCloud,
   WalletCards,
 } from "lucide-react"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
@@ -142,6 +143,12 @@ const developerSurfaces = [
     href: "/build/ergo-connect",
     icon: WalletCards,
     value: "wallet boundary",
+  },
+  {
+    label: "Publish service",
+    href: "/agents/publish",
+    icon: UploadCloud,
+    value: "provider manifest",
   },
 ]
 

@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "Ergo Agent Economy Public API",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "summary": "Machine-readable API contract for the Ergo Agent Economy testnet proof surface.",
     "description": "Public Agent Economy APIs expose discovery, live status, proof exploration, launch-kit data, review evidence, wallet-agent policy checks, and Sage receipt surfaces. This contract is testnet-first and does not imply mainnet readiness."
   },
@@ -119,6 +119,48 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/api/agents/publish": {
+      "get": {
+        "tags": ["Agent Discovery"],
+        "operationId": "getAgentServicePublishGuide",
+        "summary": "Get the agent service publish guide and example manifest",
+        "responses": {
+          "200": {
+            "description": "Operator-review guide for testnet service manifests, including example validation and forbidden claims"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Agent Discovery"],
+        "operationId": "validateAgentServiceManifest",
+        "summary": "Validate a service manifest before operator review",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "https://www.ergoblockchain.org/agent-economy/agent-service-registry.schema.v0.json#/$defs/service"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Manifest is accepted for operator review, not automatically published",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://www.ergoblockchain.org/agent-economy/agent-service-publish.schema.v0.json"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Manifest is blocked by schema, posture, payment, predicate, evidence, or forbidden-claim checks"
           }
         }
       }

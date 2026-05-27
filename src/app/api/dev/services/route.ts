@@ -29,6 +29,7 @@ export async function GET(req: Request) {
     walletAgentReferenceFlow,
     walletAgentPolicyPlayground,
     ergoConnect,
+    agentServicePublish,
   ] = await Promise.all([
     probe(`${origin}/api/health`),
     probe(`${origin}/api/agent-economy/live`),
@@ -40,6 +41,7 @@ export async function GET(req: Request) {
     probe(`${origin}/api/agent-economy/wallet-agent/reference-flow`),
     probe(`${origin}/build/agent-payments/policy-playground`),
     probe(`${origin}/.well-known/ergo-connect.json`),
+    probe(`${origin}/api/agents/publish`),
   ])
 
   return NextResponse.json(
@@ -79,6 +81,7 @@ export async function GET(req: Request) {
         wallet_agent_reference_flow: walletAgentReferenceFlow,
         wallet_agent_policy_playground: walletAgentPolicyPlayground,
         ergo_connect: ergoConnect,
+        agent_service_publish: agentServicePublish,
       },
     },
     {

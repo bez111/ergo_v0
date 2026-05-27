@@ -89,6 +89,16 @@
       "destination": "/agents/registry"
     },
     {
+      "source": "/publish",
+      "has": [
+        {
+          "type": "host",
+          "value": "agents.ergoblockchain.org"
+        }
+      ],
+      "destination": "/agents/publish"
+    },
+    {
       "source": "/jobs",
       "has": [
         {
@@ -267,6 +277,16 @@
         }
       ],
       "destination": "/api/agents/registry"
+    },
+    {
+      "source": "/api/publish",
+      "has": [
+        {
+          "type": "host",
+          "value": "agents.ergoblockchain.org"
+        }
+      ],
+      "destination": "/api/agents/publish"
     },
     {
       "source": "/api/jobs",

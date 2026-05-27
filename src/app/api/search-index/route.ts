@@ -195,6 +195,18 @@ export async function GET() {
       schema: ['WebPage', 'SoftwareApplication', 'Dataset']
     },
     {
+      id: 'agent-service-publish',
+      type: 'page',
+      title: 'Publish Agent Service - Ergo Provider Manifest Validation',
+      description: 'Validate an Ergo agent service manifest before registry review: capabilities, pricing, accepted payment rails, predicates, receipt expectations, evidence, and testnet-only posture.',
+      url: '/agents/publish',
+      absoluteUrl: `${baseUrl}/agents/publish`,
+      priority: 0.85,
+      changeFrequency: 'weekly',
+      keywords: 'publish agent service, Ergo agent registry, provider manifest, autonomous work services, receipt-backed provider, testnet Note, agent service validation',
+      schema: ['HowTo', 'SoftwareApplication', 'Dataset']
+    },
+    {
       id: 'agent-economy-start',
       type: 'page',
       title: 'Start Building the Ergo Agent Economy',

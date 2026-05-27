@@ -110,7 +110,7 @@ export async function GET(req: Request) {
   const requestOrigin = new URL(req.url).origin
   const siteBaseUrl = trimSlash(process.env.AGENT_ECONOMY_LIVE_BASE_URL ?? requestOrigin)
 
-  const [activity, storage, accord, conformanceEvidence, registry, signer, widgetNpm, mcpFly, mcpDns, mainnetGate, reviewPack, launchKit, proofExplorer, walletAgent, walletAgentPolicy, walletAgentReferenceFlow, walletAgentPolicyPlayground, ergoConnect] = await Promise.all([
+  const [activity, storage, accord, conformanceEvidence, registry, signer, widgetNpm, mcpFly, mcpDns, mainnetGate, reviewPack, launchKit, proofExplorer, walletAgent, walletAgentPolicy, walletAgentReferenceFlow, walletAgentPolicyPlayground, ergoConnect, agentServicePublish] = await Promise.all([
     probeJson<SageActivityResponse>(`${siteBaseUrl}/api/sage/activity?limit=8`),
     probeJson<SageReceiptStorageHealthResponse>(
       `${siteBaseUrl}/api/sage/receipt/blob-probe-2026-05-16`,
@@ -144,6 +144,9 @@ export async function GET(req: Request) {
     probePage(`${siteBaseUrl}/build/agent-payments/policy-playground`),
     probeJson<{ type?: string; status?: string; security_boundary?: { agents_do_not_hold_private_keys?: boolean } }>(
       `${siteBaseUrl}/.well-known/ergo-connect.json`,
+    ),
+    probeJson<{ ok?: boolean; type?: string; example_validation?: { accepted_for_operator_review?: boolean } }>(
+      `${siteBaseUrl}/api/agents/publish`,
     ),
   ])
 
@@ -338,6 +341,19 @@ export async function GET(req: Request) {
       "/build/ergo-connect",
     ),
     gate(
+      "agent-service-publish",
+      "Agent service publish validator",
+      agentServicePublish.ok &&
+        agentServicePublish.data?.ok === true &&
+        agentServicePublish.data.example_validation?.accepted_for_operator_review === true
+        ? "live"
+        : "degraded",
+      agentServicePublish.ok && agentServicePublish.data?.ok === true
+        ? "Provider manifest validation is published before registry operator review"
+        : agentServicePublish.error ?? "agent service publish validator unavailable",
+      "/agents/publish",
+    ),
+    gate(
       "mcp-fly",
       "MCP Fly endpoint",
       mcpFly.ok && mcpFly.data?.ok === true ? "live" : "degraded",
@@ -434,6 +450,8 @@ export async function GET(req: Request) {
         walletAgentReferenceFlow.ok && walletAgentReferenceFlow.data?.ok === true,
       wallet_agent_policy_playground_published: walletAgentPolicyPlayground.ok,
       developer_launch_kit_published: launchKit.ok && launchKit.data?.ok === true,
+      agent_service_publish_published:
+        agentServicePublish.ok && agentServicePublish.data?.ok === true,
       proof_explorer_published: proofExplorer.ok,
       sage_wallet_event_count: activity.data?.total ?? 0,
       sage_settlement_count: settlementCount,
@@ -511,6 +529,8 @@ export async function GET(req: Request) {
       wallet_agent_policy_check: publicProbe(walletAgentPolicy),
       wallet_agent_reference_flow: publicProbe(walletAgentReferenceFlow),
       wallet_agent_policy_playground: publicProbe(walletAgentPolicyPlayground),
+      ergo_connect: publicProbe(ergoConnect),
+      agent_service_publish: publicProbe(agentServicePublish),
       mcp_fly: publicProbe(mcpFly),
       mcp_dns: publicProbe(mcpDns),
       mainnet_gate: publicProbe(mainnetGate),

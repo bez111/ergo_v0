@@ -36,6 +36,9 @@ export function MainNav() {
     if (title === "ErgoConnect") {
       return "ErgoConnect"
     }
+    if (title === "Publish Service") {
+      return "Publish Service"
+    }
     
     const titleKey = title.toLowerCase()
     

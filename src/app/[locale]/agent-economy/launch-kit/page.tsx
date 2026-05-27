@@ -13,6 +13,7 @@ import {
   Rocket,
   ShieldCheck,
   TerminalSquare,
+  UploadCloud,
 } from "lucide-react"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
@@ -87,6 +88,12 @@ const quickLinks = [
     href: "/build/agent-payments/policy-playground",
     icon: ShieldCheck,
     detail: "Interactive allow/deny lab before any wallet is asked to sign.",
+  },
+  {
+    label: "Publish service",
+    href: "/agents/publish",
+    icon: UploadCloud,
+    detail: "Validate provider manifests before registry review: capability, pricing, payment rails, predicates, receipts, and evidence.",
   },
   {
     label: "Developer services",

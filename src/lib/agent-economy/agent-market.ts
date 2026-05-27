@@ -274,6 +274,85 @@ export const agentServiceRegistry = {
   ],
 } as const
 
+const publishableEntryTypes = agentServiceRegistry.registry_policy.publishable_entry_types
+const forbiddenServiceClaims = [
+  ...agentServiceRegistry.registry_policy.forbidden_claims,
+  "mainnet ready",
+  "audited production",
+  "production custody",
+  "guaranteed payout",
+] as const
+
+export const exampleAgentServiceManifest = {
+  id: "fleet-sdk-code-agent-example",
+  name: "Fleet SDK Code Agent Example",
+  category: "provider_agent",
+  status: "operator_review",
+  summary:
+    "Testnet provider manifest for Fleet SDK code examples that return task-hash-bound output and receipt-ready verification notes.",
+  capabilities: ["code_generation", "fleet_sdk_examples", "task_hash_binding", "receipt_output"],
+  endpoints: {
+    human: "https://provider.example.com",
+    quote_api: "https://provider.example.com/accord/quote",
+    receipt_api: "https://provider.example.com/accord/receipt/{id}",
+    mcp: "https://provider.example.com/mcp",
+  },
+  pricing: {
+    mode: "quote_required",
+    min_price: "operator_defined",
+    unit: "task",
+    currency: "testnet Note",
+  },
+  accepted_payment: {
+    rails: ["ergo_testnet_note"],
+    requires_receipt: true,
+    accepted_reserves: ["operator_defined_testnet_reserve"],
+    mainnet_ready: false,
+  },
+  predicate_requirements: {
+    task_hash: "blake2b256",
+    deadline_required: true,
+    max_expiry_blocks: 120,
+    receipt_schema: `${BASE_URL}/agent-economy/first-receipt-flow.schema.v0.json`,
+  },
+  receipt_schema: `${BASE_URL}/agent-economy/first-receipt-flow.schema.v0.json`,
+  evidence: {
+    source: "https://github.com/buildonergo/agent-economy-kit",
+    example_receipt: `${BASE_URL}/api/sage/receipt/${latestFullReceiptId}`,
+  },
+  posture: {
+    network: "ergo_testnet",
+    mainnet_ready: false,
+    audit_status: "template_not_audited",
+    production_custody: false,
+  },
+} as const
+
+export const agentServicePublishGuide = {
+  type: "ergo.agent_service_publish_guide.v0",
+  version: "v0",
+  status: "operator_review_only",
+  last_reviewed: agentMarketLastReviewed,
+  canonical: `${BASE_URL}/agents/publish`,
+  api: `${BASE_URL}/api/agents/publish`,
+  schema: `${BASE_URL}/agent-economy/agent-service-publish.schema.v0.json`,
+  registry: agentServiceRegistry.canonical,
+  public_claim:
+    "A validation and operator-review flow for testnet agent service manifests. It does not publish automatically, accept custody, or open mainnet claims.",
+  posture: agentMarketPosture,
+  required_fields: agentServiceRegistry.registry_policy.required_provider_fields,
+  publishable_entry_types: publishableEntryTypes,
+  forbidden_claims: forbiddenServiceClaims,
+  review_steps: [
+    "Submit a service manifest to /api/agents/publish.",
+    "Fix schema, posture, payment, predicate, receipt, and evidence errors.",
+    "Keep network=ergo_testnet, mainnet_ready=false, and production_custody=false.",
+    "Provide at least one evidence URL and one receipt or receipt schema pointer.",
+    "Operator review decides whether the manifest can enter the bootstrap registry.",
+  ],
+  example_manifest: exampleAgentServiceManifest,
+} as const
+
 export const agentJobsBoard = {
   type: "ergo.agent_jobs.v0",
   version: "v0",
@@ -419,3 +498,169 @@ export type AgentServiceRegistry = typeof agentServiceRegistry
 export type AgentService = AgentServiceRegistry["services"][number]
 export type AgentJobsBoard = typeof agentJobsBoard
 export type AgentJob = AgentJobsBoard["jobs"][number]
+
+export interface AgentServicePublishValidation {
+  ok: boolean
+  type: "ergo.agent_service_publish_validation.v0"
+  status: "accepted_for_operator_review" | "blocked"
+  accepted_for_operator_review: boolean
+  errors: string[]
+  warnings: string[]
+  next_steps: readonly string[]
+}
+
+export function validateAgentServiceManifest(input: unknown): AgentServicePublishValidation {
+  const errors: string[] = []
+  const warnings: string[] = []
+  const manifest = isRecord(input) ? input : null
+
+  if (!manifest) {
+    return publishValidation(["manifest must be a JSON object"], warnings)
+  }
+
+  for (const field of agentServiceRegistry.registry_policy.required_provider_fields) {
+    if (!(field in manifest)) {
+      errors.push(`missing required field: ${field}`)
+    }
+  }
+
+  const id = stringField(manifest, "id")
+  const name = stringField(manifest, "name")
+  const category = stringField(manifest, "category")
+  const summary = stringField(manifest, "summary")
+
+  if (!id) errors.push("id must be a non-empty string")
+  if (!name) errors.push("name must be a non-empty string")
+  if (!summary) errors.push("summary must be a non-empty string")
+  if (!category) {
+    errors.push("category must be a non-empty string")
+  } else if (!publishableEntryTypes.includes(category as (typeof publishableEntryTypes)[number])) {
+    errors.push(`category must be one of: ${publishableEntryTypes.join(", ")}`)
+  }
+
+  const capabilities = manifest.capabilities
+  if (!Array.isArray(capabilities) || capabilities.length === 0 || !capabilities.every((item) => typeof item === "string" && item.length > 0)) {
+    errors.push("capabilities must be a non-empty string array")
+  }
+
+  const endpoints = recordField(manifest, "endpoints")
+  if (!endpoints || Object.keys(endpoints).length === 0) {
+    errors.push("endpoints must include at least one URL")
+  } else {
+    for (const [key, value] of Object.entries(endpoints)) {
+      if (!isUrlString(value)) errors.push(`endpoints.${key} must be an absolute URL`)
+    }
+  }
+
+  const pricing = recordField(manifest, "pricing")
+  if (!pricing) {
+    errors.push("pricing must be an object")
+  } else {
+    for (const field of ["mode", "min_price", "unit", "currency"]) {
+      if (!stringField(pricing, field)) errors.push(`pricing.${field} must be a non-empty string`)
+    }
+  }
+
+  const acceptedPayment = recordField(manifest, "accepted_payment")
+  if (!acceptedPayment) {
+    errors.push("accepted_payment must be an object")
+  } else {
+    const rails = acceptedPayment.rails
+    if (!Array.isArray(rails) || rails.length === 0 || !rails.every((item) => typeof item === "string" && item.length > 0)) {
+      errors.push("accepted_payment.rails must be a non-empty string array")
+    }
+    if (acceptedPayment.mainnet_ready !== false) {
+      errors.push("accepted_payment.mainnet_ready must be false")
+    }
+    if (acceptedPayment.requires_receipt !== true && Array.isArray(rails) && !rails.includes("none")) {
+      errors.push("accepted_payment.requires_receipt must be true for paid services")
+    }
+    if (!Array.isArray(acceptedPayment.accepted_reserves)) {
+      errors.push("accepted_payment.accepted_reserves must be an array")
+    }
+  }
+
+  const predicates = recordField(manifest, "predicate_requirements")
+  if (!predicates) {
+    errors.push("predicate_requirements must be an object")
+  } else {
+    if (!stringField(predicates, "task_hash")) errors.push("predicate_requirements.task_hash must be a non-empty string")
+    if (typeof predicates.deadline_required !== "boolean") errors.push("predicate_requirements.deadline_required must be boolean")
+    if (!Number.isInteger(predicates.max_expiry_blocks) || Number(predicates.max_expiry_blocks) < 0) {
+      errors.push("predicate_requirements.max_expiry_blocks must be a non-negative integer")
+    }
+    if (!stringField(predicates, "receipt_schema")) errors.push("predicate_requirements.receipt_schema must be present")
+  }
+
+  const evidence = recordField(manifest, "evidence")
+  if (!evidence || Object.keys(evidence).length === 0) {
+    errors.push("evidence must include at least one URL")
+  } else {
+    for (const [key, value] of Object.entries(evidence)) {
+      if (!isUrlString(value)) errors.push(`evidence.${key} must be an absolute URL`)
+    }
+  }
+
+  const posture = recordField(manifest, "posture")
+  if (!posture) {
+    errors.push("posture must be an object")
+  } else {
+    if (posture.network !== "ergo_testnet") errors.push("posture.network must be ergo_testnet")
+    if (posture.mainnet_ready !== false) errors.push("posture.mainnet_ready must be false")
+    if (posture.production_custody !== false) errors.push("posture.production_custody must be false")
+    if (!stringField(posture, "audit_status")) errors.push("posture.audit_status must be a non-empty string")
+  }
+
+  const searchableText = JSON.stringify(manifest).toLowerCase()
+  for (const claim of forbiddenServiceClaims) {
+    if (searchableText.includes(claim.toLowerCase())) {
+      errors.push(`forbidden claim detected: ${claim}`)
+    }
+  }
+
+  if (!stringField(manifest, "receipt_schema") && (!predicates || !stringField(predicates, "receipt_schema"))) {
+    warnings.push("include a receipt_schema pointer that consumers can validate independently")
+  }
+  if (!endpoints?.mcp && !endpoints?.openapi && !endpoints?.quote_api) {
+    warnings.push("add mcp, openapi, or quote_api so agents can call the service without scraping")
+  }
+
+  return publishValidation(errors, warnings)
+}
+
+function publishValidation(errors: string[], warnings: string[]): AgentServicePublishValidation {
+  const accepted = errors.length === 0
+  return {
+    ok: accepted,
+    type: "ergo.agent_service_publish_validation.v0",
+    status: accepted ? "accepted_for_operator_review" : "blocked",
+    accepted_for_operator_review: accepted,
+    errors,
+    warnings,
+    next_steps: agentServicePublishGuide.review_steps,
+  }
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value)
+}
+
+function recordField(record: Record<string, unknown>, field: string): Record<string, unknown> | null {
+  const value = record[field]
+  return isRecord(value) ? value : null
+}
+
+function stringField(record: Record<string, unknown>, field: string): string | null {
+  const value = record[field]
+  return typeof value === "string" && value.trim().length > 0 ? value : null
+}
+
+function isUrlString(value: unknown): value is string {
+  if (typeof value !== "string") return false
+  try {
+    const url = new URL(value)
+    return url.protocol === "https:" || url.protocol === "http:"
+  } catch {
+    return false
+  }
+}
