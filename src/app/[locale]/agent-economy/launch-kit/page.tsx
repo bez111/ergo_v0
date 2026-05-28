@@ -122,6 +122,12 @@ const quickLinks = [
     detail: "Hashing, address checks, box/tx lookup, receipt verification, and live probes.",
   },
   {
+    label: "Builder kit",
+    href: "https://github.com/buildonergo/agent-economy-kit",
+    icon: PackageCheck,
+    detail: "Cloneable receipt verifier, provider templates, bootstrap jobs, ErgoConnect helpers, interop map, and CLI.",
+  },
+  {
     label: "Review pack",
     href: "/agent-economy/review-pack",
     icon: ClipboardCheck,
@@ -276,6 +282,59 @@ export default function AgentEconomyLaunchKitPage() {
                   </div>
                 </LaunchLink>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="border-y border-white/5 bg-black/50 px-4 py-14 sm:px-6 lg:px-8">
+          <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+            <div>
+              <SectionHeader
+                eyebrow="Builder kernel"
+                title="Clone the proof surface into a local developer kit."
+                body="The BuildOnErgo kit gives builders a small command-line path before they touch the full site: verify one receipt, generate provider manifests, create bootstrap jobs, model wallet handoff, and keep interop boundaries explicit."
+              />
+              <div className="mt-8 rounded-lg border border-orange-500/25 bg-orange-500/[0.055] p-5">
+                <div className="flex items-center gap-3">
+                  <PackageCheck className="h-5 w-5 text-orange-300" />
+                  <div>
+                    <div className="font-mono text-[10px] uppercase tracking-widest text-orange-200/80">
+                      {kit.builder_kit.package}
+                    </div>
+                    <div className="mt-1 text-xl font-bold text-white">{kit.builder_kit.status.replace(/_/g, " ")}</div>
+                  </div>
+                </div>
+                <pre className="mt-5 max-w-full overflow-auto rounded-md border border-white/10 bg-black/70 p-4 text-sm text-orange-100">
+                  {kit.builder_kit.install}
+                </pre>
+              </div>
+            </div>
+
+            <div className="grid gap-4">
+              <div className="rounded-lg border border-white/10 bg-black/75">
+                <div className="border-b border-white/10 p-4">
+                  <div className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">CLI commands</div>
+                  <h3 className="mt-1 text-lg font-semibold text-white">Run the kernel locally</h3>
+                </div>
+                <div className="grid gap-2 p-4">
+                  {kit.builder_kit.commands.map((command) => (
+                    <code
+                      key={command}
+                      className="block overflow-auto rounded-md border border-white/10 bg-white/[0.035] px-3 py-2 font-mono text-xs text-orange-100"
+                    >
+                      {command}
+                    </code>
+                  ))}
+                </div>
+              </div>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {kit.builder_kit.surfaces.map((surface) => (
+                  <div key={surface} className="flex gap-3 rounded-lg border border-white/10 bg-black/70 p-4">
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-orange-300" />
+                    <p className="text-sm leading-relaxed text-neutral-300">{surface}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>

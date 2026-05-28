@@ -16,6 +16,7 @@
     "five_minute_path",
     "api_recipes",
     "npm",
+    "builder_kit",
     "guardrails",
     "open_gates"
   ],
@@ -75,6 +76,7 @@
         "job_quote_api",
         "job_quote_schema",
         "agent_host",
+        "buildonergo_kit",
         "live_hub",
         "discovery",
         "discovery_api",
@@ -123,6 +125,7 @@
         "job_quote_api": { "type": "string", "format": "uri" },
         "job_quote_schema": { "type": "string", "format": "uri" },
         "agent_host": { "type": "string", "format": "uri" },
+        "buildonergo_kit": { "type": "string", "format": "uri" },
         "live_hub": { "type": "string", "format": "uri" },
         "discovery": { "type": "string", "format": "uri" },
         "discovery_api": { "type": "string", "format": "uri" },
@@ -174,6 +177,27 @@
             "type": "string",
             "minLength": 8
           }
+        }
+      }
+    },
+    "builder_kit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repo", "package", "status", "install", "commands", "surfaces"],
+      "properties": {
+        "repo": { "type": "string", "format": "uri" },
+        "package": { "const": "@buildonergo/agent-economy-kit" },
+        "status": { "type": "string", "minLength": 6 },
+        "install": { "type": "string", "minLength": 12 },
+        "commands": {
+          "type": "array",
+          "minItems": 3,
+          "items": { "type": "string", "minLength": 8 }
+        },
+        "surfaces": {
+          "type": "array",
+          "minItems": 3,
+          "items": { "type": "string", "minLength": 8 }
         }
       }
     },
