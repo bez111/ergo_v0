@@ -4,12 +4,12 @@ import { agentMarketPosture } from "./agent-market"
 const BASE_URL = "https://www.ergoblockchain.org"
 const MCP_URL = "https://mcp.ergoblockchain.org"
 
-export const economicMcpLastReviewed = "2026-05-27"
+export const economicMcpLastReviewed = "2026-05-28"
 
 export const economicMcpManifest = {
   type: "ergo.economic_mcp_tools.v0",
   version: "v0",
-  status: "tool_manifest_published_runtime_pending",
+  status: "safe_runtime_tools_prepared",
   last_reviewed: economicMcpLastReviewed,
   canonical: `${BASE_URL}/api/agents/mcp-tools`,
   human: `${BASE_URL}/agents/mcp`,
@@ -18,6 +18,7 @@ export const economicMcpManifest = {
     health: `${MCP_URL}/health`,
     streamable_http: `${MCP_URL}/mcp`,
     repository: "https://github.com/bez111/ergoblockchain-mcp",
+    prepared_version: "0.3.0",
   },
   posture: agentMarketPosture,
   public_claim:
@@ -44,6 +45,7 @@ export const economicMcpManifest = {
   counts: {
     tools_total: 13,
     http_backed_today: 9,
+    mcp_runtime_tools_prepared: 10,
     mcp_runtime_tools_deployed: 0,
     signing_tools_allowed: 0,
     mainnet_ready_tools: 0,
@@ -51,7 +53,7 @@ export const economicMcpManifest = {
   tools: [
     {
       name: "ergo_discover_services",
-      status: "http_backed_runtime_pending",
+      status: "http_backed_runtime_prepared",
       purpose: "Find provider, verifier, broker, reserve, reputation, and tool endpoint entries without scraping pages.",
       input_schema: "none",
       output_schema: `${BASE_URL}/agent-economy/agent-service-registry.schema.v0.json`,
@@ -60,7 +62,7 @@ export const economicMcpManifest = {
     },
     {
       name: "ergo_list_jobs",
-      status: "http_backed_runtime_pending",
+      status: "http_backed_runtime_prepared",
       purpose: "List receipt-backed bootstrap jobs that agents can inspect and request assignment for.",
       input_schema: "none",
       output_schema: `${BASE_URL}/agent-economy/agent-jobs.schema.v0.json`,
@@ -69,7 +71,7 @@ export const economicMcpManifest = {
     },
     {
       name: "ergo_accept_job",
-      status: "http_backed_runtime_pending",
+      status: "http_backed_runtime_prepared",
       purpose: "Validate a worker-agent acceptance intent before any operator assigns work.",
       input_schema: `${BASE_URL}/agent-economy/agent-job-acceptance.schema.v0.json`,
       output_schema: `${BASE_URL}/agent-economy/agent-job-acceptance.schema.v0.json`,
@@ -78,7 +80,7 @@ export const economicMcpManifest = {
     },
     {
       name: "ergo_get_quote",
-      status: "http_backed_runtime_pending",
+      status: "http_backed_runtime_prepared",
       purpose: "Create a job-bound quote scaffold with Agreement draft and receipt expectation.",
       input_schema: `${BASE_URL}/agent-economy/agent-job-quote.schema.v0.json`,
       output_schema: `${BASE_URL}/agent-economy/agent-job-quote.schema.v0.json`,
@@ -87,7 +89,7 @@ export const economicMcpManifest = {
     },
     {
       name: "ergo_create_agreement",
-      status: "scaffold_only",
+      status: "local_runtime_scaffold_prepared",
       purpose: "Turn an accepted quote into an Agreement draft that binds task, price, deadline, receipt expectation, and settlement boundary.",
       input_schema: `${BASE_URL}/agent-economy/agent-job-quote.schema.v0.json`,
       output_schema: `${BASE_URL}/api/sage/receipt/${latestFullReceiptId}`,
@@ -96,7 +98,7 @@ export const economicMcpManifest = {
     },
     {
       name: "ergo_check_policy",
-      status: "http_backed_runtime_pending",
+      status: "http_backed_runtime_prepared",
       purpose: "Check whether a proposed agent wallet action is allowed, denied, or requires human approval.",
       input_schema: `${BASE_URL}/agent-economy/wallet-agent-policy-check.schema.v0.json`,
       output_schema: `${BASE_URL}/agent-economy/wallet-agent-policy-check.schema.v0.json`,
@@ -105,7 +107,7 @@ export const economicMcpManifest = {
     },
     {
       name: "ergo_create_payment_intent",
-      status: "reference_flow_only",
+      status: "local_runtime_scaffold_prepared",
       purpose: "Prepare a host-wallet payment intent for an agent action after quote and policy checks.",
       input_schema: `${BASE_URL}/agent-economy/wallet-agent-policy-check.schema.v0.json`,
       output_schema: `${BASE_URL}/agent-economy/wallet-agent-reference-flow.v0.json`,
@@ -141,7 +143,7 @@ export const economicMcpManifest = {
     },
     {
       name: "ergo_verify_receipt",
-      status: "http_backed_runtime_pending",
+      status: "http_backed_runtime_prepared",
       purpose: "Inspect a receipt bundle and verify agreement, verification, settlement, hashes, and chain proof consistency.",
       input_schema: "receipt_id",
       output_schema: `${BASE_URL}/api/sage/receipt/${latestFullReceiptId}`,
@@ -150,7 +152,7 @@ export const economicMcpManifest = {
     },
     {
       name: "ergo_redeem_note",
-      status: "guarded_not_mcp_callable",
+      status: "guarded_runtime_boundary_prepared",
       purpose: "Redeem a Note after policy, signer ops, and settlement constraints are satisfied.",
       input_schema: "operator-controlled signer request",
       output_schema: "settlement receipt",
@@ -159,7 +161,7 @@ export const economicMcpManifest = {
     },
     {
       name: "ergo_query_reputation",
-      status: "http_backed_runtime_pending",
+      status: "http_backed_runtime_prepared",
       purpose: "Query receipt-derived reputation subjects, evidence links, verifier coverage, disputes, and trust boundaries.",
       input_schema: "none",
       output_schema: `${BASE_URL}/agent-economy/agent-reputation.schema.v0.json`,
@@ -170,14 +172,14 @@ export const economicMcpManifest = {
   forbidden_assumptions: [
     "Do not claim MCP tools can sign transactions.",
     "Do not claim MCP tools hold wallet keys or custody value.",
-    "Do not claim runtime MCP economic tools are deployed until mcp.ergoblockchain.org advertises them.",
+    "Do not claim prepared MCP 0.3 tools are deployed until mcp.ergoblockchain.org advertises them.",
     "Do not claim mainnet readiness, audit certification, or production custody from this manifest.",
     "Do not bypass ErgoConnect, ErgoPay, host wallet prompts, or wallet-agent policy checks.",
   ],
   next_steps: [
-    "Mirror this manifest into the ergoblockchain-mcp repository.",
-    "Expose read-only MCP resources first: registry, jobs, reputation, proof status, and mainnet gate.",
-    "Add intent-preparation tools after schema tests exist.",
+    "Deploy ergoblockchain-mcp 0.3.0 after the final batch is ready.",
+    "Smoke /mcp tools/list and update mcp_runtime_tools_deployed only after production advertises the prepared tools.",
+    "Keep intent-preparation tools non-signing and wallet-policy-bound.",
     "Keep redemption outside public MCP until signer ops, limits, and external review are stronger.",
   ],
 } as const
