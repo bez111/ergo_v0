@@ -63,7 +63,8 @@ const intent = createSagePaymentIntent({
   tenant: { id: "my-agent-app", label: "My Agent App" },
 })
 
-// Give intent to your wallet layer. It creates an Ergo testnet Note.
+// Run your local wallet policy before signing.
+// v0.5 source includes helpers to create the policy-check request.
 const noteBoxId = await createNoteWithYourWallet(intent)
 
 const verified = await verifySagePayment({
@@ -86,6 +87,23 @@ const intentShape = `{
   "receiptEndpointTemplate": "https://www.ergoblockchain.org/api/sage/receipt/{receiptId}"
 }`
 
+const policyShape = `{
+  "profile": {
+    "type": "ergo.agent_economy.wallet_agent_policy_profile.v0",
+    "network": "testnet",
+    "per_action_spend_cap": "0.050000000",
+    "allowed_actions": ["sign_specific_transaction"]
+  },
+  "proposed_action": {
+    "network": "testnet",
+    "action": "sign_specific_transaction",
+    "amount": "0.005000000",
+    "spent_today": "0.000000000",
+    "fee": "0.001000000",
+    "receipt_expected": true
+  }
+}`
+
 const steps: Array<{
   title: string
   body: string
@@ -103,7 +121,7 @@ const steps: Array<{
   },
   {
     title: "Hand intent to wallet",
-    body: "The package emits a portable payment intent. Your app owns wallet policy and signing.",
+    body: "The package emits a portable intent. Your app runs wallet policy and owns signing.",
     icon: WalletCards,
   },
   {
@@ -279,6 +297,7 @@ export default function AgentPaymentQuickstartPage() {
           <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2">
             <CodePanel title="Typed API flow" body={apiCode} />
             <CodePanel title="Payment intent shape" body={intentShape} />
+            <CodePanel title="Policy-check shape" body={policyShape} />
           </div>
         </section>
 

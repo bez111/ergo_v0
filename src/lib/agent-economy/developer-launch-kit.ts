@@ -2,7 +2,7 @@ export const agentEconomyDeveloperLaunchKit = {
   type: "ergo.agent_economy.developer_launch_kit.v0",
   version: "v0",
   status: "testnet_live_proof",
-  last_updated: "2026-05-27",
+  last_updated: "2026-05-28",
   public_claim:
     "A practical developer entrypoint for Ergo's testnet-first agent economy surfaces. Mainnet remains audit-gated.",
   entrypoints: {
@@ -306,6 +306,7 @@ export const agentEconomyDeveloperLaunchKit = {
       "mountSagePaymentWidget vanilla function",
       "typed quote, verify, chat stream, receipt, and activity clients",
       "payment intent JSON for host-owned wallet flows",
+      "source-prepared v0.5 wallet-policy handoff helpers before the next npm tag",
       "receipt callbacks and tenant metadata",
     ],
   },

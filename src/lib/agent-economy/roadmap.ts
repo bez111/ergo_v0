@@ -82,11 +82,11 @@ export const agentEconomyRoadmap = {
       ],
     },
     {
-      id: "paid-widget-v04",
+      id: "paid-widget-v05-source",
       phase: "build_next" as AgentEconomyRoadmapPhase,
       title: "Embeddable Paid Sage Widget",
       summary:
-        "v0.4 source is prepared with embed config helpers, capability manifest, and generated React/vanilla snippets. npm latest remains v0.3 until a release tag publishes through Trusted Publishing.",
+        "v0.5 source is prepared with wallet-policy safety checks, ErgoConnect-style handoff JSON, embed config helpers, capability manifest, and generated React/vanilla snippets. npm latest remains v0.3 until a release tag publishes through Trusted Publishing.",
       proof_links: [
         "https://github.com/bez111/sage-widget",
         "https://www.npmjs.com/package/@ergoblockchain/sage-widget",

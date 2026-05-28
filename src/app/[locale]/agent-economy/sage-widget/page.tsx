@@ -82,6 +82,32 @@ if (isFullSageReceiptBundle(receipt)) {
   console.log(receipt.accord?.agreement_json)
 }`
 
+const policyExample = `import {
+  checkSagePaymentIntentSafety,
+  createSageErgoConnectHandoff,
+  createSageWalletPolicyRequest,
+} from "@ergoblockchain/sage-widget"
+
+const safety = checkSagePaymentIntentSafety(intent, {
+  maxAmountErg: "0.050000000",
+})
+if (!safety.ok) throw new Error(safety.failed.join(", "))
+
+const policyRequest = createSageWalletPolicyRequest(intent, {
+  agentId: "my-local-agent",
+  spentTodayErg: "0.000000000",
+  feeErg: "0.001000000",
+})
+
+const verdict = await fetch("/api/agent-economy/wallet-agent/policy-check", {
+  method: "POST",
+  headers: { "content-type": "application/json" },
+  body: JSON.stringify(policyRequest),
+})
+
+const handoff = createSageErgoConnectHandoff(intent)
+console.log(handoff.widget_signs_transactions) // false`
+
 export async function generateMetadata({
   params,
 }: {
@@ -92,12 +118,12 @@ export async function generateMetadata({
   return {
     title: "Sage Widget | Embed Paid Agent Payments on Ergo",
     description:
-      "Embed Sage as a React or vanilla widget: chat, quote, manual Note verification, receipt links, full Accord receipt bundles, and source-ready embed helpers for Ergo testnet proof flows.",
+      "Embed Sage as a React or vanilla widget: chat, quote, manual Note verification, receipt links, full Accord receipt bundles, and source-ready wallet-policy handoffs for Ergo testnet proof flows.",
     alternates: getAlternates("/agent-economy/sage-widget", locale),
     openGraph: {
       title: "Sage Widget for Ergo Agent Payments",
       description:
-        "A source-ready embeddable Sage widget for paid agent flows: quote, Note proof, verification, receipt bundle, and live testnet evidence.",
+        "A source-ready embeddable Sage widget for paid agent flows: quote, Note proof, wallet-policy handoff, receipt bundle, and live testnet evidence.",
       url: getCanonicalUrl("/agent-economy/sage-widget", locale),
       siteName: "Ergo Blockchain",
       images: [
@@ -132,8 +158,8 @@ const statusItems: Array<{
 }> = [
   {
     label: "Source",
-    value: "v0.4.0 source",
-    detail: "GitHub main now includes embed config helpers, capability manifest, and generated React/vanilla snippet helpers. npm release remains gated by tag publish.",
+    value: "v0.5.0 source",
+    detail: "GitHub main now includes wallet-policy handoff helpers, embed config helpers, capability manifest, and generated React/vanilla snippets. npm release remains gated by tag publish.",
     icon: GitBranch,
     tone: "live",
   },
@@ -186,6 +212,7 @@ const flowItems = [
 const releaseChecklist = [
   "v0.3.0 adds portable SagePaymentIntent JSON for host-owned wallet flows",
   "v0.4.0 source adds capability manifest plus React, vanilla, and hosted-feed snippet generators",
+  "v0.5.0 source adds wallet-policy safety checks and ErgoConnect-style handoff JSON",
   "Published tarball includes root, React, vanilla, type declarations, README, and license",
   "Live host demo calls the production Sage quote, verify, chat, and receipt APIs",
   "Keep wallet signing outside the widget; host apps own wallet policy and signing",
@@ -266,15 +293,16 @@ export default function SageWidgetPage() {
                     <div className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">
                       Release posture
                     </div>
-                    <div className="mt-1 text-2xl font-bold text-white">v0.4 source ready</div>
+                    <div className="mt-1 text-2xl font-bold text-white">v0.5 source ready</div>
                   </div>
                   <BadgeCheck className="h-9 w-9 text-orange-300" />
                 </div>
                 <p className="mt-4 text-sm leading-relaxed text-neutral-400">
-                  The v0.4.0 source is pushed with embed helpers and a widget
-                  capability manifest. npm latest remains v0.3.0 until the
-                  release tag publishes through GitHub Actions Trusted
-                  Publishing. The canonical Sage host remains a testnet proof.
+                  The v0.5.0 source is pushed with wallet-policy handoff
+                  helpers, embed helpers, and a widget capability manifest. npm
+                  latest remains v0.3.0 until the release tag publishes through
+                  GitHub Actions Trusted Publishing. The canonical Sage host
+                  remains a testnet proof.
                 </p>
                 <div className="mt-5 rounded-md border border-white/10 bg-white/[0.03] p-3 font-mono text-xs text-neutral-300">
                   npm install @ergoblockchain/sage-widget
@@ -326,10 +354,11 @@ export default function SageWidgetPage() {
         </section>
 
         <section className="border-y border-white/5 bg-neutral-950/55 px-4 py-14 sm:px-6 lg:px-8">
-          <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-3">
+          <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2 xl:grid-cols-4">
             <CodePanel title="React paid widget" body={reactExample} />
             <CodePanel title="Vanilla mount" body={vanillaExample} />
             <CodePanel title="Receipt-first apps" body={receiptExample} />
+            <CodePanel title="Wallet policy handoff" body={policyExample} />
           </div>
         </section>
 
@@ -394,9 +423,9 @@ export default function SageWidgetPage() {
                 <h2 className="text-2xl font-bold text-white">Next product move</h2>
                 <p className="mt-3 max-w-3xl leading-relaxed text-orange-50/75">
                   This page is now the canonical install doc and live host
-                  demo. The next upgrade is a reviewed wallet flow that can
-                  issue the Note without weakening the receipt API as the source
-                  of truth.
+                  demo. The next upgrade is a wallet-specific ErgoPay or Fleet
+                  implementation that consumes the v0.5 policy handoff without
+                  weakening the receipt API as the source of truth.
                 </p>
               </div>
               <Link
