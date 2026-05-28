@@ -68,6 +68,12 @@ const primarySteps = [
     body: "Inspect receipt-derived trust signals before treating a provider, verifier, or tool endpoint as reliable.",
   },
   {
+    label: "Inspect MCP tools",
+    href: "/agents/mcp",
+    icon: Braces,
+    body: "Read the safe economic MCP tool contracts before assuming a tool can sign, spend, or redeem.",
+  },
+  {
     label: "Accept job",
     href: "/jobs/accept",
     icon: ClipboardCheck,
@@ -100,6 +106,7 @@ const endpointRows = [
   ["Well-known service registry", "/.well-known/ergo-agent-registry.json"],
   ["Service publish validation", "/api/agents/publish"],
   ["Reputation graph", "/api/agents/reputation"],
+  ["Economic MCP tools", "/api/agents/mcp-tools"],
   ["Agent jobs", "/api/jobs"],
   ["Job acceptance validation", "/api/jobs/accept"],
   ["Job quote scaffold", "/api/jobs/quote"],

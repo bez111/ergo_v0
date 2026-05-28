@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.ergoblockchain.org/agent-economy/economic-mcp-tools.schema.v0.json",
+  "title": "Ergo Economic MCP Tools Manifest",
+  "type": "object",
+  "required": [
+    "type",
+    "version",
+    "status",
+    "canonical",
+    "human",
+    "schema",
+    "mcp",
+    "posture",
+    "runtime_boundary",
+    "tools",
+    "forbidden_assumptions"
+  ],
+  "properties": {
+    "type": { "const": "ergo.economic_mcp_tools.v0" },
+    "version": { "type": "string" },
+    "status": { "type": "string" },
+    "last_reviewed": { "type": "string" },
+    "canonical": { "type": "string", "format": "uri" },
+    "human": { "type": "string", "format": "uri" },
+    "schema": { "type": "string", "format": "uri" },
+    "public_claim": { "type": "string" },
+    "mcp": {
+      "type": "object",
+      "required": ["health", "streamable_http", "repository"],
+      "properties": {
+        "health": { "type": "string", "format": "uri" },
+        "streamable_http": { "type": "string", "format": "uri" },
+        "repository": { "type": "string", "format": "uri" }
+      },
+      "additionalProperties": true
+    },
+    "posture": {
+      "type": "object",
+      "required": ["mainnet_ready", "production_custody"],
+      "properties": {
+        "status": { "type": "string" },
+        "network": { "type": "string" },
+        "mainnet_ready": { "const": false },
+        "production_custody": { "const": false },
+        "audit_gate": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "runtime_boundary": {
+      "type": "object",
+      "required": [
+        "mcp_tools_sign_transactions",
+        "mcp_tools_hold_private_keys",
+        "mcp_tools_broadcast_without_wallet_boundary",
+        "mcp_tools_override_wallet_policy",
+        "mainnet_ready",
+        "production_custody"
+      ],
+      "properties": {
+        "mcp_tools_sign_transactions": { "const": false },
+        "mcp_tools_hold_private_keys": { "const": false },
+        "mcp_tools_broadcast_without_wallet_boundary": { "const": false },
+        "mcp_tools_override_wallet_policy": { "const": false },
+        "mainnet_ready": { "const": false },
+        "production_custody": { "const": false }
+      },
+      "additionalProperties": false
+    },
+    "recommended_client_flow": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": { "type": "number" }
+    },
+    "tools": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "status", "purpose", "input_schema", "output_schema", "safe_use"],
+        "properties": {
+          "name": { "type": "string" },
+          "status": { "type": "string" },
+          "purpose": { "type": "string" },
+          "input_schema": { "type": "string" },
+          "output_schema": { "type": "string" },
+          "http_endpoint": { "type": ["string", "null"] },
+          "safe_use": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "forbidden_assumptions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "next_steps": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": true
+}

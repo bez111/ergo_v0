@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "Ergo Agent Economy Public API",
-    "version": "0.1.8",
+    "version": "0.1.9",
     "summary": "Machine-readable API contract for the Ergo Agent Economy testnet proof surface.",
     "description": "Public Agent Economy APIs expose discovery, live status, proof exploration, launch-kit data, review evidence, wallet-agent policy checks, and Sage receipt surfaces. This contract is testnet-first and does not imply mainnet readiness."
   },
@@ -116,6 +116,25 @@
               "application/json": {
                 "schema": {
                   "$ref": "https://www.ergoblockchain.org/agent-economy/agent-reputation.schema.v0.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/agents/mcp-tools": {
+      "get": {
+        "tags": ["Agent Discovery"],
+        "operationId": "getEconomicMcpToolsManifest",
+        "summary": "Get the safe economic MCP tool contracts for the Agent Economy",
+        "responses": {
+          "200": {
+            "description": "MCP tool contracts, HTTP-backed endpoints, runtime boundary, forbidden assumptions, and next steps",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://www.ergoblockchain.org/agent-economy/economic-mcp-tools.schema.v0.json"
                 }
               }
             }

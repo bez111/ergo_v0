@@ -151,6 +151,24 @@ export const devServices: DevService[] = [
     notes: ["Use /health for checks.", "Use /mcp for Streamable HTTP clients."],
   },
   {
+    id: "economic-mcp-tools",
+    title: "Economic MCP Tool Contracts",
+    summary:
+      "Safe MCP contracts for service discovery, jobs, quotes, wallet policy, payment intents, receipt verification, and reputation.",
+    href: "/agents/mcp",
+    apiHref: "/api/agents/mcp-tools",
+    category: "agents",
+    state: "live",
+    latency: "instant",
+    icon: Braces,
+    machineReadable: true,
+    notes: [
+      "Manifest is published before runtime MCP advertisement.",
+      "MCP tools prepare intents and proof checks; they never sign transactions or custody value.",
+      "Mainnet-ready and production-custody claims remain false.",
+    ],
+  },
+  {
     id: "agent-live-status",
     title: "Agent Economy Live Status",
     summary: "Single JSON view of Sage, receipt storage, MCP, signer health, and mainnet gate state.",

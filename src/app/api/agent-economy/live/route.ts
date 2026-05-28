@@ -110,7 +110,7 @@ export async function GET(req: Request) {
   const requestOrigin = new URL(req.url).origin
   const siteBaseUrl = trimSlash(process.env.AGENT_ECONOMY_LIVE_BASE_URL ?? requestOrigin)
 
-  const [activity, storage, accord, conformanceEvidence, registry, signer, widgetNpm, mcpFly, mcpDns, mainnetGate, reviewPack, launchKit, proofExplorer, walletAgent, walletAgentPolicy, walletAgentReferenceFlow, walletAgentPolicyPlayground, ergoConnect, agentServicePublish, agentReputation, agentJobAcceptance, agentJobQuote] = await Promise.all([
+  const [activity, storage, accord, conformanceEvidence, registry, signer, widgetNpm, mcpFly, mcpDns, mainnetGate, reviewPack, launchKit, proofExplorer, walletAgent, walletAgentPolicy, walletAgentReferenceFlow, walletAgentPolicyPlayground, ergoConnect, economicMcpTools, agentServicePublish, agentReputation, agentJobAcceptance, agentJobQuote] = await Promise.all([
     probeJson<SageActivityResponse>(`${siteBaseUrl}/api/sage/activity?limit=8`),
     probeJson<SageReceiptStorageHealthResponse>(
       `${siteBaseUrl}/api/sage/receipt/blob-probe-2026-05-16`,
@@ -144,6 +144,9 @@ export async function GET(req: Request) {
     probePage(`${siteBaseUrl}/build/agent-payments/policy-playground`),
     probeJson<{ type?: string; status?: string; security_boundary?: { agents_do_not_hold_private_keys?: boolean } }>(
       `${siteBaseUrl}/.well-known/ergo-connect.json`,
+    ),
+    probeJson<{ type?: string; status?: string; runtime_boundary?: { mcp_tools_sign_transactions?: boolean } }>(
+      `${siteBaseUrl}/api/agents/mcp-tools`,
     ),
     probeJson<{ ok?: boolean; type?: string; example_validation?: { accepted_for_operator_review?: boolean } }>(
       `${siteBaseUrl}/api/agents/publish`,
@@ -350,6 +353,19 @@ export async function GET(req: Request) {
       "/build/ergo-connect",
     ),
     gate(
+      "economic-mcp-tool-contracts",
+      "Economic MCP tool contracts",
+      economicMcpTools.ok &&
+        economicMcpTools.data?.type === "ergo.economic_mcp_tools.v0" &&
+        economicMcpTools.data.runtime_boundary?.mcp_tools_sign_transactions === false
+        ? "live"
+        : "degraded",
+      economicMcpTools.ok
+        ? "Safe MCP tool contracts are published; runtime tools prepare intents and proof checks, not signatures"
+        : economicMcpTools.error ?? "economic MCP tool manifest unavailable",
+      "/agents/mcp",
+    ),
+    gate(
       "agent-service-publish",
       "Agent service publish validator",
       agentServicePublish.ok &&
@@ -498,6 +514,8 @@ export async function GET(req: Request) {
         walletAgentReferenceFlow.ok && walletAgentReferenceFlow.data?.ok === true,
       wallet_agent_policy_playground_published: walletAgentPolicyPlayground.ok,
       developer_launch_kit_published: launchKit.ok && launchKit.data?.ok === true,
+      economic_mcp_tools_published:
+        economicMcpTools.ok && economicMcpTools.data?.type === "ergo.economic_mcp_tools.v0",
       agent_service_publish_published:
         agentServicePublish.ok && agentServicePublish.data?.ok === true,
       agent_reputation_published:
@@ -584,6 +602,7 @@ export async function GET(req: Request) {
       wallet_agent_reference_flow: publicProbe(walletAgentReferenceFlow),
       wallet_agent_policy_playground: publicProbe(walletAgentPolicyPlayground),
       ergo_connect: publicProbe(ergoConnect),
+      economic_mcp_tools: publicProbe(economicMcpTools),
       agent_service_publish: publicProbe(agentServicePublish),
       agent_reputation: publicProbe(agentReputation),
       agent_job_acceptance: publicProbe(agentJobAcceptance),
