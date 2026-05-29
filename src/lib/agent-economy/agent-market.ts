@@ -29,6 +29,7 @@ export const agentServiceRegistry = {
       "provider_agent",
       "verifier_agent",
       "broker_agent",
+      "buyer_agent",
       "reserve_agent",
       "reputation_agent",
       "auditor_agent",
