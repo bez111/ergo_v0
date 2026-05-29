@@ -384,6 +384,7 @@ export const devServicesSnapshot = {
   faucet: {
     configured: false,
     enabled: false,
+    fallback_url: "https://testnet.ergofaucet.org/",
     reason: "Set a dedicated faucet backend/wallet and anti-abuse gate before enabling payouts.",
   },
   probes: {

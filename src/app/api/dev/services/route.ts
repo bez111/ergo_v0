@@ -73,6 +73,7 @@ export async function GET(req: Request) {
         configured: faucetConfigured,
         enabled: process.env.ERGO_TESTNET_FAUCET_ENABLED === "true" && faucetConfigured,
         endpoint: "/api/dev/faucet",
+        fallback_url: "https://testnet.ergofaucet.org/",
         reason: faucetConfigured
           ? null
           : "Set a dedicated faucet backend/wallet and anti-abuse gate before enabling payouts.",
@@ -130,7 +131,7 @@ async function probe(url: string): Promise<Probe> {
 
 function isFaucetConfigured() {
   return Boolean(
-    process.env.ERGO_TESTNET_FAUCET_BACKEND_URL ||
+    (process.env.ERGO_TESTNET_FAUCET_BACKEND_URL && process.env.ERGO_TESTNET_FAUCET_BACKEND_TOKEN) ||
       (process.env.ERGO_TESTNET_FAUCET_WALLET_ADDRESS && process.env.ERGO_TESTNET_FAUCET_TURNSTILE_SECRET),
   )
 }

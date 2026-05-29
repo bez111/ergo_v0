@@ -12,109 +12,113 @@ interface FaucetRequest {
 
 const WINDOW_MS = 60 * 60 * 1000
 const MAX_REQUESTS_PER_WINDOW = 2
+const PUBLIC_TESTNET_FAUCET_URL = "https://testnet.ergofaucet.org/"
+const DEFAULT_FAUCET_AMOUNT_NANOERG = BigInt("100000000")
+const REQUIRED_BACKEND_ENV = [
+  "ERGO_TESTNET_FAUCET_ENABLED=true",
+  "ERGO_TESTNET_FAUCET_BACKEND_URL=<dedicated faucet worker>",
+  "ERGO_TESTNET_FAUCET_BACKEND_TOKEN=<shared secret>",
+  "ERGO_TESTNET_FAUCET_TURNSTILE_SECRET=<optional anti-abuse gate>",
+] as const
 const memoryRateLimit = new Map<string, { count: number; resetAt: number }>()
 
 export async function GET() {
-  return NextResponse.json({
-    ok: true,
-    type: "ergo.testnet_faucet.v1",
-    enabled: faucetEnabled(),
-    configured: faucetConfigured(),
-    amount_nanoerg: faucetAmountNanoErg().toString(),
-    amount_erg: Number(faucetAmountNanoErg()) / 1e9,
-    network: "testnet",
-    anti_abuse: {
-      turnstile_required: Boolean(process.env.ERGO_TESTNET_FAUCET_TURNSTILE_SECRET),
-      hourly_ip_limit: MAX_REQUESTS_PER_WINDOW,
-    },
-    status: faucetEnabled() ? "ready" : "guarded",
-    message: faucetEnabled()
-      ? "POST { address, turnstileToken? } to request testnet ERG."
-      : "Faucet surface is live, but payouts are disabled until the dedicated backend/wallet is configured.",
-  }, {
-    headers: { "Cache-Control": "s-maxage=30, stale-while-revalidate=60" },
-  })
+  try {
+    return NextResponse.json(faucetDescriptor(), {
+      headers: { "Cache-Control": "s-maxage=30, stale-while-revalidate=60" },
+    })
+  } catch (error) {
+    return jsonError(500, "Faucet descriptor failed.", {
+      cause: error instanceof Error ? error.message : "unknown",
+      fallback_url: PUBLIC_TESTNET_FAUCET_URL,
+    })
+  }
 }
 
 export async function POST(req: Request) {
-  let body: FaucetRequest
   try {
-    body = (await req.json()) as FaucetRequest
-  } catch {
-    return jsonError(400, "Invalid JSON body.")
-  }
+    let body: FaucetRequest
+    try {
+      body = (await req.json()) as FaucetRequest
+    } catch {
+      return jsonError(400, "Invalid JSON body.", faucetUnavailableExtras())
+    }
 
-  const address = body.address?.trim() ?? ""
-  const inspected = inspectTestnetAddress(address)
-  if (!inspected.ok) {
-    return jsonError(400, inspected.error, { address })
-  }
+    const address = body.address?.trim() ?? ""
+    const inspected = inspectTestnetAddress(address)
+    if (!inspected.ok) {
+      return jsonError(400, inspected.error, { address, ...faucetUnavailableExtras() })
+    }
 
-  const rate = checkRateLimit(clientKey(req))
-  if (!rate.allowed) {
-    return jsonError(429, "Faucet rate limit hit. Try again later.", {
-      retry_after_seconds: Math.ceil((rate.resetAt - Date.now()) / 1000),
-    })
-  }
+    const rate = checkRateLimit(clientKey(req))
+    if (!rate.allowed) {
+      return jsonError(429, "Faucet rate limit hit. Try again later.", {
+        retry_after_seconds: Math.ceil((rate.resetAt - Date.now()) / 1000),
+        ...faucetUnavailableExtras(),
+      })
+    }
 
-  const turnstile = await verifyTurnstile(body.turnstileToken, req)
-  if (!turnstile.ok) {
-    return jsonError(403, turnstile.error)
-  }
+    const turnstile = await verifyTurnstile(body.turnstileToken, req)
+    if (!turnstile.ok) {
+      return jsonError(403, turnstile.error, faucetUnavailableExtras())
+    }
 
-  if (!faucetEnabled()) {
-    return jsonError(503, "Faucet payouts are not enabled yet.", {
-      configured: faucetConfigured(),
-      required_env: [
-        "ERGO_TESTNET_FAUCET_ENABLED=true",
-        "ERGO_TESTNET_FAUCET_BACKEND_URL=<dedicated faucet worker>",
-        "ERGO_TESTNET_FAUCET_BACKEND_TOKEN=<shared secret>",
-        "ERGO_TESTNET_FAUCET_TURNSTILE_SECRET=<optional anti-abuse gate>",
-      ],
-      note: "Keep the payout wallet in a separate backend service, not inside the public website runtime.",
-    })
-  }
+    if (!faucetEnabled()) {
+      return jsonError(503, "Faucet payouts are not enabled yet.", faucetUnavailableExtras())
+    }
 
-  const backend = readFaucetBackendUrl()
-  if (!backend.ok) {
-    return jsonError(503, `Faucet backend URL is invalid: ${backend.error}`)
-  }
+    const backend = readFaucetBackendUrl()
+    if (!backend.ok) {
+      return jsonError(503, `Faucet backend URL is invalid: ${backend.error}`, faucetUnavailableExtras())
+    }
 
-  const res = await fetch(backend.url, {
-    method: "POST",
-    headers: {
-      "content-type": "application/json",
-      ...(process.env.ERGO_TESTNET_FAUCET_BACKEND_TOKEN
-        ? { authorization: `Bearer ${process.env.ERGO_TESTNET_FAUCET_BACKEND_TOKEN}` }
-        : {}),
-    },
-    body: JSON.stringify({
+    const amountNanoErg = faucetAmountNanoErg()
+    let res: Response
+    try {
+      res = await fetch(backend.url, {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          ...(process.env.ERGO_TESTNET_FAUCET_BACKEND_TOKEN
+            ? { authorization: `Bearer ${process.env.ERGO_TESTNET_FAUCET_BACKEND_TOKEN}` }
+            : {}),
+        },
+        body: JSON.stringify({
+          address,
+          amountNanoErg: amountNanoErg.toString(),
+          source: "ergoblockchain.org",
+        }),
+        signal: AbortSignal.timeout(15_000),
+      })
+    } catch (error) {
+      return jsonError(502, "Faucet backend request failed.", {
+        cause: error instanceof Error ? error.message : "network error",
+        ...faucetUnavailableExtras(),
+      })
+    }
+
+    const responseBody = await readBackendResponse(res)
+
+    return NextResponse.json({
+      ok: res.ok,
+      type: "ergo.testnet_faucet.request.v1",
+      status: res.status,
       address,
-      amountNanoErg: faucetAmountNanoErg().toString(),
-      source: "ergoblockchain.org",
-    }),
-    signal: AbortSignal.timeout(15_000),
-  })
-  const responseText = await res.text()
-  let responseBody: unknown = null
-  try {
-    responseBody = responseText ? JSON.parse(responseText) : null
-  } catch {
-    responseBody = { raw: responseText.slice(0, 1_000) }
+      network: "testnet",
+      amount_nanoerg: amountNanoErg.toString(),
+      amount_erg: Number(amountNanoErg) / 1e9,
+      backend: responseBody,
+      fallback_url: PUBLIC_TESTNET_FAUCET_URL,
+    }, {
+      status: res.ok ? 200 : 502,
+      headers: { "Cache-Control": "no-store" },
+    })
+  } catch (error) {
+    return jsonError(500, "Faucet request failed before payout.", {
+      cause: error instanceof Error ? error.message : "unknown",
+      ...faucetUnavailableExtras(),
+    })
   }
-
-  return NextResponse.json({
-    ok: res.ok,
-    type: "ergo.testnet_faucet.request.v1",
-    status: res.status,
-    address,
-    network: "testnet",
-    amount_nanoerg: faucetAmountNanoErg().toString(),
-    backend: responseBody,
-  }, {
-    status: res.ok ? 200 : 502,
-    headers: { "Cache-Control": "no-store" },
-  })
 }
 
 function inspectTestnetAddress(address: string): { ok: true } | { ok: false; error: string } {
@@ -174,12 +178,17 @@ function faucetEnabled() {
 }
 
 function faucetConfigured() {
-  return Boolean(process.env.ERGO_TESTNET_FAUCET_BACKEND_URL)
+  return Boolean(process.env.ERGO_TESTNET_FAUCET_BACKEND_URL && process.env.ERGO_TESTNET_FAUCET_BACKEND_TOKEN)
 }
 
 function faucetAmountNanoErg() {
   const raw = process.env.ERGO_TESTNET_FAUCET_AMOUNT_NANOERG ?? "100000000"
-  return BigInt(raw)
+  try {
+    const amount = BigInt(raw)
+    return amount > BigInt(0) ? amount : DEFAULT_FAUCET_AMOUNT_NANOERG
+  } catch {
+    return DEFAULT_FAUCET_AMOUNT_NANOERG
+  }
 }
 
 function readFaucetBackendUrl(): { ok: true; url: URL } | { ok: false; error: string } {
@@ -197,4 +206,51 @@ function jsonError(status: number, error: string, extras?: Record<string, unknow
     status,
     headers: { "Cache-Control": "no-store" },
   })
+}
+
+async function readBackendResponse(res: Response) {
+  const responseText = await res.text()
+  if (!responseText) return null
+  try {
+    return JSON.parse(responseText) as unknown
+  } catch {
+    return { raw: responseText.slice(0, 1_000) }
+  }
+}
+
+function faucetDescriptor() {
+  const amountNanoErg = faucetAmountNanoErg()
+  return {
+    ok: true,
+    type: "ergo.testnet_faucet.v1",
+    enabled: faucetEnabled(),
+    configured: faucetConfigured(),
+    amount_nanoerg: amountNanoErg.toString(),
+    amount_erg: Number(amountNanoErg) / 1e9,
+    network: "testnet",
+    fallback_url: PUBLIC_TESTNET_FAUCET_URL,
+    anti_abuse: {
+      turnstile_required: Boolean(process.env.ERGO_TESTNET_FAUCET_TURNSTILE_SECRET),
+      hourly_ip_limit: MAX_REQUESTS_PER_WINDOW,
+    },
+    status: faucetEnabled() ? "ready" : "guarded",
+    message: faucetEnabled()
+      ? "POST { address, turnstileToken? } to request testnet ERG."
+      : "Faucet surface is live, but payouts are disabled until the dedicated backend/wallet is configured.",
+    required_env: faucetEnabled() ? [] : REQUIRED_BACKEND_ENV,
+    note: faucetEnabled()
+      ? "Keep payout limits and backend signing outside the public website runtime."
+      : "Keep the payout wallet in a separate backend service, not inside the public website runtime.",
+  }
+}
+
+function faucetUnavailableExtras() {
+  return {
+    configured: faucetConfigured(),
+    enabled: faucetEnabled(),
+    status: faucetEnabled() ? "ready" : "guarded",
+    fallback_url: PUBLIC_TESTNET_FAUCET_URL,
+    required_env: REQUIRED_BACKEND_ENV,
+    note: "Keep the payout wallet in a separate backend service, not inside the public website runtime.",
+  }
 }

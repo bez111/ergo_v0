@@ -54,12 +54,14 @@ interface ServiceIndex {
   faucet: {
     configured: boolean
     enabled: boolean
+    fallback_url?: string
     reason: string | null
   }
   probes: Record<string, Probe>
 }
 
 const RECEIPT_EXAMPLE = "f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81"
+const PUBLIC_TESTNET_FAUCET_URL = "https://testnet.ergofaucet.org/"
 
 const categories = Object.entries(devServiceCategories) as Array<[
   DevServiceCategory,
@@ -198,7 +200,7 @@ export function DevServicesClient({
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ address: faucetAddress }),
       })
-      const body = await res.json()
+      const body = await readJsonResponse(res, "faucet")
       setFaucetResult(body)
     } catch (error) {
       setFaucetResult({ ok: false, error: error instanceof Error ? error.message : "faucet request failed" })
@@ -214,6 +216,11 @@ export function DevServicesClient({
   }
 
   const ToolIcon = toolExamples[toolAction].icon
+  const faucetEnabled = index?.faucet.enabled === true
+  const faucetFallbackUrl = index?.faucet.fallback_url ?? PUBLIC_TESTNET_FAUCET_URL
+  const faucetReason =
+    index?.faucet.reason ??
+    "Internal payouts require a dedicated faucet backend and anti-abuse gate before they can be enabled."
 
   return (
     <BackgroundWrapper>
@@ -322,23 +329,40 @@ export function DevServicesClient({
                     <Droplets className="h-4 w-4 text-yellow-200" />
                     <h2 className="text-sm font-semibold text-white">Testnet Faucet</h2>
                   </div>
-                  <StatusPill state={index?.faucet.enabled ? "live" : "guarded"} />
+                  <StatusPill state={faucetEnabled ? "live" : "guarded"} />
                 </div>
+                {!faucetEnabled ? (
+                  <div className="mt-4 rounded-md border border-yellow-500/25 bg-black/55 p-3 text-sm leading-relaxed text-yellow-50/85">
+                    <div className="font-semibold text-yellow-100">Internal payouts are guarded.</div>
+                    <p className="mt-1 text-yellow-50/70">
+                      {faucetReason} Use the public Ergo testnet faucet while this site keeps payout signing outside the web runtime.
+                    </p>
+                    <a
+                      href={faucetFallbackUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-3 inline-flex items-center gap-2 rounded-md border border-yellow-500/30 bg-yellow-500/10 px-3 py-2 font-mono text-[11px] uppercase tracking-widest text-yellow-100 transition hover:bg-yellow-500/20"
+                    >
+                      Open public faucet <ExternalLink className="h-3.5 w-3.5" />
+                    </a>
+                  </div>
+                ) : null}
                 <div className="mt-4 space-y-3">
                   <Input
                     value={faucetAddress}
                     onChange={(event) => setFaucetAddress(event.target.value)}
                     placeholder="Testnet address"
                     className="border-yellow-500/25 bg-black/55 font-mono text-sm"
+                    disabled={!faucetEnabled}
                   />
                   <Button
                     type="button"
                     onClick={requestFaucet}
-                    disabled={faucetBusy || faucetAddress.trim().length === 0}
+                    disabled={!faucetEnabled || faucetBusy || faucetAddress.trim().length === 0}
                     className="w-full bg-yellow-500 text-black hover:bg-yellow-400"
                   >
                     {faucetBusy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
-                    Request test ERG
+                    {faucetEnabled ? "Request test ERG" : "Payouts guarded"}
                   </Button>
                 </div>
                 {faucetResult ? (
@@ -513,6 +537,27 @@ export function DevServicesClient({
       </main>
     </BackgroundWrapper>
   )
+}
+
+async function readJsonResponse(res: Response, label: string): Promise<unknown> {
+  const text = await res.text()
+  if (!text) {
+    return {
+      ok: false,
+      status: res.status,
+      error: `${label} returned an empty response`,
+    }
+  }
+  try {
+    return JSON.parse(text) as unknown
+  } catch {
+    return {
+      ok: false,
+      status: res.status,
+      error: `${label} returned non-JSON response`,
+      raw: text.slice(0, 1_000),
+    }
+  }
 }
 
 function Metric({ label, value }: { label: string; value: string }) {

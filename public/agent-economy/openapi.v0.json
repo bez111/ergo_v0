@@ -580,6 +580,51 @@
         }
       }
     },
+    "/api/dev/faucet": {
+      "get": {
+        "tags": ["Developer Tools"],
+        "operationId": "getTestnetFaucetPosture",
+        "summary": "Get the guarded Ergo testnet faucet posture",
+        "responses": {
+          "200": {
+            "description": "Faucet descriptor with enabled/configured status, amount, anti-abuse posture, and public fallback URL"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Developer Tools"],
+        "operationId": "requestTestnetFaucetPayout",
+        "summary": "Request testnet ERG through the guarded faucet proxy",
+        "description": "Validates a testnet address and forwards to a dedicated backend only when payouts are enabled. The public website does not hold faucet signing keys.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["address"],
+                "properties": {
+                  "address": { "type": "string" },
+                  "turnstileToken": { "type": "string" }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Payout backend accepted the guarded testnet request"
+          },
+          "400": {
+            "description": "Invalid JSON or non-testnet Ergo address"
+          },
+          "503": {
+            "description": "Payouts are guarded until a dedicated faucet backend/wallet is configured"
+          }
+        }
+      }
+    },
     "/api/agent-economy/mainnet-gate": {
       "get": {
         "tags": ["Trust"],

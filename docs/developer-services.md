@@ -34,6 +34,7 @@
   - `receipt` for Sage receipt completeness checks.
 - `GET /api/dev/faucet` reports faucet posture.
 - `POST /api/dev/faucet` validates a testnet address and forwards payout requests only when the guarded backend is enabled.
+- `docs/testnet-faucet-backend.md` lists the backend contract and candidate open-source faucet implementations to review before enabling payouts.
 
 ## Faucet Operations
 
@@ -59,6 +60,7 @@ Current website behavior is intentionally conservative:
 - Testnet address validation is live.
 - Hourly IP limiting is live in the website runtime.
 - Payouts stay disabled until the separate backend is configured.
+- The UI shows the public `https://testnet.ergofaucet.org/` fallback while internal payouts are guarded.
 - Mainnet addresses are rejected.
 
 ## Future Nice-To-Haves

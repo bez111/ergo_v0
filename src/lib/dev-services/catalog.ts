@@ -47,7 +47,7 @@ export const devServices: DevService[] = [
   {
     id: "testnet-faucet",
     title: "Ergo Testnet Faucet",
-    summary: "One-click test ERG for builders, bots, examples, and CI demos.",
+    summary: "Guarded testnet funding surface with address validation and a public faucet fallback.",
     href: "/build/services#faucet",
     apiHref: "/api/dev/faucet",
     category: "funding",
@@ -58,6 +58,7 @@ export const devServices: DevService[] = [
     notes: [
       "Address validation is live.",
       "Payouts stay disabled until a dedicated faucet wallet and anti-abuse gate are configured.",
+      "The public faucet link stays visible while internal payouts are guarded.",
     ],
   },
   {
