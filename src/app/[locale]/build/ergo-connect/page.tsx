@@ -370,6 +370,37 @@ export default function ErgoConnectPage() {
               ))}
             </div>
 
+            <div className="mt-8 rounded-lg border border-white/10 bg-black/80 p-6">
+              <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+                <div>
+                  <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-orange-300">
+                    Local package skeleton
+                  </div>
+                  <h2 className="mt-3 text-2xl font-bold text-white">
+                    {spec.developer_package_skeleton.package_name}
+                  </h2>
+                  <p className="mt-3 text-sm leading-relaxed text-neutral-400">
+                    {spec.developer_package_skeleton.boundary}
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    <MiniBadge label={spec.developer_package_skeleton.status} />
+                    <MiniBadge label={`version ${spec.developer_package_skeleton.version}`} />
+                    <MiniBadge label="npm false" />
+                    <MiniBadge label="private true" />
+                  </div>
+                </div>
+                <div className="rounded-lg border border-white/10 bg-black/90 p-4">
+                  <CodeLine label="repo" value={spec.developer_package_skeleton.repo} />
+                  <CodeLine label="path" value={spec.developer_package_skeleton.path} />
+                  <CodeLine label="command" value={spec.developer_package_skeleton.command} />
+                  <CodeLine
+                    label="hooks"
+                    value={spec.developer_package_skeleton.exports.join(", ")}
+                  />
+                </div>
+              </div>
+            </div>
+
             <div className="mt-8 rounded-lg border border-orange-500/25 bg-orange-500/[0.07] p-6">
               <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
                 <div className="max-w-3xl">
@@ -429,6 +460,14 @@ function Metric({ label, value }: { label: string; value: string }) {
       <div className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">{label}</div>
       <div className="mt-1 break-words font-mono text-sm text-neutral-100">{value}</div>
     </div>
+  )
+}
+
+function MiniBadge({ label }: { label: string }) {
+  return (
+    <span className="rounded-md border border-white/10 bg-white/[0.035] px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-neutral-300">
+      {label}
+    </span>
   )
 }
 

@@ -98,7 +98,7 @@ export const agentEconomyRoadmap = {
       phase: "build_next" as AgentEconomyRoadmapPhase,
       title: "BuildOnErgo Agent Economy Kit",
       summary:
-        "Grow the public developer kit under buildonergo into a local kernel for receipt verification, provider onboarding, job acceptance, job quote scaffolds, ErgoConnect wallet boundaries, and future adapter contracts without cloning the full site.",
+        "Grow the public developer kit under buildonergo into a local kernel for receipt verification, provider onboarding, job acceptance, job quote scaffolds, ErgoConnect wallet boundaries, and a private React package skeleton without cloning the full site.",
       proof_links: [
         "https://github.com/buildonergo/agent-economy-kit",
         "https://www.ergoblockchain.org/agent-economy/launch-kit",
@@ -232,7 +232,7 @@ export const agentEconomyRoadmap = {
       phase: "live" as AgentEconomyRoadmapPhase,
       title: "ErgoConnect Wallet Boundary",
       summary:
-        "Published a TrustConnect-style, CAIP-native Ergo wallet boundary for autonomous work: wallet connection, ErgoAuth proof, wallet policy, unsigned or reduced transaction handoff, ErgoPay signing, receipt expectation, settlement verification, and a local React adapter contract. This is a spec/bootstrap surface, not an npm package claim or upstream wallet-vendor support claim.",
+        "Published a TrustConnect-style, CAIP-native Ergo wallet boundary for autonomous work: wallet connection, ErgoAuth proof, wallet policy, unsigned or reduced transaction handoff, ErgoPay signing, receipt expectation, settlement verification, a local React adapter contract, and a private BuildOnErgo package skeleton. This is a spec/bootstrap surface, not an npm package claim or upstream wallet-vendor support claim.",
       proof_links: [
         "https://www.ergoblockchain.org/build/ergo-connect",
         "https://www.ergoblockchain.org/.well-known/ergo-connect.json",
@@ -362,7 +362,7 @@ export const agentEconomyRoadmap = {
     {
       id: "ergo-connect-react-adapter",
       owner: "repo",
-      label: "Turn the local ErgoConnect React adapter contract into a reviewed package skeleton without npm or wallet-vendor claims",
+      label: "Turn the private ErgoConnect React package skeleton into a reviewed implementation before any npm or wallet-vendor claims",
       blocked_by_external: false,
     },
     {
