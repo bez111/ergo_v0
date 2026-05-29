@@ -7,7 +7,6 @@ import {
   ExternalLink,
   FileJson2,
   LockKeyhole,
-  ReceiptText,
   ShieldCheck,
 } from "lucide-react"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"

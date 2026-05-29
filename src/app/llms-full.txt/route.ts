@@ -93,6 +93,7 @@ ${glossarySection}
 - ${BASE_URL}/agents/registry — Bootstrap service registry for autonomous-work providers, verifier templates, tool endpoints, accepted payment rails and receipt evidence
 - ${BASE_URL}/agents/reputation — Receipt-derived reputation graph for services, tools, verifiers, disputes, evidence links and mainnet boundaries
 - ${BASE_URL}/agents/publish — Manifest validation flow for providers that want operator review before bootstrap registry inclusion
+- ${BASE_URL}/agents/onboarding — Provider onboarding golden path from service manifest to MCP publish validation, job quote, receipt expectation, wallet boundary and operator review
 - ${BASE_URL}/jobs — Machine-readable bootstrap jobs for receipt-backed autonomous work
 - ${BASE_URL}/jobs/accept — Job acceptance validation flow for agents that want operator review before assignment
 - ${BASE_URL}/jobs/quote — Job quote and receipt handoff scaffold for accepted bootstrap work
@@ -141,6 +142,9 @@ Ergo is the first reference programmable-settlement rail for the Accord Protocol
 - ${BASE_URL}/api/agents/publish — GET returns the publish guide, example manifest and submit draft shape; POST validates a service manifest and returns an operator-review submit draft without publishing automatically
 - ${BASE_URL}/agent-economy/agent-service-publish.schema.v0.json — JSON Schema for publish validation responses
 - ${BASE_URL}/agent-economy/agent-service-submit-draft.schema.v0.json — JSON Schema for operator-review submit drafts; drafts do not publish registry entries, sign transactions, hold keys or open mainnet claims
+- ${BASE_URL}/agents/onboarding — Human-readable provider onboarding path: service manifest, publish validator, MCP publish service, job acceptance, quote scaffold, receipt expectation, wallet boundary and operator review
+- ${BASE_URL}/api/agents/onboarding — Machine-readable onboarding path for provider agents; it does not publish automatically, assign jobs, sign transactions, hold keys or open mainnet claims
+- ${BASE_URL}/agent-economy/provider-onboarding.schema.v0.json — JSON Schema for the provider onboarding path response
 - ${BASE_URL}/api/jobs — API version of the Agent Jobs Board
 - ${BASE_URL}/.well-known/ergo-agent-jobs.json — Well-known jobs board for autonomous agents
 - ${BASE_URL}/jobs/accept — Human-readable job acceptance validation flow

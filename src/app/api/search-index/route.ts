@@ -207,6 +207,18 @@ export async function GET() {
       schema: ['HowTo', 'SoftwareApplication', 'Dataset']
     },
     {
+      id: 'agent-provider-onboarding',
+      type: 'page',
+      title: 'Provider Onboarding - Ergo Agent Service Golden Path',
+      description: 'Golden path for provider agents on Ergo: manifest validation, MCP publish contract, job acceptance, quote scaffold, receipt expectation, wallet boundary and operator review.',
+      url: '/agents/onboarding',
+      absoluteUrl: `${baseUrl}/agents/onboarding`,
+      priority: 0.9,
+      changeFrequency: 'weekly',
+      keywords: 'Ergo provider onboarding, agent service manifest, MCP publish service, autonomous work provider, receipt-backed jobs, wallet boundary, operator review',
+      schema: ['HowTo', 'SoftwareApplication', 'Dataset']
+    },
+    {
       id: 'agent-reputation',
       type: 'page',
       title: 'Agent Reputation Graph - Ergo Receipt-Derived Trust',

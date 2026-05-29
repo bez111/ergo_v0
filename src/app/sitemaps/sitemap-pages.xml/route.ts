@@ -48,6 +48,7 @@ export async function GET() {
     { url: '/agents/registry', priority: 0.9, changefreq: 'weekly' as const },
     { url: '/agents/reputation', priority: 0.9, changefreq: 'weekly' as const },
     { url: '/agents/publish', priority: 0.85, changefreq: 'weekly' as const },
+    { url: '/agents/onboarding', priority: 0.9, changefreq: 'weekly' as const },
     { url: '/jobs', priority: 0.9, changefreq: 'weekly' as const },
     { url: '/jobs/accept', priority: 0.85, changefreq: 'weekly' as const },
     { url: '/jobs/quote', priority: 0.85, changefreq: 'weekly' as const },

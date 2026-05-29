@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.ergoblockchain.org/agent-economy/provider-onboarding.schema.v0.json",
+  "title": "Ergo Provider Onboarding Path",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "type",
+    "version",
+    "status",
+    "canonical",
+    "api",
+    "schema",
+    "public_claim",
+    "recommended_summary",
+    "posture",
+    "entrypoints",
+    "path",
+    "examples",
+    "safety_boundaries",
+    "commands",
+    "do_not_assume"
+  ],
+  "properties": {
+    "type": { "const": "ergo.provider_onboarding_path.v0" },
+    "version": { "const": "v0" },
+    "status": { "const": "testnet_operator_review_path" },
+    "last_reviewed": { "type": "string" },
+    "canonical": { "type": "string", "format": "uri" },
+    "api": { "type": "string", "format": "uri" },
+    "schema": { "type": "string", "format": "uri" },
+    "public_claim": { "type": "string" },
+    "recommended_summary": { "type": "string" },
+    "posture": {
+      "type": "object",
+      "required": ["status", "network", "mainnet_ready", "production_custody", "audit_gate"],
+      "properties": {
+        "status": { "const": "testnet_bootstrap_not_mainnet_market" },
+        "network": { "const": "ergo_testnet" },
+        "mainnet_ready": { "const": false },
+        "production_custody": { "const": false },
+        "audit_gate": { "type": "string" }
+      }
+    },
+    "entrypoints": {
+      "type": "object",
+      "required": [
+        "human_page",
+        "api",
+        "schema",
+        "service_publish_api",
+        "economic_mcp_tools_api",
+        "job_accept_api",
+        "job_quote_api",
+        "latest_full_receipt",
+        "ergo_connect",
+        "mainnet_gate"
+      ],
+      "additionalProperties": { "type": "string" }
+    },
+    "path": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "actor", "action", "endpoint", "output", "boundary"],
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "type": "string" },
+          "actor": { "type": "string" },
+          "action": { "type": "string" },
+          "endpoint": { "type": "string" },
+          "output": { "type": "string" },
+          "boundary": { "type": "string" }
+        }
+      }
+    },
+    "examples": {
+      "type": "object",
+      "required": [
+        "service_manifest",
+        "submit_draft",
+        "job_acceptance_intent",
+        "job_quote_request"
+      ]
+    },
+    "safety_boundaries": {
+      "type": "object",
+      "required": [
+        "autopublish",
+        "assign_jobs_automatically",
+        "signs_transactions",
+        "broadcasts_transactions",
+        "custody_private_keys",
+        "creates_mainnet_value",
+        "opens_mainnet_claims",
+        "operator_review_required",
+        "receipt_required_for_paid_services"
+      ],
+      "properties": {
+        "autopublish": { "const": false },
+        "assign_jobs_automatically": { "const": false },
+        "signs_transactions": { "const": false },
+        "broadcasts_transactions": { "const": false },
+        "custody_private_keys": { "const": false },
+        "creates_mainnet_value": { "const": false },
+        "opens_mainnet_claims": { "const": false },
+        "operator_review_required": { "const": true },
+        "receipt_required_for_paid_services": { "const": true }
+      }
+    },
+    "commands": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "command", "expected"],
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "type": "string" },
+          "command": { "type": "string" },
+          "expected": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "do_not_assume": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

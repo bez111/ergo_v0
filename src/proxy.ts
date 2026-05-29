@@ -114,6 +114,7 @@ function getAgentHubPath(pathname: string): string | null {
     ['/registry', '/agents/registry'],
     ['/reputation', '/agents/reputation'],
     ['/publish', '/agents/publish'],
+    ['/onboarding', '/agents/onboarding'],
     ['/jobs', '/jobs'],
     ['/accept', '/jobs/accept'],
     ['/quote', '/jobs/quote'],

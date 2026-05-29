@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import type { ReactNode } from "react"
 import {
-  ArrowRight,
   Bot,
   Braces,
   ExternalLink,
@@ -153,7 +152,7 @@ export default function EconomicMcpPage() {
                   The next Ergo agent surface is an MCP contract for economic
                   actions: discover services, request quotes, check wallet
                   policy, verify receipts, and query reputation. Signing stays
-                  inside the user's wallet boundary.
+                  inside the user&apos;s wallet boundary.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <SurfaceLink

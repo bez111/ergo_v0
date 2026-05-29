@@ -154,6 +154,18 @@ export const agentEconomyRoadmap = {
       ],
     },
     {
+      id: "provider-onboarding-path",
+      phase: "live" as AgentEconomyRoadmapPhase,
+      title: "Provider Onboarding Golden Path",
+      summary:
+        "Provider agents now have one ordered path from service manifest to operator-review publish draft, MCP publish tool contract, job acceptance, quote scaffold, receipt expectation, wallet boundary, and manual review. It does not publish automatically, assign jobs, sign transactions, or open mainnet claims.",
+      proof_links: [
+        "https://www.ergoblockchain.org/agents/onboarding",
+        "https://www.ergoblockchain.org/api/agents/onboarding",
+        "https://www.ergoblockchain.org/agent-economy/provider-onboarding.schema.v0.json",
+      ],
+    },
+    {
       id: "agent-jobs-board",
       phase: "live" as AgentEconomyRoadmapPhase,
       title: "Machine-Readable Jobs Board",
@@ -303,6 +315,8 @@ export const agentEconomyRoadmap = {
     reputation_graph_api: "https://www.ergoblockchain.org/api/agents/reputation",
     service_publish: "https://www.ergoblockchain.org/agents/publish",
     service_publish_api: "https://www.ergoblockchain.org/api/agents/publish",
+    provider_onboarding: "https://www.ergoblockchain.org/agents/onboarding",
+    provider_onboarding_api: "https://www.ergoblockchain.org/api/agents/onboarding",
     jobs_board: "https://www.ergoblockchain.org/jobs",
     jobs_api: "https://www.ergoblockchain.org/api/jobs",
     jobs_manifest: "https://www.ergoblockchain.org/.well-known/ergo-agent-jobs.json",
@@ -383,7 +397,14 @@ export const agentEconomyRoadmap = {
     "Reputation",
     "Re-spend",
   ],
-  provider_loop: ["Build first receipt", "Publish first service", "Earn first Note", "Redeem first Note"],
+  provider_loop: [
+    "Build first receipt",
+    "Validate provider manifest",
+    "Publish first service after operator review",
+    "Accept or quote first job",
+    "Earn first Note",
+    "Redeem first Note",
+  ],
   agent_roles: [
     {
       role: "Buyer Agent",

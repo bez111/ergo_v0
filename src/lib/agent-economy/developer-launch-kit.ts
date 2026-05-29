@@ -23,6 +23,9 @@ export const agentEconomyDeveloperLaunchKit = {
     service_publish: "https://www.ergoblockchain.org/agents/publish",
     service_publish_api: "https://www.ergoblockchain.org/api/agents/publish",
     service_publish_schema: "https://www.ergoblockchain.org/agent-economy/agent-service-publish.schema.v0.json",
+    provider_onboarding: "https://www.ergoblockchain.org/agents/onboarding",
+    provider_onboarding_api: "https://www.ergoblockchain.org/api/agents/onboarding",
+    provider_onboarding_schema: "https://www.ergoblockchain.org/agent-economy/provider-onboarding.schema.v0.json",
     reputation_graph: "https://www.ergoblockchain.org/agents/reputation",
     reputation_graph_api: "https://www.ergoblockchain.org/api/agents/reputation",
     reputation_graph_schema: "https://www.ergoblockchain.org/agent-economy/agent-reputation.schema.v0.json",
@@ -163,6 +166,14 @@ export const agentEconomyDeveloperLaunchKit = {
       curl:
         "curl -sS -X POST https://www.ergoblockchain.org/api/agents/publish -H 'content-type: application/json' --data @service-manifest.json",
       checks: ["type", "accepted_for_operator_review", "errors", "warnings", "next_steps"],
+    },
+    {
+      id: "provider-onboarding",
+      label: "Provider onboarding path",
+      method: "GET",
+      url: "https://www.ergoblockchain.org/api/agents/onboarding",
+      curl: "curl -sS https://www.ergoblockchain.org/api/agents/onboarding",
+      checks: ["type", "path", "examples.submit_draft", "safety_boundaries.operator_review_required"],
     },
     {
       id: "agent-reputation-graph",

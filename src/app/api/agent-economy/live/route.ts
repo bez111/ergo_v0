@@ -110,7 +110,7 @@ export async function GET(req: Request) {
   const requestOrigin = new URL(req.url).origin
   const siteBaseUrl = trimSlash(process.env.AGENT_ECONOMY_LIVE_BASE_URL ?? requestOrigin)
 
-  const [activity, storage, accord, conformanceEvidence, registry, signer, widgetNpm, mcpFly, mcpDns, mainnetGate, reviewPack, launchKit, proofExplorer, walletAgent, walletAgentPolicy, walletAgentReferenceFlow, walletAgentPolicyPlayground, ergoConnect, economicMcpTools, agentServicePublish, agentReputation, agentJobAcceptance, agentJobQuote] = await Promise.all([
+  const [activity, storage, accord, conformanceEvidence, registry, signer, widgetNpm, mcpFly, mcpDns, mainnetGate, reviewPack, launchKit, proofExplorer, walletAgent, walletAgentPolicy, walletAgentReferenceFlow, walletAgentPolicyPlayground, ergoConnect, economicMcpTools, agentServicePublish, providerOnboarding, agentReputation, agentJobAcceptance, agentJobQuote] = await Promise.all([
     probeJson<SageActivityResponse>(`${siteBaseUrl}/api/sage/activity?limit=8`),
     probeJson<SageReceiptStorageHealthResponse>(
       `${siteBaseUrl}/api/sage/receipt/blob-probe-2026-05-16`,
@@ -150,6 +150,9 @@ export async function GET(req: Request) {
     ),
     probeJson<{ ok?: boolean; type?: string; example_validation?: { accepted_for_operator_review?: boolean } }>(
       `${siteBaseUrl}/api/agents/publish`,
+    ),
+    probeJson<{ type?: string; status?: string; safety_boundaries?: { operator_review_required?: boolean } }>(
+      `${siteBaseUrl}/api/agents/onboarding`,
     ),
     probeJson<{ type?: string; status?: string; summary?: { receipt_backed_subjects?: number } }>(
       `${siteBaseUrl}/api/agents/reputation`,
@@ -379,6 +382,19 @@ export async function GET(req: Request) {
       "/agents/publish",
     ),
     gate(
+      "provider-onboarding",
+      "Provider onboarding path",
+      providerOnboarding.ok &&
+        providerOnboarding.data?.type === "ergo.provider_onboarding_path.v0" &&
+        providerOnboarding.data.safety_boundaries?.operator_review_required === true
+        ? "live"
+        : "degraded",
+      providerOnboarding.ok
+        ? "Provider golden path links service publish, MCP tools, job acceptance, quote scaffold, receipt expectation, and wallet boundary"
+        : providerOnboarding.error ?? "provider onboarding path unavailable",
+      "/agents/onboarding",
+    ),
+    gate(
       "agent-reputation-graph",
       "Agent reputation graph",
       agentReputation.ok &&
@@ -518,6 +534,8 @@ export async function GET(req: Request) {
         economicMcpTools.ok && economicMcpTools.data?.type === "ergo.economic_mcp_tools.v0",
       agent_service_publish_published:
         agentServicePublish.ok && agentServicePublish.data?.ok === true,
+      provider_onboarding_published:
+        providerOnboarding.ok && providerOnboarding.data?.type === "ergo.provider_onboarding_path.v0",
       agent_reputation_published:
         agentReputation.ok && agentReputation.data?.type === "ergo.agent_reputation_graph.v0",
       agent_job_acceptance_published:
@@ -604,6 +622,7 @@ export async function GET(req: Request) {
       ergo_connect: publicProbe(ergoConnect),
       economic_mcp_tools: publicProbe(economicMcpTools),
       agent_service_publish: publicProbe(agentServicePublish),
+      provider_onboarding: publicProbe(providerOnboarding),
       agent_reputation: publicProbe(agentReputation),
       agent_job_acceptance: publicProbe(agentJobAcceptance),
       agent_job_quote: publicProbe(agentJobQuote),

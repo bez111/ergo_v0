@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "Ergo Agent Economy Public API",
-    "version": "0.1.9",
+    "version": "0.2.0",
     "summary": "Machine-readable API contract for the Ergo Agent Economy testnet proof surface.",
     "description": "Public Agent Economy APIs expose discovery, live status, proof exploration, launch-kit data, review evidence, wallet-agent policy checks, and Sage receipt surfaces. This contract is testnet-first and does not imply mainnet readiness."
   },
@@ -199,6 +199,25 @@
           },
           "400": {
             "description": "Manifest is blocked by schema, posture, payment, predicate, evidence, or forbidden-claim checks"
+          }
+        }
+      }
+    },
+    "/api/agents/onboarding": {
+      "get": {
+        "tags": ["Agent Discovery"],
+        "operationId": "getProviderOnboardingPath",
+        "summary": "Get the provider onboarding golden path",
+        "responses": {
+          "200": {
+            "description": "Ordered path from service manifest to publish validation, MCP publish contract, job acceptance, quote scaffold, receipt expectation, wallet boundary, and operator review",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://www.ergoblockchain.org/agent-economy/provider-onboarding.schema.v0.json"
+                }
+              }
+            }
           }
         }
       }
