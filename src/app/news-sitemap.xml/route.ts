@@ -1,5 +1,6 @@
 import { getAllBlogPostsWithUploaded } from '../[locale]/blog/_lib/uploaded-posts'
-import { sitemapLocales, getLocalizedUrl, escapeXml, sitemapHeaders } from '@/lib/sitemap-utils'
+import { siteConfig } from '@/config/site-config'
+import { escapeXml, sitemapHeaders } from '@/lib/sitemap-utils'
 
 export async function GET() {
   const allPosts = await getAllBlogPostsWithUploaded()
@@ -11,26 +12,17 @@ export async function GET() {
     return postDate >= twoDaysAgo
   })
 
-  const entries: string[] = []
-  
-  for (const post of recentPosts) {
-    for (const locale of sitemapLocales) {
-      const loc = getLocalizedUrl(`/blog/${post.slug}`, locale)
-      const newsLang = locale === 'en' ? 'en' : locale
-      
-      entries.push(`  <url>
-    <loc>${loc}</loc>
+  const entries = recentPosts.map(post => `  <url>
+    <loc>${siteConfig.siteUrl}/blog/${post.slug}</loc>
     <news:news>
       <news:publication>
         <news:name>Ergo Blockchain</news:name>
-        <news:language>${newsLang}</news:language>
+        <news:language>en</news:language>
       </news:publication>
       <news:publication_date>${new Date(post.date).toISOString()}</news:publication_date>
       <news:title>${escapeXml(post.title)}</news:title>
     </news:news>
   </url>`)
-    }
-  }
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"

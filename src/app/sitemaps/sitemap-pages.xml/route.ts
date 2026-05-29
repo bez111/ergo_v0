@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { generateMultilingualSitemap, sitemapHeaders, filterIndexablePages } from '@/lib/sitemap-utils'
+import { generateCanonicalSitemap, sitemapHeaders, filterIndexablePages } from '@/lib/sitemap-utils'
 
 export async function GET() {
   const staticPages = [
@@ -63,12 +63,10 @@ export async function GET() {
     { url: '/agent-economy/launch-kit', priority: 0.9, changefreq: 'weekly' as const },
     { url: '/agent-economy/proofs', priority: 0.9, changefreq: 'hourly' as const },
     { url: '/agent-economy/roadmap', priority: 0.9, changefreq: 'weekly' as const },
-    { url: '/agent-economy/metrics', priority: 0.8, changefreq: 'hourly' as const },
     { url: '/agent-economy/trust', priority: 0.8, changefreq: 'weekly' as const },
     { url: '/agent-economy/review-pack', priority: 0.8, changefreq: 'weekly' as const },
     { url: '/agent-economy/wallet-agent', priority: 0.8, changefreq: 'weekly' as const },
     { url: '/agent-economy/sage-widget', priority: 0.8, changefreq: 'weekly' as const },
-    { url: '/agent-economy/manifesto', priority: 0.8, changefreq: 'monthly' as const },
     { url: '/agent-economy/vs', priority: 0.8, changefreq: 'monthly' as const },
     { url: '/demos', priority: 0.8, changefreq: 'weekly' as const },
     { url: '/demos/x402-accord-gateway', priority: 0.8, changefreq: 'weekly' as const },
@@ -83,8 +81,6 @@ export async function GET() {
     { url: '/build/quickstart', priority: 0.8, changefreq: 'weekly' as const },
     { url: '/build/playground', priority: 0.8, changefreq: 'weekly' as const },
     { url: '/build/services', priority: 0.8, changefreq: 'weekly' as const },
-    // Agent registry
-    { url: '/ergo-watch/agents/submit', priority: 0.35, changefreq: 'yearly' as const },
     // Press + annual report
     { url: '/press', priority: 0.6, changefreq: 'monthly' as const },
     { url: '/state-of-ergo-2026', priority: 0.9, changefreq: 'monthly' as const },
@@ -95,7 +91,7 @@ export async function GET() {
     { url: '/legal/security', priority: 0.4, changefreq: 'yearly' as const },
   ]
 
-  const sitemap = generateMultilingualSitemap(filterIndexablePages(staticPages))
+  const sitemap = generateCanonicalSitemap(filterIndexablePages(staticPages))
 
   return new NextResponse(sitemap, { headers: sitemapHeaders })
 }

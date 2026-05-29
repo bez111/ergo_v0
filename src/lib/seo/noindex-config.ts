@@ -116,7 +116,6 @@ export const FORCE_INDEX_PATHS: string[] = [
   '/use/identity',
   '/use/gaming',
   '/use/get-erg',
-  '/use/babel-fees',
   '/use/defi',
   
   // Learn pages
@@ -132,7 +131,10 @@ export const FORCE_INDEX_PATHS: string[] = [
  */
 export function shouldNoIndex(path: string): boolean {
   // Remove locale prefix if present
-  const cleanPath = path.replace(/^\/(en|ru|zh-cn)/, '') || '/'
+  const cleanPath = path.replace(
+    /^\/(en|ru|zh-cn|zh-tw|tr|ko-kr|es|pt-br|ja|de|fr|it)(?=\/|$)/,
+    '',
+  ) || '/'
   
   // Check force index first (these are always indexed)
   if (FORCE_INDEX_PATHS.includes(cleanPath)) {

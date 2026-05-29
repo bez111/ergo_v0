@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { glossaryTerms } from '@/data/glossary'
-import { generateMultilingualSitemap, sitemapHeaders, filterIndexablePages } from '@/lib/sitemap-utils'
+import { generateCanonicalSitemap, sitemapHeaders, filterIndexablePages } from '@/lib/sitemap-utils'
 
 export async function GET() {
   const hubPage = {
@@ -17,8 +17,7 @@ export async function GET() {
   }))
 
   const allPages = [hubPage, ...termPages]
-  const sitemap = generateMultilingualSitemap(filterIndexablePages(allPages))
+  const sitemap = generateCanonicalSitemap(filterIndexablePages(allPages))
 
   return new NextResponse(sitemap, { headers: sitemapHeaders })
 }
-

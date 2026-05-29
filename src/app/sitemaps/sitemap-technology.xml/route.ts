@@ -1,11 +1,10 @@
 import { NextResponse } from 'next/server'
-import { generateMultilingualSitemap, sitemapHeaders, filterIndexablePages } from '@/lib/sitemap-utils'
+import { generateCanonicalSitemap, sitemapHeaders, filterIndexablePages } from '@/lib/sitemap-utils'
 
 export async function GET() {
   const technologyPages = [
     { url: '/technology', priority: 0.9, changefreq: 'weekly' as const },
     { url: '/technology/ergoscript', priority: 0.8, changefreq: 'monthly' as const },
-    { url: '/technology/eutxo-model', priority: 0.8, changefreq: 'monthly' as const },
     { url: '/technology/eutxo-model', priority: 0.8, changefreq: 'monthly' as const },
     { url: '/technology/nipopows', priority: 0.8, changefreq: 'monthly' as const },
     { url: '/technology/privacy-features', priority: 0.8, changefreq: 'monthly' as const },
@@ -18,7 +17,7 @@ export async function GET() {
     { url: '/technology/adaptive-emission', priority: 0.8, changefreq: 'monthly' as const },
   ]
 
-  const sitemap = generateMultilingualSitemap(filterIndexablePages(technologyPages))
+  const sitemap = generateCanonicalSitemap(filterIndexablePages(technologyPages))
 
   return new NextResponse(sitemap, { headers: sitemapHeaders })
-} 
+}

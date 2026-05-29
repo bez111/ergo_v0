@@ -225,7 +225,7 @@ export const INTERLINKING_MATRIX = {
       related: ['/start', '/docs']
     },
     '/use': {
-      children: ['/use/guides', '/use/get-erg', '/use/babel-fees'],
+      children: ['/use/defi', '/use/get-erg', '/technology/babel-fees'],
       related: ['/ecosystem', '/wallet', '/miners']
     }
   },

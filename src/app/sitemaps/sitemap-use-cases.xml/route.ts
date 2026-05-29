@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { generateMultilingualSitemap, sitemapHeaders, filterIndexablePages } from '@/lib/sitemap-utils'
+import { generateCanonicalSitemap, sitemapHeaders, filterIndexablePages } from '@/lib/sitemap-utils'
 
 export async function GET() {
   const useCasePages = [
@@ -13,11 +13,9 @@ export async function GET() {
     { url: '/use/identity', priority: 0.8, changefreq: 'monthly' as const },
     { url: '/use/gaming', priority: 0.8, changefreq: 'monthly' as const },
     { url: '/use/get-erg', priority: 0.7, changefreq: 'weekly' as const },
-    { url: '/use/babel-fees', priority: 0.7, changefreq: 'monthly' as const },
-    { url: '/use', priority: 0.7, changefreq: 'monthly' as const },
   ]
 
-  const sitemap = generateMultilingualSitemap(filterIndexablePages(useCasePages))
+  const sitemap = generateCanonicalSitemap(filterIndexablePages(useCasePages))
 
   return new NextResponse(sitemap, { headers: sitemapHeaders })
-} 
+}

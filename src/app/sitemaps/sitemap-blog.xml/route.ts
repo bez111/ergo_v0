@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { getAllBlogPostsWithUploaded } from '@/app/[locale]/blog/_lib/uploaded-posts'
-import { generateMultilingualBlogSitemap, sitemapHeaders, filterIndexablePages } from '@/lib/sitemap-utils'
+import { generateCanonicalBlogSitemap, sitemapHeaders, filterIndexablePages } from '@/lib/sitemap-utils'
 
 export async function GET() {
   const allPosts = await getAllBlogPostsWithUploaded()
@@ -12,7 +12,7 @@ export async function GET() {
     priority: 0.8
   }))
 
-  const sitemap = generateMultilingualBlogSitemap(filterIndexablePages(posts))
+  const sitemap = generateCanonicalBlogSitemap(filterIndexablePages(posts))
 
   return new NextResponse(sitemap, { headers: sitemapHeaders })
 }

@@ -1,17 +1,18 @@
 import { NextResponse } from 'next/server'
-import { generateMultilingualSitemap, sitemapHeaders, filterIndexablePages } from '@/lib/sitemap-utils'
+import { projects } from '@/app/[locale]/ecosystem/_data'
+import { generateCanonicalSitemap, sitemapHeaders, filterIndexablePages } from '@/lib/sitemap-utils'
 
 export async function GET() {
-  const ecosystemPages = [
-    { url: '/ecosystem/spectrum-finance', priority: 0.7, changefreq: 'weekly' as const },
-    { url: '/ecosystem/sigmausd', priority: 0.7, changefreq: 'weekly' as const },
-    { url: '/ecosystem/rosen-bridge', priority: 0.7, changefreq: 'weekly' as const },
-    { url: '/ecosystem/ergomixer', priority: 0.7, changefreq: 'weekly' as const },
-    { url: '/ecosystem/paideia', priority: 0.7, changefreq: 'weekly' as const },
-    { url: '/ecosystem/duckpools', priority: 0.7, changefreq: 'weekly' as const },
-  ]
+  const ecosystemPages = projects
+    .filter(project => project.status !== 'NOT_OPERATING')
+    .map(project => ({
+      url: `/ecosystem/${project.slug}`,
+      priority: project.status === 'OPERATIONAL' ? 0.7 : 0.55,
+      changefreq: 'monthly' as const,
+      lastmod: project.lastVerified ? `${project.lastVerified}T00:00:00.000Z` : undefined,
+    }))
 
-  const sitemap = generateMultilingualSitemap(filterIndexablePages(ecosystemPages))
+  const sitemap = generateCanonicalSitemap(filterIndexablePages(ecosystemPages))
 
   return new NextResponse(sitemap, { headers: sitemapHeaders })
 }

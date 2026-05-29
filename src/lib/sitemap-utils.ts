@@ -81,6 +81,50 @@ ${urlEntries}
 </urlset>`
 }
 
+function normalizePath(path: string): string {
+  return path.startsWith('/') ? path : `/${path}`
+}
+
+function canonicalLoc(path: string): string {
+  return `${BASE_URL}${normalizePath(path)}`
+}
+
+function absoluteLoc(path: string): string {
+  return /^https?:\/\//.test(path) ? path : `${BASE_URL}${normalizePath(path)}`
+}
+
+/**
+ * Generate a single canonical URL entry. Use this for submitted sitemaps:
+ * localized pages may still expose hreflang in page metadata, but the sitemap
+ * should only submit self-canonical, indexable URLs.
+ */
+export function generateCanonicalUrlEntry(page: PageConfig): string {
+  const lastmod = page.lastmod || new Date().toISOString()
+  const priority = page.priority ?? 0.8
+  const changefreq = page.changefreq ?? 'weekly'
+
+  return `  <url>
+    <loc>${escapeXml(canonicalLoc(page.url))}</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+  </url>`
+}
+
+/**
+ * Generate complete canonical sitemap XML. This is intentionally English/root
+ * canonical only to avoid submitting locale aliases that resolve to another
+ * canonical URL and become "Alternate page with canonical tag" in Search Console.
+ */
+export function generateCanonicalSitemap(pages: PageConfig[]): string {
+  const urlEntries = pages.map(page => generateCanonicalUrlEntry(page)).join('\n')
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urlEntries}
+</urlset>`
+}
+
 /**
  * Standard headers for sitemap responses
  */
@@ -155,6 +199,36 @@ ${urlEntries}
 </urlset>`
 }
 
+/**
+ * Generate image sitemap with canonical page URLs only.
+ */
+export function generateCanonicalImageSitemap(pages: PageWithImage[]): string {
+  const urlEntries = pages.map(page => {
+    const lastmod = page.lastmod || new Date().toISOString()
+    const priority = page.priority ?? 0.8
+    const changefreq = page.changefreq ?? 'weekly'
+    const imageTag = page.image ? `
+    <image:image>
+      <image:loc>${escapeXml(absoluteLoc(page.image.loc))}</image:loc>
+      <image:title>${escapeXml(page.image.title)}</image:title>${page.image.caption ? `
+      <image:caption>${escapeXml(page.image.caption)}</image:caption>` : ''}
+    </image:image>` : ''
+
+    return `  <url>
+    <loc>${escapeXml(canonicalLoc(page.url))}</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>${imageTag}
+  </url>`
+  }).join('\n')
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+${urlEntries}
+</urlset>`
+}
+
 interface BlogPostConfig {
   url: string
   title: string
@@ -197,6 +271,33 @@ ${generateHreflangLinks(post.url)}
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 ${entries.join('\n')}
+</urlset>`
+}
+
+/**
+ * Generate canonical blog sitemap. The blog article pages currently canonicalize
+ * to the root English slug, so the submitted sitemap should do the same.
+ */
+export function generateCanonicalBlogSitemap(posts: BlogPostConfig[]): string {
+  const entries = posts.map(post => `  <url>
+    <loc>${escapeXml(canonicalLoc(post.url))}</loc>
+    <lastmod>${post.lastmod || post.date}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>${post.priority ?? 0.8}</priority>
+    <news:news>
+      <news:publication>
+        <news:name>Ergo Platform</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>${post.date}</news:publication_date>
+      <news:title>${escapeXml(post.title)}</news:title>
+    </news:news>
+  </url>`).join('\n')
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+${entries}
 </urlset>`
 }
 

@@ -11,7 +11,20 @@ interface GuideCardProps {
   index: number
 }
 
+const guideDestinations: Record<string, string> = {
+  "complete-guide-ergo-wallets": "/wallet",
+  "ergoscript-smart-contract-development": "/learn/ergoscript",
+  "ergo-mining-setup-hardware-software": "/miners",
+  "defi-ergo-spectrum-finance-dexs": "/use/defi",
+  "advanced-ergoscript-complex-patterns": "/patterns",
+  "ergo-wallet-security-best-practices": "/wallet",
+  "creating-trading-nfts-ergo": "/use/nfts",
+  "sigmausd-algorithmic-stablecoins-guide": "/use/stablecoins",
+}
+
 export function GuideCard({ guide, index }: GuideCardProps) {
+  const href = guideDestinations[guide.slug] ?? "/learn"
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -20,7 +33,7 @@ export function GuideCard({ guide, index }: GuideCardProps) {
       whileHover={{ scale: 1.02, y: -5 }}
       className="group relative bg-black/80 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/10 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300"
     >
-      <Link href={`/use/guides/${guide.slug}`}>
+      <Link href={href}>
         <div className="relative">
           <Image
             src={guide.image || "/og/intro.jpg"}
