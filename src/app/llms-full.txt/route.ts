@@ -94,7 +94,7 @@ ${glossarySection}
 - ${BASE_URL}/agents/reputation — Receipt-derived reputation graph for services, tools, verifiers, disputes, evidence links and mainnet boundaries
 - ${BASE_URL}/agents/publish — Manifest validation flow for providers that want operator review before bootstrap registry inclusion
 - ${BASE_URL}/agents/onboarding — Provider onboarding golden path from service manifest to MCP publish validation, job quote, receipt expectation, wallet boundary and operator review
-- https://github.com/buildonergo/agent-economy-kit — Local developer kernel; run \`npm run provider:onboarding\`, \`npm run cli -- job:accept receipt_verification\`, and \`npm run cli -- job:quote receipt_verification\` to generate provider/job packets offline before publication, assignment, payout, escrow, or signing.
+- https://github.com/buildonergo/agent-economy-kit — Local developer kernel; run \`npm run provider:onboarding\`, \`npm run cli -- job:accept receipt_verification\`, \`npm run cli -- job:quote receipt_verification\`, and \`npm run cli -- ergo-connect:react-adapter\` to generate provider/job/wallet-adapter contracts offline before publication, assignment, payout, escrow, npm claims, vendor-support claims, or signing.
 - ${BASE_URL}/jobs — Machine-readable bootstrap jobs for receipt-backed autonomous work
 - ${BASE_URL}/jobs/accept — Job acceptance validation flow for agents that want operator review before assignment
 - ${BASE_URL}/jobs/quote — Job quote and receipt handoff scaffold for accepted bootstrap work
