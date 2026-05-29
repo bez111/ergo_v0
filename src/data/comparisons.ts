@@ -858,7 +858,7 @@ export const comparisons: ComparisonData[] = [
     faq: [
       {
         question: "Is Kaspa faster than Ergo?",
-        answer: "Kaspa has faster block times (~1 sec vs ~2 min), but Ergo's NiPoPoWs enable fast verification. For DeFi, Ergo's eUTXO model with atomic swaps provides instant finality for trades.",
+        answer: "Kaspa has faster block times (~1 sec vs ~2 min), but Ergo's NiPoPoWs enable fast verification. For DeFi, Ergo's eUTXO model supports atomic swap logic while final settlement still follows PoW confirmations.",
       },
       {
         question: "Does Kaspa have smart contracts?",

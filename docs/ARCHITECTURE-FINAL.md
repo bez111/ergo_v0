@@ -5,7 +5,7 @@
 
 **Version**: 3.0.0  
 **Date**: 2025-08-18  
-**Status**: ✅ **PRODUCTION READY**
+**Status**: Archived snapshot - superseded by current audit/mainnet gates.
 
 ---
 
@@ -261,7 +261,7 @@ node scripts/monitor-redirects.js
 
 ## ✅ **CONCLUSION**
 
-The architecture is now **PRODUCTION READY** with:
+This archived architecture snapshot previously claimed deploy readiness. It is superseded by the current audit/mainnet gates and should be read only as historical implementation context:
 
 1. **Centralized URL management** - Single source of truth
 2. **Automated cleaning** - No manual intervention needed
@@ -275,4 +275,4 @@ The architecture is now **PRODUCTION READY** with:
 
 **Prepared by**: Architecture Team  
 **Reviewed**: 2025-08-18  
-**Next Review**: 2025-09-01 
+**Next Review**: 2025-09-01

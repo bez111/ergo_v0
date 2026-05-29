@@ -142,10 +142,10 @@ The Information Architecture improvements have been fully implemented without an
 2. **Prepared migration path** to simplified structure
 3. **Comprehensive plan** for future improvements
 
-**The system is production-ready and can be deployed immediately.**
+**Historical note:** this archived snapshot previously claimed deploy readiness. That claim is superseded by the current audit/mainnet gates and must not be used as release evidence.
 
 ---
 
 **Prepared by**: IA Implementation Team  
 **Reviewed**: 2025-08-17  
-**Status**: ✅ **READY FOR PRODUCTION** 
+**Status**: Archived snapshot - superseded by current audit/mainnet gates.

@@ -1,10 +1,10 @@
 > [!WARNING]
 > Historical snapshot. This document is an archived implementation or audit note from an earlier site phase. It is not the current release gate and must not be used as evidence that Ergo, Accord, Sage, ChainCash or any related contracts are production-ready or mainnet-ready. Current release status lives in [final-batch-deploy-checklist.md](./final-batch-deploy-checklist.md), [agent-economy-mainnet-gate.md](./agent-economy-mainnet-gate.md), and [mainnet-audit-gate.md](./mainnet-audit-gate.md).
 
-# ✅ САЙТ ГОТОВ К ПРОДАКШНУ!
+# Archived Production-Readiness Snapshot
 
 **Дата:** 17 октября 2025  
-**Статус:** 🟢 PRODUCTION READY
+**Статус:** архивный снимок; текущий статус определяется release checklist и audit/mainnet gates.
 
 ---
 
@@ -181,7 +181,7 @@ NODE_ENV=production
 
 ## 🎊 ФИНАЛЬНЫЙ ВЕРДИКТ
 
-# САЙТ ГОТОВ К ПРОДАКШНУ! 🚀
+# Архивный снимок готовности
 
 **Development mode:** Работает идеально на http://localhost:3000
 
@@ -221,4 +221,3 @@ Warnings (unused vars, console.log) - это технический долг, к
 - ✅ /start
 
 **Готово к deployment!** 🎉
-

@@ -141,7 +141,7 @@ export default function RevenuePage() {
             <h4 className="font-semibold text-cyan-400 mb-2">State Channels</h4>
             <p className="text-gray-300 text-sm mb-2">High-throughput off-chain transaction processing</p>
             <ul className="space-y-1 text-gray-400 text-xs">
-              <li>• Instant transaction finality</li>
+              <li>• Fast off-chain execution with on-chain settlement</li>
               <li>• Reduced on-chain congestion</li>
               <li>• Operator fee opportunities</li>
             </ul>
@@ -322,4 +322,4 @@ export default function RevenuePage() {
       </div>
     </>
   );
-} 
+}

@@ -2046,7 +2046,7 @@ export const infographics: InfographicMeta[] = [
       "Programmable privacy with Sigma Protocols gives Ergo a distinct L1 privacy story, in contrast to fully transparent account models.",
       "Protocol-level storage rent on inactive boxes (~4+ years) addresses state bloat and funds security; most other chains have no equivalent.",
       "Ergo's MEV-aware, eUTXO plus local ordering is presented as a structurally MEV-resistant design compared with high-MEV ecosystems.",
-      "Typical fees and finality on Ergo are shown as low (~$0.01) with ~2-minute blocks and stable PoW finality.",
+      "Typical fees and settlement on Ergo are shown as low (~$0.01) with ~2-minute blocks and probabilistic PoW confirmations.",
     ],
     howToRead: [
       "Main title: Blockchain Matrix: Where Ergo Actually Fits.",
@@ -2057,7 +2057,7 @@ export const infographics: InfographicMeta[] = [
       "Row 4: L1 Privacy - Monero default privacy, Zcash optional shielded, Ergo programmable privacy with Sigma Protocols.",
       "Row 5: Demurrage / Storage Rent - Most chains none, Ergo storage rent on inactive boxes (~4+ years).",
       "Row 6: MEV Resistance - Ethereum high MEV, Ergo MEV-aware eUTXO + local ordering.",
-      "Row 7: Fees & Finality - Ergo ~$0.01 fees, ~2 min blocks, stable PoW finality.",
+      "Row 7: Fees & Settlement - Ergo ~$0.01 fees, ~2 min blocks, probabilistic PoW confirmations.",
       "Bottom banner: Why Ergo Stands Out - the only chain combining PoW + fair launch + eUTXO + programmable privacy + storage rent.",
     ],
     relatedTopics: [

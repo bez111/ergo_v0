@@ -166,7 +166,7 @@ Twitter duyurusu "doğrulanmış, bu çalışmada kapatma bekleniyor" dürüstç
 
 ## Dene
 
-[Ergoblockchain.org'u aç](https://www.ergoblockchain.org). Sağ alt, turuncu **Ask Sage** düğmesi. Ücretsiz sorular ücretsiz kalır. `/code` sorun veya herhangi bir önemli şey — ödeme paneli sizi testnet Note çıkarmada yönlendir. Testnet cüzdanı kullan ([Nautilus](https://github.com/capt-nemo429/nautilus-wallet) standarttır, veya repo klonundan `node scripts/sage-signer/bootstrap.mjs --issue-note` çalıştır) ve `0.001` testnet ERG ([faucet](https://testnet.ergoplatform.com/faucet) ~1 ERG istek başına verir).
+[Ergoblockchain.org'u aç](https://www.ergoblockchain.org). Sağ alt, turuncu **Ask Sage** düğmesi. Ücretsiz sorular ücretsiz kalır. `/code` sorun veya herhangi bir önemli şey — ödeme paneli sizi testnet Note çıkarmada yönlendir. Testnet cüzdanı kullan ([Nautilus](https://github.com/capt-nemo429/nautilus-wallet) standarttır, veya repo klonundan `node scripts/sage-signer/bootstrap.mjs --issue-note` çalıştır) ve public [faucet](https://testnet.ergofaucet.org/) üzerinden küçük bir miktar testnet ERG al.
 
 Kaynak: [ergoblockchain.org repo](https://github.com/ergoplatform) yukarıda tanımlanan her şeyi gönderi. Sage'in kullandığı Accord deseni [`examples/16-paid-mcp-ergo-testnet`](https://github.com/accord-protocol/accord-protocol/tree/main/examples/16-paid-mcp-ergo-testnet) konumundaki kanonik alıcı/satıcı yöntemi.
 

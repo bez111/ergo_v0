@@ -166,7 +166,7 @@ Twitter 발표는 "검증됨, 이번 실행에서 결제 보류 중"을 정직�
 
 ## 시도해 보세요
 
-[ergoblockchain.org을 엽니다](https://www.ergoblockchain.org). 오른쪽 하단에 주황색 **Sage에게 물어보세요** 버튼. 무료 질문은 무료로 남습니다. `/code`를 물어보거나 실질적인 것 — 결제 패널이 테스트넷 Note 발행을 통해 안내합니다. 테스트넷 지갑을 사용합니다 ([Nautilus](https://github.com/capt-nemo429/nautilus-wallet)가 표준이거나, 리포 클론에서 `node scripts/sage-signer/bootstrap.mjs --issue-note` 실행) 그리고 0.001 테스트넷 ERG ([faucet](https://testnet.ergoplatform.com/faucet)은 요청당 ~1 ERG를 제공합니다).
+[ergoblockchain.org을 엽니다](https://www.ergoblockchain.org). 오른쪽 하단에 주황색 **Sage에게 물어보세요** 버튼. 무료 질문은 무료로 남습니다. `/code`를 물어보거나 실질적인 것 — 결제 패널이 테스트넷 Note 발행을 통해 안내합니다. 테스트넷 지갑을 사용합니다 ([Nautilus](https://github.com/capt-nemo429/nautilus-wallet)가 표준이거나, 리포 클론에서 `node scripts/sage-signer/bootstrap.mjs --issue-note` 실행) 그리고 공개 [faucet](https://testnet.ergofaucet.org/)에서 소량의 테스트넷 ERG를 받습니다.
 
 소스: [ergoblockchain.org 리포](https://github.com/ergoplatform)는 위에서 설명한 모든 것을 배송합니다. Sage가 사용하는 Accord 패턴은 [`examples/16-paid-mcp-ergo-testnet`](https://github.com/accord-protocol/accord-protocol/tree/main/examples/16-paid-mcp-ergo-testnet)의 정규 구매자/판매자 배선입니다.
 

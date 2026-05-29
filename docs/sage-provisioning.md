@@ -28,7 +28,7 @@ Operational follow-ups:
 2. **Save the recovery phrase**. You'll need it only for the optional local signer, not for Vercel.
 3. Switch Nautilus to testnet (Settings → Network → Testnet).
 4. Copy the testnet address (`9f…`).
-5. Fund the wallet via [testnet.ergoplatform.com/faucet](https://testnet.ergoplatform.com/faucet) — request ~0.15 ERG (covers Reserve creation + buffer).
+5. Fund the wallet via the public [testnet faucet](https://testnet.ergofaucet.org/) — request enough testnet ERG for Reserve creation plus a small buffer.
 
 Wait ~2 min for faucet tx confirmation.
 

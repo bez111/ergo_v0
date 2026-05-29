@@ -151,7 +151,7 @@ export const playbooks: Playbook[] = [
         duration: "1 week",
         resources: [
           { type: 'doc', title: "Deployment Guide", href: "/docs/developers/infrastructure" },
-          { type: 'tool', title: "Ergo Testnet Faucet", href: "https://testnet.ergoplatform.com/faucet" },
+          { type: 'tool', title: "Ergo Testnet Faucet", href: "https://testnet.ergofaucet.org/" },
         ]
       },
     ],

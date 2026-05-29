@@ -166,7 +166,7 @@ Twitter 宣布会坦诚地说"已验证，本运行中结算待处理"。签名�
 
 ## 尝试它
 
-[打开 ergoblockchain.org](https://www.ergoblockchain.org)。右下方，橙色的**问 Sage** 按钮。免费问题保持免费。问 `/code` 或任何实质性的东西——支付面板会指导你完成发行 testnet Note 的过程。使用 testnet 钱包（[Nautilus](https://github.com/capt-nemo429/nautilus-wallet) 是标准，或从仓库克隆运行 `node scripts/sage-signer/bootstrap.mjs --issue-note`）和 `0.001` testnet ERG（[faucet](https://testnet.ergoplatform.com/faucet) 每个请求给出 ~1 ERG）。
+[打开 ergoblockchain.org](https://www.ergoblockchain.org)。右下方，橙色的**问 Sage** 按钮。免费问题保持免费。问 `/code` 或任何实质性的东西——支付面板会指导你完成发行 testnet Note 的过程。使用 testnet 钱包（[Nautilus](https://github.com/capt-nemo429/nautilus-wallet) 是标准，或从仓库克隆运行 `node scripts/sage-signer/bootstrap.mjs --issue-note`），并从公开 [faucet](https://testnet.ergofaucet.org/) 获取少量 testnet ERG。
 
 源：[ergoblockchain.org 仓库](https://github.com/ergoplatform)发布上面描述的一切。Sage 使用的 Accord 模式是 [`examples/16-paid-mcp-ergo-testnet`](https://github.com/accord-protocol/accord-protocol/tree/main/examples/16-paid-mcp-ergo-testnet) 的规范买家/卖家布线。
 

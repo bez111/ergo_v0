@@ -168,7 +168,7 @@ Der Twitter Announce wird ehrlich sagen "verified, settlement pending in this ru
 
 ## Probiere es aus
 
-[Öffne ergoblockchain.org](https://www.ergoblockchain.org). Unten rechts, der orange **Ask Sage** Button. Kostenlose Fragen bleiben kostenlos. Frag `/code` oder irgendetwas Substantielles — das Payment Panel leitet dich durch die Ausgabe eines Testnet Notes. Nutze ein Testnet Wallet ([Nautilus](https://github.com/capt-nemo429/nautilus-wallet) ist der Standard, oder laufe `node scripts/sage-signer/bootstrap.mjs --issue-note` von einem Klon des Repos) und `0.001` Testnet ERG (der [Faucet](https://testnet.ergoplatform.com/faucet) gibt ~1 ERG pro Request).
+[Öffne ergoblockchain.org](https://www.ergoblockchain.org). Unten rechts, der orange **Ask Sage** Button. Kostenlose Fragen bleiben kostenlos. Frag `/code` oder irgendetwas Substantielles — das Payment Panel leitet dich durch die Ausgabe eines Testnet Notes. Nutze ein Testnet Wallet ([Nautilus](https://github.com/capt-nemo429/nautilus-wallet) ist der Standard, oder laufe `node scripts/sage-signer/bootstrap.mjs --issue-note` von einem Klon des Repos) und eine kleine Menge Testnet ERG aus dem öffentlichen [Faucet](https://testnet.ergofaucet.org/).
 
 Source: [das ergoblockchain.org Repo](https://github.com/ergoplatform) liefert alles beschriebene oben. Das Accord Pattern, das Sage verwendet, ist die kanonische Käufer/Verkäufer-Verdrahtung unter [`examples/16-paid-mcp-ergo-testnet`](https://github.com/accord-protocol/accord-protocol/tree/main/examples/16-paid-mcp-ergo-testnet).
 

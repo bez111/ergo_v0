@@ -17,7 +17,7 @@ const SEO = {
   ogImage: "/og/technology/subblocks.jpg",
   keywords: [
     "subblocks", "fast confirmations", "Layer 1 scaling",
-    "transaction speed", "blockchain scalability", "sub-second finality",
+    "transaction speed", "blockchain scalability", "fast pre-confirmations",
     "Ergo scaling", "throughput", "instant confirmations", "research"
   ],
 }

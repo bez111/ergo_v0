@@ -166,7 +166,7 @@ Sage в настоящее время работает в **режиме тол�
 
 ## Попробуйте
 
-[Откройте ergoblockchain.org](https://www.ergoblockchain.org). В нижнем правом углу кнопка **Ask Sage**. Бесплатные вопросы остаются бесплатными. Спросите `/code` или что-нибудь существенное — панель платежа проведет вас через выпуск Note testnet. Используйте кошелек testnet ([Nautilus](https://github.com/capt-nemo429/nautilus-wallet) — стандарт или запустите `node scripts/sage-signer/bootstrap.mjs --issue-note` из клона репо) и `0.001` testnet ERG ([кран](https://testnet.ergoplatform.com/faucet) дает ~1 ERG за запрос).
+[Откройте ergoblockchain.org](https://www.ergoblockchain.org). В нижнем правом углу кнопка **Ask Sage**. Бесплатные вопросы остаются бесплатными. Спросите `/code` или что-нибудь существенное — панель платежа проведет вас через выпуск Note testnet. Используйте testnet-кошелек ([Nautilus](https://github.com/capt-nemo429/nautilus-wallet) — стандарт или запустите `node scripts/sage-signer/bootstrap.mjs --issue-note` из клона репо) и небольшое количество testnet ERG из публичного [faucet](https://testnet.ergofaucet.org/).
 
 Исходник: [репо ergoblockchain.org](https://github.com/ergoplatform) отправляет все описанное выше. Паттерн Accord, который использует Sage — это каноническая проводка покупателя/продавца на [`examples/16-paid-mcp-ergo-testnet`](https://github.com/accord-protocol/accord-protocol/tree/main/examples/16-paid-mcp-ergo-testnet).
 

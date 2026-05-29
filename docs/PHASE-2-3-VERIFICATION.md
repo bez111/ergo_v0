@@ -172,7 +172,7 @@ node scripts/monitor-redirects.js
 
 **BOTH PHASE 2 AND PHASE 3 ARE FULLY IMPLEMENTED**
 
-### Phase 2 Status: ✅ READY FOR PRODUCTION
+### Phase 2 Status: archived implementation snapshot
 - All redirect pages created and tested
 - 100% test pass rate for soft redirects
 - Monitoring tools operational
@@ -183,10 +183,10 @@ node scripts/monitor-redirects.js
 - Automation scripts ready
 - Timeline: September 2025
 
-**The system is production-ready with no breaking changes.**
+**Historical note:** this archived snapshot previously claimed production readiness. That claim is superseded by the current audit/mainnet gates and must not be used as release evidence.
 
 ---
 
 **Verified by**: IA Implementation Team  
 **Date**: 2025-08-18  
-**Final Status**: ✅ **COMPLETE & VERIFIED** 
+**Final Status**: Archived snapshot - superseded by current audit/mainnet gates.

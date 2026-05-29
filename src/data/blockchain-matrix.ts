@@ -210,7 +210,7 @@ export const blockchainMatrix: MatrixFeature[] = [
     name: 'Fees & Finality',
     description: 'Transaction costs and confirmation times',
     values: {
-      ergo: { value: '~$0.01 fees; ~2 min blocks; stable PoW finality', isAdvantage: true },
+      ergo: { value: '~$0.01 fees; ~2 min blocks; probabilistic PoW settlement', isAdvantage: true },
       bitcoin: { value: 'Variable fees; ~10 min blocks; 6-conf finality' },
       ethereum: { value: 'High L1 fees; ~12s slots; ~15 min finality' },
       monero: { value: 'Low fees; ~2 min blocks' },
@@ -301,4 +301,3 @@ export function getCompetitorAdvantages(chainId: ChainId): MatrixFeature[] {
     feature.values.ergo.isAdvantage !== true
   );
 }
-

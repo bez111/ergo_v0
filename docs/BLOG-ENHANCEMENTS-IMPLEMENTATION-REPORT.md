@@ -1,3 +1,6 @@
+> [!WARNING]
+> Historical snapshot. This document is an archived implementation note from an earlier site phase. It is not the current release gate and must not be used as evidence that the current site, Sage, Accord, ChainCash or agent-economy surfaces are production-ready or mainnet-ready. Current release status lives in [final-batch-deploy-checklist.md](./final-batch-deploy-checklist.md), [agent-economy-mainnet-gate.md](./agent-economy-mainnet-gate.md), and [mainnet-audit-gate.md](./mainnet-audit-gate.md).
+
 # 📝 BLOG ENHANCEMENTS IMPLEMENTATION REPORT
 ## Ergo Platform - Content-First Strategy
 
@@ -407,7 +410,7 @@ All blog components updated to use new structure.
 
 ---
 
-## 🚀 READY FOR PRODUCTION
+## Archived Phase-1 Completion Snapshot
 
 ### ✅ All Systems Go:
 - [x] Data structure validated
@@ -518,4 +521,3 @@ The blog now has:
 **Recommendation**: Continue with Priority 2 features
 
 **Traffic Potential**: 🚀🚀🚀🚀🚀 (5/5 stars)
-
