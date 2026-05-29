@@ -9,6 +9,8 @@
     "type",
     "status",
     "accepted_for_operator_review",
+    "accepted_service_id",
+    "accepted_category",
     "errors",
     "warnings",
     "next_steps"
@@ -18,6 +20,14 @@
     "type": { "const": "ergo.agent_service_publish_validation.v0" },
     "status": { "enum": ["accepted_for_operator_review", "blocked"] },
     "accepted_for_operator_review": { "type": "boolean" },
+    "accepted_service_id": {
+      "type": ["string", "null"],
+      "description": "Candidate service id when the manifest is accepted for operator review."
+    },
+    "accepted_category": {
+      "type": ["string", "null"],
+      "description": "Candidate service category when the manifest is accepted for operator review."
+    },
     "errors": {
       "type": "array",
       "items": { "type": "string" }
@@ -29,6 +39,9 @@
     "next_steps": {
       "type": "array",
       "items": { "type": "string" }
+    },
+    "submit_draft": {
+      "$ref": "https://www.ergoblockchain.org/agent-economy/agent-service-submit-draft.schema.v0.json"
     }
   }
 }

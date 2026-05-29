@@ -336,6 +336,7 @@ export const agentServicePublishGuide = {
   canonical: `${BASE_URL}/agents/publish`,
   api: `${BASE_URL}/api/agents/publish`,
   schema: `${BASE_URL}/agent-economy/agent-service-publish.schema.v0.json`,
+  submit_draft_schema: `${BASE_URL}/agent-economy/agent-service-submit-draft.schema.v0.json`,
   registry: agentServiceRegistry.canonical,
   public_claim:
     "A validation and operator-review flow for testnet agent service manifests. It does not publish automatically, accept custody, or open mainnet claims.",
@@ -626,8 +627,51 @@ export interface AgentServicePublishValidation {
   type: "ergo.agent_service_publish_validation.v0"
   status: "accepted_for_operator_review" | "blocked"
   accepted_for_operator_review: boolean
+  accepted_service_id: string | null
+  accepted_category: string | null
   errors: string[]
   warnings: string[]
+  next_steps: readonly string[]
+}
+
+interface AgentServiceRegistryCounts {
+  services_total: number
+  live_testnet: number
+  reference_templates: number
+  mainnet_ready: number
+}
+
+export interface AgentServiceSubmitDraft {
+  type: "ergo.agent_service_submit_draft.v0"
+  status: "ready_for_operator_review" | "blocked"
+  registry_action: "add_service_requires_operator_review" | "update_service_requires_operator_review" | "blocked"
+  operator_review_required: true
+  draft_publishes_registry: false
+  draft_signs_transactions: false
+  draft_holds_private_keys: false
+  mainnet_claims_opened: false
+  candidate_id: string | null
+  candidate_name: string | null
+  candidate_category: string | null
+  validation: AgentServicePublishValidation
+  registry_delta: {
+    existing_entry: boolean
+    pending_operator_review_candidates: number
+    current_counts: AgentServiceRegistryCounts
+    preview_counts: AgentServiceRegistryCounts
+  }
+  review_packet: {
+    manifest: Record<string, unknown> | null
+    endpoints: string[]
+    evidence_urls: string[]
+    required_boundaries: {
+      network: "ergo_testnet"
+      mainnet_ready: false
+      production_custody: false
+      requires_receipt_for_paid_services: true
+      operator_review_before_registry_write: true
+    }
+  }
   next_steps: readonly string[]
 }
 
@@ -637,7 +681,7 @@ export function validateAgentServiceManifest(input: unknown): AgentServicePublis
   const manifest = isRecord(input) ? input : null
 
   if (!manifest) {
-    return publishValidation(["manifest must be a JSON object"], warnings)
+    return publishValidation(null, ["manifest must be a JSON object"], warnings)
   }
 
   for (const field of agentServiceRegistry.registry_policy.required_provider_fields) {
@@ -747,16 +791,72 @@ export function validateAgentServiceManifest(input: unknown): AgentServicePublis
     warnings.push("add mcp, openapi, or quote_api so agents can call the service without scraping")
   }
 
-  return publishValidation(errors, warnings)
+  return publishValidation(manifest, errors, warnings)
 }
 
-function publishValidation(errors: string[], warnings: string[]): AgentServicePublishValidation {
+export function createAgentServiceSubmitDraft(input: unknown): AgentServiceSubmitDraft {
+  const manifest = isRecord(input) ? input : null
+  const validation = validateAgentServiceManifest(input)
+  const candidateId = manifest ? stringField(manifest, "id") : null
+  const candidateName = manifest ? stringField(manifest, "name") : null
+  const candidateCategory = manifest ? stringField(manifest, "category") : null
+  const existingEntry = Boolean(
+    candidateId && agentServiceRegistry.services.some((service) => service.id === candidateId),
+  )
+  const pendingOperatorReviewCandidates = validation.accepted_for_operator_review && !existingEntry ? 1 : 0
+
+  return {
+    type: "ergo.agent_service_submit_draft.v0",
+    status: validation.accepted_for_operator_review ? "ready_for_operator_review" : "blocked",
+    registry_action: validation.accepted_for_operator_review
+      ? existingEntry
+        ? "update_service_requires_operator_review"
+        : "add_service_requires_operator_review"
+      : "blocked",
+    operator_review_required: true,
+    draft_publishes_registry: false,
+    draft_signs_transactions: false,
+    draft_holds_private_keys: false,
+    mainnet_claims_opened: false,
+    candidate_id: candidateId,
+    candidate_name: candidateName,
+    candidate_category: candidateCategory,
+    validation,
+    registry_delta: {
+      existing_entry: existingEntry,
+      pending_operator_review_candidates: pendingOperatorReviewCandidates,
+      current_counts: agentServiceRegistry.counts,
+      preview_counts: agentServiceRegistry.counts,
+    },
+    review_packet: {
+      manifest,
+      endpoints: collectUrlValues(manifest ? recordField(manifest, "endpoints") : null),
+      evidence_urls: collectUrlValues(manifest ? recordField(manifest, "evidence") : null),
+      required_boundaries: {
+        network: "ergo_testnet",
+        mainnet_ready: false,
+        production_custody: false,
+        requires_receipt_for_paid_services: true,
+        operator_review_before_registry_write: true,
+      },
+    },
+    next_steps: agentServicePublishGuide.review_steps,
+  }
+}
+
+function publishValidation(
+  manifest: Record<string, unknown> | null,
+  errors: string[],
+  warnings: string[],
+): AgentServicePublishValidation {
   const accepted = errors.length === 0
   return {
     ok: accepted,
     type: "ergo.agent_service_publish_validation.v0",
     status: accepted ? "accepted_for_operator_review" : "blocked",
     accepted_for_operator_review: accepted,
+    accepted_service_id: accepted && manifest ? stringField(manifest, "id") : null,
+    accepted_category: accepted && manifest ? stringField(manifest, "category") : null,
     errors,
     warnings,
     next_steps: agentServicePublishGuide.review_steps,
@@ -1093,6 +1193,11 @@ function recordField(record: Record<string, unknown>, field: string): Record<str
 function stringField(record: Record<string, unknown>, field: string): string | null {
   const value = record[field]
   return typeof value === "string" && value.trim().length > 0 ? value : null
+}
+
+function collectUrlValues(record: Record<string, unknown> | null): string[] {
+  if (!record) return []
+  return Object.values(record).filter((value): value is string => isUrlString(value))
 }
 
 function isUrlString(value: unknown): value is string {

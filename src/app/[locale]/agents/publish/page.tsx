@@ -16,6 +16,7 @@ import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { Link } from "@/i18n/navigation"
 import {
   agentServicePublishGuide,
+  createAgentServiceSubmitDraft,
   exampleAgentServiceManifest,
   validateAgentServiceManifest,
 } from "@/lib/agent-economy/agent-market"
@@ -70,6 +71,7 @@ export async function generateMetadata({
 }
 
 const validation = validateAgentServiceManifest(exampleAgentServiceManifest)
+const submitDraft = createAgentServiceSubmitDraft(exampleAgentServiceManifest)
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -102,6 +104,12 @@ const jsonLd = {
           "@type": "DataDownload",
           name: "Publish validation schema",
           contentUrl: agentServicePublishGuide.schema,
+          encodingFormat: "application/schema+json",
+        },
+        {
+          "@type": "DataDownload",
+          name: "Submit draft schema",
+          contentUrl: agentServicePublishGuide.submit_draft_schema,
           encodingFormat: "application/schema+json",
         },
       ],
@@ -145,8 +153,9 @@ export default function AgentServicePublishPage() {
                 <p className="mt-6 max-w-3xl text-lg leading-relaxed text-neutral-300">
                   This is the safe provider path: describe capability, pricing,
                   payment rails, predicate requirements, receipt schema,
-                  evidence, and posture. The API validates the manifest for
-                  operator review; it does not publish automatically.
+                  evidence, and posture. The API validates the manifest and
+                  returns an operator-review draft; it does not publish
+                  automatically.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <SurfaceLink
@@ -161,6 +170,13 @@ export default function AgentServicePublishPage() {
                     className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-black/70 px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-neutral-200 transition-colors hover:border-orange-500/45 hover:bg-orange-500/10"
                   >
                     Schema
+                    <FileJson2 className="h-4 w-4" />
+                  </SurfaceLink>
+                  <SurfaceLink
+                    href="/agent-economy/agent-service-submit-draft.schema.v0.json"
+                    className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-black/70 px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-neutral-200 transition-colors hover:border-orange-500/45 hover:bg-orange-500/10"
+                  >
+                    Draft schema
                     <FileJson2 className="h-4 w-4" />
                   </SurfaceLink>
                   <SurfaceLink
@@ -192,7 +208,7 @@ export default function AgentServicePublishPage() {
                   <Metric label="Network" value="testnet" />
                   <Metric label="Autopublish" value="false" />
                   <Metric label="Mainnet" value="closed" />
-                  <Metric label="Custody" value="false" />
+                  <Metric label="Review draft" value={submitDraft.status} />
                 </div>
               </div>
             </div>
@@ -235,6 +251,12 @@ export default function AgentServicePublishPage() {
                   tone={validation.accepted_for_operator_review ? "allow" : "deny"}
                 />
                 <ValidationPanel
+                  icon={UploadCloud}
+                  title="Submit draft"
+                  body={`${submitDraft.registry_action}; registry write, signing, custody, and mainnet claims all remain false.`}
+                  tone={submitDraft.status === "ready_for_operator_review" ? "allow" : "deny"}
+                />
+                <ValidationPanel
                   icon={ShieldCheck}
                   title="Required fields"
                   body={guide.required_fields.join(", ")}
@@ -255,6 +277,12 @@ export default function AgentServicePublishPage() {
               </div>
               <pre className="mt-4 max-h-[620px] overflow-auto rounded-lg border border-white/10 bg-black/90 p-4 text-xs leading-relaxed text-neutral-300">
                 {JSON.stringify(exampleAgentServiceManifest, null, 2)}
+              </pre>
+              <div className="mt-5 font-mono text-[10px] uppercase tracking-[0.22em] text-orange-300">
+                Example submit draft
+              </div>
+              <pre className="mt-4 max-h-[380px] overflow-auto rounded-lg border border-white/10 bg-black/90 p-4 text-xs leading-relaxed text-neutral-300">
+                {JSON.stringify(submitDraft, null, 2)}
               </pre>
             </div>
           </div>
@@ -306,7 +334,7 @@ function Metric({ label, value }: { label: string; value: string }) {
   return (
     <div className="rounded-md border border-white/10 bg-white/[0.035] p-3">
       <div className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">{label}</div>
-      <div className="mt-1 font-mono text-sm text-orange-100">{value}</div>
+      <div className="mt-1 break-words font-mono text-sm text-orange-100">{value}</div>
     </div>
   )
 }

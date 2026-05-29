@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.ergoblockchain.org/agent-economy/agent-service-submit-draft.schema.v0.json",
+  "title": "Ergo Agent Service Submit Draft",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "status",
+    "registry_action",
+    "operator_review_required",
+    "draft_publishes_registry",
+    "draft_signs_transactions",
+    "draft_holds_private_keys",
+    "mainnet_claims_opened",
+    "candidate_id",
+    "candidate_name",
+    "candidate_category",
+    "validation",
+    "registry_delta",
+    "review_packet",
+    "next_steps"
+  ],
+  "properties": {
+    "type": { "const": "ergo.agent_service_submit_draft.v0" },
+    "status": { "enum": ["ready_for_operator_review", "blocked"] },
+    "registry_action": {
+      "enum": [
+        "add_service_requires_operator_review",
+        "update_service_requires_operator_review",
+        "blocked"
+      ]
+    },
+    "operator_review_required": { "const": true },
+    "draft_publishes_registry": { "const": false },
+    "draft_signs_transactions": { "const": false },
+    "draft_holds_private_keys": { "const": false },
+    "mainnet_claims_opened": { "const": false },
+    "candidate_id": { "type": ["string", "null"] },
+    "candidate_name": { "type": ["string", "null"] },
+    "candidate_category": { "type": ["string", "null"] },
+    "validation": {
+      "type": "object",
+      "description": "The publish validation result for the submitted manifest."
+    },
+    "registry_delta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "existing_entry",
+        "pending_operator_review_candidates",
+        "current_counts",
+        "preview_counts"
+      ],
+      "properties": {
+        "existing_entry": { "type": "boolean" },
+        "pending_operator_review_candidates": { "type": "integer", "minimum": 0 },
+        "current_counts": { "$ref": "#/$defs/registry_counts" },
+        "preview_counts": { "$ref": "#/$defs/registry_counts" }
+      }
+    },
+    "review_packet": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["manifest", "endpoints", "evidence_urls", "required_boundaries"],
+      "properties": {
+        "manifest": {
+          "type": ["object", "null"],
+          "description": "Candidate manifest for human/operator review."
+        },
+        "endpoints": {
+          "type": "array",
+          "items": { "type": "string", "format": "uri" }
+        },
+        "evidence_urls": {
+          "type": "array",
+          "items": { "type": "string", "format": "uri" }
+        },
+        "required_boundaries": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "network",
+            "mainnet_ready",
+            "production_custody",
+            "requires_receipt_for_paid_services",
+            "operator_review_before_registry_write"
+          ],
+          "properties": {
+            "network": { "const": "ergo_testnet" },
+            "mainnet_ready": { "const": false },
+            "production_custody": { "const": false },
+            "requires_receipt_for_paid_services": { "const": true },
+            "operator_review_before_registry_write": { "const": true }
+          }
+        }
+      }
+    },
+    "next_steps": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "$defs": {
+    "registry_counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["services_total", "live_testnet", "reference_templates", "mainnet_ready"],
+      "properties": {
+        "services_total": { "type": "integer", "minimum": 0 },
+        "live_testnet": { "type": "integer", "minimum": 0 },
+        "reference_templates": { "type": "integer", "minimum": 0 },
+        "mainnet_ready": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}
