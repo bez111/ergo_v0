@@ -18,7 +18,7 @@ export const economicMcpManifest = {
     health: `${MCP_URL}/health`,
     streamable_http: `${MCP_URL}/mcp`,
     repository: "https://github.com/bez111/ergoblockchain-mcp",
-    prepared_version: "0.3.0",
+    prepared_version: "0.3.1",
   },
   posture: agentMarketPosture,
   public_claim:
