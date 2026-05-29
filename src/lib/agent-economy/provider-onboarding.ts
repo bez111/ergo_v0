@@ -152,6 +152,12 @@ export const providerOnboardingPath = {
   },
   commands: [
     {
+      id: "generate-local-onboarding",
+      label: "Generate the local onboarding packet",
+      command: "npm run provider:onboarding",
+      expected: ["provider_onboarding_packet=ok", "service_manifest", "submit_draft", "wallet_handoff"],
+    },
+    {
       id: "fetch-onboarding",
       label: "Fetch the onboarding contract",
       command: `curl -sS ${BASE_URL}/api/agents/onboarding`,

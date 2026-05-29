@@ -292,7 +292,7 @@ export default function AgentEconomyLaunchKitPage() {
               <SectionHeader
                 eyebrow="Builder kernel"
                 title="Clone the proof surface into a local developer kit."
-                body="The BuildOnErgo kit gives builders a small command-line path before they touch the full site: verify one receipt, generate provider manifests, create bootstrap jobs, model wallet handoff, and keep interop boundaries explicit."
+                body="The BuildOnErgo kit gives builders a small command-line path before they touch the full site: verify one receipt, generate provider onboarding packets, create bootstrap jobs, model wallet handoff, and keep interop boundaries explicit."
               />
               <div className="mt-8 rounded-lg border border-orange-500/25 bg-orange-500/[0.055] p-5">
                 <div className="flex items-center gap-3">

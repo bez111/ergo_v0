@@ -2,7 +2,7 @@ export const agentEconomyDeveloperLaunchKit = {
   type: "ergo.agent_economy.developer_launch_kit.v0",
   version: "v0",
   status: "testnet_live_proof",
-  last_updated: "2026-05-28",
+  last_updated: "2026-05-29",
   public_claim:
     "A practical developer entrypoint for Ergo's testnet-first agent economy surfaces. Mainnet remains audit-gated.",
   entrypoints: {
@@ -330,6 +330,8 @@ export const agentEconomyDeveloperLaunchKit = {
       "npm run check",
       "npm run cli -- self-check",
       "npm run cli -- provider:manifest",
+      "npm run cli -- provider:onboarding",
+      "npm run provider:onboarding",
       "npm run cli -- job:bootstrap schema_validation",
       "npm run cli -- ergo-connect:handoff",
       "npm run cli -- interop:x402-ap2",
@@ -337,6 +339,7 @@ export const agentEconomyDeveloperLaunchKit = {
     surfaces: [
       "receipt verifier and fixture checks",
       "provider and verifier manifest templates",
+      "provider onboarding packet from manifest to review draft, job intent, quote, receipt, and wallet boundary",
       "testnet-only bootstrap job templates",
       "ErgoConnect policy and ErgoPay handoff helpers",
       "x402/AP2/Ergo boundary mapping",
