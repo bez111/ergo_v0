@@ -6,7 +6,7 @@ export const agentEconomyRoadmap = {
   type: "ergo.agent_economy.roadmap.v0",
   version: "v0",
   status: "testnet_live_proof_roadmap",
-  last_updated: "2026-05-27",
+  last_updated: "2026-05-29",
   public_claim:
     "Strategic roadmap for Ergo's public clearing and proof surface for autonomous work. It is not an audit report and does not open mainnet readiness.",
   posture: {
@@ -98,7 +98,7 @@ export const agentEconomyRoadmap = {
       phase: "build_next" as AgentEconomyRoadmapPhase,
       title: "BuildOnErgo Agent Economy Kit",
       summary:
-        "Publish a small public developer kit under buildonergo with a receipt verifier, schemas, golden-path docs, and examples that can be used without cloning the full site.",
+        "Grow the public developer kit under buildonergo into a local kernel for receipt verification, provider onboarding, job acceptance, job quote scaffolds, ErgoConnect wallet boundaries, and future adapter contracts without cloning the full site.",
       proof_links: [
         "https://github.com/buildonergo/agent-economy-kit",
         "https://www.ergoblockchain.org/agent-economy/launch-kit",
@@ -232,7 +232,7 @@ export const agentEconomyRoadmap = {
       phase: "live" as AgentEconomyRoadmapPhase,
       title: "ErgoConnect Wallet Boundary",
       summary:
-        "Published a TrustConnect-style, CAIP-native Ergo wallet boundary for autonomous work: wallet connection, ErgoAuth proof, wallet policy, unsigned or reduced transaction handoff, ErgoPay signing, receipt expectation, and settlement verification. This is a spec/bootstrap surface, not a claim of upstream Trust Wallet support.",
+        "Published a TrustConnect-style, CAIP-native Ergo wallet boundary for autonomous work: wallet connection, ErgoAuth proof, wallet policy, unsigned or reduced transaction handoff, ErgoPay signing, receipt expectation, settlement verification, and a local React adapter contract. This is a spec/bootstrap surface, not an npm package claim or upstream wallet-vendor support claim.",
       proof_links: [
         "https://www.ergoblockchain.org/build/ergo-connect",
         "https://www.ergoblockchain.org/.well-known/ergo-connect.json",
@@ -357,6 +357,12 @@ export const agentEconomyRoadmap = {
       id: "ergo-connect-wallet-boundary",
       owner: "wallet",
       label: "Specify ErgoConnect wallet boundary with CAIP IDs, ErgoAuth, ErgoPay, policy verdicts, and receipt expectations",
+      blocked_by_external: false,
+    },
+    {
+      id: "ergo-connect-react-adapter",
+      owner: "repo",
+      label: "Turn the local ErgoConnect React adapter contract into a reviewed package skeleton without npm or wallet-vendor claims",
       blocked_by_external: false,
     },
     {
