@@ -43,9 +43,9 @@ export const economicMcpManifest = {
     "query mainnet gate before making claims",
   ],
   counts: {
-    tools_total: 13,
-    http_backed_today: 9,
-    mcp_runtime_tools_prepared: 10,
+    tools_total: 14,
+    http_backed_today: 10,
+    mcp_runtime_tools_prepared: 11,
     mcp_runtime_tools_deployed: 0,
     signing_tools_allowed: 0,
     mainnet_ready_tools: 0,
@@ -59,6 +59,15 @@ export const economicMcpManifest = {
       output_schema: `${BASE_URL}/agent-economy/agent-service-registry.schema.v0.json`,
       http_endpoint: `${BASE_URL}/api/agents/registry`,
       safe_use: "Read-only discovery.",
+    },
+    {
+      name: "ergo_publish_service",
+      status: "http_backed_runtime_prepared",
+      purpose: "Validate a provider manifest and return the operator-review submit draft before registry inclusion.",
+      input_schema: `${BASE_URL}/agent-economy/agent-service-registry.schema.v0.json#/$defs/service`,
+      output_schema: `${BASE_URL}/agent-economy/agent-service-publish.schema.v0.json`,
+      http_endpoint: `${BASE_URL}/api/agents/publish`,
+      safe_use: "Validation and submit-draft only; does not publish registry entries, sign transactions, custody value, or open mainnet claims.",
     },
     {
       name: "ergo_list_jobs",
