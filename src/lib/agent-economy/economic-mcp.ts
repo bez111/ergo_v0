@@ -4,7 +4,7 @@ import { agentMarketPosture } from "./agent-market"
 const BASE_URL = "https://www.ergoblockchain.org"
 const MCP_URL = "https://mcp.ergoblockchain.org"
 
-export const economicMcpLastReviewed = "2026-05-28"
+export const economicMcpLastReviewed = "2026-05-29"
 
 export const economicMcpManifest = {
   type: "ergo.economic_mcp_tools.v0",
@@ -18,7 +18,7 @@ export const economicMcpManifest = {
     health: `${MCP_URL}/health`,
     streamable_http: `${MCP_URL}/mcp`,
     repository: "https://github.com/bez111/ergoblockchain-mcp",
-    prepared_version: "0.3.1",
+    prepared_version: "0.3.2",
   },
   posture: agentMarketPosture,
   public_claim:
@@ -43,9 +43,9 @@ export const economicMcpManifest = {
     "query mainnet gate before making claims",
   ],
   counts: {
-    tools_total: 14,
-    http_backed_today: 10,
-    mcp_runtime_tools_prepared: 11,
+    tools_total: 15,
+    http_backed_today: 11,
+    mcp_runtime_tools_prepared: 12,
     mcp_runtime_tools_deployed: 0,
     signing_tools_allowed: 0,
     mainnet_ready_tools: 0,
@@ -68,6 +68,15 @@ export const economicMcpManifest = {
       output_schema: `${BASE_URL}/agent-economy/agent-service-publish.schema.v0.json`,
       http_endpoint: `${BASE_URL}/api/agents/publish`,
       safe_use: "Validation and submit-draft only; does not publish registry entries, sign transactions, custody value, or open mainnet claims.",
+    },
+    {
+      name: "ergo_get_provider_onboarding",
+      status: "http_backed_runtime_prepared",
+      purpose: "Read the ordered provider path before calling publish, accept, quote, receipt, or wallet-boundary tools.",
+      input_schema: "none",
+      output_schema: `${BASE_URL}/agent-economy/provider-onboarding.schema.v0.json`,
+      http_endpoint: `${BASE_URL}/api/agents/onboarding`,
+      safe_use: "Read-only path guidance; does not publish, assign jobs, sign, custody value, or open mainnet claims.",
     },
     {
       name: "ergo_list_jobs",
@@ -186,7 +195,7 @@ export const economicMcpManifest = {
     "Do not bypass ErgoConnect, ErgoPay, host wallet prompts, or wallet-agent policy checks.",
   ],
   next_steps: [
-    "Deploy ergoblockchain-mcp 0.3.0 after the final batch is ready.",
+    "Deploy ergoblockchain-mcp 0.3.2 after the final batch is ready.",
     "Smoke /mcp tools/list and update mcp_runtime_tools_deployed only after production advertises the prepared tools.",
     "Keep intent-preparation tools non-signing and wallet-policy-bound.",
     "Keep redemption outside public MCP until signer ops, limits, and external review are stronger.",

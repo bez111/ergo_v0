@@ -442,6 +442,7 @@ export const agentEconomyRoadmap = {
   economic_mcp_tools: [
     "ergo_discover_services",
     "ergo_publish_service",
+    "ergo_get_provider_onboarding",
     "ergo_list_jobs",
     "ergo_accept_job",
     "ergo_get_quote",
