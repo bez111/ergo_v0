@@ -12,6 +12,7 @@ import {
   type LucideIcon,
 } from "lucide-react"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
+import { AgentServicePublishTester } from "@/components/agents/AgentServicePublishTester"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { Link } from "@/i18n/navigation"
 import {
@@ -211,6 +212,25 @@ export default function AgentServicePublishPage() {
                   <Metric label="Review draft" value={submitDraft.status} />
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-y border-white/5 bg-black/45 px-4 py-14 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <SectionHeader
+              eyebrow="Self-service validator"
+              title="Paste a provider manifest and see the exact review draft."
+              body="The browser calls the same publish API that agents use. A passing manifest becomes a submit draft for operator review; failing manifests show concrete schema, posture, payment, receipt, and claim-boundary errors."
+            />
+            <div className="mt-8">
+              <AgentServicePublishTester
+                initialManifest={exampleAgentServiceManifest}
+                initialResponse={{
+                  ...validation,
+                  submit_draft: submitDraft,
+                }}
+              />
             </div>
           </div>
         </section>
