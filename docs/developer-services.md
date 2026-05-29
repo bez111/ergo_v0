@@ -65,6 +65,8 @@ Current website behavior is intentionally conservative:
 
 ## Future Nice-To-Haves
 
+- Review `ergoplatform/faucet` and `zargarzadehm/ergo-faucet` before building a
+  custom payout worker.
 - Dedicated `faucet.ergoblockchain.org` worker with a small dashboard.
 - Per-address cooldown backed by durable KV instead of in-memory serverless state.
 - Turnstile widget in `/build/services` once the public site key is configured.

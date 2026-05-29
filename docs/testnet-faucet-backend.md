@@ -28,6 +28,21 @@ one, review maintenance status, supported node/wallet mode, rate limiting,
 captcha/anti-abuse support, observability, deployment model, and secret
 handling.
 
+Initial selection guidance:
+
+- Keep `https://testnet.ergofaucet.org/` as the public fallback link on the
+  website.
+- Use `ergoplatform/faucet` as the first official-reference candidate to review
+  if we want the smallest possible dedicated backend.
+- Use `zargarzadehm/ergo-faucet` as a richer candidate if we need asset support
+  or a more complete faucet application surface.
+- Do not expose either implementation directly from the website domain until it
+  has been reviewed, rate-limited, health-checked, and wrapped with the JSON
+  contract below.
+- Prefer a dedicated subdomain or worker, for example
+  `faucet.ergoblockchain.org`, so faucet outages and abuse controls do not
+  affect the main Next.js site.
+
 ## Required website env
 
 ```bash
@@ -89,3 +104,7 @@ Suggested failure response:
 For now the site should remain guarded and honest. The next production-quality
 step is to deploy a separate faucet worker from a reviewed implementation or a
 minimal custom service, then set the env variables above in Vercel.
+
+The website integration is already ready for that worker: once the backend URL
+and shared secret are configured, `/api/dev/faucet` can forward validated
+requests and still return JSON errors for every failure path.
