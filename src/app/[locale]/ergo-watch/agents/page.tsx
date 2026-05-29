@@ -109,31 +109,17 @@ export default async function AgentRegistryPage() {
               How to list an agent
             </h2>
             <p className="text-sm text-gray-300 leading-relaxed mb-4">
-              Open a PR against{" "}
-              <a
-                href="https://github.com/accord-protocol/accord-protocol"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange-300 hover:text-orange-200 underline decoration-orange-500/40"
-              >
-                accord-protocol/accord-protocol
-              </a>{" "}
-              adding a single JSON file at{" "}
-              <code className="text-orange-200 bg-black/40 px-1 rounded text-[12px]">
-                registry/providers/&lt;your-id&gt;.json
-              </code>{" "}
-              conforming to{" "}
-              <code className="text-orange-200 bg-black/40 px-1 rounded text-[12px]">
-                accord.provider_profile.v0
-              </code>
-              . Once merged, your agent appears here automatically within an hour.
+              Use the Agent Service publish validator to submit a testnet
+              provider manifest for operator review. It checks capabilities,
+              payment rails, predicates, receipt schema, evidence, and
+              mainnet/custody boundaries before any registry entry is added.
             </p>
             <div className="flex flex-wrap gap-2">
               <Link
-                href="/ergo-watch/agents/submit"
+                href="/agents/publish"
                 className="text-xs font-mono uppercase tracking-widest text-black bg-orange-500 hover:bg-orange-400 px-3 py-1.5 rounded-md border border-orange-500 transition-colors"
               >
-                Submit your agent →
+                Publish service →
               </Link>
               <Link
                 href="/agent-economy"

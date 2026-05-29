@@ -83,7 +83,7 @@ export async function GET() {
     { url: '/build/playground', priority: 0.8, changefreq: 'weekly' as const },
     { url: '/build/services', priority: 0.8, changefreq: 'weekly' as const },
     // Agent registry
-    { url: '/ergo-watch/agents/submit', priority: 0.7, changefreq: 'monthly' as const },
+    { url: '/ergo-watch/agents/submit', priority: 0.35, changefreq: 'yearly' as const },
     // Press + annual report
     { url: '/press', priority: 0.6, changefreq: 'monthly' as const },
     { url: '/state-of-ergo-2026', priority: 0.9, changefreq: 'monthly' as const },

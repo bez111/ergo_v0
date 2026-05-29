@@ -436,12 +436,12 @@ export default function StateOfErgoPage() {
               .
             </p>
             <p>
-              Want to add your provider to the registry referenced here?{" "}
+              Want to publish an agent service manifest for operator review?{" "}
               <Link
-                href="/ergo-watch/agents/submit"
+                href="/agents/publish"
                 className="text-orange-400 hover:text-orange-300"
               >
-                /ergo-watch/agents/submit
+                /agents/publish
               </Link>
               .
             </p>
