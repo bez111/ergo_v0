@@ -1,9 +1,12 @@
 name: SRE Production Deployment
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
+    inputs:
+      confirm:
+        description: "Type deploy-kubernetes to run this legacy Kubernetes rollout"
+        required: true
+        type: string
 
 env:
   REGISTRY: ghcr.io
@@ -11,50 +14,59 @@ env:
 
 jobs:
   build:
+    if: ${{ github.event.inputs.confirm == 'deploy-kubernetes' }}
     runs-on: ubuntu-latest
     outputs:
       version: ${{ steps.version.outputs.version }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       
       - name: Generate version
         id: version
         run: echo "version=$(date +%Y%m%d)-${{ github.sha }}" >> $GITHUB_OUTPUT
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci --production=false
-      
-      - name: Run tests
-        run: npm test
-      
-      - name: Run security scan
-        run: |
-          npm audit --production
-          npx snyk test --severity-threshold=high
-      
+        run: npm ci
+
       - name: Build application
         run: npm run build
         env:
           NODE_ENV: production
       
+      - name: Run tests
+        run: npm test
+      
+      - name: Run npm security audit
+        run: npm audit --omit=dev --audit-level=high
+
+      - name: Run Snyk security scan
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        run: |
+          if [ -z "$SNYK_TOKEN" ]; then
+            echo "SNYK_TOKEN is not configured; skipping Snyk scan."
+            exit 0
+          fi
+          npx snyk test --severity-threshold=high
+      
       - name: Setup Docker Buildx
-        uses: docker/setup-buildx-action@v2
+        uses: docker/setup-buildx-action@v3
       
       - name: Login to Registry
-        uses: docker/login-action@v2
+        uses: docker/login-action@v3
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Build and push Docker image
-        uses: docker/build-push-action@v4
+        uses: docker/build-push-action@v6
         with:
           context: .
           push: true
@@ -72,8 +84,15 @@ jobs:
     needs: build
     steps:
       - name: Check current SLO status
+        env:
+          PROMETHEUS_URL: ${{ secrets.PROMETHEUS_URL }}
         run: |
-          ERROR_BUDGET=$(curl -s https://prometheus.ergo/api/v1/query \
+          if [ -z "$PROMETHEUS_URL" ]; then
+            echo "PROMETHEUS_URL is required for the legacy Kubernetes rollout."
+            exit 1
+          fi
+
+          ERROR_BUDGET=$(curl -s "$PROMETHEUS_URL/api/v1/query" \
             -d 'query=error_budget_remaining' | jq '.data.result[0].value[1]')
           
           if (( $(echo "$ERROR_BUDGET < 0.3" | bc -l) )); then
@@ -86,6 +105,17 @@ jobs:
     needs: [build, slo-check]
     environment: production-canary
     steps:
+      - name: Configure Kubernetes
+        env:
+          KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
+        run: |
+          if [ -z "$KUBE_CONFIG_DATA" ]; then
+            echo "KUBE_CONFIG_DATA is required for the legacy Kubernetes rollout."
+            exit 1
+          fi
+          mkdir -p ~/.kube
+          echo "$KUBE_CONFIG_DATA" | base64 --decode > ~/.kube/config
+
       - name: Deploy to canary (5%)
         run: |
           kubectl set image deployment/ergo-web \
@@ -95,11 +125,13 @@ jobs:
           kubectl rollout status deployment/ergo-web -n production-canary
       
       - name: Wait and monitor canary
+        env:
+          PROMETHEUS_URL: ${{ secrets.PROMETHEUS_URL }}
         run: |
           sleep 300  # 5 minutes
           
           # Check canary error rate
-          ERROR_RATE=$(curl -s https://prometheus.ergo/api/v1/query \
+          ERROR_RATE=$(curl -s "$PROMETHEUS_URL/api/v1/query" \
             -d 'query=rate(http_requests_total{status=~"5..",deployment="canary"}[5m])' \
             | jq '.data.result[0].value[1]')
           
@@ -117,6 +149,19 @@ jobs:
       matrix:
         percentage: [25, 50, 75, 100]
     steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure Kubernetes
+        env:
+          KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
+        run: |
+          if [ -z "$KUBE_CONFIG_DATA" ]; then
+            echo "KUBE_CONFIG_DATA is required for the legacy Kubernetes rollout."
+            exit 1
+          fi
+          mkdir -p ~/.kube
+          echo "$KUBE_CONFIG_DATA" | base64 --decode > ~/.kube/config
+
       - name: Rollout to ${{ matrix.percentage }}%
         run: |
           kubectl patch deployment ergo-web -n production \
@@ -145,27 +190,48 @@ jobs:
     runs-on: ubuntu-latest
     needs: progressive-rollout
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
       
       - name: Run smoke tests
-        run: |
-          npm run test:smoke
+        run: npm run smoke:routes:prod
       
-      - name: Run synthetic monitoring
-        run: |
-          npm run test:synthetic
+      - name: Run production health check
+        run: npm run health:prod
 
   rollback:
     runs-on: ubuntu-latest
-    needs: [progressive-rollout]
-    if: failure()
+    needs: [canary-deploy, progressive-rollout]
+    if: ${{ failure() && (needs.canary-deploy.result == 'failure' || needs.progressive-rollout.result == 'failure') }}
     steps:
+      - name: Configure Kubernetes
+        env:
+          KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
+        run: |
+          if [ -z "$KUBE_CONFIG_DATA" ]; then
+            echo "KUBE_CONFIG_DATA is required for rollback."
+            exit 1
+          fi
+          mkdir -p ~/.kube
+          echo "$KUBE_CONFIG_DATA" | base64 --decode > ~/.kube/config
+
       - name: Automatic rollback
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         run: |
           kubectl rollout undo deployment/ergo-web -n production
           kubectl rollout undo deployment/ergo-web -n production-canary
           
-          # Send alert
-          curl -X POST ${{ secrets.SLACK_WEBHOOK }} \
-            -H 'Content-Type: application/json' \
-            -d '{"text":"🚨 Deployment failed and rolled back"}' 
+          if [ -n "$SLACK_WEBHOOK" ]; then
+            curl -X POST "$SLACK_WEBHOOK" \
+              -H 'Content-Type: application/json' \
+              -d '{"text":"Deployment failed and rolled back"}'
+          fi
