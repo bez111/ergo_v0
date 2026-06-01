@@ -8,7 +8,7 @@ test.describe('Critical Smoke Paths', () => {
     await expect(page.getByRole('navigation', { name: 'Main' })).toBeVisible()
     await expect(page.locator('footer')).toBeVisible()
 
-    for (const label of ['Build', 'Start', 'Use', 'Ecosystem', 'Technology', 'Learn', 'Docs', 'Blog']) {
+    for (const label of ['Proof', 'Build', 'Use', 'Technology', 'Learn', 'Docs', 'Blog']) {
       await expect(page.getByRole('banner').getByText(label, { exact: true })).toBeVisible()
     }
   })
@@ -55,6 +55,12 @@ test.describe('Critical Smoke Paths', () => {
     expect(sitemap?.status()).toBe(200)
     const sitemapText = await sitemap?.text()
     expect(sitemapText).toContain('<?xml')
-    expect(sitemapText).toContain('<urlset')
+    expect(sitemapText).toContain('<sitemapindex')
+    expect(sitemapText).toContain('/sitemaps/sitemap-pages.xml')
+
+    const pagesSitemap = await page.goto('/sitemaps/sitemap-pages.xml')
+    expect(pagesSitemap?.status()).toBe(200)
+    const pagesSitemapText = await pagesSitemap?.text()
+    expect(pagesSitemapText).toContain('<urlset')
   })
 })
