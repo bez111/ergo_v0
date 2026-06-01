@@ -23,8 +23,8 @@ const BASE_URL = "https://www.ergoblockchain.org"
 const topCards = [
   {
     label: "Runtime",
-    value: "pending",
-    body: "The public MCP endpoint is live, but these economic tools are published first as contracts and guardrails.",
+    value: "deployed",
+    body: "The public MCP endpoint now advertises the safe economic tools for discovery, quotes, policy checks, receipts, reputation, and jobs.",
     icon: Network,
   },
   {
@@ -149,7 +149,7 @@ export default function EconomicMcpPage() {
                   MCP tools prepare intents, not signatures.
                 </h1>
                 <p className="mt-6 max-w-3xl text-lg leading-relaxed text-neutral-300">
-                  The next Ergo agent surface is an MCP contract for economic
+                  The Ergo agent surface now has an MCP runtime for economic
                   actions: discover services, request quotes, check wallet
                   policy, verify receipts, and query reputation. Signing stays
                   inside the user&apos;s wallet boundary.
@@ -192,9 +192,9 @@ export default function EconomicMcpPage() {
                   <LockKeyhole className="h-9 w-9 text-orange-300" />
                 </div>
                 <p className="mt-4 text-sm leading-relaxed text-neutral-400">
-                  The endpoint is real. The economic tools are intentionally
-                  published as a safe contract before they are advertised by
-                  the MCP runtime.
+                  The endpoint is real. The safe economic tools are advertised
+                  by the MCP runtime, while signing, custody, broadcast, and
+                  mainnet claims remain outside this surface.
                 </p>
                 <div className="mt-5 grid grid-cols-2 gap-3">
                   <Metric label="Tools" value={String(economicMcpManifest.counts.tools_total)} />
@@ -229,7 +229,7 @@ export default function EconomicMcpPage() {
             <SectionHeader
               eyebrow="Tool contracts"
               title="Economic tools need explicit boundaries."
-              body="These names are the intended MCP surface for autonomous work. Some already have HTTP-backed APIs; runtime MCP advertisement comes after tests and the MCP repository are updated."
+              body="These names are the MCP surface for autonomous work. The safe runtime subset is live; planned and signer-backed tools stay gated until their boundaries are reviewed."
             />
 
             <div className="mt-8 grid gap-4 lg:grid-cols-2">

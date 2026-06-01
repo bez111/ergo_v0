@@ -6,7 +6,7 @@ export const agentEconomyRoadmap = {
   type: "ergo.agent_economy.roadmap.v0",
   version: "v0",
   status: "testnet_live_proof_roadmap",
-  last_updated: "2026-05-29",
+  last_updated: "2026-06-01",
   public_claim:
     "Strategic roadmap for Ergo's public clearing and proof surface for autonomous work. It is not an audit report and does not open mainnet readiness.",
   posture: {
@@ -217,12 +217,13 @@ export const agentEconomyRoadmap = {
     },
     {
       id: "economic-mcp-tools",
-      phase: "build_next" as AgentEconomyRoadmapPhase,
+      phase: "live" as AgentEconomyRoadmapPhase,
       title: "Economic MCP Tools",
       summary:
-        "Move MCP beyond read-only proof status into an economic tool surface for service discovery, quotes, agreements, wallet policy checks, payment intents, receipt verification, redemption, reputation, and jobs.",
+        "The public MCP endpoint now advertises safe economic tools for service discovery, provider onboarding, jobs, quotes, Agreement drafts, wallet policy checks, payment intents, receipt verification, redemption boundaries, reputation, proof state, and mainnet-gate checks.",
       proof_links: [
         "https://mcp.ergoblockchain.org/health",
+        "https://mcp.ergoblockchain.org/mcp",
         "https://www.ergoblockchain.org/agent-economy/openapi.v0.json",
         "https://www.ergoblockchain.org/agent-economy/launch-kit",
       ],
@@ -348,9 +349,9 @@ export const agentEconomyRoadmap = {
       blocked_by_external: false,
     },
     {
-      id: "economic-mcp-tools",
+      id: "mcp-runtime-watch",
       owner: "ops",
-      label: "Extend the MCP endpoint with economic tools for discovery, quote, policy, receipt, redemption, and jobs",
+      label: "Keep MCP runtime smoke checks aligned with the deployed economic tools and catch tool-list drift after every deploy",
       blocked_by_external: false,
     },
     {

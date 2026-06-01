@@ -63,6 +63,7 @@ export async function GET() {
     { url: '/agent-economy/launch-kit', priority: 0.9, changefreq: 'weekly' as const },
     { url: '/agent-economy/proofs', priority: 0.9, changefreq: 'hourly' as const },
     { url: '/agent-economy/roadmap', priority: 0.9, changefreq: 'weekly' as const },
+    { url: '/agent-economy/metrics', priority: 0.8, changefreq: 'weekly' as const },
     { url: '/agent-economy/trust', priority: 0.8, changefreq: 'weekly' as const },
     { url: '/agent-economy/review-pack', priority: 0.8, changefreq: 'weekly' as const },
     { url: '/agent-economy/wallet-agent', priority: 0.8, changefreq: 'weekly' as const },

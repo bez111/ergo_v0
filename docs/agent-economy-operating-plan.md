@@ -72,6 +72,7 @@ Live in production:
 - Developer services index with live probes for Sage, MCP, wallet-agent policy, receipt storage, and agent host surfaces.
 - Production routes for `agents.ergoblockchain.org`.
 - Developer launch kit with a five-minute path, API recipes, npm widget surface, guardrails, machine-readable JSON, and JSON Schema.
+- Public MCP runtime `0.3.2` advertises the safe economic tools for discovery, jobs, quotes, policy checks, receipt verification, reputation, and guarded redemption boundaries.
 
 ## Final Public Language
 

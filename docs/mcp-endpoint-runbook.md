@@ -1,7 +1,7 @@
 # MCP Endpoint Runbook
 
-Status as of 2026-05-22: public endpoint is testnet/support infrastructure,
-not a custody or payment signer.
+Status as of 2026-06-01: public endpoint is testnet/support infrastructure
+with safe economic MCP tools, not a custody or payment signer.
 
 ## Public Surface
 
@@ -19,6 +19,7 @@ Expected root response after the current MCP repo is deployed:
 {
   "ok": true,
   "service": "ergoblockchain-mcp",
+  "version": "0.3.2",
   "transport": "streamable-http"
 }
 ```
@@ -65,7 +66,8 @@ curl -fsS https://mcp.ergoblockchain.org/mcp
 Expected:
 
 - `/health` returns HTTP 200 and JSON with service health.
-- `/mcp` accepts Streamable HTTP MCP clients.
+- `/mcp` accepts Streamable HTTP MCP clients and `tools/list` advertises the
+  safe economic tool surface.
 - `/` returns service metadata on the current repo; unknown paths may return
   HTTP 404 JSON with instructions.
 

@@ -121,6 +121,7 @@ https://www.ergoblockchain.org/api/agent-economy/mainnet-gate
 - The developer launch kit is published as a human page, JSON manifest, and JSON Schema.
 - The Agent Economy discovery descriptor and API are published for machine-readable agent surface discovery.
 - The Agent Economy OpenAPI manifest is published for API client and documentation tooling.
+- The public MCP runtime advertises the safe economic tool surface for discovery, provider onboarding, jobs, quotes, policy checks, receipt verification, reputation, proof state, and mainnet-gate checks.
 - The release watchlist is published as the post-deploy operational contract for health, security headers, signer, MCP, receipt, and mainnet gate invariants.
 - The current release API reports the runtime Git/Vercel context for the currently served deployment without requiring a new static attestation on every deploy.
 - The 2026-05-23 release attestation pins the deployed commit, Vercel deployment id, package-lock hash, npm audit status, post-deploy watch status, production health, and route smoke result.
