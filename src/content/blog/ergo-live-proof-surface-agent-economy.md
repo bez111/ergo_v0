@@ -407,6 +407,28 @@ https://mcp.ergoblockchain.org/mcp
 https://www.ergoblockchain.org/api/agents/mcp-tools
 ```
 
+## Live proof inventory
+
+The article should not ask developers to trust a vibe. The live proof inventory is concrete:
+
+| Proof object | Why it matters |
+|---|---|
+| Testnet script identity | Publishes the observed testnet wallet, Reserve, Note, registers, and settlement identifiers for the current proof path. |
+| Signer ops evidence | Shows the permanent testnet signer endpoint, health checks, policy limits, failure logging, and runbook visibility. |
+| Wallet-agent policy check | Gives a machine-readable allow, deny, or human-review verdict before any proposed wallet action reaches signing. |
+| Wallet-agent policy playground | Lets builders mutate a proposed action and see how policy blocks or allows it before wallet authority enters the flow. |
+| Wallet-agent reference runner | Demonstrates the local sequence from policy to simulation, host-owned signing, receipt verification, and receipt retention. |
+| Audit scope manifest | Defines the external review scope before any mainnet language can open. |
+
+In machine-readable form, the mainnet gate currently reports:
+
+```text
+completed = 4
+pending = 2
+```
+
+The two remaining trust gates are external review and audit-bound mainnet script identity.
+
 ## What is deliberately not claimed
 
 The site has more live infrastructure now, so the public language must become stricter, not looser.

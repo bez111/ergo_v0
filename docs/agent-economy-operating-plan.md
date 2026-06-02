@@ -33,6 +33,78 @@ identity, signer operations, and audit artifacts are published.
 - `/api/agent-economy/live` remains the machine-readable source for hub status.
 - `/api/sage/receipt/<id>` remains the single source of receipt truth.
 
+## Strategic Helicopter View
+
+Current state:
+
+```text
+The public proof surface is live.
+```
+
+Agents and builders can now inspect discovery, jobs, quotes, wallet-policy
+checks, receipts, reputation, MCP tools, proof state, and the mainnet gate from
+one source of truth.
+
+The next strategic move is not another page. The next proof is a repeatable
+developer loop:
+
+```text
+BuildOnErgo Agent Economy Kit + Multi-Agent Receipt Loop Demo
+```
+
+The kit should let a developer reproduce the economic cycle locally without
+cloning the full site:
+
+- schemas;
+- CLI;
+- receipt verifier;
+- provider onboarding;
+- job acceptance;
+- job quote scaffolds;
+- wallet-boundary examples;
+- MCP server/client examples.
+
+The killer demo should show the market loop end to end:
+
+```text
+buyer agent -> provider agent -> verifier agent -> settlement receipt ->
+reputation update -> provider re-spends earned value on another agent
+```
+
+This turns the site from "we described the agent economy" into "any builder can
+replay the loop and connect to the public proof surface."
+
+## 90-Day Shape
+
+### 0-30 days: Developer reproducibility
+
+- Publish the BuildOnErgo Agent Economy Kit as the local developer kernel.
+- Polish the paid Sage widget into a third-party embeddable flow: chat, quote,
+  Note verification, receipt link, tenant config, and wallet-policy handoff.
+- Tighten wallet-agent runner around intent intake, policy verdict, simulation,
+  host-owned signing, broadcast handoff, receipt retention, and overclaim
+  prevention.
+- Keep MCP runtime smoke checks aligned with deployed economic tools after every
+  deploy.
+
+### 30-60 days: Market proof
+
+- Ship the multi-agent receipt loop demo: buyer, provider, verifier, settlement
+  receipt, reputation update, and re-spend.
+- Improve the reputation graph with clearer receipt evidence, verifier coverage,
+  dispute fields, and provider examples.
+- Publish provider templates for API calls, code checks, translation, indexing,
+  monitoring, schema validation, and other small services.
+
+### 60-90 days: Trust gate
+
+- Prepare the external review pack and reviewer workflow for independent
+  findings.
+- Prepare audit-bound mainnet script identity manifests with source-to-ErgoTree
+  mapping, hashes, addresses, limits, and package versions.
+- Draft the controlled mainnet readiness path while public language remains
+  testnet live proof until the gate opens.
+
 ## Live Proof Lifecycle
 
 1. Intent captured by Sage.

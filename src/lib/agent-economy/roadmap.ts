@@ -331,21 +331,27 @@ export const agentEconomyRoadmap = {
   },
   next_actions: [
     {
-      id: "widget-host-demo",
+      id: "buildonergo-agent-economy-kit",
       owner: "repo",
-      label: "Polish a hosted Sage widget demo for third-party embedding",
+      label: "Publish the BuildOnErgo Agent Economy Kit as the local developer kernel: schemas, CLI, receipt verifier, provider onboarding, job acceptance, quote scaffolds, wallet-boundary examples, and MCP examples",
       blocked_by_external: false,
     },
     {
-      id: "buildonergo-agent-economy-kit",
+      id: "multi-agent-receipt-loop-demo",
       owner: "repo",
-      label: "Publish the BuildOnErgo Agent Economy Kit with receipt verifier, schemas, and golden-path examples",
+      label: "Ship the killer demo: buyer agent hires provider agent, verifier agent checks output, settlement receipt closes the Note, reputation updates, and provider re-spends earned value on another agent",
       blocked_by_external: false,
     },
     {
       id: "wallet-agent-reference-flow",
       owner: "repo",
-      label: "Tighten wallet-agent runner around policy, simulation, signing boundary, and receipts",
+      label: "Tighten wallet-agent runner around intent intake, policy verdict, simulation, host-owned signing, broadcast handoff, receipt retention, and overclaim prevention",
+      blocked_by_external: false,
+    },
+    {
+      id: "widget-host-demo",
+      owner: "repo",
+      label: "Polish the paid Sage widget into a third-party embeddable flow: chat, quote, Note verification, receipt link, tenant config, and wallet-policy handoff",
       blocked_by_external: false,
     },
     {
@@ -385,6 +391,49 @@ export const agentEconomyRoadmap = {
       blocked_by_external: true,
     },
   ],
+  strategic_helicopter_view: {
+    current_state:
+      "The public proof surface is live: agents can inspect discovery, jobs, quotes, policy checks, receipts, reputation, MCP tools, proof state, and the mainnet gate from one source of truth.",
+    next_strategic_move:
+      "Move from proof surface to repeatable developer loop by shipping the BuildOnErgo Agent Economy Kit and a multi-agent receipt loop demo.",
+    why_it_matters:
+      "The next proof cannot be another page. It must show any builder how to reproduce the economic cycle locally, then connect to the public proof surface.",
+    non_goals: [
+      "Do not open mainnet readiness language before external review and audit-bound mainnet script identity.",
+      "Do not let MCP tools become wallet authority.",
+      "Do not let reputation become centralized certification instead of receipt-derived evidence.",
+      "Do not bury classic Ergo positioning around PoW, eUTXO, privacy, mining, wallets, DeFi, and ErgoScript.",
+    ],
+    ninety_day_shape: [
+      {
+        window: "0-30 days",
+        focus: "Developer reproducibility",
+        outcomes: [
+          "BuildOnErgo Agent Economy Kit with schemas, CLI, receipt verifier, provider onboarding, job accept, job quote, wallet boundary, and MCP examples.",
+          "Paid Sage widget hosted demo with quote, Note verification, receipt link, tenant config, and wallet-policy handoff.",
+          "Wallet-agent reference runner tightened around policy, simulation, signing boundary, and receipt retention.",
+        ],
+      },
+      {
+        window: "30-60 days",
+        focus: "Market proof",
+        outcomes: [
+          "Multi-agent receipt loop demo: buyer, provider, verifier, settlement receipt, reputation update, and re-spend.",
+          "Better reputation graph with clearer receipt evidence, verifier coverage, dispute fields, and provider examples.",
+          "Provider templates for common services such as API calls, code checks, translation, indexing, monitoring, and schema validation.",
+        ],
+      },
+      {
+        window: "60-90 days",
+        focus: "Trust gate",
+        outcomes: [
+          "External review pack and reviewer workflow ready for independent findings.",
+          "Audit-bound mainnet script identity manifests prepared with exact source-to-ErgoTree mapping, hashes, addresses, limits, and package versions.",
+          "Controlled mainnet readiness path drafted, while public language remains testnet live proof until the gate opens.",
+        ],
+      },
+    ],
+  },
   next_movement: {
     name: "Self-bootstrapping agent economy",
     transition:
