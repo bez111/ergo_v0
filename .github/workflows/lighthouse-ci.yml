@@ -83,11 +83,28 @@ jobs:
           
       - name: Wait for server
         run: npx wait-on http://localhost:3000 --timeout 60000
+
+      - name: Resolve Chrome executable
+        run: |
+          if command -v google-chrome-stable >/dev/null 2>&1; then
+            echo "PUPPETEER_EXECUTABLE_PATH=$(command -v google-chrome-stable)" >> "$GITHUB_ENV"
+          elif command -v google-chrome >/dev/null 2>&1; then
+            echo "PUPPETEER_EXECUTABLE_PATH=$(command -v google-chrome)" >> "$GITHUB_ENV"
+          elif command -v chromium >/dev/null 2>&1; then
+            echo "PUPPETEER_EXECUTABLE_PATH=$(command -v chromium)" >> "$GITHUB_ENV"
+          else
+            echo "No Chrome executable found for pa11y."
+            exit 1
+          fi
         
       - name: Install pa11y
+        env:
+          PUPPETEER_SKIP_DOWNLOAD: "true"
         run: npm install -g pa11y pa11y-ci
         
       - name: Run pa11y accessibility audit
+        env:
+          PUPPETEER_SKIP_DOWNLOAD: "true"
         run: |
           echo "Running accessibility audit on key pages..."
           
