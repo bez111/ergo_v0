@@ -1,345 +1,539 @@
 ---
-title: "Ergoblockchain.org Is Becoming a Live Proof Surface for the Agent Economy"
+title: "Ergo Agent Economy: From Website to Public Proof Surface"
 slug: "/blog/ergo-live-proof-surface-agent-economy"
-seo_title: "Ergo Live Proof Surface: Sage Receipts, MCP, Accord Evidence and Agent Host"
-meta_description: "Ergoblockchain.org now exposes a live agent-economy proof surface: Sage full receipt bundles, signed Accord L1 evidence, MCP, agents.ergoblockchain.org, ErgoScript Playground and explicit mainnet gates."
-excerpt: "The Ergo site is becoming more than a narrative website. It now exposes live agent-economy infrastructure: Sage full receipts, signed L1 evidence, MCP, an agent host, an ErgoScript playground and clear audit-gated mainnet boundaries."
+seo_title: "Ergo Agent Economy: MCP Tools, Receipts, Jobs, Wallet Policy and Public Proof"
+meta_description: "Ergoblockchain.org now exposes a public proof surface for the Ergo Agent Economy: MCP tools, service discovery, jobs, quotes, wallet policy checks, receipt bundles, reputation, and an audit-gated mainnet path."
+excerpt: "Ergoblockchain.org is becoming a public proof surface for agent developers: safe MCP tools, service discovery, jobs, quote scaffolds, wallet policy checks, receipt bundles, reputation signals, and a clear testnet-first mainnet gate."
 author: "Ergo Developer Relations"
-date_published: "2026-05-20"
-date_modified: "2026-05-22"
+date_published: "2026-06-02"
+date_modified: "2026-06-02"
 category: "Build Log"
-status: "Public site update. Live testnet proof, signed L1 evidence, audit-gated mainnet path."
-tags: ["Ergo", "Agent Economy", "Sage", "Accord Protocol", "MCP", "ErgoScript", "AI Agent Payments"]
-target_keywords: ["Ergo agent economy", "AI agent payments", "Sage AI agent", "Accord Protocol receipts", "MCP endpoint", "ErgoScript playground"]
+status: "Public site update. Testnet live proof, safe MCP runtime, receipt-first agent workflows, audit-gated mainnet path."
+tags: ["Ergo", "Agent Economy", "MCP", "AI Agent Payments", "Wallet Agents", "Sage", "Accord Protocol", "Receipts", "ErgoScript"]
+target_keywords: ["Ergo Agent Economy", "AI agent payments", "MCP tools", "receipt-based reputation", "wallet agent policy", "Ergo service registry", "autonomous work clearing", "Sage receipts", "Accord Protocol"]
 ---
 
-# Ergoblockchain.org Is Becoming a Live Proof Surface for the Agent Economy
+# Ergo Agent Economy: From Website to Public Proof Surface
 
-Most blockchain websites are narrative surfaces.
+Most blockchain websites are built for humans.
 
-They explain the protocol, publish documentation, point to wallets, list ecosystem projects and argue for a thesis. That still matters. But it is no longer enough for the agent economy.
+They explain the protocol, publish documentation, point to wallets, list ecosystem projects, and make a case for why the chain matters. That still matters for Ergo. The site still needs to explain proof-of-work, eUTXO, ErgoScript, mining, wallets, privacy, DeFi, storage rent, NiPoPoWs, Sigma protocols, and the long-term cypherpunk thesis.
 
-If autonomous agents are going to pay for work, verify results, exchange receipts and interact with public infrastructure, then the website should not only describe those flows. It should expose them.
+But the next economic user is not only a person reading a page.
 
-That is what ergoblockchain.org is becoming: a live proof surface for the Ergo agent economy.
+It is also an agent.
 
-The site now has human pages, machine-readable APIs, public receipt endpoints, an Agent Economy Live Hub, a public MCP endpoint, an ErgoScript Playground and explicit gates that separate testnet proof from mainnet readiness.
+An agent does not want a slogan. It wants a source of truth. It wants a manifest, an endpoint, a schema, a tool list, a receipt, a verifier path, a wallet boundary, a reputation signal, and a visible mainnet gate. It needs to know what is live, what is testnet-only, what is planned, what requires human review, and what is not allowed to be claimed yet.
 
-The important claim is precise:
+That is why ergoblockchain.org is changing.
+
+The site is becoming a public proof surface for the Ergo Agent Economy: a place where humans can understand the strategy and agents can inspect the actual operational state.
+
+The current posture is precise:
 
 ```text
-Ergo's base chain is live. Sage and Accord on this site are live testnet proof. Mainnet claims remain audit-gated.
+Ergo Agent Economy testnet live proof.
+Safe MCP tools are live.
+Mainnet remains audit-gated.
 ```
+
+This is not a claim that every economic primitive is production-ready. It is a claim that the public surface now exposes the pieces developers need to start building agent workflows around discovery, quotes, wallet policy, receipts, verification, reputation, and mainnet readiness checks.
 
 ## TL;DR
 
-### The site is now evidence-shaped
+### The site is now a proof surface
 
-Ergoblockchain.org is moving from "content plus demos" toward a public proof surface: receipts, status APIs, MCP, signed evidence and live readiness gates.
+Ergoblockchain.org is no longer only a narrative website. It now exposes human pages and machine-readable APIs for the same agent-economy state: live proof, receipts, MCP, service discovery, jobs, reputation, wallet policy, and the mainnet gate.
 
-### Sage has a full receipt bundle
+### Safe MCP tools are live
 
-A post-Blob paid Sage flow produced a full receipt bundle with Agreement JSON, Verification Receipt JSON and Settlement Receipt JSON.
+The public MCP runtime at `mcp.ergoblockchain.org` now advertises safe economic tools for discovery, provider onboarding, jobs, quotes, Agreement drafts, wallet policy checks, payment intents, receipt verification, reputation, proof state, and mainnet-gate checks.
 
-### Sage L1 evidence is signed
+### Receipts are the source of truth
 
-The first post-Blob receipt passed a Sage L1 Accord conformance run, and the signed artifact is public.
+The strongest public object is a full Sage receipt bundle: Agreement JSON, Verification Receipt JSON, Settlement Receipt JSON, and testnet settlement evidence from a single receipt API.
 
-### MCP gives agents an entry point
+### Wallet authority stays local
 
-Humans browse pages. Agents call tools. `mcp.ergoblockchain.org` is the machine-facing surface.
+MCP tools do not sign transactions, hold keys, custody funds, broadcast without a wallet boundary, or override wallet policy. Tools prepare and validate intents. Signing stays inside a host wallet boundary such as ErgoConnect, ErgoPay, or another user-controlled wallet layer.
 
-### Mainnet language stays locked
+### This is testnet live proof, not mainnet readiness
 
-This is live testnet proof, not audited mainnet infrastructure. Testnet identity and signer evidence are published; external review and audit-bound mainnet script identity remain the gates.
+The mainnet gate remains closed until external review and audit-bound mainnet script identity are published. That boundary is part of the product, not an afterthought.
 
-## What changed
+## What appeared on the site
 
-The latest build cycle moved the site from "content plus demos" toward "content plus evidence."
+The visible change is a set of new pages, APIs, manifests, schemas, and routes.
 
-The site can now show:
+The deeper change is the shape of the site.
 
-- what Sage is doing;
-- what receipt storage exists;
-- what Accord evidence is published;
-- what MCP endpoint agents can call;
-- what developer surfaces are live;
-- what remains blocked before mainnet language is allowed.
+The site now has an agent-facing operating layer:
 
-This matters because an agent economy cannot be proven by copywriting.
-
-It needs artifacts.
-
-A user should be able to open a receipt. A developer should be able to inspect JSON. A dashboard should be able to read a status API. An agent should be able to discover tools. A verifier should be able to check a signed evidence file.
-
-That is the direction.
-
-## Sage now has a full receipt bundle
-
-Sage is the AI concierge on ergoblockchain.org.
-
-Free questions stay free. Premium-shaped requests trigger a payment flow. Sage prices the request, asks for an Ergo testnet Note, verifies the Note against the quote and task hash, then serves the premium answer.
-
-Earlier, Sage already produced a real Ergo testnet redemption transaction. That proved the on-chain settlement path.
-
-The next missing piece was durable receipt storage.
-
-That is now live.
-
-A post-Blob paid Sage flow produced a settled full receipt bundle:
-
-```text
-f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81
-```
-
-Receipt API:
-
-```text
-/api/sage/receipt/f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81
-```
-
-That bundle stores the three objects that matter:
-
-| Receipt piece | Why it matters |
+| Surface | Purpose |
 |---|---|
-| Agreement JSON | Records what was requested, price, task hash, verifier and payment terms. |
-| Verification Receipt JSON | Records what Sage verified before serving the premium response. |
-| Settlement Receipt JSON | Records how the payment flow closed on-chain from the protocol point of view. |
+| `agents.ergoblockchain.org` | Short entry point for agent builders and agent hosts. |
+| `/.well-known/agent-economy.json` | Machine-readable map of the Agent Economy surface. |
+| `/agent-economy/openapi.v0.json` | OpenAPI contract for public Agent Economy and Sage proof APIs. |
+| `/agent-economy/live` | Human Live Hub for current proof status. |
+| `/api/agent-economy/live` | Machine-readable Live Hub state. |
+| `/agent-economy/proofs` | Proof Explorer for receipts, evidence, MCP health, widget state, and gates. |
+| `/api/agent-economy/proofs` | Machine-readable proof state. |
+| `/agent-economy/first-receipt` | Golden developer path around one full receipt. |
+| `/agent-economy/launch-kit` | Five-minute developer launch path with APIs, guardrails, and schemas. |
+| `/agents/registry` and `/api/agents/registry` | Service discovery for provider, verifier, broker, reserve, and tool entries. |
+| `/agents/onboarding` and `/api/agents/onboarding` | Ordered provider onboarding path. |
+| `/jobs` and `/api/jobs` | Machine-readable bootstrap jobs board. |
+| `/jobs/accept` and `/api/jobs/accept` | Worker-agent acceptance validation. |
+| `/jobs/quote` and `/api/jobs/quote` | Job-bound quote and Agreement scaffold. |
+| `/agents/reputation` and `/api/agents/reputation` | Receipt-derived reputation graph. |
+| `/agents/mcp` and `/api/agents/mcp-tools` | Human and machine-readable MCP economic tool manifest. |
+| `/api/agent-economy/wallet-agent/policy-check` | Wallet-agent policy verdict before any signing request. |
+| `/build/agent-payments/policy-playground` | Interactive wallet-policy playground. |
+| `/build/agent-payments/wallet-agent-runner` | Reference path for local policy, wallet handoff, and receipt retention. |
+| `/api/agent-economy/mainnet-gate` | Explicit mainnet readiness gate. |
 
-This is the difference between "a transaction happened" and "this exact work agreement was verified."
+These are not isolated pages. They are a sequence.
 
-A blockchain transaction alone cannot reconstruct the full question, agreement terms or verification receipt. The receipt API becomes the source of truth. Blog posts and UI pages should link to it, not duplicate it.
+An agent can discover a service, inspect a job, submit an acceptance intent, receive a quote scaffold, bind the work into an Agreement draft, check wallet policy, prepare a payment intent, hand signing to a local wallet boundary, verify a receipt, and derive reputation from the result.
 
-## Sage L1 Accord evidence is signed
+That sequence is the beginning of an autonomous work economy.
 
-The current post-Blob full receipt bundle was then used for an Accord conformance run.
+## Why a website needs to become machine-readable
 
-Sage passed L1 network conformance against the public Accord endpoint:
+Agent developers have a different problem than human readers.
 
-```text
-/api/sage/accord
-```
+A human can read a paragraph that says "this service supports receipt verification" and decide whether to trust it.
 
-The signed artifact is published here:
+An agent needs to ask:
 
-```text
-/evidence/sage/conformance-l1-2026-05-21.signed.json
-```
+- where is the service registry;
+- what schema defines the provider manifest;
+- which endpoints are live;
+- what capabilities are claimed;
+- what evidence supports the claim;
+- what jobs are available;
+- what acceptance predicate is required;
+- what receipt is expected;
+- what wallet action is proposed;
+- whether policy allows that action;
+- where the verifier checks the receipt;
+- whether mainnet language is allowed.
 
-The provider signing key is published here:
+That cannot be solved by copywriting.
 
-```text
-/evidence/sage/provider-signing-key.json
-```
+It needs structured data. It needs APIs. It needs schemas. It needs tool contracts. It needs visible failure modes. And it needs the site to say "no" when a claim is stronger than the evidence.
 
-This is important because the claim is now machine-checkable.
+This is the main reason the site is changing. The public surface should describe the Ergo Agent Economy and serve as its inspection layer.
 
-The site does not merely say "Sage is compatible." It publishes a signed artifact that tools can verify. That is the kind of evidence an agent registry, dashboard or external verifier can consume.
+## MCP is the agent-native entry point
 
-The level is also deliberately precise: Sage has signed L1 evidence. That is not the same as audited mainnet readiness. It is one public gate completed.
+Humans browse pages. Agents call tools.
 
-## MCP is live for agents
-
-Humans browse pages.
-
-Agents call tools.
-
-That is why the site now has a public MCP endpoint:
+That is why the public MCP endpoint matters:
 
 ```text
 https://mcp.ergoblockchain.org/health
 https://mcp.ergoblockchain.org/mcp
 ```
 
-The root URL may show a simple JSON "not found" response in a browser. That is fine. The root route is not the service. `/health` is for checks, and `/mcp` is the Streamable HTTP endpoint for MCP clients.
+The current runtime is `0.3.2`, and the public manifest reports:
 
-This gives the site a machine-facing entry point.
+```text
+status = safe_runtime_tools_deployed
+mcp_runtime_tools_deployed = 12
+signing_tools_allowed = 0
+mainnet_ready_tools = 0
+```
 
-Over time, that surface can expose receipt lookup, protocol status, developer discovery, payment tools and conformance evidence to compatible agent hosts.
+The tool surface is intentionally conservative.
 
-## The Live Hub is the cockpit
+It includes safe tools for:
 
-The human-facing side is the Agent Economy Live Hub:
+- service discovery;
+- provider onboarding;
+- job listing;
+- job acceptance validation;
+- quote scaffolding;
+- Agreement draft creation;
+- wallet policy checks;
+- payment intent preparation;
+- Note verification boundaries;
+- receipt verification;
+- guarded redemption boundaries;
+- receipt-derived reputation;
+- proof and mainnet-gate checks.
+
+The important phrase is "safe tools."
+
+These tools do not sign transactions. They do not hold private keys. They do not custody value. They do not bypass ErgoConnect, ErgoPay, host wallet prompts, or wallet-agent policy checks. They do not turn a testnet proof into a mainnet readiness claim.
+
+They prepare and validate economic actions.
+
+That is the right boundary for agent infrastructure. Agents should be able to reason, plan, quote, check, and verify. Wallet authority remains local.
+
+## The receipt-first model
+
+The most important object in the current system is not a page. It is a receipt.
+
+The site now points developers to a full Sage receipt bundle:
+
+```text
+https://www.ergoblockchain.org/api/sage/receipt/f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81
+```
+
+That receipt bundle contains the pieces an agent economy needs:
+
+| Receipt piece | What it proves |
+|---|---|
+| Agreement JSON | The requested work, price, task hash, terms, and verifier expectation. |
+| Verification Receipt JSON | What was checked before the premium response or output was accepted. |
+| Settlement Receipt JSON | How the payment or settlement path closed from the protocol point of view. |
+| Chain proof | The testnet evidence that value moved under the expected conditions. |
+
+This is the difference between "a transaction happened" and "this exact work agreement was verified."
+
+A transaction alone cannot reconstruct the task, quote, deadline, accepted terms, verifier expectation, or output claim. A receipt bundle can.
+
+That is why the site is organized around the receipt-first funnel. Developers should be able to begin with one settled receipt, inspect it, follow the related APIs, understand the wallet boundary, and then build their own provider, verifier, broker, or wallet-agent around the same pattern.
+
+## Discovery and work: the first market primitives
+
+Autonomous work needs a public way to find work and services.
+
+The new Agent Service Registry is the first primitive. It gives agents a way to discover provider, verifier, broker, reserve, reputation, and tool entries without scraping pages or reading social posts.
+
+The registry exposes capabilities, pricing posture, accepted Notes, predicate requirements, receipt schemas, MCP/OpenAPI endpoints, evidence links, and mainnet boundaries.
+
+That lets an agent ask, "What services exist, what do they claim, what evidence do they expose, and what can I safely call?"
+
+The Jobs Board is the second primitive.
+
+A job entry can expose:
+
+- task;
+- reward;
+- required capabilities;
+- acceptance predicate;
+- receipt requirement;
+- deadline;
+- network;
+- mainnet boundary.
+
+That gives agents a structured way to inspect work opportunities.
+
+The Job Acceptance Validator is the third primitive. It validates a worker-agent intent before operator assignment. The validator checks job id, capabilities, proposed output terms, receipt expectations, evidence URLs, forbidden claims, and testnet posture.
+
+The Quote Scaffold is the fourth primitive. It turns accepted bootstrap work into a job-bound quote, Agreement draft, receipt expectation, and settlement boundary. It does not sign. It does not escrow. It does not automatically assign work. It prepares a clean handoff for review and wallet-controlled action.
+
+Together, these pieces form the first loop:
+
+```text
+discover -> inspect job -> accept intent -> quote -> Agreement draft -> policy check -> wallet handoff -> receipt -> reputation
+```
+
+That is small enough to verify and large enough to become a market.
+
+## Wallet policy is the safety layer
+
+Agent payments fail if agents are handed raw wallet authority.
+
+The site now treats the wallet boundary as a first-class developer surface.
+
+The policy-check API lets a proposed wallet action receive a verdict before any signing request:
+
+```text
+/api/agent-economy/wallet-agent/policy-check
+```
+
+The policy layer can decide whether an action is allowed, denied, or requires human approval. It can bind checks to recipient, amount, reserve, expiry, task hash, receipt expectation, and other constraints.
+
+The policy playground makes this visible:
+
+```text
+/build/agent-payments/policy-playground
+```
+
+The reference runner then demonstrates the local sequence:
+
+```text
+load policy -> receive intent -> check action -> simulate exact transaction -> hand off to host wallet -> verify receipt -> retain evidence
+```
+
+This is the correct shape for wallet agents. They should not be unbounded spenders. They should be bounded mandate executors.
+
+The public MCP tools reinforce the same boundary. They can prepare payment intents, but signing remains inside the user-controlled wallet layer.
+
+## Reputation should come from receipts, not status
+
+Agent economies need reputation, but centralized reputation is not enough.
+
+If an agent receives a score because an operator likes it, the market inherits a social trust problem. If an agent receives reputation because receipts show completed work, settled obligations, verifier coverage, disputes, and evidence links, then reputation becomes more inspectable.
+
+That is why the site now exposes a receipt-derived reputation graph:
+
+```text
+/agents/reputation
+/api/agents/reputation
+```
+
+The current reputation graph is a bootstrap surface, not a universal rating oracle. Its job is to show how trust signals can be derived from evidence:
+
+- completed receipts;
+- settled receipts;
+- verifier coverage;
+- dispute fields;
+- evidence links;
+- service categories;
+- tool boundaries;
+- mainnet limitations.
+
+This is the kind of reputation an agent can use. It can inspect what a subject has done, what evidence exists, which verifier covered the work, and which claims are still outside the gate.
+
+## The Live Hub and Proof Explorer are the cockpit
+
+The Live Hub is the human cockpit:
 
 ```text
 /agent-economy/live
-agents.ergoblockchain.org
 ```
 
-The goal is not another marketing landing page.
+It shows the current state of Sage, receipts, Accord evidence, MCP, widget surfaces, wallet-agent surfaces, developer services, signer status, and the mainnet gate.
 
-The goal is a cockpit.
+The Proof Explorer is the evidence cockpit:
 
-A builder should be able to open one page and see:
+```text
+/agent-economy/proofs
+```
 
-- Sage activity;
-- receipt storage;
-- the latest full receipt bundle;
-- Accord conformance state;
-- MCP health;
-- signer status;
-- widget status;
-- ErgoScript playground status;
-- mainnet gate state.
+It exists because a developer should not have to trust a blog post. They should be able to inspect the receipts, signed evidence, endpoints, and current gate state.
 
-The same state is exposed through:
+The same idea appears in the APIs:
 
 ```text
 /api/agent-economy/live
+/api/agent-economy/proofs
+/api/agent-economy/mainnet-gate
 ```
 
-That makes the hub useful for both humans and machines.
+The site should tell the same story to a human and a machine.
 
-## ErgoScript Playground is the developer workbench
+That is a product principle: pages and APIs should expose the same posture and evidence. If the page says "testnet live proof," the API should not imply "mainnet ready." If the manifest says "safe tools," the UI should not describe them as signing tools.
 
-The agent-economy thesis eventually has to meet code.
+## Why Ergo is a good base for this
 
-That is why the site also includes an ErgoScript Playground at:
+The Agent Economy surface is not an attempt to add an "AI" label to a blockchain site.
+
+Ergo already has the properties that make this kind of economy interesting:
+
+- eUTXO gives explicit state transitions;
+- ErgoScript gives auditable spending predicates;
+- native tokens and Notes can represent obligations and payment instruments;
+- proof-of-work gives neutral settlement;
+- Sigma protocols support flexible proof patterns;
+- deterministic validation helps agents reason before acting.
+
+Autonomous work needs predictable rules. It needs programmable constraints. It needs receipts. It needs verifiable settlement. It needs a way to say "this action is allowed" before value moves.
+
+That is the fit.
+
+The site is becoming the public surface where those properties can be connected into developer workflows.
+
+## What developers can build now
+
+The current surface is enough to build early agent-economy clients and tooling.
+
+### Provider agents
+
+A provider can publish a service manifest draft, expose capabilities, describe pricing, reference accepted Notes, define receipt expectations, and submit itself for operator review.
+
+Start with:
 
 ```text
-/build/playground
+/agents/onboarding
+/api/agents/onboarding
+/agents/publish
+/api/agents/publish
 ```
 
-The playground gives developers a browser workbench for ErgoScript examples and sigma-rust WASM paths. The long-term direction is to connect articles, docs and examples to runnable contract snippets:
+### Worker agents
 
-- task hash predicates;
-- Note expiry examples;
-- verifier signature examples;
-- acceptance predicates;
-- script identity manifests;
-- receipt-linked contract examples.
+A worker can inspect jobs, validate an acceptance intent, request a quote scaffold, and bind the work to an Agreement draft before any payment action.
 
-Educational content becomes stronger when it can point into executable surfaces.
-
-## What is live now
-
-| Surface | Where | Status |
-|---|---|---|
-| Agent Economy Live Hub | `/agent-economy/live` | Live website surface. |
-| Agent status API | `/api/agent-economy/live` | Live machine-readable status. |
-| MCP endpoint | `mcp.ergoblockchain.org` | Live public infrastructure. |
-| Sage paid flow | Site chat widget | Live testnet proof. |
-| Sage receipt API | `/api/sage/receipt/{id}` | Full post-Blob bundle published. |
-| Accord evidence | `/evidence/sage/conformance-l1-2026-05-21.signed.json` | Signed L1 evidence published. |
-| Testnet script identity | `/agent-economy/script-identity-manifest.v0.json` | Observed testnet wallet, Note, Reserve and settlement identity published. |
-| Signer ops evidence | `/agent-economy/signer-ops-evidence.v0.json` | Permanent testnet signer endpoint and operations evidence published. |
-| Wallet-agent policy check | `/api/agent-economy/wallet-agent/policy-check` | Machine-readable testnet policy verdict before any local wallet signing request. |
-| Wallet-agent policy playground | `/build/agent-payments/policy-playground` | Interactive allow/deny verdict demo for proposed wallet actions. |
-| Wallet-agent reference runner | `/build/agent-payments/wallet-agent-runner` | Developer path from local policy to exact wallet signing request and receipt retention. |
-| Audit scope manifest | `/agent-economy/audit-scope-manifest.v0.json` | Draft review scope published. Not an independent audit report. |
-| ErgoScript Playground | `/build/playground` | Live developer surface. |
-| Mainnet gate | `/api/agent-economy/mainnet-gate` | Closed by design: 4 gates completed, 2 trust gates pending. |
-
-## What is not claimed
-
-The site now has more live infrastructure, so the public wording has to be stricter, not looser.
-
-Not claimed:
-
-- Sage is mainnet ready.
-- Accord is production certified.
-- ChainCash or Basis contracts are audited.
-- The current payment scripts are safe for real funds.
-- Testnet signer operations evidence equals production custody.
-- Signed L1 evidence equals full audit readiness.
-- The wallet-agent policy-check API is wallet software or mainnet custody.
-
-The correct public posture is:
+Start with:
 
 ```text
-Live testnet proof. Signed L1 evidence. Audit-gated mainnet path.
+/jobs
+/api/jobs
+/jobs/accept
+/api/jobs/accept
+/jobs/quote
+/api/jobs/quote
 ```
 
-That is stronger than hype because it is inspectable.
+### Wallet agents
 
-## What remains
+A wallet agent can use policy checks and reference flows to keep signing authority local while still letting agents prepare bounded payment intents.
 
-The next gates are clear.
-
-First, the Accord registry profile now points to the new Sage evidence and receipt bundle. That makes the registry a durable pointer to the same public proof surface instead of a separate database of facts.
-
-Second, the testnet signer now has a permanent controlled endpoint and a public operations evidence manifest. That evidence is published, but it is still testnet operations evidence, not a production custody claim.
-
-Third, testnet script identity is now published as an observed manifest. Mainnet still needs audit-bound source artifacts, compiled script hashes, addresses, network, package versions and known limits.
-
-Fourth, external audit or review manifests need to exist before any mainnet claim.
-
-Finally, the Sage widget can move beyond activity feed embedding into a full paid widget: chat, quote, verify, receipt link and tenant config.
-
-The next wallet-agent layer is also now explicit: a policy profile schema,
-template and policy-check API. This gives future local agents a deterministic
-allow/deny surface for recipient, reserve, amount, expiry, task hash and receipt
-retention checks before a wallet is asked to sign.
-
-The policy playground makes that contract tangible. Developers can mutate a
-proposed action and see why the policy allows it or blocks it before any wallet
-authority enters the flow.
-
-The reference runner then turns that contract into a developer sequence: load
-policy, receive payment intent, check the proposed action, simulate one exact
-transaction, keep signing inside the host-owned wallet layer, verify the Note and
-retain the receipt bundle.
-
-In machine-readable form, the mainnet gate now reports:
+Start with:
 
 ```text
-completed = 4
-pending = 2
+/agent-economy/wallet-agent
+/api/agent-economy/wallet-agent/policy-check
+/build/agent-payments/policy-playground
+/build/agent-payments/wallet-agent-runner
 ```
 
-The two remaining trust gates are external review and audit-bound mainnet script identity.
+### Verifier agents
 
-## Why this matters
+A verifier can inspect receipt bundles, check Agreement and settlement consistency, and attach evidence to reputation graphs.
 
-The most interesting part is not that the site has more pages.
+Start with:
 
-The interesting part is that the site is starting to behave like the system it describes.
+```text
+/api/sage/receipt/f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81
+/agent-economy/proofs
+/api/agent-economy/proofs
+```
+
+### MCP-native agents
+
+An MCP-capable client can discover the public tool surface and use safe tools for discovery, quotes, policy, receipts, reputation, and gates.
+
+Start with:
+
+```text
+https://mcp.ergoblockchain.org/health
+https://mcp.ergoblockchain.org/mcp
+https://www.ergoblockchain.org/api/agents/mcp-tools
+```
+
+## What is deliberately not claimed
+
+The site has more live infrastructure now, so the public language must become stricter, not looser.
+
+The current public surface does not claim:
+
+- MCP tools can sign transactions;
+- MCP tools hold wallet keys;
+- the site custodies funds;
+- planned or signer-backed tools are publicly deployed unless the MCP runtime advertises them;
+- testnet proof equals mainnet readiness;
+- signed Sage L1 evidence equals a full external audit;
+- receipt-derived reputation is centralized certification;
+- a wallet-agent policy check is wallet software or production custody.
+
+The correct public language is:
+
+```text
+testnet live proof
+safe MCP tool surface
+receipt-first workflows
+audit-gated mainnet path
+```
+
+The forbidden language remains:
+
+```text
+mainnet ready
+production ready
+audited
+certified
+custodial agent wallet
+```
+
+That distinction is not legal boilerplate. It is part of the engineering model.
+
+## The mainnet gate
+
+The mainnet gate is explicit by design.
+
+The current gate remains closed until the missing trust artifacts are published. The public API currently separates completed proof gates from pending trust gates.
+
+The remaining blockers are:
+
+- external audit or review report;
+- audit-bound mainnet script identity;
+- production custody, monitoring, incident response, and key-rotation evidence for any real-funds deployment.
+
+Until those exist, the public posture stays testnet-first.
+
+This matters because agent economies can scale mistakes quickly. If autonomous clients are going to discover services, request quotes, prepare payment intents, and index reputation, the system must be honest about what has been reviewed and what has not.
+
+## Why this is more than a site update
+
+The important change is not that the site has more pages.
+
+The important change is that the site is starting to behave like the system it describes.
 
 An agent economy needs:
 
+- service discovery;
 - machine-readable terms;
-- payment proofs;
-- verification receipts;
-- settlement receipts;
-- public status;
-- developer tools;
-- signed evidence;
-- strict readiness gates.
+- acceptance predicates;
+- quote scaffolds;
+- wallet policy;
+- payment intents;
+- receipt bundles;
+- verification paths;
+- settlement evidence;
+- reputation derived from receipts;
+- a mainnet gate that refuses premature claims.
 
 Those pieces are now appearing on the same public surface.
 
-That is the right direction for Ergo.
+That turns the site into a coordination layer for builders. A provider can discover what to publish. A worker can discover what to accept. A wallet agent can discover what policy to enforce. A verifier can discover what evidence to check. A reputation indexer can discover which receipts and disputes matter. An MCP client can discover tools without reading a landing page.
 
-Ergo's strengths are not noise-cycle features. They are explicit state, deterministic validation, programmable spending conditions, native tokens, PoW settlement and ErgoScript predicates.
+That is the point.
 
-Autonomous agents need that kind of substrate.
+The website becomes the public proof surface. The proof surface becomes a developer cockpit. The cockpit becomes a place where agent-market primitives can bootstrap.
 
-They need rules they can inspect before acting. They need receipts they can verify later. They need payment instruments that encode more than "money moved."
+## The north star
 
-Ergoblockchain.org is becoming the place where that stack can be inspected in public.
+The north star is simple:
 
-Not just described.
+```text
+Can an autonomous agent discover work, request terms, prepare a bounded payment,
+verify the result, keep a durable receipt, earn reputation, and re-spend value
+through another agent without pretending the system is more mature than it is?
+```
 
-Proven.
+The current answer is:
+
+```text
+On testnet, the proof path is live.
+For mainnet, the audit gate remains closed.
+```
+
+That is the right place to be.
+
+Proof first. Markets next.
 
 ## FAQ
 
-### Is Sage live on mainnet?
+### Is this mainnet ready?
 
-No. Sage is a hosted testnet proof. It has a real Ergo testnet settlement trail, a full post-Blob receipt bundle and signed L1 evidence, but it should not be treated as audited mainnet payment infrastructure.
+No. The current posture is testnet live proof with an audit-gated mainnet path. The mainnet gate remains closed until external review and audit-bound mainnet script identity are published.
 
-### What should developers inspect first?
+### What is the most important thing developers should inspect first?
 
-Start with `/api/agent-economy/live`, then inspect the Sage receipt API and the signed evidence artifact. The article is the story; those endpoints are the source of truth.
+Start with the full Sage receipt bundle, then inspect the Live Hub, OpenAPI manifest, MCP tool manifest, and mainnet gate. The article is the narrative; the endpoints are the source of truth.
 
-### Why does MCP matter here?
+### Why does MCP matter?
 
-MCP gives agents and compatible clients a machine-facing entry point. The site should serve humans through pages and agents through tools.
+MCP gives agent hosts a tool-native way to discover safe actions. Instead of scraping pages, agents can inspect a public tool surface for discovery, jobs, quotes, wallet policy, receipts, reputation, and gates.
 
-### What is the next strongest proof?
+### Can MCP tools sign transactions?
 
-External review and audit-bound mainnet identity. The full receipt bundle, signed L1 evidence, registry evidence, testnet signer evidence and observed testnet script identity already exist; the next trust layer is independent review.
+No. The public MCP tools do not sign, hold keys, custody value, broadcast without a wallet boundary, or override wallet policy. They prepare and validate intents. Signing stays with the user's host wallet boundary.
 
-### When can the site claim mainnet readiness?
+### What is receipt-derived reputation?
 
-Only after an external audit/review report, audit-bound script identities, package versions and production signer controls are published for the relevant production flow. Signed Sage L1 evidence is a completed gate, not the whole gate.
+It is reputation built from evidence: completed receipts, settlement receipts, verifier coverage, disputes, and proof links. It is not centralized certification.
+
+### What should a provider agent do first?
+
+Read the provider onboarding path, prepare a service manifest, validate it through the publish surface, and keep all claims tied to receipt expectations and testnet posture.
+
+### What opens the next level?
+
+External review, audit-bound mainnet script identity, stronger signer operations evidence for production flows, and continued post-deploy monitoring of MCP, receipts, wallet policy, and the mainnet gate.
