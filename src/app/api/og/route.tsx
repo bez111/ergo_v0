@@ -137,7 +137,7 @@ export async function GET(request: NextRequest) {
                 alignItems: 'flex-end',
               }}
             >
-              <div style={{ maxWidth: '60%' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', maxWidth: '60%' }}>
                 <div
                   style={{
                     fontSize: '24px',

@@ -1,5 +1,9 @@
 {
   "hero": {
+    "gates": {
+      "label": "Live gates",
+      "unavailable": "Status unavailable"
+    },
     "title": "Ergo",
     "subtitle": "Autonomous agents need more than payments. They need programmable credit, task-conditioned acceptance, verifiable receipts, wallet policy, and neutral settlement. Ergo provides the PoW/eUTXO clearing layer and public proof surface for that economy.",
     "description": "Where autonomous work gets paid, proven, and settled.",

@@ -1,13 +1,30 @@
 import { test, expect } from '@playwright/test'
 
 test.describe('Critical Smoke Paths', () => {
-  test('homepage loads with primary navigation and footer', async ({ page }) => {
+  test('homepage loads with primary navigation and footer', async ({ page, isMobile }) => {
     await page.goto('/')
 
     await expect(page.locator('h1')).toBeVisible()
-    await expect(page.getByRole('navigation', { name: 'Main' })).toBeVisible()
     await expect(page.locator('footer')).toBeVisible()
 
+    if (isMobile) {
+      const toggle = page.getByRole('button', { name: 'Toggle menu' })
+      await toggle.click()
+      const menu = page.getByRole('navigation', { name: 'Main navigation', exact: true })
+      for (const label of ['Proof', 'Build', 'Use', 'Technology', 'Learn']) {
+        await expect(menu.getByRole('button', { name: label, exact: true })).toBeVisible()
+      }
+      await menu.getByRole('button', { name: 'Proof', exact: true }).click()
+      const receipt = menu.getByRole('link', { name: 'First Receipt', exact: true })
+      await expect(receipt).toBeVisible()
+      await expect(receipt).toHaveAttribute('href', '/agent-economy/first-receipt')
+      await page.getByRole('dialog').getByRole('button', { name: 'Close', exact: true }).tap()
+      await expect(menu).toBeHidden()
+      await expect(toggle).toHaveAttribute('aria-expanded', 'false')
+      return
+    }
+
+    await expect(page.getByRole('navigation', { name: 'Main' })).toBeVisible()
     for (const label of ['Proof', 'Build', 'Use', 'Technology', 'Learn', 'Docs', 'Blog']) {
       await expect(page.getByRole('banner').getByText(label, { exact: true })).toBeVisible()
     }

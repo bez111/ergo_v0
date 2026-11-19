@@ -1,5 +1,9 @@
 {
   "hero": {
+    "gates": {
+      "label": "已通過的檢查",
+      "unavailable": "暫時無法取得狀態"
+    },
     "title": "Ergo",
     "subtitle": "為自主智能代理和機器對機器商務打造的可程式化、抗審查區塊鏈。",
     "description": "可程式化貨幣的全球中立結算層。",

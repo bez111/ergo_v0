@@ -1,5 +1,9 @@
 {
   "hero": {
+    "gates": {
+      "label": "Başarılı kontroller",
+      "unavailable": "Durum bilgisi alınamıyor"
+    },
     "title": "Ergo",
     "subtitle": "Otonom ajanlar ve makineler arası ticaret için programlanabilir, sansüre dirençli blok zinciri.",
     "description": "Programlanabilir para için küresel olarak tarafsız uzlaşma katmanı.",

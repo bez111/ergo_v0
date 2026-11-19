@@ -1,5 +1,9 @@
 {
   "hero": {
+    "gates": {
+      "label": "Contrôles réussis",
+      "unavailable": "État indisponible"
+    },
     "title": "Ergo",
     "subtitle": "La blockchain programmable et résistante à la censure conçue pour les agents autonomes et le commerce machine-à-machine.",
     "description": "La couche de règlement neutre et mondiale pour la monnaie programmable.",

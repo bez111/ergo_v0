@@ -1,5 +1,9 @@
 {
   "hero": {
+    "gates": {
+      "label": "Bestandene Prüfungen",
+      "unavailable": "Status nicht verfügbar"
+    },
     "title": "Ergo",
     "subtitle": "Die programmierbare, zensurresistente Blockchain für autonome Agenten und Maschine-zu-Maschine-Handel.",
     "description": "Die global-neutrale Settlement-Schicht für programmierbares Geld.",

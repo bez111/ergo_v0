@@ -1,5 +1,9 @@
 {
   "hero": {
+    "gates": {
+      "label": "已通过的检查",
+      "unavailable": "状态暂不可用"
+    },
     "title": "Ergo",
     "subtitle": "为自主AI代理和机器对机器商务打造的可编程、抗审查区块链。",
     "description": "可规划资金的全球中立结算层。",

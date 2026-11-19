@@ -11,13 +11,15 @@ import {
   ReceiptText,
   Radio,
 } from "lucide-react"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
+import { LiveGateCount } from "@/components/home/live-gate-count"
 import { GlitchText } from "@/components/animations/glitch-text"
 
 const LATEST_FULL_RECEIPT_ID = "f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81"
 
 export function HeroFinal() {
   const locale = useLocale()
+  const t = useTranslations("hero.gates")
   const ru = locale === "ru"
   const staticHeadline = ru
     ? "Где автономная работа оплачивается, доказывается и закрывается."
@@ -27,7 +29,7 @@ export function HeroFinal() {
     : "Autonomous agents need more than payments: programmable credit, task-conditioned acceptance, verifiable receipts, wallet policy, and neutral PoW/eUTXO settlement."
   const typedHeadline = useTypewriterLoop(staticHeadline)
 
-  const proofStrip = ru ? [
+  const proofStrip = [
     {
       icon: Radio,
       label: "Live proof",
@@ -42,33 +44,8 @@ export function HeroFinal() {
     },
     {
       icon: CheckCircle2,
-      label: "Gates",
-      value: "18 / 19 live",
-      href: "/agent-economy/proofs",
-    },
-    {
-      icon: LockKeyhole,
-      label: "Mainnet",
-      value: "audit-gated",
-      href: "/agent-economy/live#mainnet-gate",
-    },
-  ] : [
-    {
-      icon: Radio,
-      label: "Live proof",
-      value: "testnet",
-      href: "/agent-economy/live",
-    },
-    {
-      icon: ReceiptText,
-      label: "Full receipt",
-      value: "settled",
-      href: `/r/sage/${LATEST_FULL_RECEIPT_ID}`,
-    },
-    {
-      icon: CheckCircle2,
-      label: "Gates",
-      value: "18 / 19 live",
+      label: t("label"),
+      value: <LiveGateCount />,
       href: "/agent-economy/proofs",
     },
     {
@@ -159,33 +136,32 @@ export function HeroFinal() {
             </Link>
           </div>
 
-          <div
+          <ul
             className="mt-8 grid w-full max-w-4xl grid-cols-2 border-y border-white/10 bg-black/35 text-left backdrop-blur-sm md:grid-cols-4"
-            role="list"
             aria-label="Live proof summary"
           >
             {proofStrip.map((item) => (
-              <Link
-                key={item.label}
-                href={item.href}
-                className="group flex min-h-[76px] items-center gap-3 border-white/10 px-3 py-3 transition-colors hover:bg-orange-500/10 md:border-r md:last:border-r-0"
-                role="listitem"
-              >
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center border border-orange-500/20 bg-orange-500/10 text-orange-300 group-hover:border-orange-400/55 group-hover:bg-orange-500/20" style={{ borderRadius: 6 }}>
-                  <item.icon className="h-4 w-4" aria-hidden="true" />
-                </div>
-                <div className="min-w-0">
-                  <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-neutral-500">
-                    {item.label}
-                  </p>
-                  <p className="mt-1 flex items-center gap-1.5 text-xs font-semibold text-white sm:text-sm">
-                    {item.value}
-                    <ArrowRight className="h-3.5 w-3.5 text-orange-300 opacity-0 transition-opacity group-hover:opacity-100" aria-hidden="true" />
-                  </p>
-                </div>
-              </Link>
+              <li key={item.label} className="border-white/10 md:border-r md:last:border-r-0">
+                <Link
+                  href={item.href}
+                  className="group flex min-h-[76px] items-center gap-3 px-3 py-3 transition-colors hover:bg-orange-500/10"
+                >
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center border border-orange-500/20 bg-orange-500/10 text-orange-300 group-hover:border-orange-400/55 group-hover:bg-orange-500/20" style={{ borderRadius: 6 }}>
+                    <item.icon className="h-4 w-4" aria-hidden="true" />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-neutral-500">
+                      {item.label}
+                    </p>
+                    <p className="mt-1 flex items-center gap-1.5 text-xs font-semibold text-white sm:text-sm">
+                      {item.value}
+                      <ArrowRight className="h-3.5 w-3.5 text-orange-300 opacity-0 transition-opacity group-hover:opacity-100" aria-hidden="true" />
+                    </p>
+                  </div>
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </section>

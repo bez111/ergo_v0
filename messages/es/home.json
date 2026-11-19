@@ -1,5 +1,9 @@
 {
   "hero": {
+    "gates": {
+      "label": "Comprobaciones superadas",
+      "unavailable": "Estado no disponible"
+    },
     "title": "Ergo",
     "subtitle": "La blockchain programable y resistente a la censura construida para agentes autónomos y comercio máquina-a-máquina.",
     "description": "La capa de liquidación globalmente neutral para el dinero programable.",
