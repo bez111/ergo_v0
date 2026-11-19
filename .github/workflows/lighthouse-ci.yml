@@ -16,7 +16,7 @@ jobs:
   # E2E Tests with Playwright
   # ============================================
   e2e-tests:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 30
     
     steps:
@@ -26,7 +26,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
           
       - name: Install dependencies
@@ -67,7 +67,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
           
       - name: Install dependencies
@@ -136,7 +136,13 @@ jobs:
           EOF
           
           # Run pa11y-ci
-          pa11y-ci --config .pa11yci.json || echo "Some accessibility issues found - check report"
+          result=0
+          pa11y-ci --config .pa11yci.json --json > pa11y-results.json || result=$?
+          if [ "$result" -eq 2 ]; then
+            echo "::warning::Pa11y reported accessibility findings. See the accessibility-report artifact."
+          else
+            exit "$result"
+          fi
           
       - name: Upload accessibility report
         uses: actions/upload-artifact@v4
@@ -160,7 +166,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
           
       - name: Install dependencies
@@ -228,7 +234,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
           
       - name: Install dependencies
@@ -268,7 +274,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
           
       - name: Install dependencies
