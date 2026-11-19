@@ -127,7 +127,7 @@ jobs:
               "http://localhost:3000/topics",
               "http://localhost:3000/miners",
               "http://localhost:3000/hodlers",
-              "http://localhost:3000/builders",
+              "http://localhost:3000/developers",
               "http://localhost:3000/compare",
               "http://localhost:3000/faq",
               "http://localhost:3000/infographics"
@@ -319,8 +319,8 @@ jobs:
           # Check sitemaps
           echo "🗺️ Checking sitemaps..."
           curl -f http://localhost:3000/sitemap.xml || echo "❌ Main sitemap not found"
-          curl -f http://localhost:3000/sitemap-pages.xml || echo "❌ Pages sitemap not found"
-          curl -f http://localhost:3000/sitemap-blog.xml || echo "❌ Blog sitemap not found"
+          curl -fsS -o /dev/null http://localhost:3000/sitemaps/sitemap-pages.xml
+          curl -fsS -o /dev/null http://localhost:3000/sitemaps/sitemap-blog.xml
           
           # Check robots.txt
           echo "🤖 Checking robots.txt..."
