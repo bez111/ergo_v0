@@ -138,11 +138,26 @@ jobs:
           # Run pa11y-ci
           result=0
           pa11y-ci --config .pa11yci.json --json > pa11y-results.json || result=$?
-          if [ "$result" -eq 2 ]; then
-            echo "::warning::Pa11y reported accessibility findings. See the accessibility-report artifact."
-          else
+          if [ "$result" -ne 0 ] && [ "$result" -ne 2 ]; then
             exit "$result"
           fi
+          node <<'NODE'
+          const { urls } = require('./.pa11yci.json')
+          const report = require('./pa11y-results.json')
+          for (const url of urls) {
+            const findings = report.results[url]
+            if (!Array.isArray(findings)) throw new Error('Missing pa11y results for ' + url)
+            for (const finding of findings) {
+              const impact = finding?.runnerExtras?.impact
+              if (!impact || impact === 'critical') {
+                console.error(url, finding?.code || 'Incomplete page audit', finding?.selector || '')
+                process.exitCode = 1
+              }
+            }
+          }
+          console.log('Pa11y checked %d URLs and recorded %d findings.', report.total, report.errors)
+          if (report.errors) console.log('::warning::See accessibility-report for details.')
+          NODE
           
       - name: Upload accessibility report
         uses: actions/upload-artifact@v4
@@ -201,10 +216,14 @@ jobs:
           
           # Show summary
           echo "=== Broken Links Summary ==="
-          grep -E "^(BROKEN|Getting|Finished)" broken-links-report.txt | head -50 || echo "No broken links found!"
+          grep -E 'BROKEN|^Finished!' broken-links-report.txt | tail -50
           
           # Count broken links
-          BROKEN_COUNT=$(grep -c "^BROKEN" broken-links-report.txt || echo "0")
+          BROKEN_COUNT=$(sed -nE 's/^Finished! .* ([0-9]+) broken\.$/\1/p' broken-links-report.txt | tail -1)
+          if [ -z "$BROKEN_COUNT" ]; then
+            echo "Link checker did not produce a crawl summary."
+            exit 1
+          fi
           echo "Total broken links found: $BROKEN_COUNT"
           
           if [ "$BROKEN_COUNT" -gt "10" ]; then
@@ -248,7 +267,7 @@ jobs:
       - name: Run Lighthouse CI
         run: |
           npm install -g @lhci/cli@0.13.x
-          lhci autorun || echo "Lighthouse completed with warnings"
+          lhci autorun --collect.startServerCommand="npm start" || echo "Lighthouse completed with warnings"
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
           

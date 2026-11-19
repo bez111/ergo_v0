@@ -50,6 +50,7 @@ import { coreValues, miningPools, miningSoftware, miningSteps, miningTools } fro
 
 export function MinersClient() {
   const t = useTranslations('minersPage')
+  const tCommon = useTranslations('common')
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   
   // Mining Calculator State
@@ -369,13 +370,14 @@ export function MinersClient() {
                   <div className="space-y-6">
                     <div>
                       <div className="flex items-center justify-between mb-3">
-                        <label className="text-white font-semibold flex items-center gap-2">
+                        <label htmlFor="mining-hashrate" className="text-white font-semibold flex items-center gap-2">
                           <Zap className="w-5 h-5 text-orange-400" />
                           {t('calculator.hashrate')}
                         </label>
                         <span className="text-orange-400 font-bold text-lg">{hashrate}</span>
                       </div>
                       <input
+                        id="mining-hashrate"
                         type="range"
                         min="10"
                         max="500"
@@ -393,13 +395,14 @@ export function MinersClient() {
 
                     <div>
                       <div className="flex items-center justify-between mb-3">
-                        <label className="text-white font-semibold flex items-center gap-2">
+                        <label htmlFor="mining-power" className="text-white font-semibold flex items-center gap-2">
                           <Cpu className="w-5 h-5 text-orange-400" />
                           {t('calculator.power')}
                         </label>
                         <span className="text-orange-400 font-bold text-lg">{powerConsumption}W</span>
                       </div>
                       <input
+                        id="mining-power"
                         type="range"
                         min="50"
                         max="400"
@@ -417,13 +420,14 @@ export function MinersClient() {
 
                     <div>
                       <div className="flex items-center justify-between mb-3">
-                        <label className="text-white font-semibold flex items-center gap-2">
+                        <label htmlFor="mining-electricity-cost" className="text-white font-semibold flex items-center gap-2">
                           <DollarSign className="w-5 h-5 text-orange-400" />
                           {t('calculator.electricity')}
                         </label>
                         <span className="text-orange-400 font-bold text-lg">${electricityCost.toFixed(3)}</span>
                       </div>
                       <input
+                        id="mining-electricity-cost"
                         type="range"
                         min="0.01"
                         max="0.50"
@@ -441,13 +445,14 @@ export function MinersClient() {
 
                     <div>
                       <div className="flex items-center justify-between mb-3">
-                        <label className="text-white font-semibold flex items-center gap-2">
+                        <label htmlFor="mining-erg-price" className="text-white font-semibold flex items-center gap-2">
                           <TrendingUp className="w-5 h-5 text-orange-400" />
                           {t('calculator.ergPrice')}
                         </label>
                         <span className="text-orange-400 font-bold text-lg">${ergPrice.toFixed(2)}</span>
                       </div>
                       <input
+                        id="mining-erg-price"
                         type="range"
                         min="0.50"
                         max="10.00"
@@ -465,13 +470,14 @@ export function MinersClient() {
 
                     <div>
                       <div className="flex items-center justify-between mb-3">
-                        <label className="text-white font-semibold flex items-center gap-2">
+                        <label htmlFor="mining-pool-fee" className="text-white font-semibold flex items-center gap-2">
                           <Users className="w-5 h-5 text-orange-400" />
                           {t('calculator.poolFee')}
                         </label>
                         <span className="text-orange-400 font-bold text-lg">{poolFee}%</span>
                       </div>
                       <input
+                        id="mining-pool-fee"
                         type="range"
                         min="0"
                         max="3"
@@ -788,11 +794,12 @@ export function MinersClient() {
                           <td className="p-4 text-sm text-neutral-300">{sw.fee}</td>
                           <td className="p-4 text-sm text-neutral-400">{sw.recommended}</td>
                           <td className="p-4">
-                            <a href={miningSoftware[idx]?.download} target="_blank" rel="noopener noreferrer">
-                              <Button variant="ghost" size="sm" className="text-neutral-400 hover:text-orange-400 group-hover:text-orange-400 transition-colors">
-                                <Download className="w-4 h-4" />
-                              </Button>
-                            </a>
+                            <Button asChild variant="ghost" size="sm" className="text-neutral-400 hover:text-orange-400 group-hover:text-orange-400 transition-colors">
+                              <a href={miningSoftware[idx]?.download} target="_blank" rel="noopener noreferrer">
+                                <Download aria-hidden="true" className="w-4 h-4" />
+                                <span className="sr-only">{sw.name} — {tCommon('download')}</span>
+                              </a>
+                            </Button>
                           </td>
                         </tr>
                       ))}

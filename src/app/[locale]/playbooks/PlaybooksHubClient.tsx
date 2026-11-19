@@ -247,73 +247,73 @@ export function PlaybooksHubClient({ playbooks, clusters }: Props) {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="pb-16"
           >
-            <div className="max-w-7xl mx-auto">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6" role="list" aria-label="Available playbooks" aria-live="polite">
-                {filteredPlaybooks.map((playbook, index) => {
-                  const PlaybookIcon = iconMap[playbook.icon] || BookOpen;
-                  return (
-                    <motion.div
-                      key={playbook.slug}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: index * 0.05 }}
-                    >
-                      <Link href={`/playbooks/${playbook.slug}`}>
-                        <Card className="bg-black border border-white/10 rounded-2xl hover:border-orange-400/40 transition-all duration-300 h-full group cursor-pointer">
-                          <CardContent className="p-5">
-                            {/* Header - Compact */}
-                            <div className="flex items-center gap-3 mb-3">
-                              <div className="w-11 h-11 rounded-md bg-orange-500/20 border border-orange-500/30 flex items-center justify-center flex-shrink-0">
-                                <PlaybookIcon className="w-5 h-5 text-orange-400" />
-                              </div>
-                                <div className="flex-1 min-w-0">
-                                <h3
-                                  className="text-sm font-bold text-white group-hover:text-orange-400 transition-colors line-clamp-2"
-                                >
-                                  {playbook.title}
-                                </h3>
-                                <div className="flex items-center gap-2 text-[10px] text-neutral-400">
-                                  <span>{playbook.timeToComplete}</span>
-                                  <span>·</span>
-                                  <span>{playbook.steps.length} {t('card.steps')}</span>
+            <div className="max-w-7xl mx-auto" aria-live="polite">
+              {filteredPlaybooks.length > 0 ? (
+                <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6" role="list" aria-label="Available playbooks">
+                  {filteredPlaybooks.map((playbook, index) => {
+                    const PlaybookIcon = iconMap[playbook.icon] || BookOpen;
+                    return (
+                      <motion.li
+                        key={playbook.slug}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.05 }}
+                      >
+                        <Link href={`/playbooks/${playbook.slug}`}>
+                          <Card className="bg-black border border-white/10 rounded-2xl hover:border-orange-400/40 transition-all duration-300 h-full group cursor-pointer">
+                            <CardContent className="p-5">
+                              {/* Header - Compact */}
+                              <div className="flex items-center gap-3 mb-3">
+                                <div className="w-11 h-11 rounded-md bg-orange-500/20 border border-orange-500/30 flex items-center justify-center flex-shrink-0">
+                                  <PlaybookIcon className="w-5 h-5 text-orange-400" />
+                                </div>
+                                  <div className="flex-1 min-w-0">
+                                  <h3
+                                    className="text-sm font-bold text-white group-hover:text-orange-400 transition-colors line-clamp-2"
+                                  >
+                                    {playbook.title}
+                                  </h3>
+                                  <div className="flex items-center gap-2 text-[10px] text-neutral-400">
+                                    <span>{playbook.timeToComplete}</span>
+                                    <span>·</span>
+                                    <span>{playbook.steps.length} {t('card.steps')}</span>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
 
-                            {/* Description - Compact */}
-                            <p className="text-neutral-400 text-xs mb-3 line-clamp-2">
-                              {playbook.subtitle}
-                            </p>
+                              {/* Description - Compact */}
+                              <p className="text-neutral-400 text-xs mb-3 line-clamp-2">
+                                {playbook.subtitle}
+                              </p>
 
-                            {/* Footer */}
-                            <div className="flex items-center justify-between">
-                              <div className="flex gap-1">
-                                <Badge
-                                  variant="outline"
-                                  className="text-[9px] px-1.5 py-0 border-white/15 text-neutral-400"
-                                >
-                                  {t(`clusters.${playbook.cluster}` as 'clusters.defi')}
-                                </Badge>
-                                <Badge
-                                  className={`text-[9px] px-1.5 py-0 ${difficultyColors[playbook.difficulty]}`}
-                                >
-                                  {t(`difficulty.${playbook.difficulty}` as 'difficulty.beginner')}
-                                </Badge>
+                              {/* Footer */}
+                              <div className="flex items-center justify-between">
+                                <div className="flex gap-1">
+                                  <Badge
+                                    variant="outline"
+                                    className="text-[9px] px-1.5 py-0 border-white/15 text-neutral-400"
+                                  >
+                                    {t(`clusters.${playbook.cluster}` as 'clusters.defi')}
+                                  </Badge>
+                                  <Badge
+                                    className={`text-[9px] px-1.5 py-0 ${difficultyColors[playbook.difficulty]}`}
+                                  >
+                                    {t(`difficulty.${playbook.difficulty}` as 'difficulty.beginner')}
+                                  </Badge>
+                                </div>
+                                <ArrowRight
+                                  className="w-3 h-3 text-neutral-400 opacity-100 md:opacity-0 md:translate-x-1 md:group-hover:opacity-100 md:group-hover:translate-x-0 transition-all duration-200"
+                                  aria-hidden="true"
+                                />
                               </div>
-                              <ArrowRight
-                                className="w-3 h-3 text-neutral-400 opacity-100 md:opacity-0 md:translate-x-1 md:group-hover:opacity-100 md:group-hover:translate-x-0 transition-all duration-200"
-                                aria-hidden="true"
-                              />
-                            </div>
-                          </CardContent>
-                        </Card>
-                      </Link>
-                    </motion.div>
-                  );
-                })}
-              </div>
-              
-              {filteredPlaybooks.length === 0 && (
+                            </CardContent>
+                          </Card>
+                        </Link>
+                      </motion.li>
+                    );
+                  })}
+                </ul>
+              ) : (
                 <div className="text-center py-12">
                   <BookOpen className="w-12 h-12 text-neutral-600 mx-auto mb-4" />
                   <p className="text-neutral-400">{t('empty')}</p>
